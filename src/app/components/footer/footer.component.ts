@@ -1,4 +1,4 @@
-﻿import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -10,35 +10,35 @@ import { RouterLink } from '@angular/router';
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <h3>Mindify</h3>
-            <p>Track your mental health journey with elegance and ease.</p>
+            <h3>Anytimer</h3>
+            <p>De anytimer app. Houd anytimers bij tussen vrienden.</p>
           </div>
           <div class="footer-links">
             <div class="column">
               <h4>Product</h4>
-              <a href="#">Features</a>
-              <a href="#">Pricing</a>
-              <a href="#">Download</a>
+              <a routerLink="/" fragment="features">Features</a>
+              <a routerLink="/" fragment="over-ons">Over ons</a>
+              <a routerLink="/contact">Contact</a>
             </div>
             <div class="column">
-              <h4>Legal</h4>
-              <a routerLink="/privacy">Privacy Policy</a>
-              <a routerLink="/terms">Terms of Use</a>
+              <h4>Juridisch</h4>
+              <a routerLink="/privacy">Privacybeleid</a>
+              <a routerLink="/terms">Gebruiksvoorwaarden</a>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 Mindify. All rights reserved.</p>
+          <p>&copy; 2025 Anytimer. Alle rechten voorbehouden.</p>
         </div>
       </div>
     </footer>
   `,
   styles: [`
     .footer {
-      background: var(--white);
+      background: var(--bg-page);
       padding: 80px 0 40px;
       margin-top: 80px;
-      border-top: 1px solid var(--neutral-lightest);
+      border-top: 1px solid var(--border-light);
     }
     .footer-top {
       display: flex;
@@ -48,17 +48,22 @@ import { RouterLink } from '@angular/router';
       margin-bottom: 60px;
     }
     .footer-brand { max-width: 300px; }
+    .footer-brand h3 { margin-bottom: 12px; }
     .footer-links { display: flex; gap: 80px; }
     .column { display: flex; flex-direction: column; gap: 12px; }
-    .column h4 { font-size: 1rem; margin-bottom: 8px; color: var(--black); }
-    .column a { color: var(--neutral-light-dark); font-size: 0.9rem; }
+    .column h4 { font-size: 1rem; margin-bottom: 8px; }
+    .column a { color: var(--text-secondary); font-size: 0.9rem; }
     .column a:hover { color: var(--primary); }
     .footer-bottom {
-      border-top: 1px solid var(--neutral-lightest);
+      border-top: 1px solid var(--border-light);
       padding-top: 32px;
       text-align: center;
-      color: var(--neutral-light-dark);
+      color: var(--text-tertiary);
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .footer-links { gap: 40px; }
     }
   `]
 })

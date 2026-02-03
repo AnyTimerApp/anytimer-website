@@ -1,167 +1,300 @@
-﻿import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
   template: `
-    <section class="hero-section">
-      <div class="container hero-content">
-        <div class="badge-pill">
-          <span class="badge-new">New</span>
-          <span>Introducing Mindify AI 2.0</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 9L7.5 6L4.5 3"/></svg>
-        </div>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">De anytimer app</p>
+          <h1>Vergeet nooit op wie je nog anytimer's hebt</h1>
+          <p class="subtitle">
+            Met de AnyTimer app kun je vrienden toevoegen, anytimers bijhouden, uitdelen en de in-app timer gebruiken..
+          </p>
 
-        <h1>Design your mind. <br><span class="text-gradient">Build your future.</span></h1>
-        <p class="subtitle">Mindify helps you track your mood, habits, and tasks in one beautiful workspace. Simple, fast, and designed for focus.</p>
-
-        <div class="cta-group">
-          <button class="btn btn-primary">Start for free</button>
-          <button class="btn btn-secondary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
-            Watch Demo
-          </button>
-        </div>
-
-        <div class="ui-mockup-wrapper">
-          <div class="ui-mockup">
-             <div class="mock-sidebar"></div>
-             <div class="mock-content">
-                <div class="mock-header"></div>
-                <div class="mock-cards">
-                  <div class="m-card"></div>
-                  <div class="m-card"></div>
-                  <div class="m-card big"></div>
-                </div>
-             </div>
+          <div class="store-badges">
+            <a href="#" class="store-badge">
+              <div class="badge-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+              </div>
+              <div class="badge-text">
+                <span class="badge-small">Beschikbaar op</span>
+                <span class="badge-large">Google Play</span>
+              </div>
+            </a>
+            <a href="#" class="store-badge">
+              <div class="badge-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              </div>
+              <div class="badge-text">
+                <span class="badge-small">Download in de</span>
+                <span class="badge-large">App Store</span>
+              </div>
+            </a>
           </div>
-          <div class="glow-bg"></div>
         </div>
 
-        <div class="trusted-by">
-          <p>Trusted by forward-thinking teams</p>
-          <div class="logos">
-            <div class="logo-box">ACME</div>
-            <div class="logo-box">Quantum</div>
-            <div class="logo-box">Echo</div>
-            <div class="logo-box">Nebula</div>
-            <div class="logo-box">FoxRun</div>
+        <div class="hero-visual">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="screen-header">
+                <div class="screen-title"></div>
+                <div class="screen-avatar"></div>
+              </div>
+              <div class="screen-card">
+                <div class="card-label"></div>
+                <div class="card-value"></div>
+                <div class="card-bar">
+                  <div class="card-bar-fill"></div>
+                </div>
+              </div>
+              <div class="screen-card">
+                <div class="card-label"></div>
+                <div class="card-value"></div>
+                <div class="card-bar">
+                  <div class="card-bar-fill short"></div>
+                </div>
+              </div>
+              <div class="screen-list">
+                <div class="list-item">
+                  <div class="list-avatar"></div>
+                  <div class="list-text"></div>
+                  <div class="list-badge">+2</div>
+                </div>
+                <div class="list-item">
+                  <div class="list-avatar"></div>
+                  <div class="list-text"></div>
+                  <div class="list-badge give">-1</div>
+                </div>
+                <div class="list-item">
+                  <div class="list-avatar"></div>
+                  <div class="list-text"></div>
+                  <div class="list-badge">+1</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
   `,
   styles: [`
-    .hero-section {
-      padding-top: 140px; /* Space for fixed header */
-      padding-bottom: 80px;
-      text-align: center;
-      background: radial-gradient(circle at 50% 0%, rgba(0, 111, 253, 0.05) 0%, rgba(255, 255, 255, 0) 50%);
+    .hero {
+      padding-top: calc(var(--header-height) + 80px);
     }
 
-    .hero-content {
-      display: flex;
-      flex-direction: column;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      gap: 40px;
       align-items: center;
     }
 
-    /* Badge */
-    .badge-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px 6px 6px;
-      background: white;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-pill);
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      margin-bottom: 32px;
-      box-shadow: var(--shadow-xs);
-      cursor: pointer;
-      transition: 0.2s;
-    }
-    .badge-pill:hover { border-color: var(--primary); }
-    .badge-new {
-      background: var(--primary);
-      color: white;
-      padding: 2px 8px;
-      border-radius: var(--radius-pill);
-      font-size: 0.75rem;
-      font-weight: 700;
+    .eyebrow {
+      font-size: 0.8rem;
+      font-weight: 600;
       text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--primary);
+      margin-bottom: 20px;
     }
 
-    /* Typography */
     h1 {
-      font-size: 4rem; /* HUGE text like template */
-      letter-spacing: -0.04em;
+      font-size: 3.5rem;
       margin-bottom: 24px;
     }
-    .text-gradient {
-      background: linear-gradient(135deg, var(--primary) 0%, #60A5FA 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+
     .subtitle {
-      font-size: 1.25rem;
-      max-width: 600px;
+      font-size: 1.15rem;
+      max-width: 480px;
       margin-bottom: 40px;
     }
 
-    .cta-group { display: flex; gap: 16px; margin-bottom: 80px; }
-
-    /* UI Mockup */
-    .ui-mockup-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 1000px;
-      margin-bottom: 80px;
-    }
-    .ui-mockup {
-      width: 100%;
-      height: 500px;
-      background: white;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-lg);
-      box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.12);
-      overflow: hidden;
-      position: relative;
-      z-index: 2;
+    /* Store badges */
+    .store-badges {
       display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
     }
-    .glow-bg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%;
-      height: 80%;
+    .store-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--text-main);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 10px;
+      transition: opacity 0.2s;
+    }
+    .store-badge:hover { opacity: 0.85; }
+    .badge-icon { display: flex; }
+    .badge-icon svg { fill: white; }
+    .badge-text { display: flex; flex-direction: column; }
+    .badge-small { font-size: 0.6rem; opacity: 0.8; line-height: 1; color: white; }
+    .badge-large { font-size: 0.95rem; font-weight: 600; line-height: 1.3; color: white; }
+
+    /* QR codes */
+    .qr-row {
+      display: flex;
+      gap: 24px;
+    }
+    .qr-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .qr-block span {
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+      font-weight: 500;
+    }
+    .qr-placeholder {
+      width: 80px;
+      height: 80px;
+      border: 2px dashed var(--border-light);
+      border-radius: 8px;
+      background: var(--bg-surface);
+    }
+
+    /* Phone mockup */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+    }
+    .phone-mockup {
+      width: 280px;
+      height: 560px;
+      background: #fff;
+      border-radius: 36px;
+      border: 3px solid var(--text-main);
+      padding: 12px;
+      position: relative;
+      transform: rotate(2deg);
+      box-shadow: 24px 24px 0 var(--bg-surface);
+    }
+    .phone-notch {
+      width: 100px;
+      height: 24px;
+      background: var(--text-main);
+      border-radius: 0 0 14px 14px;
+      margin: 0 auto 16px;
+    }
+    .phone-screen {
+      padding: 8px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .screen-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .screen-title {
+      width: 100px;
+      height: 14px;
+      background: var(--text-main);
+      border-radius: 4px;
+    }
+    .screen-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary-light);
+    }
+    .screen-card {
+      background: var(--bg-surface);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .card-label {
+      width: 60px;
+      height: 8px;
+      background: var(--text-tertiary);
+      border-radius: 4px;
+      opacity: 0.4;
+    }
+    .card-value {
+      width: 40px;
+      height: 20px;
+      background: var(--text-main);
+      border-radius: 4px;
+    }
+    .card-bar {
+      height: 6px;
+      background: #E5E7EB;
+      border-radius: 3px;
+    }
+    .card-bar-fill {
+      height: 100%;
+      width: 70%;
       background: var(--primary);
-      filter: blur(120px);
-      opacity: 0.15;
-      z-index: 1;
+      border-radius: 3px;
     }
-
-    /* Fake UI Internals */
-    .mock-sidebar { width: 200px; height: 100%; border-right: 1px solid var(--border-light); background: #FAFAFA; }
-    .mock-content { flex: 1; padding: 24px; display: flex; flex-direction: column; gap: 24px; }
-    .mock-header { width: 100%; height: 40px; background: #F3F4F6; border-radius: 8px; }
-    .mock-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; height: 100%; }
-    .m-card { background: #F3F4F6; border-radius: 12px; height: 100px; }
-    .big { grid-column: span 2; height: auto; }
-
-    /* Trusted By */
-    .trusted-by p { font-size: 0.875rem; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 24px; }
-    .logos { display: flex; justify-content: center; gap: 48px; opacity: 0.4; flex-wrap: wrap; }
-    .logo-box { font-weight: 800; font-size: 1.5rem; color: var(--text-main); }
+    .card-bar-fill.short { width: 40%; }
+    .screen-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .list-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .list-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 2px solid var(--border-light);
+      flex-shrink: 0;
+    }
+    .list-text {
+      flex: 1;
+      height: 10px;
+      background: #E5E7EB;
+      border-radius: 4px;
+    }
+    .list-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+    }
+    .list-badge.give {
+      color: #DC2626;
+      background: #FEE2E2;
+    }
 
     @media (max-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
       h1 { font-size: 2.5rem; }
-      .ui-mockup { height: 300px; }
-      .mock-sidebar { display: none; }
+      .subtitle { margin-left: auto; margin-right: auto; }
+      .store-badges { justify-content: center; }
+      .qr-row { justify-content: center; }
+      .hero-visual { margin-top: 40px; }
+      .phone-mockup {
+        transform: rotate(0);
+        width: 240px;
+        height: 480px;
+      }
     }
   `]
 })
-export class HeroComponent {}
+export class HeroComponent {
+  //TODO ADD BADGE LINKS
+}

@@ -1,29 +1,34 @@
-﻿import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-terms',
   standalone: true,
   template: `
     <div class="container page-content">
-      <h1>Terms of Use</h1>
-      <p class="date">Last updated: October 2024</p>
+      <h1>Gebruiksvoorwaarden</h1>
+      <p class="date">Laatst bijgewerkt: januari 2025</p>
 
       <div class="content-block">
-        <h3>1. Acceptance of Terms</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullamis eget est a dui feugiat suscipit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+        <h3>1. Acceptatie van voorwaarden</h3>
+        <p>Door het downloaden of gebruiken van de Anytimer-app ga je akkoord met deze voorwaarden. Als je het hier niet mee eens bent, gebruik de app dan niet.</p>
 
-        <h3>2. Use License</h3>
-        <p>Permission is granted to temporarily download one copy of the materials (information or software) on Mindify's website for personal, non-commercial transitory viewing only.</p>
+        <h3>2. Gebruikslicentie</h3>
+        <p>Je krijgt toestemming om de Anytimer-applicatie te gebruiken voor persoonlijk, niet-commercieel gebruik. Je mag de app niet aanpassen, verspreiden of afgeleide werken maken zonder onze voorafgaande schriftelijke toestemming.</p>
 
         <h3>3. Disclaimer</h3>
-        <p>The materials on Mindify's website are provided on an 'as is' basis. Mindify makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability.</p>
+        <p>De Anytimer-app wordt aangeboden op een "as is"-basis. We geven geen garanties, expliciet of impliciet, met betrekking tot de beschikbaarheid, nauwkeurigheid of betrouwbaarheid van de dienst. Drink verantwoord.</p>
       </div>
     </div>
   `,
   styles: [`
-    .page-content { padding: 60px 24px; max-width: 800px; }
-    .date { color: var(--neutral-light-dark); margin-bottom: 40px; }
-    .content-block h3 { color: var(--primary); margin-top: 32px; }
+    .page-content {
+      padding-top: calc(var(--header-height) + 60px);
+      padding-bottom: 60px;
+      max-width: 800px;
+    }
+    .date { color: var(--text-tertiary); margin-bottom: 40px; }
+    .content-block h3 { color: var(--primary); margin-top: 32px; margin-bottom: 8px; }
+    .content-block p { margin-bottom: 16px; }
   `]
 })
 export class TermsComponent {}

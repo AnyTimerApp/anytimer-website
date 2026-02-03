@@ -1,29 +1,34 @@
-﻿import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-privacy',
   standalone: true,
   template: `
     <div class="container page-content">
-      <h1>Privacy Policy</h1>
-      <p class="date">Last updated: October 2024</p>
+      <h1>Privacybeleid</h1>
+      <p class="date">Laatst bijgewerkt: januari 2025</p>
 
       <div class="content-block">
-        <h3>1. Introduction</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h3>1. Introductie</h3>
+        <p>Anytimer ("wij", "ons" of "onze") beheert de Anytimer mobiele applicatie en website. Deze pagina informeert je over ons beleid met betrekking tot het verzamelen, gebruiken en openbaar maken van persoonlijke gegevens wanneer je onze dienst gebruikt.</p>
 
-        <h3>2. Data Collection</h3>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h3>2. Gegevensverzameling</h3>
+        <p>We verzamelen informatie die je direct verstrekt, zoals je naam en e-mailadres bij het aanmaken van een account. Daarnaast verzamelen we gebruiksgegevens om de app-ervaring te verbeteren, waaronder hoe je omgaat met functies zoals het geven en verzilveren van anytimers.</p>
 
-        <h3>3. User Rights</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <h3>3. Rechten van gebruikers</h3>
+        <p>Je hebt het recht om je persoonlijke gegevens op elk moment in te zien, bij te werken of te verwijderen. Je kunt een kopie van je gegevens opvragen of ons vragen je account te verwijderen via onze contactpagina.</p>
       </div>
     </div>
   `,
   styles: [`
-    .page-content { padding: 60px 24px; max-width: 800px; }
-    .date { color: var(--neutral-light-dark); margin-bottom: 40px; }
-    .content-block h3 { color: var(--primary); margin-top: 32px; }
+    .page-content {
+      padding-top: calc(var(--header-height) + 60px);
+      padding-bottom: 60px;
+      max-width: 800px;
+    }
+    .date { color: var(--text-tertiary); margin-bottom: 40px; }
+    .content-block h3 { color: var(--primary); margin-top: 32px; margin-bottom: 8px; }
+    .content-block p { margin-bottom: 16px; }
   `]
 })
 export class PrivacyComponent {}

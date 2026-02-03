@@ -1,15 +1,14 @@
 /* styles.scss */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Mindify Color Palette - Scraped from live site */
+  /* Anytimer Color Palette */
   --primary: #006FFD;
   --primary-hover: #005ECC;
-  --primary-light: #E0E7FF; /* Voor badges */
+  --primary-light: #E0E7FF;
 
   --bg-page: #FFFFFF;
-  --bg-surface: #F9FAFB; /* Iets donkerder wit voor secties */
-  --bg-glass: rgba(255, 255, 255, 0.7);
+  --bg-surface: #F9FAFB;
 
   --text-main: #111827;
   --text-secondary: #4B5563;
@@ -18,10 +17,9 @@
   --border-light: rgba(0, 0, 0, 0.08);
   --border-hover: rgba(0, 0, 0, 0.12);
 
-  /* Framer Shadows */
+  /* Shadows */
   --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  --shadow-glow: 0 0 0 4px rgba(0, 111, 253, 0.15); /* Focus ring */
 
   /* Spacing & Layout */
   --container-width: 1200px;
@@ -29,6 +27,13 @@
   --radius-md: 16px;
   --radius-pill: 999px;
   --header-height: 72px;
+
+  /* Font */
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Global Reset & Typography */
@@ -36,29 +41,38 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font);
   background-color: var(--bg-page);
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
   margin: 0;
+  font-family: var(--font);
   font-weight: 700;
-  letter-spacing: -0.025em; /* Cruciaal voor de moderne look */
+  letter-spacing: -0.03em;
   line-height: 1.1;
+  color: var(--text-main);
+}
+
+h3, h4 {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 600;
+  line-height: 1.3;
   color: var(--text-main);
 }
 
 p {
   margin: 0;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-a { text-decoration: none; color: inherit; transition: 0.2s; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
 
 /* Utility Classes */
 .container {
@@ -70,19 +84,17 @@ a { text-decoration: none; color: inherit; transition: 0.2s; }
 
 .section {
   padding: 120px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-/* Button Styles - Exact Match */
+/* Button Styles */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 48px;
-  padding: 0 24px;
+  padding: 0 28px;
   border-radius: var(--radius-pill);
+  font-family: var(--font);
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;

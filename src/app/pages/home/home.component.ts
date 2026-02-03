@@ -1,22 +1,20 @@
-﻿import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeroComponent } from '../hero/hero.component';
 import { FeaturesComponent } from '../features/features.component';
-import { PricingComponent } from '../pricing/pricing.component';
-import {NavbarComponent} from '../../components/navbar/navbar.component';
-import {FooterComponent} from '../../components/footer/footer.component';
+import { HowItWorksComponent } from '../how-it-works/how-it-works.component';
+import { AboutComponent } from '../about/about.component';
+import { TeamComponent } from '../team/team.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent, HeroComponent, FeaturesComponent, PricingComponent, FooterComponent, NavbarComponent, FooterComponent],
+  imports: [HeroComponent, HowItWorksComponent, FeaturesComponent, AboutComponent, TeamComponent],
   template: `
-    <app-navbar></app-navbar>
-    <main>
-      <app-hero></app-hero>
-      <app-features></app-features>
-      <app-pricing></app-pricing>
-    </main>
-    <app-footer></app-footer>
+    <app-hero></app-hero>
+    <app-how-it-works></app-how-it-works>
+    <app-features></app-features>
+    <app-about></app-about>
+    <app-team></app-team>
   `
 })
 export class HomeComponent {}
