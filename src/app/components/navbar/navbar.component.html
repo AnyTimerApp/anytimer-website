@@ -1,0 +1,26 @@
+﻿<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="container nav-inner">
+    <a routerLink="/" class="logo" (click)="scrollToTop()">
+      <img src="assets/logo.png" alt="Anytimer" class="logo-img">
+      <span>Anytimer</span>
+    </a>
+
+    <div class="nav-links" [class.open]="menuOpen">
+      <a routerLink="/" fragment="hoe-het-werkt" (click)="closeMenu()">Hoe het werkt</a>
+      <a routerLink="/" fragment="features" (click)="closeMenu()">Waarom</a>
+      <a routerLink="/" fragment="over-ons" (click)="closeMenu()">Wat is het</a>
+      <a routerLink="/" fragment="team" (click)="closeMenu()">Team</a>
+      <a routerLink="/contact" (click)="closeMenu()">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <a href="#" class="btn btn-primary btn-sm">Download</a>
+    </div>
+
+    <button class="hamburger" [class.active]="menuOpen" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>

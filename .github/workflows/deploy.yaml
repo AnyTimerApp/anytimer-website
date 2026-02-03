@@ -3,7 +3,7 @@
 on:
   # Runs on pushes targeting the 'master' branch
   push:
-    branches: ["master"]
+    branches: ["main"]
 
 # Allow this job to clone the repo and create a page deployment
 permissions:

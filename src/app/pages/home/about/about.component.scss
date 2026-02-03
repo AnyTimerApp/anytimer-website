@@ -1,0 +1,136 @@
+﻿.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.about-text {
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 28px;
+    color: var(--text-main, #000);
+  }
+
+  p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    color: var(--text-secondary, #666);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.about-visual {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.iou-card {
+  width: 260px;
+  background: white;
+  border: 2px solid var(--text-main, #000);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+}
+
+.iou-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-light, #eee);
+  background-color: #fafafa;
+}
+
+.iou-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.iou-hash {
+  font-size: 0.8rem;
+  color: var(--text-tertiary, #999);
+  font-family: monospace;
+}
+
+.iou-body {
+  padding: 28px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.iou-from, .iou-to {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.iou-field-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary, #999);
+}
+
+.iou-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.iou-arrow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.arrow-line {
+  width: 40px;
+  height: 2px;
+  background: var(--primary, blue);
+}
+
+.arrow-head {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid var(--primary, blue);
+}
+
+.iou-footer {
+  padding: 12px 20px;
+  border-top: 1px dashed var(--border-light, #eee);
+  text-align: center;
+  background-color: #fafafa;
+
+  span {
+    font-size: 0.75rem;
+    color: var(--text-tertiary, #999);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-visual {
+    padding-top: 0;
+  }
+}

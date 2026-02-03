@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { PrivacyComponent } from './pages/privacy/privacy.component';
-import { TermsComponent } from './pages/terms/terms.component';
+import { PrivacyComponent } from './pages/juridisch/privacy/privacy.component';
+import { TermsComponent } from './pages/juridisch/terms/terms.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 

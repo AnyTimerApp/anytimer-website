@@ -1,0 +1,76 @@
+﻿.contact-page {
+  padding-top: calc(var(--header-height) + 80px);
+  padding-bottom: 120px;
+
+  // We nesten alles in de container voor uitlijning
+  .container {
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      line-height: 1.1;
+      letter-spacing: -0.03em; // Strakkere letters (Framer stijl)
+      color: var(--text-main);
+    }
+
+    .intro {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      margin-bottom: 60px;
+      color: var(--text-secondary);
+      max-width: 600px; // Voorkomt dat tekst te breed wordt op grote schermen
+    }
+
+    .reasons {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-bottom: 60px;
+
+      // Op desktop (breder dan 768px) maken we er een grid van (optioneel, maar mooier)
+      @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
+
+      .reason {
+        h3 {
+          font-size: 1.05rem;
+          font-weight: 600;
+          margin-bottom: 8px;
+          color: var(--text-main);
+        }
+
+        p {
+          font-size: 0.95rem;
+          color: var(--text-secondary);
+          margin: 0;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .email-block {
+      p {
+        font-size: 1rem;
+        margin-bottom: 8px;
+        color: var(--text-secondary);
+      }
+
+      .email-link {
+        display: inline-block;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--primary);
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          text-decoration: underline;
+          color: var(--primary-hover, var(--primary));
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+﻿<section class="section" id="team">
+  <div class="container">
+    <h2 class="section-heading">Het team.</h2>
+
+    <div class="team-grid">
+      @for (member of members; track member.name; let i = $index) {
+        <div class="member" [style.margin-top.px]="offsets[i]">
+          <div class="portrait">
+            <div class="portrait-placeholder" [style.background]="member.color"></div>
+          </div>
+          <h3>{{ member.name }}</h3>
+          <p>{{ member.role }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
