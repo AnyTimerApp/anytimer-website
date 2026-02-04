@@ -35,6 +35,7 @@ jobs:
       - name: Build Project 🔧
         run: |
           npm run build
+          echo "anytimer.app" > dist/anytimer-website/browser/CNAME
           cp dist/anytimer-website/browser/index.html dist/anytimer-website/browser/404.html
 
       - name: Setup Pages
