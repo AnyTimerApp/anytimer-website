@@ -1,0 +1,27 @@
+.page-content {
+  padding-top: calc(var(--header-height) + 60px);
+  padding-bottom: 60px;
+  max-width: 1200px;
+
+  .date {
+    color: var(--text-tertiary);
+    margin-bottom: 40px;
+    margin-top: 0.5rem;
+  }
+
+  .content-block {
+    h3 {
+      color: var(--primary);
+      margin-top: 32px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 16px;
+
+      a {
+        font-weight: bold;
+      }
+    }
+  }
+}
