@@ -35,6 +35,12 @@ jobs:
       - name: Build Project 🔧
         run: |
           npm run build
+
+          for route in privacy terms contact remove-account; do
+            mkdir -p dist/anytimer-website/browser/$route
+            cp dist/anytimer-website/browser/index.html dist/anytimer-website/browser/$route/index.html
+          done
+
           echo "anytimer.app" > dist/anytimer-website/browser/CNAME
           cp dist/anytimer-website/browser/index.html dist/anytimer-website/browser/404.html
 
