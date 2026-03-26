@@ -49,10 +49,23 @@
   color: var(--text-tertiary);
   font-size: 0.9rem;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: color 0.25s ease;
+  cursor: default;
 
   &:hover {
+    color: var(--text-secondary);
+  }
+
+  &.active {
     color: var(--text-main);
+    font-weight: 600;
+
+    .step-nav-dot {
+      background: var(--text-main);
+      border-color: var(--text-main);
+      color: #fff;
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -71,6 +84,7 @@
   flex-shrink: 0;
   font-family: monospace;
   letter-spacing: 0.05em;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
 /* Right stacking cards */
@@ -80,12 +94,20 @@
 }
 
 .p-card-wrap {
-  min-height: 480px;
+  /* Generous height = scroll distance per card */
+  min-height: 560px;
   position: relative;
+}
+
+/* Last wrap: no extra scroll distance, just the card height */
+.p-card-wrap:last-child {
+  min-height: auto;
+  padding-bottom: 0;
 }
 
 .p-card {
   position: sticky;
+  /* ALL cards stick at the same Y — this is what creates the deck effect */
   top: calc(var(--header-height) + 40px);
   border-radius: 28px;
   background: #f8f9fc;
@@ -93,13 +115,13 @@
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0,0,0,0.04);
   overflow: hidden;
   padding: 36px 36px 0;
-
-  /* Each card stacks on top via z-index */
-  &:nth-child(1) { z-index: 1; }
-  &:nth-child(2) { z-index: 2; top: calc(var(--header-height) + 55px); }
-  &:nth-child(3) { z-index: 3; top: calc(var(--header-height) + 70px); }
-  &:nth-child(4) { z-index: 4; top: calc(var(--header-height) + 85px); }
 }
+
+/* Increasing z-index so each card slides on top of the previous */
+.p-card-wrap:nth-child(1) .p-card { z-index: 1; }
+.p-card-wrap:nth-child(2) .p-card { z-index: 2; box-shadow: 0 -4px 24px rgba(0,0,0,0.08), 0 2px 16px rgba(0,0,0,0.05); }
+.p-card-wrap:nth-child(3) .p-card { z-index: 3; box-shadow: 0 -4px 28px rgba(0,0,0,0.10), 0 2px 16px rgba(0,0,0,0.05); }
+.p-card-wrap:nth-child(4) .p-card { z-index: 4; box-shadow: 0 -4px 32px rgba(0,0,0,0.12), 0 2px 16px rgba(0,0,0,0.05); }
 
 .p-card--blue {
   background: linear-gradient(145deg, #eef4ff 0%, #dbe9ff 100%);

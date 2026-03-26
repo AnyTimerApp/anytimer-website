@@ -1,6 +1,7 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router, NavigationEnd } from '@angular/router';
+import { Subscription, filter } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +10,29 @@ import { RouterLink } from '@angular/router';
   templateUrl: 'navbar.component.html',
   styleUrl: 'navbar.component.scss',
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit, OnDestroy {
   isScrolled = false;
+  isHeroPage = true;
   menuOpen = false;
+
+  private routerSub!: Subscription;
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.isHeroPage = this.router.url === '/';
+
+    this.routerSub = this.router.events
+      .pipe(filter(e => e instanceof NavigationEnd))
+      .subscribe((e: any) => {
+        this.isHeroPage = e.urlAfterRedirects === '/';
+        this.menuOpen = false;
+      });
+  }
+
+  ngOnDestroy() {
+    this.routerSub?.unsubscribe();
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

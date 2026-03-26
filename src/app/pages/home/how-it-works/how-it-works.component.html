@@ -11,19 +11,19 @@
           Geen gedoe, gewoon doen.
         </p>
         <div class="steps-nav">
-          <div class="step-nav-item">
+          <div class="step-nav-item" [class.active]="activeStep === 0">
             <div class="step-nav-dot">01</div>
             <span>Sparen of inzetten</span>
           </div>
-          <div class="step-nav-item">
+          <div class="step-nav-item" [class.active]="activeStep === 1">
             <div class="step-nav-dot">02</div>
             <span>Media toevoegen</span>
           </div>
-          <div class="step-nav-item">
+          <div class="step-nav-item" [class.active]="activeStep === 2">
             <div class="step-nav-dot">03</div>
             <span>Posten op de feed</span>
           </div>
-          <div class="step-nav-item">
+          <div class="step-nav-item" [class.active]="activeStep === 3">
             <div class="step-nav-dot">04</div>
             <span>Versiebeer</span>
           </div>

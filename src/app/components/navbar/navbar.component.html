@@ -1,4 +1,4 @@
-﻿<nav class="navbar" [class.scrolled]="isScrolled">
+﻿<nav class="navbar" [class.scrolled]="isScrolled || !isHeroPage">
   <div class="container nav-inner">
     <a routerLink="/" class="logo" (click)="scrollToTop()">
       <img src="assets/logo.png" alt="Anytimer" class="logo-img">
@@ -10,7 +10,6 @@
       <a routerLink="/" fragment="features" (click)="closeMenu()">Features</a>
       <a routerLink="/" fragment="faq" (click)="closeMenu()">FAQ</a>
       <a routerLink="/" fragment="team" (click)="closeMenu()">Team</a>
-      <a routerLink="/contact" (click)="closeMenu()">Contact</a>
     </div>
 
     <div class="nav-actions">
