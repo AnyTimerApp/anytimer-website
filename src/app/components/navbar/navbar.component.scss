@@ -8,11 +8,44 @@
   background: rgba(255, 255, 255, 0);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 
+  /* Transparent state over hero — white text */
+  .logo {
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .nav-links a {
+    color: rgba(255, 255, 255, 0.75);
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .hamburger span {
+    background: #fff;
+  }
+
   &.scrolled {
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     box-shadow: 0 1px 0 var(--border-light);
+
+    .logo {
+      color: var(--text-main);
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    .hamburger span {
+      background: var(--text-main);
+    }
   }
 }
 
@@ -85,6 +118,19 @@
   height: 40px;
   padding: 0 20px;
   font-size: 0.9rem;
+}
+
+/* Transparent navbar state — ghost button */
+.navbar:not(.scrolled) .nav-actions .btn-primary {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: white;
+  box-shadow: none;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+  }
 }
 
 .hamburger {

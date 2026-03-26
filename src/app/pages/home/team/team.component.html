@@ -1,18 +1,30 @@
-﻿<section class="section" id="team">
+<section class="section team-section" id="team">
   <div class="container">
-    <span class="section-label">Over ons</span>
-    <h2 class="section-heading">Het team.</h2>
+    <div class="team-header">
+      <span class="section-label">Over ons</span>
+      <h2 class="team-title">Gebouwd door vrienden, voor vrienden.</h2>
+      <p class="team-desc">
+        We zijn een klein team uit Nederland dat Anytimer heeft gebouwd
+        omdat het bijhouden van anytimers in notities of in je hoofd nooit werkt.
+        Nu is daar de app voor.
+      </p>
+    </div>
 
     <div class="team-grid">
-      @for (member of members; track member.name; let i = $index) {
-        <div class="member" [style.margin-top.px]="offsets[i]">
-          <div class="portrait">
-            <div class="portrait-placeholder" [style.background]="member.color"></div>
+      @for (member of members; track member.name) {
+        <div class="member-card">
+          <div class="member-avatar" [style.background]="member.color">
+            <span>{{ member.name[0] }}</span>
           </div>
           <h3>{{ member.name }}</h3>
           <p>{{ member.role }}</p>
         </div>
       }
+    </div>
+
+    <div class="team-cta">
+      <p>Vragen of feedback? We horen het graag.</p>
+      <a routerLink="/contact" class="btn btn-secondary">Contact opnemen</a>
     </div>
   </div>
 </section>

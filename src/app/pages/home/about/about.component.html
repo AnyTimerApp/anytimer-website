@@ -1,47 +1,47 @@
-﻿<section class="section" id="over-ons">
+<section class="section faq-section" id="faq">
   <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <span class="section-label">Wat is een Anytimer?</span>
-        <h2>De belofte tussen vrienden</h2>
-        <p>
-          Een anytimer is een belofte tussen vrienden. Als iemand iets geks doet voor een anytimer, of juist een challenge verliest, dan ontvangt diegene een anytimer van de ander.
-        </p>
-        <p>
-          Die kan op elk moment uitgedeeld worden. Een biertje op maandagavond,
-          op een brakke ochtend of tijdens een familie feestje. De
-          mogelijkheden zijn eindeloos.
-        </p>
-        <p>
-          We hebben Anytimer gebouwd omdat het bijhouden van anytimers in notities of in je hoofd nooit werkt omdat er dingen fout gaat of vergeten worden. Nu is daar deze app voor.
-        </p>
-      </div>
+    <div class="faq-layout">
 
-      <div class="about-visual">
-        <div class="iou-card">
-          <div class="iou-header">
-            <span class="iou-label">Anytimer</span>
-            <span class="iou-hash">#0042</span>
+      <!-- Left heading -->
+      <div class="faq-left">
+        <span class="section-label">Veelgestelde vragen</span>
+        <h2 class="faq-title">Alles wat je wil weten</h2>
+        <p class="faq-desc">
+          Heb je een andere vraag? Neem contact met ons op via
+          <a routerLink="/contact" class="faq-link">het contactformulier</a>.
+        </p>
+        <div class="faq-app-promo">
+          <div class="faq-promo-icon">
+            <img src="assets/logo.png" alt="Anytimer" width="32" height="32">
           </div>
-          <div class="iou-body">
-            <div class="iou-from">
-              <span class="iou-field-label">Van</span>
-              <span class="iou-name">Marty</span>
-            </div>
-            <div class="iou-arrow">
-              <div class="arrow-line"></div>
-              <div class="arrow-head"></div>
-            </div>
-            <div class="iou-to">
-              <span class="iou-field-label">Naar</span>
-              <span class="iou-name">Stijn</span>
-            </div>
-          </div>
-          <div class="iou-footer">
-            <span>Altijd uitdeelbaar</span>
+          <div>
+            <strong>Klaar om te starten?</strong>
+            <span>Download de app en begin vandaag</span>
           </div>
         </div>
       </div>
+
+      <!-- Right accordion -->
+      <div class="faq-right">
+        @for (faq of faqs; track faq.question; let i = $index) {
+          <div class="faq-item" [class.faq-item--open]="faq.open" (click)="toggle(i)">
+            <div class="faq-question">
+              <span>{{ faq.question }}</span>
+              <div class="faq-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+            </div>
+            @if (faq.open) {
+              <div class="faq-answer">
+                <p>{{ faq.answer }}</p>
+              </div>
+            }
+          </div>
+        }
+      </div>
+
     </div>
   </div>
 </section>
