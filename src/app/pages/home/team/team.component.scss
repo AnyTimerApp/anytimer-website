@@ -1,7 +1,9 @@
 ﻿.section-heading {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 60px;
+  margin-top: 12px;
   font-weight: 700;
+  letter-spacing: -0.03em;
   color: var(--text-main);
 
   @media (max-width: 768px) {
@@ -29,7 +31,7 @@
     .portrait-placeholder {
       width: 100%;
       aspect-ratio: 3 / 4;
-      border-radius: 12px;
+      border-radius: var(--radius-lg);
       transition: transform 0.3s ease;
     }
 
