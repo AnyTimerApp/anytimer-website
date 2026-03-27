@@ -41,4 +41,8 @@ faqs = [
   toggle(index: number) {
     this.faqs[index].open = !this.faqs[index].open;
   }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
