@@ -7,7 +7,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RemoveAccountComponent } from './pages/account/remove/removeAccount.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, title: 'Anytimer — Vergeet nooit op wie je nog anytimer\'s hebt' },
+  { path: '', component: HomeComponent, title: 'Anytimer — Vergeet nooit op wie je nog anytimers hebt' },
   { path: 'privacy', component: PrivacyComponent, title: 'Privacybeleid — Anytimer' },
   { path: 'remove-account', component: RemoveAccountComponent, title: 'Account verwijderen — Anytimer' },
   { path: 'terms', component: TermsComponent, title: 'Gebruiksvoorwaarden — Anytimer' },
