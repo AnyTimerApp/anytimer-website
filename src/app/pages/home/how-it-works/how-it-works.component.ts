@@ -1,4 +1,5 @@
-import { Component, AfterViewInit, OnDestroy, ChangeDetectorRef, HostListener } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, ChangeDetectorRef, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-how-it-works',
@@ -11,9 +12,10 @@ export class HowItWorksComponent implements AfterViewInit, OnDestroy {
   private wrappers: HTMLElement[] = [];
   private readonly STICKY_TOP = 72 + 40; // header-height + offset
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(private cdr: ChangeDetectorRef, @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit() {
+    if (!isPlatformBrowser(this.platformId)) return;
     this.wrappers = Array.from(
       document.querySelectorAll<HTMLElement>('.p-card-wrap')
     );
@@ -24,7 +26,9 @@ export class HowItWorksComponent implements AfterViewInit, OnDestroy {
 
   @HostListener('window:scroll', [])
   onScroll() {
-    this.updateActiveStep();
+    if (isPlatformBrowser(this.platformId)) {
+      this.updateActiveStep();
+    }
   }
 
   private updateActiveStep() {

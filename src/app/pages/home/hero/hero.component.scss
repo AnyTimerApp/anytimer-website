@@ -128,6 +128,7 @@ h1 {
   .badge-text {
     display: flex;
     flex-direction: column;
+    text-align: left;
   }
 
   .badge-small {
@@ -188,18 +189,30 @@ h1 {
     padding: 11px 14px;
     gap: 8px;
     border-radius: 13px;
+    background: #fff;
+    border-color: #fff;
+    color: #000;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.88);
+      border-color: #fff;
+    }
 
     .badge-icon svg {
       width: 20px;
       height: 20px;
+      fill: #000;
+      color: #000;
     }
 
     .badge-small {
       font-size: 0.58rem;
+      color: rgba(0, 0, 0, 0.55);
     }
 
     .badge-large {
       font-size: 0.88rem;
+      color: #000;
     }
   }
 
