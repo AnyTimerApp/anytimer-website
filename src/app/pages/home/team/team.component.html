@@ -4,21 +4,21 @@
       <span class="section-label">Over ons</span>
       <h2 class="team-title">Gebouwd door vrienden, voor vrienden.</h2>
       <p class="team-desc">
-        We zijn een klein team uit Nederland dat Anytimer heeft gebouwd
-        omdat het bijhouden van anytimers in notities of in je hoofd nooit werkt.
-        Nu is daar de app voor.
+        Wij hebben de AnyTimerApp gebouwd omdat anytimers bijhouden in je notities of gewoon in je hoofd eigenlijk nooit
+        goed werkt. Voor je het weet komt Jilles weer aanzetten met tien any’s die hij niet meer kan verklaren. Daarom
+        wilden we één plek maken waar je anytimers en herinneringen makkelijk bijhoudt
       </p>
     </div>
 
     <div class="team-grid">
       @for (member of members; track member.name) {
-        <div class="member-card">
-          <div class="member-avatar" [style.background]="member.color">
-            <span>{{ member.name[0] }}</span>
-          </div>
-          <h3>{{ member.name }}</h3>
-          <p>{{ member.role }}</p>
+      <div class="member-card">
+        <div class="member-avatar" [style.background]="member.color">
+          <span>{{ member.name[0] }}</span>
         </div>
+        <h3>{{ member.name }}</h3>
+        <p>{{ member.role }}</p>
+      </div>
       }
     </div>
 
