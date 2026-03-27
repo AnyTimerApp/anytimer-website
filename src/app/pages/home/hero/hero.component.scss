@@ -180,6 +180,27 @@ h1 {
 
   .store-badges {
     justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .store-badge {
+    flex: 1;
+    padding: 11px 14px;
+    gap: 8px;
+    border-radius: 13px;
+
+    .badge-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .badge-small {
+      font-size: 0.58rem;
+    }
+
+    .badge-large {
+      font-size: 0.88rem;
+    }
   }
 
   .hero-overlay {
