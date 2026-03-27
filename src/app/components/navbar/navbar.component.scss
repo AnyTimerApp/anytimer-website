@@ -102,7 +102,9 @@
     top: var(--header-height);
     left: 0;
     right: 0;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     flex-direction: column;
     padding: 24px;
     gap: 20px;
@@ -128,6 +130,23 @@
   height: 40px;
   padding: 0 20px;
   font-size: 0.9rem;
+}
+
+/* Transparent navbar state — glass mobile menu */
+.navbar:not(.scrolled) .nav-links {
+  @media (max-width: 768px) {
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    a {
+      color: rgba(255, 255, 255, 0.9);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 }
 
 /* Transparent navbar state — ghost button */
