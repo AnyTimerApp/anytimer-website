@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /remove-account
+
+Sitemap: https://anytimer.app/sitemap.xml
