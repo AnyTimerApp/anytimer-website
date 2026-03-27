@@ -36,6 +36,9 @@
             @if (faq.open) {
               <div class="faq-answer">
                 <p>{{ faq.answer }}</p>
+                @if (faq.link) {
+                  <a [routerLink]="faq.link" class="faq-read-more">{{ faq.linkText }}</a>
+                }
               </div>
             }
           </div>

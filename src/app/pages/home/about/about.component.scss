@@ -150,6 +150,17 @@
   }
 }
 
+.faq-read-more {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; text-underline-offset: 3px; }
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .faq-layout {
