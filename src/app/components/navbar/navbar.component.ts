@@ -20,14 +20,21 @@ export class NavbarComponent implements OnInit, OnDestroy {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.isHeroPage = this.router.url === '/';
+    this.isHeroPage = this.isHomePath(this.router.url);
 
     this.routerSub = this.router.events
       .pipe(filter(e => e instanceof NavigationEnd))
       .subscribe((e: any) => {
-        this.isHeroPage = e.urlAfterRedirects === '/';
+        this.isHeroPage = this.isHomePath(e.urlAfterRedirects);
         this.menuOpen = false;
       });
+  }
+
+  // Strip fragment (#features) and query params before comparing —
+  // "/#features" and "/" both resolve to the home hero page.
+  private isHomePath(url: string): boolean {
+    const path = url.split('#')[0].split('?')[0];
+    return path === '/' || path === '';
   }
 
   ngOnDestroy() {
