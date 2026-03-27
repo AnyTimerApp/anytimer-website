@@ -93,22 +93,34 @@
   flex-direction: column;
 }
 
+/*
+ * THE WRAPPER is sticky, NOT the card.
+ * Each wrapper sticks at the same top and stays there for the life of
+ * the section. Later wrappers (higher z-index) slide over earlier ones,
+ * creating the deck-of-cards effect. Cards never get "pulled up" because
+ * their wrapper is still stuck at the top.
+ */
 .p-card-wrap {
-  /* Generous height = scroll distance per card */
-  min-height: 560px;
-  position: relative;
-}
-
-/* Last wrap: no extra scroll distance, just the card height */
-.p-card-wrap:last-child {
-  min-height: auto;
-  padding-bottom: 0;
-}
-
-.p-card {
   position: sticky;
-  /* ALL cards stick at the same Y — this is what creates the deck effect */
   top: calc(var(--header-height) + 40px);
+  /* 80 vh gives comfortable scroll distance before the next card arrives */
+  min-height: 80vh;
+}
+
+/* Last card gets the same runway — ensures process-right is tall enough
+   that the wrapper fully un-sticks and scrolls off screen */
+.p-card-wrap:last-child {
+  min-height: 80vh;
+}
+
+/* Later wrappers sit on top of earlier ones */
+.p-card-wrap:nth-child(1) { z-index: 1; }
+.p-card-wrap:nth-child(2) { z-index: 2; }
+.p-card-wrap:nth-child(3) { z-index: 3; }
+.p-card-wrap:nth-child(4) { z-index: 4; }
+
+/* Card is a normal block inside its sticky wrapper */
+.p-card {
   border-radius: 28px;
   background: #f8f9fc;
   border: 1px solid var(--border-light);
@@ -117,11 +129,10 @@
   padding: 36px 36px 0;
 }
 
-/* Increasing z-index so each card slides on top of the previous */
-.p-card-wrap:nth-child(1) .p-card { z-index: 1; }
-.p-card-wrap:nth-child(2) .p-card { z-index: 2; box-shadow: 0 -4px 24px rgba(0,0,0,0.08), 0 2px 16px rgba(0,0,0,0.05); }
-.p-card-wrap:nth-child(3) .p-card { z-index: 3; box-shadow: 0 -4px 28px rgba(0,0,0,0.10), 0 2px 16px rgba(0,0,0,0.05); }
-.p-card-wrap:nth-child(4) .p-card { z-index: 4; box-shadow: 0 -4px 32px rgba(0,0,0,0.12), 0 2px 16px rgba(0,0,0,0.05); }
+/* Slightly stronger shadow on later cards to give a sense of depth */
+.p-card-wrap:nth-child(2) .p-card { box-shadow: 0 -4px 24px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06); }
+.p-card-wrap:nth-child(3) .p-card { box-shadow: 0 -4px 28px rgba(0,0,0,0.10), 0 4px 16px rgba(0,0,0,0.07); }
+.p-card-wrap:nth-child(4) .p-card { box-shadow: 0 -4px 32px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.08); }
 
 .p-card--blue {
   background: linear-gradient(145deg, #eef4ff 0%, #dbe9ff 100%);
@@ -243,15 +254,13 @@
     display: none;
   }
 
+  /* Keep sticky on mobile — same deck effect, just smaller cards */
   .p-card-wrap {
-    min-height: auto;
-    margin-bottom: 20px;
+    min-height: 75vh;
   }
 
-  .p-card {
-    position: relative;
-    top: 0 !important;
-    z-index: 1 !important;
+  .p-card-wrap:last-child {
+    min-height: 75vh;
   }
 
   .p-card-body {
