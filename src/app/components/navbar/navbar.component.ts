@@ -16,6 +16,19 @@ export class NavbarComponent implements OnInit, OnDestroy {
   isHeroPage = true;
   menuOpen = false;
 
+  readonly APP_STORE_URL = 'https://apps.apple.com/nl/app/anytimerapp/id6758271174';
+  readonly PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.anytimer.app';
+
+  get downloadUrl(): string {
+    if (isPlatformBrowser(this.platformId)) {
+      const ua = navigator.userAgent;
+      if (/iPad|iPhone|iPod|Macintosh/i.test(ua)) {
+        return this.APP_STORE_URL;
+      }
+    }
+    return this.PLAY_STORE_URL;
+  }
+
   private routerSub!: Subscription;
 
   constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {}
