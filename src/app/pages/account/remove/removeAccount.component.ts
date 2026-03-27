@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-removeAccount',
   standalone: true,
   templateUrl: 'removeAccount.component.html',
-  styleUrl: '../account.component.scss'
+  styleUrl: '../../juridisch/juridisch.component.scss'
 })
 export class RemoveAccountComponent {}

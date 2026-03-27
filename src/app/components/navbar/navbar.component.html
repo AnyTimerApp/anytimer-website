@@ -1,8 +1,10 @@
 ﻿<nav class="navbar" [class.scrolled]="isScrolled || !isHeroPage">
   <div class="container nav-inner">
     <a routerLink="/" class="logo" (click)="scrollToTop()">
-      <img src="assets/logo.png" alt="Anytimer" class="logo-img">
-      <span>Anytimer</span>
+      <div class="logo-icon">
+        <img src="assets/logo.png" alt="AnyTimerApp" class="logo-img">
+      </div>
+      <span>AnyTimerApp</span>
     </a>
 
     <div class="nav-links" [class.open]="menuOpen">
