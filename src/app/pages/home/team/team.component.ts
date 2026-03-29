@@ -11,9 +11,24 @@ import { RouterLink } from '@angular/router';
 })
 export class TeamComponent {
   members = [
-    { name: 'Marty', role: 'Developer', color: '#C4B5FD' },
-    { name: 'Stijn', role: 'Developer', color: '#FCA5A5' },
-    { name: 'Jilles', role: 'Marketing', color: '#93C5FD' }
+    {
+      name: 'Martijn',
+      role: 'Developer',
+      webp: 'assets/team/Marty.webp',
+      png: 'assets/team/Marty.png'
+    },
+    {
+      name: 'Stijn',
+      role: 'Developer',
+      webp: 'assets/team/Stijn.webp',
+      png: 'assets/team/Stijn.png'
+    },
+    {
+      name: 'Jilles',
+      role: 'Marketing',
+      webp: 'assets/team/Jill.webp',
+      png: 'assets/team/Jill.png'
+    }
   ];
 
   offsets = [0, 40, 16];

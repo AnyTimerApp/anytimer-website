@@ -13,8 +13,11 @@
     <div class="team-grid">
       @for (member of members; track member.name) {
       <div class="member-card">
-        <div class="member-avatar" [style.background]="member.color">
-          <span>{{ member.name[0] }}</span>
+        <div class="member-avatar">
+          <picture>
+            <source [srcset]="member.webp" type="image/webp" />
+            <img [src]="member.png" [alt]="member.name" />
+          </picture>
         </div>
         <h3>{{ member.name }}</h3>
         <p>{{ member.role }}</p>
