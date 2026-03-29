@@ -109,6 +109,7 @@
 }
 
 .feat-badge {
+  width: calc(50% - 5px);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -124,6 +125,12 @@
 
   &:hover {
     background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .feat-badge {
+    width: 100%;
   }
 }
 
