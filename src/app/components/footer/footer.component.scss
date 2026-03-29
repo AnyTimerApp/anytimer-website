@@ -25,6 +25,30 @@
   }
 }
 
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.footer-social {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+}
+
 .footer-links {
   display: flex;
   gap: 80px;
