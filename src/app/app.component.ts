@@ -22,14 +22,14 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.setHreflang(this.router.url);
+    this.setLinkTags(this.router.url);
 
     this.router.events
       .pipe(filter(e => e instanceof NavigationEnd))
-      .subscribe((e: any) => this.setHreflang(e.urlAfterRedirects));
+      .subscribe((e: any) => this.setLinkTags(e.urlAfterRedirects));
   }
 
-  private setHreflang(url: string) {
+  private setLinkTags(url: string) {
     const path = url.split('#')[0].split('?')[0];
     const href = BASE_URL + (path === '/' || path === '' ? '/' : path);
 
@@ -50,5 +50,13 @@ export class AppComponent implements OnInit {
       this.document.head.appendChild(xDefault);
     }
     xDefault.setAttribute('href', href);
+
+    let canonical = this.document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = this.document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      this.document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', href);
   }
 }
