@@ -6,8 +6,10 @@
       <span class="section-label">Contact</span>
       <h1 class="legal-title">Neem contact op</h1>
       <p class="legal-intro">
-        Of het nu gaat om vragen, problemen, feedback of een samenwerking —
-        we horen het graag. Stuur ons een mail en we reageren zo snel mogelijk.
+        Heb je een vraag over de AnyTimerApp, loop je ergens tegenaan of wil je samenwerken?
+        We horen het graag. Stuur ons een mail via
+        <a href="mailto:info@anytimer.app" class="faq-link">info&#64;anytimer.app</a>
+        en we reageren zo snel mogelijk.
       </p>
     </div>
 
@@ -16,17 +18,17 @@
 
       <div class="reason-card reason-card--light">
         <h3>Informatie</h3>
-        <p>Heb je een vraag over de app of wil je meer weten over Anytimer? Laat het ons weten.</p>
+        <p>Heb je een vraag over hoe de AnyTimerApp werkt, welke functies er zijn of wat er op de planning staat? Laat het ons weten.</p>
       </div>
 
       <div class="reason-card reason-card--blue">
         <h3>Problemen</h3>
-        <p>Loop je ergens tegenaan in de app? Technisch of contextueel — stuur ons een bericht en we helpen je zo snel mogelijk.</p>
+        <p>Loop je ergens tegenaan in de app of heb je een bug gevonden? Dan kan je deze in de app als feedback doorsturen. Je mag ons natuurlijk ook altijd mailen of via de socials contact opnemen.</p>
       </div>
 
       <div class="reason-card reason-card--accent">
         <h3>Samenwerking</h3>
-        <p>Heb je een idee voor een samenwerking of wil je bijdragen aan Anytimer? We horen het graag!</p>
+        <p>Heb je een idee voor een samenwerking, ben je content creator of wil je op een andere manier bijdragen aan de AnyTimerApp? We horen het graag!</p>
       </div>
 
     </div>
@@ -41,8 +43,41 @@
       <div class="contact-card-wide__body">
         <p class="contact-card-wide__label">Stuur ons een mail</p>
         <a href="mailto:info@anytimer.app" class="contact-card-wide__email">info&#64;anytimer.app</a>
-        <p class="contact-card-wide__note">We reageren doorgaans binnen 48 uur.</p>
+        <p class="contact-card-wide__note">We doen ons best om binnen 48 uur te reageren.</p>
       </div>
+    </div>
+
+    <!-- Mini FAQ -->
+    <div class="faq-layout contact-faq">
+
+      <div class="faq-left">
+        <span class="section-label">Feedback of contact</span>
+        <h2 class="faq-title">Hoe werkt contact opnemen?</h2>
+        <p class="faq-desc">
+          Staat je vraag er niet bij? Stuur ons dan een mail of een berichtje op onze socials.
+        </p>
+      </div>
+
+      <div class="faq-right">
+        @for (faq of faqs; track faq.question; let i = $index) {
+          <div class="faq-item" [class.faq-item--open]="faq.open" (click)="toggle(i)">
+            <div class="faq-question">
+              <span>{{ faq.question }}</span>
+              <div class="faq-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+            </div>
+            @if (faq.open) {
+              <div class="faq-answer">
+                <p>{{ faq.answer }}</p>
+              </div>
+            }
+          </div>
+        }
+      </div>
+
     </div>
 
   </div>
