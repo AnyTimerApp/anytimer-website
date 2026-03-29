@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Strategy Report — anytimer.app</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0a0a0f; --bg-card: rgba(255,255,255,0.03); --bg-card-hover: rgba(255,255,255,0.06);
+    --border: rgba(255,255,255,0.08); --border-hover: rgba(255,255,255,0.15);
+    --text: #e8e8ed; --text-secondary: #8b8b9e; --text-muted: #5a5a6e;
+    --accent: #6366f1; --accent-glow: rgba(99,102,241,0.3);
+    --green: #22c55e; --green-bg: rgba(34,197,94,0.12); --green-border: rgba(34,197,94,0.25);
+    --yellow: #eab308; --yellow-bg: rgba(234,179,8,0.12); --yellow-border: rgba(234,179,8,0.25);
+    --red: #ef4444; --red-bg: rgba(239,68,68,0.12); --red-border: rgba(239,68,68,0.25);
+    --blue: #3b82f6; --blue-bg: rgba(59,130,246,0.12);
+    --orange: #f97316; --orange-bg: rgba(249,115,22,0.12); --orange-border: rgba(249,115,22,0.25);
+    --purple: #a78bfa; --purple-bg: rgba(167,139,250,0.08); --purple-border: rgba(167,139,250,0.15);
+    --radius: 16px; --radius-sm: 10px; --radius-xs: 6px;
+  }
+  ::selection { background: var(--accent); color: white; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(ellipse at 20% 50%, rgba(99,102,241,0.06) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(139,92,246,0.04) 0%, transparent 50%); z-index: -1; }
+  ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .header { padding: 40px 0 0; text-align: center; }
+  .header-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; font-size: 12px; font-weight: 500; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+  .header-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+  .header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; line-height: 1.15; margin-bottom: 12px; background: linear-gradient(135deg, #fff 0%, #a5a5c0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .header .subtitle { font-size: 16px; color: var(--text-secondary); margin-bottom: 32px; }
+  .score-section { display: flex; align-items: center; gap: 48px; margin-bottom: 40px; padding: 40px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
+  .score-circle { width: 180px; height: 180px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative; flex-shrink: 0; }
+  .score-circle svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+  .score-circle svg circle { fill: none; stroke-width: 6; stroke-linecap: round; }
+  .score-circle svg .bg-ring { stroke: rgba(255,255,255,0.06); }
+  .score-circle svg .progress-ring { stroke: var(--accent); stroke-dasharray: 502; stroke-dashoffset: 151; filter: drop-shadow(0 0 6px var(--accent-glow)); }
+  .score-number { font-family: 'Space Grotesk', sans-serif; font-size: 56px; font-weight: 700; line-height: 1; color: white; position: relative; z-index: 1; }
+  .score-grade { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; position: relative; z-index: 1; }
+  .score-label { font-size: 13px; color: var(--text-secondary); position: relative; z-index: 1; margin-top: 2px; }
+  .score-details { flex: 1; }
+  .score-details h2 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+  .score-details p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
+  .sub-scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+  .sub-score { padding: 14px 16px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+  .sub-score-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 6px; }
+  .sub-score-value { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; }
+  .sub-score-bar { height: 3px; border-radius: 2px; background: rgba(255,255,255,0.06); margin-top: 8px; overflow: hidden; }
+  .sub-score-bar-fill { height: 100%; border-radius: 2px; }
+  .tabs { position: sticky; top: 0; z-index: 100; background: rgba(10,10,15,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+  .tabs-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; overflow-x: auto; scrollbar-width: none; }
+  .tabs-inner::-webkit-scrollbar { display: none; }
+  .tab-btn { padding: 16px 24px; font-size: 14px; font-weight: 500; color: var(--text-muted); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+  .tab-btn:hover { color: var(--text-secondary); }
+  .tab-btn.active { color: var(--text); border-bottom-color: var(--accent); }
+  .tab-btn .tab-count { display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px; padding: 0 6px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; font-size: 11px; font-weight: 600; margin-left: 8px; color: var(--text-secondary); }
+  .tab-btn.active .tab-count { background: var(--accent); border-color: var(--accent); color: white; }
+  .tab-content { display: none; padding: 40px 0 80px; }
+  .tab-content.active { display: block; }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+  .section-subtitle { color: var(--text-secondary); font-size: 15px; margin-bottom: 24px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 40px; }
+  .stat-card { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); text-align: center; }
+  .stat-value { font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700; color: white; margin-bottom: 4px; }
+  .stat-label { font-size: 13px; color: var(--text-secondary); }
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 16px; }
+  .card-title { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; }
+  .badge { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600; }
+  .badge-critical { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .badge-high { background: var(--orange-bg); color: var(--orange); border: 1px solid var(--orange-border); }
+  .badge-medium { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .badge-low { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .badge-pass { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .badge-warning { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .badge-fail { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .finding { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: start; }
+  .finding:last-child { border-bottom: none; }
+  .finding-status { width: 8px; height: 8px; border-radius: 50%; margin-top: 8px; }
+  .finding-status.pass { background: var(--green); box-shadow: 0 0 6px rgba(34,197,94,0.4); }
+  .finding-status.warning { background: var(--yellow); box-shadow: 0 0 6px rgba(234,179,8,0.4); }
+  .finding-status.fail { background: var(--red); box-shadow: 0 0 6px rgba(239,68,68,0.4); }
+  .finding-content h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .finding-content p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+  .finding-rec { margin-top: 8px; padding: 10px 14px; background: rgba(99,102,241,0.06); border-left: 3px solid var(--accent); border-radius: 0 var(--radius-xs) var(--radius-xs) 0; font-size: 13px; color: var(--text); line-height: 1.5; }
+  .collapsible { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 12px; overflow: hidden; }
+  .collapsible-header { padding: 20px 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+  .collapsible-header:hover { background: rgba(255,255,255,0.02); }
+  .collapsible-title { font-weight: 600; color: var(--text); font-size: 14px; display: flex; align-items: center; gap: 12px; }
+  .collapsible-body { overflow: hidden; max-height: 0; transition: max-height 0.35s ease; }
+  .collapsible.open .collapsible-body { max-height: 5000px; }
+  .collapsible-body-inner { padding: 0 24px 24px; }
+  .collapse-icon { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--text-muted); transition: transform 0.3s; }
+  .collapsible.open .collapse-icon { transform: rotate(180deg); }
+  .page-table { width: 100%; border-collapse: collapse; }
+  .page-table th { text-align: left; padding: 12px 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); border-bottom: 1px solid var(--border); font-weight: 600; }
+  .page-table td { padding: 12px 16px; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.03); vertical-align: middle; }
+  .page-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .page-url { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); }
+  .checklist-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .checklist-item:last-child { border-bottom: none; }
+  .check-icon { width: 22px; height: 22px; border-radius: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; margin-top: 1px; }
+  .check-icon.pass { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .check-icon.fail { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .check-icon.warn { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .check-text { font-size: 14px; color: var(--text); }
+  .check-text.muted { color: var(--text-secondary); }
+  .action-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 24px; margin-bottom: 12px; display: flex; gap: 20px; align-items: flex-start; }
+  .action-number { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: var(--accent); flex-shrink: 0; width: 36px; text-align: center; opacity: 0.5; }
+  .action-content { flex: 1; }
+  .action-title { font-weight: 600; color: var(--text); font-size: 15px; margin-bottom: 6px; }
+  .action-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+  .action-impact { margin-top: 8px; font-size: 13px; color: var(--green); font-weight: 500; }
+  .cluster { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 16px; }
+  .cluster-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: var(--purple); font-size: 16px; margin-bottom: 12px; }
+  .cluster-pages { display: flex; flex-wrap: wrap; gap: 8px; }
+  .cluster-page { padding: 6px 14px; border-radius: 100px; background: var(--purple-bg); border: 1px solid var(--purple-border); font-size: 13px; font-family: 'JetBrains Mono', monospace; color: var(--text-secondary); }
+  .cluster-page.pillar { background: rgba(167,139,250,0.15); border-color: rgba(167,139,250,0.3); color: var(--purple); font-weight: 600; }
+  @media (max-width: 768px) {
+    .header h1 { font-size: 28px; }
+    .score-section { flex-direction: column; text-align: center; padding: 24px; gap: 24px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .sub-scores { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <div class="header-badge"><span class="dot"></span> Site-Wide SEO Audit v2</div>
+    <h1>anytimer.app</h1>
+    <p class="subtitle">Comprehensive analysis van 6 pagina's — Gegenereerd 29 maart 2026</p>
+  </div>
+</div>
+
+<div class="container" style="padding-top:0;padding-bottom:32px;">
+  <div class="score-section">
+    <div class="score-circle">
+      <svg viewBox="0 0 160 160">
+        <circle class="bg-ring" cx="80" cy="80" r="74"/>
+        <circle class="progress-ring" cx="80" cy="80" r="74"/>
+      </svg>
+      <span class="score-number">70</span>
+      <span class="score-grade">Grade C</span>
+      <span class="score-label">Overall Health</span>
+    </div>
+    <div class="score-details">
+      <h2>Goede basis, maar schema &amp; OG tags ontbreken volledig</h2>
+      <p>De technische fundament is solide: SSR, sitemap, robots.txt, meta descriptions en hreflang zijn allemaal aanwezig. De grootste zwaktes zijn het ontbreken van JSON-LD schema markup (0% dekking) en Open Graph tags op 5 van 6 pagina's — dit verklaart de "no rich results" en beperkte social sharing previews. Content en architectuur scoren sterk.</p>
+      <div class="sub-scores">
+        <div class="sub-score">
+          <div class="sub-score-label">Technical</div>
+          <div class="sub-score-value" style="color:var(--orange)">53</div>
+          <div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:53%;background:var(--orange)"></div></div>
+        </div>
+        <div class="sub-score">
+          <div class="sub-score-label">Content</div>
+          <div class="sub-score-value" style="color:var(--green)">90</div>
+          <div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:90%;background:var(--green)"></div></div>
+        </div>
+        <div class="sub-score">
+          <div class="sub-score-label">Architecture</div>
+          <div class="sub-score-value" style="color:var(--green)">85</div>
+          <div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:85%;background:var(--green)"></div></div>
+        </div>
+        <div class="sub-score">
+          <div class="sub-score-label">Cross-Page</div>
+          <div class="sub-score-value" style="color:var(--green)">87</div>
+          <div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:87%;background:var(--green)"></div></div>
+        </div>
+        <div class="sub-score">
+          <div class="sub-score-label">Social &amp; Schema</div>
+          <div class="sub-score-value" style="color:var(--red)">25</div>
+          <div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:25%;background:var(--red)"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tabs-inner">
+    <button class="tab-btn active" onclick="switchTab('executive')">Executive Summary</button>
+    <button class="tab-btn" onclick="switchTab('pages')">Pagina's <span class="tab-count">6</span></button>
+    <button class="tab-btn" onclick="switchTab('sitewide')">Site-brede issues <span class="tab-count">8</span></button>
+    <button class="tab-btn" onclick="switchTab('technical')">Technisch</button>
+    <button class="tab-btn" onclick="switchTab('content')">Content strategie</button>
+    <button class="tab-btn" onclick="switchTab('linking')">Interne links</button>
+    <button class="tab-btn" onclick="switchTab('actions')">Actieplan</button>
+  </div>
+</div>
+
+<!-- ===== TAB 1: EXECUTIVE SUMMARY ===== -->
+<div id="tab-executive" class="tab-content active">
+<div class="container">
+  <div class="section-title">Executive Summary</div>
+  <div class="section-subtitle">Overzicht van de SEO-gezondheid van anytimer.app en de top prioriteiten</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value">6</div><div class="stat-label">Pagina's geaudit</div></div>
+    <div class="stat-card"><div class="stat-value" style="color:var(--red)">0</div><div class="stat-label">Kritieke issues</div></div>
+    <div class="stat-card"><div class="stat-value" style="color:var(--orange)">4</div><div class="stat-label">Hoge prioriteit</div></div>
+    <div class="stat-card"><div class="stat-value" style="color:var(--yellow)">6</div><div class="stat-label">Waarschuwingen</div></div>
+    <div class="stat-card"><div class="stat-value">~567</div><div class="stat-label">Gem. woordcount</div></div>
+    <div class="stat-card"><div class="stat-value" style="color:var(--red)">0%</div><div class="stat-label">Schema-dekking</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-title" style="margin-bottom:16px;">Belangrijkste bevindingen</div>
+    <div style="color:var(--text-secondary);font-size:15px;line-height:1.8;">
+      JSON-LD schema markup ontbreekt op alle 6 pagina's — dit is de directe oorzaak van "geen rich results" in Google. Open Graph en Twitter Card tags zijn aanwezig op de homepage, maar ontbreken op de overige 5 pagina's, waardoor gedeelde links op WhatsApp geen preview tonen. Canonical tags ontbreken op alle pagina's, wat URL-variaties kan verwarren voor zoekmachines en bijdraagt aan de "pages not indexed" problematiek. De content- en architectuurscores zijn sterk: alle pagina's hebben unieke titles, meta descriptions en H1 tags. De /contact pagina heeft met ~150 woorden dunne content. SSR/prerender, sitemap.xml, robots.txt en hreflang zijn allemaal correct geconfigureerd.
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:18px;margin-top:32px;">Top 3 prioriteiten</div>
+  <div class="section-subtitle">De hoogste impact acties om nu aan te beginnen</div>
+
+  <div class="action-item">
+    <div class="action-number">1</div>
+    <div class="action-content">
+      <div class="action-title">Voeg JSON-LD schema markup toe (MobileApplication + FAQPage + Organization)</div>
+      <div class="action-desc">Geen enkele pagina heeft gestructureerde data. Voor de homepage: MobileApplication schema met naam, beschrijving, OS (iOS/Android), downloadUrl en rating. FAQPage schema voor de FAQ-sectie. Organization voor het merk. Dit is de enige manier om rich results (app-paneel, FAQ-snippets) in Google te krijgen.</div>
+      <div class="action-impact">Verwacht effect: rich results in Google, hogere CTR, adresseert "no rich results" issue direct.</div>
+    </div>
+    <span class="badge badge-high">Hoog</span>
+  </div>
+
+  <div class="action-item">
+    <div class="action-number">2</div>
+    <div class="action-content">
+      <div class="action-title">Voeg canonical tags toe aan alle 6 pagina's</div>
+      <div class="action-desc">Geen enkele pagina heeft een <code>&lt;link rel="canonical"&gt;</code> tag. Zonder canonical kan Google besluiten welke URL-variant te indexeren — met of zonder trailing slash, met UTM parameters, etc. Dit kan de "pages not indexed" problematiek verklaren. Voeg toe via Angular's Meta service of DOCUMENT injection in elke page component.</div>
+      <div class="action-impact">Verwacht effect: duidelijker indexeringsignaal voor Google, helpt pages-not-indexed probleem oplossen.</div>
+    </div>
+    <span class="badge badge-high">Hoog</span>
+  </div>
+
+  <div class="action-item">
+    <div class="action-number">3</div>
+    <div class="action-content">
+      <div class="action-title">Voeg OG + Twitter Card tags toe aan de overige 5 pagina's</div>
+      <div class="action-desc">Alleen de homepage heeft OG tags. /contact, /privacy, /terms, /remove-account en /wat-is-een-anytimer tonen een kale link wanneer gedeeld via WhatsApp, Instagram of iMessage. Voeg minimaal og:title, og:description, og:image en og:url toe via de Meta service in elk page component.</div>
+      <div class="action-impact">Verwacht effect: aantrekkelijke link previews op alle gedeelde pagina's, hogere klikratio op social.</div>
+    </div>
+    <span class="badge badge-high">Hoog</span>
+  </div>
+</div>
+</div>
+
+<!-- ===== TAB 2: PAGINA'S ===== -->
+<div id="tab-pages" class="tab-content">
+<div class="container">
+  <div class="section-title">Pagina-voor-pagina breakdown</div>
+  <div class="section-subtitle">Individuele auditresultaten per pagina</div>
+
+  <div class="card" style="overflow-x:auto;padding:0;">
+    <table class="page-table">
+      <thead>
+        <tr>
+          <th>Pagina</th>
+          <th>Woorden</th>
+          <th>H1</th>
+          <th>Meta desc</th>
+          <th>OG tags</th>
+          <th>Schema</th>
+          <th>Canonical</th>
+          <th>Issues</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="page-url">/</span></td><td>~900</td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-fail">✗</span></td><td><span class="badge badge-fail">✗</span></td><td>2</td></tr>
+        <tr><td><span class="page-url">/contact</span></td><td>~150</td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-fail">✗</span></td><td><span class="badge badge-fail">✗</span></td><td><span class="badge badge-fail">✗</span></td><td>4</td></tr>
+        <tr><td><span class="page-url">/privacy</span></td><td>~1200</td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-fail">✗</span></td><td><span class="badge badge-fail">✗</span></td><td><span class="badge badge-fail">✗</span></td><td>3</td></tr>
+        <tr><td><span class="page-url">/terms</span></td><td>~600</td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-fail">✗</span></td><td><span class="badge badge-fail">✗</span></td><td><span class="badge badge-fail">✗</span></td><td>3</td></tr>
+        <tr><td><span class="page-url">/remove-account</span></td><td>~200</td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-fail">✗</span></td><td><span class="badge badge-fail">✗</span></td><td><span class="badge badge-fail">✗</span></td><td>3</td></tr>
+        <tr><td><span class="page-url">/wat-is-een-anytimer</span></td><td>~350</td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-fail">✗</span></td><td><span class="badge badge-fail">✗</span></td><td><span class="badge badge-fail">✗</span></td><td>3</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Per-page collapsibles -->
+  <div style="margin-top:24px;">
+
+  <div class="collapsible open">
+    <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="collapsible-title"><span class="page-url">/</span> — Homepage <span class="badge badge-medium">2 issues</span></span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-body-inner">
+      <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Title tag</h4><p>"Anytimer — Vergeet nooit op wie je nog anytimers hebt" (51 tekens) — perfect.</p></div><span class="badge badge-pass">Pass</span></div>
+      <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Meta description</h4><p>Aanwezig, bevat primaire keywords, correcte lengte. Ingesteld via Angular Meta service.</p></div><span class="badge badge-pass">Pass</span></div>
+      <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>H1 tag</h4><p>"Vergeet nooit meer wie jou een anytimer schuldig is." — duidelijk, één H1. ✓</p></div><span class="badge badge-pass">Pass</span></div>
+      <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Open Graph &amp; Twitter Card</h4><p>og:title, og:description, og:image, og:url, og:type aanwezig. Twitter card: summary_large_image. ✓</p></div><span class="badge badge-pass">Pass</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Schema markup (JSON-LD)</h4><p>Geen gestructureerde data aanwezig. De homepage is de ideale plek voor MobileApplication + FAQPage + Organization schema.</p><div class="finding-rec">Voeg JSON-LD toe in HomeComponent constructor: MobileApplication (naam, OS, downloadUrl), FAQPage (alle 5 FAQ items), Organization (naam, url, logo).</div></div><span class="badge badge-high">Hoog</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Canonical tag</h4><p>Geen <code>&lt;link rel="canonical" href="https://anytimer.app/"&gt;</code> aanwezig. Google kan URL-variaties als duplicaten beschouwen.</p><div class="finding-rec">Voeg canonical toe via DOCUMENT injection in AppComponent of HomeComponent, vergelijkbaar met de bestaande hreflang implementatie.</div></div><span class="badge badge-high">Hoog</span></div>
+      <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Content diepte</h4><p>~900 woorden verdeeld over hero, features, hoe-het-werkt, FAQ en team. Goede diepte voor een app-landingspagina.</p></div><span class="badge badge-pass">Pass</span></div>
+      <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Afbeeldingen</h4><p>Hero: loading="eager" ✓. Mockups: loading="lazy" ✓. Alt-teksten aanwezig ✓.</p></div><span class="badge badge-pass">Pass</span></div>
+    </div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="collapsible-title"><span class="page-url">/contact</span> <span class="badge badge-high">4 issues</span></span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-body-inner">
+      <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Title &amp; H1</h4><p>"Contact — Anytimer" + H1 "Neem contact op" — goed.</p></div><span class="badge badge-pass">Pass</span></div>
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Dunne content (~150 woorden)</h4><p>De pagina heeft slechts ~150 woorden: een intro, 3 reden-kaarten en een e-maillink. Google beschouwt dit als thin content voor een indexeerbare pagina.</p><div class="finding-rec">Voeg een paragraaf toe over reactietijd, ondersteuningsproces, of een korte FAQ ("Binnen hoeveel tijd krijg ik antwoord? Kan ik ook bellen?"). Target 300+ woorden.</div></div><span class="badge badge-medium">Medium</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen Open Graph tags</h4><p>Wanneer iemand /contact deelt via WhatsApp of Twitter/X, verschijnt er geen preview.</p><div class="finding-rec">Voeg toe in ContactComponent constructor: og:title "Contact — Anytimer", og:description, og:image (logo of Together.png), og:url.</div></div><span class="badge badge-high">Hoog</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen schema markup</h4><p>ContactPage of Organization schema ontbreekt.</p><div class="finding-rec">Voeg <code>ContactPage</code> JSON-LD toe met name, url en contactPoint (email, contactType: "customer support").</div></div><span class="badge badge-medium">Medium</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen canonical tag</h4><p>Zelfde probleem als alle andere pagina's.</p><div class="finding-rec">Canonical: https://anytimer.app/contact</div></div><span class="badge badge-high">Hoog</span></div>
+    </div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="collapsible-title"><span class="page-url">/privacy</span> <span class="badge badge-medium">3 issues</span></span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-body-inner">
+      <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Content diepte</h4><p>~1200 woorden over 15 secties. Uitstekend voor een juridische pagina.</p></div><span class="badge badge-pass">Pass</span></div>
+      <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Interne links</h4><p>Linkt naar /terms (in-content). ✓</p></div><span class="badge badge-pass">Pass</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen OG tags</h4><p>OG tags ontbreken.</p><div class="finding-rec">Voeg minimale OG tags toe: og:title "Privacybeleid — Anytimer", og:description (bestaande meta description), og:url, og:image (logo.png).</div></div><span class="badge badge-medium">Medium</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen schema markup</h4><p>WebPage schema zou goed passen.</p><div class="finding-rec">Voeg <code>WebPage</code> JSON-LD toe met name, url, description en dateModified "2026-02-12".</div></div><span class="badge badge-low">Laag</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen canonical tag</h4><p>Canonical: https://anytimer.app/privacy</p></div><span class="badge badge-high">Hoog</span></div>
+    </div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="collapsible-title"><span class="page-url">/terms</span> <span class="badge badge-medium">3 issues</span></span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-body-inner">
+      <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Content diepte</h4><p>~600 woorden. Goede diepte voor gebruiksvoorwaarden.</p></div><span class="badge badge-pass">Pass</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen OG tags</h4><p>OG tags ontbreken.</p><div class="finding-rec">og:title "Gebruiksvoorwaarden — Anytimer", og:description, og:url, og:image.</div></div><span class="badge badge-medium">Medium</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen schema markup</h4><p><code>WebPage</code> JSON-LD aanbevolen.</p></div><span class="badge badge-low">Laag</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen canonical tag</h4><p>Canonical: https://anytimer.app/terms</p></div><span class="badge badge-high">Hoog</span></div>
+    </div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="collapsible-title"><span class="page-url">/remove-account</span> <span class="badge badge-medium">3 issues</span></span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-body-inner">
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Dunne content (~200 woorden)</h4><p>4 secties met stap-voor-stap uitleg. Functioneel voldoende maar borderline qua diepte.</p><div class="finding-rec">Overweeg een sectie toe te voegen over "Wat als je account niet goed werkt?" met link naar /contact, en een korte alinea over privacy na verwijdering met link naar /privacy.</div></div><span class="badge badge-medium">Medium</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen OG tags</h4><p>OG tags ontbreken. Minder kritiek voor deze pagina.</p></div><span class="badge badge-low">Laag</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen schema markup</h4><p>WebPage JSON-LD aanbevolen. <strong>Let op:</strong> deze pagina staat in robots.txt als Disallow. Schema is hierdoor minder urgent.</p></div><span class="badge badge-low">Laag</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen canonical &amp; robots.txt Disallow</h4><p>De pagina is geblokkeerd in robots.txt (Disallow: /remove-account). Dit is bewust ingesteld in de vorige sessie voor Apple App Store compliance. Canonical is dan ook minder relevant.</p></div><span class="badge badge-low">Laag</span></div>
+    </div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="collapsible-title"><span class="page-url">/wat-is-een-anytimer</span> <span class="badge badge-medium">3 issues</span></span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-body-inner">
+      <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Title &amp; H1</h4><p>"Wat is een anytimer? — Anytimer App" (37 tekens) — goed. H1 bevat exacte target keyword.</p></div><span class="badge badge-pass">Pass</span></div>
+      <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Content diepte</h4><p>~350 woorden over 5 secties. Goed voor een informatieve definitiepagina. Bevat target keywords: anytimer, tegoed, vrienden, weddenschap, challenge.</p></div><span class="badge badge-pass">Pass</span></div>
+      <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>In sitemap</h4><p>Aanwezig in sitemap.xml met priority 0.8. ✓</p></div><span class="badge badge-pass">Pass</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen OG tags</h4><p>Juist deze pagina wordt waarschijnlijk gedeeld wanneer vrienden uitleggen wat een anytimer is — OG tags zijn hier extra waardevol.</p><div class="finding-rec">Voeg toe: og:title "Wat is een anytimer? — Anytimer App", og:description, og:image (Together.png), og:url "https://anytimer.app/wat-is-een-anytimer".</div></div><span class="badge badge-high">Hoog</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen schema markup</h4><p>Deze pagina is perfect voor FAQPage schema op basis van de 5 secties, en/of een Article/WebPage schema. Dit vergroot de kans op een featured snippet voor "wat is een anytimer".</p><div class="finding-rec">Voeg FAQPage JSON-LD toe met de 5 Q&amp;A-secties als acceptedAnswer-paren. Dit is de meest impactvolle schema-toevoeging naast de homepage.</div></div><span class="badge badge-high">Hoog</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen canonical tag</h4><p>Canonical: https://anytimer.app/wat-is-een-anytimer</p></div><span class="badge badge-high">Hoog</span></div>
+    </div></div>
+  </div>
+
+  </div>
+</div>
+</div>
+
+<!-- ===== TAB 3: SITE-BREDE ISSUES ===== -->
+<div id="tab-sitewide" class="tab-content">
+<div class="container">
+  <div class="section-title">Site-brede issues</div>
+  <div class="section-subtitle">Problemen die alle of meerdere pagina's raken</div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom:16px;">Canonical tags — volledig afwezig</div>
+    <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>0 van 5 indexeerbare pagina's hebben een canonical tag</h4><p>Zonder canonical kan Google zelf beslissen welke URL als "echte" versie wordt gezien. Dit is een waarschijnlijke bijdrage aan de "pages not indexed" klacht. URL-variaties als https://anytimer.app/?utm_source=... of https://anytimer.app/# worden dan als aparte pagina's gezien.</p><div class="finding-rec">Implementeer canonical tags centraal in AppComponent, vergelijkbaar met de hreflang implementatie. Stel per route de canonical in via DOCUMENT injection: <code>&lt;link rel="canonical" href="https://anytimer.app/[route]"&gt;</code>.</div></div><span class="badge badge-high">Hoog</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom:16px;">Schema markup — 0% dekking</div>
+    <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen enkele pagina heeft JSON-LD gestructureerde data</h4><p>Dit is de directe oorzaak van "geen rich results". Google kan de app niet herkennen als MobileApplication, kan geen FAQ-snippets tonen, en geen Knowledge Panel opbouwen voor het merk.</p><div class="finding-rec">Prioriteit 1: Homepage krijgt MobileApplication + FAQPage + Organization. Prioriteit 2: /wat-is-een-anytimer krijgt FAQPage. Prioriteit 3: overige pagina's krijgen WebPage/ContactPage.</div></div><span class="badge badge-high">Hoog</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom:16px;">Open Graph &amp; Twitter Cards — 5 van 6 pagina's missen OG tags</div>
+    <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>OG tags alleen op homepage</h4><p>/contact, /privacy, /terms, /remove-account en /wat-is-een-anytimer tonen een kale link bij delen via social media of messaging apps.</p><div class="finding-rec">Voeg minimale OG set toe aan elke page component: og:title, og:description, og:image (logo.png voor legal pagina's, Together.png voor /wat-is-een-anytimer en /contact), og:url, og:type "website".</div></div><span class="badge badge-high">Hoog</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom:16px;">Hreflang — x-default ontbreekt</div>
+    <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Alleen hreflang="nl" ingesteld, geen x-default</h4><p>De huidige implementatie in AppComponent zet hreflang="nl" correct per pagina. Echter, Google adviseert ook hreflang="x-default" toe te voegen voor bezoekers zonder taalvoorkeur (bv. via internationale links). Momenteel is de NL versie ook de enige versie.</p><div class="finding-rec">Voeg naast hreflang="nl" ook hreflang="x-default" toe met dezelfde URL. Dit is een kleine toevoeging in de setHreflang() methode van AppComponent.</div></div><span class="badge badge-medium">Medium</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom:16px;">Robots.txt &amp; Sitemap</div>
+    <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>robots.txt correct geconfigureerd</h4><p>User-agent: *, Allow: /, Disallow: /remove-account, Sitemap: https://anytimer.app/sitemap.xml. Alles correct.</p></div><span class="badge badge-pass">Pass</span></div>
+    <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>sitemap.xml aanwezig met 4 URL's</h4><p>/, /wat-is-een-anytimer, /contact, /privacy, /terms. /remove-account correct uitgesloten (disallowed in robots.txt).</p></div><span class="badge badge-pass">Pass</span></div>
+    <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Sitemap nog niet ingediend bij Google Search Console</h4><p>De sitemap bestaat, maar is Google er al van op de hoogte? Zolang de site nieuw is met SSR, is actieve indiening via Search Console de snelste manier om indexering te versnellen.</p><div class="finding-rec">Ga naar Google Search Console → Sitemaps → voer "https://anytimer.app/sitemap.xml" in en klik Submit. Vraag ook indexering aan voor de homepage via "URL Inspection".</div></div><span class="badge badge-medium">Medium</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom:16px;">Security headers</div>
+    <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Security headers onbekend / waarschijnlijk niet geconfigureerd</h4><p>HSTS, Content-Security-Policy, X-Frame-Options, X-Content-Type-Options en Referrer-Policy zijn op de meeste Angular hosting platforms niet standaard ingesteld. Dit heeft beperkte directe SEO-impact maar Google kan HTTPS-kwaliteit meewegen als ranking signal.</p><div class="finding-rec">Configureer HTTP response headers via de hosting provider (Firebase Hosting: firebase.json headers, Netlify: _headers file, Vercel: vercel.json headers).</div></div><span class="badge badge-medium">Medium</span></div>
+  </div>
+</div>
+</div>
+
+<!-- ===== TAB 4: TECHNISCH ===== -->
+<div id="tab-technical" class="tab-content">
+<div class="container">
+  <div class="section-title">Technische SEO</div>
+  <div class="section-subtitle">Infrastructure, rendering en technische implementatie</div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom:20px;">Implementatie checklist</div>
+    <div class="checklist-item"><div class="check-icon pass">✓</div><div class="check-text">HTTPS ingeschakeld (productie-domein anytimer.app)</div></div>
+    <div class="checklist-item"><div class="check-icon pass">✓</div><div class="check-text">Viewport meta tag aanwezig op alle pagina's (<code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>)</div></div>
+    <div class="checklist-item"><div class="check-icon pass">✓</div><div class="check-text">Angular SSR + prerendering geconfigureerd — alle 5 indexeerbare routes worden als statische HTML gegenereerd</div></div>
+    <div class="checklist-item"><div class="check-icon pass">✓</div><div class="check-text">robots.txt aanwezig en correct geconfigureerd met Sitemap-verwijzing</div></div>
+    <div class="checklist-item"><div class="check-icon pass">✓</div><div class="check-text">sitemap.xml aanwezig met alle 5 indexeerbare pagina's (lastmod, priority, changefreq)</div></div>
+    <div class="checklist-item"><div class="check-icon pass">✓</div><div class="check-text">Meta descriptions op alle 6 pagina's aanwezig (ingesteld via Angular Meta service)</div></div>
+    <div class="checklist-item"><div class="check-icon pass">✓</div><div class="check-text">Hreflang="nl" dynamisch ingesteld per route via AppComponent + DOCUMENT injection</div></div>
+    <div class="checklist-item"><div class="check-icon pass">✓</div><div class="check-text">Favicon aanwezig: <code>assets/logo.png</code></div></div>
+    <div class="checklist-item"><div class="check-icon pass">✓</div><div class="check-text">lang="nl" op &lt;html&gt; element in index.html</div></div>
+    <div class="checklist-item"><div class="check-icon pass">✓</div><div class="check-text">Afbeeldingen: hero loading="eager", mockups loading="lazy", alt-teksten aanwezig</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text muted">Canonical tags: volledig afwezig op alle pagina's — hoge prioriteit</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text muted">JSON-LD schema markup: 0% dekking — hoge prioriteit</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text muted">Hreflang x-default: ontbreekt naast hreflang="nl"</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text muted">WebP-formaat voor afbeeldingen: hero en mockups zijn PNG (Together.png, mockup PNGs)</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text muted">&lt;link rel="preload"&gt; voor LCP-afbeelding (Together.png) ontbreekt in index.html</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text muted">Security headers (HSTS, CSP, X-Frame-Options, X-Content-Type-Options) waarschijnlijk niet geconfigureerd</div></div>
+    <div class="checklist-item"><div class="check-icon warn">~</div><div class="check-text muted">Open Graph tags: alleen op homepage, ontbreekt op 5 van 6 pagina's</div></div>
+    <div class="checklist-item"><div class="check-icon warn">~</div><div class="check-text muted">Base title in index.html is generiek: "Anytimer" (wordt overschreven door SSR per route, maar is de fallback)</div></div>
+  </div>
+
+  <div class="section-title" style="font-size:18px;margin-top:32px;">Schema markup strategie</div>
+  <div class="section-subtitle">Aanbevolen JSON-LD per pagina</div>
+  <div class="card" style="overflow-x:auto;padding:0;">
+    <table class="page-table">
+      <thead><tr><th>Pagina</th><th>Aanbevolen schema type</th><th>Prioriteit</th><th>Rich result mogelijk</th></tr></thead>
+      <tbody>
+        <tr><td><span class="page-url">/</span></td><td>MobileApplication + FAQPage + Organization</td><td><span class="badge badge-high">Hoog</span></td><td>App-paneel, FAQ-snippets, Knowledge Panel</td></tr>
+        <tr><td><span class="page-url">/wat-is-een-anytimer</span></td><td>FAQPage + WebPage</td><td><span class="badge badge-high">Hoog</span></td><td>Featured snippet, FAQ-carousel in SERP</td></tr>
+        <tr><td><span class="page-url">/contact</span></td><td>ContactPage + Organization</td><td><span class="badge badge-medium">Medium</span></td><td>Contactgegevens in Knowledge Panel</td></tr>
+        <tr><td><span class="page-url">/privacy</span></td><td>WebPage</td><td><span class="badge badge-low">Laag</span></td><td>Minimaal — signaleert wel pagina-type</td></tr>
+        <tr><td><span class="page-url">/terms</span></td><td>WebPage</td><td><span class="badge badge-low">Laag</span></td><td>Minimaal</td></tr>
+        <tr><td><span class="page-url">/remove-account</span></td><td>— (geblokkeerd via robots.txt)</td><td><span class="badge badge-low">N.v.t.</span></td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title" style="font-size:18px;margin-top:32px;">Performance indicatoren</div>
+  <div class="section-subtitle">Resource-optimalisatie en laadpatronen</div>
+  <div class="card">
+    <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Afbeeldingen in PNG-formaat (geen WebP)</h4><p>Together.png, Together2.png en de mockup-afbeeldingen zijn PNG. WebP is typisch 25-35% kleiner bij vergelijkbare kwaliteit, wat direct invloed heeft op de LCP (Largest Contentful Paint) score.</p><div class="finding-rec">Converteer Together.png en Together2.png naar WebP. Gebruik &lt;picture&gt; met &lt;source type="image/webp"&gt; als primaire bron en de PNG als fallback. Tools: cwebp, Squoosh, of een Angular build plugin.</div></div><span class="badge badge-medium">Medium</span></div>
+    <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Geen &lt;link rel="preload"&gt; voor LCP-afbeelding</h4><p>De hero-achtergrond Together.png is waarschijnlijk de LCP (grootste zichtbare content above the fold), maar er is geen preload-hint in index.html. De browser ontdekt de afbeelding pas nadat HTML en CSS zijn geparsed.</p><div class="finding-rec">Voeg toe in index.html &lt;head&gt;: <code>&lt;link rel="preload" as="image" href="assets/Together.png" media="(min-width: 769px)"&gt;</code> en een tweede voor Together2.png op mobiel.</div></div><span class="badge badge-medium">Medium</span></div>
+    <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Lazy loading correct geïmplementeerd</h4><p>Hero-afbeelding heeft loading="eager" (correct voor LCP), mockup-afbeeldingen in how-it-works hebben loading="lazy". ✓</p></div><span class="badge badge-pass">Pass</span></div>
+    <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>SSR prerendering voorkomt JS-parse overhead voor crawlers</h4><p>Google en andere bots ontvangen volledig gerenderde HTML. Dit lost het grootste SEO-probleem van een bare SPA op. ✓</p></div><span class="badge badge-pass">Pass</span></div>
+  </div>
+</div>
+</div>
+
+<!-- ===== TAB 5: CONTENT STRATEGIE ===== -->
+<div id="tab-content" class="tab-content">
+<div class="container">
+  <div class="section-title">Content strategie</div>
+  <div class="section-subtitle">Keyword-dekking, content-gaps en cluster-aanbevelingen</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value" style="color:var(--yellow)">2</div><div class="stat-label">Dunne pagina's (&lt;300 woorden)</div></div>
+    <div class="stat-card"><div class="stat-value" style="color:var(--green)">4</div><div class="stat-label">Sterke pagina's (300+ woorden)</div></div>
+    <div class="stat-card"><div class="stat-value">~3400</div><div class="stat-label">Totaal woordcount</div></div>
+    <div class="stat-card"><div class="stat-value" style="color:var(--green)">0</div><div class="stat-label">Missende meta descriptions</div></div>
+  </div>
+
+  <div class="section-title" style="font-size:18px;">Keyword map per pagina</div>
+  <div class="section-subtitle">Inferred target keyword en cannibalisatierisico</div>
+  <div class="card" style="overflow-x:auto;padding:0;">
+    <table class="page-table">
+      <thead><tr><th>Pagina</th><th>Target keyword</th><th>KW in title</th><th>KW in H1</th><th>In eerste 100 woorden</th><th>Cannibalisatierisico</th></tr></thead>
+      <tbody>
+        <tr><td><span class="page-url">/</span></td><td>anytimer app / anytimerapp</td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-warning">Indirect</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-low">Laag</span></td></tr>
+        <tr><td><span class="page-url">/wat-is-een-anytimer</span></td><td>wat is een anytimer</td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-medium">Medium*</span></td></tr>
+        <tr><td><span class="page-url">/contact</span></td><td>contact anytimer app</td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-low">Laag</span></td></tr>
+        <tr><td><span class="page-url">/privacy</span></td><td>privacybeleid anytimer</td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-low">Laag</span></td></tr>
+        <tr><td><span class="page-url">/terms</span></td><td>gebruiksvoorwaarden anytimer</td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-low">Laag</span></td></tr>
+        <tr><td><span class="page-url">/remove-account</span></td><td>account verwijderen anytimer</td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-low">Laag</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:var(--text-secondary);margin-top:8px;">* Homepage en /wat-is-een-anytimer richten zich allebei op "anytimer" als primair onderwerp. Risico is beperkt doordat de intents verschillen (homepage = download/navigational, /wat-is-een-anytimer = informational/definitie).</p>
+
+  <div class="section-title" style="font-size:18px;margin-top:32px;">LSI keyword-dekking</div>
+  <div class="section-subtitle">Prioritaire semantische keywords en hun dekking per pagina</div>
+  <div class="card" style="overflow-x:auto;padding:0;">
+    <table class="page-table">
+      <thead><tr><th>LSI keyword</th><th>/</th><th>/wat-is-een-anytimer</th><th>/contact</th><th>Overig</th></tr></thead>
+      <tbody>
+        <tr><td><strong>anytimer</strong></td><td><span class="badge badge-pass">✓ Meerdere</span></td><td><span class="badge badge-pass">✓ Meerdere</span></td><td><span class="badge badge-pass">✓</span></td><td>✓</td></tr>
+        <tr><td><strong>anytimers</strong></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td>—</td><td>—</td></tr>
+        <tr><td><strong>anytimerapp</strong></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td>—</td><td>—</td></tr>
+        <tr><td><strong>anytimers bijhouden</strong></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-warning">Indirect</span></td><td>—</td><td>—</td></tr>
+        <tr><td><strong>wat is een anytimer</strong></td><td><span class="badge badge-pass">✓ FAQ</span></td><td><span class="badge badge-pass">✓ H1</span></td><td>—</td><td>—</td></tr>
+        <tr><td><strong>tegoed</strong></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td>—</td><td>—</td></tr>
+        <tr><td><strong>vrienden</strong></td><td><span class="badge badge-pass">✓ Meerdere</span></td><td><span class="badge badge-pass">✓</span></td><td>—</td><td>—</td></tr>
+        <tr><td><strong>weddenschap</strong></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td>—</td><td>—</td></tr>
+        <tr><td><strong>challenge</strong></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓</span></td><td>—</td><td>—</td></tr>
+        <tr><td><strong>app downloaden</strong></td><td><span class="badge badge-pass">✓</span></td><td><span class="badge badge-pass">✓ CTA</span></td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title" style="font-size:18px;margin-top:32px;">Content clusters</div>
+  <div class="section-subtitle">Pillar-cluster structuur voor topicale autoriteit</div>
+
+  <div class="cluster">
+    <div class="cluster-title">App &amp; Download cluster</div>
+    <div class="cluster-pages">
+      <span class="cluster-page pillar">/ (Pillar — homepage)</span>
+      <span class="cluster-page">/wat-is-een-anytimer</span>
+      <span class="cluster-page">/contact</span>
+    </div>
+    <p style="margin-top:12px;font-size:13px;color:var(--text-secondary);">De homepage is de pillar. /wat-is-een-anytimer verdiept het concept. /contact faciliteert conversie. Alle drie linken naar elkaar of naar de homepage.</p>
+  </div>
+
+  <div class="cluster">
+    <div class="cluster-title">Juridisch &amp; Privacy cluster</div>
+    <div class="cluster-pages">
+      <span class="cluster-page pillar">/privacy (Pillar)</span>
+      <span class="cluster-page">/terms</span>
+      <span class="cluster-page">/remove-account</span>
+    </div>
+    <p style="margin-top:12px;font-size:13px;color:var(--text-secondary);">/privacy is de primaire pagina, /terms en /remove-account zijn gerelateerde juridische documenten. /privacy linkt al naar /terms. /remove-account zou naar /privacy moeten linken.</p>
+  </div>
+
+  <div class="section-title" style="font-size:18px;margin-top:32px;">Content gap aanbevelingen</div>
+  <div class="section-subtitle">Nieuwe pagina's of secties die de topicale autoriteit versterken</div>
+
+  <div class="action-item">
+    <div class="action-number">1</div>
+    <div class="action-content">
+      <div class="action-title">Vergroot de /contact pagina naar 300+ woorden</div>
+      <div class="action-desc">Voeg een mini-FAQ toe ("Hoe snel reageert Anytimer?", "Kan ik ook via social media contact opnemen?") en een paragraaf over het support-proces. Dit trekt de thin content score omhoog en biedt kansen voor FAQPage schema.</div>
+    </div>
+    <span class="badge badge-medium">Medium</span>
+  </div>
+
+  <div class="action-item">
+    <div class="action-number">2</div>
+    <div class="action-content">
+      <div class="action-title">Overweeg een "Hoe werkt de app?" pagina (/hoe-werkt-het)</div>
+      <div class="action-desc">De how-it-works sectie op de homepage is visueel sterk maar wordt niet als zelfstandige pagina geïndexeerd. Een aparte pagina met gedetailleerde uitleg kan ranken voor "hoe werkt de anytimer app", "anytimer app gebruiken" e.d.</div>
+    </div>
+    <span class="badge badge-low">Laag</span>
+  </div>
+</div>
+</div>
+
+<!-- ===== TAB 6: INTERNE LINKS ===== -->
+<div id="tab-linking" class="tab-content">
+<div class="container">
+  <div class="section-title">Interne links analyse</div>
+  <div class="section-subtitle">Link equity distributie, orphan-pagina's en kansen</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value">~42</div><div class="stat-label">Totale interne links</div></div>
+    <div class="stat-card"><div class="stat-value" style="color:var(--green)">0</div><div class="stat-label">Echte orphan-pagina's</div></div>
+    <div class="stat-card"><div class="stat-value" style="color:var(--yellow)">1</div><div class="stat-label">Dead-end pagina's</div></div>
+    <div class="stat-card"><div class="stat-value">~7</div><div class="stat-label">Gem. links per pagina</div></div>
+  </div>
+
+  <div class="section-title" style="font-size:18px;">Link equity distributie</div>
+  <div class="section-subtitle">Binnenkomende en uitgaande interne links per pagina</div>
+  <div class="card" style="overflow-x:auto;padding:0;">
+    <table class="page-table">
+      <thead><tr><th>Pagina</th><th>Binnenkomend (intern)</th><th>Uitgaand (content)</th><th>Via footer</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><span class="page-url">/</span></td><td>Logo (navbar), /wat-is-een-anytimer CTA</td><td>/contact, /wat-is-een-anytimer</td><td>Alle pagina's</td><td><span class="badge badge-pass">Gezond</span></td></tr>
+        <tr><td><span class="page-url">/contact</span></td><td>Homepage FAQ, footer, navbar</td><td>Geen content-links</td><td>Alle pagina's</td><td><span class="badge badge-warning">Dead-end</span></td></tr>
+        <tr><td><span class="page-url">/privacy</span></td><td>Footer, /terms (in-content)</td><td>/terms (in-content)</td><td>Alle pagina's</td><td><span class="badge badge-pass">Gezond</span></td></tr>
+        <tr><td><span class="page-url">/terms</span></td><td>Footer, /privacy (in-content)</td><td>Waarschijnlijk /privacy</td><td>Alle pagina's</td><td><span class="badge badge-pass">Gezond</span></td></tr>
+        <tr><td><span class="page-url">/remove-account</span></td><td>Footer only</td><td>Geen content-links</td><td>Alle pagina's</td><td><span class="badge badge-warning">Zwak</span></td></tr>
+        <tr><td><span class="page-url">/wat-is-een-anytimer</span></td><td>Homepage FAQ, footer</td><td>/ (download CTA)</td><td>Alle pagina's</td><td><span class="badge badge-pass">Gezond</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title" style="font-size:18px;margin-top:32px;">Aanbevolen interne links</div>
+  <div class="section-subtitle">Specifieke linkmogelijkheden om equity beter te verdelen</div>
+
+  <div class="action-item">
+    <div class="action-number">1</div>
+    <div class="action-content">
+      <div class="action-title">Voeg op /contact een link toe naar /wat-is-een-anytimer</div>
+      <div class="action-desc">De contact-pagina is een dead-end. Voeg onderaan een zin toe als "Meer weten over het concept? Lees wat een anytimer precies is." Dit geeft /contact een uitgaande content-link en versterkt de interne linkstructuur.</div>
+    </div>
+    <span class="badge badge-medium">Medium</span>
+  </div>
+
+  <div class="action-item">
+    <div class="action-number">2</div>
+    <div class="action-content">
+      <div class="action-title">Voeg op /remove-account een link toe naar /privacy</div>
+      <div class="action-desc">Sectie 03 over "Wat gebeurt er daarna?" noemt dataverwijdering — een natuurlijke plek voor "Meer informatie over onze dataverwerkingen? Lees ons privacybeleid." Dit maakt /remove-account minder zwak in de linkstructuur.</div>
+    </div>
+    <span class="badge badge-medium">Medium</span>
+  </div>
+
+  <div class="action-item">
+    <div class="action-number">3</div>
+    <div class="action-content">
+      <div class="action-title">Voeg in de homepage hero een anchor-link toe naar /wat-is-een-anytimer</div>
+      <div class="action-desc">De hero-subtitle "Spaar, deel uit en houd bij" kan een tekstlink bevatten: "Wat is een anytimer precies?" → /wat-is-een-anytimer. Dit geeft de nieuwe pagina meer link equity direct vanuit de homepage.</div>
+    </div>
+    <span class="badge badge-low">Laag</span>
+  </div>
+</div>
+</div>
+
+<!-- ===== TAB 7: ACTIEPLAN ===== -->
+<div id="tab-actions" class="tab-content">
+<div class="container">
+  <div class="section-title">Geprioriteerd actieplan</div>
+  <div class="section-subtitle">Elke aanbeveling gerangschikt op impact, gegroepeerd op effort</div>
+
+  <div class="section-title" style="font-size:18px;color:var(--green);">Quick wins <span style="font-size:14px;color:var(--text-muted);font-weight:400;">— minder dan 1 uur elk</span></div>
+  <div style="margin-bottom:24px;">
+    <div class="action-item">
+      <div class="action-number">1</div>
+      <div class="action-content">
+        <div class="action-title">Voeg OG + Twitter tags toe aan de 5 overige page components</div>
+        <div class="action-desc">Kopieer het OG-patroon van home.component.ts naar contact, privacy, terms en wat-is-een-anytimer. Gebruik logo.png als og:image voor juridische pagina's, Together.png voor /contact en /wat-is-een-anytimer.</div>
+        <div class="action-impact">Verwacht effect: aantrekkelijke previews bij delen op WhatsApp/Instagram/iMessage.</div>
+      </div>
+      <span class="badge badge-high">Hoog</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">2</div>
+      <div class="action-content">
+        <div class="action-title">Dien sitemap in bij Google Search Console</div>
+        <div class="action-desc">Search Console → Sitemaps → https://anytimer.app/sitemap.xml → Submit. Vraag daarna per URL indexering aan via "URL Inspection" voor de homepage en /wat-is-een-anytimer.</div>
+        <div class="action-impact">Verwacht effect: versnelde indexering — adresseert "pages not indexed" probleem direct.</div>
+      </div>
+      <span class="badge badge-high">Hoog</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">3</div>
+      <div class="action-content">
+        <div class="action-title">Voeg hreflang x-default toe in AppComponent.setHreflang()</div>
+        <div class="action-desc">Voeg naast de bestaande hreflang="nl" link een tweede &lt;link rel="alternate" hreflang="x-default"&gt; toe met dezelfde href. Één extra regel in de bestaande setHreflang() methode.</div>
+        <div class="action-impact">Verwacht effect: betere internationale signalering aan Google.</div>
+      </div>
+      <span class="badge badge-medium">Medium</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">4</div>
+      <div class="action-content">
+        <div class="action-title">Voeg interne links toe: /contact → /wat-is-een-anytimer en /remove-account → /privacy</div>
+        <div class="action-desc">Twee kleine tekstlinks in bestaande HTML-templates. Lost de dead-end status van /contact op en geeft /remove-account een content-link.</div>
+        <div class="action-impact">Verwacht effect: verbeterde link equity distributie, lagere bounce rate.</div>
+      </div>
+      <span class="badge badge-medium">Medium</span>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:18px;color:var(--orange);">Hoge impact <span style="font-size:14px;color:var(--text-muted);font-weight:400;">— 1-4 uur elk</span></div>
+  <div style="margin-bottom:24px;">
+    <div class="action-item">
+      <div class="action-number">5</div>
+      <div class="action-content">
+        <div class="action-title">Voeg JSON-LD MobileApplication + FAQPage + Organization schema toe aan de homepage</div>
+        <div class="action-desc">Implementeer drie JSON-LD blokken via een &lt;script type="application/ld+json"&gt; tag in HomeComponent of via Angular's DOCUMENT injection. MobileApplication: name "Anytimer", operatingSystem ["iOS", "Android"], applicationCategory "LifestyleApplication", offers (price: 0), downloadUrl (beide stores). FAQPage: de 5 bestaande FAQ-items. Organization: name, url, logo.</div>
+        <div class="action-impact">Verwacht effect: rich results in Google (FAQ-snippets, app-paneel), direct adresseerbaar voor "no rich results".</div>
+      </div>
+      <span class="badge badge-high">Hoog</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">6</div>
+      <div class="action-content">
+        <div class="action-title">Voeg canonical tags centraal toe via AppComponent</div>
+        <div class="action-desc">Vergelijkbaar met de bestaande hreflang-implementatie: voeg in setHreflang() (of een nieuwe setCanonical() methode) een &lt;link rel="canonical"&gt; toe die per route de juiste absolute URL instelt. Één implementatie dekt alle 6 pagina's tegelijk.</div>
+        <div class="action-impact">Verwacht effect: duidelijker indexeringsignaal, helpt "pages not indexed" probleem oplossen.</div>
+      </div>
+      <span class="badge badge-high">Hoog</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">7</div>
+      <div class="action-content">
+        <div class="action-title">Voeg FAQPage schema toe aan /wat-is-een-anytimer</div>
+        <div class="action-desc">De 5 secties op deze pagina zijn perfect als Q&amp;A-paren te modelleren. Dit vergroot de kans op een featured snippet voor "wat is een anytimer" aanzienlijk. Implementeer in WatIsEenAnytimer component via DOCUMENT of een template &lt;script&gt; tag.</div>
+        <div class="action-impact">Verwacht effect: featured snippet kans voor "wat is een anytimer" zoekopdrachten.</div>
+      </div>
+      <span class="badge badge-high">Hoog</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">8</div>
+      <div class="action-content">
+        <div class="action-title">Voeg &lt;link rel="preload"&gt; toe voor hero-afbeelding in index.html</div>
+        <div class="action-desc">Voeg toe in &lt;head&gt;: &lt;link rel="preload" as="image" href="assets/Together.png" media="(min-width: 769px)"&gt; en &lt;link rel="preload" as="image" href="assets/Together2.png" media="(max-width: 768px)"&gt;. Dit verbetert de LCP score direct.</div>
+        <div class="action-impact">Verwacht effect: snellere LCP, hogere Core Web Vitals score.</div>
+      </div>
+      <span class="badge badge-medium">Medium</span>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:18px;color:var(--purple);">Strategische initiatieven <span style="font-size:14px;color:var(--text-muted);font-weight:400;">— ongoing</span></div>
+  <div style="margin-bottom:24px;">
+    <div class="action-item">
+      <div class="action-number">9</div>
+      <div class="action-content">
+        <div class="action-title">Converteer PNG-afbeeldingen naar WebP</div>
+        <div class="action-desc">Together.png, Together2.png en de mockup-afbeeldingen omzetten naar WebP. Gebruik &lt;picture&gt; met &lt;source type="image/webp"&gt; als primaire bron. Verwachte bestandsgroottereductie: 25-35%.</div>
+        <div class="action-impact">Verwacht effect: snellere laadtijden, betere Core Web Vitals (LCP), indirect SEO-voordeel.</div>
+      </div>
+      <span class="badge badge-medium">Medium</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">10</div>
+      <div class="action-content">
+        <div class="action-title">Vergroot /contact naar 300+ woorden</div>
+        <div class="action-desc">Voeg een mini-FAQ toe op de contactpagina ("Hoe snel reageert Anytimer?", "Wat als ik een bug gevonden heb?", "Kan ik ook samenwerken met Anytimer?"). Dit lost de thin content warning op en maakt FAQPage schema mogelijk op /contact.</div>
+        <div class="action-impact">Verwacht effect: thin content warning opgelost, nieuwe keyword-kansen voor support-zoekopdrachten.</div>
+      </div>
+      <span class="badge badge-medium">Medium</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">11</div>
+      <div class="action-content">
+        <div class="action-title">Configureer HTTP security headers via hosting provider</div>
+        <div class="action-desc">Stel HSTS, Content-Security-Policy, X-Content-Type-Options en X-Frame-Options in via firebase.json / netlify.toml / vercel.json (afhankelijk van hosting). Dit verbetert de beveiligingsscore zonder codewijzigingen aan de Angular app.</div>
+        <div class="action-impact">Verwacht effect: verbeterde security posture, indirect SEO-signaal via HTTPS-kwaliteit.</div>
+      </div>
+      <span class="badge badge-low">Laag</span>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:18px;margin-top:32px;">Volledige implementatie checklist</div>
+  <div class="card">
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">OG + Twitter tags toevoegen aan /contact, /privacy, /terms, /wat-is-een-anytimer</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">Sitemap indienen bij Google Search Console + URL indexering aanvragen</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">hreflang x-default toevoegen naast hreflang="nl" in AppComponent</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">Interne link: /contact → /wat-is-een-anytimer</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">Interne link: /remove-account → /privacy</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">JSON-LD MobileApplication schema toevoegen aan homepage</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">JSON-LD FAQPage schema toevoegen aan homepage (5 FAQ-items)</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">JSON-LD Organization schema toevoegen (sitewide of homepage)</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">JSON-LD FAQPage schema toevoegen aan /wat-is-een-anytimer</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">Canonical tags centraal implementeren via AppComponent (alle 5 indexeerbare routes)</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">&lt;link rel="preload"&gt; voor hero-afbeelding toevoegen in index.html</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">PNG → WebP conversie voor Together.png, Together2.png en mockup-afbeeldingen</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">/contact pagina uitbreiden naar 300+ woorden</div></div>
+    <div class="checklist-item"><div class="check-icon fail">✗</div><div class="check-text">HTTP security headers configureren via hosting provider</div></div>
+  </div>
+</div>
+</div>
+
+<script>
+function switchTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  event.target.closest('.tab-btn').classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+document.querySelectorAll('.collapsible-header').forEach(h => {
+  h.addEventListener('click', () => h.closest('.collapsible').classList.toggle('open'));
+});
+</script>
+</body>
+</html>
