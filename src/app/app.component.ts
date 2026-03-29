@@ -41,5 +41,14 @@ export class AppComponent implements OnInit {
       this.document.head.appendChild(link);
     }
     link.setAttribute('href', href);
+
+    let xDefault = this.document.querySelector<HTMLLinkElement>('link[rel="alternate"][hreflang="x-default"]');
+    if (!xDefault) {
+      xDefault = this.document.createElement('link');
+      xDefault.setAttribute('rel', 'alternate');
+      xDefault.setAttribute('hreflang', 'x-default');
+      this.document.head.appendChild(xDefault);
+    }
+    xDefault.setAttribute('href', href);
   }
 }
