@@ -14,7 +14,7 @@ export class WatIsEenAnytimer {
     const title = 'Wat is een anytimer? — Anytimer App';
     const description = 'Wat is een anytimer? Een anytimer is een tegoed dat je van een vriend krijgt of aan iemand geeft — in te zetten op elk moment. Lees alles over het concept achter de anytimerapp.';
     const image = 'https://anytimer.app/assets/Together.png';
-    const url = 'https://anytimer.app/wat-is-een-anytimer';
+    const url = 'https://anytimer.app/wat-is-een-anytimer/';
 
     meta.updateTag({ name: 'description', content: description });
 

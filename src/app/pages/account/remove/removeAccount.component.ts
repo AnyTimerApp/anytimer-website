@@ -12,7 +12,7 @@ export class RemoveAccountComponent {
     const title = 'Account verwijderen — Anytimer App';
     const description = 'Verwijder je Anytimer account via de app-instellingen. Stap-voor-stap uitleg over hoe het werkt en wat er met je gegevens gebeurt na verwijdering.';
     const image = 'https://anytimer.app/assets/logo.png';
-    const url = 'https://anytimer.app/remove-account';
+    const url = 'https://anytimer.app/remove-account/';
 
     meta.updateTag({ name: 'description', content: description });
 

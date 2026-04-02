@@ -14,7 +14,7 @@ export class TermsComponent {
     const title = 'Gebruiksvoorwaarden — Anytimer App';
     const description = 'Gebruiksvoorwaarden van de Anytimer app. Lees wat je van ons mag verwachten en welke regels gelden voor het gebruik van de anytimerapp.';
     const image = 'https://anytimer.app/assets/logo.png';
-    const url = 'https://anytimer.app/terms';
+    const url = 'https://anytimer.app/terms/';
 
     meta.updateTag({ name: 'description', content: description });
 

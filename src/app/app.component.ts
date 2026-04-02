@@ -31,7 +31,8 @@ export class AppComponent implements OnInit {
 
   private setLinkTags(url: string) {
     const path = url.split('#')[0].split('?')[0];
-    const href = BASE_URL + (path === '/' || path === '' ? '/' : path);
+    const normalizedPath = path === '' || path === '/' ? '/' : (path.endsWith('/') ? path : path + '/');
+    const href = BASE_URL + normalizedPath;
 
     let link = this.document.querySelector<HTMLLinkElement>('link[rel="alternate"][hreflang="nl"]');
     if (!link) {

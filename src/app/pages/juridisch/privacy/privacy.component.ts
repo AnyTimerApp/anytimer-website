@@ -14,7 +14,7 @@ export class PrivacyComponent {
     const title = 'Privacybeleid — Anytimer App';
     const description = 'Privacybeleid van de Anytimer app. Wij gaan zorgvuldig om met jouw gegevens — AVG-conform, geen advertenties en geen dataverkoop aan derden.';
     const image = 'https://anytimer.app/assets/logo.png';
-    const url = 'https://anytimer.app/privacy';
+    const url = 'https://anytimer.app/privacy/';
 
     meta.updateTag({ name: 'description', content: description });
 

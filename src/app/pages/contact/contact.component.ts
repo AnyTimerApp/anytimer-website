@@ -35,7 +35,7 @@ export class ContactComponent {
     const title = 'Contact — AnyTimerApp';
     const description = 'Neem contact op met het AnyTimerApp team. Heb je een vraag over de anytimerapp, een probleem of een idee? Stuur ons een mail — we reageren binnen 48 uur.';
     const image = 'https://anytimer.app/assets/Together.png';
-    const url = 'https://anytimer.app/contact';
+    const url = 'https://anytimer.app/contact/';
 
     meta.updateTag({ name: 'description', content: description });
     meta.updateTag({ property: 'og:type', content: 'website' });
