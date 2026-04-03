@@ -91,6 +91,7 @@
 .process-right {
   display: flex;
   flex-direction: column;
+  gap: 40px;
 }
 
 /*
@@ -103,14 +104,11 @@
 .p-card-wrap {
   position: sticky;
   top: calc(var(--header-height) + 40px);
-  /* 80 vh gives comfortable scroll distance before the next card arrives */
-  min-height: 80vh;
 }
 
-/* Last card gets the same runway — ensures process-right is tall enough
-   that the wrapper fully un-sticks and scrolls off screen */
+/* Last card is not sticky — it scrolls naturally and pushes the section up */
 .p-card-wrap:last-child {
-  min-height: 80vh;
+  position: static;
 }
 
 /* Later wrappers sit on top of earlier ones */
@@ -127,6 +125,9 @@
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0,0,0,0.04);
   overflow: hidden;
   padding: 36px 36px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Slightly stronger shadow on later cards to give a sense of depth */
@@ -200,6 +201,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   align-items: end;
+  flex: 1;
 }
 
 .p-card-text {
@@ -254,14 +256,6 @@
     display: none;
   }
 
-  /* Keep sticky on mobile — same deck effect, just smaller cards */
-  .p-card-wrap {
-    min-height: 75vh;
-  }
-
-  .p-card-wrap:last-child {
-    min-height: 75vh;
-  }
 
   .p-card-body {
     grid-template-columns: 1fr;
