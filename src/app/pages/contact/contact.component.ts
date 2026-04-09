@@ -32,8 +32,8 @@ export class ContactComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Contact — AnyTimerApp';
-    const description = 'Neem contact op met het AnyTimerApp team. Heb je een vraag over de anytimerapp, een probleem of een idee? Stuur ons een mail — we reageren binnen 48 uur.';
+    const title = 'Contact AnyTimerApp - Vragen, Feedback & Samenwerking';
+    const description = 'Neem contact op met AnyTimerApp. Vragen, feedback of samenwerkingsideeën? Stuur ons een mail en we reageren binnen 48 uur.';
     const image = 'https://anytimer.app/assets/Together.png';
     const url = 'https://anytimer.app/contact/';
 

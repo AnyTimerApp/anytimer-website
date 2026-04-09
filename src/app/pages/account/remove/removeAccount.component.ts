@@ -9,8 +9,8 @@ import { Meta } from '@angular/platform-browser';
 })
 export class RemoveAccountComponent {
   constructor(meta: Meta) {
-    const title = 'Account verwijderen — Anytimer App';
-    const description = 'Verwijder je Anytimer account via de app-instellingen. Stap-voor-stap uitleg over hoe het werkt en wat er met je gegevens gebeurt na verwijdering.';
+    const title = 'Account Verwijderen Anytimer - Stap-voor-Stap Gids';
+    const description = 'Account verwijderen bij Anytimer? Lees onze stap-voor-stap gids. Ontdek wat er gebeurt met je gegevens en hoe je je account permanent verwijdert.';
     const image = 'https://anytimer.app/assets/logo.png';
     const url = 'https://anytimer.app/remove-account/';
 

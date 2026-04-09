@@ -11,8 +11,8 @@ import { RouterLink } from '@angular/router';
 })
 export class WatIsEenAnytimer {
   constructor(meta: Meta) {
-    const title = 'Wat is een anytimer? — Anytimer App';
-    const description = 'Wat is een anytimer? Een anytimer is een tegoed dat je van een vriend krijgt of aan iemand geeft — in te zetten op elk moment. Lees alles over het concept achter de anytimerapp.';
+    const title = 'Wat is een Anytimer? - Gids & Uitleg | Anytimer App';
+    const description = 'Wat is een anytimer? Ontdek alles over dit concept: een tegoed in te zetten op elk moment. Lees hoe je het verdient, inzet en waarom je het nodig hebt.';
     const image = 'https://anytimer.app/assets/Together.png';
     const url = 'https://anytimer.app/wat-is-een-anytimer/';
 
