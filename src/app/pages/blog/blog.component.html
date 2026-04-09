@@ -1,0 +1,28 @@
+<div class="legal-page blog-page">
+  <div class="container">
+
+    <!-- Page header -->
+    <div class="legal-header">
+      <span class="section-label">Blog</span>
+      <h1 class="legal-title">Alles over anytimers </h1>
+      <p class="legal-intro">
+        Hier delen wij cringe artikelen voor studenten en mensen met de jonge geest.
+      </p>
+    </div>
+
+    <!-- Blog posts -->
+    <div class="blog-grid">
+      @for (post of posts; track post.slug) {
+      <a [routerLink]="'/' + post.slug" class="blog-card" [ngClass]="'blog-card--' + (post.variant || 'light')">
+        <span class="section-label">{{ post.category }}</span>
+        <h3 class="blog-card__title">{{ post.title }}</h3>
+        <p class="blog-card__excerpt">{{ post.excerpt }}</p>
+        <div class="blog-card__footer">
+          <span class="blog-card__link">Lees meer →</span>
+        </div>
+      </a>
+      }
+    </div>
+
+  </div>
+</div>
