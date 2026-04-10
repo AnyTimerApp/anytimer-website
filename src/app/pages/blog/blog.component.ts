@@ -28,6 +28,13 @@ export class BlogComponent {
       excerpt: 'Een anytimer is een tegoed tussen vrienden. Je verdient hem na een verloren weddenschap, een domme actie of een challenge. Je kan hem inzetten wanneer je maar wilt.',
       featured: true,
       variant: 'light'
+    },
+    {
+      slug: 'drankspellen',
+      category: 'Ideeën',
+      title: 'Top 10 drankspellen voor een gezellige avond',
+      excerpt: 'Van Mario Barf tot Kingsen en Mexen — onze top 10 drankspellen voor een gezellige avond met vrienden. Met alle regels en tips.',
+      variant: 'blue'
     }
   ];
 
