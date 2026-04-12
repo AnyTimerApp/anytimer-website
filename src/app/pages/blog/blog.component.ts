@@ -35,6 +35,13 @@ export class BlogComponent {
       title: 'Top 10 drankspellen voor een gezellige avond',
       excerpt: 'Van Mario Barf tot Kingsen en Mexen — onze top 10 drankspellen voor een gezellige avond met vrienden. Met alle regels en tips.',
       variant: 'blue'
+    },
+    {
+      slug: 'wat-is-een-adtje',
+      category: 'Begrippen',
+      title: 'Wat is een adtje?',
+      excerpt: 'Een adtje betekent dat je een drankje in één keer leegdrinkt. Leer tips voor atten, het verschil met een shotgun en wat een rietbak is.',
+      variant: 'light'
     }
   ];
 
