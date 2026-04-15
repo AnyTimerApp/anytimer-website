@@ -228,16 +228,20 @@
   align-items: flex-end;
 }
 
-.p-mockup {
+.p-mockup-clip {
   width: 100%;
   max-width: 200px;
-  height: auto;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
-  transform: translateY(2px);
+  height: 280px;
+  overflow: hidden;
+  border-radius: 12px;
+}
 
-  &--flip {
-    transform: translateY(2px) scaleX(-1);
-  }
+.p-mockup {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1.5);
+  transform-origin: top center;
 }
 
 /* Responsive */
@@ -266,7 +270,8 @@
     margin-top: 16px;
   }
 
-  .p-mockup {
+  .p-mockup-clip {
     max-width: 160px;
+    height: 220px;
   }
 }
