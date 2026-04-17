@@ -42,6 +42,13 @@ export class BlogComponent {
       title: 'Wat is een adtje?',
       excerpt: 'Een adtje betekent dat je een drankje in één keer leegdrinkt. Leer tips voor atten, het verschil met een shotgun en wat een rietbak is.',
       variant: 'light'
+    },
+    {
+      slug: 'wat-is-de-beste-adt-timer',
+      category: 'Ideeën',
+      title: 'Wat is de beste adt timer?',
+      excerpt: 'Welke adt timer moet je kiezen. App timer, stopwatch, AdtMeister of Rubiks cube timer. Vergelijking en tips voor eerlijke atten.',
+      variant: 'light'
     }
   ];
 

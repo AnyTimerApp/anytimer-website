@@ -9,6 +9,7 @@ import { WatIsEenAnytimer } from './pages/wat-is-een-anytimer/wat-is-een-anytime
 import { BlogComponent } from './pages/blog/blog.component';
 import { DrankspellenComponent } from './pages/drankspellen/drankspellen.component';
 import { WatIsEenAdtjeComponent } from './pages/wat-is-een-adtje/wat-is-een-adtje.component';
+import { WatIsDeBestAdtTimerComponent } from './pages/wat-is-de-beste-adt-timer/wat-is-de-beste-adt-timer.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'Anytimer — Vergeet nooit op wie je nog anytimers hebt' },
@@ -20,5 +21,6 @@ export const routes: Routes = [
   { path: 'drankspellen', component: DrankspellenComponent, title: 'Top 10 Drankspellen voor een Gezellige Avond | Anytimer' },
   { path: 'wat-is-een-anytimer', component: WatIsEenAnytimer, title: 'Wat is een Anytimer? - Gids & Uitleg | Anytimer App' },
   { path: 'wat-is-een-adtje', component: WatIsEenAdtjeComponent, title: 'Wat is een Adtje? - Gids & Uitleg | Anytimer' },
+  { path: 'wat-is-de-beste-adt-timer', component: WatIsDeBestAdtTimerComponent, title: 'Wat is de Beste Adt Timer? - Gids & Opties | Anytimer' },
   { path: '**', component: NotFoundComponent, title: '404 Niet gevonden' }
 ];
