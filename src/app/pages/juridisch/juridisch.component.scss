@@ -105,7 +105,7 @@
 
   a {
     color: var(--primary);
-    text-underline-offset: 3px;
+    font-weight: 600;
 
     &:hover { color: var(--primary-hover); }
   }
