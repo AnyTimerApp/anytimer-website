@@ -12,15 +12,15 @@ import { WatIsEenAdtjeComponent } from './pages/wat-is-een-adtje/wat-is-een-adtj
 import { WatIsDeBestAdtTimerComponent } from './pages/wat-is-de-beste-adt-timer/wat-is-de-beste-adt-timer.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, title: 'Anytimer — Vergeet nooit op wie je nog anytimers hebt' },
-  { path: 'privacy', component: PrivacyComponent, title: 'Privacybeleid Anytimer App - AVG-Conform & Veilig' },
-  { path: 'remove-account', component: RemoveAccountComponent, title: 'Account Verwijderen Anytimer - Stap-voor-Stap Gids' },
-  { path: 'terms', component: TermsComponent, title: 'Gebruiksvoorwaarden Anytimer App - Regels & Voorwaarden' },
+  { path: '', component: HomeComponent, title: 'AnyTimerApp - De app om je anytimers in bij te houden' },
+  { path: 'privacy', component: PrivacyComponent, title: 'Privacybeleid AnyTimerApp - AVG-Conform & Veilig' },
+  { path: 'remove-account', component: RemoveAccountComponent, title: 'Account Verwijderen AnyTimerApp - Stap-voor-Stap Gids' },
+  { path: 'terms', component: TermsComponent, title: 'Gebruiksvoorwaarden AnyTimerApp - Regels & Voorwaarden' },
   { path: 'contact', component: ContactComponent, title: 'Contact AnyTimerApp - Vragen, Feedback & Samenwerking' },
-  { path: 'blog', component: BlogComponent, title: 'Anytimer Blog - Tips, Ideeën & Gidsen — Anytimer App' },
-  { path: 'drankspellen', component: DrankspellenComponent, title: 'Top 10 Drankspellen voor een Gezellige Avond | Anytimer' },
-  { path: 'wat-is-een-anytimer', component: WatIsEenAnytimer, title: 'Wat is een Anytimer? - Gids & Uitleg | Anytimer App' },
-  { path: 'wat-is-een-adtje', component: WatIsEenAdtjeComponent, title: 'Wat is een Adtje? - Gids & Uitleg | Anytimer' },
-  { path: 'wat-is-de-beste-adt-timer', component: WatIsDeBestAdtTimerComponent, title: 'Wat is de Beste Adt Timer? - Gids & Opties | Anytimer' },
+  { path: 'blog', component: BlogComponent, title: 'AnyTimerApp Blog - Tips, Ideeën & Gidsen' },
+  { path: 'drankspellen', component: DrankspellenComponent, title: 'Top 10 Drankspellen voor een Gezellige Avond | AnyTimerApp' },
+  { path: 'wat-is-een-anytimer', component: WatIsEenAnytimer, title: 'Wat is een Anytimer? - Gids & Uitleg | AnyTimerApp' },
+  { path: 'wat-is-een-adtje', component: WatIsEenAdtjeComponent, title: 'Wat is een Adtje? - Gids & Uitleg | AnyTimerApp' },
+  { path: 'wat-is-de-beste-adt-timer', component: WatIsDeBestAdtTimerComponent, title: 'Wat is de Beste Adt Timer? - Gids & Opties | AnyTimerApp' },
   { path: '**', component: NotFoundComponent, title: '404 Niet gevonden' }
 ];
