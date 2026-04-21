@@ -49,6 +49,13 @@ export class BlogComponent {
       title: 'Wat is de beste adt timer?',
       excerpt: 'Welke adt timer moet je kiezen. App timer, stopwatch, AdtMeister of Rubiks cube timer. Vergelijking en tips voor eerlijke atten.',
       variant: 'light'
+    },
+    {
+      slug: 'mag-je-een-anytimer-weigeren',
+      category: 'Regels',
+      title: 'Mag je een anytimer weigeren?',
+      excerpt: 'Mag je een anytimer weigeren? Lees de regels en gevolgen. Wanneer mag je nee zeggen en wat zijn de straffen.',
+      variant: 'light'
     }
   ];
 

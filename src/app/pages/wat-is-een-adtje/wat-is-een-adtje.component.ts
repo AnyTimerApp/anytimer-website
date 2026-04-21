@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class WatIsEenAdtjeComponent {
   constructor(meta: Meta) {
-    const title = 'Wat is een Adtje? - Gids & Uitleg | Anytimer';
+    const title = 'Wat is een Adtje? - Gids & Uitleg | AnyTimerApp';
     const description = 'Wat is een adtje? Lees alles over atten, shotgun en rietbak. Tips voor snel drinken, de oorsprong en alle drankspel tradities uit Nederland.';
     const image = 'https://anytimer.app/assets/Together.png';
     const url = 'https://anytimer.app/wat-is-een-adtje/';

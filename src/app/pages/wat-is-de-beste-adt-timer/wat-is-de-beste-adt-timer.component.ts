@@ -25,7 +25,7 @@ export class WatIsDeBestAdtTimerComponent {
   }
 
   constructor(meta: Meta, @Inject(PLATFORM_ID) private platformId: Object) {
-    const title = 'Wat is de Beste Adt Timer? - Gids & Opties | Anytimer';
+    const title = 'Wat is de Beste Adt Timer? - Gids & Opties | AnyTimerApp';
     const description = 'Welke adt timer moet je kiezen? Vergelijk app timers, stopwatch, AdtMeister en Rubiks cube timer. Tips voor eerlijke atten en snelle drankspellen.';
     const image = 'https://anytimer.app/assets/Together.png';
     const url = 'https://anytimer.app/wat-is-de-beste-adt-timer/';

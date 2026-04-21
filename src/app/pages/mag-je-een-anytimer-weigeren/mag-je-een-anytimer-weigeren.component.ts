@@ -3,18 +3,18 @@ import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-drankspellen',
+  selector: 'app-mag-je-een-anytimer-weigeren',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: 'drankspellen.component.html',
-  styleUrls: ['../juridisch/juridisch.component.scss', './drankspellen.component.scss']
+  templateUrl: 'mag-je-een-anytimer-weigeren.component.html',
+  styleUrls: ['../juridisch/juridisch.component.scss', './mag-je-een-anytimer-weigeren.component.scss']
 })
-export class DrankspellenComponent {
+export class MagJeEenAnyttimerWeigerenComponent {
   constructor(meta: Meta) {
-    const title = 'Top 10 Drankspellen voor een Gezellige Avond | AnyTimerApp';
-    const description = 'Ontdek de top 10 leukste drankspellen voor een gezellige avond met vrienden. Mario Barf, Kingsen, Mexen en meer. Alle spelregels en tips.';
+    const title = 'Mag je een Anytimer Weigeren? - Regels & Gevolgen | AnyTimerApp';
+    const description = 'Mag je een anytimer weigeren? Lees de regels en gevolgen. Wanneer mag je nee zeggen, wat zijn de straffen, en wanneer mag je geen anytimer inzetten.';
     const image = 'https://anytimer.app/assets/Together.png';
-    const url = 'https://anytimer.app/drankspellen/';
+    const url = 'https://anytimer.app/mag-je-een-anytimer-weigeren/';
 
     meta.updateTag({ name: 'description', content: description });
 

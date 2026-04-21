@@ -10,6 +10,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { DrankspellenComponent } from './pages/drankspellen/drankspellen.component';
 import { WatIsEenAdtjeComponent } from './pages/wat-is-een-adtje/wat-is-een-adtje.component';
 import { WatIsDeBestAdtTimerComponent } from './pages/wat-is-de-beste-adt-timer/wat-is-de-beste-adt-timer.component';
+import { MagJeEenAnyttimerWeigerenComponent } from './pages/mag-je-een-anytimer-weigeren/mag-je-een-anytimer-weigeren.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'AnyTimerApp - De app om je anytimers in bij te houden' },
@@ -22,5 +23,6 @@ export const routes: Routes = [
   { path: 'wat-is-een-anytimer', component: WatIsEenAnytimer, title: 'Wat is een Anytimer? - Gids & Uitleg | AnyTimerApp' },
   { path: 'wat-is-een-adtje', component: WatIsEenAdtjeComponent, title: 'Wat is een Adtje? - Gids & Uitleg | AnyTimerApp' },
   { path: 'wat-is-de-beste-adt-timer', component: WatIsDeBestAdtTimerComponent, title: 'Wat is de Beste Adt Timer? - Gids & Opties | AnyTimerApp' },
+  { path: 'mag-je-een-anytimer-weigeren', component: MagJeEenAnyttimerWeigerenComponent, title: 'Mag je een Anytimer Weigeren? - Regels & Gevolgen | AnyTimerApp' },
   { path: '**', component: NotFoundComponent, title: '404 Niet gevonden' }
 ];
