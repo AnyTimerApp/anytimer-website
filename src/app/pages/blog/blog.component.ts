@@ -56,6 +56,13 @@ export class BlogComponent {
       title: 'Mag je een anytimer weigeren?',
       excerpt: 'Mag je een anytimer weigeren? Lees de regels en gevolgen. Wanneer mag je nee zeggen en wat zijn de straffen.',
       variant: 'light'
+    },
+    {
+      slug: 'anytimers-bijhouden-whatsapp-notities',
+      category: 'Tips',
+      title: 'Waarom je anytimers niet in WhatsApp of notities moet bijhouden',
+      excerpt: 'WhatsApp en notities lijken handig, maar je mist het belangrijkste: versiebeheer. Lees waarom dit voor discussie zorgt en hoe je anytimers beter bijhoudt.',
+      variant: 'light'
     }
   ];
 
