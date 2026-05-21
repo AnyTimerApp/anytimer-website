@@ -17,7 +17,7 @@ export class HomeComponent {
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
     const title = 'Anytimer App — Vergeet nooit meer wie jou een anytimer schuldig is';
     const description = 'Download de AnyTimerApp en houd anytimers bij met vrienden. Zo vergeet je nooit meer wie jou een anytimer schuldig is.';
-    const image = 'https://anytimer.app/assets/Together.png';
+    const image = 'https://anytimer.app/assets/Mockup%20anytimer%20page%20friendlist.png';
     const url = 'https://anytimer.app/';
 
     meta.updateTag({ name: 'description', content: description });

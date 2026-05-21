@@ -27,7 +27,7 @@ export class AnytimersWhatsappNotitiesComponent {
   constructor(meta: Meta, @Inject(PLATFORM_ID) private platformId: Object) {
     const title = 'Waarom je Anytimers niet in WhatsApp of Notities Bijhoudt | AnyTimerApp';
     const description = 'Waarom werken WhatsApp en notities niet voor het bijhouden van anytimers? Leer over versiebeheer, alternatieven zoals een whiteboard of app, en hoe je ruzie voorkomt.';
-    const image = 'https://anytimer.app/assets/Together.png';
+    const image = 'https://anytimer.app/assets/blogs/whatsapp%20en%20notities/Whatsapp%20phones.png';
     const url = 'https://anytimer.app/anytimers-bijhouden-whatsapp-notities/';
 
     meta.updateTag({ name: 'description', content: description });

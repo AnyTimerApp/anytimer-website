@@ -13,7 +13,7 @@ export class MagJeEenAnyttimerWeigerenComponent {
   constructor(meta: Meta) {
     const title = 'Mag je een Anytimer Weigeren? - Regels & Gevolgen | AnyTimerApp';
     const description = 'Mag je een anytimer weigeren? Lees de regels en gevolgen. Wanneer mag je nee zeggen, wat zijn de straffen, en wanneer mag je geen anytimer inzetten.';
-    const image = 'https://anytimer.app/assets/Together.png';
+    const image = 'https://anytimer.app/assets/blogs/anytimer%20weigeren/maatje%20adt%20een%20biertje%20cartoon.png';
     const url = 'https://anytimer.app/mag-je-een-anytimer-weigeren/';
 
     meta.updateTag({ name: 'description', content: description });
