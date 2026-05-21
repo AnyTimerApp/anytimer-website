@@ -16,7 +16,7 @@ import { TeamComponent } from './team/team.component';
 export class HomeComponent {
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
     const title = 'Anytimer App — Vergeet nooit meer wie jou een anytimer schuldig is';
-    const description = 'Download de AnyTimerApp gratis en houd anytimers bij met vrienden. Een anytimer is een tegoed in te zetten op elk moment. Vergeet nooit meer wie jou er een schuldig is.';
+    const description = 'Download de AnyTimerApp en houd anytimers bij met vrienden. Zo vergeet je nooit meer wie jou een anytimer schuldig is.';
     const image = 'https://anytimer.app/assets/Together.png';
     const url = 'https://anytimer.app/';
 
