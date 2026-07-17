@@ -1,3 +1,3 @@
 # AnytimerWebsite
 
-You can see the live website [here](https://anytimer-website.vercel.app/).
+You can see the live website [here](https://anytimer.app/).
