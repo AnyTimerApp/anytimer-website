@@ -12,6 +12,7 @@ import { WatIsEenAdtjeComponent } from './pages/wat-is-een-adtje/wat-is-een-adtj
 import { WatIsDeBestAdtTimerComponent } from './pages/wat-is-de-beste-adt-timer/wat-is-de-beste-adt-timer.component';
 import { MagJeEenAnyttimerWeigerenComponent } from './pages/mag-je-een-anytimer-weigeren/mag-je-een-anytimer-weigeren.component';
 import { AnytimersWhatsappNotitiesComponent } from './pages/anytimers-bijhouden-whatsapp-notities/anytimers-bijhouden-whatsapp-notities.component';
+import { HuisavondideeenComponent } from './pages/huisavondideeen/huisavondideeen.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'AnyTimerApp - De app om je anytimers in bij te houden' },
@@ -26,5 +27,6 @@ export const routes: Routes = [
   { path: 'wat-is-de-beste-adt-timer', component: WatIsDeBestAdtTimerComponent, title: 'Wat is de Beste Adt Timer? - Gids & Opties | AnyTimerApp' },
   { path: 'mag-je-een-anytimer-weigeren', component: MagJeEenAnyttimerWeigerenComponent, title: 'Mag je een Anytimer Weigeren? - Regels & Gevolgen | AnyTimerApp' },
   { path: 'anytimers-bijhouden-whatsapp-notities', component: AnytimersWhatsappNotitiesComponent, title: 'Waarom je Anytimers niet in WhatsApp of Notities Bijhoudt | AnyTimerApp' },
+  { path: 'huisavondideeen', component: HuisavondideeenComponent, title: 'Top 10 Leuke Huisavondideeën | AnyTimerApp' },
   { path: '**', component: NotFoundComponent, title: '404 Niet gevonden' }
 ];

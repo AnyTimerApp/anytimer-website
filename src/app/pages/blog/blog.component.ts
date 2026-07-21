@@ -63,6 +63,13 @@ export class BlogComponent {
       title: 'Waarom je anytimers niet in WhatsApp of notities moet bijhouden',
       excerpt: 'WhatsApp en notities lijken handig, maar je mist het belangrijkste: versiebeheer. Lees waarom dit voor discussie zorgt en hoe je anytimers beter bijhoudt.',
       variant: 'light'
+    },
+    {
+      slug: 'huisavondideeen',
+      category: 'Ideeën',
+      title: 'Top 10 leuke huisavondideeën',
+      excerpt: 'Van de Zwarte Piste tot een kerstdiner midden in juli. Onze top 10 leuke huisavondideeën voor als je met je huisgenoten thuis blijft.',
+      variant: 'light'
     }
   ];
 
