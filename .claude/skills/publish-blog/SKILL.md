@@ -106,6 +106,54 @@ cover every game's Categorie/Spelers/Speelduur).
 **Never invent Categorie/Spelers/Speelduur/Benodigdheden values.** The user supplies
 this data for each single-game post; if any of it is missing, ask rather than guess.
 
+## 3c. Category & breadcrumbs — single source of truth
+
+Every post's category must be **read from `BLOG_POSTS`**, never hardcoded as a separate
+string literal anywhere else in the component. This is not optional style preference —
+it's fixing a real bug: the category used to be typed out independently in the
+template's `<span class="section-label">` and in a `breadcrumbs` array, and 5 of the 8
+existing posts drifted out of sync with stale category names (some weren't even valid
+categories anymore, e.g. "Regels", "Tips", "Huisavond" left over from before the
+4-category system existed). One field, sourced from one place, fixes this permanently.
+
+Pattern (copy from any existing post, e.g. `jeu-de-bier.component.ts`/`.html`):
+
+```ts
+import { BLOG_POSTS, CATEGORY_SLUGS } from '../blog/blog-posts.data';
+import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
+import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
+
+@Component({
+  ...
+  imports: [RouterLink, BreadcrumbsComponent]
+})
+export class XComponent {
+  readonly category = BLOG_POSTS.find(p => p.slug === '<slug>')!.category;
+
+  breadcrumbs: BreadcrumbItem[] = [
+    { label: 'Blog', url: '/blog' },
+    { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
+    { label: '<Post title>' }
+  ];
+
+  constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
+    ...
+    injectBreadcrumbSchema(document, 'schema-breadcrumbs-<slug>', this.breadcrumbs);
+    ...
+  }
+}
+```
+
+- Template: `<span class="section-label">{{ category }}</span>` — never a hardcoded
+  category name — and `<app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>` placed
+  inside `.container`, right before `.legal-header`.
+- This requires `DOCUMENT` injected (same as the `BlogPosting` JSON-LD in step 3, if the
+  post has one — reuse the same injection, don't inject it twice).
+- The category set here is what shows on the post itself AND what appears in the
+  breadcrumb trail — but `BLOG_POSTS`' `category` field (in
+  `src/app/pages/blog/blog-posts.data.ts`) is still the actual source of truth. If the
+  category needs to change, change it there; this component reads it, it doesn't own it.
+
 ## 4. Internal linking
 
 Add internal links to other relevant blog posts/pages, but link each distinct topic
@@ -115,8 +163,10 @@ only once per article — don't link the same target multiple times in one post.
 
 - Register the route in `app.routes.ts`, with the SEO title/description data matching
   what's set in the component.
-- Add an entry to the `posts` array in `blog.component.ts` so it shows on `/blog`. The
-  `BlogPost` shape requires:
+- Add an entry to the `BLOG_POSTS` array in `src/app/pages/blog/blog-posts.data.ts` so it
+  shows on `/blog` — this is the single source of truth every other page reads from
+  (see step 3c), so this is the ONLY place the post's category/date/image get typed in.
+  The `BlogPost` shape requires:
   - `date` — ISO `yyyy-mm-dd`, today's date unless the user says otherwise. The blog
     page sorts posts by this field and **automatically** gives the newest-dated post the
     full-width "Nieuw" hero treatment — there is no manual `featured` flag to set. The
@@ -126,10 +176,10 @@ only once per article — don't link the same target multiple times in one post.
   - `image` / `imageAlt` — the thumbnail shown on the card and in the hero if it's
     newest. Reuse the same image/alt already chosen as the `og:image` in step 3.
   - `category` — must be one of the values in `BLOG_CATEGORIES` exported from
-    `blog.component.ts` (currently `Begrippen`, `Inspiratie`, `Weetjes`,
+    `blog-posts.data.ts` (currently `Begrippen`, `Inspiratie`, `Weetjes`,
     `Drankspelletjes`). Pick the best existing fit; don't invent a new category without
     asking the user first — the type is a literal union, so a wrong value fails the
-    build.
+    build. This is the value step 3c's `category` field reads back — set it once here.
 - Add a `<url>` entry for the new route in `src/sitemap.xml`.
 
 ## 6. Verify

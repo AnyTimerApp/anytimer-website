@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { isPlatformBrowser, DOCUMENT } from '@angular/common';
 import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
+import { BLOG_POSTS, CATEGORY_SLUGS } from '../blog/blog-posts.data';
 
 @Component({
   selector: 'app-anytimers-bijhouden-whatsapp-notities',
@@ -13,9 +14,11 @@ import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-
   styleUrls: ['../juridisch/juridisch.component.scss', './anytimers-bijhouden-whatsapp-notities.component.scss']
 })
 export class AnytimersWhatsappNotitiesComponent {
+  readonly category = BLOG_POSTS.find(p => p.slug === 'anytimers-bijhouden-whatsapp-notities')!.category;
+
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
-    { label: 'Weetjes', url: '/blog/weetjes' },
+    { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
     { label: 'Waarom je anytimers niet in WhatsApp of notities moet bijhouden' }
   ];
 

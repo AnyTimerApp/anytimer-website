@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
+import { BLOG_POSTS, CATEGORY_SLUGS } from '../blog/blog-posts.data';
 
 @Component({
   selector: 'app-wat-is-een-anytimer',
@@ -13,9 +14,11 @@ import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-
   styleUrls: ['../juridisch/juridisch.component.scss', './wat-is-een-anytimer.component.scss']
 })
 export class WatIsEenAnytimer {
+  readonly category = BLOG_POSTS.find(p => p.slug === 'wat-is-een-anytimer')!.category;
+
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
-    { label: 'Begrippen', url: '/blog/begrippen' },
+    { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
     { label: 'Wat is een anytimer?' }
   ];
 

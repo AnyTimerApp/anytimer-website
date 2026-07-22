@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
+import { BLOG_POSTS, CATEGORY_SLUGS } from '../blog/blog-posts.data';
 
 @Component({
   selector: 'app-drankspellen',
@@ -13,9 +14,11 @@ import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-
   styleUrls: ['../juridisch/juridisch.component.scss', './drankspellen.component.scss']
 })
 export class DrankspellenComponent {
+  readonly category = BLOG_POSTS.find(p => p.slug === 'drankspellen')!.category;
+
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
-    { label: 'Inspiratie', url: '/blog/inspiratie' },
+    { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
     { label: 'Top 10 leukste drankspellen voor een gezellige avond' }
   ];
 

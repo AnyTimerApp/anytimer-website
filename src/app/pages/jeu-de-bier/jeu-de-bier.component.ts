@@ -4,6 +4,7 @@ import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
+import { BLOG_POSTS, CATEGORY_SLUGS } from '../blog/blog-posts.data';
 
 @Component({
   selector: 'app-jeu-de-bier',
@@ -13,9 +14,11 @@ import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-
   styleUrls: ['../juridisch/juridisch.component.scss', './jeu-de-bier.component.scss']
 })
 export class JeuDeBierComponent {
+  readonly category = BLOG_POSTS.find(p => p.slug === 'jeu-de-bier')!.category;
+
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
-    { label: 'Drankspelletjes', url: '/blog/drankspelletjes' },
+    { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
     { label: 'Jeu de bier' }
   ];
 

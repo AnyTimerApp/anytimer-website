@@ -4,6 +4,7 @@ import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
+import { BLOG_POSTS, CATEGORY_SLUGS } from '../blog/blog-posts.data';
 
 @Component({
   selector: 'app-huisavondideeen',
@@ -13,9 +14,11 @@ import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-
   styleUrls: ['../juridisch/juridisch.component.scss', './huisavondideeen.component.scss']
 })
 export class HuisavondideeenComponent {
+  readonly category = BLOG_POSTS.find(p => p.slug === 'huisavondideeen')!.category;
+
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
-    { label: 'Inspiratie', url: '/blog/inspiratie' },
+    { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
     { label: 'Top 10 leuke huisavondideeën' }
   ];
 

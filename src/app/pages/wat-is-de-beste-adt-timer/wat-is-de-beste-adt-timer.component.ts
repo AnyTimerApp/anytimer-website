@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { isPlatformBrowser, DOCUMENT } from '@angular/common';
 import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
+import { BLOG_POSTS, CATEGORY_SLUGS } from '../blog/blog-posts.data';
 
 @Component({
   selector: 'app-wat-is-de-beste-adt-timer',
@@ -13,9 +14,11 @@ import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-
   styleUrls: ['../juridisch/juridisch.component.scss', './wat-is-de-beste-adt-timer.component.scss']
 })
 export class WatIsDeBestAdtTimerComponent {
+  readonly category = BLOG_POSTS.find(p => p.slug === 'wat-is-de-beste-adt-timer')!.category;
+
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
-    { label: 'Inspiratie', url: '/blog/inspiratie' },
+    { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
     { label: 'Wat is de beste adt timer?' }
   ];
 
