@@ -81,7 +81,19 @@ only once per article — don't link the same target multiple times in one post.
 
 - Register the route in `app.routes.ts`, with the SEO title/description data matching
   what's set in the component.
-- Add an entry to the `posts` array in `blog.component.ts` so it shows on `/blog`.
+- Add an entry to the `posts` array in `blog.component.ts` so it shows on `/blog`. The
+  `BlogPost` shape requires:
+  - `date` — ISO `yyyy-mm-dd`, today's date unless the user says otherwise. The blog
+    page sorts posts by this field and **automatically** gives the single newest-dated
+    post the full-width "Nieuw" hero treatment — there is no manual `featured` flag to
+    set, and nothing else to touch for that to work. Just make sure `date` is correct.
+  - `image` / `imageAlt` — the thumbnail shown on the card and in the hero if it's
+    newest. Reuse the same image/alt already chosen as the `og:image` in step 3.
+  - `category` — must be one of the values in `BLOG_CATEGORIES` exported from
+    `blog.component.ts` (currently `Begrippen`, `Inspiratie`, `Weetjes`,
+    `Drankspelletjes`). Pick the best existing fit; don't invent a new category without
+    asking the user first — the type is a literal union, so a wrong value fails the
+    build.
 - Add a `<url>` entry for the new route in `src/sitemap.xml`.
 
 ## 6. Verify

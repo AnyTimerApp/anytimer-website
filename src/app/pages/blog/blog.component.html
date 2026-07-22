@@ -1,15 +1,6 @@
 <div class="legal-page blog-page">
   <div class="container">
 
-    <!-- Page header -->
-    <div class="legal-header">
-      <span class="section-label">Blog</span>
-      <h1 class="legal-title">Alles over anytimers </h1>
-      <p class="legal-intro">
-        Hier delen wij cringe artikelen voor studenten en mensen met de jonge geest.
-      </p>
-    </div>
-
     <!-- Featured post -->
     <a [routerLink]="'/' + featuredPost.slug" class="blog-hero" [ngClass]="'blog-hero--' + (featuredPost.variant || 'light')">
       <div class="blog-hero__media">
@@ -18,13 +9,24 @@
         </picture>
       </div>
       <div class="blog-hero__content">
-        <span class="blog-hero__badge">Nieuw</span>
-        <span class="section-label">{{ featuredPost.category }}</span>
+        <div class="blog-hero__meta">
+          <span class="blog-hero__badge">Nieuw</span>
+          <span class="section-label">{{ featuredPost.category }}</span>
+        </div>
         <h2 class="blog-hero__title">{{ featuredPost.title }}</h2>
         <p class="blog-hero__excerpt">{{ featuredPost.excerpt }}</p>
         <span class="blog-card__link">Lees meer →</span>
       </div>
     </a>
+
+        <!-- Page header -->
+    <div class="legal-header">
+      <span class="section-label">Blog</span>
+      <h1 class="legal-title">Alles over anytimers </h1>
+      <p class="legal-intro">
+        Hier delen wij cringe artikelen voor studenten en mensen met de jonge geest.
+      </p>
+    </div>
 
     <!-- Blog posts -->
     <div class="blog-grid">
