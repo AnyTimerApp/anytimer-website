@@ -13,6 +13,7 @@ import { WatIsDeBestAdtTimerComponent } from './pages/wat-is-de-beste-adt-timer/
 import { MagJeEenAnyttimerWeigerenComponent } from './pages/mag-je-een-anytimer-weigeren/mag-je-een-anytimer-weigeren.component';
 import { AnytimersWhatsappNotitiesComponent } from './pages/anytimers-bijhouden-whatsapp-notities/anytimers-bijhouden-whatsapp-notities.component';
 import { HuisavondideeenComponent } from './pages/huisavondideeen/huisavondideeen.component';
+import { JeuDeBierComponent } from './pages/jeu-de-bier/jeu-de-bier.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'AnyTimerApp - De app om je anytimers in bij te houden' },
@@ -28,5 +29,6 @@ export const routes: Routes = [
   { path: 'mag-je-een-anytimer-weigeren', component: MagJeEenAnyttimerWeigerenComponent, title: 'Mag je een Anytimer Weigeren? - Regels & Gevolgen | AnyTimerApp' },
   { path: 'anytimers-bijhouden-whatsapp-notities', component: AnytimersWhatsappNotitiesComponent, title: 'Waarom je Anytimers niet in WhatsApp of Notities Bijhoudt | AnyTimerApp' },
   { path: 'huisavondideeen', component: HuisavondideeenComponent, title: 'Top 10 Leuke Huisavondideeën | AnyTimerApp' },
+  { path: 'jeu-de-bier', component: JeuDeBierComponent, title: 'Jeu de Bier - Spelregels & Tips | AnyTimerApp' },
   { path: '**', component: NotFoundComponent, title: '404 Niet gevonden' }
 ];

@@ -94,6 +94,16 @@ export class BlogComponent {
       image: 'assets/blogs/huisavond/Huisavond cover.png',
       imageAlt: 'Top 10 huisavondideeën',
       variant: 'light'
+    },
+    {
+      slug: 'jeu-de-bier',
+      category: 'Drankspelletjes',
+      title: 'Jeu de bier',
+      excerpt: 'Jeu de bier is jeu de boules voor aan tafel met bierdopjes. Simpel behendigheidsspel, perfect voor het begin van de avond.',
+      date: '2026-07-22',
+      image: 'assets/blogs/drankspel/jeu de bier.png',
+      imageAlt: 'Jeu de bier drankspel met bierdopjes',
+      variant: 'light'
     }
   ];
 
@@ -102,11 +112,11 @@ export class BlogComponent {
   }
 
   get featuredPost(): BlogPost {
-    return this.sortedPosts[0];
+    return this.sortedPosts.find(p => p.category !== 'Drankspelletjes') ?? this.sortedPosts[0];
   }
 
   get otherPosts(): BlogPost[] {
-    return this.sortedPosts.slice(1);
+    return this.sortedPosts.filter(p => p !== this.featuredPost);
   }
 
   constructor(meta: Meta) {

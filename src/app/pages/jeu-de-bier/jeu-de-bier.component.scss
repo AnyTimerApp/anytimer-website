@@ -1,0 +1,70 @@
+.legal-section h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 20px 0 8px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.game-image {
+  width: 100%;
+  height: auto;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.game-info-card {
+  background: var(--primary-light);
+  border-radius: 20px;
+  padding: 24px;
+  margin: 20px 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.game-info-card__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.game-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.game-stat__label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+}
+
+.game-stat__value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.game-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.game-tag {
+  background: #fff;
+  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  border: 1px solid rgba(0, 111, 253, 0.15);
+}

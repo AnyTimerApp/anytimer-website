@@ -72,6 +72,54 @@ used in e.g. `drankspellen.component.ts` and `wat-is-de-beste-adt-timer.componen
   component: be explicit about layout properties (width/display/etc.) rather than
   relying on inherited global styles.
 
+## 3b. Drankspelletjes: single-game info card
+
+This only applies when the post is about **one single drinking game** and its category
+is `Drankspelletjes` (not the multi-game "Top 10 drankspellen" listicle, which stays as
+plain `h3`/`ul` sections — do not retrofit this onto that article). Concrete reference
+implementation: `src/app/pages/jeu-de-bier/` (component, template, and scss) — copy its
+`.game-info-card` block directly rather than re-deriving it.
+
+For a dedicated single-game post, place a "quick facts" info card right after the
+opening `<picture>`, before the descriptive body text, showing **Categorie** (one of
+`Kaartspel`, `Dobbelspel`, `Behendigheid`, `Overig` — see
+[[drankspellen_subcategories_plan]]), **Spelers**, **Speelduur**, and **Benodigdheden**
+together in one visually distinct block instead of a plain bullet list:
+
+```html
+<div class="game-info-card">
+  <div class="game-info-card__stats">
+    <div class="game-stat">
+      <span class="game-stat__label">Categorie</span>
+      <span class="game-stat__value">Kaartspel</span>
+    </div>
+    <div class="game-stat">
+      <span class="game-stat__label">Spelers</span>
+      <span class="game-stat__value">3+</span>
+    </div>
+    <div class="game-stat">
+      <span class="game-stat__label">Speelduur</span>
+      <span class="game-stat__value">15-30 min</span>
+    </div>
+  </div>
+  <div class="game-info-card__requirements">
+    <span class="game-stat__label">Benodigdheden</span>
+    <div class="game-tags">
+      <span class="game-tag">Speelkaarten</span>
+      <span class="game-tag">Shotglas</span>
+      <span class="game-tag">Bier of wijn</span>
+    </div>
+  </div>
+</div>
+```
+
+Add the matching `.game-info-card`/`.game-stat`/`.game-tags` rules to the component's
+local `.scss` alongside the standard `h3`/`.game-image` block — see
+`jeu-de-bier.component.scss` for the exact CSS to copy.
+
+**Never invent Categorie/Spelers/Speelduur/Benodigdheden values.** The user supplies
+this data for each single-game post; if any of it is missing, ask rather than guess.
+
 ## 4. Internal linking
 
 Add internal links to other relevant blog posts/pages, but link each distinct topic
@@ -84,9 +132,11 @@ only once per article — don't link the same target multiple times in one post.
 - Add an entry to the `posts` array in `blog.component.ts` so it shows on `/blog`. The
   `BlogPost` shape requires:
   - `date` — ISO `yyyy-mm-dd`, today's date unless the user says otherwise. The blog
-    page sorts posts by this field and **automatically** gives the single newest-dated
-    post the full-width "Nieuw" hero treatment — there is no manual `featured` flag to
-    set, and nothing else to touch for that to work. Just make sure `date` is correct.
+    page sorts posts by this field and **automatically** gives the newest-dated post the
+    full-width "Nieuw" hero treatment — there is no manual `featured` flag to set. The
+    one exception: **`Drankspelletjes` posts are never featured**, no matter how new —
+    `featuredPost` skips them and picks the newest non-`Drankspelletjes` post instead.
+    Nothing to do for either behavior except set `date`/`category` correctly.
   - `image` / `imageAlt` — the thumbnail shown on the card and in the hero if it's
     newest. Reuse the same image/alt already chosen as the `og:image` in step 3.
   - `category` — must be one of the values in `BLOG_CATEGORIES` exported from
