@@ -3,12 +3,16 @@ import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
 
+export const BLOG_CATEGORIES = ['Begrippen', 'Inspiratie', 'Weetjes', 'Drankspelletjes'] as const;
+
 export interface BlogPost {
   slug: string;
-  category: string;
+  category: typeof BLOG_CATEGORIES[number];
   title: string;
   excerpt: string;
-  featured?: boolean;
+  date: string;
+  image: string;
+  imageAlt: string;
   variant?: 'light' | 'blue' | 'dark' | 'accent';
 }
 
@@ -26,14 +30,19 @@ export class BlogComponent {
       category: 'Begrippen',
       title: 'Wat is een anytimer?',
       excerpt: 'Een anytimer is een tegoed tussen vrienden. Je verdient hem na een verloren weddenschap, een domme actie of een challenge. Je kan hem inzetten wanneer je maar wilt.',
-      featured: true,
+      date: '2026-03-27',
+      image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.png',
+      imageAlt: 'Wat is een anytimer uitleg',
       variant: 'light'
     },
     {
       slug: 'drankspellen',
-      category: 'Ideeën',
+      category: 'Inspiratie',
       title: 'Top 10 drankspellen voor een gezellige avond',
       excerpt: 'Van Mario Barf tot Kingsen en Mexen — onze top 10 drankspellen voor een gezellige avond met vrienden. Met alle regels en tips.',
+      date: '2026-04-10',
+      image: 'assets/blogs/drankspellen/mario barf.png',
+      imageAlt: 'Mario Barf drankspel',
       variant: 'blue'
     },
     {
@@ -41,37 +50,64 @@ export class BlogComponent {
       category: 'Begrippen',
       title: 'Wat is een adtje?',
       excerpt: 'Een adtje betekent dat je een drankje in één keer leegdrinkt. Leer tips voor atten, het verschil met een shotgun en wat een rietbak is.',
+      date: '2026-04-12',
+      image: 'assets/blogs/wat is een adtje/wat is een adtje.png',
+      imageAlt: 'Wat is een adtje',
       variant: 'light'
     },
     {
       slug: 'wat-is-de-beste-adt-timer',
-      category: 'Ideeën',
+      category: 'Inspiratie',
       title: 'Wat is de beste adt timer?',
       excerpt: 'Welke adt timer moet je kiezen. App timer, stopwatch, AdtMeister of Rubiks cube timer. Vergelijking en tips voor eerlijke atten.',
+      date: '2026-04-17',
+      image: 'assets/blogs/beste timer/Any-timer in de club.png',
+      imageAlt: 'Any-timer in de club',
       variant: 'light'
     },
     {
       slug: 'mag-je-een-anytimer-weigeren',
-      category: 'Regels',
+      category: 'Weetjes',
       title: 'Mag je een anytimer weigeren?',
       excerpt: 'Mag je een anytimer weigeren? Lees de regels en gevolgen. Wanneer mag je nee zeggen en wat zijn de straffen.',
+      date: '2026-04-21',
+      image: 'assets/blogs/anytimer weigeren/maatje adt een biertje cartoon.png',
+      imageAlt: 'Anytimer weigeren cartoon',
       variant: 'light'
     },
     {
       slug: 'anytimers-bijhouden-whatsapp-notities',
-      category: 'Tips',
+      category: 'Weetjes',
       title: 'Waarom je anytimers niet in WhatsApp of notities moet bijhouden',
       excerpt: 'WhatsApp en notities lijken handig, maar je mist het belangrijkste: versiebeheer. Lees waarom dit voor discussie zorgt en hoe je anytimers beter bijhoudt.',
+      date: '2026-05-21',
+      image: 'assets/blogs/whatsapp en notities/Whatsapp phones.png',
+      imageAlt: 'Anytimers bijhouden in WhatsApp werkt niet door gebrek aan versiebeheer',
       variant: 'light'
     },
     {
       slug: 'huisavondideeen',
-      category: 'Ideeën',
+      category: 'Inspiratie',
       title: 'Top 10 leuke huisavondideeën',
       excerpt: 'Van de Zwarte Piste tot een kerstdiner midden in juli. Onze top 10 leuke huisavondideeën voor als je met je huisgenoten thuis blijft.',
+      date: '2026-07-21',
+      image: 'assets/blogs/huisavond/Huisavond cover.png',
+      imageAlt: 'Top 10 huisavondideeën',
       variant: 'light'
     }
   ];
+
+  get sortedPosts(): BlogPost[] {
+    return [...this.posts].sort((a, b) => b.date.localeCompare(a.date));
+  }
+
+  get featuredPost(): BlogPost {
+    return this.sortedPosts[0];
+  }
+
+  get otherPosts(): BlogPost[] {
+    return this.sortedPosts.slice(1);
+  }
 
   constructor(meta: Meta) {
     const title = 'Anytimer Blog - Tips, Ideeën & Gidsen | Anytimer App';
