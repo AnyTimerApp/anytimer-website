@@ -6,6 +6,15 @@
   .container {
     position: relative;
   }
+
+  /* Must match .legal-page's mobile breakpoint exactly (juridisch.component.scss) —
+     otherwise the top gutter differs between blog-page and legal-page templates on
+     mobile, and the breadcrumb bar (and everything else) visibly shifts position
+     when navigating between e.g. a category page and an individual post. */
+  @media (max-width: 768px) {
+    padding-top: calc(var(--header-height) + 48px);
+    padding-bottom: 80px;
+  }
 }
 
 .legal-header {

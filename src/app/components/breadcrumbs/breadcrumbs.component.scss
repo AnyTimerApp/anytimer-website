@@ -1,11 +1,10 @@
 .breadcrumbs {
-  /* Lifted out of the flow so it never pushes the hero/header down — every
-     blog page then starts at the exact same position, whether or not it
-     shows breadcrumbs (e.g. /blog has none). */
-  position: absolute;
-  top: 0;
-  left: 24px;
-  transform: translateY(calc(-100% - 16px));
+  /* Mobile: normal document flow. The mobile gutter above the container is
+     only 48px, which isn't reliably enough room to float a breadcrumb bar
+     above it once a long trail wraps to 2-3 lines — it would run up behind
+     the fixed navbar. Sitting in-flow (pushing the hero/header down a bit)
+     is the safe option on small screens. */
+  margin-bottom: 20px;
 
   ol {
     display: flex;
@@ -42,4 +41,19 @@
 .breadcrumbs__sep {
   color: var(--text-secondary);
   opacity: 0.6;
+}
+
+@media (min-width: 769px) {
+  /* Desktop has an 80px gutter above the container — comfortably enough to
+     float the breadcrumb bar above it (out of flow) so every blog page's
+     hero/header starts at the same position, whether or not it shows
+     breadcrumbs. `bottom` (not `top` + `translateY(-100%)`) anchors the
+     bar's bottom edge a fixed distance above the container regardless of
+     how many lines it wraps to. */
+  .breadcrumbs {
+    position: absolute;
+    bottom: calc(100% + 16px);
+    left: 24px;
+    margin-bottom: 0;
+  }
 }
