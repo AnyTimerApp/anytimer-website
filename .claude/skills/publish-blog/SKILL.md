@@ -84,38 +84,24 @@ For a dedicated single-game post, place a "quick facts" info card right after th
 opening `<picture>`, before the descriptive body text, showing **Categorie** (one of
 `Kaartspel`, `Dobbelspel`, `Behendigheid`, `Overig` — see
 [[drankspellen_subcategories_plan]]), **Spelers**, **Speelduur**, and **Benodigdheden**
-together in one visually distinct block instead of a plain bullet list:
+together in one visually distinct block instead of a plain bullet list.
 
-```html
-<div class="game-info-card">
-  <div class="game-info-card__stats">
-    <div class="game-stat">
-      <span class="game-stat__label">Categorie</span>
-      <span class="game-stat__value">Kaartspel</span>
-    </div>
-    <div class="game-stat">
-      <span class="game-stat__label">Spelers</span>
-      <span class="game-stat__value">3+</span>
-    </div>
-    <div class="game-stat">
-      <span class="game-stat__label">Speelduur</span>
-      <span class="game-stat__value">15-30 min</span>
-    </div>
-  </div>
-  <div class="game-info-card__requirements">
-    <span class="game-stat__label">Benodigdheden</span>
-    <div class="game-tags">
-      <span class="game-tag">Speelkaarten</span>
-      <span class="game-tag">Shotglas</span>
-      <span class="game-tag">Bier of wijn</span>
-    </div>
-  </div>
-</div>
-```
-
-Add the matching `.game-info-card`/`.game-stat`/`.game-tags` rules to the component's
-local `.scss` alongside the standard `h3`/`.game-image` block — see
-`jeu-de-bier.component.scss` for the exact CSS to copy.
+The card is a white bordered box (`.game-info-card`) with 3 stat columns side by side
+(`.game-info-card__stats` → `.game-stat`, separated by a thin vertical divider —
+`border-right` on each stat except the last). Each stat has a small stroke icon
+**inline with its label** on one line (`.game-stat__label-row` → svg + `.game-stat__label`,
+muted/grey text), then the bold value on the line below (`.game-stat__value`, dark,
+larger). Icon size, label/value font-size, and padding all use `clamp()` (not a fixed
+breakpoint) so the 3 columns scale fluidly and stay side by side at every screen width
+instead of stacking. Below the stats, a full-width `.game-info-card__divider`, then
+`.game-info-card__requirements`: the "Benodigdheden" label gets the same inline-icon
+treatment as the 3 stats above (`.game-stat__label-row` → svg + label), followed by
+`.game-tags` pills — **but the pills themselves stay icon-free**, plain text only.
+**Copy the exact markup and CSS straight
+from `src/app/pages/jeu-de-bier/jeu-de-bier.component.html` and
+`jeu-de-bier.component.scss`** rather than retyping it — only swap the icon SVG paths if
+a stat genuinely needs a different icon (unlikely; the same 3 icons — tag/users/clock —
+cover every game's Categorie/Spelers/Speelduur).
 
 **Never invent Categorie/Spelers/Speelduur/Benodigdheden values.** The user supplies
 this data for each single-game post; if any of it is missing, ask rather than guess.

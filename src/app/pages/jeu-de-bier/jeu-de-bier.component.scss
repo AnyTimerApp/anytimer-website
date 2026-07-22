@@ -17,54 +17,90 @@
 }
 
 .game-info-card {
-  background: var(--primary-light);
-  border-radius: 20px;
-  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  border-radius: clamp(16px, 4vw, 24px);
+  padding: clamp(16px, 4vw, 28px) clamp(14px, 5vw, 32px);
   margin: 20px 0 28px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: clamp(16px, 3vw, 24px);
 }
 
 .game-info-card__stats {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+}
+
+.game-info-card__divider {
+  height: 1px;
+  background: var(--border-light);
+}
+
+.game-info-card__requirements {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .game-stat {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: clamp(4px, 1.5vw, 10px);
+  padding: 0 clamp(8px, 3vw, 20px);
+  min-width: 0;
+  border-right: 1px solid var(--border-light);
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+
+.game-stat__label-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(4px, 1.5vw, 8px);
+  color: var(--primary);
+
+  svg {
+    flex-shrink: 0;
+    width: clamp(14px, 3.5vw, 18px);
+    height: clamp(14px, 3.5vw, 18px);
+  }
 }
 
 .game-stat__label {
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--primary);
+  font-size: clamp(0.62rem, 2.4vw, 0.85rem);
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
 }
 
 .game-stat__value {
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: clamp(0.85rem, 3.2vw, 1.15rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
   color: var(--text-main);
+  white-space: nowrap;
 }
 
 .game-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 6px;
+  gap: clamp(6px, 2vw, 10px);
 }
 
 .game-tag {
-  background: #fff;
+  background: var(--primary-light);
   border-radius: var(--radius-pill);
-  padding: 6px 14px;
-  font-size: 0.85rem;
+  padding: clamp(6px, 1.5vw, 8px) clamp(10px, 3vw, 16px);
+  font-size: clamp(0.78rem, 2.6vw, 0.9rem);
   font-weight: 600;
   color: var(--text-main);
-  border: 1px solid rgba(0, 111, 253, 0.15);
 }
