@@ -106,6 +106,18 @@ cover every game's Categorie/Spelers/Speelduur).
 **Never invent Categorie/Spelers/Speelduur/Benodigdheden values.** The user supplies
 this data for each single-game post; if any of it is missing, ask rather than guess.
 
+**Store the Categorie value in `BLOG_POSTS`, not just in the template.** The game-type
+stat (`Kaartspel`/`Dobbelspel`/`Behendigheid`/`Overig`) is a real data field —
+`subCategory` on the post's `BlogPost` entry in
+`src/app/pages/blog/blog-posts.data.ts` (type `DrankspelSubCategory`, exported list
+`DRANKSPEL_SUBCATEGORIES`) — not a string typed directly into the `.html`. The
+component reads it back (`readonly subCategory = this.post.subCategory!;`, see
+`jeu-de-bier.component.ts`) and the template binds
+`<span class="game-stat__value">{{ subCategory }}</span>`. This is the same
+single-source-of-truth reasoning as step 3c's top-level `category` — it's what makes a
+future "filter by game type" feature possible without hunting through every post's
+template to collect the values.
+
 ## 3c. Category & breadcrumbs — single source of truth
 
 Every post's category must be **read from `BLOG_POSTS`**, never hardcoded as a separate

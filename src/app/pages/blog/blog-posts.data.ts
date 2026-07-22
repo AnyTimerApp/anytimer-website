@@ -13,6 +13,15 @@ export const CATEGORY_SLUGS: Record<BlogCategory, string> = {
 // Independent of BLOG_CATEGORIES' declaration order above.
 export const CATEGORY_DISPLAY_ORDER: BlogCategory[] = ['Drankspelletjes', 'Inspiratie', 'Begrippen', 'Weetjes'];
 
+// Finer-grained classification used only within the Drankspelletjes category (the
+// "Categorie" stat shown on each single-game post's info card). Stored here — not
+// hardcoded per-post — so a future filter (by game type, e.g. only Kaartspel) can read
+// it the same way BLOG_CATEGORIES/CATEGORY_DISPLAY_ORDER already drive the top-level
+// category filtering.
+export const DRANKSPEL_SUBCATEGORIES = ['Kaartspel', 'Dobbelspel', 'Behendigheid', 'Overig'] as const;
+
+export type DrankspelSubCategory = typeof DRANKSPEL_SUBCATEGORIES[number];
+
 export interface BlogPost {
   slug: string;
   category: BlogCategory;
@@ -22,6 +31,8 @@ export interface BlogPost {
   image: string;
   imageAlt: string;
   variant?: 'light' | 'blue' | 'dark' | 'accent';
+  // Only set for Drankspelletjes posts — the game-type stat shown on the info card.
+  subCategory?: DrankspelSubCategory;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -98,6 +109,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'jeu-de-bier',
     category: 'Drankspelletjes',
+    subCategory: 'Behendigheid',
     title: 'Jeu de bier',
     excerpt: 'Jeu de bier is jeu de boules voor aan tafel met bierdopjes. Simpel behendigheidsspel, perfect voor het begin van de avond.',
     date: '2026-07-22',

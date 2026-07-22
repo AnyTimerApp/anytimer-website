@@ -14,7 +14,9 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../blog/blog-posts.data';
   styleUrls: ['../juridisch/juridisch.component.scss', './jeu-de-bier.component.scss']
 })
 export class JeuDeBierComponent {
-  readonly category = BLOG_POSTS.find(p => p.slug === 'jeu-de-bier')!.category;
+  private readonly post = BLOG_POSTS.find(p => p.slug === 'jeu-de-bier')!;
+  readonly category = this.post.category;
+  readonly subCategory = this.post.subCategory!;
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
