@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class DrankspellenComponent {
   constructor(meta: Meta) {
-    const title = 'Top 10 Drankspellen voor een Gezellige Avond | AnyTimerApp';
+    const title = 'Top 10 Leukste Drankspellen voor een Gezellige Avond | AnyTimerApp';
     const description = 'Ontdek de top 10 leukste drankspellen voor een gezellige avond met vrienden. Mario Barf, Kingsen, Mexen en meer. Alle spelregels en tips.';
     const image = 'https://anytimer.app/assets/blogs/drankspellen/mario%20barf.png';
     const url = 'https://anytimer.app/drankspellen/';

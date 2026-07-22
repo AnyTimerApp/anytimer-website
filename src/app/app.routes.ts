@@ -21,7 +21,7 @@ export const routes: Routes = [
   { path: 'terms', component: TermsComponent, title: 'Gebruiksvoorwaarden AnyTimerApp - Regels & Voorwaarden' },
   { path: 'contact', component: ContactComponent, title: 'Contact AnyTimerApp - Vragen, Feedback & Samenwerking' },
   { path: 'blog', component: BlogComponent, title: 'AnyTimerApp Blog - Tips, Ideeën & Gidsen' },
-  { path: 'drankspellen', component: DrankspellenComponent, title: 'Top 10 Drankspellen voor een Gezellige Avond | AnyTimerApp' },
+  { path: 'drankspellen', component: DrankspellenComponent, title: 'Top 10 Leukste Drankspellen voor een Gezellige Avond | AnyTimerApp' },
   { path: 'wat-is-een-anytimer', component: WatIsEenAnytimer, title: 'Wat is een Anytimer? - Gids & Uitleg | AnyTimerApp' },
   { path: 'wat-is-een-adtje', component: WatIsEenAdtjeComponent, title: 'Wat is een Adtje? - Gids & Uitleg | AnyTimerApp' },
   { path: 'wat-is-de-beste-adt-timer', component: WatIsDeBestAdtTimerComponent, title: 'Wat is de Beste Adt Timer? - Gids & Opties | AnyTimerApp' },

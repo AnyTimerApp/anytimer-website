@@ -38,7 +38,7 @@ export class BlogComponent {
     {
       slug: 'drankspellen',
       category: 'Inspiratie',
-      title: 'Top 10 drankspellen voor een gezellige avond',
+      title: 'Top 10 leukste drankspellen voor een gezellige avond',
       excerpt: 'Van Mario Barf tot Kingsen en Mexen. Onze top 10 drankspellen voor een gezellige avond met vrienden. Met alle regels en tips.',
       date: '2026-04-10',
       image: 'assets/blogs/drankspellen/mario barf.png',
