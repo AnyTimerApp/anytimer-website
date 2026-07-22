@@ -3,7 +3,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { RouterLink, Router, NavigationEnd } from '@angular/router';
 import { Subscription, filter } from 'rxjs';
-import { BLOG_CATEGORIES, CATEGORY_SLUGS } from '../../pages/blog/blog-posts.data';
+import { CATEGORY_DISPLAY_ORDER, CATEGORY_SLUGS } from '../../pages/blog/blog-posts.data';
 
 @Component({
   selector: 'app-navbar',
@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   menuOpen = false;
   blogMenuOpen = false;
 
-  readonly blogCategories = BLOG_CATEGORIES.map(category => ({
+  readonly blogCategories = CATEGORY_DISPLAY_ORDER.map(category => ({
     category,
     slug: CATEGORY_SLUGS[category]
   }));

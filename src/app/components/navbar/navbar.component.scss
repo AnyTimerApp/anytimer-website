@@ -158,7 +158,7 @@
   .nav-dropdown {
     position: absolute;
     top: calc(100% + 16px);
-    left: 0;
+    left: 50%;
     min-width: 180px;
     background: #fff;
     border: 1px solid var(--border-light);
@@ -168,7 +168,7 @@
     gap: 2px;
     opacity: 0;
     pointer-events: none;
-    transform: translateY(4px);
+    transform: translate(-50%, 4px);
     transition: opacity 0.18s ease, transform 0.18s ease;
 
     a {
@@ -193,7 +193,22 @@
   .nav-item--dropdown:focus-within .nav-dropdown {
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0);
+    transform: translate(-50%, 0);
+  }
+
+  /* Bridges the gap between the trigger and the centered dropdown panel —
+     without this, moving the mouse down to the panel crosses dead space with
+     no hoverable element, the browser fires mouseleave, and the panel closes
+     before the cursor ever reaches it. Sized/centered to match the panel
+     (min-width 180px) rather than just the trigger's own (narrower) width. */
+  .nav-item--dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 16px;
   }
 }
 

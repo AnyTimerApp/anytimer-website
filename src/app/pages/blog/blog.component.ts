@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
-import { BLOG_POSTS, CATEGORY_SLUGS, BlogCategory, BlogPost } from './blog-posts.data';
+import { BLOG_POSTS, CATEGORY_SLUGS, CATEGORY_DISPLAY_ORDER, BlogCategory, BlogPost } from './blog-posts.data';
 
 export interface CategoryCard {
   category: BlogCategory;
@@ -11,9 +11,6 @@ export interface CategoryCard {
   blurb: string;
   variant: 'light' | 'blue' | 'dark' | 'accent';
 }
-
-// Display order for the category cards row (independent of BLOG_CATEGORIES' canonical order).
-const CARD_ORDER: BlogCategory[] = ['Drankspelletjes', 'Inspiratie', 'Begrippen', 'Weetjes'];
 
 const CATEGORY_VARIANTS: Record<BlogCategory, 'light' | 'blue' | 'dark' | 'accent'> = {
   Begrippen: 'light',
@@ -52,7 +49,7 @@ export class BlogComponent {
   }
 
   get categoryCards(): CategoryCard[] {
-    return CARD_ORDER.map(category => ({
+    return CATEGORY_DISPLAY_ORDER.map(category => ({
       category,
       slug: CATEGORY_SLUGS[category],
       count: this.posts.filter(p => p.category === category).length,

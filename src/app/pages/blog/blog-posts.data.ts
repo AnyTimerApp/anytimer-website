@@ -9,6 +9,10 @@ export const CATEGORY_SLUGS: Record<BlogCategory, string> = {
   Drankspelletjes: 'drankspelletjes'
 };
 
+// Display order used everywhere categories are listed (blog category cards, nav dropdown).
+// Independent of BLOG_CATEGORIES' declaration order above.
+export const CATEGORY_DISPLAY_ORDER: BlogCategory[] = ['Drankspelletjes', 'Inspiratie', 'Begrippen', 'Weetjes'];
+
 export interface BlogPost {
   slug: string;
   category: BlogCategory;
