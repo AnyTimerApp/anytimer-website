@@ -77,6 +77,14 @@ export class NavbarComponent implements OnInit, OnDestroy {
   closeMenu() {
     this.menuOpen = false;
     this.blogMenuOpen = false;
+
+    // Angular routerLink navigations don't reload the page, so a clicked link
+    // stays focused afterward — which keeps `:focus-within` (and therefore the
+    // desktop dropdown) open even once the mouse moves away. Blur it so hover
+    // is the only thing keeping the dropdown open once the click is done.
+    if (isPlatformBrowser(this.platformId)) {
+      (document.activeElement as HTMLElement)?.blur();
+    }
   }
 
   toggleBlogMenu(event: Event) {
