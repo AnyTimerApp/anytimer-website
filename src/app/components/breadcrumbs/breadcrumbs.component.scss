@@ -1,0 +1,45 @@
+.breadcrumbs {
+  /* Lifted out of the flow so it never pushes the hero/header down — every
+     blog page then starts at the exact same position, whether or not it
+     shows breadcrumbs (e.g. /blog has none). */
+  position: absolute;
+  top: 0;
+  left: 24px;
+  transform: translateY(calc(-100% - 16px));
+
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  a {
+    color: var(--text-secondary);
+    font-weight: 600;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  span[aria-current] {
+    color: var(--text-main);
+    font-weight: 600;
+  }
+}
+
+.breadcrumbs__sep {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}

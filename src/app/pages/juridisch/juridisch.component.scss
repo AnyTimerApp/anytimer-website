@@ -1,6 +1,10 @@
 .legal-page {
   padding-top: calc(var(--header-height) + 80px);
   padding-bottom: 120px;
+
+  .container {
+    position: relative;
+  }
 }
 
 /* ── Header ─────────────────────────────────────────── */

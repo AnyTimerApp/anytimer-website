@@ -19,6 +19,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://anytimer.app/blog/begrippen/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://anytimer.app/blog/inspiratie/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://anytimer.app/blog/weetjes/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://anytimer.app/blog/drankspelletjes/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://anytimer.app/drankspellen/</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>

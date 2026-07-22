@@ -1,6 +1,8 @@
 <div class="legal-page blog-page">
   <div class="container">
 
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
     <!-- Featured post -->
     <a [routerLink]="'/' + featuredPost.slug" class="blog-hero" [ngClass]="'blog-hero--' + (featuredPost.variant || 'light')">
       <div class="blog-hero__media">
@@ -10,7 +12,7 @@
       </div>
       <div class="blog-hero__content">
         <div class="blog-hero__meta">
-          <span class="blog-hero__badge">Nieuw</span>
+          <span class="blog-hero__badge">Uitgelicht</span>
           <span class="section-label">{{ featuredPost.category }}</span>
         </div>
         <h2 class="blog-hero__title">{{ featuredPost.title }}</h2>
@@ -19,22 +21,15 @@
       </div>
     </a>
 
-    <!-- Categories -->
-    <div class="category-grid">
-      @for (card of categoryCards; track card.slug) {
-      <a [routerLink]="'/blog/' + card.slug" class="blog-card" [ngClass]="'blog-card--' + card.variant">
-        <div class="blog-card__body">
-          <h3 class="blog-card__title">{{ card.category }}</h3>
-          <p class="blog-card__excerpt">{{ card.blurb }}</p>
-          <div class="blog-card__footer">
-            <span class="blog-card__link">{{ card.count }} artikelen →</span>
-          </div>
-        </div>
-      </a>
-      }
+    <!-- Page header -->
+    <div class="legal-header">
+      <span class="section-label">{{ category }}</span>
+      <h1 class="legal-title">{{ category }}</h1>
+      <p class="legal-intro">{{ meta.intro }}</p>
     </div>
 
     <!-- Blog posts -->
+    @if (otherPosts.length > 0) {
     <div class="blog-grid">
       @for (post of otherPosts; track post.slug) {
       <a [routerLink]="'/' + post.slug" class="blog-card" [ngClass]="'blog-card--' + (post.variant || 'light')">
@@ -52,6 +47,7 @@
       </a>
       }
     </div>
+    }
 
   </div>
 </div>

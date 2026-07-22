@@ -15,7 +15,25 @@
       <a routerLink="/" fragment="hoe-het-werkt" (click)="closeMenu()">Hoe het werkt</a>
       <a routerLink="/" fragment="faq" (click)="closeMenu()">FAQ</a>
       <a routerLink="/" fragment="team" (click)="closeMenu()">Team</a>
-      <a routerLink="/blog" (click)="closeMenu()">Blog</a>
+      <div class="nav-item nav-item--dropdown" [class.open]="blogMenuOpen">
+        <a routerLink="/blog" (click)="closeMenu()">Blog</a>
+        <button
+          type="button"
+          class="nav-item__toggle"
+          aria-label="Categorieën tonen"
+          [attr.aria-expanded]="blogMenuOpen"
+          (click)="toggleBlogMenu($event)"
+        >
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+        <div class="nav-dropdown">
+          @for (item of blogCategories; track item.slug) {
+          <a [routerLink]="'/blog/' + item.slug" (click)="closeMenu()">{{ item.category }}</a>
+          }
+        </div>
+      </div>
     </div>
 
     <div class="nav-actions">

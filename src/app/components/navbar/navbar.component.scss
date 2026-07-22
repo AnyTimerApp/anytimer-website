@@ -116,6 +116,121 @@
   }
 }
 
+/* Blog nav item + category dropdown */
+.nav-item--dropdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+}
+
+.nav-item__toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: inherit;
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+}
+
+.nav-dropdown {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-dropdown {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 0;
+    min-width: 180px;
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    gap: 2px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(4px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+
+    a {
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+  }
+
+  /* Higher specificity than .navbar .nav-links a (incl. the transparent-over-hero
+     variant) so the dropdown panel's links always stay dark on their solid white
+     background, regardless of navbar scroll state. */
+  .navbar .nav-links .nav-item--dropdown .nav-dropdown a {
+    color: var(--text-main);
+
+    &:hover {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+  }
+
+  .nav-item--dropdown:hover .nav-dropdown,
+  .nav-item--dropdown:focus-within .nav-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-item--dropdown {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav-item__toggle {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .nav-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    gap: 12px;
+    padding-left: 12px;
+    transition: max-height 0.2s ease, margin-top 0.2s ease;
+  }
+
+  .nav-item--dropdown.open {
+    .nav-item__toggle svg {
+      transform: rotate(180deg);
+    }
+
+    .nav-dropdown {
+      max-height: 220px;
+      margin-top: 16px;
+    }
+  }
+}
+
 .nav-actions {
   display: flex;
   align-items: center;

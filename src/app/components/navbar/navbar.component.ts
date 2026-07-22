@@ -3,6 +3,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { RouterLink, Router, NavigationEnd } from '@angular/router';
 import { Subscription, filter } from 'rxjs';
+import { BLOG_CATEGORIES, CATEGORY_SLUGS } from '../../pages/blog/blog-posts.data';
 
 @Component({
   selector: 'app-navbar',
@@ -15,6 +16,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
   isScrolled = false;
   isHeroPage = true;
   menuOpen = false;
+  blogMenuOpen = false;
+
+  readonly blogCategories = BLOG_CATEGORIES.map(category => ({
+    category,
+    slug: CATEGORY_SLUGS[category]
+  }));
 
   readonly APP_STORE_URL = 'https://apps.apple.com/nl/app/anytimerapp/id6758271174';
   readonly PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.anytimer.app';
@@ -41,6 +48,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
       .subscribe((e: any) => {
         this.isHeroPage = this.isHomePath(e.urlAfterRedirects);
         this.menuOpen = false;
+        this.blogMenuOpen = false;
       });
   }
 
@@ -68,6 +76,13 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   closeMenu() {
     this.menuOpen = false;
+    this.blogMenuOpen = false;
+  }
+
+  toggleBlogMenu(event: Event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.blogMenuOpen = !this.blogMenuOpen;
   }
 
   scrollToTop() {

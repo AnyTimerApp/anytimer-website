@@ -2,21 +2,31 @@ import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
+import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
+import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
 
 @Component({
   selector: 'app-huisavondideeen',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, BreadcrumbsComponent],
   templateUrl: 'huisavondideeen.component.html',
   styleUrls: ['../juridisch/juridisch.component.scss', './huisavondideeen.component.scss']
 })
 export class HuisavondideeenComponent {
+  breadcrumbs: BreadcrumbItem[] = [
+    { label: 'Blog', url: '/blog' },
+    { label: 'Inspiratie', url: '/blog/inspiratie' },
+    { label: 'Top 10 leuke huisavondideeën' }
+  ];
+
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
     const title = 'Top 10 Leuke Huisavondideeën | AnyTimerApp';
     const description = 'Op zoek naar een leuke huisavond? Ontdek 10 ideeën: Zwarte Piste, Flunkybal, Kahoot, Slabakken en meer. Met alle spelregels en tips.';
     const image = 'https://anytimer.app/assets/blogs/huisavond/Huisavond%20zwarte%20piste.png';
     const url = 'https://anytimer.app/huisavondideeen/';
     const publishedTime = '2026-07-21';
+
+    injectBreadcrumbSchema(document, 'schema-breadcrumbs-huisavondideeen', this.breadcrumbs);
 
     meta.updateTag({ name: 'description', content: description });
 

@@ -14,6 +14,7 @@ import { MagJeEenAnyttimerWeigerenComponent } from './pages/mag-je-een-anytimer-
 import { AnytimersWhatsappNotitiesComponent } from './pages/anytimers-bijhouden-whatsapp-notities/anytimers-bijhouden-whatsapp-notities.component';
 import { HuisavondideeenComponent } from './pages/huisavondideeen/huisavondideeen.component';
 import { JeuDeBierComponent } from './pages/jeu-de-bier/jeu-de-bier.component';
+import { BlogCategoryComponent } from './pages/blog-category/blog-category.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'AnyTimerApp - De app om je anytimers in bij te houden' },
@@ -22,6 +23,10 @@ export const routes: Routes = [
   { path: 'terms', component: TermsComponent, title: 'Gebruiksvoorwaarden AnyTimerApp - Regels & Voorwaarden' },
   { path: 'contact', component: ContactComponent, title: 'Contact AnyTimerApp - Vragen, Feedback & Samenwerking' },
   { path: 'blog', component: BlogComponent, title: 'AnyTimerApp Blog - Tips, Ideeën & Gidsen' },
+  { path: 'blog/begrippen', component: BlogCategoryComponent, title: 'Anytimer Begrippen Uitgelegd | AnyTimerApp', data: { category: 'Begrippen' } },
+  { path: 'blog/inspiratie', component: BlogCategoryComponent, title: 'Inspiratie voor een Leuke Avond | AnyTimerApp', data: { category: 'Inspiratie' } },
+  { path: 'blog/weetjes', component: BlogCategoryComponent, title: 'Anytimer Weetjes & Regels | AnyTimerApp', data: { category: 'Weetjes' } },
+  { path: 'blog/drankspelletjes', component: BlogCategoryComponent, title: 'Drankspelletjes: Spelregels & Tips | AnyTimerApp', data: { category: 'Drankspelletjes' } },
   { path: 'drankspellen', component: DrankspellenComponent, title: 'Top 10 Leukste Drankspellen voor een Gezellige Avond | AnyTimerApp' },
   { path: 'wat-is-een-anytimer', component: WatIsEenAnytimer, title: 'Wat is een Anytimer? - Gids & Uitleg | AnyTimerApp' },
   { path: 'wat-is-een-adtje', component: WatIsEenAdtjeComponent, title: 'Wat is een Adtje? - Gids & Uitleg | AnyTimerApp' },

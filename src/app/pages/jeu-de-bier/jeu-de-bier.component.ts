@@ -2,21 +2,31 @@ import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
+import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
+import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
 
 @Component({
   selector: 'app-jeu-de-bier',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, BreadcrumbsComponent],
   templateUrl: 'jeu-de-bier.component.html',
   styleUrls: ['../juridisch/juridisch.component.scss', './jeu-de-bier.component.scss']
 })
 export class JeuDeBierComponent {
+  breadcrumbs: BreadcrumbItem[] = [
+    { label: 'Blog', url: '/blog' },
+    { label: 'Drankspelletjes', url: '/blog/drankspelletjes' },
+    { label: 'Jeu de bier' }
+  ];
+
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
     const title = 'Jeu de Bier - Spelregels & Tips | AnyTimerApp';
     const description = 'Jeu de bier is jeu de boules voor aan tafel met bierdopjes. Ontdek de spelregels, benodigdheden en leuke drinkvariaties van dit behendigheidsspel.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/jeu%20de%20bier.png';
     const url = 'https://anytimer.app/jeu-de-bier/';
     const publishedTime = '2026-07-22';
+
+    injectBreadcrumbSchema(document, 'schema-breadcrumbs-jeu-de-bier', this.breadcrumbs);
 
     meta.updateTag({ name: 'description', content: description });
 
