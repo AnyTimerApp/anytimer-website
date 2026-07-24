@@ -11,7 +11,7 @@
       <div class="blog-hero__content">
         <div class="blog-hero__meta">
           <span class="blog-hero__badge">Nieuw</span>
-          <span class="section-label">{{ featuredPost.category }}</span>
+          <span class="section-label">{{ featuredPost.subCategory || featuredPost.category }}</span>
         </div>
         <h2 class="blog-hero__title">{{ featuredPost.title }}</h2>
         <p class="blog-hero__excerpt">{{ featuredPost.excerpt }}</p>
@@ -42,7 +42,7 @@
           <img [src]="post.image" [alt]="post.imageAlt" class="blog-card__thumbnail" loading="lazy">
         </picture>
         <div class="blog-card__body">
-          <span class="section-label">{{ post.category }}</span>
+          <span class="section-label">{{ post.subCategory || post.category }}</span>
           <h3 class="blog-card__title">{{ post.title }}</h3>
           <p class="blog-card__excerpt">{{ post.excerpt }}</p>
           <div class="blog-card__footer">
