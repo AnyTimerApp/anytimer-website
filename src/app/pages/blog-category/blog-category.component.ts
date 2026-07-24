@@ -103,7 +103,7 @@ export class BlogCategoryComponent {
           'itemListElement': this.sortedPosts.map((post, i) => ({
             '@type': 'ListItem',
             'position': i + 1,
-            'url': `https://anytimer.app/${post.slug}/`,
+            'url': `https://anytimer.app/${post.path}/`,
             'name': post.title
           }))
         }

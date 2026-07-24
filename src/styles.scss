@@ -78,6 +78,11 @@ a { text-decoration: none; color: inherit; transition: color 0.2s; }
 
 /* Utility Classes */
 .container {
+  /* flow-root contains child margins in a new block formatting context —
+     without it, a first child's top margin (e.g. a page title) collapses
+     through this box and silently shifts its own top edge down, which
+     throws off anything (like the breadcrumb bar) anchored to it. */
+  display: flow-root;
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 24px;

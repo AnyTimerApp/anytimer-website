@@ -24,6 +24,11 @@ export type DrankspelSubCategory = typeof DRANKSPEL_SUBCATEGORIES[number];
 
 export interface BlogPost {
   slug: string;
+  // The exact route path as registered in app.routes.ts (no leading/trailing slash).
+  // Not derived from slug/category — most existing posts intentionally keep their
+  // legacy flat path (e.g. 'huisavondideeen'), only posts published under the newer
+  // convention use the nested 'blog/<category-slug>/<slug>' scheme.
+  path: string;
   category: BlogCategory;
   title: string;
   excerpt: string;
@@ -38,6 +43,7 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'wat-is-een-anytimer',
+    path: 'wat-is-een-anytimer',
     category: 'Begrippen',
     title: 'Wat is een anytimer?',
     excerpt: 'Een anytimer is een tegoed tussen vrienden. Je verdient hem na een verloren weddenschap, een domme actie of een challenge. Je kan hem inzetten wanneer je maar wilt.',
@@ -48,6 +54,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'drankspellen',
+    path: 'drankspellen',
     category: 'Inspiratie',
     title: 'Top 10 leukste drankspellen voor een gezellige avond',
     excerpt: 'Van Mario Barf tot Kingsen en Mexen. Onze top 10 drankspellen voor een gezellige avond met vrienden. Met alle regels en tips.',
@@ -58,6 +65,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'wat-is-een-adtje',
+    path: 'wat-is-een-adtje',
     category: 'Begrippen',
     title: 'Wat is een adtje?',
     excerpt: 'Een adtje betekent dat je een drankje in één keer leegdrinkt. Leer tips voor atten, het verschil met een shotgun en wat een rietbak is.',
@@ -68,6 +76,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'wat-is-de-beste-adt-timer',
+    path: 'wat-is-de-beste-adt-timer',
     category: 'Inspiratie',
     title: 'Wat is de beste adt timer?',
     excerpt: 'Welke adt timer moet je kiezen. App timer, stopwatch, AdtMeister of Rubiks cube timer. Vergelijking en tips voor eerlijke atten.',
@@ -78,6 +87,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'mag-je-een-anytimer-weigeren',
+    path: 'mag-je-een-anytimer-weigeren',
     category: 'Weetjes',
     title: 'Mag je een anytimer weigeren?',
     excerpt: 'Mag je een anytimer weigeren? Lees de regels en gevolgen. Wanneer mag je nee zeggen en wat zijn de straffen.',
@@ -88,6 +98,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'anytimers-bijhouden-whatsapp-notities',
+    path: 'anytimers-bijhouden-whatsapp-notities',
     category: 'Weetjes',
     title: 'Waarom je anytimers niet in WhatsApp of notities moet bijhouden',
     excerpt: 'WhatsApp en notities lijken handig, maar je mist het belangrijkste: versiebeheer. Lees waarom dit voor discussie zorgt en hoe je anytimers beter bijhoudt.',
@@ -98,6 +109,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'huisavondideeen',
+    path: 'huisavondideeen',
     category: 'Inspiratie',
     title: 'Top 10 leuke huisavondideeën',
     excerpt: 'Van de Zwarte Piste tot een kerstdiner midden in juli. Onze top 10 leuke huisavondideeën voor als je met je huisgenoten thuis blijft.',
@@ -108,6 +120,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'jeu-de-bier',
+    path: 'blog/drankspelletjes/jeu-de-bier',
     category: 'Drankspelletjes',
     subCategory: 'Behendigheid',
     title: 'Jeu de bier',

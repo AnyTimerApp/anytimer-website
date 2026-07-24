@@ -54,7 +54,8 @@ used in e.g. `drankspellen.component.ts` and `wat-is-de-beste-adt-timer.componen
 
 - **`name: 'description'`** — unique meta description per article (~150-160 chars).
 - **Open Graph**: `og:type` (`article` for blog posts), `og:url` (canonical
-  `https://anytimer.app/<slug>/`), `og:title`, `og:description`, `og:image` (absolute
+  `https://anytimer.app/blog/<category-slug>/<slug>/` — see step 5 for the URL scheme),
+  `og:title`, `og:description`, `og:image` (absolute
   URL), `og:image:alt`, `og:site_name` (`AnyTimerApp`), `og:locale` (`nl_NL`). For
   articles also set `article:published_time` (ISO date) if the user gives one.
 - **Twitter Card**: `twitter:card` (`summary_large_image`), `twitter:title`,
@@ -173,12 +174,25 @@ only once per article — don't link the same target multiple times in one post.
 
 ## 5. Wire it into the app
 
-- Register the route in `app.routes.ts`, with the SEO title/description data matching
-  what's set in the component.
+- **URL scheme**: every new post's route mirrors its breadcrumb trail —
+  `blog/<category-slug>/<post-slug>` (e.g. `blog/drankspelletjes/jeu-de-bier`), never a
+  flat top-level path like `<post-slug>` on its own. `<category-slug>` is the value from
+  `CATEGORY_SLUGS` for the post's category. This is deliberate: the URL should
+  communicate the site's Blog / Category / Title structure the same way the breadcrumbs
+  already do. (A handful of older posts still live at flat legacy paths from before this
+  convention — leave those alone, see the note below on changing an existing URL.)
+- Register the route in `app.routes.ts` with that nested path, with the SEO
+  title/description data matching what's set in the component.
 - Add an entry to the `BLOG_POSTS` array in `src/app/pages/blog/blog-posts.data.ts` so it
   shows on `/blog` — this is the single source of truth every other page reads from
   (see step 3c), so this is the ONLY place the post's category/date/image get typed in.
   The `BlogPost` shape requires:
+  - `path` — the exact route path registered above (`blog/<category-slug>/<post-slug>`,
+    no leading/trailing slash). Every internal link to a post (`blog.component.html`,
+    `blog-category.component.html`, the `ItemList` JSON-LD in
+    `blog-category.component.ts`) builds the link from `post.path`, not `post.slug` — so
+    this field is what actually makes the post reachable/linked correctly. `slug` still
+    exists separately as the component folder name / route leaf segment.
   - `date` — ISO `yyyy-mm-dd`, today's date unless the user says otherwise. The blog
     page sorts posts by this field and **automatically** gives the newest-dated post the
     full-width "Nieuw" hero treatment — there is no manual `featured` flag to set. The
@@ -192,7 +206,27 @@ only once per article — don't link the same target multiple times in one post.
     `Drankspelletjes`). Pick the best existing fit; don't invent a new category without
     asking the user first — the type is a literal union, so a wrong value fails the
     build. This is the value step 3c's `category` field reads back — set it once here.
-- Add a `<url>` entry for the new route in `src/sitemap.xml`.
+- Add a `<url>` entry for the new route in `src/sitemap.xml`, matching `path` above.
+
+### Changing an existing, already-published post's URL
+
+Do this rarely and deliberately — moving a page that already gets search traffic risks a
+real (if usually temporary) ranking dip for what's often a cosmetic gain, so only do it
+when the user explicitly asks for a specific post.
+
+This site is a static prerendered Angular build on plain GitHub Pages (Porkbun DNS,
+directly to GitHub's IPs — no Cloudflare/Netlify/Vercel proxy in front), which has **no
+server-side redirect capability**. There is no 301, and no redirect mechanism has been
+built for this (confirmed with the user directly). Moving a post's route path means its
+old URL simply stops resolving. If real redirects are ever needed, that requires an
+infrastructure change (e.g. putting Cloudflare in front of the domain) — flag that to the
+user rather than trying to fake it with a client-side redirect unless they've explicitly
+asked for one.
+
+To move a post: update its `path` in `BLOG_POSTS`, update the route in `app.routes.ts`,
+update the post component's own hardcoded `url` (og:url + JSON-LD `mainEntityOfPage`),
+and update its `<loc>` in `src/sitemap.xml` — canonical/hreflang need no changes, they're
+derived automatically from the live URL in `app.component.ts`.
 
 ## 6. Verify
 

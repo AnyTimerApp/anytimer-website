@@ -34,6 +34,6 @@ export const routes: Routes = [
   { path: 'mag-je-een-anytimer-weigeren', component: MagJeEenAnyttimerWeigerenComponent, title: 'Mag je een Anytimer Weigeren? - Regels & Gevolgen | AnyTimerApp' },
   { path: 'anytimers-bijhouden-whatsapp-notities', component: AnytimersWhatsappNotitiesComponent, title: 'Waarom je Anytimers niet in WhatsApp of Notities Bijhoudt | AnyTimerApp' },
   { path: 'huisavondideeen', component: HuisavondideeenComponent, title: 'Top 10 Leuke Huisavondideeën | AnyTimerApp' },
-  { path: 'jeu-de-bier', component: JeuDeBierComponent, title: 'Jeu de Bier - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/jeu-de-bier', component: JeuDeBierComponent, title: 'Jeu de Bier - Spelregels & Tips | AnyTimerApp' },
   { path: '**', component: NotFoundComponent, title: '404 Niet gevonden' }
 ];

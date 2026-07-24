@@ -4,7 +4,7 @@
     <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
 
     <!-- Featured post -->
-    <a [routerLink]="'/' + featuredPost.slug" class="blog-hero" [ngClass]="'blog-hero--' + (featuredPost.variant || 'light')">
+    <a [routerLink]="'/' + featuredPost.path" class="blog-hero" [ngClass]="'blog-hero--' + (featuredPost.variant || 'light')">
       <div class="blog-hero__media">
         <picture style="display: contents">
           <img [src]="featuredPost.image" [alt]="featuredPost.imageAlt" class="blog-hero__image" loading="eager">
@@ -32,7 +32,7 @@
     @if (otherPosts.length > 0) {
     <div class="blog-grid">
       @for (post of otherPosts; track post.slug) {
-      <a [routerLink]="'/' + post.slug" class="blog-card" [ngClass]="'blog-card--' + (post.variant || 'light')">
+      <a [routerLink]="'/' + post.path" class="blog-card" [ngClass]="'blog-card--' + (post.variant || 'light')">
         <picture style="display: contents">
           <img [src]="post.image" [alt]="post.imageAlt" class="blog-card__thumbnail" loading="lazy">
         </picture>

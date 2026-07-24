@@ -1,10 +1,12 @@
 .breadcrumbs {
-  /* Mobile: normal document flow. The mobile gutter above the container is
-     only 48px, which isn't reliably enough room to float a breadcrumb bar
-     above it once a long trail wraps to 2-3 lines — it would run up behind
-     the fixed navbar. Sitting in-flow (pushing the hero/header down a bit)
-     is the safe option on small screens. */
-  margin-bottom: 20px;
+  /* Floats above the container on every breakpoint so the hero/header below
+     it always starts at the same position — whether or not a given page
+     shows breadcrumbs at all. `bottom` (not `top` + `translateY(-100%)`)
+     anchors the bar's bottom edge a fixed distance above the container
+     regardless of how many lines/scroll width it needs. */
+  position: absolute;
+  bottom: calc(100% + 16px);
+  left: 24px;
 
   ol {
     display: flex;
@@ -43,17 +45,29 @@
   opacity: 0.6;
 }
 
-@media (min-width: 769px) {
-  /* Desktop has an 80px gutter above the container — comfortably enough to
-     float the breadcrumb bar above it (out of flow) so every blog page's
-     hero/header starts at the same position, whether or not it shows
-     breadcrumbs. `bottom` (not `top` + `translateY(-100%)`) anchors the
-     bar's bottom edge a fixed distance above the container regardless of
-     how many lines it wraps to. */
+@media (max-width: 768px) {
+  /* Mobile's gutter above the container is only 48px — not enough room to
+     float a trail that wraps to 2-3 lines without it running up behind the
+     fixed navbar. Force it onto a single scrollable line instead, so its
+     height is always one row no matter how long the trail gets. */
   .breadcrumbs {
-    position: absolute;
-    bottom: calc(100% + 16px);
-    left: 24px;
-    margin-bottom: 0;
+    right: 24px;
+    bottom: calc(100% + 12px);
+
+    ol {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    li {
+      flex: none;
+      white-space: nowrap;
+    }
   }
 }
