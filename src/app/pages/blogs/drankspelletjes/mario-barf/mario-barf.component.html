@@ -1,0 +1,125 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Mario Barf</h1>
+      <p class="legal-intro">
+        Mario Barf is Mario Kart met een drankje naast je controller. Je moet je drankje op hebben voor je over de finish komt. Alleen drinken terwijl je rijdt mag niet.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>Wat is Mario Barf?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspellen/mario barf.png" type="image/png">
+          <img src="assets/blogs/drankspellen/mario barf.png" alt="Mario Barf drankspel met Mario Kart en drankjes naast de controller" class="game-image" loading="lazy">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Categorie</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Spelers</span>
+              </div>
+              <span class="game-stat__value">2 tot 4</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Speelduur</span>
+              </div>
+              <span class="game-stat__value">10-30 minuten</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">Benodigdheden</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Mario Kart</span>
+              <span class="game-tag">Console</span>
+              <span class="game-tag">Controllers</span>
+              <span class="game-tag">Drankjes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Speluitleg</h2>
+        <ol>
+          <li>Iedere speler zet een drankje klaar naast zijn controller.</li>
+          <li>Start een normale race in Mario Kart.</li>
+          <li>Iedereen probeert te racen en tegelijk zijn drankje leeg te krijgen.</li>
+          <li>Je mag alleen drinken als je kart helemaal stilstaat.</li>
+          <li>Je mag pas finishen als je drankje op is.</li>
+          <li>Ben je over de finish met drank over? Dan tel je als laatste.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>Wanneer iemand moet drinken</h2>
+        <ul>
+          <li>Je drinkt tijdens de race op momenten dat je stilstaat.</li>
+          <li>De laatste speler trekt een bak of krijgt de afgesproken straf.</li>
+          <li>Wie vergeet te drinken en toch finisht, drinkt zijn glas alsnog leeg en krijgt een straf.</li>
+        </ul>
+
+        <h3>Extra regels</h3>
+        <ul>
+          <li>Speel met de regel dat je controller op tafel moet liggen zodra je drinkt.</li>
+          <li>Je kunt ook afspreken dat de winnaar een bak mag uitdelen.</li>
+          <li>Bij teams telt de slechtste plek van het team of juist alleen de beste plek.</li>
+        </ul>
+
+        <p>Op zoek naar meer drankspellen? Bekijk ook onze <a routerLink="/drankspellen">top 10 leukste drankspellen</a>.</p>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <picture style="display: contents">
+              <source srcset="assets/logo.webp" type="image/webp">
+              <img src="assets/logo.png" alt="Anytimer" width="28" height="28" loading="lazy">
+            </picture>
+          </div>
+          <div class="contact-details">
+            <strong>Anytimer App</strong>
+            <span>Gratis te downloaden</span>
+            <a routerLink="/">Download de app</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

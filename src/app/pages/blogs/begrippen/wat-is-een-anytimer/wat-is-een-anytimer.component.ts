@@ -2,33 +2,33 @@ import { Component, Inject } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
-import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
-import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
-import { BLOG_POSTS, CATEGORY_SLUGS } from '../blog/blog-posts.data';
+import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcrumbs.component';
+import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
+import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
 
 @Component({
-  selector: 'app-drankspellen',
+  selector: 'app-wat-is-een-anytimer',
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent],
-  templateUrl: 'drankspellen.component.html',
-  styleUrls: ['../juridisch/juridisch.component.scss', './drankspellen.component.scss']
+  templateUrl: 'wat-is-een-anytimer.component.html',
+  styleUrls: ['../../../juridisch/juridisch.component.scss', './wat-is-een-anytimer.component.scss']
 })
-export class DrankspellenComponent {
-  readonly category = BLOG_POSTS.find(p => p.slug === 'drankspellen')!.category;
+export class WatIsEenAnytimer {
+  readonly category = BLOG_POSTS.find(p => p.slug === 'wat-is-een-anytimer')!.category;
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
     { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
-    { label: 'Top 10 leukste drankspellen voor een gezellige avond' }
+    { label: 'Wat is een anytimer?' }
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Top 10 Leukste Drankspellen voor een Gezellige Avond | AnyTimerApp';
-    const description = 'Ontdek de top 10 leukste drankspellen voor een gezellige avond met vrienden. Mario Barf, Kingsen, Mexen en meer. Alle spelregels en tips.';
-    const image = 'https://anytimer.app/assets/blogs/drankspellen/mario%20barf.png';
-    const url = 'https://anytimer.app/drankspellen/';
+    const title = 'Wat is een Anytimer? - Gids & Uitleg | Anytimer App';
+    const description = 'Wat is een anytimer? Ontdek alles over dit concept: een tegoed in te zetten op elk moment. Lees hoe je het verdient, inzet en waarom je het nodig hebt.';
+    const image = 'https://anytimer.app/assets/blogs/wat%20is%20een%20anytimer/Wat%20is%20een%20anytimer%20cover.png';
+    const url = 'https://anytimer.app/wat-is-een-anytimer/';
 
-    injectBreadcrumbSchema(document, 'schema-breadcrumbs-drankspellen', this.breadcrumbs);
+    injectBreadcrumbSchema(document, 'schema-breadcrumbs-wat-is-een-anytimer', this.breadcrumbs);
 
     meta.updateTag({ name: 'description', content: description });
 

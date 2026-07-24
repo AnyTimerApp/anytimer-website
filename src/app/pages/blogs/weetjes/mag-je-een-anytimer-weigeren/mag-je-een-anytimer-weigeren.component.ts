@@ -2,16 +2,16 @@ import { Component, Inject } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
-import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
-import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
-import { BLOG_POSTS, CATEGORY_SLUGS } from '../blog/blog-posts.data';
+import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcrumbs.component';
+import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
+import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
 
 @Component({
   selector: 'app-mag-je-een-anytimer-weigeren',
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent],
   templateUrl: 'mag-je-een-anytimer-weigeren.component.html',
-  styleUrls: ['../juridisch/juridisch.component.scss', './mag-je-een-anytimer-weigeren.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', './mag-je-een-anytimer-weigeren.component.scss']
 })
 export class MagJeEenAnyttimerWeigerenComponent {
   readonly category = BLOG_POSTS.find(p => p.slug === 'mag-je-een-anytimer-weigeren')!.category;

@@ -5,16 +5,25 @@ import { TermsComponent } from './pages/juridisch/terms/terms.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RemoveAccountComponent } from './pages/account/remove/removeAccount.component';
-import { WatIsEenAnytimer } from './pages/wat-is-een-anytimer/wat-is-een-anytimer.component';
+import { WatIsEenAnytimer } from './pages/blogs/begrippen/wat-is-een-anytimer/wat-is-een-anytimer.component';
 import { BlogComponent } from './pages/blog/blog.component';
-import { DrankspellenComponent } from './pages/drankspellen/drankspellen.component';
-import { WatIsEenAdtjeComponent } from './pages/wat-is-een-adtje/wat-is-een-adtje.component';
-import { WatIsDeBestAdtTimerComponent } from './pages/wat-is-de-beste-adt-timer/wat-is-de-beste-adt-timer.component';
-import { MagJeEenAnyttimerWeigerenComponent } from './pages/mag-je-een-anytimer-weigeren/mag-je-een-anytimer-weigeren.component';
-import { AnytimersWhatsappNotitiesComponent } from './pages/anytimers-bijhouden-whatsapp-notities/anytimers-bijhouden-whatsapp-notities.component';
-import { HuisavondideeenComponent } from './pages/huisavondideeen/huisavondideeen.component';
-import { JeuDeBierComponent } from './pages/jeu-de-bier/jeu-de-bier.component';
+import { DrankspellenComponent } from './pages/blogs/inspiratie/drankspellen/drankspellen.component';
+import { WatIsEenAdtjeComponent } from './pages/blogs/begrippen/wat-is-een-adtje/wat-is-een-adtje.component';
+import { WatIsDeBestAdtTimerComponent } from './pages/blogs/inspiratie/wat-is-de-beste-adt-timer/wat-is-de-beste-adt-timer.component';
+import { MagJeEenAnyttimerWeigerenComponent } from './pages/blogs/weetjes/mag-je-een-anytimer-weigeren/mag-je-een-anytimer-weigeren.component';
+import { AnytimersWhatsappNotitiesComponent } from './pages/blogs/weetjes/anytimers-bijhouden-whatsapp-notities/anytimers-bijhouden-whatsapp-notities.component';
+import { HuisavondideeenComponent } from './pages/blogs/inspiratie/huisavondideeen/huisavondideeen.component';
+import { JeuDeBierComponent } from './pages/blogs/drankspelletjes/jeu-de-bier/jeu-de-bier.component';
 import { BlogCategoryComponent } from './pages/blog-category/blog-category.component';
+import { MarioBarfComponent } from './pages/blogs/drankspelletjes/mario-barf/mario-barf.component';
+import { TrekJeBakManiaComponent } from './pages/blogs/drankspelletjes/trek-je-bak-mania/trek-je-bak-mania.component';
+import { ThirtySecondsComponent } from './pages/blogs/drankspelletjes/30-seconds/30-seconds.component';
+import { KingsenComponent } from './pages/blogs/drankspelletjes/kingsen/kingsen.component';
+import { StressPongComponent } from './pages/blogs/drankspelletjes/stress-pong/stress-pong.component';
+import { FuckTheDealerComponent } from './pages/blogs/drankspelletjes/fuck-the-dealer/fuck-the-dealer.component';
+import { MexenComponent } from './pages/blogs/drankspelletjes/mexen/mexen.component';
+import { BakplatenComponent } from './pages/blogs/drankspelletjes/bakplaten/bakplaten.component';
+import { DePaardenraceComponent } from './pages/blogs/drankspelletjes/de-paardenrace/de-paardenrace.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'AnyTimerApp - De app om je anytimers in bij te houden' },
@@ -35,5 +44,14 @@ export const routes: Routes = [
   { path: 'anytimers-bijhouden-whatsapp-notities', component: AnytimersWhatsappNotitiesComponent, title: 'Waarom je Anytimers niet in WhatsApp of Notities Bijhoudt | AnyTimerApp' },
   { path: 'huisavondideeen', component: HuisavondideeenComponent, title: 'Top 10 Leuke Huisavondideeën | AnyTimerApp' },
   { path: 'blog/drankspelletjes/jeu-de-bier', component: JeuDeBierComponent, title: 'Jeu de Bier - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/mario-barf', component: MarioBarfComponent, title: 'Mario Barf - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/trek-je-bak-mania', component: TrekJeBakManiaComponent, title: 'Trek je Bak Mania - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/30-seconds', component: ThirtySecondsComponent, title: '30 Seconds - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/kingsen', component: KingsenComponent, title: 'Kingsen - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/stress-pong', component: StressPongComponent, title: 'Stress Pong - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/fuck-the-dealer', component: FuckTheDealerComponent, title: 'Fuck the Dealer - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/mexen', component: MexenComponent, title: 'Mexen - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/bakplaten', component: BakplatenComponent, title: 'Bakplaten - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/de-paardenrace', component: DePaardenraceComponent, title: 'De Paardenrace - Spelregels & Tips | AnyTimerApp' },
   { path: '**', component: NotFoundComponent, title: '404 Niet gevonden' }
 ];

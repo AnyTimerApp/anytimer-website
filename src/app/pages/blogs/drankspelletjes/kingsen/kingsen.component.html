@@ -1,0 +1,144 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Kingsen</h1>
+      <p class="legal-intro">
+        Kingsen is een kaartspel waarbij elke kaart een opdracht geeft. Je trekt om de beurt een kaart uit de cirkel en probeert vooral niet degene te zijn die de laatste koning pakt.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>Wat is Kingsen?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspellen/kingsen.png" type="image/png">
+          <img src="assets/blogs/drankspellen/kingsen.png" alt="Kingsen drankspel met kaarten in een cirkel rond een shotglas" class="game-image" loading="lazy">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Categorie</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Spelers</span>
+              </div>
+              <span class="game-stat__value">3 tot 12</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Speelduur</span>
+              </div>
+              <span class="game-stat__value">20-40 minuten</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">Benodigdheden</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Speelkaarten</span>
+              <span class="game-tag">Shotglas</span>
+              <span class="game-tag">Drank</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Speluitleg</h2>
+        <ol>
+          <li>Haal de jokers uit het kaartspel.</li>
+          <li>Zet een glas in het midden.</li>
+          <li>Leg alle kaarten dicht in een cirkel rond het glas.</li>
+          <li>Iedereen pakt om de beurt een kaart.</li>
+          <li>Voer meteen de opdracht uit die bij de kaart hoort.</li>
+          <li>Leg koningen op of naast het glas.</li>
+          <li>Wie de vierde koning pakt, drinkt de inhoud van het glas.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>Betekenis per kaart</h2>
+        <ul class="card-meaning-list">
+          <li><strong>2: Slokken uitdelen.</strong> Kies één persoon die een slok moet pakken.</li>
+          <li><strong>3: Zelf drinken.</strong> Drink zelf een slok.</li>
+          <li><strong>4: Categorie kiezen.</strong> Kies een categorie. Dit kan van alles zijn. Biermerken, automerken, enz. Degene die niks meer weet opnoemt dat al eerder geweest is, drinkt.</li>
+          <li><strong>5: Duimen.</strong> Leg je duim op tafel (jij mag bepalen wanneer). Iedereen volgt. Degene die zijn duim als laatste legt, drinkt.</li>
+          <li><strong>6: Drinking buddy.</strong> Kies één speler die meedrinkt wanneer jij moet drinken.</li>
+          <li><strong>7: Tafel van 7.</strong> Omstebeurt telt iedereen op vanaf 1. Getallen die niet genoemd mogen worden zijn tafels van 7 (7, 14, 21) en getallen met 7 erin (7, 17, 27). Fout gemaakt? Je drinkt.</li>
+          <li><strong>8: Regel verzinnen.</strong> Bedenk een regel voor het hele spel. Wie de regel niet volgt, drinkt. Bijvoorbeeld: altijd met links drinken.</li>
+          <li><strong>9: Regel afschaffen.</strong> Schaf een regel af die bij kaart 8 is verzonnen.</li>
+          <li><strong>10: Quizmaster.</strong> Jij bent de quizmaster. Niemand mag antwoorden op jouw vragen. Wie dat toch doet, drinkt. Maximaal één quizmaster tegelijk.</li>
+          <li><strong>Boer: Wijzen.</strong> Iedereen steekt zijn hand op. Tel af vanaf 5 en iedereen wijst degene aan die moet drinken. Degene met de meeste stemmen drinkt.</li>
+          <li><strong>Vrouw: Rise of the queen.</strong> Op elk moment mag je hand opsteken en "Rise of the queen" roepen. Iedereen volgt. Degene die dit als laatste doet, drinkt.</li>
+          <li><strong>Koning: Neerleggen.</strong> Voeg iets toe aan het glas (iets drinkbaars) </li>
+          <li><strong>Aas: Omkeren.</strong> Het spel draait om. Iedereen gaat nu de andere richting op.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Wanneer iemand moet drinken</h2>
+        <ul>
+          <li>Je drinkt wanneer jouw kaart dat zegt.</li>
+          <li>Je drinkt als je een actieve regel breekt.</li>
+          <li>Je drinkt als je de kaartencirkel verbreekt.</li>
+          <li>Wie de vierde koning pakt, drinkt het glas leeg.</li>
+        </ul>
+
+        <h3>Extra regels</h3>
+        <ul>
+          <li>Spreek vooraf af of de cirkel breken meteen het glas leegdrinken betekent.</li>
+          <li>Bij elke koning mag de speler iets in het glas doen. Spreek af wat voor vloeistoffen mogen.</li>
+        </ul>
+
+        <p>Op zoek naar meer drankspellen? Bekijk ook onze <a routerLink="/drankspellen">top 10 leukste drankspellen</a>.</p>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <picture style="display: contents">
+              <source srcset="assets/logo.webp" type="image/webp">
+              <img src="assets/logo.png" alt="Anytimer" width="28" height="28" loading="lazy">
+            </picture>
+          </div>
+          <div class="contact-details">
+            <strong>Anytimer App</strong>
+            <span>Gratis te downloaden</span>
+            <a routerLink="/">Download de app</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

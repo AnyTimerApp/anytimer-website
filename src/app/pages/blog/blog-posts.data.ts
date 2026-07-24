@@ -129,5 +129,113 @@ export const BLOG_POSTS: BlogPost[] = [
     image: 'assets/blogs/drankspel/jeu de bier.png',
     imageAlt: 'Jeu de bier drankspel met bierdopjes',
     variant: 'light'
+  },
+  {
+    slug: 'mario-barf',
+    path: 'blog/drankspelletjes/mario-barf',
+    category: 'Drankspelletjes',
+    subCategory: 'Overig',
+    title: 'Mario Barf',
+    excerpt: 'Mario Barf is Mario Kart met een drankje naast je controller. Je moet je drankje op hebben voor je over de finish komt.',
+    date: '2026-07-24',
+    image: 'assets/blogs/drankspellen/mario barf.png',
+    imageAlt: 'Mario Barf drankspel met Mario Kart en drankjes naast de controller',
+    variant: 'light'
+  },
+  {
+    slug: 'trek-je-bak-mania',
+    path: 'blog/drankspelletjes/trek-je-bak-mania',
+    category: 'Drankspelletjes',
+    subCategory: 'Overig',
+    title: 'Trek je Bak Mania',
+    excerpt: 'Trek je Bak Mania is Trackmania met een simpele straf. De slechtste coureur van de ronde trekt een bak.',
+    date: '2026-07-24',
+    image: 'assets/blogs/drankspellen/trek je bak mania.png',
+    imageAlt: 'Trek je Bak Mania drankspel met Trackmania in hotseat mode',
+    variant: 'light'
+  },
+  {
+    slug: '30-seconds',
+    path: 'blog/drankspelletjes/30-seconds',
+    category: 'Drankspelletjes',
+    subCategory: 'Overig',
+    title: '30 Seconds',
+    excerpt: 'Raad binnen 30 seconden zoveel mogelijk woorden. Als drankspel wordt elke mislukte ronde een kleine straf voor je team.',
+    date: '2026-07-24',
+    image: 'assets/blogs/drankspellen/30 seconds.png',
+    imageAlt: '30 Seconds drankspel met het bordspel en een timer',
+    variant: 'light'
+  },
+  {
+    slug: 'kingsen',
+    path: 'blog/drankspelletjes/kingsen',
+    category: 'Drankspelletjes',
+    subCategory: 'Kaartspel',
+    title: 'Kingsen',
+    excerpt: 'Kingsen is een kaartspel waarbij elke kaart een opdracht geeft. Probeer niet degene te zijn die de laatste koning pakt.',
+    date: '2026-07-24',
+    image: 'assets/blogs/drankspellen/kingsen.png',
+    imageAlt: 'Kingsen drankspel met kaarten in een cirkel rond een shotglas',
+    variant: 'light'
+  },
+  {
+    slug: 'stress-pong',
+    path: 'blog/drankspelletjes/stress-pong',
+    category: 'Drankspelletjes',
+    subCategory: 'Behendigheid',
+    title: 'Stress Pong',
+    excerpt: 'Stress Pong is een snelle variant op pong waarbij twee bekers tegelijk rondgaan. Wordt je ingehaald? Dan moet je drinken.',
+    date: '2026-07-24',
+    image: 'assets/blogs/drankspellen/stress pong.png',
+    imageAlt: 'Stress Pong drankspel met bekers en pingpongballen',
+    variant: 'light'
+  },
+  {
+    slug: 'fuck-the-dealer',
+    path: 'blog/drankspelletjes/fuck-the-dealer',
+    category: 'Drankspelletjes',
+    subCategory: 'Kaartspel',
+    title: 'Fuck the Dealer',
+    excerpt: 'Fuck the Dealer is een kaartspel waarin iedereen de dealer probeert te pakken door de waarde van kaarten te raden.',
+    date: '2026-07-24',
+    image: 'assets/blogs/drankspellen/fuck the dealer.png',
+    imageAlt: 'Fuck the Dealer kaartspel als drankspel',
+    variant: 'light'
+  },
+  {
+    slug: 'mexen',
+    path: 'blog/drankspelletjes/mexen',
+    category: 'Drankspelletjes',
+    subCategory: 'Dobbelspel',
+    title: 'Mexen',
+    excerpt: 'Mexen is een dobbelspel met twee stenen. Voorkom de laagste worp van de ronde en let op voor de Mex.',
+    date: '2026-07-24',
+    image: 'assets/blogs/drankspellen/mexen.png',
+    imageAlt: 'Mexen dobbelspel als drankspel',
+    variant: 'light'
+  },
+  {
+    slug: 'bakplaten',
+    path: 'blog/drankspelletjes/bakplaten',
+    category: 'Drankspelletjes',
+    subCategory: 'Kaartspel',
+    title: 'Bakplaten',
+    excerpt: 'Bakplaten is een heel simpel kaartspel. Trek een plaatje en jij bent aan de beurt om te drinken.',
+    date: '2026-07-24',
+    image: 'assets/blogs/drankspellen/bakplaten.png',
+    imageAlt: 'Bakplaten kaartspel als simpel drankspel',
+    variant: 'light'
+  },
+  {
+    slug: 'de-paardenrace',
+    path: 'blog/drankspelletjes/de-paardenrace',
+    category: 'Drankspelletjes',
+    subCategory: 'Kaartspel',
+    title: 'De Paardenrace',
+    excerpt: 'De Paardenrace is een kaartspel waarin de vier azen tegen elkaar racen. Zet slokken in en hoop dat jouw paard wint.',
+    date: '2026-07-24',
+    image: 'assets/blogs/drankspellen/paardenrace.png',
+    imageAlt: 'De Paardenrace drankspel met azen als paarden',
+    variant: 'light'
   }
 ];

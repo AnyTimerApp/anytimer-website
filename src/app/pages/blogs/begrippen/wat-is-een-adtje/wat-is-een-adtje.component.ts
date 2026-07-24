@@ -2,33 +2,33 @@ import { Component, Inject } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
-import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
-import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
-import { BLOG_POSTS, CATEGORY_SLUGS } from '../blog/blog-posts.data';
+import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcrumbs.component';
+import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
+import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
 
 @Component({
-  selector: 'app-wat-is-een-anytimer',
+  selector: 'app-wat-is-een-adtje',
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent],
-  templateUrl: 'wat-is-een-anytimer.component.html',
-  styleUrls: ['../juridisch/juridisch.component.scss', './wat-is-een-anytimer.component.scss']
+  templateUrl: 'wat-is-een-adtje.component.html',
+  styleUrls: ['../../../juridisch/juridisch.component.scss', './wat-is-een-adtje.component.scss']
 })
-export class WatIsEenAnytimer {
-  readonly category = BLOG_POSTS.find(p => p.slug === 'wat-is-een-anytimer')!.category;
+export class WatIsEenAdtjeComponent {
+  readonly category = BLOG_POSTS.find(p => p.slug === 'wat-is-een-adtje')!.category;
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
     { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
-    { label: 'Wat is een anytimer?' }
+    { label: 'Wat is een adtje?' }
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Wat is een Anytimer? - Gids & Uitleg | Anytimer App';
-    const description = 'Wat is een anytimer? Ontdek alles over dit concept: een tegoed in te zetten op elk moment. Lees hoe je het verdient, inzet en waarom je het nodig hebt.';
-    const image = 'https://anytimer.app/assets/blogs/wat%20is%20een%20anytimer/Wat%20is%20een%20anytimer%20cover.png';
-    const url = 'https://anytimer.app/wat-is-een-anytimer/';
+    const title = 'Wat is een Adtje? - Gids & Uitleg | AnyTimerApp';
+    const description = 'Wat is een adtje? Lees alles over atten, shotgun en rietbak. Tips voor snel drinken, de oorsprong en alle drankspel tradities uit Nederland.';
+    const image = 'https://anytimer.app/assets/blogs/wat%20is%20een%20adtje/wat%20is%20een%20adtje.png';
+    const url = 'https://anytimer.app/wat-is-een-adtje/';
 
-    injectBreadcrumbSchema(document, 'schema-breadcrumbs-wat-is-een-anytimer', this.breadcrumbs);
+    injectBreadcrumbSchema(document, 'schema-breadcrumbs-wat-is-een-adtje', this.breadcrumbs);
 
     meta.updateTag({ name: 'description', content: description });
 

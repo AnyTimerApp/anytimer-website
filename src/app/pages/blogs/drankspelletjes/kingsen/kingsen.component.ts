@@ -2,36 +2,36 @@ import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
-import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
-import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
-import { BLOG_POSTS, CATEGORY_SLUGS } from '../blog/blog-posts.data';
+import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcrumbs.component';
+import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
+import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
 
 @Component({
-  selector: 'app-jeu-de-bier',
+  selector: 'app-kingsen',
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent],
-  templateUrl: 'jeu-de-bier.component.html',
-  styleUrls: ['../juridisch/juridisch.component.scss', './jeu-de-bier.component.scss']
+  templateUrl: 'kingsen.component.html',
+  styleUrls: ['../../../juridisch/juridisch.component.scss', './kingsen.component.scss']
 })
-export class JeuDeBierComponent {
-  private readonly post = BLOG_POSTS.find(p => p.slug === 'jeu-de-bier')!;
+export class KingsenComponent {
+  private readonly post = BLOG_POSTS.find(p => p.slug === 'kingsen')!;
   readonly category = this.post.category;
   readonly subCategory = this.post.subCategory!;
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
     { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
-    { label: 'Jeu de bier' }
+    { label: 'Kingsen' }
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Jeu de Bier - Spelregels & Tips | AnyTimerApp';
-    const description = 'Jeu de bier is jeu de boules voor aan tafel met bierdopjes. Ontdek de spelregels, benodigdheden en leuke drinkvariaties van dit behendigheidsspel.';
-    const image = 'https://anytimer.app/assets/blogs/drankspel/jeu%20de%20bier.png';
-    const url = 'https://anytimer.app/blog/drankspelletjes/jeu-de-bier/';
-    const publishedTime = '2026-07-22';
+    const title = 'Kingsen - Spelregels & Tips | AnyTimerApp';
+    const description = 'Kingsen is een kaartspel waarbij elke kaart een opdracht geeft. Ontdek de spelregels, kaartopdrachten en tips voor deze drankspel klassieker.';
+    const image = 'https://anytimer.app/assets/blogs/drankspellen/kingsen.png';
+    const url = 'https://anytimer.app/blog/drankspelletjes/kingsen/';
+    const publishedTime = '2026-07-24';
 
-    injectBreadcrumbSchema(document, 'schema-breadcrumbs-jeu-de-bier', this.breadcrumbs);
+    injectBreadcrumbSchema(document, 'schema-breadcrumbs-kingsen', this.breadcrumbs);
 
     meta.updateTag({ name: 'description', content: description });
 
@@ -40,7 +40,7 @@ export class JeuDeBierComponent {
     meta.updateTag({ property: 'og:title', content: title });
     meta.updateTag({ property: 'og:description', content: description });
     meta.updateTag({ property: 'og:image', content: image });
-    meta.updateTag({ property: 'og:image:alt', content: 'Jeu de bier drankspel met bierdopjes' });
+    meta.updateTag({ property: 'og:image:alt', content: 'Kingsen drankspel met kaarten in een cirkel rond een shotglas' });
     meta.updateTag({ property: 'og:site_name', content: 'AnyTimerApp' });
     meta.updateTag({ property: 'og:locale', content: 'nl_NL' });
     meta.updateTag({ property: 'article:published_time', content: publishedTime });
@@ -50,9 +50,9 @@ export class JeuDeBierComponent {
     meta.updateTag({ name: 'twitter:description', content: description });
     meta.updateTag({ name: 'twitter:image', content: image });
 
-    if (!document.getElementById('schema-jeu-de-bier')) {
+    if (!document.getElementById('schema-kingsen')) {
       const script = document.createElement('script');
-      script.id = 'schema-jeu-de-bier';
+      script.id = 'schema-kingsen';
       script.type = 'application/ld+json';
       script.text = JSON.stringify({
         '@context': 'https://schema.org',
