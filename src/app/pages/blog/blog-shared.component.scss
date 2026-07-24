@@ -163,6 +163,67 @@
   .blog-card__link { color: rgba(255, 255, 255, 0.95); }
 }
 
+/* Subcategory filter pills */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+
+  /* Mobile: a horizontal slider that bleeds to the screen edge instead of
+     wrapping pills onto stacked lines. The negative margin cancels
+     .container's own 24px padding so the track can scroll under the edge;
+     the matching inner padding keeps the first/last pill visually aligned. */
+  @media (max-width: 768px) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin: 0 -24px 32px;
+    padding: 0 24px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  background: var(--primary-light);
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  &--active {
+    background: var(--primary);
+    color: #fff;
+  }
+}
+
+.filter-pill__close {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
 /* Blog grid */
 .blog-grid {
   display: grid;

@@ -2,7 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
-import { BLOG_POSTS, CATEGORY_SLUGS, BlogCategory, BlogPost } from '../blog/blog-posts.data';
+import { BLOG_POSTS, CATEGORY_SLUGS, BlogCategory, BlogPost, DRANKSPEL_SUBCATEGORIES, DrankspelSubCategory } from '../blog/blog-posts.data';
 import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
 
@@ -41,6 +41,9 @@ export class BlogCategoryComponent {
   meta: { title: string; description: string; intro: string };
   posts: BlogPost[];
   breadcrumbs: BreadcrumbItem[];
+  // Only shown for the Drankspelletjes category — other categories have no subCategory to filter by.
+  subCategories: readonly DrankspelSubCategory[] | null = null;
+  activeFilter: DrankspelSubCategory | null = null;
 
   get sortedPosts(): BlogPost[] {
     return [...this.posts].sort((a, b) => b.date.localeCompare(a.date));
@@ -51,21 +54,31 @@ export class BlogCategoryComponent {
   }
 
   get otherPosts(): BlogPost[] {
-    return this.sortedPosts.slice(1);
+    const rest = this.sortedPosts.slice(1);
+    if (this.activeFilter) {
+      return rest.filter(p => p.subCategory === this.activeFilter);
+    }
+    return rest;
+  }
+
+  toggleFilter(sub: DrankspelSubCategory) {
+    this.activeFilter = this.activeFilter === sub ? null : sub;
   }
 
   constructor(meta: Meta, route: ActivatedRoute, @Inject(DOCUMENT) document: Document) {
     this.category = route.snapshot.data['category'] as BlogCategory;
     this.meta = CATEGORY_META[this.category];
     this.posts = BLOG_POSTS.filter(p => p.category === this.category);
+    this.subCategories = this.category === 'Drankspelletjes' ? DRANKSPEL_SUBCATEGORIES : null;
     this.breadcrumbs = [
       { label: 'Blog', url: '/blog' },
       { label: this.category }
     ];
 
+    const firstPost = this.sortedPosts[0];
     const title = this.meta.title;
     const description = this.meta.description;
-    const image = `https://anytimer.app/${encodeURI(this.featuredPost.image)}`;
+    const image = `https://anytimer.app/${encodeURI(firstPost.image)}`;
     const slug = CATEGORY_SLUGS[this.category];
     const url = `https://anytimer.app/blog/${slug}/`;
 
@@ -78,7 +91,7 @@ export class BlogCategoryComponent {
     meta.updateTag({ property: 'og:title', content: title });
     meta.updateTag({ property: 'og:description', content: description });
     meta.updateTag({ property: 'og:image', content: image });
-    meta.updateTag({ property: 'og:image:alt', content: this.featuredPost.imageAlt });
+    meta.updateTag({ property: 'og:image:alt', content: firstPost.imageAlt });
     meta.updateTag({ property: 'og:site_name', content: 'AnyTimerApp' });
     meta.updateTag({ property: 'og:locale', content: 'nl_NL' });
 

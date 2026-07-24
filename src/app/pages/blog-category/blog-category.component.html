@@ -23,10 +23,27 @@
 
     <!-- Page header -->
     <div class="legal-header">
-      <span class="section-label">{{ category }}</span>
       <h1 class="legal-title">{{ category }}</h1>
       <p class="legal-intro">{{ meta.intro }}</p>
     </div>
+
+    <!-- Subcategory filters -->
+    @if (subCategories) {
+    <div class="filter-bar">
+      @for (sub of subCategories; track sub) {
+      <button
+        type="button"
+        class="filter-pill"
+        [class.filter-pill--active]="activeFilter === sub"
+        (click)="toggleFilter(sub)">
+        {{ sub }}
+        @if (activeFilter === sub) {
+        <span class="filter-pill__close" aria-hidden="true">✕</span>
+        }
+      </button>
+      }
+    </div>
+    }
 
     <!-- Blog posts -->
     @if (otherPosts.length > 0) {
