@@ -4,13 +4,17 @@ import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcrumbs.component';
 import { DownloadCtaComponent } from '../../../../components/download-cta/download-cta.component';
+import { BlogCardComponent } from '../../../../components/blog-card/blog-card.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
 import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
+
+// Trial: hand-picked recommended posts so we don't recommend the page to itself.
+const RECOMMENDED_SLUGS = ['drankspellen', 'de-paardenrace', 'ring-of-fire'];
 
 @Component({
   selector: 'app-ring-of-fire',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
+  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'ring-of-fire.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './ring-of-fire.component.scss']
 })
@@ -18,6 +22,18 @@ export class RingOfFireComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'ring-of-fire')!;
   readonly category = this.post.category;
   readonly subCategory = this.post.subCategory!;
+
+  // Trial: 3 other games in the same subcategory, newest first.
+  readonly similarGames = BLOG_POSTS
+    .filter(p => p.category === 'Drankspelletjes' && p.subCategory === this.subCategory && p.slug !== this.post.slug)
+    .filter(p => !RECOMMENDED_SLUGS.includes(p.slug))
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 3);
+
+  // Trial: fixed picks, swapping in Mario Barf here since this IS the Ring of fire page.
+  readonly recommendedGames = RECOMMENDED_SLUGS
+    .map(slug => slug === 'ring-of-fire' ? 'mario-barf' : slug)
+    .map(slug => BLOG_POSTS.find(p => p.slug === slug)!);
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
