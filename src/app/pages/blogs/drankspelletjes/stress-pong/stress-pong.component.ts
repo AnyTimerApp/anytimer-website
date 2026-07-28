@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'stress-pong.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './stress-pong.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './stress-pong.component.scss']
 })
 export class StressPongComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'stress-pong')!;

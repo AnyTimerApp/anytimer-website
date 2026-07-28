@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'de-paardenrace.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './de-paardenrace.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './de-paardenrace.component.scss']
 })
 export class DePaardenraceComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'de-paardenrace')!;

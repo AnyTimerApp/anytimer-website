@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'trek-je-bak-mania.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './trek-je-bak-mania.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './trek-je-bak-mania.component.scss']
 })
 export class TrekJeBakManiaComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'trek-je-bak-mania')!;

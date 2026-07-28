@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'ring-of-fire.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './ring-of-fire.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './ring-of-fire.component.scss']
 })
 export class RingOfFireComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'ring-of-fire')!;

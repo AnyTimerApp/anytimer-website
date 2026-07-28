@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'vingeren.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './vingeren.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './vingeren.component.scss']
 })
 export class VingerenComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'vingeren')!;

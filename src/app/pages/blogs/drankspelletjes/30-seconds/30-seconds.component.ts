@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: '30-seconds.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './30-seconds.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './30-seconds.component.scss']
 })
 export class ThirtySecondsComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === '30-seconds')!;

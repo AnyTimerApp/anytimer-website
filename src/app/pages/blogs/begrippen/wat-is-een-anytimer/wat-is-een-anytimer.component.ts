@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'wat-is-een-anytimer.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './wat-is-een-anytimer.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './wat-is-een-anytimer.component.scss']
 })
 export class WatIsEenAnytimer {
   readonly category = BLOG_POSTS.find(p => p.slug === 'wat-is-een-anytimer')!.category;

@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'mario-barf.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './mario-barf.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './mario-barf.component.scss']
 })
 export class MarioBarfComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'mario-barf')!;

@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'hoger-lager.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './hoger-lager.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './hoger-lager.component.scss']
 })
 export class HogerLagerComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'hoger-lager')!;

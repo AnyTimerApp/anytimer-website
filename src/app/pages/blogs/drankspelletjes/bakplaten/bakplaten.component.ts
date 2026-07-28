@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'bakplaten.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './bakplaten.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './bakplaten.component.scss']
 })
 export class BakplatenComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'bakplaten')!;

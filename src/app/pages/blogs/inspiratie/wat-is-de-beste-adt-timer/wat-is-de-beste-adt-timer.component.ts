@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'wat-is-de-beste-adt-timer.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './wat-is-de-beste-adt-timer.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './wat-is-de-beste-adt-timer.component.scss']
 })
 export class WatIsDeBestAdtTimerComponent {
   readonly category = BLOG_POSTS.find(p => p.slug === 'wat-is-de-beste-adt-timer')!.category;

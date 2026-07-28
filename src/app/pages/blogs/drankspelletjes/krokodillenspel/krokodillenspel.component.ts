@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'krokodillenspel.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './krokodillenspel.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './krokodillenspel.component.scss']
 })
 export class KrokodillenspelComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'krokodillenspel')!;

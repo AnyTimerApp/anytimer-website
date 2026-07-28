@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'stef-stuntpiloot.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './stef-stuntpiloot.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './stef-stuntpiloot.component.scss']
 })
 export class StefStuntpilootComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'stef-stuntpiloot')!;

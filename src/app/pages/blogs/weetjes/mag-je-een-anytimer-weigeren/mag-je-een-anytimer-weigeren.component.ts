@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'mag-je-een-anytimer-weigeren.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './mag-je-een-anytimer-weigeren.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './mag-je-een-anytimer-weigeren.component.scss']
 })
 export class MagJeEenAnyttimerWeigerenComponent {
   readonly category = BLOG_POSTS.find(p => p.slug === 'mag-je-een-anytimer-weigeren')!.category;

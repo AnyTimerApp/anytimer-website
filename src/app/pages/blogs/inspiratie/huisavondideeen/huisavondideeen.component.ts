@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'huisavondideeen.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './huisavondideeen.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './huisavondideeen.component.scss']
 })
 export class HuisavondideeenComponent {
   readonly category = BLOG_POSTS.find(p => p.slug === 'huisavondideeen')!.category;

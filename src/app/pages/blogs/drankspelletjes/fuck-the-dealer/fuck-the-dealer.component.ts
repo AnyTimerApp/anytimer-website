@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'fuck-the-dealer.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './fuck-the-dealer.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './fuck-the-dealer.component.scss']
 })
 export class FuckTheDealerComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'fuck-the-dealer')!;

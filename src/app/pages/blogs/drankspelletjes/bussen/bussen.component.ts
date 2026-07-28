@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'bussen.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './bussen.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './bussen.component.scss']
 })
 export class BussenComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'bussen')!;

@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'wat-is-een-adtje.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './wat-is-een-adtje.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './wat-is-een-adtje.component.scss']
 })
 export class WatIsEenAdtjeComponent {
   readonly category = BLOG_POSTS.find(p => p.slug === 'wat-is-een-adtje')!.category;

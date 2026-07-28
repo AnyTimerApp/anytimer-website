@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'mijnenveld.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './mijnenveld.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './mijnenveld.component.scss']
 })
 export class MijnenveldComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'mijnenveld')!;

@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'mexen.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './mexen.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './mexen.component.scss']
 })
 export class MexenComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'mexen')!;

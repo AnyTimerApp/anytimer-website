@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'drankspellen.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './drankspellen.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './drankspellen.component.scss']
 })
 export class DrankspellenComponent {
   readonly category = BLOG_POSTS.find(p => p.slug === 'drankspellen')!.category;

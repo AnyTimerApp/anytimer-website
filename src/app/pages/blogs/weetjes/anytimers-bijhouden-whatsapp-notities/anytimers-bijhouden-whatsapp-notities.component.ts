@@ -12,7 +12,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'anytimers-bijhouden-whatsapp-notities.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './anytimers-bijhouden-whatsapp-notities.component.scss']
+  styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './anytimers-bijhouden-whatsapp-notities.component.scss']
 })
 export class AnytimersWhatsappNotitiesComponent {
   readonly category = BLOG_POSTS.find(p => p.slug === 'anytimers-bijhouden-whatsapp-notities')!.category;
