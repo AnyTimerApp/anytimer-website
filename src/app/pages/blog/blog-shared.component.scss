@@ -88,6 +88,10 @@
     margin-bottom: 0;
     width: fit-content;
   }
+
+  @media (max-width: 768px) {
+    padding: 24px 20px;
+  }
 }
 
 .blog-hero__meta {
@@ -325,6 +329,10 @@
   flex-direction: column;
   gap: 12px;
   flex: 1;
+
+  @media (max-width: 768px) {
+    padding: 24px 20px;
+  }
 }
 
 .blog-card__title {
