@@ -232,7 +232,7 @@ reimplement per post:
 
 - **`getRecommendedGames`** is a fixed, hand-picked list (currently De Paardenrace, Mario
   Barf, Ring of fire) shown identically on every single-game post. If the current post IS
-  one of those three, that slot is swapped for a fallback (currently Kingsen) so a post
+  one of those three, that slot is swapped for a fallback (currently Bussen) so a post
   never recommends itself. This is intentionally hardcoded, not derived — if the "always
   recommended" set or the fallback ever needs to change, edit the `RECOMMENDED_SLUGS` /
   `RECOMMENDED_FALLBACK_SLUG` constants there, once, rather than touching every post.

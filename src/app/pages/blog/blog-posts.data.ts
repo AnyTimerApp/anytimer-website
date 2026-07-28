@@ -364,7 +364,7 @@ export const BLOG_POSTS: BlogPost[] = [
 // On the (rare) page that IS one of these three, that slot is swapped for the
 // fallback so a post never recommends itself.
 const RECOMMENDED_SLUGS = ['de-paardenrace', 'mario-barf', 'ring-of-fire'];
-const RECOMMENDED_FALLBACK_SLUG = 'kingsen';
+const RECOMMENDED_FALLBACK_SLUG = 'bussen';
 
 export function getRecommendedGames(post: BlogPost): BlogPost[] {
   return RECOMMENDED_SLUGS
