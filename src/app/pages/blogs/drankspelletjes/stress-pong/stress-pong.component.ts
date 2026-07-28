@@ -4,13 +4,14 @@ import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcrumbs.component';
 import { DownloadCtaComponent } from '../../../../components/download-cta/download-cta.component';
+import { BlogCardComponent } from '../../../../components/blog-card/blog-card.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
-import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
+import { BLOG_POSTS, CATEGORY_SLUGS, getSimilarGames, getRecommendedGames } from '../../../blog/blog-posts.data';
 
 @Component({
   selector: 'app-stress-pong',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
+  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'stress-pong.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './stress-pong.component.scss']
 })
@@ -18,6 +19,9 @@ export class StressPongComponent {
   private readonly post = BLOG_POSTS.find(p => p.slug === 'stress-pong')!;
   readonly category = this.post.category;
   readonly subCategory = this.post.subCategory!;
+
+  readonly similarGames = getSimilarGames(this.post);
+  readonly recommendedGames = getRecommendedGames(this.post);
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },

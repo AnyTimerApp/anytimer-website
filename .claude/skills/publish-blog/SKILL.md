@@ -47,7 +47,9 @@ keyword stuffing.
 
 ## 3. Create the component and maximize on-page SEO
 
-New component under `src/app/pages/<slug>/`. SEO is not optional polish — every blog
+New component under `src/app/pages/blogs/<category-folder>/<slug>/` (e.g.
+`src/app/pages/blogs/drankspelletjes/<slug>/` — the folder groups by category, matching
+`CATEGORY_SLUGS`). SEO is not optional polish — every blog
 page gets the full treatment below, in the constructor, matching the pattern already
 used in e.g. `drankspellen.component.ts` and `wat-is-de-beste-adt-timer.component.ts`
 (inject `Meta`, and `DOCUMENT` for the JSON-LD script):
@@ -78,7 +80,7 @@ used in e.g. `drankspellen.component.ts` and `wat-is-de-beste-adt-timer.componen
 This only applies when the post is about **one single drinking game** and its category
 is `Drankspelletjes` (not the multi-game "Top 10 drankspellen" listicle, which stays as
 plain `h3`/`ul` sections — do not retrofit this onto that article). Concrete reference
-implementation: `src/app/pages/jeu-de-bier/` (component, template, and scss) — copy its
+implementation: `src/app/pages/blogs/drankspelletjes/jeu-de-bier/` (component, template, and scss) — copy its
 `.game-info-card` block directly rather than re-deriving it.
 
 For a dedicated single-game post, place a "quick facts" info card right after the
@@ -99,7 +101,7 @@ instead of stacking. Below the stats, a full-width `.game-info-card__divider`, t
 treatment as the 3 stats above (`.game-stat__label-row` → svg + label), followed by
 `.game-tags` pills — **but the pills themselves stay icon-free**, plain text only.
 **Copy the exact markup and CSS straight
-from `src/app/pages/jeu-de-bier/jeu-de-bier.component.html` and
+from `src/app/pages/blogs/drankspelletjes/jeu-de-bier/jeu-de-bier.component.html` and
 `jeu-de-bier.component.scss`** rather than retyping it — only swap the icon SVG paths if
 a stat genuinely needs a different icon (unlikely; the same 3 icons — tag/users/clock —
 cover every game's Categorie/Spelers/Speelduur).
@@ -166,6 +168,82 @@ export class XComponent {
   breadcrumb trail — but `BLOG_POSTS`' `category` field (in
   `src/app/pages/blog/blog-posts.data.ts`) is still the actual source of truth. If the
   category needs to change, change it there; this component reads it, it doesn't own it.
+
+## 3d. Drankspelletjes: Vergelijkbare & Aanbevolen drankspellen
+
+Same scope as 3b — single-game Drankspelletjes posts only, not the top-10 listicle. Every
+single-game post ends with two more blocks, placed after the internal-link paragraph
+("Op zoek naar meer drankspellen? ...") and before `<app-download-cta>`:
+
+```html
+      <div class="legal-section legal-section--no-divider">
+        <h2>Vergelijkbare drankspellen</h2>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Aanbevolen drankspellen</h2>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+```
+
+Copy this straight from `src/app/pages/blogs/drankspelletjes/jeu-de-bier/jeu-de-bier.component.html`
+rather than retyping it. Note the first section carries the extra
+`legal-section--no-divider` class so the two recommendation blocks flow together without a
+divider line between them.
+
+**`<app-blog-card>` is a shared component** (`src/app/components/blog-card/blog-card.component`) —
+it renders a post exactly like a `.blog-card` on `/blog` (same size, same equal-height-row
+behavior). Its container styling (`.related-slider`, the mobile horizontal-slider behavior,
+`.legal-section--no-divider`) lives once in `src/app/pages/blogs/blog-article-shared.scss`,
+already in every blog component's `styleUrls` — there is nothing to add there for a new post.
+
+In the component, add the import and two fields (copy from `jeu-de-bier.component.ts`):
+
+```ts
+import { BlogCardComponent } from '../../../../components/blog-card/blog-card.component';
+import { BLOG_POSTS, CATEGORY_SLUGS, getSimilarGames, getRecommendedGames } from '../../../blog/blog-posts.data';
+
+@Component({
+  ...
+  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent]
+})
+export class XComponent {
+  private readonly post = BLOG_POSTS.find(p => p.slug === '<slug>')!;
+  readonly subCategory = this.post.subCategory!;
+
+  readonly similarGames = getSimilarGames(this.post);
+  readonly recommendedGames = getRecommendedGames(this.post);
+  ...
+```
+
+`getSimilarGames`/`getRecommendedGames` live in `blog-posts.data.ts` — nothing to
+reimplement per post:
+
+- **`getRecommendedGames`** is a fixed, hand-picked list (currently De Paardenrace, Mario
+  Barf, Ring of fire) shown identically on every single-game post. If the current post IS
+  one of those three, that slot is swapped for a fallback (currently Kingsen) so a post
+  never recommends itself. This is intentionally hardcoded, not derived — if the "always
+  recommended" set or the fallback ever needs to change, edit the `RECOMMENDED_SLUGS` /
+  `RECOMMENDED_FALLBACK_SLUG` constants there, once, rather than touching every post.
+- **`getSimilarGames`** picks 3 other single-game posts, same `subCategory` first
+  (newest `date` first), topped up from other subcategories if fewer than 3 exist in the
+  same one. It automatically excludes the post itself and whatever `getRecommendedGames`
+  already returned for that post, so nothing repeats across the two blocks on one page.
+
+A brand-new post needs no special-casing here — adding it to `BLOG_POSTS` (step 5) with the
+right `subCategory` is enough for both functions to pick it up correctly on every other
+post's "Vergelijkbare" block, and for it to get its own correct pair of blocks.
 
 ## 4. Internal linking
 

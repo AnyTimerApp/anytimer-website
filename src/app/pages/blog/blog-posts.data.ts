@@ -359,3 +359,28 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   }
 ];
+
+// Fixed "always recommended" picks for every single-game Drankspelletjes post.
+// On the (rare) page that IS one of these three, that slot is swapped for the
+// fallback so a post never recommends itself.
+const RECOMMENDED_SLUGS = ['de-paardenrace', 'mario-barf', 'ring-of-fire'];
+const RECOMMENDED_FALLBACK_SLUG = 'kingsen';
+
+export function getRecommendedGames(post: BlogPost): BlogPost[] {
+  return RECOMMENDED_SLUGS
+    .map(slug => slug === post.slug ? RECOMMENDED_FALLBACK_SLUG : slug)
+    .map(slug => BLOG_POSTS.find(p => p.slug === slug)!);
+}
+
+// 3 other single-game posts for the "Vergelijkbare drankspellen" block: same
+// subCategory first (newest first), topped up from other subcategories if
+// fewer than 3 exist. Excludes the post itself and whatever already appears
+// in getRecommendedGames() for this post, so nothing shows up twice on a page.
+export function getSimilarGames(post: BlogPost): BlogPost[] {
+  const exclude = new Set([post.slug, ...getRecommendedGames(post).map(p => p.slug)]);
+  const pool = BLOG_POSTS.filter(p => p.category === 'Drankspelletjes' && !exclude.has(p.slug));
+  const byDateDesc = (a: BlogPost, b: BlogPost) => b.date.localeCompare(a.date);
+  const sameSubCategory = pool.filter(p => p.subCategory === post.subCategory).sort(byDateDesc);
+  const otherSubCategory = pool.filter(p => p.subCategory !== post.subCategory).sort(byDateDesc);
+  return [...sameSubCategory, ...otherSubCategory].slice(0, 3);
+}

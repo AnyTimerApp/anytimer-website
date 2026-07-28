@@ -11,3 +11,49 @@
   border-bottom: none;
   padding-bottom: 0;
 }
+
+/* Let two adjacent recommendation sections flow together without a divider */
+.legal-section--no-divider {
+  border-bottom: none;
+}
+
+/* Recommended/similar-games row: reuses <app-blog-card> in the same 3-col grid
+   as /blog. The row breaks out of the 680px article column to the full
+   .container width (min(1200px, viewport) minus its 2*24px side padding),
+   which is exactly the width the blog-grid lives in on /blog — so at every
+   viewport size the cards compute to the identical dimensions as the blog
+   page. Rows stretch every card to equal height. On mobile it switches to a
+   horizontal slider (scrollbar hidden, same pattern as the category filter
+   pills) that bleeds to the screen edge. */
+.related-slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 4px;
+  /* Keeps the hover-lift shadow from being clipped, on both the grid
+     (desktop) and the scroll container (mobile) below. Applies to both the
+     "Vergelijkbare" and "Aanbevolen" rows since they share this class. */
+  padding-bottom: 28px;
+  width: calc(min(var(--container-width), 100vw) - 48px);
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: stretch;
+    width: auto;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* Cancel .container's 24px side padding so the track scrolls under the
+       screen edge; inner side padding keeps the first/last card aligned. */
+    margin: 4px -24px 0;
+    padding: 0 24px 28px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    app-blog-card {
+      flex: 0 0 min(85%, 340px);
+    }
+  }
+}

@@ -112,6 +112,24 @@
         </ul>
 
         <p>Op zoek naar meer drankspellen? Bekijk ook onze <a routerLink="/drankspellen">top 10 leukste drankspellen</a>.</p>
+      </div>
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Vergelijkbare drankspellen</h2>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Aanbevolen drankspellen</h2>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
 
         <app-download-cta></app-download-cta>
       </div>
