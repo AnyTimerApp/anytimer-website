@@ -3,13 +3,14 @@ import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcrumbs.component';
+import { DownloadCtaComponent } from '../../../../components/download-cta/download-cta.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
 import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
 
 @Component({
   selector: 'app-wat-is-een-anytimer',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent],
+  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
   templateUrl: 'wat-is-een-anytimer.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', './wat-is-een-anytimer.component.scss']
 })
