@@ -24,6 +24,16 @@ import { FuckTheDealerComponent } from './pages/blogs/drankspelletjes/fuck-the-d
 import { MexenComponent } from './pages/blogs/drankspelletjes/mexen/mexen.component';
 import { BakplatenComponent } from './pages/blogs/drankspelletjes/bakplaten/bakplaten.component';
 import { DePaardenraceComponent } from './pages/blogs/drankspelletjes/de-paardenrace/de-paardenrace.component';
+import { RingOfFireComponent } from './pages/blogs/drankspelletjes/ring-of-fire/ring-of-fire.component';
+import { MijnenveldComponent } from './pages/blogs/drankspelletjes/mijnenveld/mijnenveld.component';
+import { StefStuntpilootComponent } from './pages/blogs/drankspelletjes/stef-stuntpiloot/stef-stuntpiloot.component';
+import { VingerenComponent } from './pages/blogs/drankspelletjes/vingeren/vingeren.component';
+import { VikingenComponent } from './pages/blogs/drankspelletjes/vikingen/vikingen.component';
+import { ZeeslagComponent } from './pages/blogs/drankspelletjes/zeeslag/zeeslag.component';
+import { KusjeGevenComponent } from './pages/blogs/drankspelletjes/kusje-geven/kusje-geven.component';
+import { BussenComponent } from './pages/blogs/drankspelletjes/bussen/bussen.component';
+import { HogerLagerComponent } from './pages/blogs/drankspelletjes/hoger-lager/hoger-lager.component';
+import { KrokodillenspelComponent } from './pages/blogs/drankspelletjes/krokodillenspel/krokodillenspel.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'AnyTimerApp - De app om je anytimers in bij te houden' },
@@ -53,5 +63,15 @@ export const routes: Routes = [
   { path: 'blog/drankspelletjes/mexen', component: MexenComponent, title: 'Mexen - Spelregels & Tips | AnyTimerApp' },
   { path: 'blog/drankspelletjes/bakplaten', component: BakplatenComponent, title: 'Bakplaten - Spelregels & Tips | AnyTimerApp' },
   { path: 'blog/drankspelletjes/de-paardenrace', component: DePaardenraceComponent, title: 'De Paardenrace - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/ring-of-fire', component: RingOfFireComponent, title: 'Ring of fire - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/mijnenveld', component: MijnenveldComponent, title: 'Mijnenveld - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/stef-stuntpiloot', component: StefStuntpilootComponent, title: 'Stef stuntpiloot - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/vingeren', component: VingerenComponent, title: 'Vingeren - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/vikingen', component: VikingenComponent, title: 'Vikingen - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/zeeslag', component: ZeeslagComponent, title: 'Zeeslag - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/kusje-geven', component: KusjeGevenComponent, title: 'Kusje geven - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/bussen', component: BussenComponent, title: 'Bussen - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/hoger-lager', component: HogerLagerComponent, title: 'Hoger lager - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/krokodillenspel', component: KrokodillenspelComponent, title: 'Krokodillenspel - Spelregels & Tips | AnyTimerApp' },
   { path: '**', component: NotFoundComponent, title: '404 Niet gevonden' }
 ];

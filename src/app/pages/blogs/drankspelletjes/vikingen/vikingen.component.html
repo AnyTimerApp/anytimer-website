@@ -1,0 +1,128 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Vikingen</h1>
+      <p class="legal-intro">
+        Vikingen is een spel waarbij iedereen tegelijk moet opletten. Een speler is Viking, de buren roeien en de rest maakt de zee.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>Wat is Vikingen?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/vikingen.png" type="image/png">
+          <img src="assets/blogs/drankspel/vikingen.png" alt="Vikingen drankspel met een speler als Viking en twee spelers die roeien" class="game-image" loading="lazy">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Categorie</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Spelers</span>
+              </div>
+              <span class="game-stat__value">3 tot 16</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Speelduur</span>
+              </div>
+              <span class="game-stat__value">5-20 minuten</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">Benodigdheden</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Drank</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Speluitleg</h2>
+        <p>Er zijn drie rollen: Viking, roeier en zee. Zodra de Viking een nieuwe speler aanwijst, wisselt iedereen van rol.</p>
+        <ol>
+          <li>Ga met de groep in een kring zitten.</li>
+          <li>Wijs 1 speler aan als eerste Viking.</li>
+          <li>De Viking houdt beide handen als horens naast het hoofd.</li>
+          <li>De spelers links en rechts van de Viking zijn de roeiers.</li>
+          <li>De roeiers maken een roeibeweging en zeggen steeds roei.</li>
+          <li>Alle andere spelers zijn de zee.</li>
+          <li>De zee maakt met de handen golfbewegingen en zegt steeds woesh.</li>
+          <li>De Viking wijst met zijn horens een nieuwe speler aan.</li>
+          <li>Die speler wordt meteen de nieuwe Viking.</li>
+          <li>De spelers naast de nieuwe Viking worden meteen de roeiers.</li>
+          <li>De rest schakelt terug naar zee.</li>
+          <li>Speel door tot iemand te laat reageert of de verkeerde beweging maakt.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>Wanneer iemand moet drinken</h2>
+        <ul>
+          <li>Je drinkt als je te laat reageert.</li>
+          <li>Je drinkt als je de verkeerde rol uitvoert.</li>
+          <li>Je drinkt als je het verkeerde geluid maakt.</li>
+        </ul>
+
+        <h3>Extra regels</h3>
+        <ul>
+          <li>Begin langzaam en voer het tempo steeds verder op.</li>
+          <li>Bij grote groepen mag de Viking alleen iemand aanwijzen die minstens 2 plekken verder zit.</li>
+        </ul>
+
+        <p>Op zoek naar meer drankspellen? Bekijk ook onze <a routerLink="/drankspellen">top 10 leukste drankspellen</a>.</p>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <picture style="display: contents">
+              <source srcset="assets/logo.webp" type="image/webp">
+              <img src="assets/logo.png" alt="Anytimer" width="28" height="28" loading="lazy">
+            </picture>
+          </div>
+          <div class="contact-details">
+            <strong>Anytimer App</strong>
+            <span>Gratis te downloaden</span>
+            <a routerLink="/">Download de app</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

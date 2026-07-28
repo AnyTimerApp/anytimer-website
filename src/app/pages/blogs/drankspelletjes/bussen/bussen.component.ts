@@ -7,31 +7,31 @@ import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/bread
 import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
 
 @Component({
-  selector: 'app-stress-pong',
+  selector: 'app-bussen',
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent],
-  templateUrl: 'stress-pong.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './stress-pong.component.scss']
+  templateUrl: 'bussen.component.html',
+  styleUrls: ['../../../juridisch/juridisch.component.scss', './bussen.component.scss']
 })
-export class StressPongComponent {
-  private readonly post = BLOG_POSTS.find(p => p.slug === 'stress-pong')!;
+export class BussenComponent {
+  private readonly post = BLOG_POSTS.find(p => p.slug === 'bussen')!;
   readonly category = this.post.category;
   readonly subCategory = this.post.subCategory!;
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
     { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
-    { label: 'Stress Pong' }
+    { label: 'Bussen' }
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Stress Pong - Spelregels & Tips | AnyTimerApp';
-    const description = 'Stress Pong is een snelle variant op beerpong waarbij twee bekers tegelijk rondgaan. Ontdek de spelregels, benodigdheden en tips.';
-    const image = 'https://anytimer.app/assets/blogs/drankspellen/stress%20pong.png';
-    const url = 'https://anytimer.app/blog/drankspelletjes/stress-pong/';
-    const publishedTime = '2026-07-24';
+    const title = 'Bussen - Spelregels & Tips | AnyTimerApp';
+    const description = 'Bussen is een kaartspel met meerdere rondes en een piramide. Ontdek de spelregels, slokverdeling en tips voor deze drankspel klassieker.';
+    const image = 'https://anytimer.app/assets/blogs/drankspel/bussen.png';
+    const url = 'https://anytimer.app/blog/drankspelletjes/bussen/';
+    const publishedTime = '2026-07-28';
 
-    injectBreadcrumbSchema(document, 'schema-breadcrumbs-stress-pong', this.breadcrumbs);
+    injectBreadcrumbSchema(document, 'schema-breadcrumbs-bussen', this.breadcrumbs);
 
     meta.updateTag({ name: 'description', content: description });
 
@@ -40,7 +40,7 @@ export class StressPongComponent {
     meta.updateTag({ property: 'og:title', content: title });
     meta.updateTag({ property: 'og:description', content: description });
     meta.updateTag({ property: 'og:image', content: image });
-    meta.updateTag({ property: 'og:image:alt', content: 'Stress Pong drankspel met bekers en pingpongballen' });
+    meta.updateTag({ property: 'og:image:alt', content: 'Bussen kaartspel met de piramide en de kaarten voor de bus' });
     meta.updateTag({ property: 'og:site_name', content: 'AnyTimerApp' });
     meta.updateTag({ property: 'og:locale', content: 'nl_NL' });
     meta.updateTag({ property: 'article:published_time', content: publishedTime });
@@ -50,9 +50,9 @@ export class StressPongComponent {
     meta.updateTag({ name: 'twitter:description', content: description });
     meta.updateTag({ name: 'twitter:image', content: image });
 
-    if (!document.getElementById('schema-stress-pong')) {
+    if (!document.getElementById('schema-bussen')) {
       const script = document.createElement('script');
-      script.id = 'schema-stress-pong';
+      script.id = 'schema-bussen';
       script.type = 'application/ld+json';
       script.text = JSON.stringify({
         '@context': 'https://schema.org',

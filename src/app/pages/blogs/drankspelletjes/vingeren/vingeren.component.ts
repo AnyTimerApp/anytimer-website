@@ -7,31 +7,31 @@ import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/bread
 import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
 
 @Component({
-  selector: 'app-stress-pong',
+  selector: 'app-vingeren',
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent],
-  templateUrl: 'stress-pong.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './stress-pong.component.scss']
+  templateUrl: 'vingeren.component.html',
+  styleUrls: ['../../../juridisch/juridisch.component.scss', './vingeren.component.scss']
 })
-export class StressPongComponent {
-  private readonly post = BLOG_POSTS.find(p => p.slug === 'stress-pong')!;
+export class VingerenComponent {
+  private readonly post = BLOG_POSTS.find(p => p.slug === 'vingeren')!;
   readonly category = this.post.category;
   readonly subCategory = this.post.subCategory!;
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
     { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
-    { label: 'Stress Pong' }
+    { label: 'Vingeren' }
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Stress Pong - Spelregels & Tips | AnyTimerApp';
-    const description = 'Stress Pong is een snelle variant op beerpong waarbij twee bekers tegelijk rondgaan. Ontdek de spelregels, benodigdheden en tips.';
-    const image = 'https://anytimer.app/assets/blogs/drankspellen/stress%20pong.png';
-    const url = 'https://anytimer.app/blog/drankspelletjes/stress-pong/';
-    const publishedTime = '2026-07-24';
+    const title = 'Vingeren - Spelregels & Tips | AnyTimerApp';
+    const description = 'Vingeren is een snel raadspel met vingers op een glas. Ontdek de spelregels, tips en wanneer je moet drinken bij dit drankspel voor 4 tot 8 spelers.';
+    const image = 'https://anytimer.app/assets/blogs/drankspel/vingeren.png';
+    const url = 'https://anytimer.app/blog/drankspelletjes/vingeren/';
+    const publishedTime = '2026-07-28';
 
-    injectBreadcrumbSchema(document, 'schema-breadcrumbs-stress-pong', this.breadcrumbs);
+    injectBreadcrumbSchema(document, 'schema-breadcrumbs-vingeren', this.breadcrumbs);
 
     meta.updateTag({ name: 'description', content: description });
 
@@ -40,7 +40,7 @@ export class StressPongComponent {
     meta.updateTag({ property: 'og:title', content: title });
     meta.updateTag({ property: 'og:description', content: description });
     meta.updateTag({ property: 'og:image', content: image });
-    meta.updateTag({ property: 'og:image:alt', content: 'Stress Pong drankspel met bekers en pingpongballen' });
+    meta.updateTag({ property: 'og:image:alt', content: 'Vingeren drankspel met vingers op de rand van een glas' });
     meta.updateTag({ property: 'og:site_name', content: 'AnyTimerApp' });
     meta.updateTag({ property: 'og:locale', content: 'nl_NL' });
     meta.updateTag({ property: 'article:published_time', content: publishedTime });
@@ -50,9 +50,9 @@ export class StressPongComponent {
     meta.updateTag({ name: 'twitter:description', content: description });
     meta.updateTag({ name: 'twitter:image', content: image });
 
-    if (!document.getElementById('schema-stress-pong')) {
+    if (!document.getElementById('schema-vingeren')) {
       const script = document.createElement('script');
-      script.id = 'schema-stress-pong';
+      script.id = 'schema-vingeren';
       script.type = 'application/ld+json';
       script.text = JSON.stringify({
         '@context': 'https://schema.org',

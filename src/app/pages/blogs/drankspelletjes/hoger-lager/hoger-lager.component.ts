@@ -7,31 +7,31 @@ import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/bread
 import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
 
 @Component({
-  selector: 'app-stress-pong',
+  selector: 'app-hoger-lager',
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent],
-  templateUrl: 'stress-pong.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './stress-pong.component.scss']
+  templateUrl: 'hoger-lager.component.html',
+  styleUrls: ['../../../juridisch/juridisch.component.scss', './hoger-lager.component.scss']
 })
-export class StressPongComponent {
-  private readonly post = BLOG_POSTS.find(p => p.slug === 'stress-pong')!;
+export class HogerLagerComponent {
+  private readonly post = BLOG_POSTS.find(p => p.slug === 'hoger-lager')!;
   readonly category = this.post.category;
   readonly subCategory = this.post.subCategory!;
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
     { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
-    { label: 'Stress Pong' }
+    { label: 'Hoger lager' }
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Stress Pong - Spelregels & Tips | AnyTimerApp';
-    const description = 'Stress Pong is een snelle variant op beerpong waarbij twee bekers tegelijk rondgaan. Ontdek de spelregels, benodigdheden en tips.';
-    const image = 'https://anytimer.app/assets/blogs/drankspellen/stress%20pong.png';
-    const url = 'https://anytimer.app/blog/drankspelletjes/stress-pong/';
-    const publishedTime = '2026-07-24';
+    const title = 'Hoger lager - Spelregels & Tips | AnyTimerApp';
+    const description = 'Hoger lager is een simpel kaartspel waarin je steeds moet gokken op de volgende kaart. Ontdek de spelregels en tips voor dit populaire drankspel.';
+    const image = 'https://anytimer.app/assets/blogs/drankspel/hoger%20lager.png';
+    const url = 'https://anytimer.app/blog/drankspelletjes/hoger-lager/';
+    const publishedTime = '2026-07-28';
 
-    injectBreadcrumbSchema(document, 'schema-breadcrumbs-stress-pong', this.breadcrumbs);
+    injectBreadcrumbSchema(document, 'schema-breadcrumbs-hoger-lager', this.breadcrumbs);
 
     meta.updateTag({ name: 'description', content: description });
 
@@ -40,7 +40,7 @@ export class StressPongComponent {
     meta.updateTag({ property: 'og:title', content: title });
     meta.updateTag({ property: 'og:description', content: description });
     meta.updateTag({ property: 'og:image', content: image });
-    meta.updateTag({ property: 'og:image:alt', content: 'Stress Pong drankspel met bekers en pingpongballen' });
+    meta.updateTag({ property: 'og:image:alt', content: 'Hoger lager kaartspel met een rij opengedraaide kaarten' });
     meta.updateTag({ property: 'og:site_name', content: 'AnyTimerApp' });
     meta.updateTag({ property: 'og:locale', content: 'nl_NL' });
     meta.updateTag({ property: 'article:published_time', content: publishedTime });
@@ -50,9 +50,9 @@ export class StressPongComponent {
     meta.updateTag({ name: 'twitter:description', content: description });
     meta.updateTag({ name: 'twitter:image', content: image });
 
-    if (!document.getElementById('schema-stress-pong')) {
+    if (!document.getElementById('schema-hoger-lager')) {
       const script = document.createElement('script');
-      script.id = 'schema-stress-pong';
+      script.id = 'schema-hoger-lager';
       script.type = 'application/ld+json';
       script.text = JSON.stringify({
         '@context': 'https://schema.org',

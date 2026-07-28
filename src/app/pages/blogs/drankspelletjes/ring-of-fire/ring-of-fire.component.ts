@@ -7,31 +7,31 @@ import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/bread
 import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
 
 @Component({
-  selector: 'app-stress-pong',
+  selector: 'app-ring-of-fire',
   standalone: true,
   imports: [RouterLink, BreadcrumbsComponent],
-  templateUrl: 'stress-pong.component.html',
-  styleUrls: ['../../../juridisch/juridisch.component.scss', './stress-pong.component.scss']
+  templateUrl: 'ring-of-fire.component.html',
+  styleUrls: ['../../../juridisch/juridisch.component.scss', './ring-of-fire.component.scss']
 })
-export class StressPongComponent {
-  private readonly post = BLOG_POSTS.find(p => p.slug === 'stress-pong')!;
+export class RingOfFireComponent {
+  private readonly post = BLOG_POSTS.find(p => p.slug === 'ring-of-fire')!;
   readonly category = this.post.category;
   readonly subCategory = this.post.subCategory!;
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },
     { label: this.category, url: `/blog/${CATEGORY_SLUGS[this.category]}` },
-    { label: 'Stress Pong' }
+    { label: 'Ring of fire' }
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Stress Pong - Spelregels & Tips | AnyTimerApp';
-    const description = 'Stress Pong is een snelle variant op beerpong waarbij twee bekers tegelijk rondgaan. Ontdek de spelregels, benodigdheden en tips.';
-    const image = 'https://anytimer.app/assets/blogs/drankspellen/stress%20pong.png';
-    const url = 'https://anytimer.app/blog/drankspelletjes/stress-pong/';
-    const publishedTime = '2026-07-24';
+    const title = 'Ring of fire - Spelregels & Tips | AnyTimerApp';
+    const description = 'Ring of fire is de internationale variant van Kingsen. Ontdek de spelregels, kaartbetekenissen en tips voor dit populaire kaartspel als drankspel.';
+    const image = 'https://anytimer.app/assets/blogs/drankspel/ring%20of%20fire.png';
+    const url = 'https://anytimer.app/blog/drankspelletjes/ring-of-fire/';
+    const publishedTime = '2026-07-28';
 
-    injectBreadcrumbSchema(document, 'schema-breadcrumbs-stress-pong', this.breadcrumbs);
+    injectBreadcrumbSchema(document, 'schema-breadcrumbs-ring-of-fire', this.breadcrumbs);
 
     meta.updateTag({ name: 'description', content: description });
 
@@ -40,7 +40,7 @@ export class StressPongComponent {
     meta.updateTag({ property: 'og:title', content: title });
     meta.updateTag({ property: 'og:description', content: description });
     meta.updateTag({ property: 'og:image', content: image });
-    meta.updateTag({ property: 'og:image:alt', content: 'Stress Pong drankspel met bekers en pingpongballen' });
+    meta.updateTag({ property: 'og:image:alt', content: 'Ring of fire drankspel met kaarten in een ring rond een glas' });
     meta.updateTag({ property: 'og:site_name', content: 'AnyTimerApp' });
     meta.updateTag({ property: 'og:locale', content: 'nl_NL' });
     meta.updateTag({ property: 'article:published_time', content: publishedTime });
@@ -50,9 +50,9 @@ export class StressPongComponent {
     meta.updateTag({ name: 'twitter:description', content: description });
     meta.updateTag({ name: 'twitter:image', content: image });
 
-    if (!document.getElementById('schema-stress-pong')) {
+    if (!document.getElementById('schema-ring-of-fire')) {
       const script = document.createElement('script');
-      script.id = 'schema-stress-pong';
+      script.id = 'schema-ring-of-fire';
       script.type = 'application/ld+json';
       script.text = JSON.stringify({
         '@context': 'https://schema.org',
