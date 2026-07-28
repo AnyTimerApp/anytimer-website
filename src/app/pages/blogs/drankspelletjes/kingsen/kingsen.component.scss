@@ -86,18 +86,55 @@
 }
 
 .game-stat__label {
-  font-size: clamp(0.62rem, 2.4vw, 0.85rem);
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--text-secondary);
   white-space: nowrap;
 }
 
 .game-stat__value {
-  font-size: clamp(0.85rem, 3.2vw, 1.15rem);
+  font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: -0.01em;
   color: var(--text-main);
   white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .game-info-card__stats {
+    flex-direction: column;
+  }
+
+  .game-stat {
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 0;
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  .game-stat > .game-stat__label-row {
+    flex: 0 0 130px;
+  }
+
+  .game-stat__label,
+  .game-stat__value {
+    font-size: 0.95rem;
+  }
+
+  .game-stat__value {
+    font-weight: 600;
+    text-align: left;
+  }
 }
 
 .game-tags {
