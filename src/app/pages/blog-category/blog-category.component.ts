@@ -6,7 +6,7 @@ import { BLOG_POSTS, CATEGORY_SLUGS, BlogCategory, BlogPost, DRANKSPEL_SUBCATEGO
 import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
 
-const CATEGORY_META: Record<BlogCategory, { title: string; description: string; intro: string }> = {
+const CATEGORY_META: Record<BlogCategory, { title: string; description: string; intro: string; heading?: string }> = {
   Begrippen: {
     title: 'Anytimer Begrippen Uitgelegd | AnyTimerApp',
     description: 'Wat is een anytimer en wat is een adtje? Ontdek alle anytimer-begrippen met duidelijke uitleg en voorbeelden. Nooit meer twijfelen over de termen.',
@@ -25,7 +25,8 @@ const CATEGORY_META: Record<BlogCategory, { title: string; description: string; 
   Drankspelletjes: {
     title: 'Drankspelletjes: Spelregels & Tips | AnyTimerApp',
     description: 'Ontdek onze drankspelletjes met alle spelregels, benodigdheden en tips. Van Jeu de bier tot nieuwe toevoegingen. Altijd een leuk drankspel bij de hand.',
-    intro: 'Onze verzameling drankspelletjes, stuk voor stuk uitgelicht met spelregels, benodigdheden en handige tips voor een gezellige avond.'
+    heading: 'De leukste drankspellen',
+    intro: 'Op zoek naar leuke drankspellen voor een avond met vrienden? Dit zijn onze favorieten. Hier vind je niet elk drankspel dat bestaat. Maar alleen de leuke spellen. Bij elk spel vind je de regels, benodigdheden en tips.'
   }
 };
 
@@ -34,11 +35,11 @@ const CATEGORY_META: Record<BlogCategory, { title: string; description: string; 
   standalone: true,
   imports: [RouterLink, CommonModule, BreadcrumbsComponent],
   templateUrl: './blog-category.component.html',
-  styleUrls: ['../blog/blog-shared.component.scss']
+  styleUrls: ['../juridisch/juridisch.component.scss', '../blog/blog-shared.component.scss']
 })
 export class BlogCategoryComponent {
   category: BlogCategory;
-  meta: { title: string; description: string; intro: string };
+  meta: { title: string; description: string; intro: string; heading?: string };
   posts: BlogPost[];
   breadcrumbs: BreadcrumbItem[];
   // Only shown for the Drankspelletjes category — other categories have no subCategory to filter by.

@@ -23,7 +23,7 @@
 
     <!-- Page header -->
     <div class="legal-header">
-      <h1 class="legal-title">{{ category }}</h1>
+      <h1 class="legal-title">{{ meta.heading || category }}</h1>
       <p class="legal-intro">{{ meta.intro }}</p>
     </div>
 
@@ -63,6 +63,20 @@
         </div>
       </a>
       }
+    </div>
+    }
+
+    <!-- Extra SEO copy, only for the Drankspelletjes category -->
+    @if (category === 'Drankspelletjes') {
+    <div class="legal-body">
+      <div class="legal-section">
+        <h2>Wat is een drankspel?</h2>
+        <p>Een drankspel is een spelletje waarbij drinken onderdeel is van de regels. Verlies je een ronde, maak je een fout of ben je te laat? Dan neem je een slok, trek je een bak of krijg je een andere soort straf. Sommige drankspellen speel je met kaarten, andere met dobbelstenen.</p>
+
+        <h3>Verschillende soorten drankspellen</h3>
+        <p>Op AnyTimerApp verzamelen we alleen gratis drankspellen. Je hoeft dus nergens voor te betalen om mee te doen. Soms heb je wel iets nodig om te spelen, maar meestal is dat goedkoop en zo in huis te halen. Bij de meeste drankspellen kom je uit met wat je toch al hebt liggen: een set speelkaarten, een paar dobbelstenen, een dop of een pen.</p>
+        <p>Hierboven filter je op categorie: kaartspellen, dobbelspellen, behendigheidsspellen of overige drankspellen. Twijfel je nog waar je moet beginnen? Bekijk dan onze <a routerLink="/drankspellen">top 10 favoriete drankspellen</a> voor een snelle start.</p>
+      </div>
     </div>
     }
 
