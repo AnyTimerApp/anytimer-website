@@ -8,6 +8,15 @@
   background: rgba(255, 255, 255, 0);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 
+  /* Only the home page scrolls through a transparent hero state, so only
+     there should the transparent-to-solid change actually animate. On every
+     other page .scrolled is forced on permanently — without this, toggling
+     it on route entry (e.g. leaving home while still at the top) would
+     replay that same fade, which reads as a stray scroll animation. */
+  &.no-transition {
+    transition: none;
+  }
+
   /* Transparent state over hero — white text */
   .logo {
     color: rgba(255, 255, 255, 0.95);

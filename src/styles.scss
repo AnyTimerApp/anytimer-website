@@ -34,7 +34,12 @@
   --font: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-html {
+/* Only the home page has in-page anchor links (#features etc.) that should
+   glide smoothly. Everywhere else this must stay off, or the router's scroll
+   restoration (jumping back to a saved position, or resetting to top) gets
+   animated too — a long animated jump on navigation reads as a glitch, not
+   a scroll. AppComponent toggles this class based on the current route. */
+html.smooth-scroll {
   scroll-behavior: smooth;
 }
 

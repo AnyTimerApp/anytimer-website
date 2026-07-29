@@ -10,7 +10,7 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes, withInMemoryScrolling({
       anchorScrolling: 'enabled',
-      scrollPositionRestoration: 'top'
+      scrollPositionRestoration: 'enabled'
     })),
     provideClientHydration(withEventReplay()),
     { provide: UrlSerializer, useClass: TrailingSlashUrlSerializer }

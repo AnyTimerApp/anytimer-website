@@ -1,4 +1,4 @@
-﻿<nav class="navbar" [class.scrolled]="isScrolled || !isHeroPage">
+﻿<nav class="navbar" [class.scrolled]="isScrolled || !isHeroPage" [class.no-transition]="!isHeroPage">
   <div class="container nav-inner">
     <a routerLink="/" class="logo" (click)="scrollToTop()">
       <div class="logo-icon">

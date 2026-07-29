@@ -38,11 +38,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   private routerSub!: Subscription;
 
-  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {
+    this.isHeroPage = this.isHomePath(this.router.url);
+  }
 
   ngOnInit() {
-    this.isHeroPage = this.isHomePath(this.router.url);
-
     this.routerSub = this.router.events
       .pipe(filter(e => e instanceof NavigationEnd))
       .subscribe((e: any) => {

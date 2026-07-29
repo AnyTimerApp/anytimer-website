@@ -23,10 +23,22 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.setLinkTags(this.router.url);
+    this.setSmoothScroll(this.router.url);
 
     this.router.events
       .pipe(filter(e => e instanceof NavigationEnd))
-      .subscribe((e: any) => this.setLinkTags(e.urlAfterRedirects));
+      .subscribe((e: any) => {
+        this.setLinkTags(e.urlAfterRedirects);
+        this.setSmoothScroll(e.urlAfterRedirects);
+      });
+  }
+
+  // Strip fragment (#features) and query params before comparing —
+  // "/#features" and "/" both resolve to the home page.
+  private setSmoothScroll(url: string) {
+    const path = url.split('#')[0].split('?')[0];
+    const isHome = path === '/' || path === '';
+    this.document.documentElement.classList.toggle('smooth-scroll', isHome);
   }
 
   private setLinkTags(url: string) {
