@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
 import { BLOG_POSTS, CATEGORY_SLUGS, CATEGORY_DISPLAY_ORDER, BlogCategory, BlogPost } from './blog-posts.data';
+import { injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
 
 export interface CategoryCard {
   category: BlogCategory;
@@ -58,11 +59,13 @@ export class BlogComponent {
     }));
   }
 
-  constructor(meta: Meta) {
+  constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
     const title = 'Anytimer Blog - Tips, Ideeën & Gidsen | Anytimer App';
     const description = 'Lees onze blog met tips, ideeën en gidsen voor anytimers. Ontdek hoe je het meest uit je anytimers haalt en creëer meer plezier met je vrienden.';
     const image = 'https://anytimer.app/assets/Together.png';
     const url = 'https://anytimer.app/blog/';
+
+    injectBreadcrumbSchema(document, 'schema-breadcrumbs-blog', [{ label: 'Blog' }]);
 
     meta.updateTag({ name: 'description', content: description });
 
@@ -76,5 +79,29 @@ export class BlogComponent {
     meta.updateTag({ name: 'twitter:title', content: title });
     meta.updateTag({ name: 'twitter:description', content: description });
     meta.updateTag({ name: 'twitter:image', content: image });
+
+    const schemaId = 'schema-collection-blog';
+    if (!document.getElementById(schemaId)) {
+      const script = document.createElement('script');
+      script.id = schemaId;
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        'name': title,
+        'description': description,
+        'url': url,
+        'mainEntity': {
+          '@type': 'ItemList',
+          'itemListElement': CATEGORY_DISPLAY_ORDER.map((category, i) => ({
+            '@type': 'ListItem',
+            'position': i + 1,
+            'url': `https://anytimer.app/blog/${CATEGORY_SLUGS[category]}/`,
+            'name': category
+          }))
+        }
+      });
+      document.head.appendChild(script);
+    }
   }
 }
