@@ -2,15 +2,15 @@ import { Component, Inject } from '@angular/core';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
-import { BLOG_POSTS, CATEGORY_SLUGS, BlogCategory, BlogPost, DRANKSPEL_SUBCATEGORIES, DrankspelSubCategory } from '../blog/blog-posts.data';
+import { BLOG_POSTS, CATEGORY_SLUGS, BlogCategory, BlogPost, DRANKSPEL_SUBCATEGORIES, DrankspelSubCategory, BEGRIPPEN_LETTERS, firstLetterOf } from '../blog/blog-posts.data';
 import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
 
 const CATEGORY_META: Record<BlogCategory, { title: string; description: string; intro: string; heading?: string }> = {
   Begrippen: {
-    title: 'Anytimer Begrippen Uitgelegd | AnyTimerApp',
-    description: 'Wat is een anytimer en wat is een adtje? Ontdek alle anytimer-begrippen met duidelijke uitleg en voorbeelden. Nooit meer twijfelen over de termen.',
-    intro: 'Alle anytimer-begrippen helder uitgelegd. Van wat een anytimer precies is tot de betekenis van een adtje: hier vind je duidelijke antwoorden op elke term.'
+    title: 'Studentenbegrippen Uitgelegd van A tot Z | AnyTimerApp',
+    description: 'Van adten tot zeester: alle studentenbegrippen en studententaal helder uitgelegd. Meer dan 200 woorden met duidelijke definities, van A tot Z.',
+    intro: 'Studententaal zit vol eigen woorden, afkortingen en tradities. Van drinktermen tot verenigingsjargon: hier vind je duidelijke uitleg bij honderden studentenbegrippen, overzichtelijk van A tot Z.'
   },
   Inspiratie: {
     title: 'Inspiratie voor een Leuke Avond | AnyTimerApp',
@@ -46,6 +46,10 @@ export class BlogCategoryComponent {
   subCategories: readonly DrankspelSubCategory[] | null = null;
   activeFilter: DrankspelSubCategory | null = null;
 
+  // Only populated for the Begrippen category — the A-Z letter filter/index.
+  letters: string[] = [];
+  activeLetter: string | null = null;
+
   get sortedPosts(): BlogPost[] {
     return [...this.posts].sort((a, b) => b.date.localeCompare(a.date));
   }
@@ -66,11 +70,43 @@ export class BlogCategoryComponent {
     this.activeFilter = this.activeFilter === sub ? null : sub;
   }
 
+  // Begrippen posts, alphabetical by title (not date), hero excluded, grouped
+  // per first letter so each group can get its own big letter heading.
+  get begripGroups(): { letter: string; posts: BlogPost[] }[] {
+    const rest = this.posts
+      .filter(p => p.slug !== this.featuredPost.slug)
+      .filter(p => !this.activeLetter || firstLetterOf(p) === this.activeLetter)
+      .sort((a, b) => a.title.localeCompare(b.title, 'nl'));
+
+    const groups: { letter: string; posts: BlogPost[] }[] = [];
+    for (const post of rest) {
+      const letter = firstLetterOf(post);
+      const current = groups[groups.length - 1];
+      if (current && current.letter === letter) {
+        current.posts.push(post);
+      } else {
+        groups.push({ letter, posts: [post] });
+      }
+    }
+    return groups;
+  }
+
+  toggleLetter(letter: string) {
+    this.activeLetter = this.activeLetter === letter ? null : letter;
+  }
+
   constructor(meta: Meta, route: ActivatedRoute, @Inject(DOCUMENT) document: Document) {
     this.category = route.snapshot.data['category'] as BlogCategory;
     this.meta = CATEGORY_META[this.category];
     this.posts = BLOG_POSTS.filter(p => p.category === this.category);
     this.subCategories = this.category === 'Drankspelletjes' ? DRANKSPEL_SUBCATEGORIES : null;
+    if (this.category === 'Begrippen') {
+      this.letters = BEGRIPPEN_LETTERS;
+      const requestedLetter = route.snapshot.queryParamMap.get('letter');
+      if (requestedLetter && this.letters.includes(requestedLetter)) {
+        this.activeLetter = requestedLetter;
+      }
+    }
     this.breadcrumbs = [
       { label: 'Blog', url: '/blog' },
       { label: this.category }

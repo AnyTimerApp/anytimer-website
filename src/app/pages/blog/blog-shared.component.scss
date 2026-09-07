@@ -167,7 +167,7 @@
   .blog-card__link { color: rgba(255, 255, 255, 0.95); }
 }
 
-/* Subcategory filter pills */
+/* Subcategory filter pills (Drankspelletjes) */
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -226,6 +226,67 @@
   display: inline-block;
   font-size: 0.75rem;
   line-height: 1;
+}
+
+/* A-Z letter filter (Begrippen). A grid on desktop so every pill shares the
+   exact same column width. On mobile it switches to the same shrink-to-
+   content horizontal scroller as the Drankspelletjes .filter-bar, instead of
+   wrapping onto extra rows. */
+.letter-filter-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
+  gap: 6px;
+  margin-bottom: 32px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin: 0 -24px 32px;
+    padding: 0 24px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.letter-filter-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  background: var(--primary-light);
+  border: none;
+  padding: 6px 4px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  &--active {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+  }
 }
 
 /* Blog grid */
@@ -361,4 +422,54 @@
   font-size: 0.9rem;
   font-weight: 600;
   transition: transform 0.2s ease;
+}
+
+/* Big letter divider between alphabet groups on /blog/begrippen, e.g. "A" before
+   all begrippen starting with A. Hidden while a letter filter is active. */
+.letter-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 40px 0 16px;
+  letter-spacing: -0.02em;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+/* Compact, image-free cards used only for the Begrippen category */
+.term-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.term-card {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(0, 111, 253, 0.15);
+  }
+}
+
+.term-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: var(--text-main);
 }

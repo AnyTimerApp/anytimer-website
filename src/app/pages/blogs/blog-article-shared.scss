@@ -2,6 +2,46 @@
   margin-bottom: 28px;
 }
 
+/* The example-sentence paragraph on a Begrippen term page — always the first
+   entry in content.paragraphs, styled as a clearly recognizable quote. */
+.term-example {
+  position: relative;
+  margin: 0 0 20px;
+  padding: 2px 0 2px 28px;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--text-main);
+  border-left: 3px solid var(--primary);
+
+  &::before {
+    content: '\201C';
+    position: absolute;
+    left: 6px;
+    top: -8px;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--primary);
+  }
+}
+
+/* Links inside [innerHTML]-rendered Begrippen paragraphs (the example quote
+   and the body text) are injected as raw HTML rather than compiled from the
+   template, so they never receive Angular's component-scoped style
+   attribute. ::ng-deep is needed here to actually reach them and give them
+   the same bold, theme-blue link style used everywhere else on the site.
+   Scoped to just <p> and .term-example (not the whole .legal-section) so it
+   never reaches the Download CTA button that also lives in that section. */
+.legal-section p ::ng-deep a,
+.term-example ::ng-deep a {
+  color: var(--primary);
+  font-weight: 600;
+
+  &:hover { color: var(--primary-hover); }
+}
+
 .legal-section ol:last-child,
 .legal-section ul:last-child {
   margin-bottom: 0;

@@ -1,0 +1,138 @@
+[
+  {
+    "slug": "galaplicht",
+    "title": "Galaplicht",
+    "excerpt": "Galaplicht is het ongeschreven, betwiste idee dat een galadate verplicht tot meer dan alleen dansen.",
+    "paragraphs": [
+      "\"Vergeet die galaplicht maar\", zei ze, \"ik ga gewoon voor een leuke avond.\"",
+      "In de praktijk wordt hier lang niet altijd aan vastgehouden: een gezellige avond wordt meestal belangrijker gevonden dan wat erna zou moeten volgen."
+    ]
+  },
+  {
+    "slug": "gefeli",
+    "title": "Gefeli",
+    "excerpt": "Gefeli is de studentikoze afkorting voor gefeliciteerd, vooral gebruikt in appjes en kaartjes.",
+    "paragraphs": [
+      "\"Gefeli met je propedeuse!\", stond er groot op de zelfgemaakte taart.",
+      "Het woord is vooral in appjes en op felicitatiekaarten te vinden, waar de volledige vorm net iets te formeel aanvoelt."
+    ]
+  },
+  {
+    "slug": "geru",
+    "title": "Geru",
+    "excerpt": "Geru is de afkorting voor gemeenschappelijke ruimte, de woonkamer van een studentenhuis.",
+    "paragraphs": [
+      "Na college schoof iedereen weer aan in de geru voor een aflevering op de bank.",
+      "Afhankelijk van de stad hoor je voor dezelfde ruimte ook wel GR, GK of fusie, maar de betekenis blijft steeds hetzelfde."
+    ],
+    "relatedTerms": [
+      "gr",
+      "gk",
+      "fusie"
+    ]
+  },
+  {
+    "slug": "gezel",
+    "title": "Gezel",
+    "excerpt": "Gezel is de verkorte vorm van gezellig, veelvuldig gebruikt in studentenkringen.",
+    "paragraphs": [
+      "\"Wat gezel dat je er ook bij bent vanavond\", zei ze met een grote glimlach.",
+      "Je hoort ook wel de variant gezellie, vooral als het net wat overdreven enthousiast gezegd moet worden."
+    ]
+  },
+  {
+    "slug": "ginto",
+    "title": "GinTo",
+    "excerpt": "GinTo is de studentikoze afkorting voor gin-tonic, hét terrasdrankje bij uitstek.",
+    "paragraphs": [
+      "Op het zonnige terras bestelde ze zonder twijfel een GinTo.",
+      "Veel korter dan het origineel is de afkorting eigenlijk niet, maar het klinkt net wat lekkerder stuko uit de mond."
+    ]
+  },
+  {
+    "slug": "gk",
+    "title": "GK",
+    "excerpt": "GK staat voor gemeenschappelijke kamer, hetzelfde als een GR of fusie in een studentenhuis.",
+    "paragraphs": [
+      "In hun huis noemden ze de woonkamer altijd de GK in plaats van de geru.",
+      "Praktisch gezien gaat het altijd om dezelfde ruimte: welke naam je gebruikt, hangt vooral af van de studentenstad waarin je woont."
+    ],
+    "relatedTerms": [
+      "gr",
+      "geru",
+      "fusie"
+    ]
+  },
+  {
+    "slug": "goos",
+    "title": "Goos",
+    "excerpt": "Goos is een andere naam voor gozer: een vriend, of soms juist een sukkel.",
+    "paragraphs": [
+      "\"Hé goos, schuif je nog aan?\", riep hij door de kamer.",
+      "Het woord kan, afhankelijk van de toon waarop het gezegd wordt, net zo goed vriendelijk als spottend bedoeld zijn."
+    ],
+    "relatedTerms": [
+      "gozer"
+    ]
+  },
+  {
+    "slug": "gozer",
+    "title": "Gozer",
+    "excerpt": "Gozer is studentenslang voor een vriend, of juist een sukkel, afhankelijk van de context.",
+    "paragraphs": [
+      "\"Rustig aan, gozer\", zei ze toen hij weer een dom grapje maakte.",
+      "Afhankelijk van de toon waarop het wordt gezegd, kan hetzelfde woord dus zowel liefkozend als een lichte belediging zijn."
+    ],
+    "relatedTerms": [
+      "goos"
+    ]
+  },
+  {
+    "slug": "gr",
+    "title": "GR",
+    "excerpt": "GR staat voor gemeenschappelijke ruimte, de gedeelde huiskamer van een studentenhuis.",
+    "paragraphs": [
+      "Op vrijdagavond stond de GR altijd vol met huisgenoten en hun vrienden.",
+      "Afhankelijk van de studentenstad hoor je voor dezelfde ruimte in plaats daarvan ook wel GK of fusie gebruiken."
+    ],
+    "relatedTerms": [
+      "geru",
+      "gk",
+      "fusie"
+    ]
+  },
+  {
+    "slug": "grondpannenkoek",
+    "title": "Grondpannenkoek",
+    "excerpt": "Grondpannenkoek, ook wel straatpannenkoek, is een ander woord voor een grondpizza.",
+    "paragraphs": [
+      "Na de derde shot eindigde de avond helaas in een flinke grondpannenkoek.",
+      "Het woord wordt door elkaar gebruikt met grondpizza en straatpannenkoek, allemaal even smakelijke omschrijvingen voor hetzelfde ongelukje."
+    ],
+    "relatedTerms": [
+      "grondpizza"
+    ]
+  },
+  {
+    "slug": "grondpizza",
+    "title": "Grondpizza",
+    "excerpt": "Een grondpizza is braaksel op de grond, vaak in een min of meer ronde vorm.",
+    "paragraphs": [
+      "Bij het verlaten van de club moesten ze goed uitkijken voor een verdwaalde grondpizza.",
+      "Bij uitgaansgelegenheden duikt de term ook op als het braaksel juist in een urinoir belandt in plaats van op de vloer."
+    ],
+    "relatedTerms": [
+      "grondpannenkoek",
+      "barf"
+    ]
+  },
+  {
+    "slug": "guac",
+    "title": "Guac",
+    "excerpt": "Guac is de afkorting voor guacamole, de Mexicaanse avocadodip.",
+    "paragraphs": [
+      "Bij de nacho-avond mocht de guac natuurlijk niet ontbreken.",
+      "De dip bestaat uit avocado, peper, zout en citroensap, en is bij bijna elke studenten-borrel met chips wel te vinden."
+    ]
+  }
+]

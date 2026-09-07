@@ -15,7 +15,7 @@
           <span class="blog-hero__badge">Uitgelicht</span>
           <span class="section-label">{{ featuredPost.subCategory || featuredPost.category }}</span>
         </div>
-        <h2 class="blog-hero__title">{{ featuredPost.title }}</h2>
+        <h2 class="blog-hero__title">{{ featuredPost.shortTitle || featuredPost.title }}</h2>
         <p class="blog-hero__excerpt">{{ featuredPost.excerpt }}</p>
         <span class="blog-card__link">Lees meer →</span>
       </div>
@@ -45,25 +45,56 @@
     </div>
     }
 
-    <!-- Blog posts -->
-    @if (otherPosts.length > 0) {
-    <div class="blog-grid">
-      @for (post of otherPosts; track post.slug) {
-      <a [routerLink]="'/' + post.path" class="blog-card" [ngClass]="'blog-card--' + (post.variant || 'light')">
-        <picture style="display: contents">
-          <img [src]="post.image" [alt]="post.imageAlt" class="blog-card__thumbnail" loading="lazy">
-        </picture>
-        <div class="blog-card__body">
-          <span class="section-label">{{ post.subCategory || post.category }}</span>
-          <h3 class="blog-card__title">{{ post.title }}</h3>
-          <p class="blog-card__excerpt">{{ post.excerpt }}</p>
-          <div class="blog-card__footer">
-            <span class="blog-card__link">Lees meer →</span>
-          </div>
-        </div>
-      </a>
+    <!-- Letter filters -->
+    @if (letters.length > 0) {
+    <div class="letter-filter-bar">
+      @for (letter of letters; track letter) {
+      <button
+        type="button"
+        class="letter-filter-pill"
+        [class.letter-filter-pill--active]="activeLetter === letter"
+        (click)="toggleLetter(letter)">
+        {{ letter }}
+        @if (activeLetter === letter) {
+        <span class="filter-pill__close" aria-hidden="true">✕</span>
+        }
+      </button>
       }
     </div>
+    }
+
+    <!-- Blog posts -->
+    @if (category === 'Begrippen') {
+      @for (group of begripGroups; track group.letter) {
+      @if (!activeLetter) {
+      <h2 class="letter-heading">{{ group.letter }}</h2>
+      }
+      <div class="term-grid">
+        @for (post of group.posts; track post.slug) {
+        <a [routerLink]="'/' + post.path" class="term-card">
+          <h3 class="term-card__title">{{ post.shortTitle || post.title }}</h3>
+        </a>
+        }
+      </div>
+      }
+    } @else if (otherPosts.length > 0) {
+      <div class="blog-grid">
+        @for (post of otherPosts; track post.slug) {
+        <a [routerLink]="'/' + post.path" class="blog-card" [ngClass]="'blog-card--' + (post.variant || 'light')">
+          <picture style="display: contents">
+            <img [src]="post.image" [alt]="post.imageAlt" class="blog-card__thumbnail" loading="lazy">
+          </picture>
+          <div class="blog-card__body">
+            <span class="section-label">{{ post.subCategory || post.category }}</span>
+            <h3 class="blog-card__title">{{ post.title }}</h3>
+            <p class="blog-card__excerpt">{{ post.excerpt }}</p>
+            <div class="blog-card__footer">
+              <span class="blog-card__link">Lees meer →</span>
+            </div>
+          </div>
+        </a>
+        }
+      </div>
     }
 
     <!-- Extra SEO copy, only for the Drankspelletjes category -->
@@ -76,6 +107,19 @@
         <h3>Verschillende soorten drankspellen</h3>
         <p>Op AnyTimerApp verzamelen we alleen gratis drankspellen. Je hoeft dus nergens voor te betalen om mee te doen. Soms heb je wel iets nodig om te spelen, maar meestal is dat goedkoop en zo in huis te halen. Bij de meeste drankspellen kom je uit met wat je toch al hebt liggen: een set speelkaarten, een paar dobbelstenen, een dop of een pen.</p>
         <p>Hierboven filter je op categorie: kaartspellen, dobbelspellen, behendigheidsspellen of overige drankspellen. Twijfel je nog waar je moet beginnen? Bekijk dan onze <a routerLink="/drankspellen">top 10 favoriete drankspellen</a> voor een snelle start.</p>
+      </div>
+    </div>
+    }
+
+    <!-- Extra SEO copy, only for the Begrippen category -->
+    @if (category === 'Begrippen') {
+    <div class="legal-body">
+      <div class="legal-section">
+        <h2>Wat is studententaal?</h2>
+        <p>Studententaal is de verzamelnaam voor alle woorden, afkortingen en uitdrukkingen die binnen het studentenleven ontstaan. Van drinktermen als adten en <a routerLink="/blog/begrippen/bak-trekken">bak trekken</a> tot verenigingsjargon als <a routerLink="/blog/begrippen/dispuut">dispuut</a> en <a routerLink="/blog/begrippen/kmt">KMT</a>: elke studentenstad en vereniging heeft zijn eigen woordenschat, maar veel termen worden overal herkend.</p>
+
+        <h3>De meest gebruikte studentenbegrippen</h3>
+        <p>Sommige begrippen hoor je bijna overal terug. Denk aan een kater hebben, brak zijn, indrinken voor het uitgaan, gewoon lekker pinten harken, of het verschil tussen je studentenhuis en <a routerLink="/blog/begrippen/thuisthuis">thuis thuis</a>. Hierboven vind je ze allemaal overzichtelijk van A tot Z, met een letterfilter zodat je snel het begrip vindt dat je zoekt. Benieuwd wat een anytimer precies is? Bekijk dan onze <a routerLink="/wat-is-een-anytimer">uitleg over de anytimer</a>.</p>
       </div>
     </div>
     }

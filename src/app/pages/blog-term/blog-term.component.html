@@ -1,0 +1,37 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="letter-filter-bar">
+      @for (letter of letters; track letter) {
+      <a
+        [routerLink]="'/blog/begrippen'"
+        [queryParams]="{ letter: letter }"
+        class="letter-filter-pill">
+        {{ letter }}
+      </a>
+      }
+    </div>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Wat betekent: {{ post.title }}?</h1>
+      <p class="legal-intro">{{ post.excerpt }}</p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <blockquote class="term-example" [innerHTML]="content.paragraphs[0]"></blockquote>
+        @for (paragraph of content.paragraphs.slice(1); track paragraph) {
+        <p [innerHTML]="paragraph"></p>
+        }
+      </div>
+
+      <div class="legal-section">
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

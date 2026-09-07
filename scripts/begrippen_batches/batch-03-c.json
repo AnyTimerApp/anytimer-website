@@ -1,0 +1,111 @@
+[
+  {
+    "slug": "cappu",
+    "title": "Cappu",
+    "excerpt": "Cappu is de studentikoze afkorting voor cappuccino, tegenwoordig ook in plantaardige varianten.",
+    "paragraphs": [
+      "Op het terras bestelde ze snel nog een cappu voordat het college begon.",
+      "Naast de klassieke variant met koemelk bestaan er inmiddels ook varianten met haver-, soja-, kokos- of amandelmelk, elk met hun eigen fans."
+    ]
+  },
+  {
+    "slug": "chlam",
+    "title": "Chlam",
+    "excerpt": "Chlam is de afkorting voor chlamydia, een veelvoorkomende soa onder studenten.",
+    "paragraphs": [
+      "Na een onrustige nacht besloot hij toch maar zich te laten testen op chlam.",
+      "De soa wordt vooral bij onbeschermde seks opgelopen en valt in het begin vaak niet op. Een condo helpt om chlam te voorkomen."
+    ],
+    "relatedTerms": [
+      "condo"
+    ]
+  },
+  {
+    "slug": "condo",
+    "title": "Condo",
+    "excerpt": "Condo, ook wel regenjas, is de studententerm voor een condoom.",
+    "paragraphs": [
+      "\"Heb jij toevallig een condo bij je?\", vroeg ze fluisterend aan haar huisgenoot.",
+      "Het is de simpelste manier om chlam en andere soa's te voorkomen, en je hoort er in studentenkringen ook wel connie tegen zeggen."
+    ],
+    "relatedTerms": [
+      "chlam",
+      "connie"
+    ]
+  },
+  {
+    "slug": "connie",
+    "title": "Connie",
+    "excerpt": "Connie is een ander woord voor condoom, net als condo en regenjas.",
+    "paragraphs": [
+      "In zijn portemonnee zat voor de zekerheid altijd wel een connie.",
+      "Het woord wordt door elkaar gebruikt met condo, afhankelijk van de stad of vriendengroep waarin je verkeert."
+    ],
+    "relatedTerms": [
+      "condo"
+    ]
+  },
+  {
+    "slug": "constitutieborrel",
+    "title": "Constitutieborrel",
+    "excerpt": "Een constitutieborrel (cobo) is de borrel waarop een nieuw bestuur wordt gefeliciteerd met zijn aantreden.",
+    "paragraphs": [
+      "Na de wissel van het bestuur stond de hele sociëteit vol voor de constitutieborrel.",
+      "Ieder bestuurslid recipieert tijdens de cobo: gasten komen dan een voor een langs om te feliciteren met de nieuwe functie."
+    ],
+    "relatedTerms": [
+      "bestuur",
+      "alv"
+    ]
+  },
+  {
+    "slug": "corps",
+    "title": "Corps",
+    "excerpt": "Het corps is doorgaans de oudste studentenvereniging van een stad, gebouwd op oude tradities.",
+    "paragraphs": [
+      "Al generaties lang wordt er binnen het corps op precies dezelfde manier gedronken op de sociëteit.",
+      "De vereniging draait sterk op tradities en heeft vaak een uitgebreide hiërarchie van disputen en jaarclubs, met eigen ongeschreven regels ofwel mores."
+    ],
+    "relatedTerms": [
+      "bal",
+      "bestuur"
+    ]
+  },
+  {
+    "slug": "cursist",
+    "title": "Cursist",
+    "excerpt": "Cursist is de term die wo-studenten weleens gebruiken voor een hbo-student.",
+    "paragraphs": [
+      "\"Ben jij nou cursist of studeer je echt?\", grapte hij tegen zijn hbo-vriend.",
+      "De term wordt vooral door universiteitsstudenten gebruikt, soms om zich af te zetten tegen hbo-studenten en hun eigen cursus."
+    ],
+    "relatedTerms": [
+      "cursus"
+    ]
+  },
+  {
+    "slug": "cursus",
+    "title": "Cursus",
+    "excerpt": "Cursus is de term die wo-studenten weleens gebruiken voor een hbo-opleiding.",
+    "paragraphs": [
+      "\"Volg jij nou een studie of gewoon een cursus?\", vroeg hij plagend.",
+      "De term wordt met een licht spottende ondertoon gebruikt om een hbo-opleiding te bestempelen als minder zwaar dan een universitaire studie."
+    ],
+    "relatedTerms": [
+      "cursist"
+    ]
+  },
+  {
+    "slug": "commissie",
+    "title": "Commissie",
+    "excerpt": "Een commissie is een groep leden die het bestuur van een vereniging op een specifiek onderdeel ondersteunt.",
+    "paragraphs": [
+      "Dit jaar zit ze in de feestcommissie, samen met vier andere jaargenoten.",
+      "Een commissie ondersteunt het bestuur op een specifiek vlak, zoals ledenwerving, evenementen of de bar. De meeste verenigingen hebben tientallen commissies naast elkaar."
+    ],
+    "relatedTerms": [
+      "bestuur",
+      "barco"
+    ]
+  }
+]
