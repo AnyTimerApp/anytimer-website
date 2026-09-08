@@ -45,6 +45,8 @@ export class StefStuntpilootComponent {
     meta.updateTag({ property: 'og:title', content: title });
     meta.updateTag({ property: 'og:description', content: description });
     meta.updateTag({ property: 'og:image', content: image });
+    meta.updateTag({ property: 'og:image:width', content: '1536' });
+    meta.updateTag({ property: 'og:image:height', content: '1024' });
     meta.updateTag({ property: 'og:image:alt', content: 'Stef Stuntpiloot drankspel met het vliegtuigje dat rondjes vliegt boven de kippenhokken' });
     meta.updateTag({ property: 'og:site_name', content: 'AnyTimerApp' });
     meta.updateTag({ property: 'og:locale', content: 'nl_NL' });

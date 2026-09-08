@@ -128,6 +128,10 @@ export class BlogCategoryComponent {
     meta.updateTag({ property: 'og:title', content: title });
     meta.updateTag({ property: 'og:description', content: description });
     meta.updateTag({ property: 'og:image', content: image });
+    // Every current blog cover image is exported at 1536x1024 — hardcoded
+    // rather than stored per-post since BlogPost has no width/height field.
+    meta.updateTag({ property: 'og:image:width', content: '1536' });
+    meta.updateTag({ property: 'og:image:height', content: '1024' });
     meta.updateTag({ property: 'og:image:alt', content: firstPost.imageAlt });
     meta.updateTag({ property: 'og:site_name', content: 'AnyTimerApp' });
     meta.updateTag({ property: 'og:locale', content: 'nl_NL' });

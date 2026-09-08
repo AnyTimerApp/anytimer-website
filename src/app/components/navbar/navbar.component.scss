@@ -270,8 +270,9 @@
   .nav-item__toggle {
     display: flex;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -12px;
+    top: -12px;
+    padding: 16px;
   }
 
   .nav-dropdown {
