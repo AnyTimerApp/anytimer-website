@@ -2,30 +2,8 @@ import { Component, Inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
-import { BLOG_POSTS, CATEGORY_SLUGS, CATEGORY_DISPLAY_ORDER, BlogCategory, BlogPost } from './blog-posts.data';
+import { BLOG_POSTS, CATEGORY_SLUGS, CATEGORY_DISPLAY_ORDER, CategoryCard, getCategoryCards, BlogPost } from './blog-posts.data';
 import { injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
-
-export interface CategoryCard {
-  category: BlogCategory;
-  slug: string;
-  count: number;
-  blurb: string;
-  variant: 'light' | 'blue' | 'dark' | 'accent';
-}
-
-const CATEGORY_VARIANTS: Record<BlogCategory, 'light' | 'blue' | 'dark' | 'accent'> = {
-  Begrippen: 'light',
-  Inspiratie: 'light',
-  Weetjes: 'light',
-  Drankspelletjes: 'light'
-};
-
-const CATEGORY_BLURBS: Record<BlogCategory, string> = {
-  Begrippen: 'Duidelijke uitleg van anytimer-begrippen.',
-  Inspiratie: 'Ideeën voor een leuke avond met vrienden.',
-  Weetjes: 'Handige tips en regels op een rij.',
-  Drankspelletjes: 'Alle drankspelletjes uitgelicht.'
-};
 
 @Component({
   selector: 'app-blog',
@@ -64,13 +42,7 @@ export class BlogComponent {
   }
 
   get categoryCards(): CategoryCard[] {
-    return CATEGORY_DISPLAY_ORDER.map(category => ({
-      category,
-      slug: CATEGORY_SLUGS[category],
-      count: this.posts.filter(p => p.category === category).length,
-      blurb: CATEGORY_BLURBS[category],
-      variant: CATEGORY_VARIANTS[category]
-    }));
+    return getCategoryCards();
   }
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {

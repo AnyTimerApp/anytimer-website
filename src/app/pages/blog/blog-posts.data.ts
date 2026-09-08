@@ -13,6 +13,40 @@ export const CATEGORY_SLUGS: Record<BlogCategory, string> = {
 // Independent of BLOG_CATEGORIES' declaration order above.
 export const CATEGORY_DISPLAY_ORDER: BlogCategory[] = ['Drankspelletjes', 'Inspiratie', 'Begrippen', 'Weetjes'];
 
+export interface CategoryCard {
+  category: BlogCategory;
+  slug: string;
+  count: number;
+  blurb: string;
+  variant: 'light' | 'blue' | 'dark' | 'accent';
+}
+
+const CATEGORY_VARIANTS: Record<BlogCategory, 'light' | 'blue' | 'dark' | 'accent'> = {
+  Begrippen: 'light',
+  Inspiratie: 'light',
+  Weetjes: 'light',
+  Drankspelletjes: 'light'
+};
+
+const CATEGORY_BLURBS: Record<BlogCategory, string> = {
+  Begrippen: 'Duidelijke uitleg van anytimer-begrippen.',
+  Inspiratie: 'Ideeën voor een leuke avond met vrienden.',
+  Weetjes: 'Handige tips en regels op een rij.',
+  Drankspelletjes: 'Alle drankspelletjes uitgelicht.'
+};
+
+// Shared by /blog and the homepage Blog section — single source for the 4
+// category cards so their blurb/variant/count never drift out of sync.
+export function getCategoryCards(): CategoryCard[] {
+  return CATEGORY_DISPLAY_ORDER.map(category => ({
+    category,
+    slug: CATEGORY_SLUGS[category],
+    count: BLOG_POSTS.filter(p => p.category === category).length,
+    blurb: CATEGORY_BLURBS[category],
+    variant: CATEGORY_VARIANTS[category]
+  }));
+}
+
 // Finer-grained classification used only within the Drankspelletjes category (the
 // "Categorie" stat shown on each single-game post's info card). Stored here — not
 // hardcoded per-post — so a future filter (by game type, e.g. only Kaartspel) can read
@@ -65,7 +99,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-04-10',
     image: 'assets/blogs/drankspellen/mario barf.webp',
     imageAlt: 'Mario Barf drankspel',
-    variant: 'blue'
+    variant: 'light'
   },
   {
     slug: 'wat-is-een-adtje',

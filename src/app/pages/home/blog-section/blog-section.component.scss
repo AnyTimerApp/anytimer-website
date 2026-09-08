@@ -1,0 +1,90 @@
+.blog-home-section {
+  background: #fff;
+  padding: 120px 0;
+}
+
+.section-header.centered {
+  text-align: center;
+  margin-bottom: 56px;
+
+  .section-intro {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+}
+
+/* Copied from blog.component.scss — same 4-column category grid used on /blog */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 64px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blog-home-subsection {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.blog-home-subheader {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 20px;
+
+  &:hover {
+    color: var(--primary);
+
+    .blog-home-subheader__arrow {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.blog-home-subtitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: inherit;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.blog-home-subheader__arrow {
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+/* Always a horizontal slider, on every screen size — same scroll behavior
+   the mobile breakpoint already used for the dedicated game pages'
+   "Vergelijkbare"/"Aanbevolen" rows (blog-article-shared.scss). */
+.related-slider {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 0 -24px;
+  padding: 16px 24px 32px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  app-blog-card {
+    flex: 0 0 min(85%, 340px);
+  }
+}

@@ -6,11 +6,12 @@ import { FeaturesComponent } from './features/features.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { AboutComponent } from './about/about.component';
 import { TeamComponent } from './team/team.component';
+import { BlogSectionComponent } from './blog-section/blog-section.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroComponent, HowItWorksComponent, FeaturesComponent, AboutComponent, TeamComponent],
+  imports: [HeroComponent, HowItWorksComponent, FeaturesComponent, AboutComponent, BlogSectionComponent, TeamComponent],
   templateUrl: 'home.component.html',
 })
 export class HomeComponent {
