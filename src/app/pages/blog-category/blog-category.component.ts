@@ -70,12 +70,13 @@ export class BlogCategoryComponent {
     this.activeFilter = this.activeFilter === sub ? null : sub;
   }
 
-  // Begrippen posts, alphabetical by title (not date), hero excluded, grouped
-  // per first letter so each group can get its own big letter heading.
+  // Begrippen posts, alphabetical by title (not date), grouped per first
+  // letter so each group can get its own big letter heading. Unlike the
+  // other 3 categories, the featured post stays in this list too — e.g.
+  // "Anytimer" should still be findable under A even while it's the hero.
   get begripGroups(): { letter: string; posts: BlogPost[] }[] {
     const displayTitle = (p: BlogPost) => p.shortTitle || p.title;
     const rest = this.posts
-      .filter(p => p.slug !== this.featuredPost.slug)
       .filter(p => !this.activeLetter || firstLetterOf(p) === this.activeLetter)
       .sort((a, b) => displayTitle(a).localeCompare(displayTitle(b), 'nl'));
 

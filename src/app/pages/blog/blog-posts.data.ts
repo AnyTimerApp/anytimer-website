@@ -51,7 +51,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Wat is een anytimer?',
     shortTitle: 'Anytimer',
     excerpt: 'Een anytimer is een tegoed tussen vrienden. Je verdient hem na een verloren weddenschap, een domme actie of een challenge. Je kan hem inzetten wanneer je maar wilt.',
-    date: '2026-03-27',
+    date: '2026-04-12',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'Wat is een anytimer uitleg',
     variant: 'light'
@@ -72,8 +72,9 @@ export const BLOG_POSTS: BlogPost[] = [
     path: 'wat-is-een-adtje',
     category: 'Begrippen',
     title: 'Wat is een adtje?',
+    shortTitle: 'Adtje',
     excerpt: 'Een adtje betekent dat je een drankje in één keer leegdrinkt. Leer tips voor atten, het verschil met een shotgun en wat een rietbak is.',
-    date: '2026-04-12',
+    date: '2026-03-27',
     image: 'assets/blogs/wat is een adtje/wat is een adtje.webp',
     imageAlt: 'Wat is een adtje',
     variant: 'light'

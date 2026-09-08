@@ -16,7 +16,7 @@ faqs: { question: string; answer: string; link?: string; linkText?: string; open
     question: 'Wat is een anytimer?',
     answer: 'Een anytimer is eigenlijk gewoon een tegoed dat je van je vrienden kunt krijgen of aan iemand kunt geven. Bijvoorbeeld na een verloren challenge, domme actie of weddenschap. En het leuke is: die kan op elk moment ingezet worden. Dus ja, ook op een brak moment of precies wanneer het het minst uitkomt.',
     link: '/wat-is-een-anytimer',
-    linkText: 'Lees meer over het concept',
+    linkText: 'Lees wat een anytimer is',
     open: true
   },
   {
