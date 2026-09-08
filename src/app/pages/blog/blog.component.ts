@@ -44,9 +44,15 @@ export class BlogComponent {
   // Drankspelletjes and Begrippen posts never show up as individual articles
   // here — Drankspelletjes because there are too many single-game posts to
   // list, Begrippen because those are short, image-free glossary entries.
-  // Both stay reachable only through their own category hub.
+  // Both stay reachable only through their own category hub. Exception: the
+  // two original, full-length Begrippen articles (with their own images)
+  // still belong on the main feed like any other article.
+  private readonly LISTABLE_BEGRIPPEN_EXCEPTIONS = ['wat-is-een-anytimer', 'wat-is-een-adtje'];
+
   private isListable(post: BlogPost): boolean {
-    return post.category !== 'Drankspelletjes' && post.category !== 'Begrippen';
+    if (post.category === 'Drankspelletjes') return false;
+    if (post.category === 'Begrippen') return this.LISTABLE_BEGRIPPEN_EXCEPTIONS.includes(post.slug);
+    return true;
   }
 
   get featuredPost(): BlogPost {
