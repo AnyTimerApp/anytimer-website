@@ -56,6 +56,33 @@
       background: var(--text-main);
     }
   }
+
+  /* Only while the mobile dropdown menu is actually open does the top bar
+     itself switch to solid white with dark text (so it doesn't clash with
+     the now-opaque menu beneath it). Closed, it keeps the transparent hero
+     look on the home page — that's the intended, "cooler" default. */
+  &.menu-open {
+    @media (max-width: 768px) {
+      background: #fff;
+      box-shadow: 0 1px 0 var(--border-light);
+
+      .logo {
+        color: var(--text-main);
+      }
+
+      .nav-links a {
+        color: var(--text-secondary);
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+
+      .hamburger span {
+        background: var(--text-main);
+      }
+    }
+  }
 }
 
 .nav-inner {
@@ -105,22 +132,34 @@
     }
   }
 
+  /* display stays flex always on mobile (it's an absolutely positioned
+     overlay, so it doesn't affect layout while "closed") so opacity/transform
+     can actually transition — display:none/flex can't animate, which is why
+     this used to snap open/closed instantly instead of matching the 0.3s
+     fade already used by the top bar's own background transition. */
   @media (max-width: 768px) {
-    display: none;
+    display: flex;
     position: absolute;
     top: var(--header-height);
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.94);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: #fff;
     flex-direction: column;
     padding: 24px;
     gap: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
 
     &.open {
-      display: flex;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
     }
   }
 }
@@ -154,7 +193,7 @@
 
   a {
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 500;
 
     &:hover {
@@ -271,18 +310,18 @@
   font-size: 0.9rem;
 }
 
-/* Transparent navbar state — glass mobile menu */
+/* Mobile menu always stays solid white, even while the navbar itself is
+   still in its transparent "not scrolled" state (e.g. on the homepage hero). */
 .navbar:not(.scrolled) .nav-links {
   @media (max-width: 768px) {
-    background: rgba(255, 255, 255, 0.12);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 
     a {
-      color: rgba(255, 255, 255, 0.9);
+      color: var(--text-secondary);
 
       &:hover {
-        color: #fff;
+        color: var(--primary);
       }
     }
   }
