@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { RouterLink, Router, NavigationEnd } from '@angular/router';
@@ -38,8 +38,22 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   private routerSub!: Subscription;
 
-  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private elementRef: ElementRef<HTMLElement>
+  ) {
     this.isHeroPage = this.isHomePath(this.router.url);
+  }
+
+  // Closes the mobile menu on any click outside the navbar itself. Clicks on
+  // the hamburger or a menu link are inside the navbar, so they're left to
+  // their own (click) handlers — this only reacts to everything else.
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    if (this.menuOpen && !this.elementRef.nativeElement.contains(event.target as Node)) {
+      this.closeMenu();
+    }
   }
 
   ngOnInit() {
