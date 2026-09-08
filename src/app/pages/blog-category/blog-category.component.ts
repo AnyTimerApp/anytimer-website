@@ -73,10 +73,11 @@ export class BlogCategoryComponent {
   // Begrippen posts, alphabetical by title (not date), hero excluded, grouped
   // per first letter so each group can get its own big letter heading.
   get begripGroups(): { letter: string; posts: BlogPost[] }[] {
+    const displayTitle = (p: BlogPost) => p.shortTitle || p.title;
     const rest = this.posts
       .filter(p => p.slug !== this.featuredPost.slug)
       .filter(p => !this.activeLetter || firstLetterOf(p) === this.activeLetter)
-      .sort((a, b) => a.title.localeCompare(b.title, 'nl'));
+      .sort((a, b) => displayTitle(a).localeCompare(displayTitle(b), 'nl'));
 
     const groups: { letter: string; posts: BlogPost[] }[] = [];
     for (const post of rest) {
