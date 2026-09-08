@@ -41,12 +41,20 @@ export class BlogComponent {
     return [...this.posts].sort((a, b) => b.date.localeCompare(a.date));
   }
 
+  // Drankspelletjes and Begrippen posts never show up as individual articles
+  // here — Drankspelletjes because there are too many single-game posts to
+  // list, Begrippen because those are short, image-free glossary entries.
+  // Both stay reachable only through their own category hub.
+  private isListable(post: BlogPost): boolean {
+    return post.category !== 'Drankspelletjes' && post.category !== 'Begrippen';
+  }
+
   get featuredPost(): BlogPost {
-    return this.sortedPosts.find(p => p.category !== 'Drankspelletjes') ?? this.sortedPosts[0];
+    return this.sortedPosts.find(p => this.isListable(p)) ?? this.sortedPosts[0];
   }
 
   get otherPosts(): BlogPost[] {
-    return this.sortedPosts.filter(p => p !== this.featuredPost && p.category !== 'Drankspelletjes');
+    return this.sortedPosts.filter(p => p !== this.featuredPost && this.isListable(p));
   }
 
   get categoryCards(): CategoryCard[] {
