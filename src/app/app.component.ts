@@ -4,12 +4,14 @@ import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CookieConsentComponent } from './components/cookie-consent/cookie-consent.component';
+import { AnalyticsService } from './shared/analytics.service';
 
 const BASE_URL = 'https://anytimer.app';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FooterComponent, NavbarComponent],
+  imports: [RouterOutlet, FooterComponent, NavbarComponent, CookieConsentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -18,18 +20,23 @@ export class AppComponent implements OnInit {
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
-    private router: Router
+    private router: Router,
+    private analytics: AnalyticsService
   ) {}
 
   ngOnInit() {
     this.setLinkTags(this.router.url);
     this.setSmoothScroll(this.router.url);
 
+    this.analytics.initIfConsented();
+    this.analytics.trackPageView(this.router.url);
+
     this.router.events
       .pipe(filter(e => e instanceof NavigationEnd))
       .subscribe((e: any) => {
         this.setLinkTags(e.urlAfterRedirects);
         this.setSmoothScroll(e.urlAfterRedirects);
+        this.analytics.trackPageView(e.urlAfterRedirects);
       });
   }
 
