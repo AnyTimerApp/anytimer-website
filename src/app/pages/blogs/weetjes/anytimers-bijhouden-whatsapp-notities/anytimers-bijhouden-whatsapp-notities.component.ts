@@ -4,18 +4,22 @@ import { RouterLink } from '@angular/router';
 import { isPlatformBrowser, DOCUMENT } from '@angular/common';
 import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcrumbs.component';
 import { DownloadCtaComponent } from '../../../../components/download-cta/download-cta.component';
+import { BlogCardComponent } from '../../../../components/blog-card/blog-card.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
 import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
+
+const RELATED_SLUGS = ['wat-is-een-anytimer', 'mag-je-een-anytimer-weigeren', 'wat-is-de-beste-adt-timer'];
 
 @Component({
   selector: 'app-anytimers-bijhouden-whatsapp-notities',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
+  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'anytimers-bijhouden-whatsapp-notities.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './anytimers-bijhouden-whatsapp-notities.component.scss']
 })
 export class AnytimersWhatsappNotitiesComponent {
   readonly category = BLOG_POSTS.find(p => p.slug === 'anytimers-bijhouden-whatsapp-notities')!.category;
+  readonly relatedReading = RELATED_SLUGS.map(slug => BLOG_POSTS.find(p => p.slug === slug)!);
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },

@@ -82,6 +82,15 @@
         <p>Dat is waar het om draait. Je wilt niet terugscrollen in WhatsApp. Je wilt niet zoeken naar een notitie. En je wilt al helemaal niet halverwege een avond uitzoeken of iemand nou terecht een any op jou heeft of gewoon iets uit zijn duim staat te zuigen.</p>
 
         <p>En zoek je ook inspiratie voor een leuke avond? Bekijk onze <a routerLink="/drankspellen">top 10 drankspellen</a>.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Meer lezen</h2>
+        <div class="related-slider">
+          @for (post of relatedReading; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
 
         <app-download-cta></app-download-cta>
       </div>

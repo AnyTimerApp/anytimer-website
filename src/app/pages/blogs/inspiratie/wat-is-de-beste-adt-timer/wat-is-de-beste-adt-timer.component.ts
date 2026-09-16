@@ -4,18 +4,22 @@ import { RouterLink } from '@angular/router';
 import { isPlatformBrowser, DOCUMENT } from '@angular/common';
 import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcrumbs.component';
 import { DownloadCtaComponent } from '../../../../components/download-cta/download-cta.component';
+import { BlogCardComponent } from '../../../../components/blog-card/blog-card.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
 import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
+
+const RELATED_SLUGS = ['wat-is-een-anytimer', 'anytimers-bijhouden-whatsapp-notities', 'mag-je-een-anytimer-weigeren'];
 
 @Component({
   selector: 'app-wat-is-de-beste-adt-timer',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
+  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'wat-is-de-beste-adt-timer.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './wat-is-de-beste-adt-timer.component.scss']
 })
 export class WatIsDeBestAdtTimerComponent {
   readonly category = BLOG_POSTS.find(p => p.slug === 'wat-is-de-beste-adt-timer')!.category;
+  readonly relatedReading = RELATED_SLUGS.map(slug => BLOG_POSTS.find(p => p.slug === slug)!);
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },

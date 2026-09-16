@@ -6,3 +6,25 @@
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
+
+/* juridisch.component.scss's shared h3 rule uppercases every h3, which
+   reads fine for the short subheadings it was designed for, but turns the
+   FAQ questions on this page into full-caps sentences. Restore normal
+   sentence casing just here — the question text is already written that
+   way in the template. */
+.legal-section h3 {
+  text-transform: none;
+}
+
+/* download-cta's shared -60px bottom margin assumes it's the last thing on
+   the page (true on every other page it's used on) — here it's followed by
+   the "Meer lezen" section, which left far less space below the card than
+   above it. Mirror its own 40px top margin so the gap reads as symmetric,
+   scoped to this page only so every other page keeps its tight finish. */
+app-download-cta ::ng-deep .contact-card {
+  // The compiled ::ng-deep selector loses its scoping attribute here, so it
+  // ties with (and loses to, on specificity) the component's own
+  // [_ngcontent-xxx] rule below it in the same stylesheet — !important is
+  // needed to actually win the override, not just style preference.
+  margin-bottom: 40px !important;
+}

@@ -39,6 +39,15 @@
         </ul>
         <p>Eigenlijk ga je ervan uit dat je vrienden over een bepaalde mate van gezond verstand beschikken, zodat
           niemand in gevaar wordt gebracht.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Meer lezen</h2>
+        <div class="related-slider">
+          @for (post of relatedReading; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
 
         <app-download-cta></app-download-cta>
       </div>

@@ -108,6 +108,15 @@
         <p>De beste adt timer is uiteindelijk degene die je het leukste vind om te gebruiken. Het is degene die het minste gezeik oplevert.</p>
         <p>Wil je nu timen? Gebruik een app op je telefoon. Anders kan je een hardware product kopen.</p>
         <p>En wil je meer ideeën voor avonden met vrienden? Check onze <a routerLink="/drankspellen">top 10 drankspellen</a> of lees meer over <a routerLink="/wat-is-een-anytimer">hoe anytimers werken</a>.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Meer lezen</h2>
+        <div class="related-slider">
+          @for (post of relatedReading; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
 
         <app-download-cta></app-download-cta>
       </div>

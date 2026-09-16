@@ -35,9 +35,14 @@ export class BlogSectionComponent {
 
   // Newest posts that aren't Drankspelletjes (too many single-game posts) or
   // Begrippen (short, image-free glossary entries) — mirrors the exclusion
-  // already used for the main /blog feed.
-  readonly latestPosts: BlogPost[] = [...BLOG_POSTS]
-    .filter(p => p.category !== 'Drankspelletjes' && p.category !== 'Begrippen')
-    .sort((a, b) => b.date.localeCompare(a.date))
-    .slice(0, 5);
+  // already used for the main /blog feed. The Top 10 drankspellen post is
+  // pinned first regardless of date, then the rest fill in by recency.
+  readonly latestPosts: BlogPost[] = (() => {
+    const eligible = BLOG_POSTS.filter(p => p.category !== 'Drankspelletjes' && p.category !== 'Begrippen');
+    const pinned = eligible.find(p => p.slug === 'drankspellen');
+    const rest = eligible
+      .filter(p => p.slug !== 'drankspellen')
+      .sort((a, b) => b.date.localeCompare(a.date));
+    return (pinned ? [pinned, ...rest] : rest).slice(0, 5);
+  })();
 }
