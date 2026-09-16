@@ -2,6 +2,16 @@
   margin-bottom: 28px;
 }
 
+/* Reserves layout space for the article hero image before it loads (source
+   images are consistently 1536x1024 = 3:2) so it doesn't cause a layout
+   shift now that it loads eager instead of lazy. Each component's own
+   .game-image rule (width/margin/border-radius/etc.) still applies on top —
+   only aspect-ratio/object-fit live here since none of them declare it. */
+.game-image {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
 /* The example-sentence paragraph on a Begrippen term page — always the first
    entry in content.paragraphs, styled as a clearly recognizable quote. */
 .term-example {
