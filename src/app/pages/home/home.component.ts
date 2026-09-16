@@ -94,8 +94,8 @@ export class HomeComponent {
               },
               {
                 '@type': 'Question',
-                'name': 'Wat als iemand een anytimer niet accepteerd?',
-                'acceptedAnswer': { '@type': 'Answer', 'text': 'In eerste instantie blijft die zichtbaar als openstaand. Als de ander niet accepteerd krijg je je any terug. Zo blijft het voor iedereen duidelijk wat er nog staat en krijg je geen eindeloze discussies over wie wat nog tegoed heeft.' }
+                'name': 'Wat als iemand een anytimer niet accepteert?',
+                'acceptedAnswer': { '@type': 'Answer', 'text': 'In eerste instantie blijft die zichtbaar als openstaand. Als de ander niet accepteert krijg je je any terug. Zo blijft het voor iedereen duidelijk wat er nog staat en krijg je geen eindeloze discussies over wie wat nog tegoed heeft.' }
               }
             ]
           }

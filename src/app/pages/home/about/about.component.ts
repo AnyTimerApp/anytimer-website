@@ -35,8 +35,8 @@ faqs: { question: string; answer: string; link?: string; linkText?: string; open
     open: false
   },
   {
-    question: 'Wat als iemand een anytimer niet accepteerd?',
-    answer: 'In eerste instantie blijft die zichtbaar als openstaand. Als de ander niet accepteerd krijg je je any terug. Zo blijft het voor iedereen duidelijk wat er nog staat en krijg je geen eindeloze discussies over wie wat nog tegoed heeft. Als de ontvanger niet accepteerd mag je zelf uitvechten wat de consequenties zijn.',
+    question: 'Wat als iemand een anytimer niet accepteert?',
+    answer: 'In eerste instantie blijft die zichtbaar als openstaand. Als de ander niet accepteert krijg je je any terug. Zo blijft het voor iedereen duidelijk wat er nog staat en krijg je geen eindeloze discussies over wie wat nog tegoed heeft. Als de ontvanger niet accepteert mag je zelf uitvechten wat de consequenties zijn.',
     open: false
   }
 ];
