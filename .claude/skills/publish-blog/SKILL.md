@@ -316,6 +316,15 @@ npm run build
 
 Fix any errors. If useful, `npm start` and check the new route renders correctly.
 
+## 6b. English counterpart
+
+Every change to the Dutch site must also be made on the English site (`/en/`),
+translated automatically. Translate localized, not literally (e.g. "huisavond" is not
+"housenight"), with English slugs/titles chosen for English search intent. Link the NL
+and EN page to each other (hreflang/`alternate`) and keep internal links within the
+same language. As long as `/en/` doesn't exist yet, list the pending EN counterpart in
+the summary to the user.
+
 ## 7. Stop here
 
 Do not run `git add`, `git commit`, or `git push`. Summarize what was created/changed
