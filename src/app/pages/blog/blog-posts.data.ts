@@ -596,6 +596,17 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'aura',
+    path: 'blog/begrippen/aura',
+    category: 'Begrippen',
+    title: 'Aura',
+    excerpt: 'Aura is de uitstraling of vibe die iemand heeft. Doe je iets cools, dan krijg je aura punten. Doe je iets gênants, dan verlies je ze.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'baco',
     path: 'blog/begrippen/baco',
     category: 'Begrippen',
@@ -662,6 +673,17 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'based',
+    path: 'blog/begrippen/based',
+    category: 'Begrippen',
+    title: 'Based',
+    excerpt: 'Based betekent dat iemand zichzelf durft te zijn of een eerlijke mening heeft, ook als die niet populair is.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'batsen',
     path: 'blog/begrippen/batsen',
     category: 'Begrippen',
@@ -722,6 +744,28 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Begrippen',
     title: 'Bodem leggen',
     excerpt: 'Een bodem leggen betekent goed eten voordat je gaat drinken, zodat je minder snel dronken wordt.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'body-count',
+    path: 'blog/begrippen/body-count',
+    category: 'Begrippen',
+    title: 'Body count',
+    excerpt: 'Body count is in slang het aantal mensen waarmee iemand seks heeft gehad.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'brainrot',
+    path: 'blog/begrippen/brainrot',
+    category: 'Begrippen',
+    title: 'Brainrot',
+    excerpt: 'Brainrot is het gevoel dat je hersenen smelten van te veel domme online content. Het woord slaat ook op die content zelf.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -849,6 +893,28 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'cancel-culture',
+    path: 'blog/begrippen/cancel-culture',
+    category: 'Begrippen',
+    title: 'Cancel culture',
+    excerpt: 'Cancel culture is het massaal laten vallen van iemand die iets kwetsends heeft gezegd of gedaan, vaak via social media.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'cap',
+    path: 'blog/begrippen/cap',
+    category: 'Begrippen',
+    title: 'Cap',
+    excerpt: 'Cap betekent een leugen of overdrijving. No cap betekent juist: ik meen het echt.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'cappu',
     path: 'blog/begrippen/cappu',
     category: 'Begrippen',
@@ -860,11 +926,44 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'catfish',
+    path: 'blog/begrippen/catfish',
+    category: 'Begrippen',
+    title: 'Catfish',
+    excerpt: 'Een catfish is iemand die online een nepprofiel gebruikt en zich voordoet als iemand anders.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'chlam',
     path: 'blog/begrippen/chlam',
     category: 'Begrippen',
     title: 'Chlam',
     excerpt: 'Chlam is de afkorting voor chlamydia, een veelvoorkomende soa onder studenten.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'clickbait',
+    path: 'blog/begrippen/clickbait',
+    category: 'Begrippen',
+    title: 'Clickbait',
+    excerpt: 'Clickbait is een titel of thumbnail die je nieuwsgierig maakt zodat je klikt, terwijl de inhoud vaak tegenvalt.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'clout',
+    path: 'blog/begrippen/clout',
+    category: 'Begrippen',
+    title: 'Clout',
+    excerpt: 'Clout is invloed, bekendheid of aanzien, vooral online. Wie clout heeft, krijgt veel aandacht.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -909,6 +1008,28 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Begrippen',
     title: 'Corps',
     excerpt: 'Het corps is doorgaans de oudste studentenvereniging van een stad, gebouwd op oude tradities.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'crash-out',
+    path: 'blog/begrippen/crash-out',
+    category: 'Begrippen',
+    title: 'Crash out',
+    excerpt: 'Crash out betekent dat iemand de controle verliest en helemaal ontploft van woede of frustratie.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'cringe',
+    path: 'blog/begrippen/cringe',
+    category: 'Begrippen',
+    title: 'Cringe',
+    excerpt: 'Cringe is iets zo gênant dat je je ervoor schaamt, ook als je het zelf niet deed. Plaatsvervangende schaamte dus.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -1047,6 +1168,17 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'doomscrolling',
+    path: 'blog/begrippen/doomscrolling',
+    category: 'Begrippen',
+    title: 'Doomscrolling',
+    excerpt: 'Doomscrolling is eindeloos door je telefoon scrollen, vaak langs negatief nieuws, terwijl je eigenlijk wilt stoppen.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'doorhalen',
     path: 'blog/begrippen/doorhalen',
     category: 'Begrippen',
@@ -1058,11 +1190,33 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'down-bad',
+    path: 'blog/begrippen/down-bad',
+    category: 'Begrippen',
+    title: 'Down bad',
+    excerpt: 'Down bad zijn betekent dat je zo wanhopig verliefd of eenzaam bent dat het een beetje gênant wordt.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'driesecondenregel',
     path: 'blog/begrippen/driesecondenregel',
     category: 'Begrippen',
     title: 'Driesecondenregel',
     excerpt: 'De driesecondenregel zegt dat je gevallen eten binnen drie seconden mag oprapen en alsnog opeten.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'drip',
+    path: 'blog/begrippen/drip',
+    category: 'Begrippen',
+    title: 'Drip',
+    excerpt: 'Drip is een stijlvolle outfit of goede kledingsmaak. Iemand met drip ziet er strak uit.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -1223,11 +1377,33 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'flex',
+    path: 'blog/begrippen/flex',
+    category: 'Begrippen',
+    title: 'Flex',
+    excerpt: 'Flexen is opscheppen of pronken met wat je hebt of wat je kunt.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'fomo',
     path: 'blog/begrippen/fomo',
     category: 'Begrippen',
     title: 'FOMO',
     excerpt: 'FOMO (fear of missing out) is de angst om iets leuks te missen, waardoor je toch naar elk feestje gaat.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'friendzone',
+    path: 'blog/begrippen/friendzone',
+    category: 'Begrippen',
+    title: 'Friendzone',
+    excerpt: 'In de friendzone zitten betekent dat jij meer wilt, maar de ander jou alleen als vriend of vriendin ziet.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -1267,11 +1443,33 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'fyp',
+    path: 'blog/begrippen/fyp',
+    category: 'Begrippen',
+    title: 'FYP',
+    excerpt: 'FYP staat voor For You Page. Dat is de persoonlijke feed op TikTok die het algoritme voor jou samenstelt.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'galaplicht',
     path: 'blog/begrippen/galaplicht',
     category: 'Begrippen',
     title: 'Galaplicht',
     excerpt: 'Galaplicht is het ongeschreven (en betwiste) idee dat een galadate verplicht tot meer dan alleen dansen.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'gaslighting',
+    path: 'blog/begrippen/gaslighting',
+    category: 'Begrippen',
+    title: 'Gaslighting',
+    excerpt: 'Gaslighting is iemand zo manipuleren dat diegene gaat twijfelen aan zijn of haar eigen geheugen of gevoel.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -1311,6 +1509,17 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'ghosting',
+    path: 'blog/begrippen/ghosting',
+    category: 'Begrippen',
+    title: 'Ghosting',
+    excerpt: 'Ghosting is plotseling alle contact verbreken zonder uitleg. Je verdwijnt als een geest.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'ginto',
     path: 'blog/begrippen/ginto',
     category: 'Begrippen',
@@ -1327,6 +1536,28 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Begrippen',
     title: 'GK',
     excerpt: 'GK staat voor gemeenschappelijke kamer, hetzelfde als een GR of fusie.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'glazing',
+    path: 'blog/begrippen/glazing',
+    category: 'Begrippen',
+    title: 'Glazing',
+    excerpt: 'Glazing is iemand overdreven veel ophemelen of complimenten geven. Slijmen dus.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'goat',
+    path: 'blog/begrippen/goat',
+    category: 'Begrippen',
+    title: 'GOAT',
+    excerpt: 'GOAT staat voor Greatest Of All Time. De beste ooit in iets.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -1366,6 +1597,17 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'green-flag',
+    path: 'blog/begrippen/green-flag',
+    category: 'Begrippen',
+    title: 'Green flag',
+    excerpt: 'Een green flag is een positief signaal. Gedrag waaraan je ziet dat iemand goed voor je is.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'grondpannenkoek',
     path: 'blog/begrippen/grondpannenkoek',
     category: 'Begrippen',
@@ -1393,6 +1635,17 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Begrippen',
     title: 'Guac',
     excerpt: 'Guac is de afkorting voor guacamole, de Mexicaanse avocadodip.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'guilty-pleasure',
+    path: 'blog/begrippen/guilty-pleasure',
+    category: 'Begrippen',
+    title: 'Guilty pleasure',
+    excerpt: 'Een guilty pleasure is iets waar je stiekem van geniet, terwijl je weet dat het niet echt cool of goed is.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -1454,6 +1707,17 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'highkey',
+    path: 'blog/begrippen/highkey',
+    category: 'Begrippen',
+    title: 'Highkey',
+    excerpt: 'Highkey betekent heel erg, of juist openlijk en zonder schaamte. Het tegenovergestelde van lowkey.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'hila',
     path: 'blog/begrippen/hila',
     category: 'Begrippen',
@@ -1481,6 +1745,17 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Begrippen',
     title: 'Honk',
     excerpt: 'Honk is een schaal die aangeeft hoever je fysiek met iemand bent gegaan, vergelijkbaar met het Engelse \'bases\'-systeem.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'hookup',
+    path: 'blog/begrippen/hookup',
+    category: 'Begrippen',
+    title: 'Hookup',
+    excerpt: 'Een hookup is een kort, losjes romantisch of seksueel contact zonder relatie of verplichtingen.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -1883,6 +2158,17 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'l',
+    path: 'blog/begrippen/l',
+    category: 'Begrippen',
+    title: 'L',
+    excerpt: 'L staat voor loss, een verlies. Je gebruikt het voor iets wat misgaat of iemand die afgaat.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'labo',
     path: 'blog/begrippen/labo',
     category: 'Begrippen',
@@ -1916,11 +2202,44 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'locked-in',
+    path: 'blog/begrippen/locked-in',
+    category: 'Begrippen',
+    title: 'Locked in',
+    excerpt: 'Locked in zijn betekent dat je volledig gefocust bent op één ding. Geen afleiding, alleen maar doorgaan.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'lore',
+    path: 'blog/begrippen/lore',
+    category: 'Begrippen',
+    title: 'Lore',
+    excerpt: 'Lore is de achtergrond of het verhaal achter iemand of iets. Vaak vol drama en details.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'louter',
     path: 'blog/begrippen/louter',
     category: 'Begrippen',
     title: 'Louter',
     excerpt: 'Louter is een ander woord voor alleen maar, niets meer en niets minder.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'lowkey',
+    path: 'blog/begrippen/lowkey',
+    category: 'Begrippen',
+    title: 'Lowkey',
+    excerpt: 'Lowkey betekent een beetje, stiekem of zonder er veel ophef over te maken. Het tegenovergestelde van highkey.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -1993,6 +2312,17 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'main-character',
+    path: 'blog/begrippen/main-character',
+    category: 'Begrippen',
+    title: 'Main character',
+    excerpt: 'Main character zijn betekent dat je doet alsof de wereld om jou draait. Soms als compliment, soms juist niet.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'matras',
     path: 'blog/begrippen/matras',
     category: 'Begrippen',
@@ -2048,11 +2378,33 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'mid',
+    path: 'blog/begrippen/mid',
+    category: 'Begrippen',
+    title: 'Mid',
+    excerpt: 'Mid betekent middelmatig. Niet slecht, maar ook zeker niet goed. Gewoon meh.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'miemelen',
     path: 'blog/begrippen/miemelen',
     category: 'Begrippen',
     title: 'Miemelen',
     excerpt: 'Miemelen is een ander woord voor zeuren of janken.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'mood',
+    path: 'blog/begrippen/mood',
+    category: 'Begrippen',
+    title: 'Mood',
+    excerpt: 'Mood zeg je als iets precies past bij hoe jij je voelt. Herkenbaar dus.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -2108,6 +2460,17 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Begrippen',
     title: 'Normi',
     excerpt: 'Normi is de afkorting voor normaal.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'npc',
+    path: 'blog/begrippen/npc',
+    category: 'Begrippen',
+    title: 'NPC',
+    excerpt: 'Een NPC is iemand die geen eigen mening lijkt te hebben en alleen maar meedoet met de rest.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -2235,6 +2598,17 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'pick-me',
+    path: 'blog/begrippen/pick-me',
+    category: 'Begrippen',
+    title: 'Pick-me',
+    excerpt: 'Een pick-me is iemand die er alles aan doet om goedkeuring te krijgen, vooral van het andere geslacht.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'pint',
     path: 'blog/begrippen/pint',
     category: 'Begrippen',
@@ -2262,6 +2636,17 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Begrippen',
     title: 'Plafonddienst',
     excerpt: 'Plafonddienst is het niet kunnen slapen na het gebruik van opwekkende middelen, met je ogen naar het plafond starend.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'pov',
+    path: 'blog/begrippen/pov',
+    category: 'Begrippen',
+    title: 'POV',
+    excerpt: 'POV staat voor point of view. Op social media zet je je in iemands situatie of perspectief.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -2345,11 +2730,44 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'rage-bait',
+    path: 'blog/begrippen/rage-bait',
+    category: 'Begrippen',
+    title: 'Rage-bait',
+    excerpt: 'Rage-bait is online content die expres is gemaakt om je boos te maken, zodat je reageert en het bericht meer bereik krijgt.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'rattentaxi',
     path: 'blog/begrippen/rattentaxi',
     category: 'Begrippen',
     title: 'Rattentaxi',
     excerpt: 'De rattentaxi nemen betekent dat je stiekem weggaat van een avondje stappen zonder gedag te zeggen.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'rebound',
+    path: 'blog/begrippen/rebound',
+    category: 'Begrippen',
+    title: 'Rebound',
+    excerpt: 'Een rebound is iemand met wie je snel na een breuk iets begint, vaak om je ex te vergeten.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'red-flag',
+    path: 'blog/begrippen/red-flag',
+    category: 'Begrippen',
+    title: 'Red flag',
+    excerpt: 'Een red flag is een waarschuwingssignaal. Gedrag waaraan je ziet dat iemand of iets niet goed voor je is.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -2444,6 +2862,17 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'rizz',
+    path: 'blog/begrippen/rizz',
+    category: 'Begrippen',
+    title: 'Rizz',
+    excerpt: 'Rizz is charme of flirttalent. Iemand met rizz weet met een paar woorden of een blik iemand te versieren.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'safedate',
     path: 'blog/begrippen/safedate',
     category: 'Begrippen',
@@ -2499,11 +2928,44 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'shade',
+    path: 'blog/begrippen/shade',
+    category: 'Begrippen',
+    title: 'Shade',
+    excerpt: 'Shade is iemand subtiel afkraken of beledigen, zonder het rechtstreeks te zeggen.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'sharken',
     path: 'blog/begrippen/sharken',
     category: 'Begrippen',
     title: 'Sharken',
     excerpt: 'Sharken is het inpikken van iemands date, meestal op een gala of datediner.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'side-quest',
+    path: 'blog/begrippen/side-quest',
+    category: 'Begrippen',
+    title: 'Side quest',
+    excerpt: 'Een side quest is een spontane omweg of klusje dat niets met je eigenlijke plan te maken heeft.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'simp',
+    path: 'blog/begrippen/simp',
+    category: 'Begrippen',
+    title: 'Simp',
+    excerpt: 'Een simp is iemand die overdreven veel moeite doet voor iemand op wie hij of zij valt, zonder er iets voor terug te krijgen.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -2796,6 +3258,17 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'thirst-trap',
+    path: 'blog/begrippen/thirst-trap',
+    category: 'Begrippen',
+    title: 'Thirst trap',
+    excerpt: 'Een thirst trap is een sexy of uitdagende foto of video die iemand post om aandacht en complimenten te krijgen.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'thth',
     path: 'blog/begrippen/thth',
     category: 'Begrippen',
@@ -2906,6 +3379,28 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'trending',
+    path: 'blog/begrippen/trending',
+    category: 'Begrippen',
+    title: 'Trending',
+    excerpt: 'Trending betekent dat een onderwerp, hashtag of video op dit moment heel populair is en door veel mensen wordt besproken.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'troll',
+    path: 'blog/begrippen/troll',
+    category: 'Begrippen',
+    title: 'Troll',
+    excerpt: 'Een troll is iemand die online expres anderen uitlokt of irriteert om een reactie te krijgen.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'turflijst',
     path: 'blog/begrippen/turflijst',
     category: 'Begrippen',
@@ -2944,6 +3439,17 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Begrippen',
     title: 'Uf',
     excerpt: 'Een uf (of ufje) is een vrouwelijk lid van de Utrechtse Vrouwelijke Studenten Vereniging (UVSV).',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'unhinged',
+    path: 'blog/begrippen/unhinged',
+    category: 'Begrippen',
+    title: 'Unhinged',
+    excerpt: 'Unhinged betekent compleet doorgeslagen, chaotisch of totaal onvoorspelbaar.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',
@@ -2994,6 +3500,17 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'viral',
+    path: 'blog/begrippen/viral',
+    category: 'Begrippen',
+    title: 'Viral',
+    excerpt: 'Viral gaan betekent dat een bericht, video of meme zich razendsnel verspreidt over internet.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'vo',
     path: 'blog/begrippen/vo',
     category: 'Begrippen',
@@ -3038,6 +3555,28 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'w',
+    path: 'blog/begrippen/w',
+    category: 'Begrippen',
+    title: 'W',
+    excerpt: 'W staat voor win. Je gebruikt het voor iets goeds, een overwinning of iemand die het goed doet.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'walk-of-shame',
+    path: 'blog/begrippen/walk-of-shame',
+    category: 'Begrippen',
+    title: 'Walk of shame',
+    excerpt: 'De walk of shame is de tocht naar huis in de ochtend na een nacht bij iemand anders, nog in de kleding van gisteravond.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
     slug: 'wegtikken',
     path: 'blog/begrippen/wegtikken',
     category: 'Begrippen',
@@ -3065,6 +3604,17 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Begrippen',
     title: 'X',
     excerpt: 'X betekent een digitaal kusje, of is de afkorting voor de drug xtc.',
+    date: '2025-06-01',
+    image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
+    imageAlt: 'AnyTimerApp',
+    variant: 'light'
+  },
+  {
+    slug: 'yolo',
+    path: 'blog/begrippen/yolo',
+    category: 'Begrippen',
+    title: 'YOLO',
+    excerpt: 'YOLO staat voor You Only Live Once. Je leeft maar één keer, dus waarom niet?',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
     imageAlt: 'AnyTimerApp',

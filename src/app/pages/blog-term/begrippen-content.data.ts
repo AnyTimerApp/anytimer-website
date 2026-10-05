@@ -112,6 +112,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'De functie is breed: denk aan merchandise, planning, contact met reünisten of het aansturen van <a href="/blog/begrippen/sjaars/">sjaars</a>. Ook neemt de assessor weleens taken van andere bestuursleden over als het te druk wordt. Lees ook de uitleg van <a href="/blog/begrippen/ab-actis/">ab actis</a> en <a href="/blog/begrippen/alv/">ALV</a>.'
     ]
   },
+  'aura': {
+    paragraphs: [
+      '"Hij struikelde voor de hele kroeg over zijn eigen veters. Min duizend aura."',
+      'Op TikTok houden mensen voor de grap aura punten bij. Rustig blijven als alles misgaat levert punten op. Jezelf voor schut zetten kost punten. Wie expres stoer doet om aura te verzamelen, is aan het aura farmen. Lees ook de uitleg van <a href="/blog/begrippen/rizz/">rizz</a>, <a href="/blog/begrippen/main-character/">main character</a> en <a href="/blog/begrippen/cringe/">cringe</a>.'
+    ]
+  },
   'baco': {
     paragraphs: [
       'Aan de bar bestelde hij zonder nadenken zijn zoveelste baco van de avond.',
@@ -148,6 +154,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Het gebeurt meestal na het drinken van grote hoeveelheden alcohol of het mixen van verschillende dranken. Genoeg eten voordat je gaat drinken, oftewel een <a href="/blog/begrippen/bodem-leggen/">bodem leggen</a>, verkleint de kans aanzienlijk. Lees ook de uitleg van <a href="/blog/begrippen/braken/">braken</a>.'
     ]
   },
+  'based': {
+    paragraphs: [
+      '"Hij bestelde gewoon een spa rood terwijl de hele tafel bier dronk. Based."',
+      'Rapper Lil B gaf het woord rond 2010 deze positieve betekenis. Based is ongeveer het tegenovergestelde van <a href="/blog/begrippen/cringe/">cringe</a>. Je zegt het als compliment voor iemand die zich niets aantrekt van wat anderen vinden. Lees ook de uitleg van <a href="/blog/begrippen/npc/">NPC</a>.'
+    ]
+  },
   'batsen': {
     paragraphs: [
       'Na het feest liet ze doorschemeren dat ze die nacht nog had gebatst.',
@@ -182,6 +194,18 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
     paragraphs: [
       'Voor de borrel begon, at hij snel nog een bord pasta om een bodem te leggen.',
       'Het idee is simpel: met een volle maag verwerkt je lichaam alcohol langzamer, wat de kans op een <a href="/blog/begrippen/kater/">kater</a> of zelfs een <a href="/blog/begrippen/barf/">barf</a> verkleint.'
+    ]
+  },
+  'body-count': {
+    paragraphs: [
+      '"Tijdens het spelletje kwam de vraag wat ieders body count was. Het werd ineens heel stil."',
+      'Oorspronkelijk is body count een militaire term voor het aantal doden. Op social media gaat het over seksuele partners. Veel mensen vinden de vraag ongepast of vinden het aantal er helemaal niet toe doen. Lees ook de uitleg van <a href="/blog/begrippen/one-night-stand/">one-night stand</a> en <a href="/blog/begrippen/hookup/">hookup</a>.'
+    ]
+  },
+  'brainrot': {
+    paragraphs: [
+      '"Ik heb drie uur TikToks gekeken en kan alleen nog in memes praten. Totale brainrot."',
+      'Brainrot werd in 2024 Oxford Word of the Year. Denk aan rare, eindeloos herhaalde memes en filmpjes zonder betekenis. Wie veel doomscrollt, heeft vaak last van brainrot. Lees ook de uitleg van <a href="/blog/begrippen/doomscrolling/">doomscrolling</a> en <a href="/blog/begrippen/fyp/">FYP</a>.'
     ]
   },
   'brak': {
@@ -250,16 +274,46 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Haal je in je eerste studiejaar niet genoeg studiepunten, dan krijg je een negatief BSA. Daardoor moet je vaak stoppen met je opleiding en mag je er soms een aantal jaar niet meer aan beginnen.'
     ]
   },
+  'cancel-culture': {
+    paragraphs: [
+      '"Na die oude tweets werd de influencer binnen een dag gecanceld."',
+      'Bij cancel culture stoppen mensen met volgen, kijken of kopen. Bedrijven trekken zich soms ook terug. Voorstanders zien het als een manier om mensen verantwoordelijk te houden. Tegenstanders vinden dat het te snel en te hard gaat. Lees ook de uitleg van <a href="/blog/begrippen/viral/">viral</a>, <a href="/blog/begrippen/clout/">clout</a> en <a href="/blog/begrippen/troll/">troll</a>.'
+    ]
+  },
+  'cap': {
+    paragraphs: [
+      '"Hij zegt dat hij twaalf pinten heeft geadt zonder te stoppen. Dat is cap."',
+      'Cap komt uit het Afro-Amerikaanse Engels en werd groot via hiphop en TikTok. Wie liegt, is aan het cappen. Met no cap geef je aan dat je de waarheid spreekt. Soms wordt het alleen met een pet-emoji gezegd. Lees ook de uitleg van <a href="/blog/begrippen/catfish/">catfish</a> en <a href="/blog/begrippen/gaslighting/">gaslighting</a>.'
+    ]
+  },
   'cappu': {
     paragraphs: [
       'Op het terras bestelde ze snel nog een cappu voordat het college begon.',
       'Naast de klassieke variant met koemelk bestaan er inmiddels ook varianten met haver-, soja-, kokos- of amandelmelk, elk met hun eigen fans.'
     ]
   },
+  'catfish': {
+    paragraphs: [
+      '"Haar foto\'s waren allemaal van een model van Instagram. Hij werd gewoon gecatfisht."',
+      'De term komt van de documentaire en MTV-serie Catfish. Een catfish gebruikt foto\'s van anderen of liegt over leeftijd en uiterlijk. Soms voor de grap, soms om geld of aandacht te krijgen. Spreek dus altijd eerst af op een veilige plek. Lees ook de uitleg van <a href="/blog/begrippen/safedate/">safedate</a>, <a href="/blog/begrippen/cap/">cap</a> en <a href="/blog/begrippen/red-flag/">red flag</a>.'
+    ]
+  },
   'chlam': {
     paragraphs: [
       'Na een onrustige nacht besloot hij toch maar zich te laten testen op chlam.',
       'De soa wordt vooral bij onbeschermde seks opgelopen en valt in het begin vaak niet op. Een <a href="/blog/begrippen/condo/">condo</a> helpt om chlam te voorkomen.'
+    ]
+  },
+  'clickbait': {
+    paragraphs: [
+      '"Je gelooft nooit wat er daarna gebeurde!" Tuurlijk klikte hij erop. Klassieke clickbait.',
+      'Clickbait gebruikt overdreven koppen, uitroeptekens en verbaasde gezichten. Het doel is zoveel mogelijk klikken en views. Vaak beloven ze meer dan ze waarmaken. Het neefje van clickbait is <a href="/blog/begrippen/rage-bait/">rage-bait</a>. Lees ook de uitleg van <a href="/blog/begrippen/viral/">viral</a>.'
+    ]
+  },
+  'clout': {
+    paragraphs: [
+      '"Hij doet die gekke challenges alleen maar voor de clout."',
+      'Clout chasen betekent dat je alles doet voor views, likes en volgers. Influencers met veel clout kunnen trends starten. Het wordt vaak negatief gebruikt voor mensen die nep doen om populair te worden. Lees ook de uitleg van <a href="/blog/begrippen/influ/">influ</a>, <a href="/blog/begrippen/viral/">viral</a> en <a href="/blog/begrippen/flex/">flex</a>.'
     ]
   },
   'condo': {
@@ -284,6 +338,18 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
     paragraphs: [
       'Al generaties lang wordt er binnen het corps op precies dezelfde manier gedronken op de <a href="/blog/begrippen/societeit/">sociëteit</a>.',
       'De vereniging draait sterk op tradities en heeft vaak een uitgebreide hiërarchie van disputen en jaarclubs, met eigen ongeschreven regels ofwel <a href="/blog/begrippen/mores/">mores</a>. Lees ook de uitleg van <a href="/blog/begrippen/bal/">bal</a> en <a href="/blog/begrippen/bestuur/">bestuur</a>.'
+    ]
+  },
+  'crash-out': {
+    paragraphs: [
+      '"Hij verloor voor de derde keer met beerpong en crashte compleet out."',
+      'Wie crasht out, reageert impulsief en zonder na te denken. Het woord werd rond 2023 groot op TikTok. Iemand die snel ontploft, noem je een crashout. Soms betekent crash out ook gewoon dat je in slaap valt van uitputting. Lees ook de uitleg van <a href="/blog/begrippen/unhinged/">unhinged</a> en <a href="/blog/begrippen/rage-bait/">rage-bait</a>.'
+    ]
+  },
+  'cringe': {
+    paragraphs: [
+      '"Hij zong voor haar een zelfgeschreven liedje in de kantine. Zo cringe."',
+      'Het Engelse werkwoord to cringe betekent ineenkrimpen. Dat is precies wat je doet als iemand iets ongemakkelijks doet. Oude statusupdates of foto\'s uit je brugklas zijn vaak ook cringe. Lees ook de uitleg van <a href="/blog/begrippen/based/">based</a>, <a href="/blog/begrippen/pick-me/">pick-me</a> en <a href="/blog/begrippen/aura/">aura</a>.'
     ]
   },
   'cursist': {
@@ -358,16 +424,34 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Een dispuut functioneert als een eigen kleine club met eigen activiteiten. Meestal word je uitgenodigd om lid te worden, in plaats van dat je je er zelf voor aanmeldt. Lees ook de uitleg van <a href="/blog/begrippen/corps/">corps</a> en <a href="/blog/begrippen/bestuur/">bestuur</a>.'
     ]
   },
+  'doomscrolling': {
+    paragraphs: [
+      '"Ik wilde om elf uur slapen, maar om twee uur lag ik nog te doomscrollen."',
+      'Doom betekent onheil. Het woord werd groot tijdens corona, toen iedereen slecht nieuws bleef lezen. Nu gebruik je het voor elk zinloos scrollen. Het zorgt vaak voor slecht slapen en een flinke dosis <a href="/blog/begrippen/brainrot/">brainrot</a>. Lees ook de uitleg van <a href="/blog/begrippen/fyp/">FYP</a> en <a href="/blog/begrippen/fomo/">FOMO</a>.'
+    ]
+  },
   'doorhalen': {
     paragraphs: [
       'Ze besloten de avond door te halen en pas bij zonsopgang naar huis te fietsen.',
       'Het wordt vaak gecombineerd met blijven drinken om de vermoeidheid tegen te gaan, al betaal je de volgende dag meestal de prijs in de vorm van een flinke <a href="/blog/begrippen/kater/">kater</a>. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a>.'
     ]
   },
+  'down-bad': {
+    paragraphs: [
+      '"Hij reed drie uur heen en weer om haar oplader terug te brengen. Hij is echt down bad."',
+      'Oorspronkelijk betekende down bad dat het slecht met je ging, bijvoorbeeld financieel. Nu gaat het vooral over liefde en verlangen. Iedereen ziet het, behalve degene die down bad is. Lees ook de uitleg van <a href="/blog/begrippen/simp/">simp</a> en <a href="/blog/begrippen/thirst-trap/">thirst trap</a>.'
+    ]
+  },
   'driesecondenregel': {
     paragraphs: [
       'Zijn frietje viel op de grond, maar binnen de driesecondenregel raapte hij het meteen weer op.',
       'Duurt het langer dan drie tellen, dan hoort het etenswaar volgens de regel in de prullenbak, al houdt niemand echt de tijd bij.'
+    ]
+  },
+  'drip': {
+    paragraphs: [
+      '"Zag je zijn outfit op het gala? Die drip was ziek."',
+      'Drip komt uit de hiphop. Het idee is dat je zo cool bent dat je stijl ervan afdruipt. Dure sneakers, mooie jas, goede combinaties. Wie drip heeft, wil daar vaak ook mee flexen. Lees ook de uitleg van <a href="/blog/begrippen/flex/">flex</a> en <a href="/blog/begrippen/rizz/">rizz</a>.'
     ]
   },
   'dubbel-gemengd': {
@@ -454,10 +538,22 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Het doel is simpel: kijken én gezien worden. Je doet het bijvoorbeeld op de sociëteit, in de stad of gewoon op straat tijdens een avondje uit.'
     ]
   },
+  'flex': {
+    paragraphs: [
+      '"Hij liet zijn nieuwe horloge wel heel vaak zien vanavond. Lekker aan het flexen."',
+      'Flexen komt van spieren aanspannen om ze te laten zien. Nu gaat het over geld, kleding, reizen of prestaties. Een weird flex is opscheppen over iets wat helemaal niet indrukwekkend is. Lees ook de uitleg van <a href="/blog/begrippen/drip/">drip</a> en <a href="/blog/begrippen/clout/">clout</a>.'
+    ]
+  },
   'fomo': {
     paragraphs: [
       'Ondanks haar tentamen de volgende dag ging ze uit pure FOMO toch naar het feest.',
       'De angst zorgt ervoor dat je liever naar een feestje of borrel gaat dan thuisblijft, ook als je eigenlijk moe bent of moet studeren.'
+    ]
+  },
+  'friendzone': {
+    paragraphs: [
+      '"Ze zei dat ik als een broer voor haar ben. Officieel in de friendzone."',
+      'De friendzone is voor veel mensen een frustrerende plek. Je bent close, maar het wordt nooit romantisch. Wie er lang in blijft hangen en alles voor de ander doet, wordt al snel een <a href="/blog/begrippen/simp/">simp</a> genoemd. Lees ook de uitleg van <a href="/blog/begrippen/fwb/">FWB</a> en <a href="/blog/begrippen/ghosting/">ghosting</a>.'
     ]
   },
   'fuif': {
@@ -478,10 +574,22 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Vriendschap en seks worden gecombineerd, zonder de verplichtingen van een echte relatie. Vaak, maar niet altijd, blijven FWB\'s wel <a href="/blog/begrippen/exclusief/">exclusief</a> van elkaar. Lees ook de uitleg van <a href="/blog/begrippen/eventuela/">eventuela</a>.'
     ]
   },
+  'fyp': {
+    paragraphs: [
+      '"Hoe is mijn FYP ineens alleen maar katten en recepten geworden?"',
+      'Op je FYP komen video\'s die het algoritme denkt dat jij leuk vindt. Makers zetten vaak #fyp onder hun video in de hoop dat die op meer pagina\'s verschijnt. Wat je bekijkt en liket, bepaalt wat je daarna ziet. Lees ook de uitleg van <a href="/blog/begrippen/viral/">viral</a>, <a href="/blog/begrippen/trending/">trending</a> en <a href="/blog/begrippen/doomscrolling/">doomscrolling</a>.'
+    ]
+  },
   'galaplicht': {
     paragraphs: [
       '"Vergeet die galaplicht maar", zei ze, "ik ga gewoon voor een leuke avond."',
       'In de praktijk wordt hier lang niet altijd aan vastgehouden: een gezellige avond wordt meestal belangrijker gevonden dan wat erna zou moeten volgen.'
+    ]
+  },
+  'gaslighting': {
+    paragraphs: [
+      '"Dat heb ik nooit gezegd. Je verzint het weer. Je bent veel te gevoelig."',
+      'De term komt van de film Gaslight uit 1944. Daarin laat een man zijn vrouw geloven dat ze gek wordt. Gaslighting is een serieuze vorm van manipulatie in relaties. Online wordt het woord soms te makkelijk gebruikt voor gewone ruzies. Lees ook de uitleg van <a href="/blog/begrippen/red-flag/">red flag</a> en <a href="/blog/begrippen/cap/">cap</a>.'
     ]
   },
   'gefeli': {
@@ -502,6 +610,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Je hoort ook wel de variant gezellie, vooral als het net wat overdreven enthousiast gezegd moet worden.'
     ]
   },
+  'ghosting': {
+    paragraphs: [
+      '"We hadden drie leuke dates en sindsdien hoor ik niks meer. Ik ben geghost."',
+      'Bij ghosting stopt iemand met appen, bellen en reageren. Zonder ruzie of afscheid. Het gebeurt vaak bij daten, maar ook in vriendschappen. Voor degene die geghost wordt, voelt het meestal rot en onduidelijk. Lees ook de uitleg van <a href="/blog/begrippen/red-flag/">red flag</a>, <a href="/blog/begrippen/friendzone/">friendzone</a> en <a href="/blog/begrippen/datediner/">datediner</a>.'
+    ]
+  },
   'ginto': {
     paragraphs: [
       'Op het zonnige terras bestelde ze zonder twijfel een GinTo.',
@@ -512,6 +626,18 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
     paragraphs: [
       'In hun huis noemden ze de woonkamer altijd de GK in plaats van de <a href="/blog/begrippen/geru/">geru</a>.',
       'Praktisch gezien gaat het altijd om dezelfde ruimte: welke naam je gebruikt, hangt vooral af van de studentenstad waarin je woont. Lees ook de uitleg van <a href="/blog/begrippen/gr/">GR</a> en <a href="/blog/begrippen/fusie/">fusie</a>.'
+    ]
+  },
+  'glazing': {
+    paragraphs: [
+      '"Stop met glazing. Hij heeft gewoon een tentamen gehaald, geen Nobelprijs gewonnen."',
+      'Glazen komt van het glazuurlaagje op een donut. Je smeert iemand als het ware in met lof. Het woord werd rond 2022 populair op TikTok en wordt vaak gebruikt over fans die hun idool nooit kritisch bekijken. Lees ook de uitleg van <a href="/blog/begrippen/simp/">simp</a> en <a href="/blog/begrippen/pick-me/">pick-me</a>.'
+    ]
+  },
+  'goat': {
+    paragraphs: [
+      '"Ze haalde een negen voor statistiek zonder college te volgen. Echt de GOAT."',
+      'De afkorting komt uit de sportwereld. Messi en Ronaldo worden vaak de GOAT genoemd. Je gebruikt het ook voor vrienden die iets goeds voor je doen. Vaak met een geitje-emoji erbij. Lees ook de uitleg van <a href="/blog/begrippen/w/">W</a> en <a href="/blog/begrippen/based/">based</a>.'
     ]
   },
   'goos': {
@@ -532,6 +658,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Afhankelijk van de studentenstad hoor je voor dezelfde ruimte in plaats daarvan ook wel <a href="/blog/begrippen/gk/">GK</a> of <a href="/blog/begrippen/fusie/">fusie</a> gebruiken. Lees ook de uitleg van <a href="/blog/begrippen/geru/">geru</a>.'
     ]
   },
+  'green-flag': {
+    paragraphs: [
+      '"Hij vroeg of ik veilig thuis was gekomen. Green flag."',
+      'Green flags zijn bijvoorbeeld eerlijk zijn, goed luisteren en respect hebben voor je grenzen. Mensen delen online lijstjes met hun favoriete green flags. Het tegenovergestelde is een <a href="/blog/begrippen/red-flag/">red flag</a>. Lees ook de uitleg van <a href="/blog/begrippen/safedate/">safedate</a>.'
+    ]
+  },
   'grondpannenkoek': {
     paragraphs: [
       'Na de derde shot eindigde de avond helaas in een flinke grondpannenkoek.',
@@ -548,6 +680,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
     paragraphs: [
       'Bij de nacho-avond mocht de guac natuurlijk niet ontbreken.',
       'De dip bestaat uit avocado, peper, zout en citroensap, en is bij bijna elke studenten-borrel met chips wel te vinden.'
+    ]
+  },
+  'guilty-pleasure': {
+    paragraphs: [
+      '"Mijn guilty pleasure? Elke zondag Temptation Island kijken met een zak chips."',
+      'Een guilty pleasure kan een fout liedje, een slechte realityserie of fastfood om drie uur \'s nachts zijn. Je schaamt je er een beetje voor, maar je wilt het niet missen. Vaak geef je het <a href="/blog/begrippen/lowkey/">lowkey</a> toe. Lees ook de uitleg van <a href="/blog/begrippen/mood/">mood</a>.'
     ]
   },
   'haasje': {
@@ -580,6 +718,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'De jongste huisgenoot van het huis wordt vaak de <a href="/blog/begrippen/huisjongste/">huisjongste</a> of <a href="/blog/begrippen/hj/">HJ</a> genoemd, met bijbehorende huishoudelijke taken.'
     ]
   },
+  'highkey': {
+    paragraphs: [
+      '"Ik heb highkey zin in het gala van zaterdag."',
+      'Met highkey maak je duidelijk dat je iets echt meent en dat iedereen het mag weten. Waar <a href="/blog/begrippen/lowkey/">lowkey</a> iets afzwakt, maakt highkey het juist groter. Lees ook de uitleg van <a href="/blog/begrippen/mood/">mood</a>.'
+    ]
+  },
   'hila': {
     paragraphs: [
       '"Dat filmpje van gisteren was echt hila", proestte ze het uit.',
@@ -596,6 +740,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
     paragraphs: [
       '"En, hoe ver kwamen jullie? Al bij het tweede honk?", vroeg haar huisgenoot nieuwsgierig.',
       'Het eerste honk staat voor zoenen, ofwel <a href="/blog/begrippen/huig-hockeyen/">huig hockeyen</a>, en elk volgend honk betekent een stap verder tot en met het vierde honk. Lees ook de uitleg van <a href="/blog/begrippen/batsen/">batsen</a>.'
+    ]
+  },
+  'hookup': {
+    paragraphs: [
+      '"Was dat iets serieus met hem?" "Nee joh, gewoon een hookup na het feest."',
+      'Een hookup kan zoenen zijn, maar ook seks. Het blijft vaak bij één keer. Apps als Tinder worden geregeld gebruikt om een hookup te vinden. Het verschil met een <a href="/blog/begrippen/scharrel/">scharrel</a> is dat er meestal geen vervolg komt. Lees ook de uitleg van <a href="/blog/begrippen/one-night-stand/">one-night stand</a> en <a href="/blog/begrippen/walk-of-shame/">walk of shame</a>.'
     ]
   },
   'hospi': {
@@ -814,6 +964,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Een kwarrel gaat net wat verder dan een <a href="/blog/begrippen/scharrel/">scharrel</a>: naast fysiek contact praat je ook over gevoelens en kun je bij elkaar terecht. Lees ook de uitleg van <a href="/blog/begrippen/eventuela/">eventuela</a> en <a href="/blog/begrippen/exclusief/">exclusief</a>.'
     ]
   },
+  'l': {
+    paragraphs: [
+      '"Ik heb mijn tentamen verslapen. Mega L."',
+      'Een L nemen betekent dat je verliest of iets slecht afloopt. Zeg je tegen iemand \'take the L\', dan moet diegene het verlies gewoon accepteren. Het tegenovergestelde is een <a href="/blog/begrippen/w/">W</a>. Lees ook de uitleg van <a href="/blog/begrippen/crash-out/">crash out</a>.'
+    ]
+  },
   'labo': {
     paragraphs: [
       '"Wat een labo", grapten ze toen hij zijn biertje voor de derde keer liet staan.',
@@ -832,10 +988,28 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Het woord duikt vooral op in appjes waarin nog bepaald moet worden waar een activiteit plaatsvindt.'
     ]
   },
+  'locked-in': {
+    paragraphs: [
+      '"Telefoon in de la, koffie erbij. Vandaag ben ik locked in voor mijn tentamen."',
+      'De term komt uit de sport en gaming, waar spelers locked in zijn als ze volledig in de wedstrijd zitten. Nu gebruik je het voor studeren, sporten of werken. Je kunt het ook als oproep zeggen: tijd om te locken. Soms betekent het ook dat je vastzit aan één partner. Lees ook de uitleg van <a href="/blog/begrippen/side-quest/">side quest</a> en <a href="/blog/begrippen/doomscrolling/">doomscrolling</a>.'
+    ]
+  },
+  'lore': {
+    paragraphs: [
+      '"Wacht, waarom praten zij niet meer met elkaar? Ik moet de lore weten."',
+      'Lore komt uit games en fantasyverhalen, waar het de geschiedenis van een wereld beschrijft. Nu gebruik je het voor vriendschappen, exen en huisdrama. Iemand met veel lore heeft een hoop meegemaakt. Lees ook de uitleg van <a href="/blog/begrippen/tea/">tea</a> en <a href="/blog/begrippen/side-quest/">side quest</a>.'
+    ]
+  },
   'louter': {
     paragraphs: [
       '"Ik doe het louter voor de lol", zei ze toen iemand naar haar motivatie vroeg.',
       'Het woord wordt vaak gebruikt om iets extra te benadrukken, zonder dat er verder iets bijzonders achter zit.'
+    ]
+  },
+  'lowkey': {
+    paragraphs: [
+      '"Ik vind dat nieuwe nummer van hem lowkey best goed eigenlijk."',
+      'Met lowkey zwak je iets af of geef je toe wat je liever niet hardop zegt. Een lowkey feestje is klein en rustig. Lowkey verliefd zijn betekent dat je het nog niet aan iedereen vertelt. Lees ook de uitleg van <a href="/blog/begrippen/highkey/">highkey</a> en <a href="/blog/begrippen/guilty-pleasure/">guilty pleasure</a>.'
     ]
   },
   'ludiek': {
@@ -874,6 +1048,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Het woord wordt door studenten in bijna elke informele situatie gebruikt om een vriend aan te spreken. Lees ook de uitleg van <a href="/blog/begrippen/kompaan/">kompaan</a> en <a href="/blog/begrippen/gozer/">gozer</a>.'
     ]
   },
+  'main-character': {
+    paragraphs: [
+      '"Ze fietste met koptelefoon op door de regen alsof ze in een film zat. Main character energy."',
+      'De term werd rond 2020 groot op TikTok. Positief bedoeld gaat het over genieten van je eigen leven. Negatief bedoeld gaat het over iemand die egocentrisch is en alle aandacht opeist. Het tegenovergestelde is een <a href="/blog/begrippen/npc/">NPC</a>. Lees ook de uitleg van <a href="/blog/begrippen/side-quest/">side quest</a> en <a href="/blog/begrippen/aura/">aura</a>.'
+    ]
+  },
   'matras': {
     paragraphs: [
       'Achter zijn rug werd er weleens gniffelend over hem gesproken als matras.',
@@ -904,10 +1084,22 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Ook disputen hebben vaak hun eigen meter als vast onderdeel van hun spullen, al bevat die dan niet per se elf biertjes.'
     ]
   },
+  'mid': {
+    paragraphs: [
+      '"Iedereen was zo enthousiast over die nieuwe film, maar eerlijk? Hij was mid."',
+      'Mid is vaak harder dan slecht. Iets slechts maakt tenminste nog iets los. Iets mids is gewoon vergeetbaar. Je hoort het over eten, muziek, feestjes en soms ook over iemands looks. Lees ook de uitleg van <a href="/blog/begrippen/based/">based</a> en <a href="/blog/begrippen/cringe/">cringe</a>.'
+    ]
+  },
   'miemelen': {
     paragraphs: [
       '"Hou op met miemelen en pak nog een biertje", zei ze lachend.',
       'Het woord wordt vooral gebruikt als iemand aan het klagen is over iets kleins dat niet zo serieus bedoeld hoeft te worden.'
+    ]
+  },
+  'mood': {
+    paragraphs: [
+      'Ze stuurde een foto van een kat die onder een deken lag. Haar vriendin reageerde: "Mood."',
+      'Met mood geef je aan dat je je helemaal herkent in een foto, meme of situatie. Je kunt het ook zeggen over de sfeer van een plek of muziek. Een big mood is iets wat extreem herkenbaar is. Lees ook de uitleg van <a href="/blog/begrippen/pov/">POV</a> en <a href="/blog/begrippen/highkey/">highkey</a>.'
     ]
   },
   'mores': {
@@ -938,6 +1130,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
     paragraphs: [
       '"Doe eens normi joh", zei ze toen hij weer overdreven deed.',
       'Het woord wordt gebruikt om aan te geven dat iets of iemand zich gewoon, zonder overdrijving, gedraagt.'
+    ]
+  },
+  'npc': {
+    paragraphs: [
+      '"Hij zegt gewoon na wat zijn feed hem vertelt. Echt NPC-gedrag."',
+      'NPC staat voor non-player character. In games zijn dat de figuren die niet door een speler worden bestuurd en steeds hetzelfde zeggen. Als iemand een NPC noemt, bedoel je dat diegene voorspelbaar en saai is. Het tegenovergestelde is de <a href="/blog/begrippen/main-character/">main character</a>. Lees ook de uitleg van <a href="/blog/begrippen/based/">based</a>.'
     ]
   },
   'nul': {
@@ -1006,6 +1204,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Vanaf 2015 verdween de gift van zo\'n 280 euro per maand voor uitwonende studenten, waardoor deze groep alles via een lening moest <a href="/blog/begrippen/regelen/">regelen</a>. Lees ook de uitleg van <a href="/blog/begrippen/leenstelsel/">leenstelsel</a>.'
     ]
   },
+  'pick-me': {
+    paragraphs: [
+      '"Ik ben niet zoals andere meisjes, ik drink gewoon bier met de jongens." Typisch pick-me.',
+      'Een pick-me zet zichzelf graag apart van de rest en praat anderen daarbij soms naar beneden. De term wordt vooral gebruikt voor pick-me girls, maar pick-me boys bestaan ook. Het gedrag wordt meestal als <a href="/blog/begrippen/cringe/">cringe</a> gezien. Lees ook de uitleg van <a href="/blog/begrippen/glazing/">glazing</a>.'
+    ]
+  },
   'pint': {
     paragraphs: [
       'Op het terras in Gent bestelde hij zonder aarzelen een pint.',
@@ -1022,6 +1226,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
     paragraphs: [
       'Na het festival draaide hij uren plafonddienst voor de slaap eindelijk kwam.',
       'Het is aan te raden om ruim voor het slapengaan te stoppen met alles wat je wakker houdt, om deze slapeloze uren te voorkomen.'
+    ]
+  },
+  'pov': {
+    paragraphs: [
+      '"POV: je huisgenoot zegt dat hij maar één biertje komt drinken."',
+      'POV-video\'s laten een situatie zien alsof jij erin zit. De camera speelt dan jouw ogen. Het format is vooral populair op TikTok en Instagram Reels. Vaak gaat het om herkenbare of grappige momenten. Lees ook de uitleg van <a href="/blog/begrippen/fyp/">FYP</a> en <a href="/blog/begrippen/mood/">mood</a>.'
     ]
   },
   'praeses': {
@@ -1066,10 +1276,28 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Ook wel fiscus of thesaurier genoemd, beheert deze persoon de financiën: begrotingen maken, de kas beheren en transacties uitvoeren voor de vereniging, het <a href="/blog/begrippen/dispuut/">dispuut</a> of het <a href="/blog/begrippen/studentenhuis/">studentenhuis</a>. Lees ook de uitleg van <a href="/blog/begrippen/bestuur/">bestuur</a> en <a href="/blog/begrippen/praeses/">praeses</a>.'
     ]
   },
+  'rage-bait': {
+    paragraphs: [
+      '"Dat filmpje waarin iemand ketchup op pizza smeert? Pure rage-bait. Gewoon niet reageren."',
+      'Hoe meer mensen boos reageren, hoe meer het algoritme het bericht laat zien. Daarom werkt rage-bait zo goed. In 2025 werd het Oxford Word of the Year. Het lijkt op <a href="/blog/begrippen/clickbait/">clickbait</a>, maar speelt in op woede in plaats van nieuwsgierigheid. Lees ook de uitleg van <a href="/blog/begrippen/troll/">troll</a> en <a href="/blog/begrippen/fyp/">FYP</a>.'
+    ]
+  },
   'rattentaxi': {
     paragraphs: [
       'Rond drie uur was hij plotseling verdwenen: weer een rattentaxi genomen.',
       'Het wordt gezien als onbeleefd om zomaar te vertrekken, tenzij je te dronken bent om nog fatsoenlijk afscheid te nemen. Lees ook de uitleg van <a href="/blog/begrippen/houdini/">houdini</a>.'
+    ]
+  },
+  'rebound': {
+    paragraphs: [
+      '"Ze is twee weken single en heeft al iets nieuws. Dat is toch gewoon een rebound?"',
+      'Rebound komt uit het basketbal, waar het een terugkaatsende bal is. Een rebound-relatie draait vaak meer om afleiding dan om echte gevoelens. Daarom houdt die meestal niet lang stand. Lees ook de uitleg van <a href="/blog/begrippen/hookup/">hookup</a>, <a href="/blog/begrippen/rela/">rela</a> en <a href="/blog/begrippen/red-flag/">red flag</a>.'
+    ]
+  },
+  'red-flag': {
+    paragraphs: [
+      '"Hij was onaardig tegen de ober en praatte de hele date over zijn ex. Red flag na red flag."',
+      'Een rode vlag betekent gevaar. Bij daten gaat het om dingen als jaloezie, liegen of controle willen. Een kleine irritatie is meestal geen red flag. Het tegenovergestelde is een <a href="/blog/begrippen/green-flag/">green flag</a>. Lees ook de uitleg van <a href="/blog/begrippen/gaslighting/">gaslighting</a> en <a href="/blog/begrippen/ghosting/">ghosting</a>.'
     ]
   },
   'regelen': {
@@ -1120,6 +1348,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Het woord wordt door elkaar gebruikt met <a href="/blog/begrippen/rietadt/">rietadt</a>, en betekent steeds hetzelfde trucje met een rietje. Lees ook de uitleg van <a href="/blog/begrippen/riet/">riet</a>.'
     ]
   },
+  'rizz': {
+    paragraphs: [
+      '"Hij zei één zin tegen haar en ze gaf meteen haar nummer. Die gast heeft serieus rizz."',
+      'Rizz komt van charisma. Het woord werd groot via streamer Kai Cenat en TikTok, en werd in 2023 zelfs Oxford Word of the Year. Wie iemand probeert te versieren, gaat rizzen. Lukt het zonder iets te zeggen? Dan heet dat unspoken rizz. Lees ook de uitleg van <a href="/blog/begrippen/aura/">aura</a>, <a href="/blog/begrippen/wingman/">wingman</a> en <a href="/blog/begrippen/drip/">drip</a>.'
+    ]
+  },
   'safedate': {
     paragraphs: [
       'Voor het <a href="/blog/begrippen/datediner/">datediner</a> vroeg ze gewoon een safedate aan haar beste vriend.',
@@ -1150,10 +1384,28 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Roep je zelf shotgun, dan moet je ook echt een shotgun nemen: zeggen is doen, zonder uitzonderingen.'
     ]
   },
+  'shade': {
+    paragraphs: [
+      '"Mooie jurk, die had mijn oma ook." Dat was pure shade.',
+      'Shade gooien komt uit de dragscene in New York. Het gaat om een steek onder water die net verpakt is als compliment of grap. Wie shade gooit, laat zelden merken dat het gemeen bedoeld is. Lees ook de uitleg van <a href="/blog/begrippen/tea/">tea</a> en <a href="/blog/begrippen/troll/">troll</a>.'
+    ]
+  },
   'sharken': {
     paragraphs: [
       'Tijdens het gala werd er al snel gesharkt tussen de verschillende tafels.',
       'Het gebeurt vooral als je zelf geen klik hebt met je eigen date, maar wel met die van een ander, meestal tijdens een gala of <a href="/blog/begrippen/datediner/">datediner</a>.'
+    ]
+  },
+  'side-quest': {
+    paragraphs: [
+      '"Ik ging alleen even brood halen. Drie uur later stond ik op een huisfeest in Utrecht. Flinke side quest."',
+      'Side quest komt uit games, waar het een optionele missie naast het hoofdverhaal is. In het echt is het alles wat je onderweg doet terwijl je eigenlijk iets anders van plan was. Vaak zijn dat de beste verhalen van de avond. Lees ook de uitleg van <a href="/blog/begrippen/main-character/">main character</a>, <a href="/blog/begrippen/lore/">lore</a> en <a href="/blog/begrippen/yolo/">YOLO</a>.'
+    ]
+  },
+  'simp': {
+    paragraphs: [
+      '"Hij heeft haar alweer een bos bloemen gestuurd terwijl ze nooit terug appt. Wat een simp."',
+      'Simpen betekent jezelf wegcijferen voor je crush. Denk aan altijd klaarstaan, overal betalen en alles liken. Het woord wordt vooral spottend gebruikt. Wie flink aan het simpen is, is vaak ook <a href="/blog/begrippen/down-bad/">down bad</a>. Lees ook de uitleg van <a href="/blog/begrippen/glazing/">glazing</a> en <a href="/blog/begrippen/friendzone/">friendzone</a>.'
     ]
   },
   'sjaars': {
@@ -1312,6 +1564,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Haal je voor je tenta een <a href="/blog/begrippen/studententien/">studententien</a>, dan heb je in elk geval je studiepunten binnen.'
     ]
   },
+  'thirst-trap': {
+    paragraphs: [
+      '"Hij postte een shirtloze spiegelselfie met als caption \'gewoon een normale dinsdag\'. Duidelijke thirst trap."',
+      'Thirst staat in deze slang voor verlangen of wanhoop naar aandacht. De val is de foto zelf. Wie erin trapt en flirterig reageert, is thirsty. Soms posten mensen een thirst trap om een ex jaloers te maken. Lees ook de uitleg van <a href="/blog/begrippen/down-bad/">down bad</a>, <a href="/blog/begrippen/clout/">clout</a> en <a href="/blog/begrippen/rebound/">rebound</a>.'
+    ]
+  },
   'thth': {
     paragraphs: [
       '"Dit weekend ga ik lekker naar THTH", appte ze haar huisgenoten.',
@@ -1372,6 +1630,18 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Studenten gebruiken trekken meestal in de betekenis van <a href="/blog/begrippen/bak-trekken/">bak trekken</a>: een drankje, biertje of Ice in één keer leegdrinken. Lees ook de uitleg van <a href="/blog/begrippen/adten/">adten</a>.'
     ]
   },
+  'trending': {
+    paragraphs: [
+      '"Dat dansje is trending, de halve vereniging deed het op het feest."',
+      'Platforms als TikTok en X houden bij wat trending is. Een trend kan een liedje, challenge of meme zijn. Vaak duurt een trend maar een paar dagen. Daarna is het alweer <a href="/blog/begrippen/cringe/">cringe</a>. Lees ook de uitleg van <a href="/blog/begrippen/viral/">viral</a> en <a href="/blog/begrippen/fyp/">FYP</a>.'
+    ]
+  },
+  'troll': {
+    paragraphs: [
+      '"Reageer er niet op. Die gast is gewoon aan het trollen."',
+      'Trollen betekent provoceren met nepmeningen, beledigingen of onzin. Het doel is chaos of boosheid. Onder vrienden kan trollen ook gewoon een onschuldige grap zijn. De beste tip blijft: don\'t feed the troll. Lees ook de uitleg van <a href="/blog/begrippen/rage-bait/">rage-bait</a> en <a href="/blog/begrippen/shade/">shade</a>.'
+    ]
+  },
   'turflijst': {
     paragraphs: [
       'Naast de koelkast hing nog altijd de oude turflijst van hun <a href="/blog/begrippen/studentenhuis/">studentenhuis</a>.',
@@ -1394,6 +1664,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
     paragraphs: [
       'Als uf ging ze elk jaar mee met de <a href="/blog/begrippen/introductieweek/">introductieweek</a> van haar vereniging.',
       'De bijnaam verwijst specifiek naar leden van de UVSV, de Utrechtse Vrouwelijke Studenten Vereniging. Lees ook de uitleg van <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a>.'
+    ]
+  },
+  'unhinged': {
+    paragraphs: [
+      '"Ze stuurde om vier uur \'s nachts een voicememo van tien minuten in de groepsapp. Unhinged."',
+      'Letterlijk betekent unhinged uit de scharnieren gelicht. Het kan negatief zijn, maar vaak wordt het grappig bedoeld. Unhinged humor is absurd en over de top. Een unhinged avond was wild en chaotisch. Lees ook de uitleg van <a href="/blog/begrippen/crash-out/">crash out</a> en <a href="/blog/begrippen/brainrot/">brainrot</a>.'
     ]
   },
   'vanaaf': {
@@ -1420,6 +1696,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'Studenten gebruiken het woord voor bijna elke gelegenheid: gehaald of niet gehaald, vino past altijd wel ergens bij.'
     ]
   },
+  'viral': {
+    paragraphs: [
+      '"Zijn filmpje van de mislukte adt is viral gegaan. Twee miljoen views in één dag."',
+      'Viral komt van virus, omdat de content zich net zo snel verspreidt. Mensen delen het met vrienden, die het weer doorsturen. Een viraal moment kan iemand in één nacht bekend maken. Of juist gecanceld. Lees ook de uitleg van <a href="/blog/begrippen/trending/">trending</a>, <a href="/blog/begrippen/clout/">clout</a> en <a href="/blog/begrippen/fyp/">FYP</a>.'
+    ]
+  },
   'vo': {
     paragraphs: [
       '"Vo!", riepen zijn dispuutsgenoten toen hij zijn toespraak afsloot.',
@@ -1444,6 +1726,18 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
       'De vriendschappelijke band bestaat los van je huidige vereniging of <a href="/blog/begrippen/studentenhuis/">studentenhuis</a>, van voor je studententijd.'
     ]
   },
+  'w': {
+    paragraphs: [
+      '"De kroeg heeft vanavond gratis bitterballen. Grote W."',
+      'W komt uit de gamewereld, waar een W een gewonnen potje is. Nu zeg je het over alles wat goed uitpakt. Een W <a href="/blog/begrippen/rizz/">rizz</a> is een geslaagde versierpoging. Het tegenovergestelde is een <a href="/blog/begrippen/l/">L</a>. Lees ook de uitleg van <a href="/blog/begrippen/goat/">GOAT</a>.'
+    ]
+  },
+  'walk-of-shame': {
+    paragraphs: [
+      '"Om negen uur zag ik haar in een glitterjurk en op hakken langs de bakker lopen. De klassieke walk of shame."',
+      'Iedereen ziet aan je outfit dat je niet thuis hebt geslapen. Vaak komt er een flinke <a href="/blog/begrippen/kater/">kater</a> bij kijken. Tegenwoordig noemen veel mensen het ook de stride of pride. Er valt volgens hen niets te schamen. Lees ook de uitleg van <a href="/blog/begrippen/one-night-stand/">one-night stand</a> en <a href="/blog/begrippen/hookup/">hookup</a>.'
+    ]
+  },
   'wegtikken': {
     paragraphs: [
       'Bij de wedstrijd stond hij zijn biertjes in recordtempo weg te tikken.',
@@ -1460,6 +1754,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
     paragraphs: [
       'Onderaan het appje zette ze nog snel een x voor de gezelligheid.',
       'Als afkorting staat X ook voor de drug xtc (ecstasy), met MDMA als werkzame stof. Lees ook de uitleg van <a href="/blog/begrippen/m/">M</a>.'
+    ]
+  },
+  'yolo': {
+    paragraphs: [
+      '"Nog een rondje shotjes op een dinsdag? YOLO."',
+      'YOLO werd in 2011 groot door het nummer The Motto van Drake. Je roept het als excuus voor een spontane of onverstandige keuze. Het lijkt op <a href="/blog/begrippen/fomo/">FOMO</a>, maar YOLO draait om durven en niet om bang zijn iets te missen. Lees ook de uitleg van <a href="/blog/begrippen/side-quest/">side quest</a>.'
     ]
   },
   'zeester': {
