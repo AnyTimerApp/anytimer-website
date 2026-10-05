@@ -46,6 +46,13 @@ ANCHOR_OVERRIDES = {
     "drankspellen": "onze favoriete drankspellen",
     "ginto": "GinTo",
     "vvv": "VVV'tje",
+    "ijskast": "ijskast",
+    "meter-bier": "meter bier",
+    "freshers-week": "Freshers' Week",
+    "italiaans-afscheid": "Italiaans afscheid",
+    "facetune": "FaceTune",
+    "finsta": "FinSta",
+    "kings-cup": "Kings Cup",
 }
 
 # Begrippen whose title doubles as an everyday Dutch word/preposition that

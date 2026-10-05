@@ -13,13 +13,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'abbo': {
     paragraphs: [
       '"Ik moet mijn abbo van de sportschool nog opzeggen voor het einde van de maand", zuchtte ze.',
-      'Studenten gebruiken abbo voor bijna elk soort vast lidmaatschap of terugkerende betaling. Denk aan een streaming-abbo voor series, een telefoonabbo of een krantenabbo dat eigenlijk nooit wordt gelezen. Lees ook de uitleg van <a href="/blog/begrippen/afko/">afko</a>.'
+      'Studenten gebruiken abbo voor bijna elk soort vast lidmaatschap of terugkerende betaling. Denk aan een streaming-abbo voor series, een telefoonabbo of een krantenabbo dat eigenlijk nooit wordt gelezen. Lees ook de uitleg van <a href="/blog/begrippen/afko/">afko</a> en <a href="/blog/begrippen/comfort-show/">comfort show</a>.'
     ]
   },
   'adten': {
     paragraphs: [
       '"Je hebt de weddenschap verloren, dus nu moet je adten", riep zijn huisgenoot lachend door de kamer.',
-      'Het werkwoord komt van <a href="/wat-is-een-adtje/">adtje</a>: wie een adtje krijgt opgelegd, moet het drankje in één keer wegwerken, zonder pauzes. Varianten als de <a href="/blog/begrippen/rietadt/">rietadt</a> maken het proces nog wat sneller, en het tegenovergestelde heet juist <a href="/blog/begrippen/droog-staan/">droog staan</a>. Lees ook de uitleg van <a href="/wat-is-een-anytimer/">anytimer</a>, <a href="/blog/begrippen/adtje-kratje/">adtje kratje</a> en <a href="/blog/begrippen/adtje-solidair/">adtje solidair</a>.'
+      'Het werkwoord komt van <a href="/wat-is-een-adtje/">adtje</a>: wie een adtje krijgt opgelegd, moet het drankje in één keer wegwerken, zonder pauzes. Varianten als de <a href="/blog/begrippen/rietadt/">rietadt</a> maken het proces nog wat sneller, en het tegenovergestelde heet juist <a href="/blog/begrippen/droog-staan/">droog staan</a>. Lees ook de uitleg van <a href="/wat-is-een-anytimer/">anytimer</a>, <a href="/blog/begrippen/adtje-kratje/">adtje kratje</a>, <a href="/blog/begrippen/adtje-solidair/">adtje solidair</a> en <a href="/blog/begrippen/chug/">chug</a>.'
     ]
   },
   'adtje-des': {
@@ -37,7 +37,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'adtje-kratje': {
     paragraphs: [
       'Tijdens de borrel daagden ze elkaar uit voor een potje <a href="/wat-is-een-adtje/">adtje</a> kratje, ieder met een eigen krat naast zich.',
-      'Wie als eerste zijn krat helemaal leeg heeft, wint. Door de hoeveelheid alcohol is dit een van de pittigste drankspellen en alleen weggelegd voor ervaren drinkers met een goede planning. Lees ook de uitleg van <a href="/blog/begrippen/adten/">adten</a> en <a href="/drankspellen/">onze favoriete drankspellen</a>.'
+      'Wie als eerste zijn krat helemaal leeg heeft, wint. Door de hoeveelheid alcohol is dit een van de pittigste drankspellen en alleen weggelegd voor ervaren drinkers met een goede planning. Lees ook de uitleg van <a href="/blog/begrippen/adten/">adten</a>, <a href="/drankspellen/">onze favoriete drankspellen</a> en <a href="/blog/begrippen/drinking-game/">drinking game</a>.'
     ]
   },
   'adtje-solidair': {
@@ -61,19 +61,19 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'afko': {
     paragraphs: [
       '"Snap jij deze afko nog?", vroeg hij, wijzend naar een appje vol onbegrijpelijke lettercombinaties.',
-      'Studentenverenigingen en -huizen gebruiken zoveel afkortingen dat het woord afkorting zelf ook maar is afgekort tot afko. Zonder een goed woordenboek raak je al snel de weg kwijt. Lees ook de uitleg van <a href="/blog/begrippen/abbo/">abbo</a>.'
+      'Studentenverenigingen en -huizen gebruiken zoveel afkortingen dat het woord afkorting zelf ook maar is afgekort tot afko. Zonder een goed woordenboek raak je al snel de weg kwijt. Lees ook de uitleg van <a href="/blog/begrippen/abbo/">abbo</a> en <a href="/blog/begrippen/afk/">AFK</a>.'
     ]
   },
   'afpilsen': {
     paragraphs: [
       '"Zullen we deze nog even afpilsen?", zei hij, terwijl hij de laatste flesjes uit de koelkast pakte.',
-      'De term wordt gebruikt voor het allerlaatste rondje van de avond, vlak voordat iedereen naar huis gaat of gaat slapen.'
+      'De term wordt gebruikt voor het allerlaatste rondje van de avond, vlak voordat iedereen naar huis gaat of gaat slapen. Lees ook de uitleg van <a href="/blog/begrippen/last-call/">last call</a>, <a href="/blog/begrippen/wegtikken/">wegtikken</a> en <a href="/blog/begrippen/herstelbiertje/">herstelbiertje</a>.'
     ]
   },
   'afstubo': {
     paragraphs: [
       'Na jaren studeren gaf ze eindelijk haar afstubo, compleet met speeches en veel te veel bier.',
-      'Zodra je je bachelor of master hebt gehaald, vier je dat met vrienden, familie en huisgenoten op een afstubo. Het markeert vaak ook de overgang van <a href="/blog/begrippen/student/">student</a> naar <a href="/blog/begrippen/arbeider/">arbeider</a>.'
+      'Zodra je je bachelor of master hebt gehaald, vier je dat met vrienden, familie en huisgenoten op een afstubo. Het markeert vaak ook de overgang van <a href="/blog/begrippen/student/">student</a> naar <a href="/blog/begrippen/arbeider/">arbeider</a>. Lees ook de uitleg van <a href="/blog/begrippen/thesis/">thesis</a>.'
     ]
   },
   'afterparty': {
@@ -85,13 +85,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'airfryer': {
     paragraphs: [
       '"Hoe bevalt je nieuwe airfryer?", vroeg ze met een veelbetekenende knipoog.',
-      'Het woord wordt gebruikt als codenaam voor de Satisfyer Pro, zodat je er ook in gezelschap ongegeneerd over kunt praten zonder dat buitenstaanders doorhebben waar het gesprek eigenlijk over gaat.'
+      'Het woord wordt gebruikt als codenaam voor de Satisfyer Pro, zodat je er ook in gezelschap ongegeneerd over kunt praten zonder dat buitenstaanders doorhebben waar het gesprek eigenlijk over gaat. Lees ook de uitleg van <a href="/blog/begrippen/zeester/">zeester</a> en <a href="/blog/begrippen/sneaky-link/">sneaky link</a>.'
     ]
   },
   'al': {
     paragraphs: [
       'Als AL moest ze eerst een hele kennismakingstijd doorlopen voor ze volwaardig lid werd.',
-      'Een AL wil lid worden van een <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a>, maar is dat nog niet officieel. Pas na een kennismakingstijd, ook wel <a href="/blog/begrippen/kmt/">KMT</a> genoemd, wordt een AL definitief toegelaten.'
+      'Een AL wil lid worden van een <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a>, maar is dat nog niet officieel. Pas na een kennismakingstijd, ook wel <a href="/blog/begrippen/kmt/">KMT</a> genoemd, wordt een AL definitief toegelaten. Lees ook de uitleg van <a href="/blog/begrippen/fresher/">fresher</a>.'
     ]
   },
   'algorithm': {
@@ -109,13 +109,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'almanak': {
     paragraphs: [
       'In de almanak van dit jaar stond een pagina vol foto\'s van de <a href="/blog/begrippen/introductieweek/">introductieweek</a>.',
-      'Hierin staan foto\'s, verslagen en overzichten van het afgelopen verenigingsjaar, vaak inclusief een volledige ledenlijst. Veel leden bewaren hun almanakken jarenlang als aandenken. Lees ook de uitleg van <a href="/blog/begrippen/alv/">ALV</a>.'
+      'Hierin staan foto\'s, verslagen en overzichten van het afgelopen verenigingsjaar, vaak inclusief een volledige ledenlijst. Veel leden bewaren hun almanakken jarenlang als aandenken. Lees ook de uitleg van <a href="/blog/begrippen/alv/">ALV</a> en <a href="/blog/begrippen/core-memory/">core memory</a>.'
     ]
   },
   'alt-account': {
     paragraphs: [
       '"Op mijn hoofdaccount post ik alleen mooie foto\'s. De rare dingen gaan op mijn alt."',
-      'Alt is kort voor alternative. Zo\'n account is vaak privéer of bedoeld voor een ander publiek. Anders dan een <a href="/blog/begrippen/burner-account/">burner account</a> hoeft een alt niet anoniem of tijdelijk te zijn. Lees ook de uitleg van <a href="/blog/begrippen/finsta/">finSta</a>.'
+      'Alt is kort voor alternative. Zo\'n account is vaak privéer of bedoeld voor een ander publiek. Anders dan een <a href="/blog/begrippen/burner-account/">burner account</a> hoeft een alt niet anoniem of tijdelijk te zijn. Lees ook de uitleg van <a href="/blog/begrippen/finsta/">FinSta</a>.'
     ]
   },
   'alv': {
@@ -127,7 +127,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'ambu': {
     paragraphs: [
       'Na de derde keer omvallen besloten zijn vrienden toch maar de ambu te bellen.',
-      'De term duikt vooral op als iemand tijdens het uitgaan te veel heeft gedronken en medische hulp nodig heeft. Gelukkig komt het maar bij een klein deel van de avondjes zover. Lees ook de uitleg van <a href="/blog/begrippen/adten/">adten</a>.'
+      'De term duikt vooral op als iemand tijdens het uitgaan te veel heeft gedronken en medische hulp nodig heeft. Gelukkig komt het maar bij een klein deel van de avondjes zover. Lees ook de uitleg van <a href="/blog/begrippen/adten/">adten</a> en <a href="/blog/begrippen/blackout/">blackout</a>.'
     ]
   },
   'amice': {
@@ -139,7 +139,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'arbeider': {
     paragraphs: [
       '"Volgend jaar ben ik ook gewoon arbeider", zuchtte hij bij het zien van zijn laatste tentamen.',
-      'Een arbeider werkt meestal 32 tot 40 uur per week of meer. Het is de fase waar bijna elke <a href="/blog/begrippen/student/">student</a> ooit in belandt na het afronden van de studie, maar de term wordt ook voor stagiairs gebruikt. Lees ook de uitleg van <a href="/blog/begrippen/afstubo/">afstubo</a>.'
+      'Een arbeider werkt meestal 32 tot 40 uur per week of meer. Het is de fase waar bijna elke <a href="/blog/begrippen/student/">student</a> ooit in belandt na het afronden van de studie, maar de term wordt ook voor stagiairs gebruikt. Lees ook de uitleg van <a href="/blog/begrippen/afstubo/">afstubo</a> en <a href="/blog/begrippen/work-life-balance/">work-life balance</a>.'
     ]
   },
   'asap': {
@@ -175,37 +175,37 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'baco': {
     paragraphs: [
       'Aan de bar bestelde hij zonder nadenken zijn zoveelste baco van de avond.',
-      'De drank bestaat uit witte rum aangevuld met cola en een schijfje limoen. Op bijna elk studentenfeest staat wel iemand met een baco in de hand.'
+      'De drank bestaat uit witte rum aangevuld met cola en een schijfje limoen. Op bijna elk studentenfeest staat wel iemand met een baco in de hand. Lees ook de uitleg van <a href="/blog/begrippen/despo/">despo</a>, <a href="/blog/begrippen/esma/">esma</a> en <a href="/blog/begrippen/vino/">vino</a>.'
     ]
   },
   'bak-trekken': {
     paragraphs: [
       '"Verloren met kaarten? Dan mag je een bak <a href="/blog/begrippen/trekken/">trekken</a>", grijnsde zijn tegenstander.',
-      'De term wordt vooral gebruikt als iemand een <a href="/wat-is-een-anytimer/">anytimer</a> of <a href="/wat-is-een-adtje/">adtje</a> moet inlossen en het drankje in één ruk moet wegwerken. Ga je voor de snelle versie, dan grijp je naar een rietje voor een <a href="/blog/begrippen/rietadt/">rietadt</a>. Lees ook de uitleg van <a href="/blog/begrippen/adten/">adten</a> en <a href="/blog/begrippen/bakken-vouwen/">bakken vouwen</a>.'
+      'De term wordt vooral gebruikt als iemand een <a href="/wat-is-een-anytimer/">anytimer</a> of <a href="/wat-is-een-adtje/">adtje</a> moet inlossen en het drankje in één ruk moet wegwerken. Ga je voor de snelle versie, dan grijp je naar een rietje voor een <a href="/blog/begrippen/rietadt/">rietadt</a>. Lees ook de uitleg van <a href="/blog/begrippen/adten/">adten</a>, <a href="/blog/begrippen/bakken-vouwen/">bakken vouwen</a> en <a href="/blog/begrippen/chug/">chug</a>.'
     ]
   },
   'bakken-vouwen': {
     paragraphs: [
       'Tijdens de borrel stond hij de hele avond bakken te vouwen met zijn huisgenoten.',
-      'De uitdrukking wordt vaak in dezelfde adem genoemd als <a href="/blog/begrippen/bak-trekken/">bak trekken</a>, maar gaat specifiek over de hoeveelheid in plaats van de snelheid van één drankje.'
+      'De uitdrukking wordt vaak in dezelfde adem genoemd als <a href="/blog/begrippen/bak-trekken/">bak trekken</a>, maar gaat specifiek over de hoeveelheid in plaats van de snelheid van één drankje. Lees ook de uitleg van <a href="/blog/begrippen/heavyweight/">heavyweight</a>.'
     ]
   },
   'bal': {
     paragraphs: [
       'Met zijn kakibroek en polo viel hij meteen op als typische bal op het feest.',
-      'De term wordt soms ook informeel gebruikt om iemand met een typisch corpsuiterlijk of -gedrag te beschrijven, ook als diegene helemaal geen lid is.'
+      'De term wordt soms ook informeel gebruikt om iemand met een typisch corpsuiterlijk of -gedrag te beschrijven, ook als diegene helemaal geen lid is. Lees ook de uitleg van <a href="/blog/begrippen/corps/">corps</a>, <a href="/blog/begrippen/societeit/">sociëteit</a> en <a href="/blog/begrippen/jasje-dasje/">jasje dasje</a>.'
     ]
   },
   'barco': {
     paragraphs: [
       'Ze meldde zich meteen aan voor de barco, want tappen leek haar geweldig.',
-      'De <a href="/blog/begrippen/commissie/">commissie</a> is verantwoordelijk voor het tappen en verkopen van drank tijdens borrels en feesten, en regelt vaak ook de inkoop voor het hele jaar. Lees ook de uitleg van <a href="/blog/begrippen/bestuur/">bestuur</a>.'
+      'De <a href="/blog/begrippen/commissie/">commissie</a> is verantwoordelijk voor het tappen en verkopen van drank tijdens borrels en feesten, en regelt vaak ook de inkoop voor het hele jaar. Lees ook de uitleg van <a href="/blog/begrippen/bestuur/">bestuur</a> en <a href="/blog/begrippen/last-call/">last call</a>.'
     ]
   },
   'barf': {
     paragraphs: [
       'Halverwege het feest verdween hij plots richting het toilet voor een barf.',
-      'Het gebeurt meestal na het drinken van grote hoeveelheden alcohol of het mixen van verschillende dranken. Genoeg eten voordat je gaat drinken, oftewel een <a href="/blog/begrippen/bodem-leggen/">bodem leggen</a>, verkleint de kans aanzienlijk. Lees ook de uitleg van <a href="/blog/begrippen/braken/">braken</a>.'
+      'Het gebeurt meestal na het drinken van grote hoeveelheden alcohol of het mixen van verschillende dranken. Genoeg eten voordat je gaat drinken, oftewel een <a href="/blog/begrippen/bodem-leggen/">bodem leggen</a>, verkleint de kans aanzienlijk. Lees ook de uitleg van <a href="/blog/begrippen/braken/">braken</a> en <a href="/blog/begrippen/hangover/">hangover</a>.'
     ]
   },
   'based': {
@@ -217,7 +217,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'batsen': {
     paragraphs: [
       'Na het feest liet ze doorschemeren dat ze die nacht nog had gebatst.',
-      'Je hoort het woord vooral terug in verhalen over een avondje stappen, waarbij iemand is \'geregeld\' en het uiteindelijk verder ging dan alleen zoenen. Lees ook de uitleg van <a href="/blog/begrippen/berig/">berig</a>.'
+      'Je hoort het woord vooral terug in verhalen over een avondje stappen, waarbij iemand is \'geregeld\' en het uiteindelijk verder ging dan alleen zoenen. Lees ook de uitleg van <a href="/blog/begrippen/berig/">berig</a> en <a href="/blog/begrippen/hookup/">hookup</a>.'
     ]
   },
   'beer-pong': {
@@ -247,7 +247,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'berig': {
     paragraphs: [
       'Hij was duidelijk berig die avond, want hij sprak iedereen aan de bar aan.',
-      'De term beschrijft vooral het zoekgedrag zelf, niet per se het resultaat. Iemand die berig is, hoeft dus nog niet per se te gaan <a href="/blog/begrippen/batsen/">batsen</a>.'
+      'De term beschrijft vooral het zoekgedrag zelf, niet per se het resultaat. Iemand die berig is, hoeft dus nog niet per se te gaan <a href="/blog/begrippen/batsen/">batsen</a>. Lees ook de uitleg van <a href="/blog/begrippen/thirsty/">thirsty</a>.'
     ]
   },
   'bestuur': {
@@ -265,31 +265,31 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'bij': {
     paragraphs: [
       '"Bij!", appte ze meteen toen de datum voor het etentje bekend werd.',
-      'Digitaal wordt dit vaak aangegeven met een bijenemoji 🐝 onder een groepsappje, zodat iedereen in één oogopslag ziet wie er komt.'
+      'Digitaal wordt dit vaak aangegeven met een bijenemoji 🐝 onder een groepsappje, zodat iedereen in één oogopslag ziet wie er komt. Lees ook de uitleg van <a href="/blog/begrippen/loca/">loca</a> en <a href="/blog/begrippen/omw/">OMW</a>.'
     ]
   },
   'bits': {
     paragraphs: [
       '"Bits, ik ben net gezakt voor mijn tentamen", verzuchtte hij.',
-      'Het woord is breed inzetbaar: van een gemiste bus tot een kapotte fiets, alles wat vervelend is mag bits worden genoemd.'
+      'Het woord is breed inzetbaar: van een gemiste bus tot een kapotte fiets, alles wat vervelend is mag bits worden genoemd. Lees ook de uitleg van <a href="/blog/begrippen/miemelen/">miemelen</a>, <a href="/blog/begrippen/fml/">FML</a> en <a href="/blog/begrippen/salty/">salty</a>.'
     ]
   },
   'blackout': {
     paragraphs: [
       '"Ik weet nog dat we bij de derde kroeg binnenkwamen. Daarna heb ik een totale blackout."',
-      'Bij een blackout slaat je geheugen tijdelijk niets op. Je loopt en praat nog, maar onthoudt het niet. Het is een teken dat je echt te veel alcohol op hebt. Iemand die zo dronken was, zegt: ik was blacked out. Lees ook de uitleg van <a href="/blog/begrippen/dichtgetikt/">dichtgetikt</a> en <a href="/blog/begrippen/kater/">kater</a>.'
+      'Bij een blackout slaat je geheugen tijdelijk niets op. Je loopt en praat nog, maar onthoudt het niet. Het is een teken dat je echt te veel alcohol op hebt. Iemand die zo dronken was, zegt: ik was blacked out. Lees ook de uitleg van <a href="/blog/begrippen/dichtgetikt/">dichtgetikt</a>, <a href="/blog/begrippen/kater/">kater</a> en <a href="/blog/begrippen/ambu/">ambu</a>.'
     ]
   },
   'bodem-leggen': {
     paragraphs: [
       'Voor de borrel begon, at hij snel nog een bord pasta om een bodem te leggen.',
-      'Het idee is simpel: met een volle maag verwerkt je lichaam alcohol langzamer, wat de kans op een <a href="/blog/begrippen/kater/">kater</a> of zelfs een <a href="/blog/begrippen/barf/">barf</a> verkleint.'
+      'Het idee is simpel: met een volle maag verwerkt je lichaam alcohol langzamer, wat de kans op een <a href="/blog/begrippen/kater/">kater</a> of zelfs een <a href="/blog/begrippen/barf/">barf</a> verkleint. Lees ook de uitleg van <a href="/blog/begrippen/pre-drinks/">pre-drinks</a>.'
     ]
   },
   'body-count': {
     paragraphs: [
       '"Tijdens het spelletje kwam de vraag wat ieders body count was. Het werd ineens heel stil."',
-      'Oorspronkelijk is body count een militaire term voor het aantal doden. Op social media gaat het over seksuele partners. Veel mensen vinden de vraag ongepast of vinden het aantal er helemaal niet toe doen. Lees ook de uitleg van <a href="/blog/begrippen/one-night-stand/">one-night stand</a> en <a href="/blog/begrippen/hookup/">hookup</a>.'
+      'Oorspronkelijk is body count een militaire term voor het aantal doden. Op social media gaat het over seksuele partners. Veel mensen vinden de vraag ongepast of vinden het aantal er helemaal niet toe doen. Lees ook de uitleg van <a href="/blog/begrippen/one-night-stand/">one-night stand</a>, <a href="/blog/begrippen/hookup/">hookup</a> en <a href="/blog/begrippen/tijgerpunten/">tijgerpunten</a>.'
     ]
   },
   'bottoms-up': {
@@ -313,19 +313,19 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'brak': {
     paragraphs: [
       'De hele zondag lag ze brak op de bank, met alleen energie voor Netflix.',
-      'Het gaat hierbij niet per se om lichamelijke klachten, maar vooral om een mentale toestand: een zwaar hoofd en totaal geen zin om iets te doen. Een <a href="/blog/begrippen/herstelbiertje/">herstelbiertje</a> helpt volgens sommigen. Lees ook de uitleg van <a href="/blog/begrippen/braken/">braken</a>.'
+      'Het gaat hierbij niet per se om lichamelijke klachten, maar vooral om een mentale toestand: een zwaar hoofd en totaal geen zin om iets te doen. Een <a href="/blog/begrippen/herstelbiertje/">herstelbiertje</a> helpt volgens sommigen. Lees ook de uitleg van <a href="/blog/begrippen/braken/">braken</a> en <a href="/blog/begrippen/hangover/">hangover</a>.'
     ]
   },
   'braken': {
     paragraphs: [
-      'Na de vierde shot moest hij plotseling naar buiten om te braken.',
+      'Na de vierde <a href="/blog/begrippen/shot/">shot</a> moest hij plotseling naar buiten om te braken.',
       'Bij studenten is de oorzaak meestal een te grote hoeveelheid alcohol in korte tijd. Het resultaat wordt in studentenkringen ook wel een <a href="/blog/begrippen/grondpizza/">grondpizza</a> genoemd. Lees ook de uitleg van <a href="/blog/begrippen/barf/">barf</a> en <a href="/blog/begrippen/brak/">brak</a>.'
     ]
   },
   'brassen': {
     paragraphs: [
       'Over wie er gelijk had, besloten ze het gewoon uit te brassen op het schoolplein van de <a href="/blog/begrippen/soos/">soos</a>.',
-      'Wie wint, krijgt van de verliezer een biertje. De precieze regels verschillen per stad en vereniging, en het ritueel staat ook wel bekend als zooien.'
+      'Wie wint, krijgt van de verliezer een biertje. De precieze regels verschillen per stad en vereniging, en het ritueel staat ook wel bekend als zooien. Lees ook de uitleg van <a href="/blog/begrippen/salty/">salty</a>.'
     ]
   },
   'breadcrumbing': {
@@ -337,19 +337,19 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'broke': {
     paragraphs: [
       '"Ik kan niet mee op wintersport, ik ben echt broke tot mijn <a href="/blog/begrippen/stufi/">stufi</a> binnenkomt."',
-      'Broke betekent letterlijk blut. Het is meestal tijdelijk en wordt vaak met een grap gezegd. Aan het eind van de maand zijn veel studenten broke. Wie altijd geld tekort heeft, is een <a href="/blog/begrippen/broke-student/">broke student</a>. Lees ook de uitleg van <a href="/blog/begrippen/pauper/">pauper</a>.'
+      'Broke betekent letterlijk blut. Het is meestal tijdelijk en wordt vaak met een grap gezegd. Aan het eind van de maand zijn veel studenten broke. Wie altijd geld tekort heeft, is een <a href="/blog/begrippen/broke-student/">broke student</a>. Lees ook de uitleg van <a href="/blog/begrippen/pauper/">pauper</a> en <a href="/blog/begrippen/skeer/">skeer</a>.'
     ]
   },
   'broke-student': {
     paragraphs: [
       '"Huismerk pasta en kraanwater. Het leven van een <a href="/blog/begrippen/broke/">broke</a> <a href="/blog/begrippen/student/">student</a>."',
-      'Het stereotype van de broke student is wereldwijd bekend. Huur, collegegeld en boodschappen tikken flink aan. Daarom zoeken studenten altijd naar aanbiedingen, gratis eten en happy hours. Het hoort er een beetje bij. Lees ook de uitleg van <a href="/blog/begrippen/pauper/">pauper</a> en <a href="/blog/begrippen/happy-hour/">happy hour</a>.'
+      'Het stereotype van de broke student is wereldwijd bekend. Huur, collegegeld en boodschappen tikken flink aan. Daarom zoeken studenten altijd naar aanbiedingen, gratis eten en happy hours. Het hoort er een beetje bij. Lees ook de uitleg van <a href="/blog/begrippen/pauper/">pauper</a>, <a href="/blog/begrippen/happy-hour/">happy hour</a> en <a href="/blog/begrippen/studentenreisproduct/">studentenreisproduct</a>.'
     ]
   },
   'bs': {
     paragraphs: [
       '"Ik ga even bs doen, hebben we nog melk?", riep ze door het huis.',
-      'Naast boodschappen kan bs ook staan voor Brightspace, waar studiemateriaal en cijfers op staan, of voor een Bachelor of Science-opleiding.'
+      'Naast boodschappen kan bs ook staan voor Brightspace, waar studiemateriaal en cijfers op staan, of voor een Bachelor of Science-opleiding. Lees ook de uitleg van <a href="/blog/begrippen/super/">de super</a> en <a href="/blog/begrippen/ub/">UB</a>.'
     ]
   },
   'btw': {
@@ -367,13 +367,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'bueno': {
     paragraphs: [
       '"Bueno, laten we vanavond gewoon lekker bij mij bankhangen", stelde ze voor.',
-      'Studenten gebruiken het los in een zin om aan te geven dat iets prima of mooi is, vaak zonder verdere Spaanse kennis in huis te hebben.'
+      'Studenten gebruiken het los in een zin om aan te geven dat iets prima of mooi is, vaak zonder verdere Spaanse kennis in huis te hebben. Lees ook de uitleg van <a href="/blog/begrippen/vo/">vo</a>, <a href="/blog/begrippen/sws/">SWS</a> en <a href="/blog/begrippen/valid/">valid</a>.'
     ]
   },
   'burger': {
     paragraphs: [
       '"Volgend jaar ben ik ook gewoon burger", zei hij met een mix van trots en spijt.',
-      'Na de studietijd word je vanzelf burger: je gaat fulltime werken, woont op jezelf en reist naar kantoor met de eigen auto of de <a href="/blog/begrippen/burgerrups/">burgerrups</a>. Lees ook de uitleg van <a href="/blog/begrippen/arbeider/">arbeider</a>.'
+      'Na de studietijd word je vanzelf burger: je gaat fulltime werken, woont op jezelf en reist naar kantoor met de eigen auto of de <a href="/blog/begrippen/burgerrups/">burgerrups</a>. Lees ook de uitleg van <a href="/blog/begrippen/arbeider/">arbeider</a> en <a href="/blog/begrippen/adulting/">adulting</a>.'
     ]
   },
   'burgerrups': {
@@ -403,7 +403,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'buying-a-round': {
     paragraphs: [
       '"Ik heb mijn tentamen gehaald, ik geef een rondje!"',
-      'In de kroeg is het gebruikelijk om om de beurt een rondje te geven. Iedereen betaalt zo ongeveer evenveel. Wie nooit een rondje geeft, valt snel op. Het werkt ook mooi als inzet voor een <a href="/wat-is-een-anytimer/">anytimer</a>. Lees ook de uitleg van <a href="/blog/begrippen/pub/">pub</a>.'
+      'In de kroeg is het gebruikelijk om om de beurt een rondje te geven. Iedereen betaalt zo ongeveer evenveel. Wie nooit een rondje geeft, valt snel op. Het werkt ook mooi als inzet voor een <a href="/wat-is-een-anytimer/">anytimer</a>. Lees ook de uitleg van <a href="/blog/begrippen/pub/">pub</a> en <a href="/blog/begrippen/turflijst/">turflijst</a>.'
     ]
   },
   'bv': {
@@ -415,19 +415,19 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'bvo': {
     paragraphs: [
       'Op de fiets naar de <a href="/blog/begrippen/soos/">soos</a> had ze alvast een bvo\'tje in haar bidon gedaan.',
-      'Het is vooral handig op de fiets of in de <a href="/blog/begrippen/burgerrups/">burgerrups</a> als je onderweg bent naar een feestje, zodat de avond al voor aankomst begint.'
+      'Het is vooral handig op de fiets of in de <a href="/blog/begrippen/burgerrups/">burgerrups</a> als je onderweg bent naar een feestje, zodat de avond al voor aankomst begint. Lees ook de uitleg van <a href="/blog/begrippen/pre-drinks/">pre-drinks</a>.'
     ]
   },
   'byob': {
     paragraphs: [
       'Op de uitnodiging stond duidelijk vermeld: BYOB, want de voorraad was op.',
-      'Je gebruikt het bij een uitnodiging als iedereen zijn eigen drank meeneemt, bijvoorbeeld omdat de gastheer niet weet wie wat drinkt of geen geld heeft voor drank voor iedereen.'
+      'Je gebruikt het bij een uitnodiging als iedereen zijn eigen drank meeneemt, bijvoorbeeld omdat de gastheer niet weet wie wat drinkt of geen geld heeft voor drank voor iedereen. Lees ook de uitleg van <a href="/blog/begrippen/house-party/">house party</a>, <a href="/blog/begrippen/fuif/">fuif</a> en <a href="/blog/begrippen/indrinken/">indrinken</a>.'
     ]
   },
   'bsa': {
     paragraphs: [
       'Met een negatief BSA moest ze noodgedwongen op zoek naar een andere opleiding.',
-      'Haal je in je eerste studiejaar niet genoeg studiepunten, dan krijg je een negatief BSA. Daardoor moet je vaak stoppen met je opleiding en mag je er soms een aantal jaar niet meer aan beginnen.'
+      'Haal je in je eerste studiejaar niet genoeg studiepunten, dan krijg je een negatief BSA. Daardoor moet je vaak stoppen met je opleiding en mag je er soms een aantal jaar niet meer aan beginnen. Lees ook de uitleg van <a href="/blog/begrippen/nominaal-lopen/">nominaal lopen</a>, <a href="/blog/begrippen/propedeuse/">propedeuse</a> en <a href="/blog/begrippen/dropout/">dropout</a>.'
     ]
   },
   'campus': {
@@ -463,7 +463,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'cappu': {
     paragraphs: [
       'Op het terras bestelde ze snel nog een cappu voordat het college begon.',
-      'Naast de klassieke variant met koemelk bestaan er inmiddels ook varianten met haver-, soja-, kokos- of amandelmelk, elk met hun eigen fans.'
+      'Naast de klassieke variant met koemelk bestaan er inmiddels ook varianten met haver-, soja-, kokos- of amandelmelk, elk met hun eigen fans. Lees ook de uitleg van <a href="/blog/begrippen/esma/">esma</a> en <a href="/blog/begrippen/ub/">UB</a>.'
     ]
   },
   'catfish': {
@@ -499,7 +499,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'chug': {
     paragraphs: [
       '"Chug, chug, chug!", riep de hele tafel toen hij zijn bier begon weg te werken.',
-      'Chuggen kan met elk drankje, maar op feestjes gaat het meestal om alcohol. Het lijkt op het Nederlandse <a href="/blog/begrippen/adten/">adten</a>. Het verschil is dat chuggen niet per se in één keer hoeft. Drink altijd op je eigen tempo. Lees ook de uitleg van <a href="/blog/begrippen/shotgun-a-beer/">shotgun a beer</a> en <a href="/blog/begrippen/bottoms-up/">bottoms up</a>.'
+      'Chuggen kan met elk drankje, maar op feestjes gaat het meestal om alcohol. Het lijkt op het Nederlandse <a href="/blog/begrippen/adten/">adten</a>. Het verschil is dat chuggen niet per se in één keer hoeft. Drink altijd op je eigen tempo. Lees ook de uitleg van <a href="/blog/begrippen/shotgun-a-beer/">shotgun a beer</a>, <a href="/blog/begrippen/bottoms-up/">bottoms up</a> en <a href="/blog/begrippen/nekken/">nekken</a>.'
     ]
   },
   'clickbait': {
@@ -511,7 +511,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'clout': {
     paragraphs: [
       '"Hij doet die gekke challenges alleen maar voor de clout."',
-      'Clout chasen betekent dat je alles doet voor views, likes en volgers. Influencers met veel clout kunnen trends starten. Het wordt vaak negatief gebruikt voor mensen die nep doen om populair te worden. Lees ook de uitleg van <a href="/blog/begrippen/influ/">influ</a>, <a href="/blog/begrippen/viral/">viral</a> en <a href="/blog/begrippen/flex/">flex</a>.'
+      'Clout chasen betekent dat je alles doet voor views, likes en volgers. Influencers met veel clout kunnen trends starten. Het wordt vaak negatief gebruikt voor mensen die nep doen om populair te worden. Lees ook de uitleg van <a href="/blog/begrippen/influ/">influ</a>, <a href="/blog/begrippen/viral/">viral</a>, <a href="/blog/begrippen/flex/">flex</a> en <a href="/blog/begrippen/vestjeslikker/">vestjeslikker</a>.'
     ]
   },
   'clubbing': {
@@ -535,7 +535,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'condo': {
     paragraphs: [
       '"Heb jij toevallig een condo bij je?", vroeg ze fluisterend aan haar huisgenoot.',
-      'Het is de simpelste manier om <a href="/blog/begrippen/chlam/">chlam</a> en andere soa\'s te voorkomen, en je hoort er in studentenkringen ook wel <a href="/blog/begrippen/connie/">connie</a> tegen zeggen.'
+      'Het is de simpelste manier om <a href="/blog/begrippen/chlam/">chlam</a> en andere soa\'s te voorkomen, en je hoort er in studentenkringen ook wel <a href="/blog/begrippen/connie/">connie</a> tegen zeggen. Lees ook de uitleg van <a href="/blog/begrippen/hookup/">hookup</a>.'
     ]
   },
   'connie': {
@@ -559,7 +559,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'cooked': {
     paragraphs: [
       '"Ik heb voor dit tentamen nog geen bladzijde gelezen. Ik ben cooked."',
-      'De precieze betekenis hangt af van de situatie. Je kunt cooked zijn na een zware training of na een slechte keuze. Een team dat met 4-0 achterstaat, is ook cooked. Het lijkt op \'ik ben de sjaak\'. Lees ook de uitleg van <a href="/blog/begrippen/l/">L</a> en <a href="/blog/begrippen/fml/">FML</a>.'
+      'De precieze betekenis hangt af van de situatie. Je kunt cooked zijn na een zware training of na een slechte keuze. Een team dat met 4-0 achterstaat, is ook cooked. Het lijkt op \'ik ben de sjaak\'. Lees ook de uitleg van <a href="/blog/begrippen/l/">L</a>, <a href="/blog/begrippen/fml/">FML</a> en <a href="/blog/begrippen/inkakken/">inkakken</a>.'
     ]
   },
   'core-memory': {
@@ -571,7 +571,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'corps': {
     paragraphs: [
       'Al generaties lang wordt er binnen het corps op precies dezelfde manier gedronken op de <a href="/blog/begrippen/societeit/">sociëteit</a>.',
-      'De vereniging draait sterk op tradities en heeft vaak een uitgebreide hiërarchie van disputen en jaarclubs, met eigen ongeschreven regels ofwel <a href="/blog/begrippen/mores/">mores</a>. Lees ook de uitleg van <a href="/blog/begrippen/bal/">bal</a> en <a href="/blog/begrippen/bestuur/">bestuur</a>.'
+      'De vereniging draait sterk op tradities en heeft vaak een uitgebreide hiërarchie van disputen en jaarclubs, met eigen ongeschreven regels ofwel <a href="/blog/begrippen/mores/">mores</a>. Lees ook de uitleg van <a href="/blog/begrippen/bal/">bal</a>, <a href="/blog/begrippen/bestuur/">bestuur</a> en <a href="/blog/begrippen/frat/">frat</a>.'
     ]
   },
   'couple-goals': {
@@ -607,7 +607,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'cringe': {
     paragraphs: [
       '"Hij zong voor haar een zelfgeschreven liedje in de kantine. Zo cringe."',
-      'Het Engelse werkwoord to cringe betekent ineenkrimpen. Dat is precies wat je doet als iemand iets ongemakkelijks doet. Oude statusupdates of foto\'s uit je brugklas zijn vaak ook cringe. Lees ook de uitleg van <a href="/blog/begrippen/based/">based</a>, <a href="/blog/begrippen/pick-me/">pick-me</a> en <a href="/blog/begrippen/aura/">aura</a>.'
+      'Het Engelse werkwoord to cringe betekent ineenkrimpen. Dat is precies wat je doet als iemand iets ongemakkelijks doet. Oude statusupdates of foto\'s uit je brugklas zijn vaak ook cringe. Lees ook de uitleg van <a href="/blog/begrippen/based/">based</a>, <a href="/blog/begrippen/pick-me/">pick-me</a>, <a href="/blog/begrippen/aura/">aura</a> en <a href="/blog/begrippen/krokant/">krokant</a>.'
     ]
   },
   'cuffing-season': {
@@ -637,19 +637,19 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'dapri': {
     paragraphs: [
       '"Zet even een dapri open voor de borrel volgende maand", appte ze de groep.',
-      'Studenten gebruiken het om met hun <a href="/blog/begrippen/dispuut/">dispuut</a>, huis of vereniging snel een geschikte datum voor een borrel of activiteit te vinden, al vult lang niet iedereen hem even snel in.'
+      'Studenten gebruiken het om met hun <a href="/blog/begrippen/dispuut/">dispuut</a>, huis of vereniging snel een geschikte datum voor een borrel of activiteit te vinden, al vult lang niet iedereen hem even snel in. Lees ook de uitleg van <a href="/blog/begrippen/lmk/">LMK</a>.'
     ]
   },
   'das': {
     paragraphs: [
       'Voor de gala-avond moest hij nog snel op zoek naar een nette das.',
-      'Binnen een vereniging of <a href="/blog/begrippen/dispuut/">dispuut</a> wordt de das vaak als vaste kledingcode gedragen bij borrels en officiële gelegenheden, soms zelfs met een vast kleurenpatroon.'
+      'Binnen een vereniging of <a href="/blog/begrippen/dispuut/">dispuut</a> wordt de das vaak als vaste kledingcode gedragen bij borrels en officiële gelegenheden, soms zelfs met een vast kleurenpatroon. Lees ook de uitleg van <a href="/blog/begrippen/fit-check/">fit check</a>.'
     ]
   },
   'datediner': {
     paragraphs: [
       'Voor het datediner had ze via haar <a href="/blog/begrippen/dispuut/">dispuut</a> een leuke date toegewezen gekregen.',
-      'Studenten organiseren dit vaak samen met hun <a href="/blog/begrippen/jaarclub/">jaarclub</a>, <a href="/blog/begrippen/studentenhuis/">studentenhuis</a> of vereniging, die soms ook een date voor je <a href="/blog/begrippen/regelen/">regelen</a> als je zelf niemand weet.'
+      'Studenten organiseren dit vaak samen met hun <a href="/blog/begrippen/jaarclub/">jaarclub</a>, <a href="/blog/begrippen/studentenhuis/">studentenhuis</a> of vereniging, die soms ook een date voor je <a href="/blog/begrippen/regelen/">regelen</a> als je zelf niemand weet. Lees ook de uitleg van <a href="/blog/begrippen/talking-stage/">talking stage</a>.'
     ]
   },
   'dead': {
@@ -691,25 +691,25 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'despo': {
     paragraphs: [
       'In de koelkast stond nog maar één flesje despo over van de vorige borrel.',
-      'Het biertje onderscheidt zich van gewoon pils door het vleugje tequilasmaak, wat het populair maakt bij feestjes.'
+      'Het biertje onderscheidt zich van gewoon pils door het vleugje tequilasmaak, wat het populair maakt bij feestjes. Lees ook de uitleg van <a href="/blog/begrippen/baco/">baco</a>, <a href="/blog/begrippen/halve-leo/">halve leo</a> en <a href="/blog/begrippen/pint/">pint</a>.'
     ]
   },
   'deur-verdienen': {
     paragraphs: [
       'Zonder deur op zijn kamer moest hij de eerste weken flink zijn best doen om hem te verdienen.',
-      'Een nieuwe huisgenoot krijgt bij deze traditie aanvankelijk geen deur op zijn kamer. Die wordt pas geplaatst zodra aan een bepaalde voorwaarde is voldaan. Niet elk <a href="/blog/begrippen/studentenhuis/">studentenhuis</a> kent dit gebruik.'
+      'Een nieuwe huisgenoot krijgt bij deze traditie aanvankelijk geen deur op zijn kamer. Die wordt pas geplaatst zodra aan een bepaalde voorwaarde is voldaan. Niet elk <a href="/blog/begrippen/studentenhuis/">studentenhuis</a> kent dit gebruik. Lees ook de uitleg van <a href="/blog/begrippen/flatmate/">flatmate</a>.'
     ]
   },
   'dibs': {
     paragraphs: [
       '"Dibs op de bank!", riep ze net iets sneller dan haar huisgenoot.',
-      'Roep je op tijd dibs voor een naam of wijs je als eerste, dan is die plek of dat object van jou. Het lijkt op de shotgun-regel, maar dan breder toepasbaar dan alleen bij de auto.'
+      'Roep je op tijd dibs voor een naam of wijs je als eerste, dan is die plek of dat object van jou. Het lijkt op de shotgun-regel, maar dan breder toepasbaar dan alleen bij de auto. Lees ook de uitleg van <a href="/blog/begrippen/studentenhuis/">studentenhuis</a> en <a href="/blog/begrippen/ijskast/">ijskast</a>.'
     ]
   },
   'dichtgetikt': {
     paragraphs: [
       'Op familiefeestjes was hij inmiddels zo dichtgetikt dat niemand hem meer volgde.',
-      'Zo iemand praat alleen nog maar over zijn studentenleven, vereniging en het bijbehorende wereldje, doorspekt met jargon. Een goed woordenboek en de nodige geduld helpen om hem nog te kunnen volgen.'
+      'Zo iemand praat alleen nog maar over zijn studentenleven, vereniging en het bijbehorende wereldje, doorspekt met jargon. Een goed woordenboek en de nodige geduld helpen om hem nog te kunnen volgen. Lees ook de uitleg van <a href="/blog/begrippen/extern/">extern</a>, <a href="/blog/begrippen/mores/">mores</a> en <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a>.'
     ]
   },
   'dies': {
@@ -727,7 +727,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'dispuut': {
     paragraphs: [
       'Al drie jaar eet ze elke donderdag met haar dispuut, ongeacht wie er nog moet studeren.',
-      'Een dispuut functioneert als een eigen kleine club met eigen activiteiten. Meestal word je uitgenodigd om lid te worden, in plaats van dat je je er zelf voor aanmeldt. Lees ook de uitleg van <a href="/blog/begrippen/corps/">corps</a> en <a href="/blog/begrippen/bestuur/">bestuur</a>.'
+      'Een dispuut functioneert als een eigen kleine club met eigen activiteiten. Meestal word je uitgenodigd om lid te worden, in plaats van dat je je er zelf voor aanmeldt. Lees ook de uitleg van <a href="/blog/begrippen/corps/">corps</a>, <a href="/blog/begrippen/bestuur/">bestuur</a> en <a href="/blog/begrippen/sorority/">sorority</a>.'
     ]
   },
   'dissertation': {
@@ -757,13 +757,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'doorhalen': {
     paragraphs: [
       'Ze besloten de avond door te halen en pas bij zonsopgang naar huis te fietsen.',
-      'Het wordt vaak gecombineerd met blijven drinken om de vermoeidheid tegen te gaan, al betaal je de volgende dag meestal de prijs in de vorm van een flinke <a href="/blog/begrippen/kater/">kater</a>. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a>.'
+      'Het wordt vaak gecombineerd met blijven drinken om de vermoeidheid tegen te gaan, al betaal je de volgende dag meestal de prijs in de vorm van een flinke <a href="/blog/begrippen/kater/">kater</a>. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a> en <a href="/blog/begrippen/all-nighter/">all-nighter</a>.'
     ]
   },
   'dorm': {
     paragraphs: [
       '"Tijdens mijn uitwisseling in Boston deelde ik een dorm met een jongen uit Texas."',
-      'Dorm is kort voor dormitory. In de VS woon je je eerste jaar vaak in een dorm op de <a href="/blog/begrippen/campus/">campus</a>. Een dorm room deel je meestal met een <a href="/blog/begrippen/roommate/">roommate</a>. In Engeland heet het eerder halls. Lees ook de uitleg van <a href="/blog/begrippen/studentenhuis/">studentenhuis</a>.'
+      'Dorm is kort voor dormitory. In de VS woon je je eerste jaar vaak in een dorm op de <a href="/blog/begrippen/campus/">campus</a>. Een dorm room deel je meestal met een <a href="/blog/begrippen/roommate/">roommate</a>. In Engeland heet het eerder halls. Lees ook de uitleg van <a href="/blog/begrippen/studentenhuis/">studentenhuis</a> en <a href="/blog/begrippen/kot/">kot</a>.'
     ]
   },
   'double-texting': {
@@ -787,13 +787,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'driesecondenregel': {
     paragraphs: [
       'Zijn frietje viel op de grond, maar binnen de driesecondenregel raapte hij het meteen weer op.',
-      'Duurt het langer dan drie tellen, dan hoort het etenswaar volgens de regel in de prullenbak, al houdt niemand echt de tijd bij.'
+      'Duurt het langer dan drie tellen, dan hoort het etenswaar volgens de regel in de prullenbak, al houdt niemand echt de tijd bij. Lees ook de uitleg van <a href="/blog/begrippen/tjak/">tjak</a> en <a href="/blog/begrippen/ijskast/">ijskast</a>.'
     ]
   },
   'drinking-game': {
     paragraphs: [
       '"Iemand een idee voor een drinking game? We hebben kaarten en een paar bekers."',
-      'Bekende Engelse drinking games zijn <a href="/blog/begrippen/beer-pong/">beer pong</a>, <a href="/blog/begrippen/kings-cup/">Kings Cup</a> en <a href="/blog/begrippen/flip-cup/">flip cup</a>. In het Nederlands heet het gewoon een drankspel. Omdat je soms snel drinkt, is het slim om bij te houden hoeveel je echt op hebt. Lees ook de uitleg van <a href="/drankspellen/">onze favoriete drankspellen</a>.'
+      'Bekende Engelse drinking games zijn <a href="/blog/begrippen/beer-pong/">beer pong</a>, <a href="/blog/begrippen/kings-cup/">Kings Cup</a> en <a href="/blog/begrippen/flip-cup/">flip cup</a>. In het Nederlands heet het gewoon een drankspel. Omdat je soms snel drinkt, is het slim om bij te houden hoeveel je echt op hebt. Lees ook de uitleg van <a href="/drankspellen/">onze favoriete drankspellen</a> en <a href="/blog/begrippen/icen/">icen</a>.'
     ]
   },
   'drip': {
@@ -823,7 +823,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'dubbel-gemengd': {
     paragraphs: [
       'In hun dubbel gemengde huis woonden leden van maar liefst vier verschillende verenigingen samen.',
-      'Er bestaan ook huizen die alleen mengen op geslacht of alleen op vereniging: dubbel gemengd is dus maar een van de vele varianten die je in een studentenstad tegenkomt.'
+      'Er bestaan ook huizen die alleen mengen op geslacht of alleen op vereniging: dubbel gemengd is dus maar een van de vele varianten die je in een studentenstad tegenkomt. Lees ook de uitleg van <a href="/blog/begrippen/studentenhuis/">studentenhuis</a>, <a href="/blog/begrippen/extern/">extern</a> en <a href="/blog/begrippen/huisjongste/">huisjongste</a>.'
     ]
   },
   'duet': {
@@ -835,25 +835,25 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'duft': {
     paragraphs: [
       '"Typisch een duft", grapten ze toen hij weer eens over zijn studie techniek begon.',
-      'De bijnaam fietsenmaker wordt ook weleens gebruikt voor Delftse studenten, als knipoog naar het technische imago van de stad.'
+      'De bijnaam fietsenmaker wordt ook weleens gebruikt voor Delftse studenten, als knipoog naar het technische imago van de stad. Lees ook de uitleg van <a href="/blog/begrippen/studentikoos/">studentikoos</a> en <a href="/blog/begrippen/extern/">extern</a>.'
     ]
   },
   'duo': {
     paragraphs: [
       'Aan het eind van de maand stond het geld van DUO gelukkig weer op haar rekening.',
-      'Onder studenten ook liefkozend ome DUO genoemd, is deze instantie na het <a href="/blog/begrippen/leenstelsel/">leenstelsel</a> voor velen de belangrijkste bron van inkomsten tijdens de studie.'
+      'Onder studenten ook liefkozend ome DUO genoemd, is deze instantie na het <a href="/blog/begrippen/leenstelsel/">leenstelsel</a> voor velen de belangrijkste bron van inkomsten tijdens de studie. Lees ook de uitleg van <a href="/blog/begrippen/broke-student/">broke student</a>.'
     ]
   },
   'droog-staan': {
     paragraphs: [
       'Omdat hij die avond moest rijden, besloot hij droog te staan tijdens de borrel.',
-      'Vaak is er een praktische reden om droog te staan, zoals werken de volgende dag of gewoon een avond rust nemen tussen de feestjes door zonder te hoeven <a href="/blog/begrippen/adten/">adten</a>. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a>.'
+      'Vaak is er een praktische reden om droog te staan, zoals werken de volgende dag of gewoon een avond rust nemen tussen de feestjes door zonder te hoeven <a href="/blog/begrippen/adten/">adten</a>. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a> en <a href="/blog/begrippen/sober/">sober</a>.'
     ]
   },
   'el-cid': {
     paragraphs: [
       'Tijdens de EL CID leerde ze in één week meer studenten kennen dan in haar hele middelbareschooltijd.',
-      'De naam staat voor Enige Leidse <a href="/blog/begrippen/commissie/">Commissie</a> Introductie Dagen. Je maakt kennis met de stad, je studie en het studentenleven, vaak samen met een groepje andere eerstejaars.'
+      'De naam staat voor Enige Leidse <a href="/blog/begrippen/commissie/">Commissie</a> Introductie Dagen. Je maakt kennis met de stad, je studie en het studentenleven, vaak samen met een groepje andere eerstejaars. Lees ook de uitleg van <a href="/blog/begrippen/freshers-week/">Freshers\' Week</a>.'
     ]
   },
   'elective': {
@@ -877,25 +877,25 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'esca': {
     paragraphs: [
       '"Wat een esca gisteren", appte hij de groep de ochtend erna.',
-      'Je gebruikt het woord terugkijkend op een avond die goed uit de hand liep, in positieve zin dan. Lees ook de uitleg van <a href="/blog/begrippen/escaleren/">escaleren</a>.'
+      'Je gebruikt het woord terugkijkend op een avond die goed uit de hand liep, in positieve zin dan. Lees ook de uitleg van <a href="/blog/begrippen/escaleren/">escaleren</a> en <a href="/blog/begrippen/lit/">lit</a>.'
     ]
   },
   'escaleren': {
     paragraphs: [
       'Wat begon als een rustig etentje escaleerde uiteindelijk tot diep in de nacht.',
-      'Het begrip wordt ook wel <a href="/blog/begrippen/kantelen/">kantelen</a> genoemd en is een belangrijk onderdeel van een goede avond stappen, met als enige mitsgaders dat je niet in de <a href="/blog/begrippen/rattentaxi/">rattentaxi</a> eindigt. Lees ook de uitleg van <a href="/blog/begrippen/esca/">esca</a>.'
+      'Het begrip wordt ook wel <a href="/blog/begrippen/kantelen/">kantelen</a> genoemd en is een belangrijk onderdeel van een goede avond stappen, met als enige mitsgaders dat je niet in de <a href="/blog/begrippen/rattentaxi/">rattentaxi</a> eindigt. Lees ook de uitleg van <a href="/blog/begrippen/esca/">esca</a>, <a href="/blog/begrippen/chaotic/">chaotic</a> en <a href="/blog/begrippen/living-my-best-life/">living my best life</a>.'
     ]
   },
   'esma': {
     paragraphs: [
       'Op de borrel bestelde ze in plaats van bier voor de verandering een esma.',
-      'De cocktail bestaat uit wodka, koffielikeur en een shot espresso, geserveerd in een martiniglas met een paar koffiebonen erbovenop.'
+      'De cocktail bestaat uit wodka, koffielikeur en een shot espresso, geserveerd in een martiniglas met een paar koffiebonen erbovenop. Lees ook de uitleg van <a href="/blog/begrippen/cappu/">cappu</a>, <a href="/blog/begrippen/baco/">baco</a> en <a href="/blog/begrippen/vino/">vino</a>.'
     ]
   },
   'eventuela': {
     paragraphs: [
       '"Is dat nou gewoon een <a href="/blog/begrippen/scharrel/">scharrel</a> of stiekem al je eventuela?", vroeg haar huisgenoot nieuwsgierig.',
-      'Groeit het contact door, dan kan een eventuela uiteindelijk uitgroeien tot een <a href="/blog/begrippen/prela/">prela</a> en zelfs een echte <a href="/blog/begrippen/rela/">rela</a>. Lees ook de uitleg van <a href="/blog/begrippen/fwb/">FWB</a> en <a href="/blog/begrippen/exclusief/">exclusief</a>.'
+      'Groeit het contact door, dan kan een eventuela uiteindelijk uitgroeien tot een <a href="/blog/begrippen/prela/">prela</a> en zelfs een echte <a href="/blog/begrippen/rela/">rela</a>. Lees ook de uitleg van <a href="/blog/begrippen/fwb/">FWB</a>, <a href="/blog/begrippen/exclusief/">exclusief</a> en <a href="/blog/begrippen/delulu/">delulu</a>.'
     ]
   },
   'exchange-student': {
@@ -907,19 +907,19 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'exclu': {
     paragraphs: [
       '"Zijn jullie nu exclu of gewoon nog <a href="/blog/begrippen/scharrel/">scharrel</a>?", vroeg ze recht op de man af.',
-      'Het woord wordt in de wandelgangen net zo vaak gebruikt als de volledige vorm <a href="/blog/begrippen/exclusief/">exclusief</a>.'
+      'Het woord wordt in de wandelgangen net zo vaak gebruikt als de volledige vorm <a href="/blog/begrippen/exclusief/">exclusief</a>. Lees ook de uitleg van <a href="/blog/begrippen/dtr/">DTR</a>.'
     ]
   },
   'exclusief': {
     paragraphs: [
       'Na een paar weken spraken ze af om exclusief te worden, zonder meteen een label op de relatie te plakken.',
-      'Het is een tussenfase: je hebt alleen met de afgesproken persoon seks, maar het is nog geen officiële <a href="/blog/begrippen/rela/">rela</a> met alles erop en eraan. Lees ook de uitleg van <a href="/blog/begrippen/exclu/">exclu</a>, <a href="/blog/begrippen/eventuela/">eventuela</a> en <a href="/blog/begrippen/fwb/">FWB</a>.'
+      'Het is een tussenfase: je hebt alleen met de afgesproken persoon seks, maar het is nog geen officiële <a href="/blog/begrippen/rela/">rela</a> met alles erop en eraan. Lees ook de uitleg van <a href="/blog/begrippen/exclu/">exclu</a>, <a href="/blog/begrippen/eventuela/">eventuela</a>, <a href="/blog/begrippen/fwb/">FWB</a> en <a href="/blog/begrippen/dtr/">DTR</a>.'
     ]
   },
   'extern': {
     paragraphs: [
       'Voor het feest mocht iedereen ook een externe introduceren aan de groep.',
-      'De term wordt gebruikt om onderscheid te maken tussen leden of huisgenoten en buitenstaanders bij een activiteit of borrel.'
+      'De term wordt gebruikt om onderscheid te maken tussen leden of huisgenoten en buitenstaanders bij een activiteit of borrel. Lees ook de uitleg van <a href="/blog/begrippen/normi/">normi</a>, <a href="/blog/begrippen/dichtgetikt/">dichtgetikt</a> en <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a>.'
     ]
   },
   'facetune': {
@@ -943,7 +943,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'filter': {
     paragraphs: [
       '"Zonder filter post ik geen selfie meer. Ik zie er na dat feest uit als een zombie."',
-      'Een filter kan alleen de kleuren of het licht aanpassen. Maar er zijn ook filters die je gezicht veranderen of oren en een neus toevoegen. Sommige filters zijn zo sterk dat je iemand amper herkent. Lees ook de uitleg van <a href="/blog/begrippen/facetune/">faceTune</a> en <a href="/blog/begrippen/photo-dump/">photo dump</a>.'
+      'Een filter kan alleen de kleuren of het licht aanpassen. Maar er zijn ook filters die je gezicht veranderen of oren en een neus toevoegen. Sommige filters zijn zo sterk dat je iemand amper herkent. Lees ook de uitleg van <a href="/blog/begrippen/facetune/">FaceTune</a> en <a href="/blog/begrippen/photo-dump/">photo dump</a>.'
     ]
   },
   'finsta': {
@@ -973,7 +973,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'flatmate': {
     paragraphs: [
       '"Mijn flatmate heeft weer al mijn eieren opgegeten zonder het te vragen."',
-      'Flatmate is vooral Brits-Engels. Het lijkt op <a href="/blog/begrippen/roommate/">roommate</a>, maar je deelt geen slaapkamer. Je woont in hetzelfde huis en deelt keuken en badkamer. In Nederlandse studentenhuizen heb je vaak een hele groep flatmates. Lees ook de uitleg van <a href="/blog/begrippen/studentenhuis/">studentenhuis</a> en <a href="/blog/begrippen/huispanda/">huispanda</a>.'
+      'Flatmate is vooral Brits-Engels. Het lijkt op <a href="/blog/begrippen/roommate/">roommate</a>, maar je deelt geen slaapkamer. Je woont in hetzelfde huis en deelt keuken en badkamer. In Nederlandse studentenhuizen heb je vaak een hele groep flatmates. Lees ook de uitleg van <a href="/blog/begrippen/studentenhuis/">studentenhuis</a>, <a href="/blog/begrippen/huispanda/">huispanda</a> en <a href="/blog/begrippen/dubbel-gemengd/">dubbel gemengd</a>.'
     ]
   },
   'flex': {
@@ -997,7 +997,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'fomo': {
     paragraphs: [
       'Ondanks haar tentamen de volgende dag ging ze uit pure FOMO toch naar het feest.',
-      'De angst zorgt ervoor dat je liever naar een feestje of borrel gaat dan thuisblijft, ook als je eigenlijk moe bent of moet studeren.'
+      'De angst zorgt ervoor dat je liever naar een feestje of borrel gaat dan thuisblijft, ook als je eigenlijk moe bent of moet studeren. Lees ook de uitleg van <a href="/blog/begrippen/jomo/">JOMO</a>, <a href="/blog/begrippen/yolo/">YOLO</a> en <a href="/blog/begrippen/mdm/">MDM</a>.'
     ]
   },
   'frat': {
@@ -1039,19 +1039,19 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'fuif': {
     paragraphs: [
       'In de tuin van het <a href="/blog/begrippen/studentenhuis/">studentenhuis</a> organiseerden ze een gezellige fuif met eigen dj.',
-      'De term wordt vooral in België en Zuid-Nederland gebruikt voor een feest dat net iets informeler is dan een groot evenement.'
+      'De term wordt vooral in België en Zuid-Nederland gebruikt voor een feest dat net iets informeler is dan een groot evenement. Lees ook de uitleg van <a href="/blog/begrippen/house-party/">house party</a>.'
     ]
   },
   'fusie': {
     paragraphs: [
       'Elke avond om zeven uur schoof iedereen aan in de fusie voor het gezamenlijke eten.',
-      'Het is de plek waar huisgenoten elkaar het vaakst tegenkomen, of ze nu samen eten, tv-kijken of gewoon even bijkletsen.'
+      'Het is de plek waar huisgenoten elkaar het vaakst tegenkomen, of ze nu samen eten, tv-kijken of gewoon even bijkletsen. Lees ook de uitleg van <a href="/blog/begrippen/studentenhuis/">studentenhuis</a>, <a href="/blog/begrippen/huisparasiet/">huisparasiet</a> en <a href="/blog/begrippen/ijskast/">ijskast</a>.'
     ]
   },
   'fwb': {
     paragraphs: [
       'Ze spraken duidelijk af dat ze gewoon FWB zouden blijven, zonder verwachtingen naar elkaar.',
-      'Vriendschap en seks worden gecombineerd, zonder de verplichtingen van een echte relatie. Vaak, maar niet altijd, blijven FWB\'s wel <a href="/blog/begrippen/exclusief/">exclusief</a> van elkaar. Lees ook de uitleg van <a href="/blog/begrippen/eventuela/">eventuela</a>.'
+      'Vriendschap en seks worden gecombineerd, zonder de verplichtingen van een echte relatie. Vaak, maar niet altijd, blijven FWB\'s wel <a href="/blog/begrippen/exclusief/">exclusief</a> van elkaar. Lees ook de uitleg van <a href="/blog/begrippen/eventuela/">eventuela</a> en <a href="/blog/begrippen/situationship/">situationship</a>.'
     ]
   },
   'fyi': {
@@ -1069,7 +1069,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'galaplicht': {
     paragraphs: [
       '"Vergeet die galaplicht maar", zei ze, "ik ga gewoon voor een leuke avond."',
-      'In de praktijk wordt hier lang niet altijd aan vastgehouden: een gezellige avond wordt meestal belangrijker gevonden dan wat erna zou moeten volgen.'
+      'In de praktijk wordt hier lang niet altijd aan vastgehouden: een gezellige avond wordt meestal belangrijker gevonden dan wat erna zou moeten volgen. Lees ook de uitleg van <a href="/blog/begrippen/jasje-dasje/">jasje dasje</a>, <a href="/blog/begrippen/datediner/">datediner</a> en <a href="/blog/begrippen/safedate/">safedate</a>.'
     ]
   },
   'gap-year': {
@@ -1093,13 +1093,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'geru': {
     paragraphs: [
       'Na college schoof iedereen weer aan in de geru voor een aflevering op de bank.',
-      'Afhankelijk van de stad hoor je voor dezelfde ruimte ook wel <a href="/blog/begrippen/gr/">GR</a>, <a href="/blog/begrippen/gk/">GK</a> of <a href="/blog/begrippen/fusie/">fusie</a>, maar de betekenis blijft steeds hetzelfde.'
+      'Afhankelijk van de stad hoor je voor dezelfde ruimte ook wel <a href="/blog/begrippen/gr/">GR</a>, <a href="/blog/begrippen/gk/">GK</a> of <a href="/blog/begrippen/fusie/">fusie</a>, maar de betekenis blijft steeds hetzelfde. Lees ook de uitleg van <a href="/blog/begrippen/flatmate/">flatmate</a>.'
     ]
   },
   'gezel': {
     paragraphs: [
       '"Wat gezel dat je er ook bij bent vanavond", zei ze met een grote glimlach.',
-      'Je hoort ook wel de variant gezellie, vooral als het net wat overdreven enthousiast gezegd moet worden.'
+      'Je hoort ook wel de variant gezellie, vooral als het net wat overdreven enthousiast gezegd moet worden. Lees ook de uitleg van <a href="/blog/begrippen/hila/">hila</a>, <a href="/blog/begrippen/sensa/">sensa</a> en <a href="/blog/begrippen/vrijmibo/">vrijmibo</a>.'
     ]
   },
   'ghost-account': {
@@ -1176,7 +1176,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   },
   'grondpannenkoek': {
     paragraphs: [
-      'Na de derde shot eindigde de avond helaas in een flinke grondpannenkoek.',
+      'Na de derde <a href="/blog/begrippen/shot/">shot</a> eindigde de avond helaas in een flinke grondpannenkoek.',
       'Het woord wordt door elkaar gebruikt met <a href="/blog/begrippen/grondpizza/">grondpizza</a> en straatpannenkoek, allemaal even smakelijke omschrijvingen voor hetzelfde ongelukje.'
     ]
   },
@@ -1201,7 +1201,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'guac': {
     paragraphs: [
       'Bij de nacho-avond mocht de guac natuurlijk niet ontbreken.',
-      'De dip bestaat uit avocado, peper, zout en citroensap, en is bij bijna elke studenten-borrel met chips wel te vinden.'
+      'De dip bestaat uit avocado, peper, zout en citroensap, en is bij bijna elke studenten-borrel met chips wel te vinden. Lees ook de uitleg van <a href="/blog/begrippen/toko/">toko</a> en <a href="/blog/begrippen/comfort-food/">comfort food</a>.'
     ]
   },
   'guest-list': {
@@ -1231,19 +1231,19 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'halve-leo': {
     paragraphs: [
       'Voor onderweg pakte hij liever een halve leo dan een normaal blikje.',
-      'Het formaat is groter dan een standaardblikje, waardoor je met minder blikjes toch net zo lang mee kunt bij een feestje.'
+      'Het formaat is groter dan een standaardblikje, waardoor je met minder blikjes toch net zo lang mee kunt bij een feestje. Lees ook de uitleg van <a href="/blog/begrippen/meter-bier/">meter bier</a>, <a href="/blog/begrippen/pint/">pint</a> en <a href="/blog/begrippen/despo/">despo</a>.'
     ]
   },
   'hangover': {
     paragraphs: [
       '"Na het gala had ik de zwaarste hangover van mijn leven. Ik heb de hele zondag op de bank gelegen."',
-      'Bij een hangover heb je vaak hoofdpijn, dorst, misselijkheid en geen concentratie. In het Nederlands zeggen we <a href="/blog/begrippen/kater/">kater</a>. Tijd, water en rust helpen het best. Wie de dag erna weer gaat drinken, doet aan <a href="/blog/begrippen/hair-of-the-dog/">hair of the dog</a>. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a>.'
+      'Bij een hangover heb je vaak hoofdpijn, dorst, misselijkheid en geen concentratie. In het Nederlands zeggen we <a href="/blog/begrippen/kater/">kater</a>. Tijd, water en rust helpen het best. Wie de dag erna weer gaat drinken, doet aan <a href="/blog/begrippen/hair-of-the-dog/">hair of the dog</a>. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a> en <a href="/blog/begrippen/para/">para</a>.'
     ]
   },
   'happy-hour': {
     paragraphs: [
       '"Tussen vijf en zeven is het happy hour. Twee cocktails voor de prijs van één."',
-      'Ondanks de naam duurt happy hour vaak langer dan een uur. Het is perfect voor een <a href="/blog/begrippen/broke-student/">broke student</a>. Veel studenten plannen hun borrel bewust rond het happy hour van hun favoriete kroeg. Lees ook de uitleg van <a href="/blog/begrippen/pub/">pub</a> en <a href="/blog/begrippen/dive-bar/">dive bar</a>.'
+      'Ondanks de naam duurt happy hour vaak langer dan een uur. Het is perfect voor een <a href="/blog/begrippen/broke-student/">broke student</a>. Veel studenten plannen hun borrel bewust rond het happy hour van hun favoriete kroeg. Lees ook de uitleg van <a href="/blog/begrippen/pub/">pub</a>, <a href="/blog/begrippen/dive-bar/">dive bar</a> en <a href="/blog/begrippen/ginto/">GinTo</a>.'
     ]
   },
   'hard-launch': {
@@ -1261,13 +1261,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'heavyweight': {
     paragraphs: [
       '"Na acht bier stond hij nog stokstijf. Echte heavyweight."',
-      'Het tegenovergestelde is een <a href="/blog/begrippen/lightweight/">lightweight</a>. Een hoge tolerantie betekent niet dat veel drinken veilig is. Iemand kan nuchter lijken en toch een hoog promillage hebben. In Nederland zeg je ook wel: die kan wat hebben. Lees ook de uitleg van <a href="/blog/begrippen/party-animal/">party animal</a>.'
+      'Het tegenovergestelde is een <a href="/blog/begrippen/lightweight/">lightweight</a>. Een hoge tolerantie betekent niet dat veel drinken veilig is. Iemand kan nuchter lijken en toch een hoog promillage hebben. In Nederland zeg je ook wel: die kan wat hebben. Lees ook de uitleg van <a href="/blog/begrippen/party-animal/">party animal</a> en <a href="/blog/begrippen/spiegelen/">spiegelen</a>.'
     ]
   },
   'her': {
     paragraphs: [
       'Na een onvoldoende moest ze zich voorbereiden op haar her in januari.',
-      'De herkansing biedt een tweede kans voor een tentamen dat niet in één keer is gehaald, meestal enkele weken na de oorspronkelijke toets.'
+      'De herkansing biedt een tweede kans voor een tentamen dat niet in één keer is gehaald, meestal enkele weken na de oorspronkelijke toets. Lees ook de uitleg van <a href="/blog/begrippen/tenta/">tenta</a>, <a href="/blog/begrippen/studententien/">studententien</a> en <a href="/blog/begrippen/bsa/">BSA</a>.'
     ]
   },
   'hertje': {
@@ -1279,7 +1279,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'hg': {
     paragraphs: [
       '"Is er nog een HG <a href="/blog/begrippen/thuis/">thuis</a> die mee wilt eten?", vroeg mijn vriendin.',
-      'De jongste huisgenoot van het huis wordt vaak de <a href="/blog/begrippen/huisjongste/">huisjongste</a> of <a href="/blog/begrippen/hj/">HJ</a> genoemd, met bijbehorende huishoudelijke taken.'
+      'De jongste huisgenoot van het huis wordt vaak de <a href="/blog/begrippen/huisjongste/">huisjongste</a> of <a href="/blog/begrippen/hj/">HJ</a> genoemd, met bijbehorende huishoudelijke taken. Lees ook de uitleg van <a href="/blog/begrippen/flatmate/">flatmate</a>.'
     ]
   },
   'highkey': {
@@ -1291,7 +1291,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'hila': {
     paragraphs: [
       '"Dat filmpje van gisteren was echt hila", proestte ze het uit.',
-      'Het woord duikt vooral op in appjes en gesprekken over grappige situaties die net iets te absurd zijn om serieus te blijven.'
+      'Het woord duikt vooral op in appjes en gesprekken over grappige situaties die net iets te absurd zijn om serieus te blijven. Lees ook de uitleg van <a href="/blog/begrippen/sensa/">sensa</a>, <a href="/blog/begrippen/lmao/">LMAO</a> en <a href="/blog/begrippen/gezel/">gezel</a>.'
     ]
   },
   'hj': {
@@ -1315,13 +1315,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'hospi': {
     paragraphs: [
       'Ze had die week wel vijf hospi\'s afgelopen op zoek naar een leuke kamer.',
-      'Het woord wordt in de wandelgangen net zo vaak gebruikt als de volledige vorm <a href="/blog/begrippen/hospiteren/">hospiteren</a>.'
+      'Het woord wordt in de wandelgangen net zo vaak gebruikt als de volledige vorm <a href="/blog/begrippen/hospiteren/">hospiteren</a>. Lees ook de uitleg van <a href="/blog/begrippen/vibe-check/">vibe check</a>.'
     ]
   },
   'hospiteren': {
     paragraphs: [
       'Om te hospiteren trok ze haar leukste outfit aan en oefende ze vast wat grapjes.',
-      'Huidige huisgenoten nodigen kandidaten uit en beoordelen hen om te bepalen wie de vrije kamer krijgt. Er wordt vooral gekeken naar persoonlijkheid en of iemand in het huis past. Lees ook de uitleg van <a href="/blog/begrippen/hospi/">hospi</a>.'
+      'Huidige huisgenoten nodigen kandidaten uit en beoordelen hen om te bepalen wie de vrije kamer krijgt. Er wordt vooral gekeken naar persoonlijkheid en of iemand in het huis past. Lees ook de uitleg van <a href="/blog/begrippen/hospi/">hospi</a> en <a href="/blog/begrippen/vibe-check/">vibe check</a>.'
     ]
   },
   'hot-take': {
@@ -1333,7 +1333,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'houdini': {
     paragraphs: [
       'Halverwege de avond was hij plotseling spoorloos: weer een houdini.',
-      'Het staat gelijk aan het nemen van de <a href="/blog/begrippen/rattentaxi/">rattentaxi</a>: je verdwijnt zonder je vrienden nog een fijne avond te wensen.'
+      'Het staat gelijk aan het nemen van de <a href="/blog/begrippen/rattentaxi/">rattentaxi</a>: je verdwijnt zonder je vrienden nog een fijne avond te wensen. Lees ook de uitleg van <a href="/blog/begrippen/ghosting/">ghosting</a>.'
     ]
   },
   'house-party': {
@@ -1357,7 +1357,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'huispanda': {
     paragraphs: [
       'Voor de grap gaven ze de huispanda dit jaar een echte bamboeplant om te verzorgen.',
-      'In sommige studentenhuizen hoort bij deze status ook een plant als symbolisch cadeau, gekoppeld aan het aantal verzamelde <a href="/blog/begrippen/pandapunten/">pandapunten</a>. Lees ook de uitleg van <a href="/blog/begrippen/hg/">HG</a>.'
+      'In sommige studentenhuizen hoort bij deze status ook een plant als symbolisch cadeau, gekoppeld aan het aantal verzamelde <a href="/blog/begrippen/pandapunten/">pandapunten</a>. Lees ook de uitleg van <a href="/blog/begrippen/hg/">HG</a> en <a href="/blog/begrippen/down-bad/">down bad</a>.'
     ]
   },
   'huisparasiet': {
@@ -1381,25 +1381,25 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'herstelbiertje': {
     paragraphs: [
       'De ochtend erna opende hij meteen een herstelbiertje in de hoop wat op te knappen.',
-      'Of het echt tegen een <a href="/blog/begrippen/kater/">kater</a> helpt, is de vraag, maar onder studenten die de avond hebben doorgehaald is het een vast ritueel. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a> en <a href="/blog/begrippen/doorhalen/">doorhalen</a>.'
+      'Of het echt tegen een <a href="/blog/begrippen/kater/">kater</a> helpt, is de vraag, maar onder studenten die de avond hebben doorgehaald is het een vast ritueel. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a>, <a href="/blog/begrippen/doorhalen/">doorhalen</a> en <a href="/blog/begrippen/hair-of-the-dog/">hair of the dog</a>.'
     ]
   },
   'ibu': {
     paragraphs: [
       'Voor ze naar bed ging, slikte ze uit voorzorg alvast een ibu.',
-      'De pijnstiller wordt door veel studenten de dag na het uitgaan gegrepen, het liefst samen met een groot glas water. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a>.'
+      'De pijnstiller wordt door veel studenten de dag na het uitgaan gegrepen, het liefst samen met een groot glas water. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a> en <a href="/blog/begrippen/hangover/">hangover</a>.'
     ]
   },
   'icen': {
     paragraphs: [
       'Onder de bank vond hij plots een fles Smirnoff Ice: hij was geiced.',
-      'Vind je de verstopte fles, dan moet je hem in één keer <a href="/blog/begrippen/adten/">adten</a>. Ben je nog met een ander spel bezig, dan moet je de fles eerst leegdrinken voordat je weer mag meedoen.'
+      'Vind je de verstopte fles, dan moet je hem in één keer <a href="/blog/begrippen/adten/">adten</a>. Ben je nog met een ander spel bezig, dan moet je de fles eerst leegdrinken voordat je weer mag meedoen. Lees ook de uitleg van <a href="/blog/begrippen/drinking-game/">drinking game</a>.'
     ]
   },
   'ick': {
     paragraphs: [
       '"Hij rende achter zijn pingpongballetje aan bij <a href="/blog/begrippen/beer-pong/">beer pong</a>. Ik kreeg instant de ick."',
-      'Icks zijn vaak irrationeel en heel persoonlijk. Denk aan hoe iemand eet, loopt of een appje schrijft. Het gaat om een plotselinge afknapper, niet om een echt probleem. Dat is een <a href="/blog/begrippen/dealbreaker/">dealbreaker</a> of <a href="/blog/begrippen/red-flag/">red flag</a>. Lees ook de uitleg van <a href="/blog/begrippen/beige-flag/">beige flag</a>.'
+      'Icks zijn vaak irrationeel en heel persoonlijk. Denk aan hoe iemand eet, loopt of een appje schrijft. Het gaat om een plotselinge afknapper, niet om een echt probleem. Dat is een <a href="/blog/begrippen/dealbreaker/">dealbreaker</a> of <a href="/blog/begrippen/red-flag/">red flag</a>. Lees ook de uitleg van <a href="/blog/begrippen/beige-flag/">beige flag</a> en <a href="/blog/begrippen/kaasschaaf/">kaasschaaf</a>.'
     ]
   },
   'idc': {
@@ -1417,7 +1417,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'ijskast': {
     paragraphs: [
       '"Staat het bier al in de ijskast?", riep ze vanuit de gang.',
-      'Studenten gebruiken het woord vooral om aan te geven waar de dranken voor de avond koud worden bewaard.'
+      'Studenten gebruiken het woord vooral om aan te geven waar de dranken voor de avond koud worden bewaard. Lees ook de uitleg van <a href="/blog/begrippen/super/">de super</a>, <a href="/blog/begrippen/tjak/">tjak</a> en <a href="/blog/begrippen/fusie/">fusie</a>.'
     ]
   },
   'im-weak': {
@@ -1459,19 +1459,19 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'indrinken': {
     paragraphs: [
       'Voor het uitgaan spraken ze af eerst gezellig in te drinken bij haar op de kamer.',
-      'Omdat drank in de supermarkt veel goedkoper is dan in de kroeg of club, drinkt iedereen <a href="/blog/begrippen/thuis/">thuis</a> alvast een aantal biertjes voor, soms met een <a href="/blog/begrippen/bvo/">bvo</a> voor onderweg.'
+      'Omdat drank in de supermarkt veel goedkoper is dan in de kroeg of club, drinkt iedereen <a href="/blog/begrippen/thuis/">thuis</a> alvast een aantal biertjes voor, soms met een <a href="/blog/begrippen/bvo/">bvo</a> voor onderweg. Lees ook de uitleg van <a href="/blog/begrippen/pre-drinks/">pre-drinks</a>.'
     ]
   },
   'influ': {
     paragraphs: [
       '"Doe niet zo influ", grapte ze toen hij voor de vijfde keer een foto nam.',
-      'Studenten gebruiken het woord ook weleens licht spottend voor iemand die overdreven veel foto\'s van zichzelf maakt.'
+      'Studenten gebruiken het woord ook weleens licht spottend voor iemand die overdreven veel foto\'s van zichzelf maakt. Lees ook de uitleg van <a href="/blog/begrippen/content-creator/">content creator</a>, <a href="/blog/begrippen/clout/">clout</a> en <a href="/blog/begrippen/internet-personality/">internet personality</a>.'
     ]
   },
   'inkakken': {
     paragraphs: [
       'Rond middernacht begon hij al flink in te kakken op de bank.',
-      'Het gebeurt vooral als je moe bent of een tijd niet meer hebt gedronken. Het advies onder studenten is dan simpel: bijpakken. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a>.'
+      'Het gebeurt vooral als je moe bent of een tijd niet meer hebt gedronken. Het advies onder studenten is dan simpel: bijpakken. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a> en <a href="/blog/begrippen/cooked/">cooked</a>.'
     ]
   },
   'instemmen': {
@@ -1483,7 +1483,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'internacho': {
     paragraphs: [
       'Als internacho vond ze het in het begin lastig om de afkortingen te volgen.',
-      'De term wordt gebruikt om internationale studenten aan te duiden binnen een overwegend Nederlandse studentenomgeving.'
+      'De term wordt gebruikt om internationale studenten aan te duiden binnen een overwegend Nederlandse studentenomgeving. Lees ook de uitleg van <a href="/blog/begrippen/exchange-student/">exchange student</a> en <a href="/blog/begrippen/study-abroad/">study abroad</a>.'
     ]
   },
   'internet-personality': {
@@ -1501,7 +1501,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'introductieweek': {
     paragraphs: [
       'Tijdens de introductieweek leerde ze meteen haar latere huisgenoten kennen.',
-      'Je doet activiteiten en ontdekt wat echt bij je past. Deelname is niet verplicht, maar wel een van de makkelijkste manieren om snel vrienden te maken. Lees ook de uitleg van <a href="/blog/begrippen/el-cid/">EL CID</a> en <a href="/blog/begrippen/feut/">feut</a>.'
+      'Je doet activiteiten en ontdekt wat echt bij je past. Deelname is niet verplicht, maar wel een van de makkelijkste manieren om snel vrienden te maken. Lees ook de uitleg van <a href="/blog/begrippen/el-cid/">EL CID</a>, <a href="/blog/begrippen/feut/">feut</a> en <a href="/blog/begrippen/freshers-week/">Freshers\' Week</a>.'
     ]
   },
   'irl': {
@@ -1549,7 +1549,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'jagerbomb': {
     paragraphs: [
       'Aan de bar bestelden ze in koor vijf Jägerbombs voor de groep.',
-      'Het shotglas Jägermeister wordt in een glas energydrank gelaten zakken, wat het een populair drankje maakt tijdens het stappen.'
+      'Het shotglas Jägermeister wordt in een glas energydrank gelaten zakken, wat het een populair drankje maakt tijdens het stappen. Lees ook de uitleg van <a href="/blog/begrippen/shot/">shot</a>, <a href="/blog/begrippen/sg/">SG</a> en <a href="/blog/begrippen/spa-goud/">spa goud</a>.'
     ]
   },
   'jomo': {
@@ -1567,25 +1567,25 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'kaasschaaf': {
     paragraphs: [
       '"Zeg, was hij nou echt zo\'n kaasschaaf?", vroeg ze giechelend aan haar vriendin.',
-      'De bijnaam wordt vooral aan een onervaren <a href="/blog/begrippen/sjaars/">sjaars</a> gegeven en verspreidt zich al snel binnen de vriendengroep van de persoon die het overkwam.'
+      'De bijnaam wordt vooral aan een onervaren <a href="/blog/begrippen/sjaars/">sjaars</a> gegeven en verspreidt zich al snel binnen de vriendengroep van de persoon die het overkwam. Lees ook de uitleg van <a href="/blog/begrippen/ick/">ick</a>.'
     ]
   },
   'kantelen': {
     paragraphs: [
       '"Kantel die pils nou maar gewoon", zei zijn cordi ongeduldig.',
-      'Een avond goed laten kantelen betekent dat het een geslaagde avond is geweest, vergelijkbaar met <a href="/blog/begrippen/escaleren/">escaleren</a>. Een biertje kantelen betekent juist dat je het in één keer leegdrinkt, oftewel <a href="/blog/begrippen/adten/">adten</a>.'
+      'Een avond goed laten kantelen betekent dat het een geslaagde avond is geweest, vergelijkbaar met <a href="/blog/begrippen/escaleren/">escaleren</a>. Een biertje kantelen betekent juist dat je het in één keer leegdrinkt, oftewel <a href="/blog/begrippen/adten/">adten</a>. Lees ook de uitleg van <a href="/blog/begrippen/lit/">lit</a>.'
     ]
   },
   'kapstokhertje': {
     paragraphs: [
       'Bij de uitgang stond nog een kapstokhertje rond te kijken wie er nog meeging.',
-      'Zo iemand blijft aan het einde van een feest of borrel bij de kapstok hangen, in de hoop de avond samen met iemand af te sluiten. Lees ook de uitleg van <a href="/blog/begrippen/hertje/">hertje</a>.'
+      'Zo iemand blijft aan het einde van een feest of borrel bij de kapstok hangen, in de hoop de avond samen met iemand af te sluiten. Lees ook de uitleg van <a href="/blog/begrippen/hertje/">hertje</a> en <a href="/blog/begrippen/down-bad/">down bad</a>.'
     ]
   },
   'kater': {
     paragraphs: [
       'Met een flinke kater bleef ze de hele zondag op de bank liggen.',
-      'Het lichamelijke en mentale ongemak voel je meestal de ochtend na het drinken. Een goede <a href="/blog/begrippen/bodem-leggen/">bodem leggen</a> voor en na het uitgaan kan een kater helpen voorkomen, net als een <a href="/blog/begrippen/herstelbiertje/">herstelbiertje</a> volgens sommigen. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a>.'
+      'Het lichamelijke en mentale ongemak voel je meestal de ochtend na het drinken. Een goede <a href="/blog/begrippen/bodem-leggen/">bodem leggen</a> voor en na het uitgaan kan een kater helpen voorkomen, net als een <a href="/blog/begrippen/herstelbiertje/">herstelbiertje</a> volgens sommigen. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a> en <a href="/blog/begrippen/hangover/">hangover</a>.'
     ]
   },
   'kings-cup': {
@@ -1615,25 +1615,25 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'kot': {
     paragraphs: [
       'In Leuven nodigde ze haar vrienden uit op haar kot voor een filmavond.',
-      'De term wordt vooral in Vlaanderen gebruikt en dekt dezelfde lading als wat Nederlandse studenten hun <a href="/blog/begrippen/thuis/">thuis</a> noemen.'
+      'De term wordt vooral in Vlaanderen gebruikt en dekt dezelfde lading als wat Nederlandse studenten hun <a href="/blog/begrippen/thuis/">thuis</a> noemen. Lees ook de uitleg van <a href="/blog/begrippen/dorm/">dorm</a>.'
     ]
   },
   'krokant': {
     paragraphs: [
       'Na die opmerking werd de sfeer aan tafel plots erg krokant.',
-      'Het woord beschrijft een ongemakkelijke of gespannen situatie, bijvoorbeeld tijdens een borrel die niet lekker loopt. Je kunt jezelf achteraf ook krokant voelen.'
+      'Het woord beschrijft een ongemakkelijke of gespannen situatie, bijvoorbeeld tijdens een borrel die niet lekker loopt. Je kunt jezelf achteraf ook krokant voelen. Lees ook de uitleg van <a href="/blog/begrippen/cringe/">cringe</a> en <a href="/blog/begrippen/out-of-pocket/">out of pocket</a>.'
     ]
   },
   'kruipafstand': {
     paragraphs: [
       'In de hospiteerpost stond trots vermeld: supermarkt op kruipafstand.',
-      'Studenten gebruiken de term om aan te geven hoe dichtbij iets is, bijvoorbeeld bij het zoeken naar een kamer in de buurt van de universiteitsbibliotheek.'
+      'Studenten gebruiken de term om aan te geven hoe dichtbij iets is, bijvoorbeeld bij het zoeken naar een kamer in de buurt van de universiteitsbibliotheek. Lees ook de uitleg van <a href="/blog/begrippen/loca/">loca</a> en <a href="/blog/begrippen/super/">de super</a>.'
     ]
   },
   'kwarrel': {
     paragraphs: [
       'Met haar kwarrel kon ze eindelijk ook eens serieus praten in plaats van alleen afspreken.',
-      'Een kwarrel gaat net wat verder dan een <a href="/blog/begrippen/scharrel/">scharrel</a>: naast fysiek contact praat je ook over gevoelens en kun je bij elkaar terecht. Lees ook de uitleg van <a href="/blog/begrippen/eventuela/">eventuela</a> en <a href="/blog/begrippen/exclusief/">exclusief</a>.'
+      'Een kwarrel gaat net wat verder dan een <a href="/blog/begrippen/scharrel/">scharrel</a>: naast fysiek contact praat je ook over gevoelens en kun je bij elkaar terecht. Lees ook de uitleg van <a href="/blog/begrippen/eventuela/">eventuela</a>, <a href="/blog/begrippen/exclusief/">exclusief</a> en <a href="/blog/begrippen/situationship/">situationship</a>.'
     ]
   },
   'l': {
@@ -1663,7 +1663,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'leenstelsel': {
     paragraphs: [
       'Door het leenstelsel stond ze na haar studie met een flinke schuld bij <a href="/blog/begrippen/duo/">DUO</a>.',
-      'In plaats van een gratis basisbeurs, zoals voor 2015, leen je nu geld dat je later moet terugbetalen, wat veel studenten later de <a href="/blog/begrippen/pechgeneratie/">pechgeneratie</a> noemen.'
+      'In plaats van een gratis basisbeurs, zoals voor 2015, leen je nu geld dat je later moet terugbetalen, wat veel studenten later de <a href="/blog/begrippen/pechgeneratie/">pechgeneratie</a> noemen. Lees ook de uitleg van <a href="/blog/begrippen/broke-student/">broke student</a>.'
     ]
   },
   'left-on-delivered': {
@@ -1723,13 +1723,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'lmk': {
     paragraphs: [
       '"We gaan om acht uur eten. LMK of je erbij bent."',
-      'Met LMK vraag je iemand om je later iets te laten weten. Een beslissing, een update of informatie. Het is kort, makkelijk en wordt veel gebruikt in groepsapps. Lees ook de uitleg van <a href="/blog/begrippen/asap/">ASAP</a> en <a href="/blog/begrippen/fyi/">FYI</a>.'
+      'Met LMK vraag je iemand om je later iets te laten weten. Een beslissing, een update of informatie. Het is kort, makkelijk en wordt veel gebruikt in groepsapps. Lees ook de uitleg van <a href="/blog/begrippen/asap/">ASAP</a>, <a href="/blog/begrippen/fyi/">FYI</a> en <a href="/blog/begrippen/dapri/">dapri</a>.'
     ]
   },
   'loca': {
     paragraphs: [
       '"Nog geen loca geprikt voor de borrel?", vroeg ze ongeduldig in de groepsapp.',
-      'Het woord duikt vooral op in appjes waarin nog bepaald moet worden waar een activiteit plaatsvindt.'
+      'Het woord duikt vooral op in appjes waarin nog bepaald moet worden waar een activiteit plaatsvindt. Lees ook de uitleg van <a href="/blog/begrippen/kruipafstand/">kruipafstand</a>, <a href="/blog/begrippen/bij/">bij</a> en <a href="/blog/begrippen/rn/">RN</a>.'
     ]
   },
   'locked-in': {
@@ -1753,7 +1753,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'louter': {
     paragraphs: [
       '"Ik doe het louter voor de lol", zei ze toen iemand naar haar motivatie vroeg.',
-      'Het woord wordt vaak gebruikt om iets extra te benadrukken, zonder dat er verder iets bijzonders achter zit.'
+      'Het woord wordt vaak gebruikt om iets extra te benadrukken, zonder dat er verder iets bijzonders achter zit. Lees ook de uitleg van <a href="/blog/begrippen/medium/">medium</a> en <a href="/blog/begrippen/normi/">normi</a>.'
     ]
   },
   'love-bombing': {
@@ -1777,7 +1777,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'lullepot': {
     paragraphs: [
       'Op de valreep moest ze een lullepot verzinnen over een woord dat ze net had getrokken.',
-      'Het verhaal gaat vaak over een vooraf bepaald onderwerp, of moet een aantal vaste woorden bevatten. Het wordt vooral tijdens een <a href="/blog/begrippen/kmt/">KMT</a> gevraagd en kan tot hilarische situaties leiden. Lees ook de uitleg van <a href="/blog/begrippen/ludiek/">ludiek</a>.'
+      'Het verhaal gaat vaak over een vooraf bepaald onderwerp, of moet een aantal vaste woorden bevatten. Het wordt vooral tijdens een <a href="/blog/begrippen/kmt/">KMT</a> gevraagd en kan tot hilarische situaties leiden. Lees ook de uitleg van <a href="/blog/begrippen/ludiek/">ludiek</a> en <a href="/blog/begrippen/storytime/">storytime</a>.'
     ]
   },
   'lurking': {
@@ -1813,7 +1813,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'main-character': {
     paragraphs: [
       '"Ze fietste met koptelefoon op door de regen alsof ze in een film zat. Main character energy."',
-      'De term werd rond 2020 groot op TikTok. Positief bedoeld gaat het over genieten van je eigen leven. Negatief bedoeld gaat het over iemand die egocentrisch is en alle aandacht opeist. Het tegenovergestelde is een <a href="/blog/begrippen/npc/">NPC</a>. Lees ook de uitleg van <a href="/blog/begrippen/side-quest/">side quest</a> en <a href="/blog/begrippen/aura/">aura</a>.'
+      'De term werd rond 2020 groot op TikTok. Positief bedoeld gaat het over genieten van je eigen leven. Negatief bedoeld gaat het over iemand die egocentrisch is en alle aandacht opeist. Het tegenovergestelde is een <a href="/blog/begrippen/npc/">NPC</a>. Lees ook de uitleg van <a href="/blog/begrippen/side-quest/">side quest</a>, <a href="/blog/begrippen/aura/">aura</a> en <a href="/blog/begrippen/flaneren/">flaneren</a>.'
     ]
   },
   'major': {
@@ -1825,25 +1825,25 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'matras': {
     paragraphs: [
       'Achter zijn rug werd er weleens gniffelend over hem gesproken als matras.',
-      'De term wordt vooral roddelend gebruikt binnen een vriendengroep of huis, en is niet bepaald als compliment bedoeld.'
+      'De term wordt vooral roddelend gebruikt binnen een vriendengroep of huis, en is niet bepaald als compliment bedoeld. Lees ook de uitleg van <a href="/blog/begrippen/body-count/">body count</a>, <a href="/blog/begrippen/zeester/">zeester</a> en <a href="/blog/begrippen/sneaky-link/">sneaky link</a>.'
     ]
   },
   'mc': {
     paragraphs: [
       'Met haar flared jeans en haarclip zag ze eruit als een echte MC.',
-      'Het cliché bestaat uit flared jeans, een haarclip, lidmaatschap van het <a href="/blog/begrippen/corps/">corps</a> en altijd een fles wijn bij de hand, al voldoet natuurlijk niet elke Marie-Claire hieraan. Lees ook de uitleg van <a href="/blog/begrippen/bal/">bal</a>.'
+      'Het cliché bestaat uit flared jeans, een haarclip, lidmaatschap van het <a href="/blog/begrippen/corps/">corps</a> en altijd een fles wijn bij de hand, al voldoet natuurlijk niet elke Marie-Claire hieraan. Lees ook de uitleg van <a href="/blog/begrippen/bal/">bal</a> en <a href="/blog/begrippen/snatched/">snatched</a>.'
     ]
   },
   'mdm': {
     paragraphs: [
       '"Lekker MDM vanavond", appte ze haar beste vriendinnen voor een wijntje.',
-      'Je gebruikt het om aan te geven dat je iets onderneemt met een klein, vertrouwd groepje, zoals een wijntje met de meiden of voetbal kijken met de mannen.'
+      'Je gebruikt het om aan te geven dat je iets onderneemt met een klein, vertrouwd groepje, zoals een wijntje met de meiden of voetbal kijken met de mannen. Lees ook de uitleg van <a href="/blog/begrippen/vrijmibo/">vrijmibo</a>, <a href="/blog/begrippen/gezel/">gezel</a> en <a href="/blog/begrippen/night-out/">night out</a>.'
     ]
   },
   'medium': {
     paragraphs: [
       '"Hoe was het feestje?" "Ach, medium", antwoordde hij schouderophalend.',
-      'Het woord wordt gebruikt als iets niet slecht was, maar ook zeker niet top: precies ergens in het midden.'
+      'Het woord wordt gebruikt als iets niet slecht was, maar ook zeker niet top: precies ergens in het midden. Lees ook de uitleg van <a href="/blog/begrippen/mid/">mid</a> en <a href="/blog/begrippen/normi/">normi</a>.'
     ]
   },
   'meme': {
@@ -1855,7 +1855,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'meter-bier': {
     paragraphs: [
       'Voor de verjaardag bestelden ze meteen een hele meter bier voor de tafel.',
-      'Ook disputen hebben vaak hun eigen meter als vast onderdeel van hun spullen, al bevat die dan niet per se elf biertjes.'
+      'Ook disputen hebben vaak hun eigen meter als vast onderdeel van hun spullen, al bevat die dan niet per se elf biertjes. Lees ook de uitleg van <a href="/blog/begrippen/halve-leo/">halve leo</a>, <a href="/blog/begrippen/pint/">pint</a> en <a href="/blog/begrippen/afpilsen/">afpilsen</a>.'
     ]
   },
   'micro-cheating': {
@@ -1873,7 +1873,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'miemelen': {
     paragraphs: [
       '"Hou op met miemelen en pak nog een biertje", zei ze lachend.',
-      'Het woord wordt vooral gebruikt als iemand aan het klagen is over iets kleins dat niet zo serieus bedoeld hoeft te worden.'
+      'Het woord wordt vooral gebruikt als iemand aan het klagen is over iets kleins dat niet zo serieus bedoeld hoeft te worden. Lees ook de uitleg van <a href="/blog/begrippen/salty/">salty</a>, <a href="/blog/begrippen/yap/">yap</a> en <a href="/blog/begrippen/bits/">bits</a>.'
     ]
   },
   'minor': {
@@ -1921,13 +1921,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'nominaal-lopen': {
     paragraphs: [
       'Ondanks alle borrels wist hij toch nominaal te blijven lopen dit jaar.',
-      'Het betekent dat je alle studiepunten van een blok of studiejaar op tijd hebt behaald, zonder vertraging of hertentamens.'
+      'Het betekent dat je alle studiepunten van een blok of studiejaar op tijd hebt behaald, zonder vertraging of hertentamens. Lees ook de uitleg van <a href="/blog/begrippen/bsa/">BSA</a>, <a href="/blog/begrippen/studententien/">studententien</a> en <a href="/blog/begrippen/propedeuse/">propedeuse</a>.'
     ]
   },
   'normi': {
     paragraphs: [
       '"Doe eens normi joh", zei ze toen hij weer overdreven deed.',
-      'Het woord wordt gebruikt om aan te geven dat iets of iemand zich gewoon, zonder overdrijving, gedraagt.'
+      'Het woord wordt gebruikt om aan te geven dat iets of iemand zich gewoon, zonder overdrijving, gedraagt. Lees ook de uitleg van <a href="/blog/begrippen/sws/">SWS</a>, <a href="/blog/begrippen/vanaaf/">vanaaf</a> en <a href="/blog/begrippen/medium/">medium</a>.'
     ]
   },
   'npc': {
@@ -1939,12 +1939,12 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'nul': {
     paragraphs: [
       'Als nul moest ze die avond alle drankjes van de oudere leden aannemen.',
-      'De term wordt vaak door elkaar gebruikt met <a href="/blog/begrippen/feut/">feut</a>, voor iemand die nog niet volwaardig lid is van bijvoorbeeld een <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a>.'
+      'De term wordt vaak door elkaar gebruikt met <a href="/blog/begrippen/feut/">feut</a>, voor iemand die nog niet volwaardig lid is van bijvoorbeeld een <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a>. Lees ook de uitleg van <a href="/blog/begrippen/fresher/">fresher</a>.'
     ]
   },
   'nekken': {
     paragraphs: [
-      '"Verloren, dus nu moet je die shot nekken", grijnsde ze.',
+      '"Verloren, dus nu moet je die <a href="/blog/begrippen/shot/">shot</a> nekken", grijnsde ze.',
       'Het werkwoord wordt door elkaar gebruikt met <a href="/blog/begrippen/adten/">adten</a> of <a href="/blog/begrippen/bak-trekken/">bak trekken</a>, en betekent steeds hetzelfde: het drankje in één teug wegwerken.'
     ]
   },
@@ -1963,7 +1963,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'one-night-stand': {
     paragraphs: [
       'Ze hadden van tevoren duidelijk afgesproken dat het een one-night stand zou blijven.',
-      'Je maakt de meeste kans op een one-night stand tijdens het uitgaan, al kan het net zo goed met een bestaande vriend of vriendin gebeuren. Lees ook de uitleg van <a href="/blog/begrippen/fwb/">FWB</a> en <a href="/blog/begrippen/exclusief/">exclusief</a>.'
+      'Je maakt de meeste kans op een one-night stand tijdens het uitgaan, al kan het net zo goed met een bestaande vriend of vriendin gebeuren. Lees ook de uitleg van <a href="/blog/begrippen/fwb/">FWB</a>, <a href="/blog/begrippen/exclusief/">exclusief</a> en <a href="/blog/begrippen/walk-of-shame/">walk of shame</a>.'
     ]
   },
   'ontgroening': {
@@ -2011,7 +2011,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'pandapunten': {
     paragraphs: [
       '"Ik sta inmiddels op acht pandapunten", zei hij met gemengde trots.',
-      'Voor elke week zonder seks verdien je een pandapunt. Heb je er veel verzameld, dan word je binnen het huis al snel de <a href="/blog/begrippen/huispanda/">huispanda</a> genoemd.'
+      'Voor elke week zonder seks verdien je een pandapunt. Heb je er veel verzameld, dan word je binnen het huis al snel de <a href="/blog/begrippen/huispanda/">huispanda</a> genoemd. Lees ook de uitleg van <a href="/blog/begrippen/down-bad/">down bad</a>.'
     ]
   },
   'para': {
@@ -2029,19 +2029,19 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'party-animal': {
     paragraphs: [
       '"Vier avonden per week stappen en dan nog om negen uur in college zitten. Echt een party animal."',
-      'Een party animal heeft veel energie en houdt van het nachtleven. Het gaat niet per se om hoeveel iemand drinkt, maar om de zin in feesten. Elke vereniging heeft er wel een paar. Lees ook de uitleg van <a href="/blog/begrippen/night-out/">night out</a>, <a href="/blog/begrippen/heavyweight/">heavyweight</a> en <a href="/blog/begrippen/lit/">lit</a>.'
+      'Een party animal heeft veel energie en houdt van het nachtleven. Het gaat niet per se om hoeveel iemand drinkt, maar om de zin in feesten. Elke vereniging heeft er wel een paar. Lees ook de uitleg van <a href="/blog/begrippen/night-out/">night out</a>, <a href="/blog/begrippen/heavyweight/">heavyweight</a>, <a href="/blog/begrippen/lit/">lit</a> en <a href="/blog/begrippen/tetteren/">tetteren</a>.'
     ]
   },
   'pauper': {
     paragraphs: [
       '"Doe niet zo pauper aan tafel", siste ze naar haar broertje.',
-      'De term wordt vooral gebruikt door mensen die zichzelf beter vinden dan de pauper in kwestie, vaak met een lichte spot.'
+      'De term wordt vooral gebruikt door mensen die zichzelf beter vinden dan de pauper in kwestie, vaak met een lichte spot. Lees ook de uitleg van <a href="/blog/begrippen/proleet/">proleet</a> en <a href="/blog/begrippen/broke/">broke</a>.'
     ]
   },
   'pechgeneratie': {
     paragraphs: [
       'Als typisch lid van de pechgeneratie moest hij alles zelf lenen bij <a href="/blog/begrippen/duo/">DUO</a>.',
-      'Vanaf 2015 verdween de gift van zo\'n 280 euro per maand voor uitwonende studenten, waardoor deze groep alles via een lening moest <a href="/blog/begrippen/regelen/">regelen</a>. Lees ook de uitleg van <a href="/blog/begrippen/leenstelsel/">leenstelsel</a>.'
+      'Vanaf 2015 verdween de gift van zo\'n 280 euro per maand voor uitwonende studenten, waardoor deze groep alles via een lening moest <a href="/blog/begrippen/regelen/">regelen</a>. Lees ook de uitleg van <a href="/blog/begrippen/leenstelsel/">leenstelsel</a> en <a href="/blog/begrippen/broke-student/">broke student</a>.'
     ]
   },
   'period': {
@@ -2065,19 +2065,19 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'pint': {
     paragraphs: [
       'Op het terras in Gent bestelde hij zonder aarzelen een pint.',
-      'De term wordt vooral in Vlaanderen gebruikt en betekent precies hetzelfde als een biertje in Nederland.'
+      'De term wordt vooral in Vlaanderen gebruikt en betekent precies hetzelfde als een biertje in Nederland. Lees ook de uitleg van <a href="/blog/begrippen/pub/">pub</a>, <a href="/blog/begrippen/spa-goud/">spa goud</a> en <a href="/blog/begrippen/halve-leo/">halve leo</a>.'
     ]
   },
   'pinten-harken': {
     paragraphs: [
       'De hele avond stond hij aan de bar pinten te harken met zijn <a href="/blog/begrippen/jaarclub/">jaarclub</a>.',
-      'De uitdrukking, ook wel pilsjes harken, is vergelijkbaar met <a href="/blog/begrippen/bakken-vouwen/">bakken vouwen</a>: veel bier in een kort tijdsbestek.'
+      'De uitdrukking, ook wel pilsjes harken, is vergelijkbaar met <a href="/blog/begrippen/bakken-vouwen/">bakken vouwen</a>: veel bier in een kort tijdsbestek. Lees ook de uitleg van <a href="/blog/begrippen/heavyweight/">heavyweight</a>.'
     ]
   },
   'plafonddienst': {
     paragraphs: [
       'Na het festival draaide hij uren plafonddienst voor de slaap eindelijk kwam.',
-      'Het is aan te raden om ruim voor het slapengaan te stoppen met alles wat je wakker houdt, om deze slapeloze uren te voorkomen.'
+      'Het is aan te raden om ruim voor het slapengaan te stoppen met alles wat je wakker houdt, om deze slapeloze uren te voorkomen. Lees ook de uitleg van <a href="/blog/begrippen/m/">M</a> en <a href="/blog/begrippen/x/">X</a>.'
     ]
   },
   'plot-twist': {
@@ -2113,7 +2113,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'prela': {
     paragraphs: [
       'Na een paar maanden dating noemden ze het inmiddels stiekem al hun prela.',
-      'Een prela ontstaat als je vaker met dezelfde persoon seks hebt en daarbij <a href="/blog/begrippen/exclusief/">exclusief</a> bent. Vaak groeit een prela uiteindelijk uit tot een echte <a href="/blog/begrippen/rela/">rela</a>. Lees ook de uitleg van <a href="/blog/begrippen/eventuela/">eventuela</a>.'
+      'Een prela ontstaat als je vaker met dezelfde persoon seks hebt en daarbij <a href="/blog/begrippen/exclusief/">exclusief</a> bent. Vaak groeit een prela uiteindelijk uit tot een echte <a href="/blog/begrippen/rela/">rela</a>. Lees ook de uitleg van <a href="/blog/begrippen/eventuela/">eventuela</a> en <a href="/blog/begrippen/cuffing-season/">cuffing season</a>.'
     ]
   },
   'pro-tip': {
@@ -2131,13 +2131,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'promi': {
     paragraphs: [
       '"Zij is wel echt promi binnen de vereniging", zei hij bewonderend.',
-      'De verkorte vorm wordt vooral gebruikt in gesprekken over wie er allemaal actief betrokken is bij de club. Lees ook de uitleg van <a href="/blog/begrippen/prominent/">prominent</a>.'
+      'De verkorte vorm wordt vooral gebruikt in gesprekken over wie er allemaal actief betrokken is bij de club. Lees ook de uitleg van <a href="/blog/begrippen/prominent/">prominent</a> en <a href="/blog/begrippen/clout/">clout</a>.'
     ]
   },
   'prominent': {
     paragraphs: [
       'Als prominent lid zat hij inmiddels in zijn derde <a href="/blog/begrippen/commissie/">commissie</a> tegelijk.',
-      'Een prominent lid van een <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a> doet veel commissies en speelt een belangrijke rol binnen de club, vaak ook wel <a href="/blog/begrippen/promi/">promi</a> genoemd.'
+      'Een prominent lid van een <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a> doet veel commissies en speelt een belangrijke rol binnen de club, vaak ook wel <a href="/blog/begrippen/promi/">promi</a> genoemd. Lees ook de uitleg van <a href="/blog/begrippen/clout/">clout</a>.'
     ]
   },
   'propedeuse': {
@@ -2191,7 +2191,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'rattentaxi': {
     paragraphs: [
       'Rond drie uur was hij plotseling verdwenen: weer een rattentaxi genomen.',
-      'Het wordt gezien als onbeleefd om zomaar te vertrekken, tenzij je te dronken bent om nog fatsoenlijk afscheid te nemen. Lees ook de uitleg van <a href="/blog/begrippen/houdini/">houdini</a>.'
+      'Het wordt gezien als onbeleefd om zomaar te vertrekken, tenzij je te dronken bent om nog fatsoenlijk afscheid te nemen. Lees ook de uitleg van <a href="/blog/begrippen/houdini/">houdini</a> en <a href="/blog/begrippen/ghosting/">ghosting</a>.'
     ]
   },
   'reaction-video': {
@@ -2227,7 +2227,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'regelen': {
     paragraphs: [
       '"Heb je nog iets geregeld gisteren?", vroeg haar huisgenoot nieuwsgierig.',
-      'De informele term dekt een breed scala aan romantisch of fysiek contact, van gewoon zoenen tot verder gaan. Lees ook de uitleg van <a href="/blog/begrippen/huig-hockeyen/">huig hockeyen</a> en <a href="/blog/begrippen/batsen/">batsen</a>.'
+      'De informele term dekt een breed scala aan romantisch of fysiek contact, van gewoon zoenen tot verder gaan. Lees ook de uitleg van <a href="/blog/begrippen/huig-hockeyen/">huig hockeyen</a>, <a href="/blog/begrippen/batsen/">batsen</a> en <a href="/blog/begrippen/hookup/">hookup</a>.'
     ]
   },
   'regenjas': {
@@ -2239,7 +2239,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'rela': {
     paragraphs: [
       'Na een jaar daten noemden ze het eindelijk officieel een rela.',
-      'In deze fase ben je <a href="/blog/begrippen/exclusief/">exclusief</a>, heb je elkaars ouders ontmoet en ben je officieel samen, in tegenstelling tot de meer vrijblijvende <a href="/blog/begrippen/prela/">prela</a> ervoor.'
+      'In deze fase ben je <a href="/blog/begrippen/exclusief/">exclusief</a>, heb je elkaars ouders ontmoet en ben je officieel samen, in tegenstelling tot de meer vrijblijvende <a href="/blog/begrippen/prela/">prela</a> ervoor. Lees ook de uitleg van <a href="/blog/begrippen/hard-launch/">hard launch</a>.'
     ]
   },
   'relationship-goals': {
@@ -2257,7 +2257,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'reparadler': {
     paragraphs: [
       'De ochtend na de borrel greep hij meteen naar een reparadler.',
-      'Omdat een radler net zo makkelijk wegdrinkt als frisdrank, is het onder studenten een populaire remedie tegen een <a href="/blog/begrippen/kater/">kater</a>, al is het bewijs daarvoor dun. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a> en <a href="/blog/begrippen/herstelbiertje/">herstelbiertje</a>.'
+      'Omdat een radler net zo makkelijk wegdrinkt als frisdrank, is het onder studenten een populaire remedie tegen een <a href="/blog/begrippen/kater/">kater</a>, al is het bewijs daarvoor dun. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a>, <a href="/blog/begrippen/herstelbiertje/">herstelbiertje</a> en <a href="/blog/begrippen/hair-of-the-dog/">hair of the dog</a>.'
     ]
   },
   'reunist': {
@@ -2275,7 +2275,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'rietadt': {
     paragraphs: [
       'Voor de wedstrijd koos hij bewust voor een rietadt in plaats van een gewone slok.',
-      'Voor gevorderden gaat een rietadt, ook wel <a href="/blog/begrippen/rietbak/">rietbak</a> genoemd, sneller dan een drankje op de normale manier <a href="/blog/begrippen/adten/">adten</a>. Lees ook de uitleg van <a href="/blog/begrippen/riet/">riet</a>.'
+      'Voor gevorderden gaat een rietadt, ook wel <a href="/blog/begrippen/rietbak/">rietbak</a> genoemd, sneller dan een drankje op de normale manier <a href="/blog/begrippen/adten/">adten</a>. Lees ook de uitleg van <a href="/blog/begrippen/riet/">riet</a> en <a href="/blog/begrippen/chug/">chug</a>.'
     ]
   },
   'rietbak': {
@@ -2317,19 +2317,19 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'roommate': {
     paragraphs: [
       '"Mijn roommate in New York snurkte zo hard dat ik met oordopjes moest slapen."',
-      'In het Amerikaans kan roommate ook iemand zijn met wie je alleen het huis deelt. In het Brits-Engels zeggen ze dan <a href="/blog/begrippen/flatmate/">flatmate</a>. In Amerikaanse dorms deel je echt een kamer met je roommate. Lees ook de uitleg van <a href="/blog/begrippen/dorm/">dorm</a> en <a href="/blog/begrippen/studentenhuis/">studentenhuis</a>.'
+      'In het Amerikaans kan roommate ook iemand zijn met wie je alleen het huis deelt. In het Brits-Engels zeggen ze dan <a href="/blog/begrippen/flatmate/">flatmate</a>. In Amerikaanse dorms deel je echt een kamer met je roommate. Lees ook de uitleg van <a href="/blog/begrippen/dorm/">dorm</a>, <a href="/blog/begrippen/studentenhuis/">studentenhuis</a> en <a href="/blog/begrippen/hv/">HV</a>.'
     ]
   },
   'safedate': {
     paragraphs: [
       'Voor het <a href="/blog/begrippen/datediner/">datediner</a> vroeg ze gewoon een safedate aan haar beste vriend.',
-      'Van tevoren is duidelijk dat er niets romantisch gaat gebeuren, wat handig is als je nog geen date weet of gewoon zeker wilt zijn van een leuke avond.'
+      'Van tevoren is duidelijk dat er niets romantisch gaat gebeuren, wat handig is als je nog geen date weet of gewoon zeker wilt zijn van een leuke avond. Lees ook de uitleg van <a href="/blog/begrippen/green-flag/">green flag</a>.'
     ]
   },
   'salty': {
     paragraphs: [
       '"Hij verloor met mexen en is nu de hele avond salty."',
-      'Salty gaat meestal over kleine ergernissen of verlies in een spelletje. Niet over echte woede. Het lijkt op het Nederlandse \'pissig\' of \'zuur\'. Lees ook de uitleg van <a href="/blog/begrippen/crash-out/">crash out</a>, <a href="/blog/begrippen/l/">L</a> en <a href="/blog/begrippen/hater/">hater</a>.'
+      'Salty gaat meestal over kleine ergernissen of verlies in een spelletje. Niet over echte woede. Het lijkt op het Nederlandse \'pissig\' of \'zuur\'. Lees ook de uitleg van <a href="/blog/begrippen/crash-out/">crash out</a>, <a href="/blog/begrippen/l/">L</a>, <a href="/blog/begrippen/hater/">hater</a> en <a href="/blog/begrippen/brassen/">brassen</a>.'
     ]
   },
   'savage': {
@@ -2341,7 +2341,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'scharrel': {
     paragraphs: [
       '"Is dat je nieuwe scharrel?", vroeg haar huisgenoot toen ze hem weer zag.',
-      'Je ziet elkaar af en toe voor een ontspannen, chille tijd samen, maar het blijft daarbij. Groeit het contact door, dan kan het een <a href="/blog/begrippen/kwarrel/">kwarrel</a> worden. Lees ook de uitleg van <a href="/blog/begrippen/exclusief/">exclusief</a>.'
+      'Je ziet elkaar af en toe voor een ontspannen, chille tijd samen, maar het blijft daarbij. Groeit het contact door, dan kan het een <a href="/blog/begrippen/kwarrel/">kwarrel</a> worden. Lees ook de uitleg van <a href="/blog/begrippen/exclusief/">exclusief</a> en <a href="/blog/begrippen/situationship/">situationship</a>.'
     ]
   },
   'screenshotting': {
@@ -2359,7 +2359,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'semester': {
     paragraphs: [
       'Aan het einde van het eerste semester had ze al drie tentamens gehaald.',
-      'Een semester bestaat meestal uit twee blokken en wordt vaak afgesloten met tentamens, papers of projecten.'
+      'Een semester bestaat meestal uit twee blokken en wordt vaak afgesloten met tentamens, papers of projecten. Lees ook de uitleg van <a href="/blog/begrippen/tenta/">tenta</a>, <a href="/blog/begrippen/propedeuse/">propedeuse</a> en <a href="/blog/begrippen/exchange-student/">exchange student</a>.'
     ]
   },
   'seminar': {
@@ -2383,7 +2383,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'sensa': {
     paragraphs: [
       '"Wat een sensa verhaal", riep ze uit na zijn wilde relaas van de avond ervoor.',
-      'Je gebruikt het woord als er iets interessants gebeurt of als iemand een verhaal vertelt vol gekke wendingen.'
+      'Je gebruikt het woord als er iets interessants gebeurt of als iemand een verhaal vertelt vol gekke wendingen. Lees ook de uitleg van <a href="/blog/begrippen/hila/">hila</a>, <a href="/blog/begrippen/shook/">shook</a> en <a href="/blog/begrippen/wtf/">WTF</a>.'
     ]
   },
   'serving': {
@@ -2401,7 +2401,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'sg': {
     paragraphs: [
       '"SG!", riep hij, en moest meteen zijn eigen shotgun nemen.',
-      'Roep je zelf shotgun, dan moet je ook echt een shotgun nemen: zeggen is doen, zonder uitzonderingen.'
+      'Roep je zelf shotgun, dan moet je ook echt een shotgun nemen: zeggen is doen, zonder uitzonderingen. Lees ook de uitleg van <a href="/blog/begrippen/shot/">shot</a>, <a href="/blog/begrippen/shotgun-a-beer/">shotgun a beer</a> en <a href="/blog/begrippen/jagerbomb/">jägerbomb</a>.'
     ]
   },
   'shade': {
@@ -2461,13 +2461,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'sjaars': {
     paragraphs: [
       'Als sjaars moest ze nog wennen aan alle afkortingen binnen haar nieuwe vereniging.',
-      'De term wordt vaak gebruikt voor eerstejaars die lid zijn van een <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a> of net zijn ingetrokken in een <a href="/blog/begrippen/studentenhuis/">studentenhuis</a>. Lees ook de uitleg van <a href="/blog/begrippen/feut/">feut</a> en <a href="/blog/begrippen/nul/">nul</a>.'
+      'De term wordt vaak gebruikt voor eerstejaars die lid zijn van een <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a> of net zijn ingetrokken in een <a href="/blog/begrippen/studentenhuis/">studentenhuis</a>. Lees ook de uitleg van <a href="/blog/begrippen/feut/">feut</a>, <a href="/blog/begrippen/nul/">nul</a> en <a href="/blog/begrippen/fresher/">fresher</a>.'
     ]
   },
   'skeer': {
     paragraphs: [
       '"Ik ben deze maand echt skeer", verzuchtte hij bij het zien van zijn rekening.',
-      'De meeste studenten kennen het gevoel maar al te goed, met alleen een lening van <a href="/blog/begrippen/duo/">DUO</a> om van rond te komen. Lees ook de uitleg van <a href="/blog/begrippen/stufi/">stufi</a>.'
+      'De meeste studenten kennen het gevoel maar al te goed, met alleen een lening van <a href="/blog/begrippen/duo/">DUO</a> om van rond te komen. Lees ook de uitleg van <a href="/blog/begrippen/stufi/">stufi</a> en <a href="/blog/begrippen/broke/">broke</a>.'
     ]
   },
   'slay': {
@@ -2485,7 +2485,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'slow-fade': {
     paragraphs: [
       '"Eerst appte hij elke dag, toen om de dag, nu één keer per week. Dit is een slow fade."',
-      'Anders dan <a href="/blog/begrippen/ghosting/">ghosting</a> gebeurt een slow fade stap voor stap. Kortere antwoorden, minder afspraken en minder moeite. Uiteindelijk is het contact gewoon weg. Duidelijk zijn is meestal eerlijker. Lees ook de uitleg van <a href="/blog/begrippen/dry-texting/">dry texting</a> en <a href="/blog/begrippen/breadcrumbing/">breadcrumbing</a>.'
+      'Anders dan <a href="/blog/begrippen/ghosting/">ghosting</a> gebeurt een slow fade stap voor stap. Kortere antwoorden, minder afspraken en minder moeite. Uiteindelijk is het contact gewoon weg. Duidelijk zijn is meestal eerlijker. Lees ook de uitleg van <a href="/blog/begrippen/dry-texting/">dry texting</a>, <a href="/blog/begrippen/breadcrumbing/">breadcrumbing</a> en <a href="/blog/begrippen/italiaans-afscheid/">Italiaans afscheid</a>.'
     ]
   },
   'smoelen': {
@@ -2497,7 +2497,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'snatched': {
     paragraphs: [
       '"Na twee maanden sportschool en die nieuwe jurk zag ze er snatched uit."',
-      'Snatched komt uit de drag-, ballroom-, beauty- en modewereld. Het gaat vaak over een heel verzorgde look. Of over een slanke taille. Het lijkt op <a href="/blog/begrippen/slay/">slay</a>. Lees ook de uitleg van <a href="/blog/begrippen/serving/">serving</a> en <a href="/blog/begrippen/glow-up/">glow-up</a>.'
+      'Snatched komt uit de drag-, ballroom-, beauty- en modewereld. Het gaat vaak over een heel verzorgde look. Of over een slanke taille. Het lijkt op <a href="/blog/begrippen/slay/">slay</a>. Lees ook de uitleg van <a href="/blog/begrippen/serving/">serving</a>, <a href="/blog/begrippen/glow-up/">glow-up</a> en <a href="/blog/begrippen/mc/">MC</a>.'
     ]
   },
   'sneaky-link': {
@@ -2539,13 +2539,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'sorority': {
     paragraphs: [
       '"Tijdens haar uitwisseling werd ze lid van een sorority. Ze kent nu het hele Griekse alfabet."',
-      'Net als fraternities organiseren sororities feesten, goede doelen, huisvesting en een alumninetwerk. Ze hebben vaak Griekse letters als naam. Het lijkt op een Nederlandse damesvereniging of <a href="/blog/begrippen/dispuut/">dispuut</a>. Lees ook de uitleg van <a href="/blog/begrippen/frat/">frat</a> en <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a>.'
+      'Net als fraternities organiseren sororities feesten, goede doelen, huisvesting en een alumninetwerk. Ze hebben vaak Griekse letters als naam. Het lijkt op een Nederlandse damesvereniging of <a href="/blog/begrippen/dispuut/">dispuut</a>. Lees ook de uitleg van <a href="/blog/begrippen/frat/">frat</a>, <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a> en <a href="/blog/begrippen/uf/">uf</a>.'
     ]
   },
   'spa-goud': {
     paragraphs: [
       '"Doe mij nog een spa goud", zei hij lachend aan de bar.',
-      'De bijnaam is een knipoog naar de gouden kleur van het drankje, alsof het net zo onschuldig is als bronwater.'
+      'De bijnaam is een knipoog naar de gouden kleur van het drankje, alsof het net zo onschuldig is als bronwater. Lees ook de uitleg van <a href="/blog/begrippen/pint/">pint</a>, <a href="/blog/begrippen/sober/">sober</a> en <a href="/blog/begrippen/despo/">despo</a>.'
     ]
   },
   'spam-account': {
@@ -2593,7 +2593,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'stiften': {
     paragraphs: [
       'Bij het stiften verzon hij ter plekke een compleet nieuwe regel, puur om verwarring te zaaien.',
-      'Het spel heeft geen vaste regels: die worden juist spontaan verzonnen. Het idee is geïnspireerd op een sketch van Jiskefet.'
+      'Het spel heeft geen vaste regels: die worden juist spontaan verzonnen. Het idee is geïnspireerd op een sketch van Jiskefet. Lees ook de uitleg van <a href="/blog/begrippen/drinking-game/">drinking game</a> en <a href="/blog/begrippen/iykyk/">IYKYK</a>.'
     ]
   },
   'stitch': {
@@ -2623,13 +2623,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'student-union': {
     paragraphs: [
       '"De <a href="/blog/begrippen/student/">student</a> union organiseert vanavond een quiz in de bar op de <a href="/blog/begrippen/campus/">campus</a>."',
-      'Wat een student union precies doet, verschilt per land en universiteit. In Engeland is het vaak ook een gebouw met bars en clubs. In Nederland lijkt het op een mix van de studentenraad en een <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a>. Lees ook de uitleg van <a href="/blog/begrippen/freshers-week/">freshers\' Week</a>.'
+      'Wat een student union precies doet, verschilt per land en universiteit. In Engeland is het vaak ook een gebouw met bars en clubs. In Nederland lijkt het op een mix van de studentenraad en een <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a>. Lees ook de uitleg van <a href="/blog/begrippen/freshers-week/">Freshers\' Week</a> en <a href="/blog/begrippen/studievereniging/">studievereniging</a>.'
     ]
   },
   'studentenhuis': {
     paragraphs: [
       'In haar studentenhuis woonde ze samen met vier andere studenten van verschillende opleidingen.',
-      'Om een kamer te krijgen, moet je meestal eerst <a href="/blog/begrippen/hospiteren/">hospiteren</a>. Studentenhuizen hebben soms eigen tradities, zoals <a href="/blog/begrippen/deur-verdienen/">deur verdienen</a>.'
+      'Om een kamer te krijgen, moet je meestal eerst <a href="/blog/begrippen/hospiteren/">hospiteren</a>. Studentenhuizen hebben soms eigen tradities, zoals <a href="/blog/begrippen/deur-verdienen/">deur verdienen</a>. Lees ook de uitleg van <a href="/blog/begrippen/house-party/">house party</a>.'
     ]
   },
   'studentenreisproduct': {
@@ -2641,13 +2641,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'studententien': {
     paragraphs: [
       '"Een studententien, maar wel gehaald", zei hij opgelucht over zijn cijfer.',
-      'Het is geen hoog cijfer, maar het levert wel je studiepunten op, wat na een lastig tentamen al als een overwinning voelt.'
+      'Het is geen hoog cijfer, maar het levert wel je studiepunten op, wat na een lastig tentamen al als een overwinning voelt. Lees ook de uitleg van <a href="/blog/begrippen/tenta/">tenta</a>, <a href="/blog/begrippen/her/">her</a>, <a href="/blog/begrippen/nominaal-lopen/">nominaal lopen</a> en <a href="/blog/begrippen/gpa/">GPA</a>.'
     ]
   },
   'studentenvereniging': {
     paragraphs: [
       'Bij haar studentenvereniging leerde ze in één jaar meer mensen kennen dan tijdens haar hele middelbare school.',
-      'Leden komen van verschillende opleidingen en instellingen, en de vereniging kent vaak eigen disputen, jaarclubs en tradities. Lees ook de uitleg van <a href="/blog/begrippen/dispuut/">dispuut</a>, <a href="/blog/begrippen/corps/">corps</a> en <a href="/blog/begrippen/bestuur/">bestuur</a>.'
+      'Leden komen van verschillende opleidingen en instellingen, en de vereniging kent vaak eigen disputen, jaarclubs en tradities. Lees ook de uitleg van <a href="/blog/begrippen/dispuut/">dispuut</a>, <a href="/blog/begrippen/corps/">corps</a>, <a href="/blog/begrippen/bestuur/">bestuur</a> en <a href="/blog/begrippen/frat/">frat</a>.'
     ]
   },
   'studentikoos': {
@@ -2659,7 +2659,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'studievereniging': {
     paragraphs: [
       'Via haar studievereniging ging ze mee op een studiereis naar Berlijn.',
-      'De vereniging organiseert activiteiten zoals lezingen, uitjes en borrels voor haar leden en is vaak verbonden aan de faculteit. Lees ook de uitleg van <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a> en <a href="/blog/begrippen/bestuur/">bestuur</a>.'
+      'De vereniging organiseert activiteiten zoals lezingen, uitjes en borrels voor haar leden en is vaak verbonden aan de faculteit. Lees ook de uitleg van <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a>, <a href="/blog/begrippen/bestuur/">bestuur</a> en <a href="/blog/begrippen/student-union/">student union</a>.'
     ]
   },
   'study-abroad': {
@@ -2683,7 +2683,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'stufi': {
     paragraphs: [
       '"Is je stufi deze maand al binnen?", vroeg haar huisgenoot.',
-      'Het geld helpt om je studie en levensonderhoud te bekostigen, sinds het <a href="/blog/begrippen/leenstelsel/">leenstelsel</a> altijd in de vorm van een lening. Lees ook de uitleg van <a href="/blog/begrippen/duo/">DUO</a>.'
+      'Het geld helpt om je studie en levensonderhoud te bekostigen, sinds het <a href="/blog/begrippen/leenstelsel/">leenstelsel</a> altijd in de vorm van een lening. Lees ook de uitleg van <a href="/blog/begrippen/duo/">DUO</a> en <a href="/blog/begrippen/broke/">broke</a>.'
     ]
   },
   'stuko': {
@@ -2695,7 +2695,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'super': {
     paragraphs: [
       '"Ik loop nog even naar de super voor bier", riep hij vanuit de deuropening.',
-      'Super wordt door studenten ook gebruikt als overtreffende trap, zoals in \'dat is superchill\'.'
+      'Super wordt door studenten ook gebruikt als overtreffende trap, zoals in \'dat is superchill\'. Lees ook de uitleg van <a href="/blog/begrippen/ijskast/">ijskast</a>, <a href="/blog/begrippen/bs/">bs</a> en <a href="/blog/begrippen/broke-student/">broke student</a>.'
     ]
   },
   'sus': {
@@ -2707,7 +2707,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'sws': {
     paragraphs: [
       '"Ik kom SWS naar de borrel", appte ze terug.',
-      'De verkorte schrijfwijze bespaart een paar letters typen, zonder dat de betekenis verandert.'
+      'De verkorte schrijfwijze bespaart een paar letters typen, zonder dat de betekenis verandert. Lees ook de uitleg van <a href="/blog/begrippen/normi/">normi</a>, <a href="/blog/begrippen/vanaaf/">vanaaf</a> en <a href="/blog/begrippen/facts/">facts</a>.'
     ]
   },
   'talking-stage': {
@@ -2725,19 +2725,19 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'tea': {
     paragraphs: [
       '"Oke, ik heb wel tea", begon ze veelbetekenend aan de keukentafel.',
-      'Studenten gebruiken het letterlijke woord thee om aan te geven dat ze spannend nieuws of roddels hebben om te delen. Lees ook de uitleg van <a href="/blog/begrippen/sensa/">sensa</a>.'
+      'Studenten gebruiken het letterlijke woord thee om aan te geven dat ze spannend nieuws of roddels hebben om te delen. Lees ook de uitleg van <a href="/blog/begrippen/sensa/">sensa</a> en <a href="/blog/begrippen/receipts/">receipts</a>.'
     ]
   },
   'tellie': {
     paragraphs: [
       '"Ik kan je niet vinden, waar ligt mijn tellie?", riep hij door het huis.',
-      'Het woord is de verkorte, informele vorm van telefoon.'
+      'Het woord is de verkorte, informele vorm van telefoon. Lees ook de uitleg van <a href="/blog/begrippen/dm/">DM</a>, <a href="/blog/begrippen/rn/">RN</a> en <a href="/blog/begrippen/vanaaf/">vanaaf</a>.'
     ]
   },
   'tenta': {
     paragraphs: [
       '"Nog twee tenta\'s te gaan deze week", zuchtte ze vermoeid.',
-      'Haal je voor je tenta een <a href="/blog/begrippen/studententien/">studententien</a>, dan heb je in elk geval je studiepunten binnen.'
+      'Haal je voor je tenta een <a href="/blog/begrippen/studententien/">studententien</a>, dan heb je in elk geval je studiepunten binnen. Lees ook de uitleg van <a href="/blog/begrippen/cramming/">cramming</a>.'
     ]
   },
   'thesis': {
@@ -2755,7 +2755,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'thirsty': {
     paragraphs: [
       '"Hij reageert met drie vuurtjes onder elke foto die ze post. Wel heel thirsty."',
-      'Thirsty kan gaan over iemand die openlijk aandacht zoekt of duidelijk laat zien dat hij of zij iemand leuk vindt. Het wordt meestal plagend gezegd. Een foto waarmee je aandacht zoekt, heet een <a href="/blog/begrippen/thirst-trap/">thirst trap</a>. Lees ook de uitleg van <a href="/blog/begrippen/down-bad/">down bad</a> en <a href="/blog/begrippen/simp/">simp</a>.'
+      'Thirsty kan gaan over iemand die openlijk aandacht zoekt of duidelijk laat zien dat hij of zij iemand leuk vindt. Het wordt meestal plagend gezegd. Een foto waarmee je aandacht zoekt, heet een <a href="/blog/begrippen/thirst-trap/">thirst trap</a>. Lees ook de uitleg van <a href="/blog/begrippen/down-bad/">down bad</a>, <a href="/blog/begrippen/simp/">simp</a> en <a href="/blog/begrippen/kapstokhertje/">kapstokhertje</a>.'
     ]
   },
   'thth': {
@@ -2779,25 +2779,25 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'tijgerpunten': {
     paragraphs: [
       '"Hoeveel tijgerpunten heb jij eigenlijk?", vroeg hij tijdens de borrel.',
-      'Aan de hand van een vragenlijst krijg je een aantal punten, vergelijkbaar met het idee achter <a href="/blog/begrippen/pandapunten/">pandapunten</a>, maar dan in tegenovergestelde richting.'
+      'Aan de hand van een vragenlijst krijg je een aantal punten, vergelijkbaar met het idee achter <a href="/blog/begrippen/pandapunten/">pandapunten</a>, maar dan in tegenovergestelde richting. Lees ook de uitleg van <a href="/blog/begrippen/body-count/">body count</a>.'
     ]
   },
   'tjak': {
     paragraphs: [
       '"Wat een tjak in deze keuken", verzuchtte ze bij het zien van de aanrecht.',
-      'Het woord dekt alles van schimmel tot oude etensresten die al veel te lang blijven liggen.'
+      'Het woord dekt alles van schimmel tot oude etensresten die al veel te lang blijven liggen. Lees ook de uitleg van <a href="/blog/begrippen/ijskast/">ijskast</a>, <a href="/blog/begrippen/driesecondenregel/">driesecondenregel</a> en <a href="/blog/begrippen/studentenhuis/">studentenhuis</a>.'
     ]
   },
   'tmi': {
     paragraphs: [
       '"TMI!", riep ze toen hij te veel details over zijn date deelde.',
-      'Je gebruikt het als iemand tijdens een gesprek meer details deelt dan gewenst, bijvoorbeeld iets te persoonlijks.'
+      'Je gebruikt het als iemand tijdens een gesprek meer details deelt dan gewenst, bijvoorbeeld iets te persoonlijks. Lees ook de uitleg van <a href="/blog/begrippen/out-of-pocket/">out of pocket</a>, <a href="/blog/begrippen/yap/">yap</a> en <a href="/blog/begrippen/cringe/">cringe</a>.'
     ]
   },
   'toko': {
     paragraphs: [
       'Na het uitgaan liepen ze nog even naar de toko om de hoek.',
-      'Het woord wordt gebruikt voor elk soort eettentje waarvan je de exacte naam niet kent, zoals de lokale kebab- of dönerzaak.'
+      'Het woord wordt gebruikt voor elk soort eettentje waarvan je de exacte naam niet kent, zoals de lokale kebab- of dönerzaak. Lees ook de uitleg van <a href="/blog/begrippen/guac/">guac</a>, <a href="/blog/begrippen/kruipafstand/">kruipafstand</a> en <a href="/blog/begrippen/comfort-food/">comfort food</a>.'
     ]
   },
   'touch-grass': {
@@ -2827,7 +2827,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'trekken': {
     paragraphs: [
       '"Trek \'m maar gewoon", zei ze toen hij twijfelde over zijn biertje.',
-      'Studenten gebruiken trekken meestal in de betekenis van <a href="/blog/begrippen/bak-trekken/">bak trekken</a>: een drankje, biertje of Ice in één keer leegdrinken. Lees ook de uitleg van <a href="/blog/begrippen/adten/">adten</a>.'
+      'Studenten gebruiken trekken meestal in de betekenis van <a href="/blog/begrippen/bak-trekken/">bak trekken</a>: een drankje, biertje of Ice in één keer leegdrinken. Lees ook de uitleg van <a href="/blog/begrippen/adten/">adten</a> en <a href="/blog/begrippen/chug/">chug</a>.'
     ]
   },
   'trending': {
@@ -2845,13 +2845,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'turflijst': {
     paragraphs: [
       'Naast de koelkast hing nog altijd de oude turflijst van hun <a href="/blog/begrippen/studentenhuis/">studentenhuis</a>.',
-      'Het papieren systeem is inmiddels wat verouderd, maar sommige studentenhuizen houden de traditie stug in ere.'
+      'Het papieren systeem is inmiddels wat verouderd, maar sommige studentenhuizen houden de traditie stug in ere. Lees ook de uitleg van <a href="/blog/begrippen/buying-a-round/">buying a round</a>.'
     ]
   },
   'tetteren': {
     paragraphs: [
       'Ze hadden de hele nacht zitten tetteren tot de zon alweer opkwam.',
-      'Het wordt vaak gebruikt om een avond te beschrijven die volledig uit de hand is gelopen, in positieve zin, net als bij het <a href="/blog/begrippen/doorhalen/">doorhalen</a> van een avond. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a>.'
+      'Het wordt vaak gebruikt om een avond te beschrijven die volledig uit de hand is gelopen, in positieve zin, net als bij het <a href="/blog/begrippen/doorhalen/">doorhalen</a> van een avond. Lees ook de uitleg van <a href="/blog/begrippen/brak/">brak</a> en <a href="/blog/begrippen/party-animal/">party animal</a>.'
     ]
   },
   'tutorial': {
@@ -2863,13 +2863,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'ub': {
     paragraphs: [
       'Voor haar tentamen zat ze de hele week in de UB te blokken.',
-      'In Leiden wordt de UB, oftewel universiteitsbibliotheek, ook wel de LUL genoemd.'
+      'In Leiden wordt de UB, oftewel universiteitsbibliotheek, ook wel de LUL genoemd. Lees ook de uitleg van <a href="/blog/begrippen/study-session/">study session</a>, <a href="/blog/begrippen/cappu/">cappu</a> en <a href="/blog/begrippen/cramming/">cramming</a>.'
     ]
   },
   'uf': {
     paragraphs: [
       'Als uf ging ze elk jaar mee met de <a href="/blog/begrippen/introductieweek/">introductieweek</a> van haar vereniging.',
-      'De bijnaam verwijst specifiek naar leden van de UVSV, de Utrechtse Vrouwelijke Studenten Vereniging. Lees ook de uitleg van <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a>.'
+      'De bijnaam verwijst specifiek naar leden van de UVSV, de Utrechtse Vrouwelijke Studenten Vereniging. Lees ook de uitleg van <a href="/blog/begrippen/studentenvereniging/">studentenvereniging</a> en <a href="/blog/begrippen/sorority/">sorority</a>.'
     ]
   },
   'unhinged': {
@@ -2893,13 +2893,13 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'vanaaf': {
     paragraphs: [
       '"Wat gaan we vanaaf doen?", appte ze de groep rond etenstijd.',
-      'Het woord is de verkorte, informele schrijfwijze van vanavond.'
+      'Het woord is de verkorte, informele schrijfwijze van vanavond. Lees ook de uitleg van <a href="/blog/begrippen/sws/">SWS</a>, <a href="/blog/begrippen/tellie/">tellie</a> en <a href="/blog/begrippen/loca/">loca</a>.'
     ]
   },
   'vestjeslikker': {
     paragraphs: [
       '"Doe niet zo vestjeslikker", grapten ze toen hij overdreven aardig deed tegen het <a href="/blog/begrippen/bestuur/">bestuur</a>.',
-      'De term wordt gebruikt voor iemand die romantische interesse toont in bestuursleden of prominente leden, vooral vanwege hun status binnen de vereniging. Lees ook de uitleg van <a href="/blog/begrippen/prominent/">prominent</a>.'
+      'De term wordt gebruikt voor iemand die romantische interesse toont in bestuursleden of prominente leden, vooral vanwege hun status binnen de vereniging. Lees ook de uitleg van <a href="/blog/begrippen/prominent/">prominent</a> en <a href="/blog/begrippen/glazing/">glazing</a>.'
     ]
   },
   'veto': {
@@ -2935,7 +2935,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'vo': {
     paragraphs: [
       '"Vo!", riepen zijn dispuutsgenoten toen hij zijn toespraak afsloot.',
-      'Binnen studentenverenigingen wordt vo gebruikt in plaats van applaudisseren, of om respect te tonen als iemand iets goeds zegt.'
+      'Binnen studentenverenigingen wordt vo gebruikt in plaats van applaudisseren, of om respect te tonen als iemand iets goeds zegt. Lees ook de uitleg van <a href="/blog/begrippen/bueno/">bueno</a> en <a href="/blog/begrippen/slay/">slay</a>.'
     ]
   },
   'vozen': {
@@ -2947,7 +2947,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'vrijmibo': {
     paragraphs: [
       'Elke vrijdag om vijf uur begon de vaste vrijmibo op de <a href="/blog/begrippen/societeit/">sociëteit</a>.',
-      'Studenten gebruiken het om de studieweek af te sluiten, arbeiders juist om de werkweek achter zich te laten. Lees ook de uitleg van <a href="/blog/begrippen/arbeider/">arbeider</a>.'
+      'Studenten gebruiken het om de studieweek af te sluiten, arbeiders juist om de werkweek achter zich te laten. Lees ook de uitleg van <a href="/blog/begrippen/arbeider/">arbeider</a> en <a href="/blog/begrippen/happy-hour/">happy hour</a>.'
     ]
   },
   'vvv': {
@@ -2971,7 +2971,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'wegtikken': {
     paragraphs: [
       'Bij de wedstrijd stond hij zijn biertjes in recordtempo weg te tikken.',
-      'Het is vergelijkbaar met <a href="/blog/begrippen/bakken-vouwen/">bakken vouwen</a> of <a href="/blog/begrippen/pinten-harken/">pinten harken</a>: allemaal manieren om snel veel bier weg te werken.'
+      'Het is vergelijkbaar met <a href="/blog/begrippen/bakken-vouwen/">bakken vouwen</a> of <a href="/blog/begrippen/pinten-harken/">pinten harken</a>: allemaal manieren om snel veel bier weg te werken. Lees ook de uitleg van <a href="/blog/begrippen/shotgun-a-beer/">shotgun a beer</a>.'
     ]
   },
   'wild': {
@@ -2983,7 +2983,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'wingman': {
     paragraphs: [
       'Als wingman zorgde hij ervoor dat zijn vriend eindelijk durfde te praten met haar.',
-      'Een wingman is een vriend of vriendin die helpt om een leuk gesprek te beginnen, vooral als je dat zelf lastig vindt.'
+      'Een wingman is een vriend of vriendin die helpt om een leuk gesprek te beginnen, vooral als je dat zelf lastig vindt. Lees ook de uitleg van <a href="/blog/begrippen/rizz/">rizz</a>, <a href="/blog/begrippen/slide-into-the-dms/">slide into the DMs</a> en <a href="/blog/begrippen/mdm/">MDM</a>.'
     ]
   },
   'work-life-balance': {
@@ -3019,7 +3019,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'zeester': {
     paragraphs: [
       '"In bed was ze een echte zeester", werd er over haar gezegd.',
-      'De term wordt gebruikt voor de partij die tijdens seks een passieve houding aanneemt.'
+      'De term wordt gebruikt voor de partij die tijdens seks een passieve houding aanneemt. Lees ook de uitleg van <a href="/blog/begrippen/matras/">matras</a>, <a href="/blog/begrippen/airfryer/">airfryer</a> en <a href="/blog/begrippen/sexting/">sexting</a>.'
     ]
   },
   'zombieing': {
