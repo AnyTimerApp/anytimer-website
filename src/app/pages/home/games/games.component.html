@@ -1,0 +1,42 @@
+<section class="section games-section" id="spellen">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="section-label">Spellen</span>
+      <h2 class="section-title">Drankspellen in de app</h2>
+      <p class="section-intro">Naast het bijhouden van je anytimers zitten in de app ook drankspelletjes. We komen vrijwel elke week met een nieuw spel uit.</p>
+    </div>
+
+    <div class="games-grid">
+      @for (game of games; track game.name) {
+        @if (game.link) {
+          <a class="game-card game-card--link" [routerLink]="game.link">
+            <ng-container *ngTemplateOutlet="cardContent; context: { $implicit: game }"></ng-container>
+          </a>
+        } @else {
+          <div class="game-card">
+            <ng-container *ngTemplateOutlet="cardContent; context: { $implicit: game }"></ng-container>
+          </div>
+        }
+      }
+    </div>
+  </div>
+</section>
+
+<ng-template #cardContent let-game>
+  <div class="game-card__media">
+    @if (game.image) {
+      <img [src]="game.image" [alt]="game.imageAlt || game.name + ' spel in de AnyTimerApp'" loading="lazy">
+    } @else {
+      <span class="game-card__initial" aria-hidden="true">{{ game.name.charAt(0) }}</span>
+    }
+  </div>
+  <div class="game-card__body">
+    <h3>{{ game.name }}</h3>
+    @if (game.description) {
+      <p>{{ game.description }}</p>
+    }
+    @if (game.link) {
+      <span class="game-card__more">{{ game.linkText }} →</span>
+    }
+  </div>
+</ng-template>

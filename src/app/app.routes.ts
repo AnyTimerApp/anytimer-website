@@ -63,7 +63,7 @@ export const routes: Routes = [
   { path: 'blog/drankspelletjes/fuck-the-dealer', component: FuckTheDealerComponent, title: 'Fuck the Dealer - Spelregels & Tips | AnyTimerApp' },
   { path: 'blog/drankspelletjes/mexen', component: MexenComponent, title: 'Mexen - Spelregels & Tips | AnyTimerApp' },
   { path: 'blog/drankspelletjes/bakplaten', component: BakplatenComponent, title: 'Bakplaten - Spelregels & Tips | AnyTimerApp' },
-  { path: 'blog/drankspelletjes/de-paardenrace', component: DePaardenraceComponent, title: 'De Paardenrace - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/de-paardenrace', component: DePaardenraceComponent, title: 'De Paardenrace / Kamelenrace - Spelregels & Tips | AnyTimerApp' },
   { path: 'blog/drankspelletjes/ring-of-fire', component: RingOfFireComponent, title: 'Ring of fire - Spelregels & Tips | AnyTimerApp' },
   { path: 'blog/drankspelletjes/mijnenveld', component: MijnenveldComponent, title: 'Mijnenveld - Spelregels & Tips | AnyTimerApp' },
   { path: 'blog/drankspelletjes/stef-stuntpiloot', component: StefStuntpilootComponent, title: 'Stef stuntpiloot - Spelregels & Tips | AnyTimerApp' },

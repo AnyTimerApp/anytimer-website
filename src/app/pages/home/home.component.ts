@@ -7,11 +7,12 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { AboutComponent } from './about/about.component';
 import { TeamComponent } from './team/team.component';
 import { BlogSectionComponent } from './blog-section/blog-section.component';
+import { GamesComponent } from './games/games.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroComponent, HowItWorksComponent, FeaturesComponent, AboutComponent, BlogSectionComponent, TeamComponent],
+  imports: [HeroComponent, HowItWorksComponent, FeaturesComponent, GamesComponent, AboutComponent, BlogSectionComponent, TeamComponent],
   templateUrl: 'home.component.html',
 })
 export class HomeComponent {
