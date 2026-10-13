@@ -34,6 +34,8 @@ import { KusjeGevenComponent } from './pages/blogs/drankspelletjes/kusje-geven/k
 import { BussenComponent } from './pages/blogs/drankspelletjes/bussen/bussen.component';
 import { HogerLagerComponent } from './pages/blogs/drankspelletjes/hoger-lager/hoger-lager.component';
 import { KrokodillenspelComponent } from './pages/blogs/drankspelletjes/krokodillenspel/krokodillenspel.component';
+import { FingerRouletteComponent } from './pages/blogs/drankspelletjes/finger-roulette/finger-roulette.component';
+import { BozeBakComponent } from './pages/blogs/drankspelletjes/boze-bak/boze-bak.component';
 import { BlogTermComponent } from './pages/blog-term/blog-term.component';
 
 export const routes: Routes = [
@@ -74,6 +76,8 @@ export const routes: Routes = [
   { path: 'blog/drankspelletjes/bussen', component: BussenComponent, title: 'Bussen - Spelregels & Tips | AnyTimerApp' },
   { path: 'blog/drankspelletjes/hoger-lager', component: HogerLagerComponent, title: 'Hoger lager - Spelregels & Tips | AnyTimerApp' },
   { path: 'blog/drankspelletjes/krokodillenspel', component: KrokodillenspelComponent, title: 'Krokodillenspel - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/finger-roulette', component: FingerRouletteComponent, title: 'Finger roulette - Spelregels & Tips | AnyTimerApp' },
+  { path: 'blog/drankspelletjes/boze-bak', component: BozeBakComponent, title: 'Boze bak - Spelregels & Tips | AnyTimerApp' },
   { path: 'blog/begrippen/ab-actis', component: BlogTermComponent, title: 'Wat betekent: Ab actis?', data: { slug: 'ab-actis' } },
   { path: 'blog/begrippen/abbo', component: BlogTermComponent, title: 'Wat betekent: Abbo?', data: { slug: 'abbo' } },
   { path: 'blog/begrippen/adten', component: BlogTermComponent, title: 'Wat betekent: Adten?', data: { slug: 'adten' } },

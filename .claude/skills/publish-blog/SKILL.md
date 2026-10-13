@@ -40,6 +40,26 @@ Put any images in `src/assets/blogs/<folder-name>/`. Reference them with `<pictu
 tags, `style="display: contents"` on the `<picture>`, and `class="game-image"` on the
 `<img>`.
 
+### Image checklist (new post, or an image added later to an existing post)
+
+The user usually drops only a `.png` into `src/assets/blogs/<folder>/`. Then do all of:
+
+1. **WebP**: `cwebp -quiet -q 80 "<name>.png" -o "<name>.webp"` next to the png
+   (gives ~100-220 KB, same as the existing images). If the user added several
+   variants, use the newest one and mention the others.
+2. **Top image** in the post: `<picture>` with the `.webp` `<source>` and the `.png`
+   `<img class="game-image" loading="eager" fetchpriority="high">`, directly under the
+   first `<h2>`.
+3. **SEO image** in the component: `og:image` / `twitter:image` / JSON-LD `image` use
+   the absolute `.png` URL; set `og:image:width`/`height` to the real size
+   (`sips -g pixelWidth -g pixelHeight`) and `og:image:alt`.
+4. **Blog cards**: `image` (the `.webp`) and `imageAlt` on the post's `BLOG_POSTS`
+   entry. Every card (/blog, category page, Vergelijkbare/Aanbevolen sliders, home
+   blog rows) reads from there.
+5. **Home "Drankspellen in de app" grid**: if the game is one of the app games in
+   `src/app/pages/home/games/games.component.ts`, set its `image`/`imageAlt` there too.
+6. Remove any temporary placeholder image (e.g. `assets/Together.*`) the post used.
+
 Every `<img>` needs a descriptive, keyword-relevant `alt` attribute (never empty, never
 generic like "image1"). Write it as new supporting text: short, describes what's
 actually in the image, and naturally includes the topic keyword where honest — no

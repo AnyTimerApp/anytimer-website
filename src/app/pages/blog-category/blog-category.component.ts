@@ -51,7 +51,7 @@ export class BlogCategoryComponent {
   activeLetter: string | null = null;
 
   get sortedPosts(): BlogPost[] {
-    return [...this.posts].sort((a, b) => b.date.localeCompare(a.date));
+    return [...this.posts].sort((a, b) => Number(!!b.pinned) - Number(!!a.pinned) || b.date.localeCompare(a.date));
   }
 
   get featuredPost(): BlogPost {
