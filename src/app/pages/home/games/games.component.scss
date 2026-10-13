@@ -1,0 +1,126 @@
+/* ── Games section ────────────────────────────────────── */
+.games-section {
+  background: var(--bg-surface);
+  padding: 120px 0;
+}
+
+.section-header.centered {
+  text-align: center;
+  margin-bottom: 72px;
+
+  .section-intro {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+}
+
+/* 3-column responsive grid, same breakpoints as the feature grid */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* On phones: horizontal slider, same as the blog rows (.related-slider) */
+  @media (max-width: 600px) {
+    display: flex;
+    align-items: stretch;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin: 0 -24px;
+    padding: 16px 24px 32px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .game-card {
+      flex: 0 0 min(85%, 340px);
+    }
+  }
+}
+
+/* Game cards (styled like .feat-card) */
+.game-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 10px;
+  }
+
+  p {
+    font-size: 0.93rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+}
+
+/* Same hover as .blog-card: lift a little, link text slides right */
+.game-card--link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(0, 111, 253, 0.15);
+
+  .game-card__more {
+    transform: translateX(4px);
+  }
+}
+
+.game-card__media {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(145deg, var(--primary-light) 0%, #dbe9ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+/* Placeholder until the game image is ready */
+.game-card__initial {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+  opacity: 0.35;
+}
+
+.game-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px 28px 28px;
+}
+
+.game-card__more {
+  margin-top: auto;
+  padding-top: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  align-self: flex-start;
+  transition: transform 0.2s ease;
+}

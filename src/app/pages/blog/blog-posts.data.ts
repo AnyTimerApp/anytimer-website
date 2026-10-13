@@ -75,6 +75,8 @@ export interface BlogPost {
   // Optional shorter display title, used only on the /blog/begrippen index (hero +
   // cards + alphabetical grouping) so a post's own page/title stays untouched.
   shortTitle?: string;
+  // Keeps the post at the top of its category page, above newer posts.
+  pinned?: boolean;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -270,8 +272,8 @@ export const BLOG_POSTS: BlogPost[] = [
     path: 'blog/drankspelletjes/de-paardenrace',
     category: 'Drankspelletjes',
     subCategory: 'Kaartspel',
-    title: 'De Paardenrace',
-    excerpt: 'De Paardenrace is een kaartspel waarin de vier azen tegen elkaar racen. Zet slokken in en hoop dat jouw paard wint.',
+    title: 'De Paardenrace (Kamelenrace)',
+    excerpt: 'De Paardenrace, ook wel Kamelenrace, is een kaartspel waarin de vier azen tegen elkaar racen. Zet slokken in en hoop dat jouw paard wint.',
     date: '2026-07-24',
     image: 'assets/blogs/drankspellen/paardenrace.webp',
     imageAlt: 'De Paardenrace drankspel met azen als paarden',
@@ -395,6 +397,31 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-07-28',
     image: 'assets/blogs/drankspel/krokodil.webp',
     imageAlt: 'Krokodillenspel met het spel Krokodil met Kiespijn en shotglazen',
+    variant: 'light'
+  },
+  {
+    slug: 'finger-roulette',
+    path: 'blog/drankspelletjes/finger-roulette',
+    category: 'Drankspelletjes',
+    subCategory: 'Overig',
+    title: 'Finger roulette',
+    excerpt: 'Finger roulette speel je op je telefoon. Iedereen legt een vinger op het scherm en de telefoon kiest er één uit.',
+    date: '2026-10-13',
+    image: 'assets/blogs/drankspel/finger roulette.webp',
+    imageAlt: 'Vrienden spelen Finger roulette met hun vingers op het scherm van een telefoon',
+    variant: 'light'
+  },
+  {
+    slug: 'boze-bak',
+    path: 'blog/drankspelletjes/boze-bak',
+    category: 'Drankspelletjes',
+    subCategory: 'Overig',
+    title: 'Boze bak',
+    pinned: true,
+    excerpt: 'Boze bak is een spannend kansspel op je telefoon. Druk op de blije bakken, maar pas op voor de boze bak.',
+    date: '2026-10-13',
+    image: 'assets/blogs/drankspel/bozebak.webp',
+    imageAlt: 'Vrienden spelen Boze bak op een telefoon met blije bakken en één boze bak',
     variant: 'light'
   },
   {
@@ -5959,6 +5986,12 @@ export function getRecommendedGames(post: BlogPost): BlogPost[] {
 // subCategory first (newest first), topped up from other subcategories if
 // fewer than 3 exist. Excludes the post itself and whatever already appears
 // in getRecommendedGames() for this post, so nothing shows up twice on a page.
+// For posts that hand-pick their "Vergelijkbare drankspellen" instead of
+// using getSimilarGames().
+export function getPostsBySlug(slugs: string[]): BlogPost[] {
+  return slugs.map(slug => BLOG_POSTS.find(p => p.slug === slug)!);
+}
+
 export function getSimilarGames(post: BlogPost): BlogPost[] {
   const exclude = new Set([post.slug, ...getRecommendedGames(post).map(p => p.slug)]);
   const pool = BLOG_POSTS.filter(p => p.category === 'Drankspelletjes' && !exclude.has(p.slug));

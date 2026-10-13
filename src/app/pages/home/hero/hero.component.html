@@ -1,16 +1,7 @@
 <section class="hero">
-  <div class="hero-bg">
-    <picture>
-      <source media="(max-width: 768px)" srcset="assets/Together-mobile.webp" type="image/webp">
-      <source media="(max-width: 768px)" srcset="assets/Together-mobile.png">
-      <source srcset="assets/Together.webp" type="image/webp">
-      <img src="assets/Together.png" alt="Vrienden samen" class="hero-bg-img" loading="eager" fetchpriority="high">
-    </picture>
-    <div class="hero-overlay"></div>
-  </div>
-
+  <div class="hero-glow" aria-hidden="true"></div>
   <div class="container hero-content">
-    <div class="hero-inner">
+    <div class="hero-text">
       <span class="hero-tag">De anytimer app</span>
       <h1>De App om je anytimers bij te houden.</h1>
       <p class="hero-subtitle">
@@ -43,11 +34,43 @@
         </a>
       </div>
     </div>
-  </div>
 
-  <div class="hero-scroll-hint">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M12 5v14M5 12l7 7 7-7"/>
-    </svg>
+    <div class="hero-mockup" aria-hidden="true">
+      <div class="phone-stage">
+        <div class="float-card float-card--top">
+          <div class="float-card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="float-card-text">
+            <span class="float-card-title">Anytimer ingezet</span>
+            <span class="float-card-meta">1 min geleden</span>
+          </div>
+        </div>
+
+        @if (screenshot) {
+          <div class="phone-mockup">
+            <img [src]="screenshot" alt="" loading="eager" fetchpriority="high">
+          </div>
+        } @else {
+          <picture class="phone-image">
+            <source srcset="assets/Mockup%20anytimer%20page%20friendlist.webp" type="image/webp">
+            <img src="assets/Mockup%20anytimer%20page%20friendlist.png" alt="" loading="eager" fetchpriority="high">
+          </picture>
+        }
+
+        <div class="float-card float-card--bottom">
+          <div class="float-card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M9 2h6"/>
+            </svg>
+          </div>
+          <div class="float-card-text">
+            <span class="float-card-title">Adtje in 2,4 sec</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

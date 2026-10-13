@@ -17,21 +17,21 @@
     transition: none;
   }
 
-  /* Transparent state over hero — white text */
+  /* Transparent state over the light hero — dark text */
   .logo {
-    color: rgba(255, 255, 255, 0.95);
+    color: var(--text-main);
   }
 
   .nav-links a {
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--text-secondary);
 
     &:hover {
-      color: #fff;
+      color: var(--primary);
     }
   }
 
   .hamburger span {
-    background: #fff;
+    background: var(--text-main);
   }
 
   &.scrolled {
@@ -325,19 +325,6 @@
         color: var(--primary);
       }
     }
-  }
-}
-
-/* Transparent navbar state — ghost button */
-.navbar:not(.scrolled) .nav-actions .btn-primary {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  color: white;
-  box-shadow: none;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-1px);
   }
 }
 
