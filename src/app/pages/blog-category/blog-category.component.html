@@ -12,18 +12,18 @@
       </div>
       <div class="blog-hero__content">
         <div class="blog-hero__meta">
-          <span class="blog-hero__badge">Uitgelicht</span>
-          <span class="section-label">{{ featuredPost.subCategory || featuredPost.category }}</span>
+          <span class="blog-hero__badge">{{ ui.blog.featuredBadge }}</span>
+          <span class="section-label">{{ labelOf(featuredPost) }}</span>
         </div>
         <h2 class="blog-hero__title">{{ featuredPost.shortTitle || featuredPost.title }}</h2>
         <p class="blog-hero__excerpt">{{ featuredPost.excerpt }}</p>
-        <span class="blog-card__link">Lees meer →</span>
+        <span class="blog-card__link">{{ ui.blog.readMore }}</span>
       </div>
     </a>
 
     <!-- Page header -->
     <div class="legal-header">
-      <h1 class="legal-title">{{ meta.heading || category }}</h1>
+      <h1 class="legal-title">{{ meta.heading || ui.categoryLabels[category] }}</h1>
       <p class="legal-intro">{{ meta.intro }}</p>
     </div>
 
@@ -36,7 +36,7 @@
         class="filter-pill"
         [class.filter-pill--active]="activeFilter === sub"
         (click)="toggleFilter(sub)">
-        {{ sub }}
+        {{ ui.subCategoryLabels[sub] }}
         @if (activeFilter === sub) {
         <span class="filter-pill__close" aria-hidden="true">✕</span>
         }
@@ -85,11 +85,11 @@
             <img [src]="post.image" [alt]="post.imageAlt" class="blog-card__thumbnail" loading="lazy">
           </picture>
           <div class="blog-card__body">
-            <span class="section-label">{{ post.subCategory || post.category }}</span>
+            <span class="section-label">{{ labelOf(post) }}</span>
             <h3 class="blog-card__title">{{ post.title }}</h3>
             <p class="blog-card__excerpt">{{ post.excerpt }}</p>
             <div class="blog-card__footer">
-              <span class="blog-card__link">Lees meer →</span>
+              <span class="blog-card__link">{{ ui.blog.readMore }}</span>
             </div>
           </div>
         </a>
@@ -98,7 +98,7 @@
     }
 
     <!-- Extra SEO copy, only for the Drankspelletjes category -->
-    @if (category === 'Drankspelletjes') {
+    @if (category === 'Drankspelletjes' && lang === 'nl') {
     <div class="legal-body">
       <div class="legal-section">
         <h2>Wat is een drankspel?</h2>
@@ -112,7 +112,7 @@
     }
 
     <!-- Extra SEO copy, only for the Begrippen category -->
-    @if (category === 'Begrippen') {
+    @if (category === 'Begrippen' && lang === 'nl') {
     <div class="legal-body">
       <div class="legal-section">
         <h2>Wat is studententaal?</h2>
@@ -120,6 +120,32 @@
 
         <h3>De meest gebruikte studentenbegrippen</h3>
         <p>Sommige begrippen hoor je bijna overal terug. Denk aan een <a routerLink="/blog/begrippen/kater">kater</a> hebben, <a routerLink="/blog/begrippen/brak">brak</a> zijn, <a routerLink="/blog/begrippen/indrinken">indrinken</a> voor het uitgaan, gewoon lekker <a routerLink="/blog/begrippen/pinten-harken">pinten harken</a>, of het verschil tussen je <a routerLink="/blog/begrippen/studentenhuis">studentenhuis</a> en <a routerLink="/blog/begrippen/thuisthuis">thuis thuis</a>. Hierboven vind je ze allemaal overzichtelijk van A tot Z, met een letterfilter zodat je snel het begrip vindt dat je zoekt. Benieuwd wat een anytimer precies is? Bekijk dan onze <a routerLink="/wat-is-een-anytimer">uitleg over de anytimer</a>.</p>
+      </div>
+    </div>
+    }
+
+    <!-- English SEO copy -->
+    @if (category === 'Drankspelletjes' && lang === 'en') {
+    <div class="legal-body">
+      <div class="legal-section">
+        <h2>What is a drinking game?</h2>
+        <p>A drinking game is a game where drinking is part of the rules. Lose a round, make a mistake or react too late? Then you take a sip, down your drink or get another penalty. Some drinking games use cards. Others use dice, a phone or nothing at all.</p>
+
+        <h3>International games and Dutch classics</h3>
+        <p>You will find the games everyone knows, like Ring of Fire, Ride the Bus and Rage Cage. But also the Dutch classics that internationals bump into at their first student party, like Kingsen, Bakplaten and Mijnenveld. Every game here is free to play. Most of the time you only need what is already lying around: a deck of cards, a few dice, a bottle cap or a pen.</p>
+        <p>Use the filter above to pick card games, dice games, skill games or other drinking games. Not sure where to start? Check out our <a [routerLink]="ui.paths.topDrinkingGames">top 10 favourite drinking games</a> for a quick start.</p>
+      </div>
+    </div>
+    }
+
+    @if (category === 'Begrippen' && lang === 'en') {
+    <div class="legal-body">
+      <div class="legal-section">
+        <h2>What is Dutch student slang?</h2>
+        <p>Dutch students have their own language. It is full of short words, abbreviations and traditions you will not find in any textbook. Some words come from drinking culture, like <a routerLink="/en/blog/dictionary/adten">adten</a> and <a routerLink="/en/blog/dictionary/bak-trekken">bak trekken</a>. Others come from student associations, like <a routerLink="/en/blog/dictionary/dispuut">dispuut</a> and <a routerLink="/en/blog/dictionary/kmt">KMT</a>. Every city has its own words, but many of them are used all over the country. Dutch words get a "Dutch student slang" label, so you always know which ones you will only hear here.</p>
+
+        <h3>The words you will hear in your first week</h3>
+        <p>Feeling <a routerLink="/en/blog/dictionary/brak">brak</a> on a Sunday. <a routerLink="/en/blog/dictionary/indrinken">Indrinken</a> before going out. The difference between your <a routerLink="/en/blog/dictionary/studentenhuis">studentenhuis</a> and <a routerLink="/en/blog/dictionary/thuisthuis">thuisthuis</a>. And of course the anytimer: a free pass between friends that you can use whenever you want. Read <a [routerLink]="ui.paths.whatIsAnytimer">what an anytimer is</a> and how it works, or find out <a routerLink="/en/blog/dictionary/what-is-an-adtje">what an adtje is</a>. Use the letters above to jump straight to the word you are looking for.</p>
       </div>
     </div>
     }

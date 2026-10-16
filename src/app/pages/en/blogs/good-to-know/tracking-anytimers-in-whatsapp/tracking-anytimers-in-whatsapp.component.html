@@ -1,0 +1,100 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Why you shouldn't track anytimers in WhatsApp or your notes</h1>
+      <p class="legal-intro">
+        How great would a world without arguments about anytimers be? WhatsApp group descriptions and notes are where it often goes wrong. At first it seems handy. Someone writes down in the group chat how many anys are still open or makes a quick list in their notes app. Until someone deletes the group description by accident. Or can't explain anymore why they have so many <a routerLink="/en/blog/dictionary/what-is-an-anytimer">anytimers</a> on you.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>Why WhatsApp doesn't work</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/whatsapp en notities/Whatsapp phones.webp" type="image/webp">
+          <img src="assets/blogs/whatsapp en notities/Whatsapp phones.png" alt="Tracking anytimers in WhatsApp fails without version control" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+        <p>You have no proper version control. So you end up in situations where someone suddenly claims they still have an any on you, while you can't remember how they ever earned it. Wasn't that any already used? And how did you get so many anys anyway? Plenty of reasons for an argument.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Why notes don't work</h2>
+        <p>Notes seem a bit clearer, but you run into roughly the same problem. Especially when several people keep track on their own phone. Mistakes are easy to make. And the question of how someone got that any, or whether it was already used, is still there. Another argument. Notes are for shopping lists and other lists. Not for anytimers.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>You miss the most important thing: version control</h2>
+        <p>The real problem with WhatsApp and notes is simple: you miss version control.</p>
+        <p>And that is exactly what you need if you want to track anytimers fairly.</p>
+        <p>You want to be able to see:</p>
+        <ul>
+          <li>how many anys someone has on you</li>
+          <li>how many you have on someone else</li>
+          <li>why an any was earned</li>
+          <li>when an any was used</li>
+          <li>what exactly was changed</li>
+          <li>which score is the right one</li>
+        </ul>
+        <p>Without that overview you always get the same hassle. One person is "pretty sure". Someone else is "almost sure". And in the end nobody has proof. Then there is also the question of whether someone <a routerLink="/en/blog/good-to-know/can-you-refuse-an-anytimer">can refuse</a> an any. Without clear agreements that leads to arguments too.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Other ways to track anytimers</h2>
+        <p>Luckily there are better ways to keep track.</p>
+
+        <h3>Whiteboard or chalkboard</h3>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/whatsapp en notities/Whiteboard.webp" type="image/webp">
+          <img src="assets/blogs/whatsapp en notities/Whiteboard.png" alt="Whiteboard to track anytimers in a student house" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+        <p>A whiteboard is especially handy in a student house or a place where people often get together. You can easily write down how many anys everyone has on each other and everyone can see it right away.</p>
+        <p>There is a downside though: it mostly works when everyone is often in the same place. And here too you can still get arguments when someone wipes something off, writes it down wrong or "accidentally" changes a number.</p>
+
+        <h3>App</h3>
+        <p>In the end an app is the easiest way to keep proper track of anytimers. There you do have version control, a clear overview and a lot less chance of drama.</p>
+        <p>Why an app works better:</p>
+        <ul>
+          <li>you clearly see who you still have anys on</li>
+          <li>you see who still has anys on you</li>
+          <li>you can look back at why an any was earned</li>
+          <li>you can see when one was used</li>
+          <li>you have a much better overview</li>
+          <li>you avoid pointless fights</li>
+          <li>you can add photos too</li>
+        </ul>
+        <p>That last one makes it even better. Because sometimes you just want proof. Not because your friends are unreliable of course. But because they always happen to remember things differently when the moment comes.</p>
+
+        <div class="download-button-wrapper">
+          <a [href]="downloadUrl" target="_blank" rel="noopener" class="download-button">Download the app</a>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Never fight about anytimers again</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/whatsapp en notities/AnyTimerApp phones.webp" type="image/webp">
+          <img src="assets/blogs/whatsapp en notities/AnyTimerApp phones.png" alt="AnyTimerApp to track anytimers without fights" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+        <p>That is what it is all about. You don't want to scroll back through WhatsApp. You don't want to search for a note. And you definitely don't want to figure out halfway through a night whether someone really has an any on you or is just making it up.</p>
+
+        <p>Looking for ideas for a fun night too? Check out our <a routerLink="/en/blog/inspiration/best-drinking-games">top 10 drinking games</a>.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Read more</h2>
+        <div class="related-slider">
+          @for (post of relatedReading; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

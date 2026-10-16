@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { LanguageService } from '../../../i18n/language.service';
+import { Lang } from '../../../i18n/lang';
 
 export interface AppGame {
   name: string;
@@ -13,15 +15,8 @@ export interface AppGame {
   imageAlt?: string;
 }
 
-@Component({
-  selector: 'app-games',
-  standalone: true,
-  imports: [RouterLink, NgTemplateOutlet],
-  templateUrl: './games.component.html',
-  styleUrl: './games.component.scss'
-})
-export class GamesComponent {
-  readonly games: AppGame[] = [
+const GAMES: Record<Lang, AppGame[]> = {
+  nl: [
     {
       name: 'Any-timer',
       description: 'Time je adtje. Haal je vinger van het scherm, adten en leg je vinger terug. Zo zie je precies hoe snel je was.',
@@ -70,5 +65,84 @@ export class GamesComponent {
       image: 'assets/blogs/drankspellen/bakplaten.webp',
       imageAlt: 'Bakplaten kaartspel als simpel drankspel'
     }
-  ];
+  ],
+  // Game names match the English version of the app.
+  en: [
+    {
+      name: 'Any-timer',
+      description: 'Time your chug. Lift your finger off the screen, down your drink and put your finger back. Now you know exactly how fast you were.',
+      link: '/en/blog/inspiration/best-chug-timer',
+      linkText: 'Read more about the Any-timer',
+      image: 'assets/blogs/beste timer/Any-timer in de club.webp',
+      imageAlt: 'The Any-timer in the club'
+    },
+    {
+      name: 'Angry Mug',
+      description: 'Take turns tapping a happy mug. One of them is the angry mug. Tap that one and you lose.',
+      link: '/en/blog/drinking-games/angry-mug',
+      linkText: 'See the rules of Angry Mug',
+      image: 'assets/blogs/drankspel/bozebak.webp',
+      imageAlt: 'Friends playing Angry Mug on a phone with happy mugs and one angry mug'
+    },
+    {
+      name: 'Finger Roulette',
+      description: 'Everyone puts a finger on the screen and the phone picks one. What that person has to do is up to you.',
+      link: '/en/blog/drinking-games/finger-roulette',
+      linkText: 'See the rules of Finger Roulette',
+      image: 'assets/blogs/drankspel/finger roulette.webp',
+      imageAlt: 'Friends playing Finger Roulette with their fingers on a phone screen'
+    },
+    {
+      name: 'Camel Race',
+      description: 'Four camels race to the finish. Bet sips on your camel and hope it crosses the line first.',
+      link: '/en/blog/drinking-games/horse-race',
+      linkText: 'See the rules of Camel Race',
+      image: 'assets/blogs/drankspellen/paardenrace.webp',
+      imageAlt: 'Horse Race drinking game with aces as horses'
+    },
+    {
+      name: 'Dice',
+      description: 'Roll the dice and make sure you don\'t have the lowest roll of the round. You can use the dice to play Mexico.',
+      link: '/en/blog/drinking-games/mexico',
+      linkText: 'See the rules of Mexico',
+      image: 'assets/blogs/drankspellen/mexen.webp',
+      imageAlt: 'Dice for the Mexico drinking game'
+    },
+    {
+      name: 'Bakplaten',
+      description: 'Draw a card. Is it a face card? Then it\'s your turn to drink.',
+      link: '/en/blog/drinking-games/bakplaten',
+      linkText: 'See the rules of Bakplaten',
+      image: 'assets/blogs/drankspellen/bakplaten.webp',
+      imageAlt: 'Bakplaten, a simple Dutch card drinking game'
+    }
+  ]
+};
+
+const TEXT = {
+  nl: {
+    label: 'Spellen',
+    title: 'Drankspellen in de app',
+    intro: 'Naast het bijhouden van je anytimers zitten in de app ook drankspelletjes. We komen vrijwel elke week met een nieuw spel uit.',
+    altSuffix: ' spel in de AnyTimerApp'
+  },
+  en: {
+    label: 'Games',
+    title: 'Drinking games in the app',
+    intro: 'Besides tracking your anytimers, the app comes with drinking games. We release a new game almost every week.',
+    altSuffix: ' game in the AnyTimerApp'
+  }
+};
+
+@Component({
+  selector: 'app-games',
+  standalone: true,
+  imports: [RouterLink, NgTemplateOutlet],
+  templateUrl: './games.component.html',
+  styleUrl: './games.component.scss'
+})
+export class GamesComponent {
+  private readonly lang = inject(LanguageService).lang();
+  readonly t = TEXT[this.lang];
+  readonly games: AppGame[] = GAMES[this.lang];
 }

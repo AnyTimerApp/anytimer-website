@@ -2,18 +2,18 @@
   <div class="container">
     <div class="section-header centered">
       <span class="section-label">Blog</span>
-      <h2 class="section-title">We delen ook al onze kennis</h2>
-      <p class="section-intro">We delen alleen drankspellen die we zelf spelen en echt leuk vinden. Ook schrijven we artikelen vol inspiratie, bijvoorbeeld voor een leuke avond met vrienden. Daarnaast maakten we een begrippenwoordenboek met de bekendste studentenbegrippen. En af en toe delen we een interessant weetje. Zo vind je alles op één plek.</p>
+      <h2 class="section-title">{{ t.title }}</h2>
+      <p class="section-intro">{{ t.intro }}</p>
     </div>
 
     <div class="category-grid">
       @for (card of categoryCards; track card.slug) {
-      <a [routerLink]="'/blog/' + card.slug" class="blog-card" [ngClass]="'blog-card--' + card.variant">
+      <a [routerLink]="ui.paths.blog + '/' + card.slug" class="blog-card" [ngClass]="'blog-card--' + card.variant">
         <div class="blog-card__body">
-          <h3 class="blog-card__title">{{ card.category }}</h3>
+          <h3 class="blog-card__title">{{ card.label }}</h3>
           <p class="blog-card__excerpt">{{ card.blurb }}</p>
           <div class="blog-card__footer">
-            <span class="blog-card__link">{{ card.count }} artikelen →</span>
+            <span class="blog-card__link">{{ card.count }} {{ ui.blog.articles }} →</span>
           </div>
         </div>
       </a>
@@ -21,8 +21,8 @@
     </div>
 
     <div class="blog-home-subsection">
-      <a routerLink="/blog/drankspelletjes" class="blog-home-subheader">
-        <h3 class="blog-home-subtitle">Onze favoriete drankspellen</h3>
+      <a [routerLink]="ui.paths.blog + '/' + ui.categorySlugs.Drankspelletjes" class="blog-home-subheader">
+        <h3 class="blog-home-subtitle">{{ t.favourites }}</h3>
         <span class="blog-home-subheader__arrow">→</span>
       </a>
       <div class="related-slider">
@@ -33,8 +33,8 @@
     </div>
 
     <div class="blog-home-subsection">
-      <a routerLink="/blog" class="blog-home-subheader">
-        <h3 class="blog-home-subtitle">Onze laatste blogs</h3>
+      <a [routerLink]="ui.paths.blog" class="blog-home-subheader">
+        <h3 class="blog-home-subtitle">{{ t.latest }}</h3>
         <span class="blog-home-subheader__arrow">→</span>
       </a>
       <div class="related-slider">

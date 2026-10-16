@@ -8,8 +8,8 @@
     </div>
     <div class="contact-details">
       <strong>Anytimer App</strong>
-      <span>Gratis te downloaden</span>
+      <span>{{ ui().cta.free }}</span>
     </div>
   </div>
-  <a routerLink="/" class="contact-cta">Download de app</a>
+  <a [routerLink]="ui().paths.home" class="contact-cta">{{ ui().cta.download }}</a>
 </div>

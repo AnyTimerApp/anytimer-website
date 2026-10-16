@@ -1,9 +1,9 @@
 <section class="section games-section" id="spellen">
   <div class="container">
     <div class="section-header centered">
-      <span class="section-label">Spellen</span>
-      <h2 class="section-title">Drankspellen in de app</h2>
-      <p class="section-intro">Naast het bijhouden van je anytimers zitten in de app ook drankspelletjes. We komen vrijwel elke week met een nieuw spel uit.</p>
+      <span class="section-label">{{ t.label }}</span>
+      <h2 class="section-title">{{ t.title }}</h2>
+      <p class="section-intro">{{ t.intro }}</p>
     </div>
 
     <div class="games-grid">
@@ -25,7 +25,7 @@
 <ng-template #cardContent let-game>
   <div class="game-card__media">
     @if (game.image) {
-      <img [src]="game.image" [alt]="game.imageAlt || game.name + ' spel in de AnyTimerApp'" loading="lazy">
+      <img [src]="game.image" [alt]="game.imageAlt || game.name + t.altSuffix" loading="lazy">
     } @else {
       <span class="game-card__initial" aria-hidden="true">{{ game.name.charAt(0) }}</span>
     }

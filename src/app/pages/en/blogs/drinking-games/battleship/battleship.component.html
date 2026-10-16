@@ -1,0 +1,133 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Battleship drinking game</h1>
+      <p class="legal-intro">
+        The Battleship drinking game is the classic board game with one drinking rule added. Hit the other player's ship and they have to drink. In Dutch the game is called Zeeslag.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>What is the Battleship drinking game?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/zeeslag.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/zeeslag.png" alt="Battleship drinking game with the board and pegs" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Type</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Players</span>
+              </div>
+              <span class="game-stat__value">2</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Duration</span>
+              </div>
+              <span class="game-stat__value">30-60 minutes</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">What you need</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Battleship</span>
+              <span class="game-tag">Drinks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>How to play</h2>
+        <ol>
+          <li>Set up the Battleship board.</li>
+          <li>Both players place their ships on their own grid.</li>
+          <li>Make sure the other player can't see where your ships are.</li>
+          <li>The first player calls out a coordinate. For example B3.</li>
+          <li>The other player checks if there is a ship there.</li>
+          <li>Is it a hit? Then the player says it's a hit.</li>
+          <li>Is it a miss? Then the player says it's a miss.</li>
+          <li>After a miss, it's the other player's turn.</li>
+          <li>After a hit you can agree that the same player gets another shot.</li>
+          <li>Keep track of which squares you have already called.</li>
+          <li>The game stops as soon as all ships of one player have sunk.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>When do you drink?</h2>
+        <ul>
+          <li>You drink when your ship gets hit.</li>
+          <li>You drink extra when a ship sinks.</li>
+          <li>The loser takes the final penalty you agreed on.</li>
+        </ul>
+
+        <h3>Extra rules</h3>
+        <ul>
+          <li>Down a drink when a ship sinks.</li>
+          <li>No board? Draw two grids with letters and numbers on paper.</li>
+        </ul>
+
+        <p>Looking for more drinking games? Check out our <a routerLink="/en/blog/inspiration/best-drinking-games">top 10 best drinking games</a>.</p>
+      </div>
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Similar drinking games</h2>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended drinking games</h2>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

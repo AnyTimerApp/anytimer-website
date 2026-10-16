@@ -6,7 +6,7 @@
     <div class="letter-filter-bar">
       @for (letter of letters; track letter) {
       <a
-        [routerLink]="'/blog/begrippen'"
+        [routerLink]="hubPath"
         [queryParams]="{ letter: letter }"
         class="letter-filter-pill">
         {{ letter }}
@@ -15,7 +15,10 @@
     </div>
 
     <div class="legal-header">
-      <h1 class="legal-title">Wat betekent: {{ post.title }}?</h1>
+      @if (origin) {
+      <span class="section-label">{{ origin.label }}</span>
+      }
+      <h1 class="legal-title">{{ heading }}</h1>
       <p class="legal-intro">{{ post.excerpt }}</p>
     </div>
 
@@ -23,6 +26,9 @@
 
       <div class="legal-section">
         <blockquote class="term-example" [innerHTML]="content.paragraphs[0]"></blockquote>
+        @if (origin) {
+        <p><strong>{{ origin.label }}.</strong> {{ origin.note }}</p>
+        }
         @for (paragraph of content.paragraphs.slice(1); track paragraph) {
         <p [innerHTML]="paragraph"></p>
         }

@@ -1,0 +1,142 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Ride the Bus (Bussen)</h1>
+      <p class="legal-intro">
+        Ride the Bus is a card game with a few rounds. First you collect cards. Then the pyramid decides who has to ride the bus.
+      </p>
+      <p class="legal-intro">
+        In the Netherlands the game is called Bussen. Below are the Dutch rules. They are almost the same as the international version. Only round 4 asks for the same or a different colour instead of the suit. And the bus is a row of 8 cards.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>What is Ride the Bus?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/bussen.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/bussen.png" alt="Ride the Bus card game with the pyramid and the cards for the bus" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Type</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Players</span>
+              </div>
+              <span class="game-stat__value">2 to 8</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Duration</span>
+              </div>
+              <span class="game-stat__value">30-60 minutes</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">What you need</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Playing cards</span>
+              <span class="game-tag">Drinks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>How to play</h2>
+        <ol>
+          <li>Pick 1 dealer.</li>
+          <li>Round 1 is red or black. Everyone gets 1 card. Right means you hand out. Wrong means you drink yourself.</li>
+          <li>Round 2 is higher or lower than your first card. Right means you hand out. Wrong means you drink yourself.</li>
+          <li>Round 3 is inside or outside. The new card has to fall between your 2 cards or outside of them.</li>
+          <li>Round 4 is the same colour or a different colour. Right means you hand out. Wrong means you drink yourself.</li>
+          <li>Everyone keeps the cards they got in the first 4 rounds.</li>
+          <li>Then build a pyramid with 5 cards at the bottom, then 4, then 3, then 2 and 1 at the top.</li>
+          <li>Turn the pyramid over starting from the bottom row.</li>
+          <li>Does someone have the same card value in their hand? Then that player can put the card down.</li>
+          <li>The row decides how many sips that player can hand out.</li>
+          <li>Whoever has the most cards left at the end has to ride the bus.</li>
+          <li>For the bus, lay 8 cards face up in a row.</li>
+          <li>The player on the bus keeps guessing higher or lower. Right means they move on. Wrong means they drink and start over.</li>
+          <li>The bus is done when the player gets through all 8 cards or when the deck runs out.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>When do you drink?</h2>
+        <ul>
+          <li>Round 1 is worth 1 sip.</li>
+          <li>Round 2 is worth 2 sips.</li>
+          <li>Round 3 is worth 3 sips.</li>
+          <li>Round 4 is worth 4 sips.</li>
+          <li>In the pyramid someone drinks or hands out the number of sips of the row.</li>
+          <li>On the bus the player drinks for every mistake.</li>
+        </ul>
+
+        <h3>Extra rules</h3>
+        <ul>
+          <li>Agree beforehand whether equal cards count as wrong or get a do-over.</li>
+          <li>Make sure the dealer has played the game before.</li>
+        </ul>
+
+        <p>Looking for more drinking games? Check out our <a routerLink="/en/blog/inspiration/best-drinking-games">top 10 best drinking games</a>.</p>
+      </div>
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Similar drinking games</h2>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended drinking games</h2>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

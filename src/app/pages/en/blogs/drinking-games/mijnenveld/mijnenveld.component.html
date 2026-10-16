@@ -1,0 +1,132 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Mijnenveld</h1>
+      <p class="legal-intro">
+        Mijnenveld is a Dutch card game where you pick a path through the cards. Mijnenveld means minefield. Step on a face card or an ace and you are hit. Then you have to start over.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>What is Mijnenveld?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/mijnenveld.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/mijnenveld.png" alt="Mijnenveld card game with cards in a diamond shaped field" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Type</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Players</span>
+              </div>
+              <span class="game-stat__value">1 to 10</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Duration</span>
+              </div>
+              <span class="game-stat__value">10-45 minutes</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">What you need</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Playing cards</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>How to play</h2>
+        <ol>
+          <li>Pick a dealer.</li>
+          <li>The dealer lays the cards face down in rows of 1, 2, 3, 4, 3, 2 and 1 card.</li>
+          <li>The player starts at the first card.</li>
+          <li>The dealer turns over the chosen card.</li>
+          <li>Is it a normal number card? Then the player can move on.</li>
+          <li>From the next row on, the player picks left or right.</li>
+          <li>The player tries to make it to the other side of the field this way.</li>
+          <li>Does the player land on a jack, queen, king, ace or joker? Then it's a mine.</li>
+          <li>Hit a mine? The player drinks and starts again at the front.</li>
+          <li>The dealer replaces all the cards the player walked over.</li>
+          <li>Is the pile of replacement cards empty? Then the penalty goes up by 1 sip.</li>
+          <li>The game stops as soon as someone makes it through the field in one piece.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>When do you drink?</h2>
+        <ul>
+          <li>You drink when you land on a mine.</li>
+          <li>With more players, everyone can drink when someone steps on a mine.</li>
+        </ul>
+
+        <h3>Extra rules</h3>
+        <ul>
+          <li>Play with fewer rows if you want a short round.</li>
+          <li>Make clear beforehand whether jokers are in. With jokers the game gets a lot meaner.</li>
+        </ul>
+
+        <p>Looking for more drinking games? Check out our <a routerLink="/en/blog/inspiration/best-drinking-games">top 10 best drinking games</a>.</p>
+      </div>
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Similar drinking games</h2>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended drinking games</h2>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

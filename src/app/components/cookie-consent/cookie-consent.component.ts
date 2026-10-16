@@ -1,7 +1,8 @@
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { AnalyticsService } from '../../shared/analytics.service';
+import { LanguageService } from '../../i18n/language.service';
 
 @Component({
   selector: 'app-cookie-consent',
@@ -16,6 +17,7 @@ export class CookieConsentComponent implements OnInit {
   // "no consent yet", so every static page would otherwise prerender the
   // banner as visible. Only decide real visibility once actually in the browser.
   visible = false;
+  readonly ui = inject(LanguageService).ui;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: object,

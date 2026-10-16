@@ -1,3 +1,7 @@
+import { BLOG_POSTS_EN } from './blog-posts.en.data';
+import type { Lang } from '../../i18n/lang';
+import { UI } from '../../i18n/ui';
+
 export const BLOG_CATEGORIES = ['Begrippen', 'Inspiratie', 'Weetjes', 'Drankspelletjes'] as const;
 
 export type BlogCategory = typeof BLOG_CATEGORIES[number];
@@ -15,6 +19,7 @@ export const CATEGORY_DISPLAY_ORDER: BlogCategory[] = ['Drankspelletjes', 'Inspi
 
 export interface CategoryCard {
   category: BlogCategory;
+  label: string;
   slug: string;
   count: number;
   blurb: string;
@@ -37,14 +42,24 @@ const CATEGORY_BLURBS: Record<BlogCategory, string> = {
 
 // Shared by /blog and the homepage Blog section — single source for the 4
 // category cards so their blurb/variant/count never drift out of sync.
-export function getCategoryCards(): CategoryCard[] {
+export function getCategoryCards(lang: Lang = 'nl'): CategoryCard[] {
+  const ui = UI[lang];
   return CATEGORY_DISPLAY_ORDER.map(category => ({
     category,
-    slug: CATEGORY_SLUGS[category],
-    count: BLOG_POSTS.filter(p => p.category === category).length,
-    blurb: CATEGORY_BLURBS[category],
+    label: ui.categoryLabels[category],
+    slug: ui.categorySlugs[category],
+    count: postsFor(lang).filter(p => p.category === category).length,
+    blurb: lang === 'nl' ? CATEGORY_BLURBS[category] : ui.categoryBlurbs[category],
     variant: CATEGORY_VARIANTS[category]
   }));
+}
+
+export function postsFor(lang: Lang): BlogPost[] {
+  return lang === 'en' ? BLOG_POSTS_EN : BLOG_POSTS;
+}
+
+export function langOfPost(post: BlogPost): Lang {
+  return post.path.startsWith('en/') ? 'en' : 'nl';
 }
 
 // Finer-grained classification used only within the Drankspelletjes category (the
@@ -77,6 +92,11 @@ export interface BlogPost {
   shortTitle?: string;
   // Keeps the post at the top of its category page, above newer posts.
   pinned?: boolean;
+  // Only on English posts: the path of the Dutch version (hreflang pair).
+  alternate?: string;
+  // Only on English dictionary entries for a Dutch (or Flemish) student word
+  // that stays untranslated: shows the "Dutch student slang" label.
+  termOrigin?: 'dutch' | 'flemish';
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -5972,29 +5992,36 @@ export const BLOG_POSTS: BlogPost[] = [
 
 // Fixed "always recommended" picks for every single-game Drankspelletjes post.
 // On the (rare) page that IS one of these three, that slot is swapped for the
-// fallback so a post never recommends itself.
-const RECOMMENDED_SLUGS = ['de-paardenrace', 'mario-barf', 'ring-of-fire'];
-const RECOMMENDED_FALLBACK_SLUG = 'bussen';
+// fallback so a post never recommends itself. Same games in both languages.
+const RECOMMENDED_SLUGS: Record<Lang, string[]> = {
+  nl: ['de-paardenrace', 'mario-barf', 'ring-of-fire'],
+  en: ['horse-race', 'beerio-kart', 'ring-of-fire']
+};
+const RECOMMENDED_FALLBACK_SLUG: Record<Lang, string> = {
+  nl: 'bussen',
+  en: 'ride-the-bus'
+};
 
 export function getRecommendedGames(post: BlogPost): BlogPost[] {
-  return RECOMMENDED_SLUGS
-    .map(slug => slug === post.slug ? RECOMMENDED_FALLBACK_SLUG : slug)
-    .map(slug => BLOG_POSTS.find(p => p.slug === slug)!);
+  const lang = langOfPost(post);
+  return RECOMMENDED_SLUGS[lang]
+    .map(slug => slug === post.slug ? RECOMMENDED_FALLBACK_SLUG[lang] : slug)
+    .map(slug => postsFor(lang).find(p => p.slug === slug)!);
+}
+
+// For posts that hand-pick their "Vergelijkbare drankspellen" instead of
+// using getSimilarGames().
+export function getPostsBySlug(slugs: string[], lang: Lang = 'nl'): BlogPost[] {
+  return slugs.map(slug => postsFor(lang).find(p => p.slug === slug)!);
 }
 
 // 3 other single-game posts for the "Vergelijkbare drankspellen" block: same
 // subCategory first (newest first), topped up from other subcategories if
 // fewer than 3 exist. Excludes the post itself and whatever already appears
 // in getRecommendedGames() for this post, so nothing shows up twice on a page.
-// For posts that hand-pick their "Vergelijkbare drankspellen" instead of
-// using getSimilarGames().
-export function getPostsBySlug(slugs: string[]): BlogPost[] {
-  return slugs.map(slug => BLOG_POSTS.find(p => p.slug === slug)!);
-}
-
 export function getSimilarGames(post: BlogPost): BlogPost[] {
   const exclude = new Set([post.slug, ...getRecommendedGames(post).map(p => p.slug)]);
-  const pool = BLOG_POSTS.filter(p => p.category === 'Drankspelletjes' && !exclude.has(p.slug));
+  const pool = postsFor(langOfPost(post)).filter(p => p.category === 'Drankspelletjes' && !exclude.has(p.slug));
   const byDateDesc = (a: BlogPost, b: BlogPost) => b.date.localeCompare(a.date);
   const sameSubCategory = pool.filter(p => p.subCategory === post.subCategory).sort(byDateDesc);
   const otherSubCategory = pool.filter(p => p.subCategory !== post.subCategory).sort(byDateDesc);

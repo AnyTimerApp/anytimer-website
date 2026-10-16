@@ -4,11 +4,11 @@
 
       <!-- Left heading -->
       <div class="faq-left">
-        <span class="section-label">Veelgestelde vragen</span>
-        <h2 class="faq-title">Alles wat je wil weten</h2>
+        <span class="section-label">{{ t.label }}</span>
+        <h2 class="faq-title">{{ t.title }}</h2>
         <p class="faq-desc">
-          Heb je een andere vraag? Neem contact met ons op via
-          <a routerLink="/contact" class="faq-link">het contactformulier</a>.
+          {{ t.other }}
+          <a [routerLink]="ui.paths.contact" class="faq-link">{{ t.form }}</a>.
         </p>
         <div class="faq-app-promo" (click)="scrollToTop()" style="cursor:pointer;">
           <div class="faq-promo-icon">
@@ -18,8 +18,8 @@
             </picture>
           </div>
           <div>
-            <strong>Klaar om te starten?</strong>
-            <span>Download de app en begin vandaag</span>
+            <strong>{{ t.ready }}</strong>
+            <span>{{ t.download }}</span>
           </div>
         </div>
       </div>

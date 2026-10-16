@@ -1,0 +1,122 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">What is the best chug timer?</h1>
+      <p>The Any-timer in the AnyTimerApp is one of the easiest ways to time your chug, or <a routerLink="/en/blog/dictionary/what-is-an-adtje">adtje</a> as the Dutch call it. It is
+        free, easy to use and you can make fun videos with it. Just start the timer, grab your glass and chug. For our
+        friends who don't want to use an app, we listed some other options too.</p>
+    </div>
+
+    <div class="legal-body">
+      <div class="legal-section">
+        <h2>How does the Any-timer work?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/beste timer/Any-timer in de club.webp" type="image/webp">
+          <img src="assets/blogs/beste timer/Any-timer in de club.png" alt="The Any-timer chug timer in the club" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <h3>How it works</h3>
+        <ul>
+          <li><strong>Put your finger on the screen.</strong> The timer resets.</li>
+          <li><strong>Lift your finger.</strong> The timer starts as soon as you take your finger off the screen.</li>
+          <li><strong>Chug.</strong> Drink your drink in one go.</li>
+          <li><strong>Put your finger back on the screen.</strong> Then the timer stops.</li>
+        </ul>
+        <p>This app is made for timing chugs. That is why the tap area is big and it doesn't matter if you tap twice.</p>
+        <p>The timer also only starts when you let go of the screen. So you know exactly when the timer starts.</p>
+
+        <div class="download-button-wrapper">
+          <a [href]="downloadUrl" target="_blank" rel="noopener" class="download-button">Download the app</a>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Stopwatch</h2>
+        <p>The simplest option is a stopwatch.</p>
+        <ul>
+          <li>Press start yourself</li>
+          <li>Chug</li>
+          <li>Press stop yourself</li>
+        </ul>
+        <p>It works fine, but it is not always really fair. Especially when someone else is timing and is already half
+          shouting along instead of paying attention. And when you have to press start or stop yourself, a stopwatch
+          isn't ideal either because it is easy to miss the button.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Chug timer</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/beste timer/fysieke adt timer.webp" type="image/webp">
+          <img src="assets/blogs/beste timer/fysieke adt timer.png" alt="Physical chug timer" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <p>Want to take it a bit more seriously? Then you end up with a real chug timer. One example is the
+          <a href="https://adtmeister.com/" target="_blank" rel="noopener noreferrer">AdtMeister</a>. It is a physical
+          device to time your chug. You lift your glass to start the timer and put it back down to stop it.
+        </p>
+        <p>That makes it especially handy if you:</p>
+        <ul>
+          <li>don't want the hassle of pressing start and stop</li>
+          <li>want to measure fair times</li>
+          <li>want something physical on the table</li>
+        </ul>
+        <p>Really fun of course. But you do have to feel like dragging a device like that around and charging it.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Rubik's cube timer</h2>
+        <p>A surprisingly good option is a Rubik's cube timer. You probably know it from Cas's videos.</p>
+        <p>These things are actually made for:</p>
+        <ul>
+          <li>solving Rubik's cubes</li>
+          <li>timing cup stacking</li>
+        </ul>
+        <p>But they work great for chugs too. Put your hands ready. Start. And you get a clear time right away.
+          It is a bit over the top, but fun. It is literally made for accurate timing. So you won't find better
+          hardware for it.</p>
+
+        <h3>Our example in action</h3>
+        <iframe src="https://www.instagram.com/p/DV520GCjPVc/embed"
+          style="max-width: 540px; width: 100%; height: 900px; margin: 24px 0; border: 1px solid #e1e8ed; border-radius: 12px;"
+          allowfullscreen="" allow="encrypted-media"></iframe>
+      </div>
+
+      <div class="legal-section">
+        <h2>Which chug timer is the best?</h2>
+        <p>That mostly depends on how you want to use it.</p>
+        <p>We think the <strong>Any-timer in the AnyTimerApp</strong> is the best choice. You always have your phone
+          with you and it is a mix of a stopwatch with the feel of a Rubik's cube timer.</p>
+        <p>Want something physical?</p>
+        <ul>
+          <li>stopwatch</li>
+          <li>special chug timer like the AdtMeister</li>
+          <li>Rubik's cube timer</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Conclusion</h2>
+        <p>In the end the best chug timer is the one you enjoy using most. The one that causes the least hassle.</p>
+        <p>Want to time right now? Use an app on your phone. Otherwise you can buy a hardware product.</p>
+        <p>Want more ideas for nights with friends? Check out our <a routerLink="/en/blog/inspiration/best-drinking-games">top 10 drinking games</a> or read more about <a routerLink="/en/blog/dictionary/what-is-an-anytimer">how anytimers work</a>.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Read more</h2>
+        <div class="related-slider">
+          @for (post of relatedReading; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>
