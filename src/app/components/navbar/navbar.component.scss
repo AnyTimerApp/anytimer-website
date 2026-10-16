@@ -1,109 +1,85 @@
-﻿.navbar {
+﻿/* Floating top bar (after helprr.nl): the language pill on the left, the
+   rest (logo, links, download) in one rounded white pill to its right. The
+   outer <nav> itself is transparent and lets clicks through, only the two
+   pills catch them. Pill top offset + height = --header-height (72px), so
+   pages that pad by --header-height still clear it. */
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: var(--header-height);
   z-index: 1000;
-  background: rgba(255, 255, 255, 0);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-
-  /* Only the home page scrolls through a transparent hero state, so only
-     there should the transparent-to-solid change actually animate. On every
-     other page .scrolled is forced on permanently — without this, toggling
-     it on route entry (e.g. leaving home while still at the top) would
-     replay that same fade, which reads as a stray scroll animation. */
-  &.no-transition {
-    transition: none;
-  }
-
-  /* Transparent state over the light hero — dark text */
-  .logo {
-    color: var(--text-main);
-  }
-
-  .nav-links a {
-    color: var(--text-secondary);
-
-    &:hover {
-      color: var(--primary);
-    }
-  }
-
-  .hamburger span {
-    background: var(--text-main);
-  }
-
-  &.scrolled {
-    background: rgba(255, 255, 255, 0.94);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 1px 0 var(--border-light);
-
-    .logo {
-      color: var(--text-main);
-    }
-
-    .nav-links a {
-      color: var(--text-secondary);
-
-      &:hover {
-        color: var(--primary);
-      }
-    }
-
-    .hamburger span {
-      background: var(--text-main);
-    }
-  }
-
-  /* Only while the mobile dropdown menu is actually open does the top bar
-     itself switch to solid white with dark text (so it doesn't clash with
-     the now-opaque menu beneath it). Closed, it keeps the transparent hero
-     look on the home page — that's the intended, "cooler" default. */
-  &.menu-open {
-    @media (max-width: 768px) {
-      background: #fff;
-      box-shadow: 0 1px 0 var(--border-light);
-
-      .logo {
-        color: var(--text-main);
-      }
-
-      .nav-links a {
-        color: var(--text-secondary);
-
-        &:hover {
-          color: var(--primary);
-        }
-      }
-
-      .hamburger span {
-        background: var(--text-main);
-      }
-    }
-  }
+  padding-top: 12px;
+  pointer-events: none;
 }
 
 .nav-inner {
-  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-switch,
+.nav-bar {
+  pointer-events: auto;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Once the page scrolls (or on any non-home page) the pills turn a bit more
+   solid so content scrolling underneath doesn't shine through as much. */
+.navbar.scrolled {
+  .lang-switch,
+  .nav-bar {
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.navbar.no-transition {
+  .lang-switch,
+  .nav-bar {
+    transition: none;
+  }
+}
+
+.nav-bar {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+  padding: 0 10px 0 16px;
+}
+
+.navbar.menu-open .nav-bar {
+  @media (max-width: 768px) {
+    background: #fff;
+  }
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 16px;
   letter-spacing: -0.02em;
+  color: var(--text-main);
 
   .logo-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 11px;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
     background: var(--primary);
     display: flex;
     align-items: center;
@@ -112,8 +88,8 @@
   }
 
   .logo-img {
-    width: 33px;
-    height: 33px;
+    width: 25px;
+    height: 25px;
     object-fit: contain;
   }
 }
@@ -140,14 +116,16 @@
   @media (max-width: 768px) {
     display: flex;
     position: absolute;
-    top: var(--header-height);
+    top: calc(100% + 8px);
     left: 0;
     right: 0;
     background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 24px;
     flex-direction: column;
     padding: 24px;
     gap: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: var(--shadow-md);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -225,7 +203,7 @@
     }
   }
 
-  /* Higher specificity than .navbar .nav-links a (incl. the transparent-over-hero
+  /* Higher specificity than .nav-links a (incl. any scroll-state
      variant) so the dropdown panel's links always stay dark on their solid white
      background, regardless of navbar scroll state. */
   .navbar .nav-links .nav-item--dropdown .nav-dropdown a {
@@ -298,7 +276,6 @@
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
 
   @media (max-width: 768px) {
     display: none;
@@ -309,23 +286,6 @@
   height: 40px;
   padding: 0 20px;
   font-size: 0.9rem;
-}
-
-/* Mobile menu always stays solid white, even while the navbar itself is
-   still in its transparent "not scrolled" state (e.g. on the homepage hero). */
-.navbar:not(.scrolled) .nav-links {
-  @media (max-width: 768px) {
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-
-    a {
-      color: var(--text-secondary);
-
-      &:hover {
-        color: var(--primary);
-      }
-    }
-  }
 }
 
 .hamburger {
@@ -364,19 +324,14 @@
   }
 }
 
-/* Language switcher: white pill with two round flag buttons, the active
-   language filled blue (after helprr.nl). Stays visible on mobile, next to
-   the hamburger; only the Download button hides there. */
+/* Language switcher: two round flag buttons, the active language filled
+   blue. Stays visible on mobile, left of the bar. */
 .lang-switch {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 4px;
   padding: 4px;
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-xs);
-  backdrop-filter: blur(12px);
 }
 
 .lang-switch__option {
@@ -410,18 +365,23 @@
 }
 
 @media (max-width: 768px) {
-  .nav-actions {
-    display: flex;
-    margin-left: auto;
-    margin-right: 12px;
+  .nav-inner {
+    gap: 8px;
+  }
 
-    .btn {
-      display: none;
-    }
+  .nav-bar {
+    height: 56px;
+    padding: 0 16px 0 14px;
   }
 
   .lang-switch__option {
     width: 32px;
     height: 32px;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-inner {
+    padding: 0 16px;
   }
 }

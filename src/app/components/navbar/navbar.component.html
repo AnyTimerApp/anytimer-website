@@ -1,78 +1,81 @@
 ﻿<nav class="navbar" [class.scrolled]="isScrolled || !isHeroPage" [class.no-transition]="!isHeroPage" [class.menu-open]="menuOpen">
   <div class="container nav-inner">
-    <a [routerLink]="ui().paths.home" class="logo" (click)="scrollToTop()">
-      <div class="logo-icon">
-        <picture style="display: contents">
-          <source srcset="assets/logo.webp" type="image/webp">
-          <img src="assets/logo.png" alt="AnyTimerApp logo icon" class="logo-img">
-        </picture>
-      </div>
-      <span>AnyTimerApp</span>
-    </a>
+    <div class="lang-switch">
+      @for (item of langLinks(); track item.lang) {
+      <a
+        [routerLink]="item.url"
+        class="lang-switch__option"
+        [class.lang-switch__option--active]="item.active"
+        [attr.aria-current]="item.active ? 'page' : null"
+        [attr.aria-label]="item.label"
+        [attr.hreflang]="item.lang"
+        [attr.lang]="item.lang"
+        (click)="closeMenu()">
+        @if (item.lang === 'nl') {
+        <svg class="lang-switch__flag" viewBox="0 0 9 6" aria-hidden="true">
+          <rect width="9" height="2" fill="#AE1C28"/>
+          <rect y="2" width="9" height="2" fill="#FFFFFF"/>
+          <rect y="4" width="9" height="2" fill="#21468B"/>
+        </svg>
+        } @else {
+        <svg class="lang-switch__flag" viewBox="0 0 60 30" aria-hidden="true">
+          <clipPath id="lang-switch-uk"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+          <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+          <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+          <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#lang-switch-uk)" stroke="#C8102E" stroke-width="4"/>
+          <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+          <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+        </svg>
+        }
+      </a>
+      }
+    </div>
 
-    <div class="nav-links" [class.open]="menuOpen">
-      <a [routerLink]="ui().paths.home" fragment="features" (click)="closeMenu()">{{ ui().nav.features }}</a>
-      <a [routerLink]="ui().paths.home" fragment="team" (click)="closeMenu()">{{ ui().nav.team }}</a>
-      <a [routerLink]="ui().paths.whatIsAnytimer" (click)="closeMenu()">{{ ui().nav.whatIsAnytimer }}</a>
-      <div class="nav-item nav-item--dropdown" [class.open]="blogMenuOpen">
-        <a [routerLink]="ui().paths.blog" (click)="closeMenu()">{{ ui().nav.blog }}</a>
-        <button
-          type="button"
-          class="nav-item__toggle"
-          [attr.aria-label]="ui().nav.showCategories"
-          [attr.aria-expanded]="blogMenuOpen"
-          (click)="toggleBlogMenu($event)"
-        >
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="6 9 12 15 18 9"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown">
-          @for (item of blogCategories(); track item.slug) {
-          <a [routerLink]="ui().paths.blog + '/' + item.slug" (click)="closeMenu()">{{ item.label }}</a>
-          }
+    <div class="nav-bar">
+      <a [routerLink]="ui().paths.home" class="logo" (click)="scrollToTop()">
+        <div class="logo-icon">
+          <picture style="display: contents">
+            <source srcset="assets/logo.webp" type="image/webp">
+            <img src="assets/logo.png" alt="AnyTimerApp logo icon" class="logo-img">
+          </picture>
+        </div>
+        <span>AnyTimerApp</span>
+      </a>
+
+      <div class="nav-links" [class.open]="menuOpen">
+        <a [routerLink]="ui().paths.home" fragment="features" (click)="closeMenu()">{{ ui().nav.features }}</a>
+        <a [routerLink]="ui().paths.home" fragment="team" (click)="closeMenu()">{{ ui().nav.team }}</a>
+        <a [routerLink]="ui().paths.whatIsAnytimer" (click)="closeMenu()">{{ ui().nav.whatIsAnytimer }}</a>
+        <div class="nav-item nav-item--dropdown" [class.open]="blogMenuOpen">
+          <a [routerLink]="ui().paths.blog" (click)="closeMenu()">{{ ui().nav.blog }}</a>
+          <button
+            type="button"
+            class="nav-item__toggle"
+            [attr.aria-label]="ui().nav.showCategories"
+            [attr.aria-expanded]="blogMenuOpen"
+            (click)="toggleBlogMenu($event)"
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="nav-dropdown">
+            @for (item of blogCategories(); track item.slug) {
+            <a [routerLink]="ui().paths.blog + '/' + item.slug" (click)="closeMenu()">{{ item.label }}</a>
+            }
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="nav-actions">
-      <div class="lang-switch">
-        @for (item of langLinks(); track item.lang) {
-        <a
-          [routerLink]="item.url"
-          class="lang-switch__option"
-          [class.lang-switch__option--active]="item.active"
-          [attr.aria-current]="item.active ? 'page' : null"
-          [attr.aria-label]="item.label"
-          [attr.hreflang]="item.lang"
-          [attr.lang]="item.lang"
-          (click)="closeMenu()">
-          @if (item.lang === 'nl') {
-          <svg class="lang-switch__flag" viewBox="0 0 9 6" aria-hidden="true">
-            <rect width="9" height="2" fill="#AE1C28"/>
-            <rect y="2" width="9" height="2" fill="#FFFFFF"/>
-            <rect y="4" width="9" height="2" fill="#21468B"/>
-          </svg>
-          } @else {
-          <svg class="lang-switch__flag" viewBox="0 0 60 30" aria-hidden="true">
-            <clipPath id="lang-switch-uk"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
-            <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
-            <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
-            <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#lang-switch-uk)" stroke="#C8102E" stroke-width="4"/>
-            <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
-            <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
-          </svg>
-          }
-        </a>
-        }
+      <div class="nav-actions">
+        <a [href]="downloadUrl" target="_blank" rel="noopener" class="btn btn-primary btn-sm">{{ ui().nav.download }}</a>
       </div>
-      <a [href]="downloadUrl" target="_blank" rel="noopener" class="btn btn-primary btn-sm">{{ ui().nav.download }}</a>
-    </div>
 
-    <button aria-label="hamburger-menu" class="hamburger" [class.active]="menuOpen" (click)="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button aria-label="hamburger-menu" class="hamburger" [class.active]="menuOpen" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </nav>
