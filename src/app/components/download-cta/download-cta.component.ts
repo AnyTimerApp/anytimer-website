@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { LanguageService } from '../../i18n/language.service';
 
 @Component({
   selector: 'app-download-cta',
@@ -8,4 +9,6 @@ import { RouterLink } from '@angular/router';
   templateUrl: './download-cta.component.html',
   styleUrl: './download-cta.component.scss'
 })
-export class DownloadCtaComponent {}
+export class DownloadCtaComponent {
+  readonly ui = inject(LanguageService).ui;
+}

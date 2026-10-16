@@ -1,12 +1,12 @@
 @if (visible) {
-<div class="cookie-consent" role="dialog" aria-label="Cookiemelding">
+<div class="cookie-consent" role="dialog" [attr.aria-label]="ui().cookie.aria">
   <p class="cookie-consent__text">
-    We gebruiken cookies om te zien hoe de site gebruikt wordt en om AnyTimerApp te verbeteren.
-    Lees meer in ons <a routerLink="/privacy">privacybeleid</a>.
+    {{ ui().cookie.text }}
+    {{ ui().cookie.readMore }} <a [routerLink]="ui().paths.privacy">{{ ui().cookie.privacyLink }}</a>.
   </p>
   <div class="cookie-consent__actions">
-    <button type="button" class="btn btn-secondary btn-sm" (click)="decline()">Weigeren</button>
-    <button type="button" class="btn btn-primary btn-sm" (click)="accept()">Accepteren</button>
+    <button type="button" class="btn btn-secondary btn-sm" (click)="decline()">{{ ui().cookie.decline }}</button>
+    <button type="button" class="btn btn-primary btn-sm" (click)="accept()">{{ ui().cookie.accept }}</button>
   </div>
 </div>
 }

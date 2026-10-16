@@ -1,8 +1,10 @@
 import { Component, Inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, ActivatedRoute } from '@angular/router';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
-import { BLOG_POSTS, CATEGORY_SLUGS, CATEGORY_DISPLAY_ORDER, CategoryCard, getCategoryCards, BlogPost } from './blog-posts.data';
+import { CATEGORY_DISPLAY_ORDER, CategoryCard, getCategoryCards, BlogPost, postsFor } from './blog-posts.data';
+import { Lang } from '../../i18n/lang';
+import { UI, UiStrings } from '../../i18n/ui';
 import { injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
 
 @Component({
@@ -13,7 +15,9 @@ import { injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
   styleUrls: ['./blog-shared.component.scss', './blog.component.scss']
 })
 export class BlogComponent {
-  posts: BlogPost[] = BLOG_POSTS;
+  lang: Lang;
+  ui: UiStrings;
+  posts: BlogPost[];
 
   get sortedPosts(): BlogPost[] {
     return [...this.posts].sort((a, b) => b.date.localeCompare(a.date));
@@ -25,7 +29,7 @@ export class BlogComponent {
   // Both stay reachable only through their own category hub. Exception: the
   // two original, full-length Begrippen articles (with their own images)
   // still belong on the main feed like any other article.
-  private readonly LISTABLE_BEGRIPPEN_EXCEPTIONS = ['wat-is-een-anytimer', 'wat-is-een-adtje'];
+  private readonly LISTABLE_BEGRIPPEN_EXCEPTIONS = ['wat-is-een-anytimer', 'wat-is-een-adtje', 'what-is-an-anytimer', 'what-is-an-adtje'];
 
   private isListable(post: BlogPost): boolean {
     if (post.category === 'Drankspelletjes') return false;
@@ -41,17 +45,30 @@ export class BlogComponent {
     return this.sortedPosts.filter(p => p !== this.featuredPost && this.isListable(p));
   }
 
-  get categoryCards(): CategoryCard[] {
-    return getCategoryCards();
+  labelOf(post: BlogPost): string {
+    return post.subCategory ? this.ui.subCategoryLabels[post.subCategory] : this.ui.categoryLabels[post.category];
   }
 
-  constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Anytimer Blog - Tips, Ideeën & Gidsen | Anytimer App';
-    const description = 'Lees onze blog met tips, ideeën en gidsen voor anytimers. Ontdek hoe je het meest uit je anytimers haalt en creëer meer plezier met je vrienden.';
-    const image = 'https://anytimer.app/assets/Together.png';
-    const url = 'https://anytimer.app/blog/';
+  get categoryCards(): CategoryCard[] {
+    return getCategoryCards(this.lang);
+  }
 
-    injectBreadcrumbSchema(document, 'schema-breadcrumbs-blog', [{ label: 'Blog' }]);
+  constructor(meta: Meta, route: ActivatedRoute, @Inject(DOCUMENT) document: Document) {
+    this.lang = (route.snapshot.data['lang'] as Lang) ?? 'nl';
+    this.ui = UI[this.lang];
+    this.posts = postsFor(this.lang);
+
+    const en = this.lang === 'en';
+    const title = en
+      ? 'AnyTimerApp Blog: Drinking Games, Ideas & Guides'
+      : 'Anytimer Blog - Tips, Ideeën & Gidsen | Anytimer App';
+    const description = en
+      ? 'Read our blog with drinking game rules, ideas for a fun night and everything about anytimers. Plus the Dutch student slang you hear in the Netherlands.'
+      : 'Lees onze blog met tips, ideeën en gidsen voor anytimers. Ontdek hoe je het meest uit je anytimers haalt en creëer meer plezier met je vrienden.';
+    const image = 'https://anytimer.app/assets/Together.png';
+    const url = `https://anytimer.app${this.ui.paths.blog}/`;
+
+    injectBreadcrumbSchema(document, `schema-breadcrumbs-blog-${this.lang}`, [{ label: 'Blog' }]);
 
     meta.updateTag({ name: 'description', content: description });
 
@@ -68,7 +85,7 @@ export class BlogComponent {
     meta.updateTag({ name: 'twitter:description', content: description });
     meta.updateTag({ name: 'twitter:image', content: image });
 
-    const schemaId = 'schema-collection-blog';
+    const schemaId = `schema-collection-blog-${this.lang}`;
     if (!document.getElementById(schemaId)) {
       const script = document.createElement('script');
       script.id = schemaId;
@@ -79,13 +96,14 @@ export class BlogComponent {
         'name': title,
         'description': description,
         'url': url,
+        'inLanguage': this.lang,
         'mainEntity': {
           '@type': 'ItemList',
           'itemListElement': CATEGORY_DISPLAY_ORDER.map((category, i) => ({
             '@type': 'ListItem',
             'position': i + 1,
-            'url': `https://anytimer.app/blog/${CATEGORY_SLUGS[category]}/`,
-            'name': category
+            'url': `https://anytimer.app${this.ui.paths.blog}/${this.ui.categorySlugs[category]}/`,
+            'name': this.ui.categoryLabels[category]
           }))
         }
       });

@@ -1,0 +1,57 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Can you refuse an anytimer?</h1>
+      <p class="legal-intro">
+        Short answer: yes, you can. But you usually don't get away with it that easily. You can use an <a routerLink="/en/blog/dictionary/what-is-an-anytimer">anytimer</a> whenever
+        you want. So also when you are hungover or when it suits you the least. It is an anytimer, not a
+        convenience-timer or a whenever-I-feel-like-it-timer.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>Of course you can</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/anytimer weigeren/maatje adt een biertje cartoon.webp" type="image/webp">
+          <img src="assets/blogs/anytimer weigeren/maatje adt een biertje cartoon.png" alt="Cartoon about refusing an anytimer" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+        <p>Technically: of course. Nobody is going to force you. But within a group of friends there is usually a price to pay.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>What happens when you refuse an anytimer?</h2>
+        <p>Your group of friends makes its own rules for this. Either way, you earn a penalty. <strong>The gold standard is doubling the any that was used.</strong> That is the most logical rule. Otherwise you could just refuse every time.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>When can't you use an anytimer?</h2>
+        <p>Your group decides this together too. Some examples:</p>
+        <ul>
+          <li>Before driving</li>
+          <li>Before a funeral</li>
+          <li>Before an exam</li>
+          <li>When someone is sick</li>
+        </ul>
+        <p>Basically you assume your friends have a certain amount of common sense, so
+          nobody gets put in danger.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Read more</h2>
+        <div class="related-slider">
+          @for (post of relatedReading; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

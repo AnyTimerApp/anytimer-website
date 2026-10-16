@@ -2,9 +2,9 @@
 <section class="section features-section" id="features">
   <div class="container">
     <div class="section-header centered">
-      <span class="section-label">Waarom de AnyTimerApp?</span>
-      <h2 class="section-title">Any's bijhouden, nooit vergeten</h2>
-      <p class="section-intro">De app die je vriendschappen eerlijk houdt. Geen discussies meer over wie welke any schuldig is.</p>
+      <span class="section-label">{{ t.label }}</span>
+      <h2 class="section-title">{{ t.title }}</h2>
+      <p class="section-intro">{{ t.intro }}</p>
     </div>
 
     <div class="feature-grid">
@@ -14,8 +14,8 @@
             <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
           </svg>
         </div>
-        <h3>Nooit vergeten</h3>
-        <p>Elke anytimer wordt bijgehouden. Zie wie er nog op jouw anytimers heeft, wat jij nog kan uitdelen en de volledige geschiedenis. Geen misverstanden meer.</p>
+        <h3>{{ t.cards[0].title }}</h3>
+        <p>{{ t.cards[0].text }}</p>
       </div>
 
       <div class="feat-card">
@@ -24,8 +24,8 @@
             <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
         </div>
-        <h3>Geven &amp; ontvangen</h3>
-        <p>Weddenschap verloren of gewonnen? Één centrale plek voor het sparen en uitdelen van anytimers. Eerlijk en transparant voor iedereen.</p>
+        <h3>{{ t.cards[1].title }}</h3>
+        <p>{{ t.cards[1].text }}</p>
       </div>
 
       <div class="feat-card">
@@ -34,8 +34,8 @@
             <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
           </svg>
         </div>
-        <h3>Any inzetten</h3>
-        <p>Het moment is aangebroken. Deel een anytimer uit en je vriend krijgt direct een notificatie. Hij moet nu de anytimer nemen.</p>
+        <h3>{{ t.cards[2].title }}</h3>
+        <p>{{ t.cards[2].text }}</p>
       </div>
 
       <div class="feat-card">
@@ -44,8 +44,8 @@
             <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
           </svg>
         </div>
-        <h3>Media bewaren</h3>
-        <p>Foto's, video's en berichten bij elke anytimer. Zodat het bewijs voor altijd bewaard blijft. Nooit meer twijfelen over waarom.</p>
+        <h3>{{ t.cards[3].title }}</h3>
+        <p>{{ t.cards[3].text }}</p>
       </div>
 
       <div class="feat-card">
@@ -54,13 +54,13 @@
             <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
           </svg>
         </div>
-        <h3>Vrienden</h3>
-        <p>Voeg vrienden toe via gebruikersnaam en gebruik de app in je vriendenkring. Ideaal voor groepen, uitjes en weddenschappen.</p>
+        <h3>{{ t.cards[4].title }}</h3>
+        <p>{{ t.cards[4].text }}</p>
       </div>
 
       <div class="feat-card feat-card--cta">
-        <h3>Gratis te gebruiken</h3>
-        <p>De app is volledig gratis maatje. In ruil voor dat jij volgend jaar naar ons festival komt. Je komt toch?</p>
+        <h3>{{ t.cards[5].title }}</h3>
+        <p>{{ t.cards[5].text }}</p>
         <div class="feat-cta-badges">
           <a href="https://play.google.com/store/apps/details?id=com.anytimer.app" target="_blank" class="feat-badge">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
@@ -83,8 +83,8 @@
 <!-- Reviews marquee -->
 <section class="reviews-section">
   <div class="reviews-header">
-    <span class="section-label">Echte verhalen</span>
-    <h2 class="section-title">Wat vrienden zeggen</h2>
+    <span class="section-label">{{ t.reviewsLabel }}</span>
+    <h2 class="section-title">{{ t.reviewsTitle }}</h2>
   </div>
 
   <div class="marquee-outer">
@@ -93,183 +93,27 @@
 
     <div class="marquee-track">
       <div class="marquee-inner">
+        <!-- Rendered twice for a seamless loop -->
+        @for (pass of [0, 1]; track pass) {
+        @for (review of t.reviews; track review.name) {
         <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Eindelijk geen discussies meer over wie wat schuldig is! Super handig app."</p>
+          <div class="review-top">
+            <div class="review-stars">★★★★★</div>
+            @if (t.translatedNote) {
+            <span class="review-translated">{{ t.translatedNote }}</span>
+            }
+          </div>
+          <p>"{{ review.text }}"</p>
           <div class="review-author">
-            <div class="review-avatar" style="background: #C4B5FD;">S</div>
+            <div class="review-avatar" [style.background]="review.color">{{ review.name.charAt(0) }}</div>
             <div>
-              <strong>Sander K.</strong>
-              <span>Utrecht</span>
+              <strong>{{ review.name }}</strong>
+              <span>{{ review.city }}</span>
             </div>
           </div>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Mijn vrienden en ik gebruiken dit al maanden. Nooit meer vergeten wie wat heeft."</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #FCA5A5;">L</div>
-            <div>
-              <strong>Lisa V.</strong>
-              <span>Amsterdam</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Perfecte app voor onze vriendengroep. Altijd bijgehouden wie wat heeft. Aanrader!"</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #6EE7B7;">T</div>
-            <div>
-              <strong>Tom B.</strong>
-              <span>Rotterdam</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Geweldig concept! Nu weet ik altijd wie ik nog een anytimer mag geven. Love it."</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #FDE68A;">E</div>
-            <div>
-              <strong>Emma R.</strong>
-              <span>Den Haag</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Eenvoudig, snel en precies wat we nodig hadden. Beste app voor challenges met vrienden."</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #93C5FD;">J</div>
-            <div>
-              <strong>Joris M.</strong>
-              <span>Eindhoven</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Zo handig! Ik weet altijd wie er nog op mijn anytimer heeft. We hadden dit al jaren nodig."</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #F9A8D4;">R</div>
-            <div>
-              <strong>Rosa P.</strong>
-              <span>Groningen</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Onze hele vriendengroep gebruikt het. Leuke manier om challenges bij te houden!"</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #A7F3D0;">T</div>
-            <div>
-              <strong>Tim H.</strong>
-              <span>Breda</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Nooit meer discussie over anytimers. De app houdt alles eerlijk bij. Top!"</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #DDD6FE;">S</div>
-            <div>
-              <strong>Sarah W.</strong>
-              <span>Tilburg</span>
-            </div>
-          </div>
-        </div>
-        <!-- Duplicated for seamless loop -->
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Eindelijk geen discussies meer over wie wat schuldig is! Super handig app."</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #C4B5FD;">S</div>
-            <div>
-              <strong>Sander K.</strong>
-              <span>Utrecht</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Mijn vrienden en ik gebruiken dit al maanden. Nooit meer vergeten wie wat heeft."</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #FCA5A5;">L</div>
-            <div>
-              <strong>Lisa V.</strong>
-              <span>Amsterdam</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Perfecte app voor onze vriendengroep. Altijd bijgehouden wie wat heeft. Aanrader!"</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #6EE7B7;">T</div>
-            <div>
-              <strong>Tom B.</strong>
-              <span>Rotterdam</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Geweldig concept! Nu weet ik altijd wie ik nog een anytimer mag geven. Love it."</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #FDE68A;">E</div>
-            <div>
-              <strong>Emma R.</strong>
-              <span>Den Haag</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Eenvoudig, snel en precies wat we nodig hadden. Beste app voor challenges met vrienden."</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #93C5FD;">J</div>
-            <div>
-              <strong>Joris M.</strong>
-              <span>Eindhoven</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Zo handig! Ik weet altijd wie er nog op mijn anytimer heeft. We hadden dit al jaren nodig."</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #F9A8D4;">R</div>
-            <div>
-              <strong>Rosa P.</strong>
-              <span>Groningen</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Onze hele vriendengroep gebruikt het. Leuke manier om challenges bij te houden!"</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #A7F3D0;">T</div>
-            <div>
-              <strong>Tim H.</strong>
-              <span>Breda</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Nooit meer discussie over anytimers. De app houdt alles eerlijk bij. Top!"</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background: #DDD6FE;">S</div>
-            <div>
-              <strong>Sarah W.</strong>
-              <span>Tilburg</span>
-            </div>
-          </div>
-        </div>
+        }
+        }
       </div>
     </div>
   </div>

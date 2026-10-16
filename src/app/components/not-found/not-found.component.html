@@ -1,6 +1,6 @@
 ﻿<div class="container not-found">
   <h1>404</h1>
-  <h3>Dit rondje is van niemand.</h3>
-  <p>De pagina die je zoekt bestaat niet of is verplaatst.</p>
-  <a routerLink="/" class="btn btn-primary">Terug naar home</a>
+  <h3>{{ ui().notFound.title }}</h3>
+  <p>{{ ui().notFound.text }}</p>
+  <a [routerLink]="ui().paths.home" class="btn btn-primary">{{ ui().notFound.back }}</a>
 </div>

@@ -1,12 +1,10 @@
 <section class="section team-section" id="team">
   <div class="container">
     <div class="team-header">
-      <span class="section-label">Over ons</span>
-      <h2 class="team-title">Gebouwd door vrienden, voor vrienden.</h2>
+      <span class="section-label">{{ t.label }}</span>
+      <h2 class="team-title">{{ t.title }}</h2>
       <p class="team-desc">
-        Wij hebben de AnyTimerApp gebouwd omdat anytimers bijhouden in je notities of gewoon in je hoofd eigenlijk nooit
-        goed werkt. Voor je het weet komt Jilles weer aanzetten met tien any’s die hij niet meer kan verklaren. Daarom
-        wilden we één plek maken waar je anytimers en herinneringen makkelijk bijhoudt
+        {{ t.text }}
       </p>
     </div>
 
@@ -26,8 +24,8 @@
     </div>
 
     <div class="team-cta">
-      <p>Vragen of feedback? We horen het graag.</p>
-      <a routerLink="/contact" class="btn btn-secondary">Contact opnemen</a>
+      <p>{{ t.question }}</p>
+      <a [routerLink]="ui.paths.contact" class="btn btn-secondary">{{ t.contact }}</a>
     </div>
   </div>
 </section>

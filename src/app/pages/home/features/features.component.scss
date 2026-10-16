@@ -189,6 +189,7 @@
 .marquee-inner {
   display: flex;
   gap: 20px;
+  align-items: stretch; /* every card as tall as the tallest one */
   width: max-content;
   animation: marquee-scroll 40s linear infinite;
 
@@ -205,6 +206,8 @@
 /* Review cards */
 .review-card {
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
   width: 320px;
   background: white;
   border: 1px solid var(--border-light);
@@ -221,6 +224,24 @@
   }
 }
 
+.review-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* Small, quiet label on the English site: the reviews are translated */
+.review-translated {
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-page);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
 .review-stars {
   color: #f59e0b;
   font-size: 0.85rem;
@@ -228,6 +249,7 @@
 }
 
 .review-author {
+  margin-top: auto; /* pinned to the bottom, also on cards with a short review */
   display: flex;
   align-items: center;
   gap: 12px;

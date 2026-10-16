@@ -4,27 +4,27 @@
 
       <!-- Left sticky panel -->
       <div class="process-left">
-        <span class="section-label">Hoe het werkt</span>
-        <h2 class="process-title">Een nieuwe app. Hoe werkt dat?</h2>
+        <span class="section-label">{{ t.label }}</span>
+        <h2 class="process-title">{{ t.title }}</h2>
         <p class="process-desc">
-          Alles wat je nodig hebt om anytimers met vrienden bij te houden in slechts vier stappen.
+          {{ t.intro }}
         </p>
         <div class="steps-nav">
           <div class="step-nav-item" [class.active]="activeStep === 0">
             <div class="step-nav-dot">01</div>
-            <span>Sparen of inzetten</span>
+            <span>{{ t.steps[0].title }}</span>
           </div>
           <div class="step-nav-item" [class.active]="activeStep === 1">
             <div class="step-nav-dot">02</div>
-            <span>Media toevoegen</span>
+            <span>{{ t.steps[1].title }}</span>
           </div>
           <div class="step-nav-item" [class.active]="activeStep === 2">
             <div class="step-nav-dot">03</div>
-            <span>Deel met je vrienden</span>
+            <span>{{ t.steps[2].title }}</span>
           </div>
           <div class="step-nav-item" [class.active]="activeStep === 3">
             <div class="step-nav-dot">04</div>
-            <span>Any's bijhouden</span>
+            <span>{{ t.steps[3].title }}</span>
           </div>
         </div>
       </div>
@@ -36,22 +36,20 @@
           <div class="p-card">
             <div class="p-card-top">
               <span class="p-num">01</span>
-              <div class="p-label">Spaar any's</div>
+              <div class="p-label">{{ t.steps[0].label }}</div>
             </div>
             <div class="p-card-body">
               <div class="p-card-text">
-                <h3>Sparen of inzetten</h3>
+                <h3>{{ t.steps[0].title }}</h3>
                 <p>
-                  Heb je een anytimer verdient?
-                  Open de app, selecteer je vriend en spaar een anytimer.
-                  Alles wordt automatisch opgeslagen binnen jullie vriendschap.
+                  {{ t.steps[0].text }}
                 </p>
               </div>
               <div class="p-card-visual">
                 <div class="p-mockup-clip">
                   <picture style="display: contents">
                     <source srcset="assets/Mockup anytimer page use any.webp" type="image/webp">
-                    <img src="assets/Mockup anytimer page use any.png" alt="Anytimer toevoegen" class="p-mockup" loading="lazy">
+                    <img src="assets/Mockup anytimer page use any.png" [alt]="t.steps[0].alt" class="p-mockup" loading="lazy">
                   </picture>
                 </div>
               </div>
@@ -63,21 +61,20 @@
           <div class="p-card p-card--blue">
             <div class="p-card-top">
               <span class="p-num">02</span>
-              <div class="p-label">Foto's en video's</div>
+              <div class="p-label">{{ t.steps[1].label }}</div>
             </div>
             <div class="p-card-body">
               <div class="p-card-text">
-                <h3>Media toevoegen</h3>
+                <h3>{{ t.steps[1].title }}</h3>
                 <p>
-                  Maak het moment onvergetelijk. Voeg een foto, video of berichtje toe aan
-                  elke anytimer. Zo weet je precies waarom die anytimer is verdiend of ingezet.
+                  {{ t.steps[1].text }}
                 </p>
               </div>
               <div class="p-card-visual">
                 <div class="p-mockup-clip">
                   <picture style="display: contents">
                     <source srcset="assets/Mockup anytimer page update any.webp" type="image/webp">
-                    <img src="assets/Mockup anytimer page update any.png" alt="Media toevoegen" class="p-mockup" loading="lazy">
+                    <img src="assets/Mockup anytimer page update any.png" [alt]="t.steps[1].alt" class="p-mockup" loading="lazy">
                   </picture>
                 </div>
               </div>
@@ -89,22 +86,20 @@
           <div class="p-card p-card--dark">
             <div class="p-card-top">
               <span class="p-num">03</span>
-              <div class="p-label">Post op de feed</div>
+              <div class="p-label">{{ t.steps[2].label }}</div>
             </div>
             <div class="p-card-body">
               <div class="p-card-text">
-                <h3>Deel met je vrienden</h3>
+                <h3>{{ t.steps[2].title }}</h3>
                 <p>
-                  Post de anytimer op de feed zodat al je vrienden het te zien krijgen.
-                  Je vrienden kunnen liken en reageren.
-                  Zo creëer jij je tijdlijn aan herinneringen.
+                  {{ t.steps[2].text }}
                 </p>
               </div>
               <div class="p-card-visual">
                 <div class="p-mockup-clip">
                   <picture style="display: contents">
                     <source srcset="assets/Mockup anytimer page friendlist.webp" type="image/webp">
-                    <img src="assets/Mockup anytimer page friendlist.png" alt="Feed plaatsen" class="p-mockup" loading="lazy">
+                    <img src="assets/Mockup anytimer page friendlist.png" [alt]="t.steps[2].alt" class="p-mockup" loading="lazy">
                   </picture>
                 </div>
               </div>
@@ -116,22 +111,20 @@
           <div class="p-card p-card--accent">
             <div class="p-card-top">
               <span class="p-num">04</span>
-              <div class="p-label">Versiebeheer</div>
+              <div class="p-label">{{ t.steps[3].label }}</div>
             </div>
             <div class="p-card-body">
               <div class="p-card-text">
-                <h3>Any's bijhouden</h3>
+                <h3>{{ t.steps[3].title }}</h3>
                 <p>
-                  Zie in één oogopslag hoeveel anytimers jij hebt en hoeveel any's vrienden op jou hebben.
-                  Nooit meer discussie. De app houdt alles bij,
-                  eerlijk en transparant voor iedereen.
+                  {{ t.steps[3].text }}
                 </p>
               </div>
               <div class="p-card-visual">
                 <div class="p-mockup-clip">
                   <picture style="display: contents">
                     <source srcset="assets/Mockup anytimer page friendlist.webp" type="image/webp">
-                    <img src="assets/Mockup anytimer page friendlist.png" alt="Vriendenbalans" class="p-mockup" loading="lazy">
+                    <img src="assets/Mockup anytimer page friendlist.png" [alt]="t.steps[3].alt" class="p-mockup" loading="lazy">
                   </picture>
                 </div>
               </div>

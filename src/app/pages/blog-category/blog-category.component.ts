@@ -2,11 +2,15 @@ import { Component, Inject } from '@angular/core';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
-import { BLOG_POSTS, CATEGORY_SLUGS, BlogCategory, BlogPost, DRANKSPEL_SUBCATEGORIES, DrankspelSubCategory, BEGRIPPEN_LETTERS, firstLetterOf } from '../blog/blog-posts.data';
+import { BlogCategory, BlogPost, DRANKSPEL_SUBCATEGORIES, DrankspelSubCategory, firstLetterOf, postsFor } from '../blog/blog-posts.data';
+import { Lang } from '../../i18n/lang';
+import { UI, UiStrings } from '../../i18n/ui';
 import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
 
-const CATEGORY_META: Record<BlogCategory, { title: string; description: string; intro: string; heading?: string }> = {
+type CategoryMeta = { title: string; description: string; intro: string; heading?: string };
+
+const CATEGORY_META_NL: Record<BlogCategory, CategoryMeta> = {
   Begrippen: {
     title: 'Studentenbegrippen Uitgelegd van A tot Z | AnyTimerApp',
     description: 'Van adten tot zeester: alle studentenbegrippen en studententaal helder uitgelegd. Meer dan 200 woorden met duidelijke definities, van A tot Z.',
@@ -30,6 +34,32 @@ const CATEGORY_META: Record<BlogCategory, { title: string; description: string; 
   }
 };
 
+const CATEGORY_META_EN: Record<BlogCategory, CategoryMeta> = {
+  Begrippen: {
+    title: 'Dutch Student Slang Dictionary: A to Z | AnyTimerApp',
+    description: 'What does feut, adten or brak mean? 500 Dutch student slang words and English slang terms explained in plain English, with examples. Made for internationals in the Netherlands.',
+    heading: 'Dutch student slang dictionary',
+    intro: 'Just moved to the Netherlands to study? Then you will hear a lot of words that no textbook explains. Here you find Dutch student slang and the English slang everyone uses, explained in plain English. Short, clear and with examples, from A to Z.'
+  },
+  Inspiratie: {
+    title: 'Inspiration for a Fun Night | AnyTimerApp',
+    description: 'Looking for ideas for a great night? Discover drinking games, night in ideas for housemates and the best chug timer. Everything for a fun night with friends.',
+    intro: 'Looking for ideas for a great night with friends? Discover our drinking games, night in ideas and tips to make it a night to remember.'
+  },
+  Weetjes: {
+    title: 'Anytimer Rules & Good to Know | AnyTimerApp',
+    description: 'Handy facts about anytimers. Can you refuse an anytimer? What is the best way to keep track of them? And which rules apply? All the answers in one place.',
+    heading: 'Good to know',
+    intro: 'Practical facts and rules about anytimers. From whether you can refuse one to the best way to keep track of them. You will find the answers here.'
+  },
+  Drankspelletjes: {
+    title: 'Drinking Game Rules & Tips | AnyTimerApp',
+    description: 'All our favourite drinking games with the rules, what you need and tips. From Kings Cup and Ride the Bus to Dutch classics like Kingsen and Bakplaten.',
+    heading: 'The best drinking games',
+    intro: 'Looking for fun drinking games for a night with friends? These are our favourites. You won\'t find every drinking game in the world here. Just the fun ones. For every game you get the rules, what you need and some tips.'
+  }
+};
+
 @Component({
   selector: 'app-blog-category',
   standalone: true,
@@ -39,7 +69,9 @@ const CATEGORY_META: Record<BlogCategory, { title: string; description: string; 
 })
 export class BlogCategoryComponent {
   category: BlogCategory;
-  meta: { title: string; description: string; intro: string; heading?: string };
+  lang: Lang;
+  ui: UiStrings;
+  meta: CategoryMeta;
   posts: BlogPost[];
   breadcrumbs: BreadcrumbItem[];
   // Only shown for the Drankspelletjes category — other categories have no subCategory to filter by.
@@ -66,6 +98,10 @@ export class BlogCategoryComponent {
     return rest;
   }
 
+  labelOf(post: BlogPost): string {
+    return post.subCategory ? this.ui.subCategoryLabels[post.subCategory] : this.ui.categoryLabels[post.category];
+  }
+
   toggleFilter(sub: DrankspelSubCategory) {
     this.activeFilter = this.activeFilter === sub ? null : sub;
   }
@@ -78,7 +114,7 @@ export class BlogCategoryComponent {
     const displayTitle = (p: BlogPost) => p.shortTitle || p.title;
     const rest = this.posts
       .filter(p => !this.activeLetter || firstLetterOf(p) === this.activeLetter)
-      .sort((a, b) => displayTitle(a).localeCompare(displayTitle(b), 'nl'));
+      .sort((a, b) => displayTitle(a).localeCompare(displayTitle(b), this.lang));
 
     const groups: { letter: string; posts: BlogPost[] }[] = [];
     for (const post of rest) {
@@ -99,27 +135,29 @@ export class BlogCategoryComponent {
 
   constructor(meta: Meta, route: ActivatedRoute, @Inject(DOCUMENT) document: Document) {
     this.category = route.snapshot.data['category'] as BlogCategory;
-    this.meta = CATEGORY_META[this.category];
-    this.posts = BLOG_POSTS.filter(p => p.category === this.category);
+    this.lang = (route.snapshot.data['lang'] as Lang) ?? 'nl';
+    this.ui = UI[this.lang];
+    this.meta = (this.lang === 'en' ? CATEGORY_META_EN : CATEGORY_META_NL)[this.category];
+    this.posts = postsFor(this.lang).filter(p => p.category === this.category);
     this.subCategories = this.category === 'Drankspelletjes' ? DRANKSPEL_SUBCATEGORIES : null;
     if (this.category === 'Begrippen') {
-      this.letters = BEGRIPPEN_LETTERS;
+      this.letters = [...new Set(this.posts.map(firstLetterOf))].sort((a, b) => a.localeCompare(b, this.lang));
       const requestedLetter = route.snapshot.queryParamMap.get('letter');
       if (requestedLetter && this.letters.includes(requestedLetter)) {
         this.activeLetter = requestedLetter;
       }
     }
     this.breadcrumbs = [
-      { label: 'Blog', url: '/blog' },
-      { label: this.category }
+      { label: 'Blog', url: this.ui.paths.blog },
+      { label: this.ui.categoryLabels[this.category] }
     ];
 
     const firstPost = this.sortedPosts[0];
     const title = this.meta.title;
     const description = this.meta.description;
     const image = `https://anytimer.app/${encodeURI(firstPost.image)}`;
-    const slug = CATEGORY_SLUGS[this.category];
-    const url = `https://anytimer.app/blog/${slug}/`;
+    const slug = this.ui.categorySlugs[this.category];
+    const url = `https://anytimer.app${this.ui.paths.blog}/${slug}/`;
 
     injectBreadcrumbSchema(document, `schema-breadcrumbs-${slug}`, this.breadcrumbs);
 
@@ -136,7 +174,6 @@ export class BlogCategoryComponent {
     meta.updateTag({ property: 'og:image:height', content: '1024' });
     meta.updateTag({ property: 'og:image:alt', content: firstPost.imageAlt });
     meta.updateTag({ property: 'og:site_name', content: 'AnyTimerApp' });
-    meta.updateTag({ property: 'og:locale', content: 'nl_NL' });
 
     meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
     meta.updateTag({ name: 'twitter:title', content: title });
@@ -154,6 +191,7 @@ export class BlogCategoryComponent {
         'name': title,
         'description': description,
         'url': url,
+        'inLanguage': this.lang,
         'mainEntity': {
           '@type': 'ItemList',
           'itemListElement': this.sortedPosts.map((post, i) => ({

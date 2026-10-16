@@ -8,6 +8,8 @@ import { AboutComponent } from './about/about.component';
 import { TeamComponent } from './team/team.component';
 import { BlogSectionComponent } from './blog-section/blog-section.component';
 import { GamesComponent } from './games/games.component';
+import { FAQS_EN } from './about/about.component';
+import { LanguageService } from '../../i18n/language.service';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +18,12 @@ import { GamesComponent } from './games/games.component';
   templateUrl: 'home.component.html',
 })
 export class HomeComponent {
-  constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
+  constructor(meta: Meta, @Inject(DOCUMENT) document: Document, language: LanguageService) {
+    if (language.lang() === 'en') {
+      this.setEnglishMeta(meta, document);
+      return;
+    }
+
     const title = 'Anytimer App — Vergeet nooit meer wie jou een anytimer schuldig is';
     const description = 'Download de AnyTimerApp en houd anytimers bij met vrienden. Zo vergeet je nooit meer wie jou een anytimer schuldig is.';
     const image = 'https://anytimer.app/assets/Mockup%20anytimer%20page%20friendlist.png';
@@ -99,6 +106,62 @@ export class HomeComponent {
                 'acceptedAnswer': { '@type': 'Answer', 'text': 'In eerste instantie blijft die zichtbaar als openstaand. Als de ander niet accepteert krijg je je any terug. Zo blijft het voor iedereen duidelijk wat er nog staat en krijg je geen eindeloze discussies over wie wat nog tegoed heeft.' }
               }
             ]
+          }
+        ]
+      });
+      document.head.appendChild(script);
+    }
+  }
+
+  private setEnglishMeta(meta: Meta, document: Document) {
+    const title = 'AnyTimerApp: Track Anytimers & Play Drinking Games';
+    const description = 'Download AnyTimerApp and keep track of anytimers with your friends. Never forget who owes you one again. Plus free drinking games in the app.';
+    const image = 'https://anytimer.app/assets/Mockup%20anytimer%20page%20friendlist.png';
+    const url = 'https://anytimer.app/en/';
+
+    meta.updateTag({ name: 'description', content: description });
+
+    meta.updateTag({ property: 'og:type', content: 'website' });
+    meta.updateTag({ property: 'og:url', content: url });
+    meta.updateTag({ property: 'og:title', content: title });
+    meta.updateTag({ property: 'og:description', content: description });
+    meta.updateTag({ property: 'og:image', content: image });
+
+    meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    meta.updateTag({ name: 'twitter:title', content: title });
+    meta.updateTag({ name: 'twitter:description', content: description });
+    meta.updateTag({ name: 'twitter:image', content: image });
+
+    if (!document.getElementById('schema-home-en')) {
+      const script = document.createElement('script');
+      script.id = 'schema-home-en';
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'MobileApplication',
+            'name': 'Anytimer',
+            'operatingSystem': ['Android', 'iOS'],
+            'applicationCategory': 'SocialNetworkingApplication',
+            'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'EUR' },
+            'description': description,
+            'url': url,
+            'image': 'https://anytimer.app/assets/logo.png',
+            'downloadUrl': [
+              'https://apps.apple.com/nl/app/anytimerapp/id6758271174',
+              'https://play.google.com/store/apps/details?id=com.anytimer.app'
+            ],
+            'inLanguage': 'en'
+          },
+          {
+            '@type': 'FAQPage',
+            'inLanguage': 'en',
+            'mainEntity': FAQS_EN.map(faq => ({
+              '@type': 'Question',
+              'name': faq.question,
+              'acceptedAnswer': { '@type': 'Answer', 'text': faq.answer }
+            }))
           }
         ]
       });

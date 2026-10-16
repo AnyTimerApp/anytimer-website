@@ -1,6 +1,53 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, inject } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { LanguageService } from '../../../i18n/language.service';
+
+// English FAQ. Also used for the FAQPage JSON-LD on the English home page,
+// so the structured data always matches what is on screen.
+export const FAQS_EN: { question: string; answer: string; link?: string; linkText?: string }[] = [
+  {
+    question: 'What is an anytimer?',
+    answer: 'An anytimer is basically a free pass you can get from your friends or give to someone. For example after a lost challenge, a silly move or a bet. And the fun part: it can be used at any moment. So yes, also when you are hungover or when it suits you the least.',
+    link: '/en/blog/dictionary/what-is-an-anytimer',
+    linkText: 'Read what an anytimer is'
+  },
+  {
+    question: 'Is AnyTimerApp free to use?',
+    answer: 'Yes, the app is completely free to use.'
+  },
+  {
+    question: 'How do I add an anytimer?',
+    answer: 'Go to your friends list, pick the right person and add an anytimer there. You can also add something extra, like a photo, video or message as proof. After that it is saved in your overview.'
+  },
+  {
+    question: 'How do I use an anytimer?',
+    answer: 'Go to your friends list, pick the right person and use an anytimer. Your friend gets a notification right away. That anytimer is then taken off your score.'
+  },
+  {
+    question: 'What if someone doesn\'t accept an anytimer?',
+    answer: 'At first it stays visible as open. If the other person doesn\'t accept, you get your any back. That way it stays clear for everyone what is still open, and you skip the endless arguments about who owes what. If they still refuse, you get to fight out the consequences yourselves.'
+  }
+];
+
+const TEXT = {
+  nl: {
+    label: 'Veelgestelde vragen',
+    title: 'Alles wat je wil weten',
+    other: 'Heb je een andere vraag? Neem contact met ons op via',
+    form: 'het contactformulier',
+    ready: 'Klaar om te starten?',
+    download: 'Download de app en begin vandaag'
+  },
+  en: {
+    label: 'FAQ',
+    title: 'Everything you want to know',
+    other: 'Got another question? Get in touch through',
+    form: 'the contact form',
+    ready: 'Ready to start?',
+    download: 'Download the app and start today'
+  }
+};
 
 @Component({
   selector: 'app-about',
@@ -10,7 +57,16 @@ import { RouterLink } from '@angular/router';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  private readonly language = inject(LanguageService);
+  readonly t = TEXT[this.language.lang()];
+  readonly ui = this.language.ui();
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    if (this.language.lang() === 'en') {
+      this.faqs = FAQS_EN.map((faq, i) => ({ ...faq, open: i === 0 }));
+    }
+  }
+
 faqs: { question: string; answer: string; link?: string; linkText?: string; open: boolean }[] = [
   {
     question: 'Wat is een anytimer?',

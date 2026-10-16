@@ -1,9 +1,12 @@
-import { Component, ElementRef, HostListener, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, OnDestroy, Inject, PLATFORM_ID, computed, inject, signal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { RouterLink, Router, NavigationEnd } from '@angular/router';
 import { Subscription, filter } from 'rxjs';
-import { CATEGORY_DISPLAY_ORDER, CATEGORY_SLUGS } from '../../pages/blog/blog-posts.data';
+import { CATEGORY_DISPLAY_ORDER } from '../../pages/blog/blog-posts.data';
+import { LanguageService } from '../../i18n/language.service';
+import { alternatesFor } from '../../i18n/alternates';
+import { UI } from '../../i18n/ui';
 
 @Component({
   selector: 'app-navbar',
@@ -18,10 +21,29 @@ export class NavbarComponent implements OnInit, OnDestroy {
   menuOpen = false;
   blogMenuOpen = false;
 
-  readonly blogCategories = CATEGORY_DISPLAY_ORDER.map(category => ({
-    category,
-    slug: CATEGORY_SLUGS[category]
-  }));
+  private readonly language = inject(LanguageService);
+  private readonly router = inject(Router);
+  readonly ui = this.language.ui;
+
+  readonly blogCategories = computed(() => CATEGORY_DISPLAY_ORDER.map(category => ({
+    label: this.ui().categoryLabels[category],
+    slug: this.ui().categorySlugs[category]
+  })));
+
+  // Language switcher (pill with two flags, like helprr.nl). Each flag links
+  // to that language's version of the current page, or to that language's
+  // home page when this page has no counterpart.
+  private readonly currentUrl = signal(this.router.url);
+  readonly langLinks = computed(() => {
+    const alternates = alternatesFor(this.currentUrl());
+    const current = this.language.lang();
+    return (['nl', 'en'] as const).map(lang => ({
+      lang,
+      label: lang === 'nl' ? 'Nederlands' : 'English',
+      url: alternates[lang] ?? UI[lang].paths.home,
+      active: lang === current
+    }));
+  });
 
   readonly APP_STORE_URL = 'https://apps.apple.com/nl/app/anytimerapp/id6758271174';
   readonly PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.anytimer.app';
@@ -39,7 +61,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
   private routerSub!: Subscription;
 
   constructor(
-    private router: Router,
     @Inject(PLATFORM_ID) private platformId: Object,
     private elementRef: ElementRef<HTMLElement>
   ) {
@@ -61,6 +82,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
       .pipe(filter(e => e instanceof NavigationEnd))
       .subscribe((e: any) => {
         this.isHeroPage = this.isHomePath(e.urlAfterRedirects);
+        this.currentUrl.set(e.urlAfterRedirects);
         this.menuOpen = false;
         this.blogMenuOpen = false;
       });
@@ -70,7 +92,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   // "/#features" and "/" both resolve to the home hero page.
   private isHomePath(url: string): boolean {
     const path = url.split('#')[0].split('?')[0];
-    return path === '/' || path === '';
+    return path === '/' || path === '' || path === '/en' || path === '/en/';
   }
 
   ngOnDestroy() {

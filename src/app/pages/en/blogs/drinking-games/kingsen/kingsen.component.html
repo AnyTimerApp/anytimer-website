@@ -1,0 +1,153 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Kingsen</h1>
+      <p class="legal-intro">
+        Kingsen is a Dutch card game where every card comes with a task. You take turns drawing a card from the circle. And you try not to be the one who draws the last king.
+      </p>
+      <p class="legal-intro">
+        Kingsen is the Dutch version of <a routerLink="/en/blog/drinking-games/ring-of-fire">Ring of Fire</a>, also known as Kings Cup. The idea is the same, but most cards have their own Dutch rules.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>What is Kingsen?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspellen/kingsen.webp" type="image/webp">
+          <img src="assets/blogs/drankspellen/kingsen.png" alt="Kingsen drinking game with cards in a circle around a shot glass" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Type</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Players</span>
+              </div>
+              <span class="game-stat__value">3 to 12</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Duration</span>
+              </div>
+              <span class="game-stat__value">20-40 minutes</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">What you need</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Playing cards</span>
+              <span class="game-tag">Shot glass</span>
+              <span class="game-tag">Drinks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>How to play</h2>
+        <ol>
+          <li>Take the jokers out of the deck.</li>
+          <li>Put a glass in the middle.</li>
+          <li>Lay all the cards face down in a circle around the glass.</li>
+          <li>Everyone takes turns drawing a card.</li>
+          <li>Do the task that goes with the card right away.</li>
+          <li>Put the kings on or next to the glass.</li>
+          <li>Whoever draws the fourth king drinks what is in the glass.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>What every card means</h2>
+        <ul class="card-meaning-list">
+          <li><strong>2: Hand out sips.</strong> Pick one person who has to take a sip.</li>
+          <li><strong>3: Drink yourself.</strong> Take a sip yourself.</li>
+          <li><strong>4: Pick a category.</strong> Pick a category. It can be anything. Beer brands, car brands and so on. Whoever can't think of anything or names something that was already said, drinks.</li>
+          <li><strong>5: Thumbs.</strong> Put your thumb on the table (you decide when). Everyone follows. The last one to put their thumb down drinks.</li>
+          <li><strong>6: Drinking buddy.</strong> Pick one player who drinks with you every time you have to drink.</li>
+          <li><strong>7: Times table of 7.</strong> Take turns counting up from 1. You can't say multiples of 7 (7, 14, 21) or numbers with a 7 in them (7, 17, 27). Made a mistake? You drink.</li>
+          <li><strong>8: Make a rule.</strong> Make up a rule for the whole game. Whoever breaks the rule drinks. For example: always drink with your left hand.</li>
+          <li><strong>9: Drop a rule.</strong> Cancel a rule that was made with card 8.</li>
+          <li><strong>10: Quizmaster.</strong> You are the quizmaster. Nobody can answer your questions. Whoever does it anyway, drinks. Only one quizmaster at a time.</li>
+          <li><strong>Jack: Point.</strong> Everyone raises their hand. Count down from 5 and everyone points at the person who has to drink. The one with the most votes drinks.</li>
+          <li><strong>Queen: Rise of the queen.</strong> At any moment you can raise your hand and shout "Rise of the queen". Everyone follows. The last one to do it drinks.</li>
+          <li><strong>King: Pour in.</strong> Add something to the glass (something drinkable).</li>
+          <li><strong>Ace: Reverse.</strong> The game turns around. Everyone now goes the other way.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>When do you drink?</h2>
+        <ul>
+          <li>You drink when your card says so.</li>
+          <li>You drink when you break an active rule.</li>
+          <li>You drink when you break the circle of cards.</li>
+          <li>Whoever draws the fourth king empties the glass.</li>
+        </ul>
+
+        <h3>Extra rules</h3>
+        <ul>
+          <li>Agree beforehand whether breaking the circle means emptying the glass right away.</li>
+          <li>With every king the player can add something to the glass. Agree on which drinks are allowed.</li>
+        </ul>
+
+        <p>Looking for more drinking games? Check out our <a routerLink="/en/blog/inspiration/best-drinking-games">top 10 best drinking games</a>.</p>
+      </div>
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Similar drinking games</h2>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended drinking games</h2>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

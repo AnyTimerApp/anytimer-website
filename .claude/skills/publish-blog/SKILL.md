@@ -339,11 +339,87 @@ Fix any errors. If useful, `npm start` and check the new route renders correctly
 ## 6b. English counterpart
 
 Every change to the Dutch site must also be made on the English site (`/en/`),
-translated automatically. Translate localized, not literally (e.g. "huisavond" is not
-"housenight"), with English slugs/titles chosen for English search intent. Link the NL
-and EN page to each other (hreflang/`alternate`) and keep internal links within the
-same language. As long as `/en/` doesn't exist yet, list the pending EN counterpart in
-the summary to the user.
+translated automatically. The English site targets internationals studying in the
+Netherlands. Translate localized, not literally (e.g. "huisavond" is "a night in with
+your housemates", not "housenight"), with English slugs/titles chosen for English
+search intent.
+
+**How the English site is wired** (no `@angular/localize`, one build):
+
+- `src/app/i18n/`: `lang.ts`, `language.service.ts` (language follows the URL, sets
+  `<html lang>`), `ui.ts` (short UI strings, EN category labels/slugs, paths) and
+  `alternates.ts` (the NL ↔ EN page pairs, used for hreflang, the navbar switcher and
+  the sitemap). Hreflang, canonical and `og:locale` are set globally in
+  `app.component.ts`. Don't set `og:locale` in a component.
+- English posts live in `BLOG_POSTS_EN` (`src/app/pages/blog/blog-posts.en.data.ts`),
+  same shape as `BLOG_POSTS` plus `alternate` = the Dutch post's `path`. `category` and
+  `subCategory` keep the Dutch keys. The English labels come from `UI.en`.
+  `getSimilarGames`/`getRecommendedGames` pick the right language from the post's path.
+  `getPostsBySlug(slugs, 'en')` for hand-picked lists.
+- English components live under `src/app/pages/en/` (e.g.
+  `src/app/pages/en/blogs/drinking-games/<slug>/`). Copy the Dutch markup, point
+  `styleUrls` at the Dutch component's `.scss` (no new styles), and use
+  `applyArticleSeo()` from `src/app/shared/article-seo.ts` for meta, Open Graph,
+  BlogPosting (with `inLanguage: 'en'`) and breadcrumbs. Reference:
+  `src/app/pages/en/blogs/drinking-games/rage-cage/`.
+- Routes go in `src/app/app.routes.en.ts` with `data: EN`. EN category slugs:
+  `dictionary`, `inspiration`, `good-to-know`, `drinking-games`.
+- After adding the EN page run `python3 scripts/sitemap_alternates.py`. It adds the EN URL
+  to `src/sitemap.xml` and writes the `xhtml:link` alternates for both pages.
+- Internal links on an English page only point to English pages.
+
+**Dictionary terms (begrippen).** Every Dutch term page has an English twin under
+`/en/blog/dictionary/<slug>`. Adding a Dutch term means adding the English one too:
+add an entry to a batch in `scripts/begrippen_batches/en/` and run
+`python3 scripts/build_dictionary_en.py` (writes `dictionary.en.data.ts` and
+`begrippen-content.en.data.ts`; routes are generated from the data), then
+`python3 scripts/sitemap_alternates.py`. Rules per term:
+- English term or abbreviation of an English phrase (rizz, FOMO): translate, same slug.
+- Real Dutch student word (feut, adten, borrel): keep the Dutch title and slug, set
+  `"origin": "dutch"` (or `"flemish"` for Belgian words like kot). The page then shows the
+  "Dutch student slang" label. Write the example sentence in English with the Dutch word
+  in it, and mention the English equivalent where there is one.
+- Plain Dutch word that already has an English page with the same meaning (kater =
+  hangover): `{"nl": "kater", "skip": "hangover"}`, no English page.
+- Rewrite into natural English sentences in the house style; don't translate word by word.
+- A Dutch verb phrase used inside an English sentence follows English word order:
+  "you have to trek a bak", not "you have to bak trekken".
+
+**Drinking game names.** Use the international name only when the game has the same
+rules internationally (checked online): e.g. Stress Pong → Rage Cage, Mexen → Mexico,
+Bussen → Ride the Bus, Paardenrace → Horse Race, Kusje geven → Suck and Blow, Stef
+Stuntpiloot → Looping Louie, Mario Barf → Beerio Kart, Vingeren → Fingers. Mention the
+Dutch name once in the intro ("In the Netherlands it's called ...") and add both names to
+`game.alternateName` in `applyArticleSeo`. No real international equivalent? Keep the
+Dutch name and call it "a Dutch drinking game" in the intro and description (Kingsen,
+Bakplaten, Mijnenveld, Jeu de bier, Trek je Bak Mania). App games use the names from the
+English app: Boze bak → Angry Mug, Kamelenrace → Camel Race, Dobbelen → Dice.
+
+**Title patterns.** International name: `{Name} Rules: How to Play | AnyTimerApp`.
+Dutch name: `{Name}: Dutch Drinking Game Rules | AnyTimerApp`. Fun fact sentence: "Did
+you know you can play {Game} in our free app?" (links to `/en/`).
+
+**Term base** (keep translations consistent):
+
+| NL | EN |
+|---|---|
+| drankspel | drinking game |
+| spelregels / speluitleg | rules / how to play |
+| slok / slokken uitdelen | sip / hand out sips |
+| een bak trekken | down your drink (explain "bak" where the Dutch name uses it) |
+| adtje / atten | adtje, explained once as downing your drink in one go (a chug) |
+| anytimer / any | anytimer / any (never translated) |
+| een anytimer inzetten | use an anytimer (never "cash in") |
+| huisavond | night in with your housemates |
+| studentenhuis / huisgenoot | student house / housemate |
+| studentenvereniging | student association |
+| dispuut, jaarclub, sjaars, feut | stay Dutch, with a short explanation |
+| plaatje / aas | face card / ace |
+| Categorie / Spelers / Speelduur / Benodigdheden | Type / Players / Duration / What you need |
+| Kaartspel / Dobbelspel / Behendigheid / Overig | Card game / Dice game / Skill game / Other |
+
+Same writing style as Dutch: short punchy sentences mixed with a longer one, simple
+words, fun to read, no em-dashes, British spelling. Copy info card values 1:1.
 
 ## 7. Stop here
 
