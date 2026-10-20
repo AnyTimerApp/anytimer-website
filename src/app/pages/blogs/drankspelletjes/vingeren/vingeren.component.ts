@@ -30,7 +30,7 @@ export class VingerenComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Vingeren - Spelregels & Tips | AnyTimerApp';
+    const title = 'Vingeren regels: zo speel je het drankspel';
     const description = 'Vingeren is een snel raadspel met vingers op een glas. Ontdek de spelregels, tips en wanneer je moet drinken bij dit drankspel voor 4 tot 8 spelers.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/vingeren.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/vingeren/';

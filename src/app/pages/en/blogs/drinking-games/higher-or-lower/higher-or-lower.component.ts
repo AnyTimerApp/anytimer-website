@@ -37,7 +37,7 @@ export class HigherOrLowerEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-higher-or-lower',
       lang: 'en',
-      title: 'Higher or Lower Drinking Game Rules | AnyTimerApp',
+      title: 'Higher or Lower rules: how to play the drinking game',
       description: 'Higher or Lower is a simple card drinking game. Guess if the next card is higher or lower. Wrong guess? You drink. Learn the rules and extra rules.',
       url: 'https://anytimer.app/en/blog/drinking-games/higher-or-lower/',
       image: 'https://anytimer.app/assets/blogs/drankspel/hoger%20lager.png',

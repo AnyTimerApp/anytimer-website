@@ -30,7 +30,7 @@ export class StressPongComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Stress Pong - Spelregels & Tips | AnyTimerApp';
+    const title = 'Stress Pong regels: zo speel je het drankspel';
     const description = 'Stress Pong is een snelle variant op beerpong waarbij twee bekers tegelijk rondgaan. Ontdek de spelregels, benodigdheden en tips.';
     const image = 'https://anytimer.app/assets/blogs/drankspellen/stress%20pong.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/stress-pong/';

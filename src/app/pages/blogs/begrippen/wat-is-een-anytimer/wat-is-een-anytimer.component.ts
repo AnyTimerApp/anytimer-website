@@ -28,7 +28,7 @@ export class WatIsEenAnytimer {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Wat is een Anytimer? - Gids & Uitleg | Anytimer App';
+    const title = 'Wat is een anytimer? Betekenis en regels';
     const description = 'Wat is een anytimer? Ontdek alles over dit concept: een tegoed in te zetten op elk moment. Lees hoe je het verdient, inzet en waarom je het nodig hebt.';
     const image = 'https://anytimer.app/assets/blogs/wat%20is%20een%20anytimer/Wat%20is%20een%20anytimer%20cover.png';
     const url = 'https://anytimer.app/wat-is-een-anytimer/';

@@ -37,7 +37,7 @@ export class FingersEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-fingers',
       lang: 'en',
-      title: 'Fingers Drinking Game Rules: How to Play | AnyTimerApp',
+      title: 'Fingers rules: how to play the drinking game',
       description: 'Fingers is a quick drinking game with fingers on a glass. Guess how many fingers stay on the rim and get out of the game. The last one drinks.',
       url: 'https://anytimer.app/en/blog/drinking-games/fingers/',
       image: 'https://anytimer.app/assets/blogs/drankspel/vingeren.png',

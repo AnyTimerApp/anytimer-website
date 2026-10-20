@@ -24,7 +24,7 @@ export class HomeComponent {
       return;
     }
 
-    const title = 'Anytimer App — Vergeet nooit meer wie jou een anytimer schuldig is';
+    const title = 'AnyTimerApp: de app om je anytimers bij te houden';
     const description = 'Download de AnyTimerApp en houd anytimers bij met vrienden. Zo vergeet je nooit meer wie jou een anytimer schuldig is.';
     const image = 'https://anytimer.app/assets/Mockup%20anytimer%20page%20friendlist.png';
     const url = 'https://anytimer.app/';
@@ -114,7 +114,7 @@ export class HomeComponent {
   }
 
   private setEnglishMeta(meta: Meta, document: Document) {
-    const title = 'AnyTimerApp: Track Anytimers & Play Drinking Games';
+    const title = 'AnyTimerApp: the app to keep track of your anytimers';
     const description = 'Download AnyTimerApp and keep track of anytimers with your friends. Never forget who owes you one again. Plus free drinking games in the app.';
     const image = 'https://anytimer.app/assets/Mockup%20anytimer%20page%20friendlist.png';
     const url = 'https://anytimer.app/en/';

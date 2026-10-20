@@ -32,7 +32,7 @@ export class ContactEnComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Contact AnyTimerApp: Questions, Feedback & Partnerships';
+    const title = 'Contact AnyTimerApp: questions, feedback and partnerships';
     const description = 'Get in touch with AnyTimerApp. Questions, feedback or an idea for a partnership? Send us an email and we will reply within 48 hours.';
     const image = 'https://anytimer.app/assets/Together.png';
     const url = 'https://anytimer.app/en/contact/';

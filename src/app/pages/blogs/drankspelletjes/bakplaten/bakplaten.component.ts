@@ -30,7 +30,7 @@ export class BakplatenComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Bakplaten - Spelregels & Tips | AnyTimerApp';
+    const title = 'Bakplaten regels: zo speel je het drankspel';
     const description = 'Bakplaten is een heel simpel kaartspel. Trek een plaatje en drink een bak. Ontdek de spelregels en variaties.';
     const image = 'https://anytimer.app/assets/blogs/drankspellen/bakplaten.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/bakplaten/';

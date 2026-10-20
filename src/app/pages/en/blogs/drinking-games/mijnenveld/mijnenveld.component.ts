@@ -37,7 +37,7 @@ export class MijnenveldEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-mijnenveld',
       lang: 'en',
-      title: 'Mijnenveld: Dutch Drinking Game Rules | AnyTimerApp',
+      title: 'Mijnenveld rules: how to play the drinking game',
       description: 'Mijnenveld is a Dutch card drinking game. Pick a path through the cards and avoid the mines. Hit a face card or ace and you start over. Learn the rules.',
       url: 'https://anytimer.app/en/blog/drinking-games/mijnenveld/',
       image: 'https://anytimer.app/assets/blogs/drankspel/mijnenveld.png',

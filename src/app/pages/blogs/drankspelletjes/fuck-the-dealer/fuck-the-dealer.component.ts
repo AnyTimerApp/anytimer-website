@@ -30,8 +30,8 @@ export class FuckTheDealerComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Fuck the Dealer - Spelregels & Tips | AnyTimerApp';
-    const description = 'Fuck the Dealer is een kaartspel waarin iedereen de dealer probeert te pakken. Ontdek de spelregels, benodigdheden en drankstraffen.';
+    const title = 'Fuck the Dealer regels: zo speel je het drankspel';
+    const description = 'Fuck the Dealer, ook wel Fuck de Dealer, is een kaartspel waarin je de kaart van de dealer raadt. Fout geraden? Dan drink jij. Goed? Dan drinkt de dealer.';
     const image = 'https://anytimer.app/assets/blogs/drankspellen/fuck%20the%20dealer.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/fuck-the-dealer/';
     const publishedTime = '2026-07-24';

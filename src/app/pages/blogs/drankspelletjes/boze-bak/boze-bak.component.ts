@@ -31,7 +31,7 @@ export class BozeBakComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Boze bak - Spelregels & Tips | AnyTimerApp';
+    const title = 'Boze bak regels: zo speel je het drankspel';
     const description = 'Boze bak is een spannend kansspel op je telefoon. Druk op de blije bakken en ontwijk de boze bak. Lees de spelregels en speel het in de app.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/bozebak.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/boze-bak/';

@@ -37,7 +37,7 @@ export class SuckAndBlowEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-suck-and-blow',
       lang: 'en',
-      title: 'Suck and Blow Rules: How to Play | AnyTimerApp',
+      title: 'Suck and Blow rules: how to play the drinking game',
       description: 'Suck and Blow is a party drinking game with one playing card. Pass the card around with your mouth and don\'t drop it. Learn the rules.',
       url: 'https://anytimer.app/en/blog/drinking-games/suck-and-blow/',
       image: 'https://anytimer.app/assets/blogs/drankspel/kusje%20geven.png',

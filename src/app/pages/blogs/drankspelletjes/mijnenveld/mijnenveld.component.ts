@@ -30,7 +30,7 @@ export class MijnenveldComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Mijnenveld - Spelregels & Tips | AnyTimerApp';
+    const title = 'Mijnenveld regels: zo speel je het drankspel';
     const description = 'Mijnenveld is een kaartspel waarin je een pad door het veld kiest. Ontdek de spelregels, tips en wanneer je moet drinken bij dit drankspel.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/mijnenveld.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/mijnenveld/';

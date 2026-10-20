@@ -37,7 +37,7 @@ export class HorseRaceEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-horse-race',
       lang: 'en',
-      title: 'Horse Race Drinking Game Rules: How to Play | AnyTimerApp',
+      title: 'Horse Race rules: how to play the drinking game',
       description: 'Horse Race, also called Camel Race, is a card drinking game where the four aces race each other. Bet your sips and cheer on your horse. Learn the rules.',
       url: 'https://anytimer.app/en/blog/drinking-games/horse-race/',
       image: 'https://anytimer.app/assets/blogs/drankspellen/paardenrace.png',

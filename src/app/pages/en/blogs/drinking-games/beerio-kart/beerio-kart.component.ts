@@ -37,7 +37,7 @@ export class BeerioKartEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-beerio-kart',
       lang: 'en',
-      title: 'Beerio Kart Rules: The Mario Kart Drinking Game | AnyTimerApp',
+      title: 'Beerio Kart rules: how to play the drinking game',
       description: 'Beerio Kart is Mario Kart with a drink next to your controller. Finish your drink before the finish line. Learn all the rules and extra rules.',
       url: 'https://anytimer.app/en/blog/drinking-games/beerio-kart/',
       image: 'https://anytimer.app/assets/blogs/drankspellen/mario%20barf.png',

@@ -37,7 +37,7 @@ export class RingOfFireEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-ring-of-fire',
       lang: 'en',
-      title: 'Ring of Fire Rules: How to Play Kings Cup | AnyTimerApp',
+      title: 'Ring of Fire rules: how to play the drinking game',
       description: 'Ring of Fire, also known as Kings Cup, is the classic card drinking game. Learn how to play and what every card means, from Waterfall to Thumbmaster.',
       url: 'https://anytimer.app/en/blog/drinking-games/ring-of-fire/',
       image: 'https://anytimer.app/assets/blogs/drankspel/ring%20of%20fire.png',

@@ -60,8 +60,8 @@ export class BlogComponent {
 
     const en = this.lang === 'en';
     const title = en
-      ? 'AnyTimerApp Blog: Drinking Games, Ideas & Guides'
-      : 'Anytimer Blog - Tips, Ideeën & Gidsen | Anytimer App';
+      ? 'AnyTimerApp blog: drinking games, slang and tips'
+      : 'Blog van AnyTimerApp: drankspellen, begrippen en tips';
     const description = en
       ? 'Read our blog with drinking game rules, ideas for a fun night and everything about anytimers. Plus the Dutch student slang you hear in the Netherlands.'
       : 'Lees onze blog met tips, ideeën en gidsen voor anytimers. Ontdek hoe je het meest uit je anytimers haalt en creëer meer plezier met je vrienden.';

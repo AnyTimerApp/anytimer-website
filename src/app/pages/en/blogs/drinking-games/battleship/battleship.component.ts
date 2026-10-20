@@ -37,7 +37,7 @@ export class BattleshipEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-battleship',
       lang: 'en',
-      title: 'Battleship Drinking Game Rules | AnyTimerApp',
+      title: 'Battleship rules: how to play the drinking game',
       description: 'Play Battleship as a drinking game. Hit your opponent\'s ship and they drink. Sink it and they drink extra. Learn the rules and extra rules.',
       url: 'https://anytimer.app/en/blog/drinking-games/battleship/',
       image: 'https://anytimer.app/assets/blogs/drankspel/zeeslag.png',

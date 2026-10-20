@@ -30,7 +30,7 @@ export class ZeeslagComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Zeeslag - Spelregels & Tips | AnyTimerApp';
+    const title = 'Zeeslag regels: zo speel je het drankspel';
     const description = 'Zeeslag als drankspel: raak je een schip van de ander, dan moet die persoon drinken. Ontdek de spelregels en tips voor deze bordspel klassieker.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/zeeslag.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/zeeslag/';

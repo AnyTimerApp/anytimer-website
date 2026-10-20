@@ -24,7 +24,7 @@ export class WatIsEenAdtjeComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Wat is een Adtje? - Gids & Uitleg | AnyTimerApp';
+    const title = 'Wat is een adtje? Betekenis en regels';
     const description = 'Wat is een adtje? Lees alles over atten, shotgun en rietbak. Tips voor snel drinken, de oorsprong en alle drankspel tradities uit Nederland.';
     const image = 'https://anytimer.app/assets/blogs/wat%20is%20een%20adtje/wat%20is%20een%20adtje.png';
     const url = 'https://anytimer.app/wat-is-een-adtje/';

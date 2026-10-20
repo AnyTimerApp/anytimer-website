@@ -45,7 +45,7 @@ export class BestChugTimerComponent {
     applyArticleSeo(meta, document, {
       id: 'en-best-chug-timer',
       lang: 'en',
-      title: 'What is the Best Chug Timer? Apps & Options | AnyTimerApp',
+      title: 'What is the best chug timer? Guide and options',
       description: 'Which chug timer should you use? We compare an app, a stopwatch, the AdtMeister and a Rubik\'s cube timer. Plus tips for timing a fair chug.',
       url: 'https://anytimer.app/en/blog/inspiration/best-chug-timer/',
       image: 'https://anytimer.app/assets/blogs/beste%20timer/Any-timer%20in%20de%20club.png',

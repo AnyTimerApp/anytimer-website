@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class TermsComponent {
   constructor(meta: Meta) {
-    const title = 'Gebruiksvoorwaarden Anytimer App - Regels & Voorwaarden';
+    const title = 'Gebruiksvoorwaarden van AnyTimerApp: regels en voorwaarden';
     const description = 'Lees de gebruiksvoorwaarden van Anytimer. Ontdek welke regels gelden voor het gebruik van de app en wat je van ons kunt verwachten.';
     const image = 'https://anytimer.app/assets/logo.png';
     const url = 'https://anytimer.app/terms/';

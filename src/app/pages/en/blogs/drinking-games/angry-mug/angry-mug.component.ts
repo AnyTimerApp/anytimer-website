@@ -37,7 +37,7 @@ export class AngryMugEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-angry-mug',
       lang: 'en',
-      title: 'Angry Mug Rules: Play in the App | AnyTimerApp',
+      title: 'Angry Mug rules: how to play the drinking game',
       description: 'Angry Mug is an exciting game of luck on your phone. Tap the happy mugs but watch out for the angry one. Free to play in the AnyTimerApp.',
       url: 'https://anytimer.app/en/blog/drinking-games/angry-mug/',
       image: 'https://anytimer.app/assets/blogs/drankspel/bozebak.png',

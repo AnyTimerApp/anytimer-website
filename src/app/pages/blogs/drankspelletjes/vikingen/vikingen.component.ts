@@ -30,7 +30,7 @@ export class VikingenComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Vikingen - Spelregels & Tips | AnyTimerApp';
+    const title = 'Vikingen regels: zo speel je het drankspel';
     const description = 'Vikingen is een drankspel waarbij je steeds moet opletten wie de Viking is. Ontdek de spelregels en tips voor dit snelle reactiespel voor de groep.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/vikingen.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/vikingen/';

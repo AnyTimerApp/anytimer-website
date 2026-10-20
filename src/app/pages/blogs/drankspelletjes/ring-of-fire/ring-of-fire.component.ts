@@ -30,7 +30,7 @@ export class RingOfFireComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Ring of fire - Spelregels & Tips | AnyTimerApp';
+    const title = 'Ring of Fire regels: zo speel je het drankspel';
     const description = 'Ring of fire is de internationale variant van Kingsen. Ontdek de spelregels, kaartbetekenissen en tips voor dit populaire kaartspel als drankspel.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/ring%20of%20fire.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/ring-of-fire/';

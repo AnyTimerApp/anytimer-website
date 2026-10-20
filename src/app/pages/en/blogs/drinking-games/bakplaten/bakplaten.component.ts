@@ -37,7 +37,7 @@ export class BakplatenEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-bakplaten',
       lang: 'en',
-      title: 'Bakplaten: Dutch Drinking Game Rules | AnyTimerApp',
+      title: 'Bakplaten rules: how to play the drinking game',
       description: 'Bakplaten is a super simple Dutch card drinking game. Draw a face card and you down your drink. Learn the rules and variations.',
       url: 'https://anytimer.app/en/blog/drinking-games/bakplaten/',
       image: 'https://anytimer.app/assets/blogs/drankspellen/bakplaten.png',

@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class TermsEnComponent {
   constructor(meta: Meta) {
-    const title = 'AnyTimerApp Terms of Use: Rules & Conditions';
+    const title = 'AnyTimerApp terms of use: rules and conditions';
     const description = 'Read the AnyTimerApp terms of use. See which rules apply when you use the app and what you can expect from us.';
     const image = 'https://anytimer.app/assets/logo.png';
     const url = 'https://anytimer.app/en/terms/';

@@ -9,7 +9,7 @@ import { Meta } from '@angular/platform-browser';
 })
 export class RemoveAccountComponent {
   constructor(meta: Meta) {
-    const title = 'Account Verwijderen Anytimer - Stap-voor-Stap Gids';
+    const title = 'Account verwijderen bij AnyTimerApp: stap voor stap';
     const description = 'Account verwijderen bij Anytimer? Lees onze stap-voor-stap gids. Ontdek wat er gebeurt met je gegevens en hoe je je account permanent verwijdert.';
     const image = 'https://anytimer.app/assets/logo.png';
     const url = 'https://anytimer.app/remove-account/';

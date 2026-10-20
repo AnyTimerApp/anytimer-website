@@ -30,7 +30,7 @@ export class BussenComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Bussen - Spelregels & Tips | AnyTimerApp';
+    const title = 'Bussen regels: zo speel je het drankspel';
     const description = 'Bussen is een kaartspel met meerdere rondes en een piramide. Ontdek de spelregels, slokverdeling en tips voor deze drankspel klassieker.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/bussen.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/bussen/';

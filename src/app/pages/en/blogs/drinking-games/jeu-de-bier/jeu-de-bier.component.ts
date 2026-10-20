@@ -37,7 +37,7 @@ export class JeuDeBierEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-jeu-de-bier',
       lang: 'en',
-      title: 'Jeu de Bier: Dutch Drinking Game Rules | AnyTimerApp',
+      title: 'Jeu de Bier rules: how to play the drinking game',
       description: 'Jeu de bier is a Dutch drinking game with beer caps. Think pétanque, but on a table. Learn the rules and fun extra rules in 2 minutes.',
       url: 'https://anytimer.app/en/blog/drinking-games/jeu-de-bier/',
       image: 'https://anytimer.app/assets/blogs/drankspel/jeu%20de%20bier.png',

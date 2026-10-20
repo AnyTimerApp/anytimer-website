@@ -37,7 +37,7 @@ export class CrocodileDentistEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-crocodile-dentist',
       lang: 'en',
-      title: 'Crocodile Dentist Drinking Game Rules | AnyTimerApp',
+      title: 'Crocodile Dentist rules: how to play the drinking game',
       description: 'Play Crocodile Dentist as a drinking game. Press a tooth and hope the jaw stays open. Snap? You drink. Learn the rules and extra rules.',
       url: 'https://anytimer.app/en/blog/drinking-games/crocodile-dentist/',
       image: 'https://anytimer.app/assets/blogs/drankspel/krokodil.png',

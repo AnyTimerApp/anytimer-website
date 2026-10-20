@@ -37,7 +37,7 @@ export class ThirtySecondsEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-30-seconds',
       lang: 'en',
-      title: '30 Seconds Drinking Game Rules | AnyTimerApp',
+      title: '30 Seconds rules: how to play the drinking game',
       description: 'Play 30 Seconds as a drinking game. Guess as many words as you can in 30 seconds. Every missed word means a sip. Learn the rules and extra rules.',
       url: 'https://anytimer.app/en/blog/drinking-games/30-seconds/',
       image: 'https://anytimer.app/assets/blogs/drankspellen/30%20seconds.png',

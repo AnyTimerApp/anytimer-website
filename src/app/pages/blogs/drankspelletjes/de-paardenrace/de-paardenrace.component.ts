@@ -30,7 +30,7 @@ export class DePaardenraceComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'De Paardenrace / Kamelenrace - Spelregels & Tips | AnyTimerApp';
+    const title = 'Paardenrace of kamelenrace regels: zo speel je het drankspel';
     const description = 'De Paardenrace, ook wel Kamelenrace, is een kaartspel waarin de vier azen tegen elkaar racen. Ontdek de spelregels, inzet en drankstraffen.';
     const image = 'https://anytimer.app/assets/blogs/drankspellen/paardenrace.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/de-paardenrace/';

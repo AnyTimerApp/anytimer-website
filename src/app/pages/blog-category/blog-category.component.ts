@@ -12,22 +12,22 @@ type CategoryMeta = { title: string; description: string; intro: string; heading
 
 const CATEGORY_META_NL: Record<BlogCategory, CategoryMeta> = {
   Begrippen: {
-    title: 'Studentenbegrippen Uitgelegd van A tot Z | AnyTimerApp',
-    description: 'Van adten tot zeester: alle studentenbegrippen en studententaal helder uitgelegd. Meer dan 200 woorden met duidelijke definities, van A tot Z.',
+    title: 'Studentenbegrippen: alle studententaal van A tot Z uitgelegd',
+    description: 'Van adten tot zeester: alle studentenbegrippen en studententaal helder uitgelegd. Meer dan 500 woorden met duidelijke definities, van A tot Z.',
     intro: 'Studententaal zit vol eigen woorden, afkortingen en tradities. Van drinktermen tot verenigingsjargon: hier vind je duidelijke uitleg bij honderden studentenbegrippen, overzichtelijk van A tot Z.'
   },
   Inspiratie: {
-    title: 'Inspiratie voor een Leuke Avond | AnyTimerApp',
+    title: 'Inspiratie: ideeën voor een leuke avond',
     description: 'Op zoek naar inspiratie voor een toffe avond? Ontdek drankspellen, huisavondideeën en de beste adt timer. Alles voor een gezellige avond met vrienden.',
     intro: 'Op zoek naar inspiratie voor een toffe avond met vrienden? Ontdek onze drankspellen, huisavondideeën en tips om er samen een onvergetelijke avond van te maken.'
   },
   Weetjes: {
-    title: 'Anytimer Weetjes & Regels | AnyTimerApp',
+    title: 'Weetjes: alles over anytimers en de regels',
     description: 'Handige weetjes over anytimers: mag je een anytimer weigeren, hoe houd je ze het beste bij en welke regels gelden er? Alle tips op een rij.',
     intro: 'Praktische weetjes en regels rond anytimers. Van of je een anytimer mag weigeren tot de beste manier om ze bij te houden: hier vind je de antwoorden.'
   },
   Drankspelletjes: {
-    title: 'Drankspelletjes: Spelregels & Tips | AnyTimerApp',
+    title: 'Drankspelletjes: alle spelregels op een rij',
     description: 'Ontdek onze drankspelletjes met alle spelregels, benodigdheden en tips. Van Jeu de bier tot nieuwe toevoegingen. Altijd een leuk drankspel bij de hand.',
     heading: 'De leukste drankspellen',
     intro: 'Op zoek naar leuke drankspellen voor een avond met vrienden? Dit zijn onze favorieten. Hier vind je niet elk drankspel dat bestaat. Maar alleen de leuke spellen. Bij elk spel vind je de regels, benodigdheden en tips.'
@@ -36,24 +36,24 @@ const CATEGORY_META_NL: Record<BlogCategory, CategoryMeta> = {
 
 const CATEGORY_META_EN: Record<BlogCategory, CategoryMeta> = {
   Begrippen: {
-    title: 'Dutch Student Slang Dictionary: A to Z | AnyTimerApp',
-    description: 'What does feut, adten or brak mean? 500 Dutch student slang words and English slang terms explained in plain English, with examples. Made for internationals in the Netherlands.',
+    title: 'Dutch student slang: every word explained from A to Z',
+    description: 'What does feut, adten or brak mean? 500 Dutch student slang words explained in plain English, with examples. Made for internationals in the Netherlands.',
     heading: 'Dutch student slang dictionary',
     intro: 'Just moved to the Netherlands to study? Then you will hear a lot of words that no textbook explains. Here you find Dutch student slang and the English slang everyone uses, explained in plain English. Short, clear and with examples, from A to Z.'
   },
   Inspiratie: {
-    title: 'Inspiration for a Fun Night | AnyTimerApp',
+    title: 'Inspiration: ideas for a fun night',
     description: 'Looking for ideas for a great night? Discover drinking games, night in ideas for housemates and the best chug timer. Everything for a fun night with friends.',
     intro: 'Looking for ideas for a great night with friends? Discover our drinking games, night in ideas and tips to make it a night to remember.'
   },
   Weetjes: {
-    title: 'Anytimer Rules & Good to Know | AnyTimerApp',
+    title: 'Good to know: all about anytimers and the rules',
     description: 'Handy facts about anytimers. Can you refuse an anytimer? What is the best way to keep track of them? And which rules apply? All the answers in one place.',
     heading: 'Good to know',
     intro: 'Practical facts and rules about anytimers. From whether you can refuse one to the best way to keep track of them. You will find the answers here.'
   },
   Drankspelletjes: {
-    title: 'Drinking Game Rules & Tips | AnyTimerApp',
+    title: 'Drinking games: all the rules in one place',
     description: 'All our favourite drinking games with the rules, what you need and tips. From Kings Cup and Ride the Bus to Dutch classics like Kingsen and Bakplaten.',
     heading: 'The best drinking games',
     intro: 'Looking for fun drinking games for a night with friends? These are our favourites. You won\'t find every drinking game in the world here. Just the fun ones. For every game you get the rules, what you need and some tips.'

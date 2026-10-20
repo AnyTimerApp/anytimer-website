@@ -37,8 +37,8 @@ export class FuckTheDealerEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-fuck-the-dealer',
       lang: 'en',
-      title: 'Fuck the Dealer Rules: How to Play | AnyTimerApp',
-      description: 'Fuck the Dealer is a card drinking game where everyone tries to beat the dealer by guessing the next card. Learn the rules in 2 minutes.',
+      title: 'Fuck the Dealer rules: how to play the drinking game',
+      description: 'Fuck the Dealer is a card drinking game where you guess which card the dealer is holding. Guess wrong and you drink. Guess right and the dealer drinks.',
       url: 'https://anytimer.app/en/blog/drinking-games/fuck-the-dealer/',
       image: 'https://anytimer.app/assets/blogs/drankspellen/fuck%20the%20dealer.png',
       imageAlt: this.post.imageAlt,

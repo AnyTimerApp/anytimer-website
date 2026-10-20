@@ -30,7 +30,7 @@ export class KrokodillenspelComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Krokodillenspel - Spelregels & Tips | AnyTimerApp';
+    const title = 'Krokodillenspel regels: zo speel je het drankspel';
     const description = 'Krokodillenspel is Krokodil met Kiespijn als drankspel. Ontdek de spelregels, tips en wanneer je moet drinken bij dit spannende behendigheidsspel.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/krokodil.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/krokodillenspel/';

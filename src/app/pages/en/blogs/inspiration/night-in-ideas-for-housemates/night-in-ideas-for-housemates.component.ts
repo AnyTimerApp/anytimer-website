@@ -29,8 +29,8 @@ export class NightInIdeasForHousematesComponent {
     applyArticleSeo(meta, document, {
       id: 'en-night-in-ideas-for-housemates',
       lang: 'en',
-      title: 'Top 10 Fun Night In Ideas for Housemates | AnyTimerApp',
-      description: 'Staying in with your housemates? Our top 10 night in ideas, from a black run through your student house to Christmas dinner in July. Fun ideas for every student house.',
+      title: 'Top 10 fun night in ideas for housemates',
+      description: 'Staying in with your housemates? Our top 10 night in ideas, from a black run through your student house to Christmas dinner in July.',
       url: 'https://anytimer.app/en/blog/inspiration/night-in-ideas-for-housemates/',
       image: 'https://anytimer.app/assets/blogs/huisavond/Huisavond%20cover.png',
       imageAlt: 'Top 10 night in ideas for housemates',

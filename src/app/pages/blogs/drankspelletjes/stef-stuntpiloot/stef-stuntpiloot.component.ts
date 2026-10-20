@@ -30,7 +30,7 @@ export class StefStuntpilootComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Stef stuntpiloot - Spelregels & Tips | AnyTimerApp';
+    const title = 'Stef Stuntpiloot regels: zo speel je het drankspel';
     const description = 'Stef stuntpiloot als drankspel: verdedig je kippen tegen het vliegtuigje. Ontdek de spelregels, benodigdheden en tips voor dit behendigheidsspel.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/stef%20stuntpiloot.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/stef-stuntpiloot/';

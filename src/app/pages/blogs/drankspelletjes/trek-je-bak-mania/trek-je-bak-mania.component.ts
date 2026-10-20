@@ -30,7 +30,7 @@ export class TrekJeBakManiaComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Trek je Bak Mania - Spelregels & Tips | AnyTimerApp';
+    const title = 'Trek je Bak Mania regels: zo speel je het drankspel';
     const description = 'Trek je Bak Mania is Trackmania met een simpele straf. Ontdek de spelregels, benodigdheden en tips voor dit racespel als drankspel.';
     const image = 'https://anytimer.app/assets/blogs/drankspellen/trek%20je%20bak%20mania.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/trek-je-bak-mania/';

@@ -30,7 +30,7 @@ export class HogerLagerComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Hoger lager - Spelregels & Tips | AnyTimerApp';
+    const title = 'Hoger lager regels: zo speel je het drankspel';
     const description = 'Hoger lager is een simpel kaartspel waarin je steeds moet gokken op de volgende kaart. Ontdek de spelregels en tips voor dit populaire drankspel.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/hoger%20lager.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/hoger-lager/';

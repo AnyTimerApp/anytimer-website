@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Raw gum SEO data (reports themselves are kept)
+/seo-reports/data

@@ -32,7 +32,7 @@ export class CanYouRefuseAnAnytimerComponent {
     applyArticleSeo(meta, document, {
       id: 'en-can-you-refuse-an-anytimer',
       lang: 'en',
-      title: 'Can You Refuse an Anytimer? Rules & Penalties | AnyTimerApp',
+      title: 'Can you refuse an anytimer? Rules and consequences',
       description: 'Can you refuse an anytimer? Yes, but there is a price. Read the rules, the usual penalty and when you can\'t use an anytimer.',
       url: 'https://anytimer.app/en/blog/good-to-know/can-you-refuse-an-anytimer/',
       image: 'https://anytimer.app/assets/blogs/anytimer%20weigeren/maatje%20adt%20een%20biertje%20cartoon.png',

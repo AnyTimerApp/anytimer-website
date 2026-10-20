@@ -31,7 +31,7 @@ export class FingerRouletteComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Finger roulette - Spelregels & Tips | AnyTimerApp';
+    const title = 'Finger roulette regels: zo speel je het drankspel';
     const description = 'Finger roulette speel je op je telefoon. Iedereen legt een vinger op het scherm en de telefoon kiest er één. Lees de spelregels en speel het in de app.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/finger%20roulette.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/finger-roulette/';

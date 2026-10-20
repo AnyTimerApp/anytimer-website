@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class PrivacyEnComponent {
   constructor(meta: Meta) {
-    const title = 'AnyTimerApp Privacy Policy: GDPR Compliant & Secure';
+    const title = 'AnyTimerApp privacy policy: GDPR compliant and secure';
     const description = 'Read the AnyTimerApp privacy policy. We handle your data with care. GDPR compliant, no ads and we never sell your data.';
     const image = 'https://anytimer.app/assets/logo.png';
     const url = 'https://anytimer.app/en/privacy/';

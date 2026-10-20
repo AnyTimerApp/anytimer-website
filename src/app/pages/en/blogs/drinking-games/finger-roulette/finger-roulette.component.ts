@@ -37,7 +37,7 @@ export class FingerRouletteEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-finger-roulette',
       lang: 'en',
-      title: 'Finger Roulette Rules: Play in the App | AnyTimerApp',
+      title: 'Finger Roulette rules: how to play the drinking game',
       description: 'Finger Roulette is a quick game you play on your phone. Everyone puts a finger on the screen and the phone picks one. Free in the AnyTimerApp.',
       url: 'https://anytimer.app/en/blog/drinking-games/finger-roulette/',
       image: 'https://anytimer.app/assets/blogs/drankspel/finger%20roulette.png',

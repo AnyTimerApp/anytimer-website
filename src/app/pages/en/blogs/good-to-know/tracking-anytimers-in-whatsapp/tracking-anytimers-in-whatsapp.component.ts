@@ -45,7 +45,7 @@ export class TrackingAnytimersInWhatsappComponent {
     applyArticleSeo(meta, document, {
       id: 'en-tracking-anytimers-in-whatsapp',
       lang: 'en',
-      title: 'Why You Shouldn\'t Track Anytimers in WhatsApp | AnyTimerApp',
+      title: 'Why you shouldn\'t track anytimers in WhatsApp or notes',
       description: 'Why don\'t WhatsApp and notes work for tracking anytimers? Learn about version control, better options like a whiteboard or an app and how to avoid fights.',
       url: 'https://anytimer.app/en/blog/good-to-know/tracking-anytimers-in-whatsapp/',
       image: 'https://anytimer.app/assets/blogs/whatsapp%20en%20notities/Whatsapp%20phones.png',

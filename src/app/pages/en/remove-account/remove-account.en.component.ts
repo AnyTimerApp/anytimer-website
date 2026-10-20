@@ -9,7 +9,7 @@ import { Meta } from '@angular/platform-browser';
 })
 export class RemoveAccountEnComponent {
   constructor(meta: Meta) {
-    const title = 'Delete Your AnyTimerApp Account: Step by Step';
+    const title = 'Delete your AnyTimerApp account: step by step';
     const description = 'Want to delete your AnyTimerApp account? Follow our step by step guide. See what happens to your data and how to delete your account for good.';
     const image = 'https://anytimer.app/assets/logo.png';
     const url = 'https://anytimer.app/en/remove-account/';

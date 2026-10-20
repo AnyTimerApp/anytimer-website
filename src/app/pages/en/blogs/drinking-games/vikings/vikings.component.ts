@@ -37,7 +37,7 @@ export class VikingsEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-vikings',
       lang: 'en',
-      title: 'Vikings Drinking Game Rules: How to Play | AnyTimerApp',
+      title: 'Vikings rules: how to play the drinking game',
       description: 'Vikings is a drinking game where everyone has to pay attention. One player is the Viking, the neighbours row and the rest are the sea. Learn the rules.',
       url: 'https://anytimer.app/en/blog/drinking-games/vikings/',
       image: 'https://anytimer.app/assets/blogs/drankspel/vikingen.png',

@@ -37,7 +37,7 @@ export class RageCageEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-rage-cage',
       lang: 'en',
-      title: 'Rage Cage Rules: How to Play Stack Cup | AnyTimerApp',
+      title: 'Rage Cage rules: how to play the drinking game',
       description: 'Rage Cage, also called Stack Cup or Stress Pong, is a fast beer pong game with two cups going round. Get stacked and you drink. Learn the rules.',
       url: 'https://anytimer.app/en/blog/drinking-games/rage-cage/',
       image: 'https://anytimer.app/assets/blogs/drankspellen/stress%20pong.png',

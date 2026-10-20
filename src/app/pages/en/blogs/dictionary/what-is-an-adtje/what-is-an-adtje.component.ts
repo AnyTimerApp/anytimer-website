@@ -29,7 +29,7 @@ export class WhatIsAnAdtjeComponent {
     applyArticleSeo(meta, document, {
       id: 'en-what-is-an-adtje',
       lang: 'en',
-      title: 'What is an Adtje? The Dutch Chug Explained | AnyTimerApp',
+      title: 'What is an adtje? Meaning and rules',
       description: 'What does adtje mean? It is the Dutch word for downing your drink in one go. Learn where it comes from, how to chug fast and what a shotgun and rietbak are.',
       url: 'https://anytimer.app/en/blog/dictionary/what-is-an-adtje/',
       image: 'https://anytimer.app/assets/blogs/wat%20is%20een%20adtje/wat%20is%20een%20adtje.png',

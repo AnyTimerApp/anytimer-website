@@ -24,7 +24,7 @@ export class HuisavondideeenComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Top 10 Leuke Huisavondideeën | AnyTimerApp';
+    const title = 'Top 10 leuke huisavondideeën';
     const description = 'Op zoek naar een leuke huisavond? Ontdek 10 ideeën: Zwarte Piste, Flunkybal, Kahoot, Slabakken en meer. Met alle spelregels en tips.';
     const image = 'https://anytimer.app/assets/blogs/huisavond/Huisavond%20zwarte%20piste.png';
     const url = 'https://anytimer.app/huisavondideeen/';

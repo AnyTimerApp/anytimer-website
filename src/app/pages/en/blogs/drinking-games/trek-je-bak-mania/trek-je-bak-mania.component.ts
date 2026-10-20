@@ -37,7 +37,7 @@ export class TrekJeBakManiaEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-trek-je-bak-mania',
       lang: 'en',
-      title: 'Trek je Bak Mania: Dutch Trackmania Drinking Game | AnyTimerApp',
+      title: 'Trek je Bak Mania rules: how to play the drinking game',
       description: 'Trek je Bak Mania is the Dutch Trackmania drinking game. Everyone drives the same track and the slowest driver downs a drink. Learn the rules.',
       url: 'https://anytimer.app/en/blog/drinking-games/trek-je-bak-mania/',
       image: 'https://anytimer.app/assets/blogs/drankspellen/trek%20je%20bak%20mania.png',

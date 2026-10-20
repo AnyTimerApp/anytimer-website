@@ -30,7 +30,7 @@ export class JeuDeBierComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Jeu de Bier - Spelregels & Tips | AnyTimerApp';
+    const title = 'Jeu de Bier regels: zo speel je het drankspel';
     const description = 'Jeu de bier is jeu de boules voor aan tafel met bierdopjes. Ontdek de spelregels, benodigdheden en leuke drinkvariaties van dit behendigheidsspel.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/jeu%20de%20bier.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/jeu-de-bier/';

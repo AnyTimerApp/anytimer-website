@@ -23,7 +23,7 @@ any git action — the user commits and pushes manually.
   title/description, image alt text, internal-link anchor text).
 - Any new text you do write follows this project's writing style: no em-dashes, short
   punctual sentences, few commas.
-- Use "AnyTimerApp" (not "Anytimer") in SEO titles and any official branding text.
+- Use "AnyTimerApp" (not "Anytimer") in official branding text. Never end a meta title, route title or og:title with "| AnyTimerApp".
 
 ## 1. Pick a slug and inspect an existing blog component first
 
@@ -89,8 +89,19 @@ used in e.g. `drankspellen.component.ts` and `wat-is-de-beste-adt-timer.componen
   URL.
 - Canonical `<link>` tags are handled globally per-route by `app.component.ts` —
   nothing to add manually for that.
-- The route `title` (set in step 5) and the meta description must match/reinforce each
-  other and include the primary keyword near the front.
+- The route `title` (set in step 5) and the component's `title` (og:title, twitter:title,
+  schema headline) must be the exact same string. Include the primary keyword near the front.
+- **Fixed title patterns** (sentence case, `:` as separator, no ` - `, no `&`, no brand
+  suffix, max 60 characters):
+  - Drankspel (NL): `{Naam} regels: zo speel je het drankspel`
+  - Drinking game (EN): `{Name} rules: how to play the drinking game`
+  - Begrip / dictionary term: built automatically by `src/app/shared/term-seo-title.ts`
+    (`{Term} betekenis: wat betekent {term}?` / `{Term} meaning: what does {term} mean?`).
+    The Dutch route titles in `app.routes.ts` are static strings following that same rule.
+  - Other articles: a question or topic, then `:` or `?` and a short clarification,
+    e.g. `Wat is een adtje? Betekenis en regels`.
+- Meta descriptions explain directly and clearly (what it is, how it works). No
+  click-bait teasers. Max 160 characters.
 - Watch for Angular view-encapsulation quirks when overriding global classes inside the
   component: be explicit about layout properties (width/display/etc.) rather than
   relying on inherited global styles.
@@ -395,8 +406,8 @@ Dutch name and call it "a Dutch drinking game" in the intro and description (Kin
 Bakplaten, Mijnenveld, Jeu de bier, Trek je Bak Mania). App games use the names from the
 English app: Boze bak → Angry Mug, Kamelenrace → Camel Race, Dobbelen → Dice.
 
-**Title patterns.** International name: `{Name} Rules: How to Play | AnyTimerApp`.
-Dutch name: `{Name}: Dutch Drinking Game Rules | AnyTimerApp`. Fun fact sentence: "Did
+**Title pattern.** Always `{Name} rules: how to play the drinking game`, for international
+and Dutch names alike. Fun fact sentence: "Did
 you know you can play {Game} in our free app?" (links to `/en/`).
 
 **Term base** (keep translations consistent):

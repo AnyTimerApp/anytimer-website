@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class PrivacyComponent {
   constructor(meta: Meta) {
-    const title = 'Privacybeleid Anytimer App - AVG-Conform & Veilig';
+    const title = 'Privacybeleid van AnyTimerApp: AVG-conform en veilig';
     const description = 'Lees het privacybeleid van Anytimer. Wij gaan zorgvuldig om met jouw gegevens — AVG-conform, geen advertenties, geen dataverkoop.';
     const image = 'https://anytimer.app/assets/logo.png';
     const url = 'https://anytimer.app/privacy/';

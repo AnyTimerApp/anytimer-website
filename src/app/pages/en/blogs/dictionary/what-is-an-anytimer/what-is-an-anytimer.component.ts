@@ -32,7 +32,7 @@ export class WhatIsAnAnytimerComponent {
     applyArticleSeo(meta, document, {
       id: 'en-what-is-an-anytimer',
       lang: 'en',
-      title: 'What is an Anytimer? Meaning, Rules & Examples | AnyTimerApp',
+      title: 'What is an anytimer? Meaning and rules',
       description: 'What is an anytimer? A free pass between friends that you can use at any moment. Learn how to earn one, how to use it and the unwritten rules.',
       url: 'https://anytimer.app/en/blog/dictionary/what-is-an-anytimer/',
       image: 'https://anytimer.app/assets/blogs/wat%20is%20een%20anytimer/Wat%20is%20een%20anytimer%20cover.png',

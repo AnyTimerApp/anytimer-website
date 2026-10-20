@@ -30,7 +30,7 @@ export class ThirtySecondsComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = '30 Seconds - Spelregels & Tips | AnyTimerApp';
+    const title = '30 Seconds regels: zo speel je het drankspel';
     const description = '30 Seconds als drankspel: raad binnen 30 seconden zoveel mogelijk woorden. Ontdek de spelregels, benodigdheden en drankstraffen.';
     const image = 'https://anytimer.app/assets/blogs/drankspellen/30%20seconds.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/30-seconds/';

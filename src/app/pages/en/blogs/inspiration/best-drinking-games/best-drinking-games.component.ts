@@ -29,7 +29,7 @@ export class BestDrinkingGamesComponent {
     applyArticleSeo(meta, document, {
       id: 'en-best-drinking-games',
       lang: 'en',
-      title: 'Top 10 Best Drinking Games for a Fun Night | AnyTimerApp',
+      title: 'Top 10 best drinking games for a fun night',
       description: 'Our top 10 drinking games for a fun night with friends. From Beerio Kart and Kingsen to Rage Cage and Mexico. With all the rules and tips.',
       url: 'https://anytimer.app/en/blog/inspiration/best-drinking-games/',
       image: 'https://anytimer.app/assets/blogs/drankspellen/mario%20barf.png',

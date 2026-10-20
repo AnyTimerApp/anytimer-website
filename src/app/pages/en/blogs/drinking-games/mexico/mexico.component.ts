@@ -37,7 +37,7 @@ export class MexicoEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-mexico',
       lang: 'en',
-      title: 'Mexico Dice Game Rules: How to Play | AnyTimerApp',
+      title: 'Mexico rules: how to play the drinking game',
       description: 'Mexico is a drinking game with two dice. Don\'t throw the lowest roll and hope for a Mexico. Learn the rules and the order of rolls. In Dutch: Mexen.',
       url: 'https://anytimer.app/en/blog/drinking-games/mexico/',
       image: 'https://anytimer.app/assets/blogs/drankspellen/mexen.png',

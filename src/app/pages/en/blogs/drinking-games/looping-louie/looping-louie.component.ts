@@ -37,7 +37,7 @@ export class LoopingLouieEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-looping-louie',
       lang: 'en',
-      title: 'Looping Louie Drinking Game Rules | AnyTimerApp',
+      title: 'Looping Louie rules: how to play the drinking game',
       description: 'Play Looping Louie as a drinking game. Protect your chickens and send the plane to everyone else. Lose a chicken and you drink. Learn the rules.',
       url: 'https://anytimer.app/en/blog/drinking-games/looping-louie/',
       image: 'https://anytimer.app/assets/blogs/drankspel/stef%20stuntpiloot.png',

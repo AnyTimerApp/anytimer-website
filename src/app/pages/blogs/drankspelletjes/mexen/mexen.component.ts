@@ -30,7 +30,7 @@ export class MexenComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Mexen - Spelregels & Tips | AnyTimerApp';
+    const title = 'Mexen regels: zo speel je het drankspel';
     const description = 'Mexen is een dobbelspel met twee stenen. Ontdek de spelregels, de Mex-worp en drankstraffen voor dit klassieke dobbelspel.';
     const image = 'https://anytimer.app/assets/blogs/drankspellen/mexen.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/mexen/';

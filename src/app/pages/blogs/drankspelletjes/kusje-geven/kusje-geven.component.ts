@@ -30,7 +30,7 @@ export class KusjeGevenComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Kusje geven - Spelregels & Tips | AnyTimerApp';
+    const title = 'Kusje geven regels: zo speel je het drankspel';
     const description = 'Kusje geven is een behendigheidsspel met een speelkaart die je met je mond doorgeeft. Ontdek de spelregels, tips en wanneer je moet drinken.';
     const image = 'https://anytimer.app/assets/blogs/drankspel/kusje%20geven.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/kusje-geven/';

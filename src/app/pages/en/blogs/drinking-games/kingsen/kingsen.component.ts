@@ -37,8 +37,8 @@ export class KingsenEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-kingsen',
       lang: 'en',
-      title: 'Kingsen: Dutch Drinking Game Rules | AnyTimerApp',
-      description: 'Kingsen is the Dutch version of Kings Cup. Every card has its own rule. Learn how to play and what every card means in 2 minutes.',
+      title: 'Kingsen rules: how to play the drinking game',
+      description: 'Kingsen is the Dutch version of Kings Cup. Every card has its own rule. Place the cards in a circle. Whoever draws the fourth king drinks the cup.',
       url: 'https://anytimer.app/en/blog/drinking-games/kingsen/',
       image: 'https://anytimer.app/assets/blogs/drankspellen/kingsen.png',
       imageAlt: this.post.imageAlt,

@@ -37,7 +37,7 @@ export class RideTheBusEnComponent {
     applyArticleSeo(meta, document, {
       id: 'en-ride-the-bus',
       lang: 'en',
-      title: 'Ride the Bus Rules: How to Play | AnyTimerApp',
+      title: 'Ride the Bus rules: how to play the drinking game',
       description: 'Ride the Bus is a card drinking game with four rounds, a pyramid and the bus. Learn the rules, the sips per round and the Dutch version Bussen.',
       url: 'https://anytimer.app/en/blog/drinking-games/ride-the-bus/',
       image: 'https://anytimer.app/assets/blogs/drankspel/bussen.png',

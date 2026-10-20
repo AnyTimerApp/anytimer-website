@@ -30,7 +30,7 @@ export class MarioBarfComponent {
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
-    const title = 'Mario Barf - Spelregels & Tips | AnyTimerApp';
+    const title = 'Mario Barf regels: zo speel je het drankspel';
     const description = 'Mario Barf is Mario Kart met een drankje naast je controller. Ontdek de spelregels, benodigdheden en tips voor dit chaotische drankspel.';
     const image = 'https://anytimer.app/assets/blogs/drankspellen/mario%20barf.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/mario-barf/';

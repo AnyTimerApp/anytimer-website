@@ -10,6 +10,7 @@ import { UI, UiStrings } from '../../i18n/ui';
 import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.component';
 import { DownloadCtaComponent } from '../../components/download-cta/download-cta.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
+import { termSeoTitle } from '../../shared/term-seo-title';
 
 // Label + note for English dictionary entries that stay Dutch (or Flemish).
 const ORIGIN_TEXT = {
@@ -64,7 +65,7 @@ export class BlogTermComponent {
       { label: this.post.title }
     ];
 
-    const title = this.heading;
+    const title = termSeoTitle(this.post.title, this.lang, this.post.termOrigin);
     const description = this.post.excerpt;
     const url = `https://anytimer.app/${this.post.path}/`;
 

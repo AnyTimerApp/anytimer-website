@@ -1591,7 +1591,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'kings-cup': {
     paragraphs: [
       '"Wie de vierde koning trekt, moet de hele Kings Cup leegdrinken."',
-      'De regels verschillen per vriendengroep. Dat hoort er eigenlijk bij. Het spel heet ook wel Ring of Fire. In Nederland spelen veel studenten een variant onder de naam kingsen. Lees ook de uitleg van <a href="/blog/begrippen/drinking-game/">drinking game</a> en <a href="/drankspellen/">onze favoriete drankspellen</a>.'
+      'De regels verschillen per vriendengroep. Dat hoort er eigenlijk bij. Het spel heet ook wel Ring of Fire. In Nederland spelen veel studenten een variant onder de naam <a href="/blog/drankspelletjes/kingsen/">kingsen</a>. Lees ook de uitleg van <a href="/blog/begrippen/drinking-game/">drinking game</a> en <a href="/drankspellen/">onze favoriete drankspellen</a>.'
     ]
   },
   'kmt': {
