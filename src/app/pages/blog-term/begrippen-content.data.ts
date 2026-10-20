@@ -913,7 +913,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'exclusief': {
     paragraphs: [
       'Na een paar weken spraken ze af om exclusief te worden, zonder meteen een label op de relatie te plakken.',
-      'Het is een tussenfase: je hebt alleen met de afgesproken persoon seks, maar het is nog geen officiële <a href="/blog/begrippen/rela/">rela</a> met alles erop en eraan. Lees ook de uitleg van <a href="/blog/begrippen/exclu/">exclu</a>, <a href="/blog/begrippen/eventuela/">eventuela</a>, <a href="/blog/begrippen/fwb/">FWB</a> en <a href="/blog/begrippen/dtr/">DTR</a>.'
+      'Het is een tussenfase: je hebt alleen met de afgesproken persoon seks, maar het is nog geen officiële <a href="/blog/begrippen/rela/">rela</a> met alles erop en eraan. <a href="/blog/begrippen/exclu/">Exclu</a> is de studentenafkorting van exclusief. Lees ook de uitleg van <a href="/blog/begrippen/eventuela/">eventuela</a>, <a href="/blog/begrippen/fwb/">FWB</a> en <a href="/blog/begrippen/dtr/">DTR</a>.'
     ]
   },
   'extern': {
