@@ -44,10 +44,10 @@
       </div>
 
       <div class="legal-section">
-        <h2><span class="sec-num">02</span>Trek je Bak Mania</h2>
+        <h2><span class="sec-num">02</span>Chug Mania</h2>
         <picture style="display: contents">
           <source srcset="assets/blogs/drankspellen/trek je bak mania.webp" type="image/webp">
-          <img src="assets/blogs/drankspellen/trek je bak mania.png" alt="Trek je Bak Mania drinking game" class="game-image" loading="eager" fetchpriority="high">
+          <img src="assets/blogs/drankspellen/trek je bak mania.png" alt="Chug Mania drinking game" class="game-image" loading="eager" fetchpriority="high">
         </picture>
 
         <h3>What you need</h3>
@@ -69,7 +69,7 @@
 
         <h3>Why this game is fun</h3>
         <p>The rules are simple, everyone gets it fast and you have instant competition. Always good.</p>
-        <p>See the <a routerLink="/en/blog/drinking-games/trek-je-bak-mania">full rules of Trek je Bak Mania</a>.</p>
+        <p>See the <a routerLink="/en/blog/drinking-games/trek-je-bak-mania">full rules of Chug Mania</a>.</p>
       </div>
 
       <div class="legal-section">
@@ -368,6 +368,16 @@
         <p>Because you can play it with anything. You can turn basically every drinking game, every challenge or every bet into an anytimer.</p>
         <p>Playing Beerio Kart, Kingsen, Mexico or Horse Race tonight? Then just agree beforehand that the loser doesn't get a penalty right away, but builds up an anytimer instead. That way you save up credits you can use later.</p>
         <p>Want to know more about how anytimers work? Read our article <a routerLink="/en/blog/dictionary/what-is-an-anytimer">What is an anytimer?</a></p>
+
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended blogs</h2>
+        <div class="related-slider">
+          @for (post of recommendedPosts; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
 
         <app-download-cta></app-download-cta>
       </div>

@@ -2,7 +2,8 @@ import { Component, Inject } from '@angular/core';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
-import { BlogPost, firstLetterOf, postsFor } from '../blog/blog-posts.data';
+import { BlogPost, firstLetterOf, getRecommendedPostsForTerm, postsFor } from '../blog/blog-posts.data';
+import { BlogCardComponent } from '../../components/blog-card/blog-card.component';
 import { BEGRIPPEN_CONTENT, BegripContent } from './begrippen-content.data';
 import { BEGRIPPEN_CONTENT_EN } from './begrippen-content.en.data';
 import { Lang } from '../../i18n/lang';
@@ -29,7 +30,7 @@ const OG_IMAGE = 'https://anytimer.app/assets/blogs/wat%20is%20een%20anytimer/Wa
 @Component({
   selector: 'app-blog-term',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
+  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: './blog-term.component.html',
   styleUrls: ['../juridisch/juridisch.component.scss', '../blog/blog-shared.component.scss', '../blogs/blog-article-shared.scss']
 })
@@ -43,6 +44,8 @@ export class BlogTermComponent {
   // Path of the dictionary hub, used by the letter bar.
   hubPath: string;
   heading: string;
+  recommendedPosts: BlogPost[];
+  recommendedHeading: string;
   origin: { label: string; note: string } | null;
 
   constructor(meta: Meta, route: ActivatedRoute, @Inject(DOCUMENT) document: Document) {
@@ -54,6 +57,8 @@ export class BlogTermComponent {
 
     this.post = terms.find(p => p.slug === slug)!;
     this.content = (en ? BEGRIPPEN_CONTENT_EN : BEGRIPPEN_CONTENT)[slug];
+    this.recommendedPosts = getRecommendedPostsForTerm(this.post, this.content.paragraphs);
+    this.recommendedHeading = en ? 'Recommended blogs' : 'Aanbevolen blogs';
     this.letters = [...new Set(terms.map(firstLetterOf))].sort((a, b) => a.localeCompare(b, this.lang));
     this.hubPath = `${this.ui.paths.blog}/${this.ui.categorySlugs.Begrippen}`;
     this.heading = en ? `What does ${this.post.title} mean?` : `Wat betekent: ${this.post.title}?`;

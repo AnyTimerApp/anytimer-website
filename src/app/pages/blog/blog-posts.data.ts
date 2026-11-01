@@ -124,6 +124,39 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'drankspellen-met-kaarten',
+    path: 'blog/inspiratie/drankspellen-met-kaarten',
+    category: 'Inspiratie',
+    title: 'Drankspellen met kaarten: de 8 leukste kaartspellen',
+    excerpt: 'Kingsen, Bussen, Fuck the Dealer en meer. De 8 leukste drankspellen die je met een stok kaarten speelt.',
+    date: '2026-10-20',
+    image: 'assets/blogs/drankspellen/kingsen.webp',
+    imageAlt: 'Kingsen drankspel met kaarten in een cirkel rond een shotglas',
+    variant: 'light'
+  },
+  {
+    slug: 'drankspellen-zonder-kaarten',
+    path: 'blog/inspiratie/drankspellen-zonder-kaarten',
+    category: 'Inspiratie',
+    title: 'Drankspellen zonder kaarten: 10 spellen voor elke avond',
+    excerpt: 'Mexen, Stress Pong, Vingeren en meer. 10 drankspellen die je speelt zonder kaarten.',
+    date: '2026-10-20',
+    image: 'assets/blogs/drankspellen/mexen.webp',
+    imageAlt: 'Mexen dobbelspel als drankspel',
+    variant: 'light'
+  },
+  {
+    slug: 'drankspellen-voor-2-personen',
+    path: 'blog/inspiratie/drankspellen-voor-2-personen',
+    category: 'Inspiratie',
+    title: 'Drankspellen voor 2 personen: 10 spellen met z\'n tweeën',
+    excerpt: 'Zeeslag, Mexen, Hoger lager en meer. 10 drankspellen die je al met z\'n tweeën speelt.',
+    date: '2026-10-20',
+    image: 'assets/blogs/drankspel/zeeslag.webp',
+    imageAlt: 'Zeeslag drankspel met het Zeeslag bord en pionnen',
+    variant: 'light'
+  },
+  {
     slug: 'wat-is-een-adtje',
     path: 'wat-is-een-adtje',
     category: 'Begrippen',
@@ -6026,6 +6059,63 @@ export function getSimilarGames(post: BlogPost): BlogPost[] {
   const sameSubCategory = pool.filter(p => p.subCategory === post.subCategory).sort(byDateDesc);
   const otherSubCategory = pool.filter(p => p.subCategory !== post.subCategory).sort(byDateDesc);
   return [...sameSubCategory, ...otherSubCategory].slice(0, 3);
+}
+
+// "Aanbevolen blogs" under every article that isn't a single drinking game:
+// 3 hand-picked, related posts per Dutch article. English articles reuse the
+// same picks through their `alternate` link, so both languages stay in sync.
+const RECOMMENDED_POSTS: Record<string, string[]> = {
+  'drankspellen': ['drankspellen-met-kaarten', 'drankspellen-zonder-kaarten', 'huisavondideeen'],
+  'drankspellen-met-kaarten': ['drankspellen-zonder-kaarten', 'drankspellen-voor-2-personen', 'drankspellen'],
+  'drankspellen-zonder-kaarten': ['drankspellen-met-kaarten', 'drankspellen-voor-2-personen', 'drankspellen'],
+  'drankspellen-voor-2-personen': ['drankspellen-met-kaarten', 'drankspellen-zonder-kaarten', 'huisavondideeen'],
+  'huisavondideeen': ['drankspellen', 'drankspellen-voor-2-personen', 'wat-is-een-anytimer'],
+  'wat-is-de-beste-adt-timer': ['wat-is-een-adtje', 'wat-is-een-anytimer', 'mag-je-een-anytimer-weigeren'],
+  'wat-is-een-adtje': ['wat-is-de-beste-adt-timer', 'wat-is-een-anytimer', 'drankspellen'],
+  'wat-is-een-anytimer': ['anytimers-bijhouden-whatsapp-notities', 'mag-je-een-anytimer-weigeren', 'wat-is-de-beste-adt-timer'],
+  'mag-je-een-anytimer-weigeren': ['wat-is-een-anytimer', 'anytimers-bijhouden-whatsapp-notities', 'wat-is-de-beste-adt-timer'],
+  'anytimers-bijhouden-whatsapp-notities': ['wat-is-een-anytimer', 'mag-je-een-anytimer-weigeren', 'wat-is-de-beste-adt-timer']
+};
+
+// Fallback picks for a Begrippen term page, after any article its own text links to.
+const TERM_FALLBACK_POSTS = ['wat-is-een-anytimer', 'drankspellen', 'huisavondideeen'];
+
+// The Dutch post (by slug) in the given language: itself for 'nl', its English
+// twin (matched on `alternate`) for 'en'.
+function inLanguage(nlSlug: string, lang: Lang): BlogPost | undefined {
+  const nl = BLOG_POSTS.find(p => p.slug === nlSlug);
+  if (!nl || lang === 'nl') return nl;
+  return BLOG_POSTS_EN.find(p => p.alternate === nl.path);
+}
+
+function dutchSlugOf(post: BlogPost): string {
+  if (langOfPost(post) === 'nl') return post.slug;
+  return BLOG_POSTS.find(p => p.path === post.alternate)?.slug ?? post.slug;
+}
+
+export function getRecommendedPosts(post: BlogPost): BlogPost[] {
+  const lang = langOfPost(post);
+  return (RECOMMENDED_POSTS[dutchSlugOf(post)] ?? [])
+    .map(slug => inLanguage(slug, lang))
+    .filter((p): p is BlogPost => !!p);
+}
+
+// For a Begrippen term page: first the articles and drinking games its text
+// links to (e.g. "adtje" links to /wat-is-een-adtje/), then the fallback picks.
+export function getRecommendedPostsForTerm(post: BlogPost, paragraphs: string[]): BlogPost[] {
+  const lang = langOfPost(post);
+  const candidates = postsFor(lang).filter(p =>
+    p.category === 'Drankspelletjes' || RECOMMENDED_POSTS[dutchSlugOf(p)]);
+  const linked = [...paragraphs.join(' ').matchAll(/href="\/([^"]*?)\/?"/g)]
+    .map(m => candidates.find(p => p.path === m[1]))
+    .filter((p): p is BlogPost => !!p);
+  const fallback = TERM_FALLBACK_POSTS
+    .map(slug => inLanguage(slug, lang))
+    .filter((p): p is BlogPost => !!p);
+  const seen = new Set<string>();
+  return [...linked, ...fallback]
+    .filter(p => p.slug !== post.slug && !seen.has(p.slug) && !!seen.add(p.slug))
+    .slice(0, 3);
 }
 
 // Single source of truth for the A-Z letter used to group/filter a Begrippen

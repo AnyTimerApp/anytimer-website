@@ -2101,7 +2101,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'praeses': {
     paragraphs: [
       'Als praeses opende ze de <a href="/blog/begrippen/alv/">ALV</a> met een korte, plechtige toespraak.',
-      'Deze persoon is de eindverantwoordelijke en het belangrijkste aanspreekpunt van het <a href="/blog/begrippen/bestuur/">bestuur</a>, met de <a href="/blog/begrippen/ab-actis/">ab actis</a> en <a href="/blog/begrippen/assessor/">assessor</a> als naaste collega\'s.'
+      'Deze persoon is de eindverantwoordelijke en het belangrijkste aanspreekpunt van het <a href="/blog/begrippen/bestuur/">bestuur</a>, met de <a href="/blog/begrippen/ab-actis/">ab actis</a> en <a href="/blog/begrippen/assessor/">assessor</a> als naaste collega\'s. Lees ook de uitleg van <a href="/blog/begrippen/lustrum/">lustrum</a>.'
     ]
   },
   'pre-drinks': {

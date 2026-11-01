@@ -7,16 +7,19 @@ import { DownloadCtaComponent } from '../../../../../components/download-cta/dow
 import { BreadcrumbItem } from '../../../../../shared/breadcrumb-schema';
 import { applyArticleSeo } from '../../../../../shared/article-seo';
 import { UI } from '../../../../../i18n/ui';
+import { getRecommendedPosts, getPostsBySlug } from '../../../../../pages/blog/blog-posts.data';
+import { BlogCardComponent } from '../../../../../components/blog-card/blog-card.component';
 
 // English version of blogs/inspiratie/huisavondideeen.
 @Component({
   selector: 'app-night-in-ideas-for-housemates',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
+  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'night-in-ideas-for-housemates.component.html',
   styleUrls: ['../../../../juridisch/juridisch.component.scss', '../../../../blogs/blog-article-shared.scss', '../../../../blogs/inspiratie/huisavondideeen/huisavondideeen.component.scss']
 })
 export class NightInIdeasForHousematesComponent {
+  readonly recommendedPosts = getRecommendedPosts(getPostsBySlug(['night-in-ideas-for-housemates'], 'en')[0]);
   private readonly ui = UI.en;
 
   breadcrumbs: BreadcrumbItem[] = [

@@ -219,7 +219,18 @@
         <p>You can also make teams and keep score. The winner gets eternal glory. The loser does the dishes, gets snacks or gets another fitting house penalty.</p>
         <p>Pick games everyone can join. A four hour game where only one person knows all the rules is usually not the best start to the night.</p>
 
+        <p>Pick the date together at the <a routerLink="/en/blog/dictionary/hv">HV</a>, your house meeting. Then nobody can say they didn't know.</p>
         <p>Do you play with challenges or bets during your night in? Then read what an <a routerLink="/en/blog/dictionary/what-is-an-anytimer">anytimer</a> is.</p>
+
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended blogs</h2>
+        <div class="related-slider">
+          @for (post of recommendedPosts; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
 
         <app-download-cta></app-download-cta>
       </div>

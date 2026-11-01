@@ -276,6 +276,31 @@ A brand-new post needs no special-casing here — adding it to `BLOG_POSTS` (ste
 right `subCategory` is enough for both functions to pick it up correctly on every other
 post's "Vergelijkbare" block, and for it to get its own correct pair of blocks.
 
+## 3e. Every other post: Aanbevolen blogs
+
+Every post that is not a single drinking game ends with an "Aanbevolen blogs" block
+(EN: "Recommended blogs") with 3 related posts, directly above `<app-download-cta>`:
+
+```html
+      <div class="legal-section">
+        <h2>Aanbevolen blogs</h2>
+        <div class="related-slider">
+          @for (post of recommendedPosts; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+```
+
+In the component: `readonly recommendedPosts = getRecommendedPosts(BLOG_POSTS.find(p => p.slug === '<slug>')!);`
+(EN: `getRecommendedPosts(getPostsBySlug(['<slug>'], 'en')[0])`) and `BlogCardComponent` in `imports`.
+The picks live in one place: add a line for the new Dutch slug to `RECOMMENDED_POSTS` in
+`blog-posts.data.ts`, and add the new slug to 1 or 2 related posts' lists there too. English
+posts follow automatically through `alternate`. Begrippen term pages need nothing:
+`getRecommendedPostsForTerm()` picks the articles their text links to, then fallbacks.
+
 ## 4. Internal linking
 
 Add internal links to other relevant blog posts/pages, but link each distinct topic

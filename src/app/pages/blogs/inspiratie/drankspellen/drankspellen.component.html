@@ -370,6 +370,16 @@
         <p>Doe je een avond Mario Barf, Kingsen, Mexen of de paardenrace? Dan kun je vooraf gewoon afspreken dat de verliezer geen directe straf krijgt, maar een anytimer opbouwt. Zo spaar je tegoedjes op die je later weer kunt inzetten.</p>
         <p>Wil je meer weten over hoe anytimers werken? Lees dan ons artikel <a routerLink="/wat-is-een-anytimer">Wat is een anytimer?</a></p>
 
+      </div>
+
+      <div class="legal-section">
+        <h2>Aanbevolen blogs</h2>
+        <div class="related-slider">
+          @for (post of recommendedPosts; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
+
         <app-download-cta></app-download-cta>
       </div>
 

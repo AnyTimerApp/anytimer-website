@@ -42,9 +42,9 @@
       </div>
 
       <div class="legal-section">
-        <h2>Read more</h2>
+        <h2>Recommended blogs</h2>
         <div class="related-slider">
-          @for (post of relatedReading; track post.slug) {
+          @for (post of recommendedPosts; track post.slug) {
           <app-blog-card [post]="post"></app-blog-card>
           }
         </div>

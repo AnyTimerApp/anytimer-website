@@ -219,7 +219,18 @@
         <p>Je kunt ook teams maken en punten bijhouden. De winnaar krijgt eeuwige roem. De verliezer doet de afwas, haalt snacks of krijgt een andere passende huisstraf.</p>
         <p>Kies vooral spellen waarbij iedereen mee kan doen. Een spel van vier uur waarin één iemand alle regels kent, is meestal niet de beste start van de avond.</p>
 
+        <p>Prik de datum samen tijdens de <a routerLink="/blog/begrippen/hv">HV</a>. Dan kan niemand zeggen dat het een verrassing was.</p>
         <p>Werken jullie met challenges of weddenschappen tijdens de huisavond? Lees dan wat een <a routerLink="/wat-is-een-anytimer">anytimer</a> precies is.</p>
+
+      </div>
+
+      <div class="legal-section">
+        <h2>Aanbevolen blogs</h2>
+        <div class="related-slider">
+          @for (post of recommendedPosts; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
 
         <app-download-cta></app-download-cta>
       </div>

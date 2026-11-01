@@ -7,16 +7,19 @@ import { DownloadCtaComponent } from '../../../../../components/download-cta/dow
 import { BreadcrumbItem } from '../../../../../shared/breadcrumb-schema';
 import { applyArticleSeo } from '../../../../../shared/article-seo';
 import { UI } from '../../../../../i18n/ui';
+import { getRecommendedPosts, getPostsBySlug } from '../../../../../pages/blog/blog-posts.data';
+import { BlogCardComponent } from '../../../../../components/blog-card/blog-card.component';
 
 // English version of blogs/inspiratie/drankspellen.
 @Component({
   selector: 'app-best-drinking-games',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent],
+  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'best-drinking-games.component.html',
   styleUrls: ['../../../../juridisch/juridisch.component.scss', '../../../../blogs/blog-article-shared.scss', '../../../../blogs/inspiratie/drankspellen/drankspellen.component.scss']
 })
 export class BestDrinkingGamesComponent {
+  readonly recommendedPosts = getRecommendedPosts(getPostsBySlug(['best-drinking-games'], 'en')[0]);
   private readonly ui = UI.en;
 
   breadcrumbs: BreadcrumbItem[] = [

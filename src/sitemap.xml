@@ -73,6 +73,33 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/drankspellen/"/>
   </url>
   <url>
+    <loc>https://anytimer.app/blog/inspiratie/drankspellen-met-kaarten/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/inspiratie/drankspellen-met-kaarten/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/inspiration/card-drinking-games/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/inspiratie/drankspellen-met-kaarten/"/>
+  </url>
+  <url>
+    <loc>https://anytimer.app/blog/inspiratie/drankspellen-zonder-kaarten/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/inspiratie/drankspellen-zonder-kaarten/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/inspiration/drinking-games-without-cards/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/inspiratie/drankspellen-zonder-kaarten/"/>
+  </url>
+  <url>
+    <loc>https://anytimer.app/blog/inspiratie/drankspellen-voor-2-personen/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/inspiratie/drankspellen-voor-2-personen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/inspiration/drinking-games-for-two/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/inspiratie/drankspellen-voor-2-personen/"/>
+  </url>
+  <url>
     <loc>https://anytimer.app/wat-is-een-adtje/</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -9731,5 +9758,32 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/begrippen/zombieing/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/dictionary/zombieing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/begrippen/zombieing/"/>
+  </url>
+  <url>
+    <loc>https://anytimer.app/en/blog/inspiration/card-drinking-games/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/inspiratie/drankspellen-met-kaarten/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/inspiration/card-drinking-games/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/inspiratie/drankspellen-met-kaarten/"/>
+  </url>
+  <url>
+    <loc>https://anytimer.app/en/blog/inspiration/drinking-games-without-cards/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/inspiratie/drankspellen-zonder-kaarten/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/inspiration/drinking-games-without-cards/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/inspiratie/drankspellen-zonder-kaarten/"/>
+  </url>
+  <url>
+    <loc>https://anytimer.app/en/blog/inspiration/drinking-games-for-two/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/inspiratie/drankspellen-voor-2-personen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/inspiration/drinking-games-for-two/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/inspiratie/drankspellen-voor-2-personen/"/>
   </url>
 </urlset>

@@ -46,6 +46,42 @@ export const BLOG_POSTS_EN: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'card-drinking-games',
+    path: 'en/blog/inspiration/card-drinking-games',
+    alternate: 'blog/inspiratie/drankspellen-met-kaarten',
+    category: 'Inspiratie',
+    title: 'Card drinking games: the 8 best games with cards',
+    excerpt: 'Kingsen, Ride the Bus, Fuck the Dealer and more. The 8 best drinking games you play with a deck of cards.',
+    date: '2026-10-20',
+    image: 'assets/blogs/drankspellen/kingsen.webp',
+    imageAlt: 'Kingsen drinking game with cards in a circle around a shot glass',
+    variant: 'light'
+  },
+  {
+    slug: 'drinking-games-without-cards',
+    path: 'en/blog/inspiration/drinking-games-without-cards',
+    alternate: 'blog/inspiratie/drankspellen-zonder-kaarten',
+    category: 'Inspiratie',
+    title: 'Drinking games without cards: 10 games for any night',
+    excerpt: 'Mexico, Rage Cage, Fingers and more. 10 drinking games you play without cards.',
+    date: '2026-10-20',
+    image: 'assets/blogs/drankspellen/mexen.webp',
+    imageAlt: 'Mexico dice drinking game',
+    variant: 'light'
+  },
+  {
+    slug: 'drinking-games-for-two',
+    path: 'en/blog/inspiration/drinking-games-for-two',
+    alternate: 'blog/inspiratie/drankspellen-voor-2-personen',
+    category: 'Inspiratie',
+    title: 'Drinking games for 2 people: 10 games for two',
+    excerpt: 'Battleship, Mexico, Higher or Lower and more. 10 drinking games you can play with just the two of you.',
+    date: '2026-10-20',
+    image: 'assets/blogs/drankspel/zeeslag.webp',
+    imageAlt: 'Battleship drinking game with the board and pegs',
+    variant: 'light'
+  },
+  {
     slug: 'best-chug-timer',
     path: 'en/blog/inspiration/best-chug-timer',
     alternate: 'wat-is-de-beste-adt-timer',
@@ -125,11 +161,11 @@ export const BLOG_POSTS_EN: BlogPost[] = [
     alternate: 'blog/drankspelletjes/trek-je-bak-mania',
     category: 'Drankspelletjes',
     subCategory: 'Overig',
-    title: 'Trek je Bak Mania',
-    excerpt: 'Trek je Bak Mania is the Dutch Trackmania drinking game. The slowest driver of the round downs a drink. Simple as that.',
+    title: 'Chug Mania',
+    excerpt: 'Chug Mania is the Trackmania drinking game. The slowest driver of the round downs a drink. Simple as that.',
     date: '2026-07-28',
     image: 'assets/blogs/drankspellen/trek je bak mania.webp',
-    imageAlt: 'Trek je Bak Mania drinking game with Trackmania in hotseat mode',
+    imageAlt: 'Chug Mania drinking game with Trackmania in hotseat mode',
     variant: 'light'
   },
   {

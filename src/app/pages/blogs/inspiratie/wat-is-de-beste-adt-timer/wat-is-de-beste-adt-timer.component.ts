@@ -6,9 +6,8 @@ import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcr
 import { DownloadCtaComponent } from '../../../../components/download-cta/download-cta.component';
 import { BlogCardComponent } from '../../../../components/blog-card/blog-card.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
-import { BLOG_POSTS, CATEGORY_SLUGS } from '../../../blog/blog-posts.data';
+import { BLOG_POSTS, CATEGORY_SLUGS, getRecommendedPosts } from '../../../blog/blog-posts.data';
 
-const RELATED_SLUGS = ['wat-is-een-anytimer', 'anytimers-bijhouden-whatsapp-notities', 'mag-je-een-anytimer-weigeren'];
 
 @Component({
   selector: 'app-wat-is-de-beste-adt-timer',
@@ -19,7 +18,7 @@ const RELATED_SLUGS = ['wat-is-een-anytimer', 'anytimers-bijhouden-whatsapp-noti
 })
 export class WatIsDeBestAdtTimerComponent {
   readonly category = BLOG_POSTS.find(p => p.slug === 'wat-is-de-beste-adt-timer')!.category;
-  readonly relatedReading = RELATED_SLUGS.map(slug => BLOG_POSTS.find(p => p.slug === slug)!);
+  readonly recommendedPosts = getRecommendedPosts(BLOG_POSTS.find(p => p.slug === 'wat-is-de-beste-adt-timer')!);
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },

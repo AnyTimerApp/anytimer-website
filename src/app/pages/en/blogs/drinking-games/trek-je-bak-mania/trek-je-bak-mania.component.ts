@@ -30,21 +30,21 @@ export class TrekJeBakManiaEnComponent {
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: this.ui.paths.blog },
     { label: this.ui.categoryLabels[this.post.category], url: `${this.ui.paths.blog}/${this.ui.categorySlugs[this.post.category]}` },
-    { label: 'Trek je Bak Mania' }
+    { label: 'Chug Mania' }
   ];
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
     applyArticleSeo(meta, document, {
       id: 'en-trek-je-bak-mania',
       lang: 'en',
-      title: 'Trek je Bak Mania rules: how to play the drinking game',
-      description: 'Trek je Bak Mania is the Dutch Trackmania drinking game. Everyone drives the same track and the slowest driver downs a drink. Learn the rules.',
+      title: 'Chug Mania rules: how to play the drinking game',
+      description: 'Chug Mania is the Trackmania drinking game. Everyone drives the same track and the slowest driver downs a drink. Learn the rules.',
       url: 'https://anytimer.app/en/blog/drinking-games/trek-je-bak-mania/',
       image: 'https://anytimer.app/assets/blogs/drankspellen/trek%20je%20bak%20mania.png',
       imageAlt: this.post.imageAlt,
       published: '2026-07-24',
       breadcrumbs: this.breadcrumbs,
-      game: { name: 'Trek je Bak Mania', alternateName: ['Trackmania drinking game'] },
+      game: { name: 'Chug Mania', alternateName: ['Trek je Bak Mania', 'Trackmania drinking game'] },
     });
   }
 }

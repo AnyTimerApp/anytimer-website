@@ -8,7 +8,7 @@ import { BlogCardComponent } from '../../../../../components/blog-card/blog-card
 import { BreadcrumbItem } from '../../../../../shared/breadcrumb-schema';
 import { applyArticleSeo } from '../../../../../shared/article-seo';
 import { UI } from '../../../../../i18n/ui';
-import { getPostsBySlug } from '../../../../blog/blog-posts.data';
+import { getPostsBySlug, getRecommendedPosts } from '../../../../blog/blog-posts.data';
 
 // English version of blogs/weetjes/mag-je-een-anytimer-weigeren.
 @Component({
@@ -20,7 +20,7 @@ import { getPostsBySlug } from '../../../../blog/blog-posts.data';
 })
 export class CanYouRefuseAnAnytimerComponent {
   private readonly ui = UI.en;
-  readonly relatedReading = getPostsBySlug(['what-is-an-anytimer', 'tracking-anytimers-in-whatsapp', 'best-chug-timer'], 'en');
+  readonly recommendedPosts = getRecommendedPosts(getPostsBySlug(['can-you-refuse-an-anytimer'], 'en')[0]);
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: this.ui.paths.blog },

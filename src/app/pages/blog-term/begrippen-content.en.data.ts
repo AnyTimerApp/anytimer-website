@@ -2087,7 +2087,7 @@ export const BEGRIPPEN_CONTENT_EN: Record<string, BegripContent> = {
   'praeses': {
     paragraphs: [
       'As praeses she opened the <a href="/en/blog/dictionary/alv/">ALV</a> with a short, formal speech.',
-      'The praeses has the final responsibility and is the face of the board. Their closest colleagues are the <a href="/en/blog/dictionary/ab-actis/">ab actis</a> and the <a href="/en/blog/dictionary/assessor/">assessor</a>. The word is Latin for president. Being praeses is a big deal. It usually comes with a lot of speeches. Also read what <a href="/en/blog/dictionary/bestuur/">bestuur</a> means.'
+      'The praeses has the final responsibility and is the face of the board. Their closest colleagues are the <a href="/en/blog/dictionary/ab-actis/">ab actis</a> and the <a href="/en/blog/dictionary/assessor/">assessor</a>. The word is Latin for president. Being praeses is a big deal. It usually comes with a lot of speeches. Also read what <a href="/en/blog/dictionary/bestuur/">bestuur</a> and <a href="/en/blog/dictionary/lustrum/">lustrum</a> mean.'
     ]
   },
   'pre-drinks': {
