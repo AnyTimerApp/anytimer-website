@@ -10,6 +10,9 @@
 
 .download-button-wrapper {
   margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .download-button {
@@ -36,5 +39,19 @@
 
   &:active {
     transform: translateY(0);
+  }
+
+  // Second choice next to the app download: the web version of the timer.
+  &--secondary {
+    background: #fff;
+    color: var(--primary) !important;
+    border: 1px solid var(--primary);
+    box-shadow: none;
+
+    &:hover {
+      background: var(--primary-light);
+      color: var(--primary) !important;
+      box-shadow: none;
+    }
   }
 }

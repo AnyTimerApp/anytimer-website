@@ -1,0 +1,124 @@
+// Mirrors TimerOverlay.js and TimerScreen.js in the app: a full-screen
+// primary-blue page, title and time in the middle, fingerprint and
+// instruction at the bottom.
+.timer {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  // Mobile browsers: the visible height without the address bar.
+  height: 100dvh;
+  background: var(--primary);
+  font-family: var(--font);
+  color: #fff;
+  cursor: pointer;
+  // The timer fills the screen, so a vertical swipe still has to scroll the
+  // page. No zooming, text selection or long-press menu though.
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+
+  // A focus ring would frame the whole screen. The full-screen blue is the
+  // focus cue, and the space bar works from anywhere on the page anyway.
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  p {
+    margin: 0;
+    color: #fff;
+  }
+}
+
+// Bubbles only exist while the timer runs. They rise from the bottom edge to
+// one screen height above the top, like the app's Animated.timing.
+.bubble {
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.35;
+  pointer-events: none;
+  animation-name: rise;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rise {
+  from { transform: translateY(var(--timer-height)); }
+  to { transform: translateY(calc(var(--timer-height) * -1)); }
+}
+
+.flash {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: #fff;
+  pointer-events: none;
+  animation: flash 0.4s linear forwards;
+}
+
+@keyframes flash {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  pointer-events: none;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.time {
+  font-size: 48px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.bottom {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  pointer-events: none;
+}
+
+.fingerprint {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  transition: transform 0.15s ease, color 0.15s ease;
+
+  &.dimmed {
+    color: rgba(255, 255, 255, 0.5);
+    transform: scale(0.95);
+  }
+}
+
+.instruction {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+
+  &.dimmed {
+    opacity: 0.6;
+  }
+}

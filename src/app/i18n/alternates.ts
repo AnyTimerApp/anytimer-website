@@ -10,6 +10,7 @@ const STATIC_PAIRS: [nl: string, en: string][] = [
   ['/contact/', '/en/contact/'],
   ['/privacy/', '/en/privacy/'],
   ['/terms/', '/en/terms/'],
+  ['/adt-timer/', '/en/chug-timer/'],
   ['/remove-account/', '/en/remove-account/'],
   ['/blog/', '/en/blog/'],
   ['/blog/begrippen/', '/en/blog/dictionary/'],

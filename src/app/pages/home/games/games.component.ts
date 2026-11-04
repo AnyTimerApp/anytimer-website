@@ -20,8 +20,8 @@ const GAMES: Record<Lang, AppGame[]> = {
     {
       name: 'Any-timer',
       description: 'Time je adtje. Haal je vinger van het scherm, adten en leg je vinger terug. Zo zie je precies hoe snel je was.',
-      link: '/wat-is-de-beste-adt-timer',
-      linkText: 'Lees meer over de Any-timer',
+      link: '/adt-timer',
+      linkText: 'Probeer de Any-timer online',
       image: 'assets/blogs/beste timer/Any-timer in de club.webp',
       imageAlt: 'Any-timer in de club'
     },
@@ -71,8 +71,8 @@ const GAMES: Record<Lang, AppGame[]> = {
     {
       name: 'Any-timer',
       description: 'Time your chug. Lift your finger off the screen, down your drink and put your finger back. Now you know exactly how fast you were.',
-      link: '/en/blog/inspiration/best-chug-timer',
-      linkText: 'Read more about the Any-timer',
+      link: '/en/chug-timer',
+      linkText: 'Try the Any-timer online',
       image: 'assets/blogs/beste timer/Any-timer in de club.webp',
       imageAlt: 'The Any-timer in the club'
     },

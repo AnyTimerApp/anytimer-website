@@ -29,8 +29,38 @@ const TOP_DRANKSPELLEN_SLUGS = [
 // Only fill this in once the English pages have enough Search Console data of their own.
 const TOP_DRANKSPELLEN_SLUGS_EN: string[] | null = null;
 
-// Slug of the "Top 10 drankspellen" post, pinned first in the latest posts row.
-const TOP_LIST_SLUG: Record<Lang, string> = { nl: 'drankspellen', en: 'best-drinking-games' };
+// Slugs pinned at the start of the latest posts row, in this order: the "Top 10
+// drankspellen" post and the adt timer comparison. The online timer page itself
+// is not a blog post, so it gets its own card right after the top 10.
+const PINNED_SLUGS: Record<Lang, string[]> = {
+  nl: ['drankspellen', 'wat-is-de-beste-adt-timer'],
+  en: ['best-drinking-games', 'best-chug-timer']
+};
+
+const TIMER_CARD: Record<Lang, BlogPost> = {
+  nl: {
+    slug: 'adt-timer',
+    path: 'adt-timer',
+    category: 'Inspiratie',
+    title: 'Online adt timer',
+    excerpt: 'Time je adtje gratis in je browser. Dezelfde Any-timer als in de app, tot op de honderdste seconde.',
+    date: '2026-11-04',
+    image: 'assets/blogs/beste timer/adt timer online.webp',
+    imageAlt: 'De online adt timer: een blauw scherm met de Any-timer, een tijd en een vingerafdruk',
+    variant: 'light'
+  },
+  en: {
+    slug: 'chug-timer',
+    path: 'en/chug-timer',
+    category: 'Inspiratie',
+    title: 'Online chug timer',
+    excerpt: 'Time your chug for free in your browser. The same Any timer as in the app, down to a hundredth of a second.',
+    date: '2026-11-04',
+    image: 'assets/blogs/beste timer/adt timer online.webp',
+    imageAlt: 'The online chug timer: a blue screen with the Any timer, a time and a fingerprint',
+    variant: 'light'
+  }
+};
 
 const TEXT = {
   nl: {
@@ -71,15 +101,16 @@ export class BlogSectionComponent {
       .filter((p): p is BlogPost => !!p);
 
   // Newest posts that aren't Drankspelletjes (too many single-game posts) or
-  // Begrippen (short, image-free glossary entries) — mirrors the exclusion
-  // already used for the main /blog feed. The Top 10 drankspellen post is
-  // pinned first regardless of date, then the rest fill in by recency.
+  // Begrippen (short, image-free glossary entries), mirroring the exclusion
+  // already used for the main /blog feed. The top 10, the online timer and the
+  // adt timer comparison come first regardless of date, then 5 more by recency.
   readonly latestPosts: BlogPost[] = (() => {
     const eligible = postsFor(this.lang).filter(p => p.category !== 'Drankspelletjes' && p.category !== 'Begrippen');
-    const pinned = eligible.find(p => p.slug === TOP_LIST_SLUG[this.lang]);
+    const [topList, comparison] = PINNED_SLUGS[this.lang].map(slug => eligible.find(p => p.slug === slug));
+    const pinned = [topList, TIMER_CARD[this.lang], comparison].filter((p): p is BlogPost => !!p);
     const rest = eligible
-      .filter(p => p !== pinned)
+      .filter(p => !pinned.includes(p))
       .sort((a, b) => b.date.localeCompare(a.date));
-    return (pinned ? [pinned, ...rest] : rest).slice(0, 5);
+    return [...pinned, ...rest.slice(0, 5)];
   })();
 }

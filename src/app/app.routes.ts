@@ -61,6 +61,7 @@ export const routes: Routes = [
   { path: 'wat-is-een-anytimer', component: WatIsEenAnytimer, title: 'Wat is een anytimer? Betekenis en regels' },
   { path: 'wat-is-een-adtje', component: WatIsEenAdtjeComponent, title: 'Wat is een adtje? Betekenis en regels' },
   { path: 'wat-is-de-beste-adt-timer', component: WatIsDeBestAdtTimerComponent, title: 'Wat is de beste adt timer? Gids en opties' },
+  { path: 'adt-timer', loadComponent: () => import('./pages/adt-timer/adt-timer-page.component').then(m => m.AdtTimerPageComponent), title: 'Adt timer: de gratis bier timer voor je adtje' },
   { path: 'mag-je-een-anytimer-weigeren', component: MagJeEenAnyttimerWeigerenComponent, title: 'Mag je een anytimer weigeren? Regels en gevolgen' },
   { path: 'anytimers-bijhouden-whatsapp-notities', component: AnytimersWhatsappNotitiesComponent, title: 'Waarom je anytimers niet in WhatsApp of notities bijhoudt' },
   { path: 'huisavondideeen', component: HuisavondideeenComponent, title: 'Top 10 leuke huisavondideeën' },

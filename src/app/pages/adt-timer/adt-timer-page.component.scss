@@ -1,0 +1,16 @@
+// The full-screen timer sits above this content, so the usual space for the
+// floating navbar isn't needed here.
+.legal-page.legal-page--after-timer {
+  padding-top: 64px;
+}
+
+// Same image style as the wat-is-de-beste-adt-timer blog.
+.game-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}

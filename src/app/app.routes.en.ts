@@ -62,6 +62,7 @@ export const enRoutes: Routes = [
   { path: 'en/blog/inspiration/drinking-games-without-cards', loadComponent: () => import('./pages/en/blogs/inspiration/drinking-games-without-cards/drinking-games-without-cards.component').then(m => m.DrinkingGamesWithoutCardsComponent), title: 'Drinking games without cards: 10 games for any night', data: EN },
   { path: 'en/blog/inspiration/drinking-games-for-two', loadComponent: () => import('./pages/en/blogs/inspiration/drinking-games-for-two/drinking-games-for-two.component').then(m => m.DrinkingGamesForTwoComponent), title: 'Drinking games for 2 people: 10 games for two', data: EN },
   { path: 'en/blog/inspiration/best-chug-timer', component: BestChugTimerComponent, title: 'What is the best chug timer? Guide and options', data: EN },
+  { path: 'en/chug-timer', loadComponent: () => import('./pages/en/chug-timer/chug-timer.component').then(m => m.ChugTimerEnComponent), title: 'Chug timer: free online beer chugging timer', data: EN },
   { path: 'en/blog/inspiration/night-in-ideas-for-housemates', component: NightInIdeasForHousematesComponent, title: 'Top 10 fun night in ideas for housemates', data: EN },
   { path: 'en/blog/good-to-know/can-you-refuse-an-anytimer', component: CanYouRefuseAnAnytimerComponent, title: 'Can you refuse an anytimer? Rules and consequences', data: EN },
   { path: 'en/blog/good-to-know/tracking-anytimers-in-whatsapp', component: TrackingAnytimersInWhatsappComponent, title: 'Why you shouldn\'t track anytimers in WhatsApp or notes', data: EN },
