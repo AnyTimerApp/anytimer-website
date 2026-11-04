@@ -14,6 +14,7 @@ import { MagJeEenAnyttimerWeigerenComponent } from './pages/blogs/weetjes/mag-je
 import { AnytimersWhatsappNotitiesComponent } from './pages/blogs/weetjes/anytimers-bijhouden-whatsapp-notities/anytimers-bijhouden-whatsapp-notities.component';
 import { HuisavondideeenComponent } from './pages/blogs/inspiratie/huisavondideeen/huisavondideeen.component';
 import { JeuDeBierComponent } from './pages/blogs/drankspelletjes/jeu-de-bier/jeu-de-bier.component';
+import { JengaComponent } from './pages/blogs/drankspelletjes/jenga/jenga.component';
 import { BlogCategoryComponent } from './pages/blog-category/blog-category.component';
 import { MarioBarfComponent } from './pages/blogs/drankspelletjes/mario-barf/mario-barf.component';
 import { TrekJeBakManiaComponent } from './pages/blogs/drankspelletjes/trek-je-bak-mania/trek-je-bak-mania.component';
@@ -64,6 +65,7 @@ export const routes: Routes = [
   { path: 'anytimers-bijhouden-whatsapp-notities', component: AnytimersWhatsappNotitiesComponent, title: 'Waarom je anytimers niet in WhatsApp of notities bijhoudt' },
   { path: 'huisavondideeen', component: HuisavondideeenComponent, title: 'Top 10 leuke huisavondideeën' },
   { path: 'blog/drankspelletjes/jeu-de-bier', component: JeuDeBierComponent, title: 'Jeu de Bier regels: zo speel je het drankspel' },
+  { path: 'blog/drankspelletjes/jenga', component: JengaComponent, title: 'Jenga drankspel regels: zo speel je het drankspel' },
   { path: 'blog/drankspelletjes/mario-barf', component: MarioBarfComponent, title: 'Mario Barf regels: zo speel je het drankspel' },
   { path: 'blog/drankspelletjes/trek-je-bak-mania', component: TrekJeBakManiaComponent, title: 'Trek je Bak Mania regels: zo speel je het drankspel' },
   { path: 'blog/drankspelletjes/30-seconds', component: ThirtySecondsComponent, title: '30 Seconds regels: zo speel je het drankspel' },

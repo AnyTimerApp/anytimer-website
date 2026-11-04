@@ -7,33 +7,27 @@ import { LanguageService } from '../../../i18n/language.service';
 import { Lang } from '../../../i18n/lang';
 import { UI } from '../../../i18n/ui';
 
-// Same order and games as the "Top 10 leukste drankspellen" post (drankspellen.component.html),
-// shown in this fixed order rather than sorted by date. Its own #10 ("Bonus: Anytimer's") isn't
-// a dedicated game post with its own slug, so it's left out here.
-const TOP_DRANKSPELLEN_SLUGS: Record<Lang, string[]> = {
-  nl: [
-    'mario-barf',
-    'trek-je-bak-mania',
-    '30-seconds',
-    'kingsen',
-    'stress-pong',
-    'fuck-the-dealer',
-    'mexen',
-    'bakplaten',
-    'de-paardenrace'
-  ],
-  en: [
-    'beerio-kart',
-    'trek-je-bak-mania',
-    '30-seconds',
-    'kingsen',
-    'rage-cage',
-    'fuck-the-dealer',
-    'mexico',
-    'bakplaten',
-    'horse-race'
-  ]
-};
+// "Populairste drankspellen" on the home page: the 12 single-game posts with the most
+// Google Search Console impressions over the last 28 days. Updated by the weekly SEO
+// analysis (.claude/skills/gum-seo-weekly). Last update: 2026-11-04 (data 5 Oct to 1 Nov 2026).
+const TOP_DRANKSPELLEN_SLUGS = [
+  'kingsen',
+  'fuck-the-dealer',
+  'de-paardenrace',
+  'mexen',
+  'bussen',
+  'mario-barf',
+  'stress-pong',
+  'zeeslag',
+  'vikingen',
+  'hoger-lager',
+  '30-seconds',
+  'trek-je-bak-mania'
+];
+
+// The English site shows the same games in the same order, through each post's `alternate`.
+// Only fill this in once the English pages have enough Search Console data of their own.
+const TOP_DRANKSPELLEN_SLUGS_EN: string[] | null = null;
 
 // Slug of the "Top 10 drankspellen" post, pinned first in the latest posts row.
 const TOP_LIST_SLUG: Record<Lang, string> = { nl: 'drankspellen', en: 'best-drinking-games' };
@@ -42,13 +36,13 @@ const TEXT = {
   nl: {
     title: 'We delen ook al onze kennis',
     intro: 'We delen alleen drankspellen die we zelf spelen en echt leuk vinden. Ook schrijven we artikelen vol inspiratie, bijvoorbeeld voor een leuke avond met vrienden. Daarnaast maakten we een begrippenwoordenboek met de bekendste studentenbegrippen. En af en toe delen we een interessant weetje. Zo vind je alles op één plek.',
-    favourites: 'Onze favoriete drankspellen',
+    favourites: 'Populairste drankspellen',
     latest: 'Onze laatste blogs'
   },
   en: {
     title: 'We share everything we know',
     intro: 'We only share drinking games we play ourselves and really enjoy. We also write articles full of ideas, like how to have a great night with friends. And we explain the Dutch student slang you hear everywhere in the Netherlands. Every now and then we share a fun fact too.',
-    favourites: 'Our favourite drinking games',
+    favourites: 'Most popular drinking games',
     latest: 'Our latest blogs'
   }
 };
@@ -66,9 +60,15 @@ export class BlogSectionComponent {
   readonly ui = UI[this.lang];
   readonly categoryCards: CategoryCard[] = getCategoryCards(this.lang);
 
-  readonly topDrankspellen: BlogPost[] = TOP_DRANKSPELLEN_SLUGS[this.lang]
-    .map(slug => postsFor(this.lang).find(p => p.slug === slug))
-    .filter((p): p is BlogPost => !!p);
+  readonly topDrankspellen: BlogPost[] = this.lang === 'en' && TOP_DRANKSPELLEN_SLUGS_EN
+    ? TOP_DRANKSPELLEN_SLUGS_EN
+      .map(slug => postsFor('en').find(p => p.slug === slug))
+      .filter((p): p is BlogPost => !!p)
+    : TOP_DRANKSPELLEN_SLUGS
+      .map(slug => postsFor('nl').find(p => p.slug === slug))
+      .filter((p): p is BlogPost => !!p)
+      .map(nl => this.lang === 'en' ? postsFor('en').find(p => p.alternate === nl.path) : nl)
+      .filter((p): p is BlogPost => !!p);
 
   // Newest posts that aren't Drankspelletjes (too many single-game posts) or
   // Begrippen (short, image-free glossary entries) — mirrors the exclusion

@@ -152,8 +152,8 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Drankspellen voor 2 personen: 10 spellen met z\'n tweeën',
     excerpt: 'Zeeslag, Mexen, Hoger lager en meer. 10 drankspellen die je al met z\'n tweeën speelt.',
     date: '2026-10-20',
-    image: 'assets/blogs/drankspel/zeeslag.webp',
-    imageAlt: 'Zeeslag drankspel met het Zeeslag bord en pionnen',
+    image: 'assets/blogs/drankspellen/drankspel voor 2 personen.webp',
+    imageAlt: 'Twee vrienden spelen een drankspel met dobbelstenen en een glas drinken voor elk',
     variant: 'light'
   },
   {
@@ -210,6 +210,18 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-07-21',
     image: 'assets/blogs/huisavond/Huisavond cover.webp',
     imageAlt: 'Top 10 huisavondideeën',
+    variant: 'light'
+  },
+  {
+    slug: 'jenga',
+    path: 'blog/drankspelletjes/jenga',
+    category: 'Drankspelletjes',
+    subCategory: 'Behendigheid',
+    title: 'Jenga drankspel',
+    excerpt: 'Jenga met opdrachten op de blokjes. Trek een blokje, doe wat erop staat en laat de toren vooral niet vallen.',
+    date: '2026-11-04',
+    image: 'assets/blogs/drankspel/jenga.webp',
+    imageAlt: 'Vrienden spelen het Jenga drankspel met een houten toren, een stift en drankjes op tafel',
     variant: 'light'
   },
   {

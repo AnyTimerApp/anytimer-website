@@ -25,6 +25,14 @@ const ORIGIN_TEXT = {
   }
 };
 
+// Appended to the excerpt in the meta description, so the snippet shows there is
+// more on the page than the one-line definition Google already displays.
+const DESCRIPTION_SUFFIX = {
+  nl: ' Met voorbeeldzin en verwante studententermen.',
+  en: ' With an example sentence and related slang.'
+};
+const MAX_DESCRIPTION = 160;
+
 const OG_IMAGE = 'https://anytimer.app/assets/blogs/wat%20is%20een%20anytimer/Wat%20is%20een%20anytimer%20cover.webp';
 
 @Component({
@@ -71,7 +79,9 @@ export class BlogTermComponent {
     ];
 
     const title = termSeoTitle(this.post.title, this.lang, this.post.termOrigin);
-    const description = this.post.excerpt;
+    const definition = this.post.excerpt;
+    const withSuffix = definition + DESCRIPTION_SUFFIX[this.lang];
+    const description = withSuffix.length <= MAX_DESCRIPTION ? withSuffix : definition;
     const url = `https://anytimer.app/${this.post.path}/`;
 
     injectBreadcrumbSchema(document, `schema-breadcrumbs-${slug}`, this.breadcrumbs);
@@ -102,7 +112,7 @@ export class BlogTermComponent {
         '@context': 'https://schema.org',
         '@type': 'DefinedTerm',
         'name': this.post.title,
-        'description': description,
+        'description': definition,
         'url': url,
         'inLanguage': this.lang,
         'inDefinedTermSet': `https://anytimer.app${this.hubPath}/`

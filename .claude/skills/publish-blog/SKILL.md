@@ -120,6 +120,11 @@ opening `<picture>`, before the descriptive body text, showing **Categorie** (on
 [[drankspellen_subcategories_plan]]), **Spelers**, **Speelduur**, and **Benodigdheden**
 together in one visually distinct block instead of a plain bullet list.
 
+The info card closes its section. No body text directly under it: the next thing below
+the card is always a new section with an `<h2>`, preferably `Speluitleg` (EN: `How to
+play`). Only when the game needs setup first may `Voorbereiding` (EN: `Setting up`) come
+before it. Move any descriptive text into that section.
+
 The card is a white bordered box (`.game-info-card`) with 3 stat columns side by side
 (`.game-info-card__stats` → `.game-stat`, separated by a thin vertical divider —
 `border-right` on each stat except the last). Each stat has a small stroke icon

@@ -72,6 +72,13 @@ f. **Interne links:** belangrijke pagina's uit punt b die weinig interne links k
 
 g. **Seizoen:** gebruik de maandvolumes van Keyword Planner. Welke zoekwoorden pieken in de komende 4 tot 8 weken? Bijvoorbeeld de introductietijd, kerst of carnaval.
 
+h. **Populairste drankspellen op de homepage:** het blok "Populairste drankspellen" (EN: "Most popular drinking games") staat op volgorde van populariteit in Search Console. De lijst staat in `TOP_DRANKSPELLEN_SLUGS` in `src/app/pages/home/blog-section/blog-section.component.ts`.
+   - Neem alle losse NL-drankspelpagina's uit periode A (dimensie `page`, `/blog/drankspelletjes/<slug>/`). De categoriepagina zelf telt niet mee.
+   - Sorteer op vertoningen, hoogste eerst. Neem de top 12.
+   - Vergelijk met de huidige lijst in de code. Geef de nieuwe volgorde als kant-en-klare lijst met slugs en zeg welke spellen erin of eruit gaan.
+   - Is er iets veranderd? Dan is het bijwerken van de lijst een van de acties. Pas de datum in de comment boven de lijst mee aan.
+   - **Engels:** de Engelse homepage volgt automatisch dezelfde volgorde als NL (via `alternate`). Consistentie gaat voor. Stel alleen een eigen Engelse volgorde voor (`TOP_DRANKSPELLEN_SLUGS_EN`) als er echt genoeg data is: minstens 12 Engelse drankspelpagina's met elk 50 of meer vertoningen in periode A. Meld anders kort hoeveel pagina's die grens al halen.
+
 ## 4. Rapport
 
 Schrijf naar `seo-reports/<JJJJ-MM-DD>.md` in het Nederlands. Korte, punctuele zinnen, geen em-dashes. Zet nooit "| AnyTimerApp" aan het einde van voorgestelde titels.
@@ -83,7 +90,7 @@ Volgorde:
    - de pagina en het bestand
    - wat er precies verandert (exacte nieuwe title of description, of de tekst van de interne link)
    - de onderbouwing met cijfers: zoekvolume, positie, CTR
-3. **Tabellen** voor de analyse uit punt a tot en met g.
+3. **Tabellen** voor de analyse uit punt a tot en met h.
 4. **Opvolging vorige week:** wat is gedaan en wat het effect is.
 5. **Nieuwe pagina-ideeën:** maximaal 5, met zoekvolume.
 

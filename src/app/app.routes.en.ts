@@ -15,6 +15,7 @@ import { NightInIdeasForHousematesComponent } from './pages/en/blogs/inspiration
 import { CanYouRefuseAnAnytimerComponent } from './pages/en/blogs/good-to-know/can-you-refuse-an-anytimer/can-you-refuse-an-anytimer.component';
 import { TrackingAnytimersInWhatsappComponent } from './pages/en/blogs/good-to-know/tracking-anytimers-in-whatsapp/tracking-anytimers-in-whatsapp.component';
 import { JeuDeBierEnComponent } from './pages/en/blogs/drinking-games/jeu-de-bier/jeu-de-bier.component';
+import { DrunkJengaEnComponent } from './pages/en/blogs/drinking-games/drunk-jenga/drunk-jenga.component';
 import { BeerioKartEnComponent } from './pages/en/blogs/drinking-games/beerio-kart/beerio-kart.component';
 import { TrekJeBakManiaEnComponent } from './pages/en/blogs/drinking-games/trek-je-bak-mania/trek-je-bak-mania.component';
 import { ThirtySecondsEnComponent } from './pages/en/blogs/drinking-games/30-seconds/30-seconds.component';
@@ -65,6 +66,7 @@ export const enRoutes: Routes = [
   { path: 'en/blog/good-to-know/can-you-refuse-an-anytimer', component: CanYouRefuseAnAnytimerComponent, title: 'Can you refuse an anytimer? Rules and consequences', data: EN },
   { path: 'en/blog/good-to-know/tracking-anytimers-in-whatsapp', component: TrackingAnytimersInWhatsappComponent, title: 'Why you shouldn\'t track anytimers in WhatsApp or notes', data: EN },
   { path: 'en/blog/drinking-games/jeu-de-bier', component: JeuDeBierEnComponent, title: 'Jeu de Bier rules: how to play the drinking game', data: EN },
+  { path: 'en/blog/drinking-games/drunk-jenga', component: DrunkJengaEnComponent, title: 'Drunk Jenga rules: how to play the drinking game', data: EN },
   { path: 'en/blog/drinking-games/beerio-kart', component: BeerioKartEnComponent, title: 'Beerio Kart rules: how to play the drinking game', data: EN },
   { path: 'en/blog/drinking-games/trek-je-bak-mania', component: TrekJeBakManiaEnComponent, title: 'Chug Mania rules: how to play the drinking game', data: EN },
   { path: 'en/blog/drinking-games/30-seconds', component: ThirtySecondsEnComponent, title: '30 Seconds rules: how to play the drinking game', data: EN },

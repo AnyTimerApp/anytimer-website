@@ -1,0 +1,176 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Drunk Jenga</h1>
+      <p class="legal-intro">
+        Drunk Jenga is just Jenga. Except every block has a task written on it. Pull a block and you do what it says. And whoever knocks the tower over is in trouble. In the Netherlands it's called Jenga drankspel.
+      </p>
+      <p class="legal-intro">
+        The best part is that you make the game yourself. Every group writes different tasks. So no night is ever the same.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>What is Drunk Jenga?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/jenga.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/jenga.png" alt="Friends playing Drunk Jenga with a wooden tower, a marker and drinks on the table" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Type</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Players</span>
+              </div>
+              <span class="game-stat__value">2 tot 8</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Duration</span>
+              </div>
+              <span class="game-stat__value">20-40 minutes</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">What you need</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Jenga</span>
+              <span class="game-tag">Marker</span>
+              <span class="game-tag">Drinks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Setting up</h2>
+        <p>In Drunk Jenga you write tasks on the blocks of a Jenga tower before you start. Think "take 2 sips" or "hand out 3 sips". Then you play Jenga like you always do.</p>
+        <p>The difference is in every block you pull. You read it out loud. Whatever it says, you have to do.</p>
+        <ol>
+          <li>Grab a Jenga tower. A cheap wooden stacking tower works just as well.</li>
+          <li>Write a task on the blocks with a marker. You don't have to fill them all. An empty block is a free pass.</li>
+          <li>Build the tower. Three blocks per layer and every layer crosswise on the one below.</li>
+          <li>Get a drink ready for everyone.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>How to play</h2>
+        <ol>
+          <li>Pick who goes first.</li>
+          <li>Pull a block from the tower using one hand.</li>
+          <li>Read the task out loud and do it right away.</li>
+          <li>Put the block on top of the tower.</li>
+          <li>Next player's turn.</li>
+          <li>Tower falls over? Then you down an <a routerLink="/en/blog/dictionary/what-is-an-adtje">adtje</a>, your whole drink in one go.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>Ideas for tasks</h2>
+
+        <h3>Drinking tasks</h3>
+        <ul>
+          <li>Take 2 sips.</li>
+          <li>Hand out 3 sips.</li>
+          <li>Everyone drinks.</li>
+          <li>Pick a drinking buddy. They drink along with you for the rest of the game.</li>
+          <li>Waterfall. Everyone drinks until you stop.</li>
+        </ul>
+
+        <h3>Rules for the rest of the game</h3>
+        <ul>
+          <li>Nobody is allowed to say "drink" anymore.</li>
+          <li>You can only drink with your left hand.</li>
+          <li>Whoever laughs, drinks.</li>
+          <li>Cancel a rule.</li>
+        </ul>
+
+        <h3>Group tasks</h3>
+        <ul>
+          <li>Pick a category. Just like in <a routerLink="/en/blog/drinking-games/kingsen">Kingsen</a>, everyone names something in turn. Can't think of anything? Drink.</li>
+          <li>Never have I ever. Whoever has done it, drinks.</li>
+          <li>Count to 3 and point at someone. Whoever gets the most fingers, drinks.</li>
+          <li>The person on your left gives you an <a routerLink="/en/blog/dictionary/what-is-an-anytimer">anytimer</a>.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>When do you drink?</h2>
+        <p>Most of the time the blocks tell you. On top of that, these rules apply.</p>
+        <ul>
+          <li>Tower falls over? You down your drink.</li>
+          <li>A block drops out of the tower during your turn? Take 2 sips.</li>
+          <li>Taking too long? Take 1 sip.</li>
+        </ul>
+
+        <h3>Extra rules for more chaos</h3>
+        <ul>
+          <li>Touch a block? Then you have to take that block.</li>
+          <li>Play with your weak hand.</li>
+          <li>You get 10 seconds per turn.</li>
+          <li>Whoever knocks the tower over rebuilds it and writes a new task.</li>
+        </ul>
+
+        <p>Looking for more drinking games? Check out our <a routerLink="/en/blog/inspiration/best-drinking-games">top 10 best drinking games</a>.</p>
+      </div>
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Similar drinking games</h2>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended drinking games</h2>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

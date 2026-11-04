@@ -77,8 +77,8 @@ export const BLOG_POSTS_EN: BlogPost[] = [
     title: 'Drinking games for 2 people: 10 games for two',
     excerpt: 'Battleship, Mexico, Higher or Lower and more. 10 drinking games you can play with just the two of you.',
     date: '2026-10-20',
-    image: 'assets/blogs/drankspel/zeeslag.webp',
-    imageAlt: 'Battleship drinking game with the board and pegs',
+    image: 'assets/blogs/drankspellen/drankspel voor 2 personen.webp',
+    imageAlt: 'Two friends playing a drinking game with dice and a drink each',
     variant: 'light'
   },
   {
@@ -127,6 +127,19 @@ export const BLOG_POSTS_EN: BlogPost[] = [
     date: '2026-07-21',
     image: 'assets/blogs/huisavond/Huisavond cover.webp',
     imageAlt: 'Top 10 night in ideas for housemates',
+    variant: 'light'
+  },
+  {
+    slug: 'drunk-jenga',
+    path: 'en/blog/drinking-games/drunk-jenga',
+    alternate: 'blog/drankspelletjes/jenga',
+    category: 'Drankspelletjes',
+    subCategory: 'Behendigheid',
+    title: 'Drunk Jenga',
+    excerpt: 'Jenga with a task on every block. Pull a block, do what it says and whatever you do, don\'t knock the tower over.',
+    date: '2026-11-04',
+    image: 'assets/blogs/drankspel/jenga.webp',
+    imageAlt: 'Friends playing Drunk Jenga with a wooden tower, a marker and drinks on the table',
     variant: 'light'
   },
   {

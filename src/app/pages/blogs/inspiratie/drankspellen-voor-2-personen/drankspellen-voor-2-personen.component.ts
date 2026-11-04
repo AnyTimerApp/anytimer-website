@@ -33,8 +33,8 @@ export class DrankspellenVoor2PersonenComponent {
       title: 'Drankspellen voor 2 personen: 10 spellen met z\'n tweeën',
       description: 'Deze 10 drankspellen speel je al met 2 personen. Van Zeeslag en Mexen tot Hoger lager. Per spel het aantal spelers, wat je nodig hebt en hoe het werkt.',
       url: 'https://anytimer.app/blog/inspiratie/drankspellen-voor-2-personen/',
-      image: 'https://anytimer.app/assets/blogs/drankspel/zeeslag.png',
-      imageAlt: 'Zeeslag drankspel met het Zeeslag bord en pionnen',
+      image: 'https://anytimer.app/assets/blogs/drankspellen/drankspel%20voor%202%20personen.png',
+      imageAlt: 'Twee vrienden spelen een drankspel met dobbelstenen en een glas drinken voor elk',
       published: '2026-10-20',
       breadcrumbs: this.breadcrumbs
     });

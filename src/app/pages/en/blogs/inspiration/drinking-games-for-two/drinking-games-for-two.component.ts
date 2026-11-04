@@ -36,8 +36,8 @@ export class DrinkingGamesForTwoComponent {
       title: 'Drinking games for 2 people: 10 games for two',
       description: 'You can play these 10 drinking games with just 2 people. From Battleship and Mexico to Higher or Lower. Per game the players, what you need and how it works.',
       url: 'https://anytimer.app/en/blog/inspiration/drinking-games-for-two/',
-      image: 'https://anytimer.app/assets/blogs/drankspel/zeeslag.png',
-      imageAlt: 'Battleship drinking game with the board and pegs',
+      image: 'https://anytimer.app/assets/blogs/drankspellen/drankspel%20voor%202%20personen.png',
+      imageAlt: 'Two friends playing a drinking game with dice and a drink each',
       published: '2026-10-20',
       breadcrumbs: this.breadcrumbs
     });
