@@ -6,6 +6,22 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="assets/logo.png">
+  <!-- Google tag (gtag.js). Consent Mode: everything is denied by default, so no
+       cookies and no pageviews until the visitor accepts cookies. Granting and
+       pageviews are handled by AnalyticsService (src/app/shared/analytics.service.ts). -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGQN0NWY2Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-LGQN0NWY2Z', { send_page_view: false });
+  </script>
 </head>
 <body>
   <app-root></app-root>
