@@ -1,0 +1,179 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Beer Pong</h1>
+      <p class="legal-intro">
+        Beer Pong is the most famous drinking game in the world. Two teams, a table, some cups and one ping pong ball. Throw the ball into the other team's cups. Hit one? Then they have to drink. In the Netherlands it's simply called beerpong.
+      </p>
+      <p class="legal-intro">
+        You'll get the basics in a minute. But every house plays with different rules. Below you'll find the standard rules and the house rules you should agree on first.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>What is Beer Pong?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/beerpong.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/beerpong.png" alt="Friends playing Beer Pong with red cups and a ping pong ball on a long table" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Type</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Players</span>
+              </div>
+              <span class="game-stat__value">2+</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Duration</span>
+              </div>
+              <span class="game-stat__value">10+ minutes</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">What you need</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Cups</span>
+              <span class="game-tag">Drinks</span>
+              <span class="game-tag">Ping pong ball</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Setup</h2>
+        <p>You play Beer Pong one on one or in teams. Two against two is the most common. With a bigger group you play with rotating teams. The losing team steps out and the next team is up.</p>
+        <ol>
+          <li>Grab a long table. A dining table or a ping pong table works fine.</li>
+          <li>Put 10 cups at each end in a triangle: 4, 3, 2 and 1. The point faces the other team. Want a quicker game? Use 6 cups per side: 3, 2 and 1.</li>
+          <li>Pour some beer into every cup. A few sips per cup is plenty.</li>
+          <li>Put out a cup of water to rinse the ball.</li>
+          <li>Decide who starts. For example with eye contact: one player from each team throws at the same time while looking the other in the eye. First to score starts.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>How to play</h2>
+        <ol>
+          <li>Teams take turns. In a team of two, each player throws one ball.</li>
+          <li>You throw from behind the edge of the table. Your elbow can't go past the edge.</li>
+          <li>Ball lands in a cup? The other team drinks that cup and takes it off the table.</li>
+          <li>Both players on a team score in the same turn? They get the balls back and throw again.</li>
+          <li>The first team to hit all of the other team's cups wins.</li>
+          <li>The losing team drinks the cups the winners still have left.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>House rules to agree on first</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/beerpong rerack.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/beerpong rerack.png" alt="A player sets up the last three cups in a new triangle for a rerack in Beer Pong" class="game-image" loading="lazy">
+        </picture>
+        <p>These rules always lead to arguments. So agree on them before the first ball flies.</p>
+
+        <h3>Rerack</h3>
+        <p>A rerack means you get the remaining cups set up again. For example in a small triangle or a straight line. Usually each team can ask for two reracks per game. You ask at the start of your own turn.</p>
+
+        <h3>Bounce shots</h3>
+        <p>You can also bounce the ball off the table. A bounce shot that lands in a cup counts for two cups. The other team is allowed to swat away a bouncing ball. Nobody can touch a ball that comes in straight.</p>
+
+        <h3>Island</h3>
+        <p>Is a cup standing on its own, not touching any other cup? Then it's an island. Call "island" before you throw. Hit it and another cup of your choice comes off the table too.</p>
+
+        <h3>Same cup</h3>
+        <p>Both players hit the same cup in one turn? Then three cups come off the table. That one plus two of your choice.</p>
+
+        <h3>Last chance</h3>
+        <p>Your last cup got hit? Then your team gets one more chance. You keep throwing until you miss. Hit every cup the other team has left and you go into overtime with 3 cups per side.</p>
+
+        <h3>A ball that rolls back</h3>
+        <p>Does the ball roll back to your side after your throw and you grab it? Then you can throw it again, but only as a trick shot behind your back.</p>
+
+        <h3>Hygienic Beer Pong</h3>
+        <p>Not keen on drinking from cups a ball has been in? Fill the cups on the table with water. When the ball lands, the other team drinks from their own drink.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Tips to throw better</h2>
+        <ul>
+          <li>Throw with an arc. A flat throw bounces out more easily.</li>
+          <li>Aim for the middle cup. Miss by a little and it still lands in the cup next to it.</li>
+          <li>Stand in the same spot every time. That way every throw is the same.</li>
+          <li>Keep the ball clean. Rinse it in the cup of water.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Beer Pong variations</h2>
+
+        <h3>Flip cup</h3>
+        <p>Two teams stand opposite each other at a table. Everyone has a cup of beer. The first player of each team drinks their cup and puts it on the edge of the table. Then they flip it with one finger so it lands upside down. Done? Then the next player goes. The first team to finish wins.</p>
+
+        <h3>Rage Cage</h3>
+        <p>In <a routerLink="/en/blog/drinking-games/rage-cage">Rage Cage</a> the whole group plays at once. With two balls and a stack of cups in the middle. It's faster and more chaotic than Beer Pong.</p>
+
+        <p>Looking for more drinking games? Check out our <a routerLink="/en/blog/inspiration/best-drinking-games">top 10 best drinking games</a>.</p>
+      </div>
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Similar drinking games</h2>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended drinking games</h2>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,8 +1,9 @@
 ---
 name: gum-seo-weekly
 description: >
-  Weekly SEO analysis for anytimer.app. Pulls Google Search Console data and Google Ads
-  Keyword Planner search volumes through the gum CLI, compares the last 28 days against the
+  Weekly SEO analysis for anytimer.app. Pulls Google Search Console data (search analytics,
+  URL inspection, sitemaps) and Google Ads Keyword Planner search volumes through the gum CLI,
+  compares the last 28 days against the
   28 days before, and writes a concrete action report to seo-reports/<date>.md. Use when the
   user asks for the weekly SEO analysis, an SEO report, "gum-seo-weekly", or when it runs as
   a scheduled task. Read-only: no git commands, no gum writes, no site changes.
@@ -40,6 +41,23 @@ gum read googleads.keywordPlanIdeas.generateKeywordIdeas --args '{"keywords":[�
 ```
 
 Seeds (maximaal 10 per call): "betekenis studententaal", "drankspel", "drankspelletjes regels", "kaartspel drinken", plus de 5 zoekwoorden met de meeste vertoningen.
+
+Sitemapstatus:
+
+```bash
+gum read searchconsole.sitemaps.list --args '{"siteUrl":"sc-domain:anytimer.app"}' --output json
+```
+
+Indexstatus per pagina (URL-inspectie, maximaal 2000 per dag, doe er hier hooguit 40):
+
+```bash
+gum read searchconsole.urlInspection.index.inspect --args '{"body":{"inspectionUrl":"https://anytimer.app/…/","siteUrl":"sc-domain:anytimer.app"}}' --output json
+```
+
+Inspecteer:
+- alle pagina's die in `src/sitemap.xml` een `lastmod` hebben van de laatste 14 dagen (nieuwe en gewijzigde pagina's)
+- de 10 pagina's met de grootste daling in klikken of vertoningen (punt a)
+- de top 10 pagina's op vertoningen in periode A
 
 Zet ruwe data in `seo-reports/data/<datum>/` en lees die van daaruit. Plak geen grote JSON in je antwoord.
 
@@ -79,6 +97,14 @@ h. **Populairste drankspellen op de homepage:** het blok "Populairste drankspell
    - Is er iets veranderd? Dan is het bijwerken van de lijst een van de acties. Pas de datum in de comment boven de lijst mee aan.
    - **Engels:** de Engelse homepage volgt automatisch dezelfde volgorde als NL (via `alternate`). Consistentie gaat voor. Stel alleen een eigen Engelse volgorde voor (`TOP_DRANKSPELLEN_SLUGS_EN`) als er echt genoeg data is: minstens 12 Engelse drankspelpagina's met elk 50 of meer vertoningen in periode A. Meld anders kort hoeveel pagina's die grens al halen.
 
+i. **Indexering:** uit de URL-inspecties en de sitemapstatus.
+   - Elke pagina met een `verdict` anders dan `PASS`, of een `coverageState` anders dan "Submitted and indexed". Noem de reden (bijvoorbeeld "Crawled - currently not indexed" of "Discovered - currently not indexed").
+   - Elke pagina waar `googleCanonical` afwijkt van de pagina-URL, of waar `userCanonical` naar een andere pagina wijst. Check de live canonical met `curl -s <url> | grep canonical`. Klopt die live wel? Dan heeft Google een oude versie gezien en is het geen actie. Klopt die niet? Dan is het een actie met hoge prioriteit.
+   - Nieuwe pagina's die nog niet gecrawld zijn (`lastCrawlTime` ontbreekt of is ouder dan de `lastmod`).
+   - Een dalende pagina die niet meer geïndexeerd is, verklaart de daling. Zeg dat bij punt a.
+   - Sitemap: datum van `lastDownloaded`, het aantal ingediende URL's tegenover het aantal `<url>`-regels in `src/sitemap.xml`, en het aantal fouten en waarschuwingen. Negeer het veld `indexed`, want de API geeft daar altijd 0.
+
+
 ## 4. Rapport
 
 Schrijf naar `seo-reports/<JJJJ-MM-DD>.md` in het Nederlands. Korte, punctuele zinnen, geen em-dashes. Zet nooit "| AnyTimerApp" aan het einde van voorgestelde titels.
@@ -90,7 +116,7 @@ Volgorde:
    - de pagina en het bestand
    - wat er precies verandert (exacte nieuwe title of description, of de tekst van de interne link)
    - de onderbouwing met cijfers: zoekvolume, positie, CTR
-3. **Tabellen** voor de analyse uit punt a tot en met h.
+3. **Tabellen** voor de analyse uit punt a tot en met i.
 4. **Opvolging vorige week:** wat is gedaan en wat het effect is.
 5. **Nieuwe pagina-ideeën:** maximaal 5, met zoekvolume.
 

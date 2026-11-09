@@ -346,6 +346,13 @@ only once per article — don't link the same target multiple times in one post.
     asking the user first — the type is a literal union, so a wrong value fails the
     build. This is the value step 3c's `category` field reads back — set it once here.
 - Add a `<url>` entry for the new route in `src/sitemap.xml`, matching `path` above.
+- **Home "Onze laatste blogs" (EN "Our latest blogs")**: every new blog must show up there.
+  `latestPosts` in `src/app/pages/home/blog-section/blog-section.component.ts` puts the
+  newest Inspiratie/Weetjes post first automatically (by `date`), before the pinned cards,
+  so for those just set today's `date`. Drankspelletjes and Begrippen posts are excluded
+  from that row by design. For a new post in one of those categories, or whenever it's
+  unclear, ask the user whether it should go in "Onze laatste blogs" (and how) before
+  finishing. After building, check the home page HTML to confirm the card is there.
 
 ### Changing an existing, already-published post's URL
 

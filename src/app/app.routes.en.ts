@@ -67,6 +67,9 @@ export const enRoutes: Routes = [
   { path: 'en/blog/good-to-know/can-you-refuse-an-anytimer', component: CanYouRefuseAnAnytimerComponent, title: 'Can you refuse an anytimer? Rules and consequences', data: EN },
   { path: 'en/blog/good-to-know/tracking-anytimers-in-whatsapp', component: TrackingAnytimersInWhatsappComponent, title: 'Why you shouldn\'t track anytimers in WhatsApp or notes', data: EN },
   { path: 'en/blog/drinking-games/jeu-de-bier', component: JeuDeBierEnComponent, title: 'Jeu de Bier rules: how to play the drinking game', data: EN },
+  { path: 'en/blog/inspiration/sinterklaas-dice-game', loadComponent: () => import('./pages/en/blogs/inspiration/sinterklaas-dice-game/sinterklaas-dice-game.component').then(m => m.SinterklaasDiceGameComponent), title: 'Sinterklaas dice game: rules and tasks for adults', data: EN },
+  { path: 'en/blog/drinking-games/beer-pong', loadComponent: () => import('./pages/en/blogs/drinking-games/beer-pong/beer-pong.component').then(m => m.BeerPongEnComponent), title: 'Beer Pong rules: how to play the drinking game', data: EN },
+  { path: 'en/blog/drinking-games/toepen', loadComponent: () => import('./pages/en/blogs/drinking-games/toepen/toepen.component').then(m => m.ToepenEnComponent), title: 'Toepen rules: how to play the drinking game', data: EN },
   { path: 'en/blog/drinking-games/drunk-jenga', component: DrunkJengaEnComponent, title: 'Drunk Jenga rules: how to play the drinking game', data: EN },
   { path: 'en/blog/drinking-games/beerio-kart', component: BeerioKartEnComponent, title: 'Beerio Kart rules: how to play the drinking game', data: EN },
   { path: 'en/blog/drinking-games/trek-je-bak-mania', component: TrekJeBakManiaEnComponent, title: 'Chug Mania rules: how to play the drinking game', data: EN },
@@ -93,7 +96,7 @@ export const enRoutes: Routes = [
   ...DICTIONARY_POSTS_EN.map(p => ({
     path: p.path,
     loadComponent: () => import('./pages/blog-term/blog-term.component').then(m => m.BlogTermComponent),
-    title: termSeoTitle(p.title, 'en', p.termOrigin),
+    title: p.seoTitle ?? termSeoTitle(p.title, 'en', p.termOrigin),
     data: { ...EN, slug: p.slug }
   })),
 ];

@@ -221,7 +221,7 @@ export const BEGRIPPEN_CONTENT_EN: Record<string, BegripContent> = {
   'beer-pong': {
     paragraphs: [
       '"Us against you, beer pong. Losers buy the next round."',
-      'You usually play beer pong with two teams. Land a ball in the other team\'s cup and they drink it. The first team to hit all the cups wins. You see it at almost every house party. Also read about <a href="/en/blog/dictionary/drinking-game/">drinking game</a> and <a href="/en/blog/dictionary/flip-cup/">flip cup</a>.'
+      'You usually play beer pong with two teams. Land a ball in the other team\'s cup and they drink it. The first team to hit all the cups wins. You see it at almost every house party. Want to play? Read the full <a href="/en/blog/drinking-games/beer-pong/">Beer Pong rules</a>. Also read about <a href="/en/blog/dictionary/drinking-game/">drinking game</a> and <a href="/en/blog/dictionary/flip-cup/">flip cup</a>.'
     ]
   },
   'before-and-after': {

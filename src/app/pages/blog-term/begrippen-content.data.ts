@@ -223,7 +223,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'beer-pong': {
     paragraphs: [
       '"Wij tegen jullie, beer pong. Wie verliest, haalt de volgende ronde."',
-      'Je speelt beer pong meestal met twee teams. Gooi je een balletje in een beker van de tegenstander, dan drinkt die hem leeg. Het team dat als eerste alle bekers raakt, wint. Je ziet het spel op bijna elk huisfeest. Lees ook de uitleg van <a href="/drankspellen/">onze favoriete drankspellen</a>, <a href="/blog/begrippen/drinking-game/">drinking game</a> en <a href="/blog/begrippen/flip-cup/">flip cup</a>.'
+      'Je speelt beer pong meestal met twee teams. Gooi je een balletje in een beker van de tegenstander, dan drinkt die hem leeg. Het team dat als eerste alle bekers raakt, wint. Je ziet het spel op bijna elk huisfeest. Zelf spelen? Lees de <a href="/blog/drankspelletjes/beerpong/">volledige beerpong regels</a>. Lees ook de uitleg van <a href="/blog/begrippen/drinking-game/">drinking game</a> en <a href="/blog/begrippen/flip-cup/">flip cup</a>.'
     ]
   },
   'before-and-after': {

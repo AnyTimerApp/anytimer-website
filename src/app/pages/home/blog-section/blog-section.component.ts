@@ -102,15 +102,16 @@ export class BlogSectionComponent {
 
   // Newest posts that aren't Drankspelletjes (too many single-game posts) or
   // Begrippen (short, image-free glossary entries), mirroring the exclusion
-  // already used for the main /blog feed. The top 10, the online timer and the
-  // adt timer comparison come first regardless of date, then 5 more by recency.
+  // already used for the main /blog feed. The newest post leads, so a new blog
+  // is always the first card. Then the top 10, the online timer and the adt
+  // timer comparison regardless of date, then 4 more by recency.
   readonly latestPosts: BlogPost[] = (() => {
     const eligible = postsFor(this.lang).filter(p => p.category !== 'Drankspelletjes' && p.category !== 'Begrippen');
     const [topList, comparison] = PINNED_SLUGS[this.lang].map(slug => eligible.find(p => p.slug === slug));
     const pinned = [topList, TIMER_CARD[this.lang], comparison].filter((p): p is BlogPost => !!p);
-    const rest = eligible
+    const [newest, ...rest] = eligible
       .filter(p => !pinned.includes(p))
       .sort((a, b) => b.date.localeCompare(a.date));
-    return [...pinned, ...rest.slice(0, 5)];
+    return [newest, ...pinned, ...rest.slice(0, 4)].filter((p): p is BlogPost => !!p);
   })();
 }

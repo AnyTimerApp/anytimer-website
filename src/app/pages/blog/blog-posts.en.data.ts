@@ -130,6 +130,44 @@ export const BLOG_POSTS_EN: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'sinterklaas-dice-game',
+    path: 'en/blog/inspiration/sinterklaas-dice-game',
+    alternate: 'blog/inspiratie/sinterklaas-dobbelspel',
+    category: 'Inspiratie',
+    title: 'Sinterklaas dice game: rules and tasks for adults',
+    excerpt: 'Celebrating pakjesavond with your housemates? How to play the dice game with presents. With rules for every roll, tasks and a student house version.',
+    date: '2026-11-09',
+    image: 'assets/blogs/sinterklaas dobbelspel/sinterklaas.webp',
+    imageAlt: 'Friends roll a die next to a pile of presents in the Sinterklaas dice game',
+    variant: 'light'
+  },
+  {
+    slug: 'beer-pong',
+    path: 'en/blog/drinking-games/beer-pong',
+    alternate: 'blog/drankspelletjes/beerpong',
+    category: 'Drankspelletjes',
+    subCategory: 'Behendigheid',
+    title: 'Beer Pong',
+    excerpt: 'Throw a ping pong ball into the other team\'s cups. Hit one and they have to drink. With all the rules and house rules.',
+    date: '2026-11-09',
+    image: 'assets/blogs/drankspel/beerpong.webp',
+    imageAlt: 'Friends playing Beer Pong with red cups and a ping pong ball on a long table',
+    variant: 'light'
+  },
+  {
+    slug: 'toepen',
+    path: 'en/blog/drinking-games/toepen',
+    alternate: 'blog/drankspelletjes/toepen',
+    category: 'Drankspelletjes',
+    subCategory: 'Kaartspel',
+    title: 'Toepen',
+    excerpt: 'The Dutch card game where only the last trick counts. Knock on the table, raise the stakes and bluff the others out.',
+    date: '2026-11-09',
+    image: 'assets/blogs/drankspel/toepen.webp',
+    imageAlt: 'Friends playing Toepen with cards in hand while one of them knocks on the table',
+    variant: 'light'
+  },
+  {
     slug: 'drunk-jenga',
     path: 'en/blog/drinking-games/drunk-jenga',
     alternate: 'blog/drankspelletjes/jenga',

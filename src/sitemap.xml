@@ -163,6 +163,33 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/drankspelletjes/jenga/"/>
   </url>
   <url>
+    <loc>https://anytimer.app/blog/inspiratie/sinterklaas-dobbelspel/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/inspiratie/sinterklaas-dobbelspel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/inspiration/sinterklaas-dice-game/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/inspiratie/sinterklaas-dobbelspel/"/>
+  </url>
+  <url>
+    <loc>https://anytimer.app/blog/drankspelletjes/beerpong/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/drankspelletjes/beerpong/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/drinking-games/beer-pong/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/drankspelletjes/beerpong/"/>
+  </url>
+  <url>
+    <loc>https://anytimer.app/blog/drankspelletjes/toepen/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/drankspelletjes/toepen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/drinking-games/toepen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/drankspelletjes/toepen/"/>
+  </url>
+  <url>
     <loc>https://anytimer.app/blog/drankspelletjes/jeu-de-bier/</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -9821,5 +9848,32 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/adt-timer/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/chug-timer/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/adt-timer/"/>
+  </url>
+  <url>
+    <loc>https://anytimer.app/en/blog/inspiration/sinterklaas-dice-game/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/inspiratie/sinterklaas-dobbelspel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/inspiration/sinterklaas-dice-game/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/inspiratie/sinterklaas-dobbelspel/"/>
+  </url>
+  <url>
+    <loc>https://anytimer.app/en/blog/drinking-games/beer-pong/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/drankspelletjes/beerpong/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/drinking-games/beer-pong/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/drankspelletjes/beerpong/"/>
+  </url>
+  <url>
+    <loc>https://anytimer.app/en/blog/drinking-games/toepen/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/drankspelletjes/toepen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/drinking-games/toepen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/drankspelletjes/toepen/"/>
   </url>
 </urlset>

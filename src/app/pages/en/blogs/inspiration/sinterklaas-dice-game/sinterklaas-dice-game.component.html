@@ -1,0 +1,186 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Sinterklaas dice game: rules and tasks for adults</h1>
+      <p class="legal-intro">
+        On 5 December the Dutch celebrate Sinterklaas with presents. That evening is called pakjesavond. Celebrating with your housemates? Then skip drawing names. Everyone brings a few presents and the dice decide who gets what. Or who loses what.
+      </p>
+      <p class="legal-intro">
+        Below you'll find the rules for every roll, tasks for adults and a version for your student house. With drinks and anytimers.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>What is the Sinterklaas dice game?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/sinterklaas dobbelspel/sinterklaas.webp" type="image/webp">
+          <img src="assets/blogs/sinterklaas dobbelspel/sinterklaas.png" alt="Friends roll a die next to a pile of presents in the Sinterklaas dice game" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <p>In the Sinterklaas dice game, all presents lie wrapped on the table. You take turns rolling a die. Every number means something. Take a present, give one away or swap. After two rounds everyone keeps whatever they're holding at that moment.</p>
+        <p>Nobody knows what's inside the presents. That's what makes it exciting. The best present goes back and forth all night.</p>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Type</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Players</span>
+              </div>
+              <span class="game-stat__value">4 to 12</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Duration</span>
+              </div>
+              <span class="game-stat__value">30-60 minutes</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">What you need</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Die</span>
+              <span class="game-tag">Presents</span>
+              <span class="game-tag">Timer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Setup</h2>
+        <ol>
+          <li>Agree on a budget. For example 3 presents of 5 euros per person.</li>
+          <li>Everyone wraps their presents so nobody can guess what's inside.</li>
+          <li>Put all presents in a pile in the middle of the table.</li>
+          <li>Sit in a circle. On the sofa, around the table or on the floor.</li>
+          <li>Get a die ready. With more than 8 players it goes faster with 2 dice going round the circle at the same time.</li>
+        </ol>
+        <p>Tip: bring a mix of nice and silly presents. A roll of bin bags or a jar of gherkins gets more laughs than another candle. That way you get extra presents for little money that make the game more fun. Play with shapes and weights too. Then nobody can guess what's inside.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Round 1: sharing out the pile</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/sinterklaas dobbelspel/Sinterklaas ronde 1.webp" type="image/webp">
+          <img src="assets/blogs/sinterklaas dobbelspel/Sinterklaas ronde 1.png" alt="A player takes a present from the pile after rolling a 1 in the Sinterklaas dice game" class="game-image" loading="lazy">
+        </picture>
+        <p>In the first round all presents leave the table. Take turns rolling and do what goes with your roll.</p>
+        <ul class="card-meaning-list">
+          <li><strong>1:</strong> Take a present from the pile.</li>
+          <li><strong>2:</strong> Give a present to the person on your left.</li>
+          <li><strong>3:</strong> Give a present to the person on your right.</li>
+          <li><strong>4:</strong> Swap a present with anyone you like.</li>
+          <li><strong>5:</strong> Everyone passes one present to the left.</li>
+          <li><strong>6:</strong> Take a present from the pile and roll again.</li>
+        </ul>
+        <p>Got nothing yet and have to give something away? Then nothing happens. The round is over when the pile is gone.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Round 2: stealing against the clock</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/sinterklaas dobbelspel/Sinterklaas ronde 2.webp" type="image/webp">
+          <img src="assets/blogs/sinterklaas dobbelspel/Sinterklaas ronde 2.png" alt="Two players pull at the same present while the timer runs in round 2 of the Sinterklaas dice game" class="game-image" loading="lazy">
+        </picture>
+        <p>Now the real game starts. Set a timer for 10 to 15 minutes. Don't let anyone see how much time is left. Take turns rolling again.</p>
+        <ul class="card-meaning-list">
+          <li><strong>1:</strong> Take a present from anyone you like.</li>
+          <li><strong>2:</strong> Give a present to the person on your left.</li>
+          <li><strong>3:</strong> Give a present to the person on your right.</li>
+          <li><strong>4:</strong> Swap a present with anyone you like.</li>
+          <li><strong>5:</strong> Everyone passes all their presents to the left.</li>
+          <li><strong>6:</strong> Take a present from anyone you like and roll again.</li>
+        </ul>
+        <p>Timer goes off? The game stops right away. Whatever you're holding is yours to keep. Only then does everyone open their presents.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Tasks for adults</h2>
+        <p>Want more than just passing presents around? Add a task to the 1 and the 6. Roll one of those and you draw a card with a task. Fail the task? Then you put a present back on the pile or give it to the person on your left.</p>
+        <p>Write the tasks on slips of paper beforehand. A few ideas:</p>
+        <ul>
+          <li>Sing the first verse of a Sinterklaas song. Don't know one? Make one up.</li>
+          <li>Make up a rhyme about the person on your right within 30 seconds.</li>
+          <li>Act out Sinterklaas giving you a present.</li>
+          <li>Guess what's inside one of your presents. Guess right and you take a present.</li>
+          <li>Name 5 things that fit in a shoe.</li>
+          <li>Tell everyone about the worst present you ever got.</li>
+          <li>Pay someone a compliment as a poem.</li>
+          <li>For the rest of the round you can only talk in rhyme.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>The student house version</h2>
+        <p>Pakjesavond with your housemates can be a little more chaotic. Then play with these extra rules on top of the normal rolls.</p>
+        <ul>
+          <li>Roll a 1? Take 2 sips.</li>
+          <li>Roll a 6? Hand out 2 sips.</li>
+          <li>Someone takes a present from you? Take 1 sip.</li>
+          <li>Roll the same number twice in a row? Then you down an <a routerLink="/en/blog/dictionary/what-is-an-adtje">adtje</a>, your whole drink in one go.</li>
+          <li>Whoever ends with the fewest presents gets an <a routerLink="/en/blog/dictionary/what-is-an-anytimer">anytimer</a> from whoever has the most.</li>
+        </ul>
+        <p>You can also wrap an anytimer as a present. Write it on a card and put it in a little box. Whoever holds it at the end can use it on the giver any time they like.</p>
+        <p>Looking for more ideas for a night at home? Check out our <a routerLink="/en/blog/inspiration/night-in-ideas-for-housemates">night in ideas for housemates</a>.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Tips for a great dice night</h2>
+        <ul>
+          <li>Keep the pace up. Deciding who to steal from can only take 5 seconds.</li>
+          <li>Wrap presents in different shapes. A bottle in a big box throws everyone off.</li>
+          <li>Hide the timer. That way nobody knows when it's over and everyone stays fanatical.</li>
+          <li>Swapping afterwards is fine. But only if both people want to.</li>
+          <li>Rather play without presents? Then <a routerLink="/en/blog/drinking-games/mexico">Mexico</a> is a fun dice game with the same tension.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended blogs</h2>
+        <div class="related-slider">
+          @for (post of recommendedPosts; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

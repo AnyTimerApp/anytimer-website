@@ -1,0 +1,179 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Beerpong</h1>
+      <p class="legal-intro">
+        Beerpong is het bekendste drankspel ter wereld. Twee teams, een tafel, een paar bekers en één pingpongbal. Gooi de bal in de bekers van de tegenstander. Raak je? Dan moet de ander drinken.
+      </p>
+      <p class="legal-intro">
+        De basis snap je in een minuut. Maar elk huis speelt met andere regels. Hieronder vind je de officiële regels en de huisregels die je vooraf moet afspreken.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>Wat is beerpong?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/beerpong.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/beerpong.png" alt="Vrienden spelen beerpong met rode bekers en een pingpongbal aan een lange tafel" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Categorie</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Spelers</span>
+              </div>
+              <span class="game-stat__value">2+</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Speelduur</span>
+              </div>
+              <span class="game-stat__value">10+ minuten</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">Benodigdheden</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Bekers</span>
+              <span class="game-tag">Drank</span>
+              <span class="game-tag">Pingpongbal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Voorbereiding</h2>
+        <p>Je speelt beerpong één tegen één of in teams. Twee tegen twee is het meest gespeeld. Met meer mensen speel je met wisselende teams. Wie verliest, gaat eraf en het volgende team is aan de beurt.</p>
+        <ol>
+          <li>Pak een lange tafel. Een eettafel of een tafeltennistafel werkt prima.</li>
+          <li>Zet aan beide kanten 10 bekers neer in een driehoek: 4, 3, 2 en 1. De punt wijst naar de tegenstander. Snel spelen? Neem 6 bekers per kant: 3, 2 en 1.</li>
+          <li>Vul elke beker met een bodem bier. Een paar slokken per beker is genoeg.</li>
+          <li>Zet een beker water klaar om de bal in af te spoelen.</li>
+          <li>Kies wie er begint. Bijvoorbeeld met oogcontact: iemand van elk team gooit tegelijk en kijkt de ander aan. Wie als eerste raakt, begint.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>Speluitleg</h2>
+        <ol>
+          <li>Teams gooien om de beurt. In een team van twee gooit iedere speler één bal.</li>
+          <li>Je gooit van achter de rand van de tafel. Je elleboog mag niet over de rand komen.</li>
+          <li>Valt de bal in een beker? Dan drinkt de tegenstander die beker leeg en haalt hem van tafel.</li>
+          <li>Raken beide spelers van een team in dezelfde beurt? Dan krijgen ze de ballen terug en gooien ze nog een keer.</li>
+          <li>Het team dat als eerste alle bekers van de ander raakt, wint.</li>
+          <li>Het verliezende team drinkt de bekers leeg die de winnaars nog over hebben.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>Huisregels die je vooraf afspreekt</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/beerpong rerack.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/beerpong rerack.png" alt="Een speler zet de laatste drie bekers opnieuw neer in een driehoek voor een rerack bij beerpong" class="game-image" loading="lazy">
+        </picture>
+        <p>Over deze regels ontstaat altijd discussie. Spreek ze dus af voordat de eerste bal vliegt.</p>
+
+        <h3>Rerack</h3>
+        <p>Een rerack betekent dat je de overgebleven bekers opnieuw laat neerzetten. Bijvoorbeeld in een kleine driehoek of een rechte lijn. Meestal mag elk team twee keer per spel een rerack vragen. Dat doe je aan het begin van je eigen beurt.</p>
+
+        <h3>Bouncen</h3>
+        <p>Je mag de bal ook via de tafel laten stuiteren. Valt een bounce in een beker? Dan telt hij voor twee bekers. Het andere team mag een stuiterende bal wel wegslaan. Een bal die rechtstreeks komt, mag niemand aanraken.</p>
+
+        <h3>Eilandje</h3>
+        <p>Staat een beker helemaal los van de rest? Dan is het een eilandje. Roep "eiland" voordat je gooit. Raak je hem? Dan gaat er nog een beker naar keuze van tafel.</p>
+
+        <h3>Dezelfde beker</h3>
+        <p>Gooien beide spelers in dezelfde beurt in dezelfde beker? Dan gaan er drie bekers van tafel. Die ene plus twee naar keuze.</p>
+
+        <h3>Laatste kans</h3>
+        <p>Is je laatste beker geraakt? Dan krijgt je team nog één kans. Jullie gooien tot je mist. Raak je alle bekers die de ander nog heeft? Dan volgt er een verlenging met 3 bekers per kant.</p>
+
+        <h3>Een bal die terugrolt</h3>
+        <p>Rolt de bal na je worp terug naar jouw kant en pak je hem op? Dan mag je hem nog een keer gooien, maar alleen als trickshot achter je rug.</p>
+
+        <h3>Hygiënisch beerpong spelen</h3>
+        <p>Liever niet uit bekers drinken waar een bal in heeft gezeten? Vul de bekers op tafel met water. Raakt de bal, dan drinkt de tegenstander uit zijn eigen drankje.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Tips om beter te gooien</h2>
+        <ul>
+          <li>Gooi met een boogje. Een strakke worp stuitert er sneller uit.</li>
+          <li>Mik op de middelste beker. Mis je een beetje, dan valt hij nog in een beker ernaast.</li>
+          <li>Blijf op dezelfde plek staan. Zo gooi je elke keer hetzelfde.</li>
+          <li>Houd de bal schoon. Spoel hem af in de beker water.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Varianten op beerpong</h2>
+
+        <h3>Flip cup</h3>
+        <p>Twee teams staan tegenover elkaar aan een tafel. Iedereen heeft een beker bier. De eerste van elk team drinkt zijn beker leeg en zet hem op de rand van de tafel. Dan tikt hij de beker met één vinger om, zodat hij ondersteboven landt. Lukt dat? Dan is de volgende aan de beurt. Het team dat als eerste klaar is, wint.</p>
+
+        <h3>Stress Pong</h3>
+        <p>Bij <a routerLink="/blog/drankspelletjes/stress-pong">Stress Pong</a> speelt de hele groep tegelijk. Met twee ballen en een stapel bekers in het midden. Het is sneller en chaotischer dan beerpong.</p>
+
+        <p>Op zoek naar meer drankspellen? Bekijk ook onze <a routerLink="/drankspellen">top 10 leukste drankspellen</a>.</p>
+      </div>
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Vergelijkbare drankspellen</h2>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Aanbevolen drankspellen</h2>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

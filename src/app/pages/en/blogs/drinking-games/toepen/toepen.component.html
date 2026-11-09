@@ -1,0 +1,217 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Toepen</h1>
+      <p class="legal-intro">
+        Toepen is a Dutch card game you'll see in every brown café in the Netherlands. You play with 4 cards and only the last trick counts. It's all about bluffing. Knock on the table and the stakes go up. Do the others dare to stay in?
+      </p>
+      <p class="legal-intro">
+        The rules are simple. The game only gets exciting once you start knocking. Below you'll learn step by step how it works. At the bottom you'll find how to turn it into a drinking game.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>What is Toepen?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/toepen.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/toepen.png" alt="Friends playing Toepen with cards in hand while one of them knocks on the table" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Type</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Players</span>
+              </div>
+              <span class="game-stat__value">2 to 8</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Duration</span>
+              </div>
+              <span class="game-stat__value">20-45 minutes</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">What you need</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Playing cards</span>
+              <span class="game-tag">Pen and paper</span>
+              <span class="game-tag">Drinks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Setup</h2>
+        <p>Toepen is played with 32 cards. Take a normal deck and remove all 2s, 3s, 4s, 5s and 6s and the jokers. From every suit you keep the 7, 8, 9, 10, jack, queen, king and ace.</p>
+        <ol>
+          <li>Write everyone's name on a piece of paper. That's where you keep track of penalty points.</li>
+          <li>Agree on how many penalty points knock you out. Usually that's 10. Want a longer game? Play to 15.</li>
+          <li>Pick a dealer. The dealer shuffles and gives everyone 4 cards.</li>
+          <li>The rest of the deck stays face down on the table.</li>
+        </ol>
+        <p>Toepen works best with 4 to 6 players. You can play with 2 or 3, but there's less bluffing.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>The order of the cards</h2>
+        <p>In Toepen the order is different from what you're used to. The 10 is the highest card and the jack the lowest.</p>
+        <ol>
+          <li>10 (highest)</li>
+          <li>9</li>
+          <li>8</li>
+          <li>7</li>
+          <li>Ace</li>
+          <li>King</li>
+          <li>Queen</li>
+          <li>Jack (lowest)</li>
+        </ol>
+        <p>There are no trumps. A card from another suit never wins, even if it's higher.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>How to play</h2>
+        <p>Every round has 4 tricks. Everyone plays one card per trick.</p>
+        <ol>
+          <li>The player to the left of the dealer leads. They put one card face up on the table.</li>
+          <li>The others take turns to play a card. You have to follow suit. A heart is led and you have hearts? Then you have to play a heart.</li>
+          <li>Don't have that suit? Then play any card you like. That card can't win the trick.</li>
+          <li>The highest card of the suit that was led wins the trick. Whoever wins the trick leads the next one.</li>
+          <li>You play 4 tricks like this. Only the last trick counts. Whoever wins it, wins the round.</li>
+          <li>All other players get penalty points. Without a knock that's 1 point.</li>
+          <li>The dealer moves one seat to the left and a new round starts.</li>
+        </ol>
+        <p>So the first 3 tricks don't count. But they do matter. Whoever wins a trick leads the next one. That's how you decide which suit the last trick starts with. Save your strongest card for the end.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Knocking: raising the stakes</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/Overtoepen.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/Overtoepen.png" alt="A player knocks on the table and calls toep while another puts their cards down and folds" class="game-image" loading="lazy">
+        </picture>
+        <p>This is where the game gets its name. "Toep" is Dutch for knock. During a round, any player can knock on the table and say "toep". The stake then goes up by 1 point.</p>
+        <ul>
+          <li>After a knock, every other player chooses: stay in or fold.</li>
+          <li>Stay in? Then you keep playing for the higher stake.</li>
+          <li>Fold? Then you put your cards away. You get the penalty points of the stake before the knock. You sit out the rest of the round.</li>
+          <li>After you knock, someone else has to knock first. Only then can you knock again.</li>
+          <li>Everyone folds? Then you win the round straight away.</li>
+        </ul>
+
+        <h3>An example</h3>
+        <p>The stake is 1. Lisa knocks, so the stake goes to 2. Tom folds and gets 1 penalty point. Sem stays in. One trick later Sem knocks. The stake goes to 3. Lisa stays in. Sem wins the last trick? Then Lisa gets 3 penalty points.</p>
+
+        <h3>Bluffing</h3>
+        <p>You don't need good cards to knock. A knock with bad cards can make the others fold. But if they stay in, you're stuck with a high stake and nothing in your hand. That's exactly what makes Toepen so much fun.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Dirty laundry</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/toepen vuile was.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/toepen vuile was.png" alt="Dirty laundry in Toepen: jack, queen, king and ace face up on the table" class="game-image" loading="lazy">
+        </picture>
+        <p>Only face cards in your hand? Then you've got dirty laundry ("vuile was" in Dutch). Face cards are the jack, queen, king and ace. Many groups also count 3 face cards and a 7 as dirty laundry.</p>
+        <ol>
+          <li>Call dirty laundry before the first card is played.</li>
+          <li>Put your cards away face down and take 4 new ones from the deck.</li>
+          <li>Someone doesn't believe you? They can check the cards you put away.</li>
+          <li>Your dirty laundry was real? Then the doubter gets 1 penalty point.</li>
+          <li>It wasn't? Then you get 1 penalty point and keep playing with your old cards.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>Who wins?</h2>
+        <p>Reached the agreed number of penalty points? Then you're out. The others keep playing. The last player standing wins the game.</p>
+        <p>Prefer a shorter game? Stop as soon as the first player is out. They've lost.</p>
+
+        <h3>House rules</h3>
+        <p>Every Dutch pub and every student house plays Toepen a little differently. These are the differences you'll come across most.</p>
+        <ul>
+          <li><strong>When you can knock:</strong> in some groups at any moment, in others only when it's your turn.</li>
+          <li><strong>The limit:</strong> 10 penalty points is the most common. With 15 a game lasts longer.</li>
+          <li><strong>Dirty laundry:</strong> only with 4 face cards, or also with 3 face cards and a 7.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Toepen as a drinking game</h2>
+        <p>Toepen is a game you play over a drink anyway. Want to turn it into a proper drinking game? Pick one or more of these options. Agree on them before you start.</p>
+
+        <h3>Round losers drink</h3>
+        <p>Every penalty point is also a sip. Lose a round with a stake of 3? Then you get 3 penalty points and take 3 sips. Fold and you drink the points you get.</p>
+
+        <h3>The loser of the game drinks</h3>
+        <p>Whoever hits the penalty point limit first downs an <a routerLink="/en/blog/dictionary/what-is-an-adtje">adtje</a>, their whole drink in one go. Or buys the next round.</p>
+
+        <h3>The winner hands out</h3>
+        <p>Whoever wins the last trick hands out the stake in sips. They can split them over several players. That way the winner is the boss.</p>
+
+        <h3>With an anytimer at stake</h3>
+        <p>The winner of the game gets an <a routerLink="/en/blog/dictionary/what-is-an-anytimer">anytimer</a> from the loser. They can use it any time they like.</p>
+
+        <p>More games with a deck of cards? Check out our <a routerLink="/en/blog/inspiration/card-drinking-games">card drinking games</a>.</p>
+      </div>
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Similar drinking games</h2>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended drinking games</h2>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

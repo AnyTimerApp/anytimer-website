@@ -97,6 +97,9 @@ export interface BlogPost {
   // Only on English dictionary entries for a Dutch (or Flemish) student word
   // that stays untranslated: shows the "Dutch student slang" label.
   termOrigin?: 'dutch' | 'flemish';
+  // Only on Begrippen / dictionary terms: replaces the standard termSeoTitle()
+  // when searchers use another word too (e.g. "unhinged vertaling").
+  seoTitle?: string;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -210,6 +213,41 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-07-21',
     image: 'assets/blogs/huisavond/Huisavond cover.webp',
     imageAlt: 'Top 10 huisavondideeën',
+    variant: 'light'
+  },
+  {
+    slug: 'sinterklaas-dobbelspel',
+    path: 'blog/inspiratie/sinterklaas-dobbelspel',
+    category: 'Inspiratie',
+    title: 'Sinterklaas dobbelspel: regels en opdrachten voor volwassenen',
+    excerpt: 'Pakjesavond met je huisgenoten? Zo speel je het dobbelspel met cadeautjes. Met regels per worp, opdrachten en een studentenhuisversie.',
+    date: '2026-11-09',
+    image: 'assets/blogs/sinterklaas dobbelspel/sinterklaas.webp',
+    imageAlt: 'Vrienden gooien een dobbelsteen naast een stapel cadeautjes bij het Sinterklaas dobbelspel',
+    variant: 'light'
+  },
+  {
+    slug: 'beerpong',
+    path: 'blog/drankspelletjes/beerpong',
+    category: 'Drankspelletjes',
+    subCategory: 'Behendigheid',
+    title: 'Beerpong',
+    excerpt: 'Gooi een pingpongbal in de bekers van de tegenstander. Raak je, dan moet de ander drinken. Met alle regels en huisregels.',
+    date: '2026-11-09',
+    image: 'assets/blogs/drankspel/beerpong.webp',
+    imageAlt: 'Vrienden spelen beerpong met rode bekers en een pingpongbal aan een lange tafel',
+    variant: 'light'
+  },
+  {
+    slug: 'toepen',
+    path: 'blog/drankspelletjes/toepen',
+    category: 'Drankspelletjes',
+    subCategory: 'Kaartspel',
+    title: 'Toepen',
+    excerpt: 'Het Nederlandse kaartspel waarbij alleen de laatste slag telt. Klop op tafel, verhoog de inzet en bluf de anderen eruit.',
+    date: '2026-11-09',
+    image: 'assets/blogs/drankspel/toepen.webp',
+    imageAlt: 'Vrienden spelen toepen met kaarten in de hand terwijl er een op tafel klopt',
     variant: 'light'
   },
   {
@@ -5752,6 +5790,7 @@ export const BLOG_POSTS: BlogPost[] = [
     path: 'blog/begrippen/unhinged',
     category: 'Begrippen',
     title: 'Unhinged',
+    seoTitle: 'Unhinged betekenis en vertaling: wat is unhinged?',
     excerpt: 'Unhinged betekent compleet doorgeslagen, chaotisch of totaal onvoorspelbaar.',
     date: '2025-06-01',
     image: 'assets/blogs/wat is een anytimer/Wat is een anytimer cover.webp',
@@ -6081,7 +6120,8 @@ const RECOMMENDED_POSTS: Record<string, string[]> = {
   'drankspellen-met-kaarten': ['drankspellen-zonder-kaarten', 'drankspellen-voor-2-personen', 'drankspellen'],
   'drankspellen-zonder-kaarten': ['drankspellen-met-kaarten', 'drankspellen-voor-2-personen', 'drankspellen'],
   'drankspellen-voor-2-personen': ['drankspellen-met-kaarten', 'drankspellen-zonder-kaarten', 'huisavondideeen'],
-  'huisavondideeen': ['drankspellen', 'drankspellen-voor-2-personen', 'wat-is-een-anytimer'],
+  'huisavondideeen': ['sinterklaas-dobbelspel', 'drankspellen', 'drankspellen-voor-2-personen'],
+  'sinterklaas-dobbelspel': ['huisavondideeen', 'drankspellen', 'drankspellen-zonder-kaarten'],
   'wat-is-de-beste-adt-timer': ['wat-is-een-adtje', 'wat-is-een-anytimer', 'mag-je-een-anytimer-weigeren'],
   'wat-is-een-adtje': ['wat-is-de-beste-adt-timer', 'wat-is-een-anytimer', 'drankspellen'],
   'wat-is-een-anytimer': ['anytimers-bijhouden-whatsapp-notities', 'mag-je-een-anytimer-weigeren', 'wat-is-de-beste-adt-timer'],

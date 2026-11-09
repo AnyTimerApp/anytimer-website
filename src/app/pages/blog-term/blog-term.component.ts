@@ -78,7 +78,7 @@ export class BlogTermComponent {
       { label: this.post.title }
     ];
 
-    const title = termSeoTitle(this.post.title, this.lang, this.post.termOrigin);
+    const title = this.post.seoTitle ?? termSeoTitle(this.post.title, this.lang, this.post.termOrigin);
     const definition = this.post.excerpt;
     const withSuffix = definition + DESCRIPTION_SUFFIX[this.lang];
     const description = withSuffix.length <= MAX_DESCRIPTION ? withSuffix : definition;

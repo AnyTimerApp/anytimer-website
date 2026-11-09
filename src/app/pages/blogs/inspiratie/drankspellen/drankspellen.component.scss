@@ -6,3 +6,12 @@
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
+
+.card-meaning-list li {
+  padding-left: 0;
+  text-align: left;
+
+  &::before {
+    display: none;
+  }
+}

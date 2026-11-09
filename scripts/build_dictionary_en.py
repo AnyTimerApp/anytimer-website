@@ -43,6 +43,7 @@ EXTRA_TARGETS = {
     'what-is-an-adtje': ('adtje', 'en/blog/dictionary/what-is-an-adtje'),
     # Drinking game pages that dictionary entries refer to.
     'kingsen': ('Kingsen', 'en/blog/drinking-games/kingsen'),
+    'beer-pong-rules': ('Beer Pong rules', 'en/blog/drinking-games/beer-pong'),
 }
 
 # Dutch titles that are also everyday English (or too short) to auto-link.
