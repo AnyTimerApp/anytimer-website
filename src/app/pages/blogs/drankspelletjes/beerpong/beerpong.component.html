@@ -8,6 +8,7 @@
       <p class="legal-intro">
         Beerpong is het bekendste drankspel ter wereld. Twee teams, een tafel, een paar bekers en één pingpongbal. Gooi de bal in de bekers van de tegenstander. Raak je? Dan moet de ander drinken.
       </p>
+      <p class="legal-intro">Je schrijft het als beerpong, beer pong of bierpong. Het is hetzelfde spel.</p>
       <p class="legal-intro">
         De basis snap je in een minuut. Maar elk huis speelt met andere regels. Hieronder vind je de officiële regels en de huisregels die je vooraf moet afspreken.
       </p>
@@ -156,20 +157,24 @@
 
       <div class="legal-section legal-section--no-divider">
         <h2>Vergelijkbare drankspellen</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of similarGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
       </div>
 
       <div class="legal-section">
         <h2>Aanbevolen drankspellen</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of recommendedGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
 
         <app-download-cta></app-download-cta>
       </div>

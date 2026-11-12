@@ -25,11 +25,13 @@
         <h3 class="blog-home-subtitle">{{ t.favourites }}</h3>
         <span class="blog-home-subheader__arrow">→</span>
       </a>
+      <app-slider-nav>
       <div class="related-slider">
         @for (game of topDrankspellen; track game.slug) {
         <app-blog-card [post]="game"></app-blog-card>
         }
       </div>
+      </app-slider-nav>
     </div>
 
     <div class="blog-home-subsection">
@@ -37,11 +39,13 @@
         <h3 class="blog-home-subtitle">{{ t.latest }}</h3>
         <span class="blog-home-subheader__arrow">→</span>
       </a>
+      <app-slider-nav>
       <div class="related-slider">
         @for (post of latestPosts; track post.slug) {
         <app-blog-card [post]="post"></app-blog-card>
         }
       </div>
+      </app-slider-nav>
     </div>
   </div>
 </section>

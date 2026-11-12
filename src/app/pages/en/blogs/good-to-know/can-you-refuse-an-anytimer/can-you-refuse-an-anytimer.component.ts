@@ -8,19 +8,21 @@ import { BlogCardComponent } from '../../../../../components/blog-card/blog-card
 import { BreadcrumbItem } from '../../../../../shared/breadcrumb-schema';
 import { applyArticleSeo } from '../../../../../shared/article-seo';
 import { UI } from '../../../../../i18n/ui';
-import { getPostsBySlug, getRecommendedPosts } from '../../../../blog/blog-posts.data';
+import { getPostsBySlug, getRecommendedGamesForPost, getRecommendedPosts } from '../../../../blog/blog-posts.data';
+import { SliderNavComponent } from '../../../../../components/slider-nav/slider-nav.component';
 
 // English version of blogs/weetjes/mag-je-een-anytimer-weigeren.
 @Component({
   selector: 'app-can-you-refuse-an-anytimer',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'can-you-refuse-an-anytimer.component.html',
   styleUrls: ['../../../../juridisch/juridisch.component.scss', '../../../../blogs/blog-article-shared.scss', '../../../../blogs/weetjes/mag-je-een-anytimer-weigeren/mag-je-een-anytimer-weigeren.component.scss']
 })
 export class CanYouRefuseAnAnytimerComponent {
   private readonly ui = UI.en;
   readonly recommendedPosts = getRecommendedPosts(getPostsBySlug(['can-you-refuse-an-anytimer'], 'en')[0]);
+  readonly recommendedGames = getRecommendedGamesForPost(getPostsBySlug(['can-you-refuse-an-anytimer'], 'en')[0]);
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: this.ui.paths.blog },

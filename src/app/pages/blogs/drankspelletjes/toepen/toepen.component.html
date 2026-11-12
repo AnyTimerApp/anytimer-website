@@ -194,20 +194,24 @@
 
       <div class="legal-section legal-section--no-divider">
         <h2>Vergelijkbare drankspellen</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of similarGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
       </div>
 
       <div class="legal-section">
         <h2>Aanbevolen drankspellen</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of recommendedGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
 
         <app-download-cta></app-download-cta>
       </div>

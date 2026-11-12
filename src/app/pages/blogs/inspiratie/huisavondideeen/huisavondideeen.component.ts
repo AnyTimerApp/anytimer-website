@@ -5,18 +5,20 @@ import { RouterLink } from '@angular/router';
 import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcrumbs.component';
 import { DownloadCtaComponent } from '../../../../components/download-cta/download-cta.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
-import { BLOG_POSTS, CATEGORY_SLUGS, getRecommendedPosts } from '../../../blog/blog-posts.data';
+import { BLOG_POSTS, CATEGORY_SLUGS, getRecommendedGamesForPost, getRecommendedPosts } from '../../../blog/blog-posts.data';
 import { BlogCardComponent } from '../../../../components/blog-card/blog-card.component';
+import { SliderNavComponent } from '../../../../components/slider-nav/slider-nav.component';
 
 @Component({
   selector: 'app-huisavondideeen',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'huisavondideeen.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './huisavondideeen.component.scss']
 })
 export class HuisavondideeenComponent {
   readonly recommendedPosts = getRecommendedPosts(BLOG_POSTS.find(p => p.slug === 'huisavondideeen')!);
+  readonly recommendedGames = getRecommendedGamesForPost(BLOG_POSTS.find(p => p.slug === 'huisavondideeen')!);
   readonly category = BLOG_POSTS.find(p => p.slug === 'huisavondideeen')!.category;
 
   breadcrumbs: BreadcrumbItem[] = [

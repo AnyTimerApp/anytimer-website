@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { BlogCardComponent } from '../../../components/blog-card/blog-card.component';
 import { BlogPost, CategoryCard, getCategoryCards, postsFor } from '../../blog/blog-posts.data';
+import { TIMER_CARD } from '../../blog/timer-card.data';
 import { LanguageService } from '../../../i18n/language.service';
 import { Lang } from '../../../i18n/lang';
 import { UI } from '../../../i18n/ui';
+import { SliderNavComponent } from '../../../components/slider-nav/slider-nav.component';
 
 // "Populairste drankspellen" on the home page: the 12 single-game posts with the most
 // Google Search Console impressions over the last 28 days. Updated by the weekly SEO
@@ -37,31 +39,6 @@ const PINNED_SLUGS: Record<Lang, string[]> = {
   en: ['best-drinking-games', 'best-chug-timer']
 };
 
-const TIMER_CARD: Record<Lang, BlogPost> = {
-  nl: {
-    slug: 'adt-timer',
-    path: 'adt-timer',
-    category: 'Inspiratie',
-    title: 'Online adt timer',
-    excerpt: 'Time je adtje gratis in je browser. Dezelfde Any-timer als in de app, tot op de honderdste seconde.',
-    date: '2026-11-04',
-    image: 'assets/blogs/beste timer/adt timer online.webp',
-    imageAlt: 'De online adt timer: een blauw scherm met de Any-timer, een tijd en een vingerafdruk',
-    variant: 'light'
-  },
-  en: {
-    slug: 'chug-timer',
-    path: 'en/chug-timer',
-    category: 'Inspiratie',
-    title: 'Online chug timer',
-    excerpt: 'Time your chug for free in your browser. The same Any timer as in the app, down to a hundredth of a second.',
-    date: '2026-11-04',
-    image: 'assets/blogs/beste timer/adt timer online.webp',
-    imageAlt: 'The online chug timer: a blue screen with the Any timer, a time and a fingerprint',
-    variant: 'light'
-  }
-};
-
 const TEXT = {
   nl: {
     title: 'We delen ook al onze kennis',
@@ -80,7 +57,7 @@ const TEXT = {
 @Component({
   selector: 'app-blog-section',
   standalone: true,
-  imports: [RouterLink, CommonModule, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, CommonModule, BlogCardComponent],
   templateUrl: './blog-section.component.html',
   styleUrls: ['../../blog/blog-shared.component.scss', './blog-section.component.scss']
 })

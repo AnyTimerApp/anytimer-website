@@ -10,12 +10,13 @@ import { applyArticleSeo } from '../../../../../shared/article-seo';
 import { UI } from '../../../../../i18n/ui';
 import { BLOG_POSTS_EN } from '../../../../blog/blog-posts.en.data';
 import { getSimilarGames, getRecommendedGames } from '../../../../blog/blog-posts.data';
+import { SliderNavComponent } from '../../../../../components/slider-nav/slider-nav.component';
 
 // English version of blogs/drankspelletjes/kusje-geven. Styles are shared with the Dutch page.
 @Component({
   selector: 'app-suck-and-blow-en',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'suck-and-blow.component.html',
   styleUrls: ['../../../../juridisch/juridisch.component.scss', '../../../../blogs/blog-article-shared.scss', '../../../../blogs/drankspelletjes/kusje-geven/kusje-geven.component.scss']
 })

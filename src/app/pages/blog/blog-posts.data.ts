@@ -1,4 +1,6 @@
 import { BLOG_POSTS_EN } from './blog-posts.en.data';
+import { TIMER_CARD } from './timer-card.data';
+import { BLOG_RECOMMENDATIONS, DEFAULT_BLOGS, DEFAULT_GAMES, GAME_RECOMMENDATIONS, REC_BLOGS, REC_GAMES } from './content-recommendations.data';
 import type { Lang } from '../../i18n/lang';
 import { UI } from '../../i18n/ui';
 
@@ -6074,100 +6076,81 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 ];
 
-// Fixed "always recommended" picks for every single-game Drankspelletjes post.
-// On the (rare) page that IS one of these three, that slot is swapped for the
-// fallback so a post never recommends itself. Same games in both languages.
-const RECOMMENDED_SLUGS: Record<Lang, string[]> = {
-  nl: ['de-paardenrace', 'mario-barf', 'ring-of-fire'],
-  en: ['horse-race', 'beerio-kart', 'ring-of-fire']
-};
-const RECOMMENDED_FALLBACK_SLUG: Record<Lang, string> = {
-  nl: 'bussen',
-  en: 'ride-the-bus'
-};
-
-export function getRecommendedGames(post: BlogPost): BlogPost[] {
-  const lang = langOfPost(post);
-  return RECOMMENDED_SLUGS[lang]
-    .map(slug => slug === post.slug ? RECOMMENDED_FALLBACK_SLUG[lang] : slug)
-    .map(slug => postsFor(lang).find(p => p.slug === slug)!);
-}
-
-// For posts that hand-pick their "Vergelijkbare drankspellen" instead of
-// using getSimilarGames().
+// For posts that need a few posts by slug (for example the post itself in English).
 export function getPostsBySlug(slugs: string[], lang: Lang = 'nl'): BlogPost[] {
   return slugs.map(slug => postsFor(lang).find(p => p.slug === slug)!);
 }
 
-// 3 other single-game posts for the "Vergelijkbare drankspellen" block: same
-// subCategory first (newest first), topped up from other subcategories if
-// fewer than 3 exist. Excludes the post itself and whatever already appears
-// in getRecommendedGames() for this post, so nothing shows up twice on a page.
-export function getSimilarGames(post: BlogPost): BlogPost[] {
-  const exclude = new Set([post.slug, ...getRecommendedGames(post).map(p => p.slug)]);
-  const pool = postsFor(langOfPost(post)).filter(p => p.category === 'Drankspelletjes' && !exclude.has(p.slug));
-  const byDateDesc = (a: BlogPost, b: BlogPost) => b.date.localeCompare(a.date);
-  const sameSubCategory = pool.filter(p => p.subCategory === post.subCategory).sort(byDateDesc);
-  const otherSubCategory = pool.filter(p => p.subCategory !== post.subCategory).sort(byDateDesc);
-  return [...sameSubCategory, ...otherSubCategory].slice(0, 3);
-}
-
-// "Aanbevolen blogs" under every article that isn't a single drinking game:
-// 3 hand-picked, related posts per Dutch article. English articles reuse the
-// same picks through their `alternate` link, so both languages stay in sync.
-const RECOMMENDED_POSTS: Record<string, string[]> = {
-  'drankspellen': ['drankspellen-met-kaarten', 'drankspellen-zonder-kaarten', 'huisavondideeen'],
-  'drankspellen-met-kaarten': ['drankspellen-zonder-kaarten', 'drankspellen-voor-2-personen', 'drankspellen'],
-  'drankspellen-zonder-kaarten': ['drankspellen-met-kaarten', 'drankspellen-voor-2-personen', 'drankspellen'],
-  'drankspellen-voor-2-personen': ['drankspellen-met-kaarten', 'drankspellen-zonder-kaarten', 'huisavondideeen'],
-  'huisavondideeen': ['sinterklaas-dobbelspel', 'drankspellen', 'drankspellen-voor-2-personen'],
-  'sinterklaas-dobbelspel': ['huisavondideeen', 'drankspellen', 'drankspellen-zonder-kaarten'],
-  'wat-is-de-beste-adt-timer': ['wat-is-een-adtje', 'wat-is-een-anytimer', 'mag-je-een-anytimer-weigeren'],
-  'wat-is-een-adtje': ['wat-is-de-beste-adt-timer', 'wat-is-een-anytimer', 'drankspellen'],
-  'wat-is-een-anytimer': ['anytimers-bijhouden-whatsapp-notities', 'mag-je-een-anytimer-weigeren', 'wat-is-de-beste-adt-timer'],
-  'mag-je-een-anytimer-weigeren': ['wat-is-een-anytimer', 'anytimers-bijhouden-whatsapp-notities', 'wat-is-de-beste-adt-timer'],
-  'anytimers-bijhouden-whatsapp-notities': ['wat-is-een-anytimer', 'mag-je-een-anytimer-weigeren', 'wat-is-de-beste-adt-timer']
-};
-
-// Fallback picks for a Begrippen term page, after any article its own text links to.
-const TERM_FALLBACK_POSTS = ['wat-is-een-anytimer', 'drankspellen', 'huisavondideeen'];
-
 // The Dutch post (by slug) in the given language: itself for 'nl', its English
 // twin (matched on `alternate`) for 'en'.
-function inLanguage(nlSlug: string, lang: Lang): BlogPost | undefined {
+export function inLanguage(nlSlug: string, lang: Lang): BlogPost | undefined {
   const nl = BLOG_POSTS.find(p => p.slug === nlSlug);
   if (!nl || lang === 'nl') return nl;
   return BLOG_POSTS_EN.find(p => p.alternate === nl.path);
 }
 
-function dutchSlugOf(post: BlogPost): string {
+export function dutchSlugOf(post: BlogPost): string {
   if (langOfPost(post) === 'nl') return post.slug;
   return BLOG_POSTS.find(p => p.path === post.alternate)?.slug ?? post.slug;
 }
 
-export function getRecommendedPosts(post: BlogPost): BlogPost[] {
-  const lang = langOfPost(post);
-  return (RECOMMENDED_POSTS[dutchSlugOf(post)] ?? [])
-    .map(slug => inLanguage(slug, lang))
-    .filter((p): p is BlogPost => !!p);
+// Recommendation sliders under blogs, games and term pages. Which games and blogs
+// a page shows comes from scripts/build_recommendations.py: relevance to the page
+// plus search volume and keyword difficulty, with a quota so every game and blog
+// is used and the ones with the most volume are shown most.
+function resolveRecommendation(nlSlug: string, lang: Lang): BlogPost | undefined {
+  return nlSlug === 'adt-timer' ? TIMER_CARD[lang] : inLanguage(nlSlug, lang);
 }
 
-// For a Begrippen term page: first the articles and drinking games its text
-// links to (e.g. "adtje" links to /wat-is-een-adtje/), then the fallback picks.
-export function getRecommendedPostsForTerm(post: BlogPost, paragraphs: string[]): BlogPost[] {
-  const lang = langOfPost(post);
-  const candidates = postsFor(lang).filter(p =>
-    p.category === 'Drankspelletjes' || RECOMMENDED_POSTS[dutchSlugOf(p)]);
-  const linked = [...paragraphs.join(' ').matchAll(/href="\/([^"]*?)\/?"/g)]
-    .map(m => candidates.find(p => p.path === m[1]))
-    .filter((p): p is BlogPost => !!p);
-  const fallback = TERM_FALLBACK_POSTS
-    .map(slug => inLanguage(slug, lang))
-    .filter((p): p is BlogPost => !!p);
-  const seen = new Set<string>();
-  return [...linked, ...fallback]
-    .filter(p => p.slug !== post.slug && !seen.has(p.slug) && !!seen.add(p.slug))
-    .slice(0, 3);
+// Turns generated indexes into posts in the page language. Skips the page itself
+// and anything in `exclude`, and tops up from the default order (highest value
+// first) when a list comes up short.
+export function pickRecommendations(indexes: number[], slugs: string[], defaults: number[],
+                                    lang: Lang, count: number, exclude: string[] = []): BlogPost[] {
+  const skip = new Set(exclude);
+  const picked: BlogPost[] = [];
+  for (const slug of [...indexes, ...defaults].map(i => slugs[i])) {
+    if (picked.length === count) break;
+    if (skip.has(slug)) continue;
+    const post = resolveRecommendation(slug, lang);
+    if (post && !picked.some(p => p.slug === post.slug)) picked.push(post);
+  }
+  return picked;
+}
+
+// "Vergelijkbare drankspellen" (5) on a single-game page.
+export function getSimilarGames(post: BlogPost): BlogPost[] {
+  const slug = dutchSlugOf(post);
+  const [similar] = GAME_RECOMMENDATIONS[slug] ?? [DEFAULT_GAMES, DEFAULT_GAMES];
+  return pickRecommendations(similar, REC_GAMES, DEFAULT_GAMES, langOfPost(post), 5, [slug]);
+}
+
+// "Aanbevolen drankspellen" (5) on a single-game page. Never repeats a similar game.
+export function getRecommendedGames(post: BlogPost): BlogPost[] {
+  const slug = dutchSlugOf(post);
+  const [similar, recommended] = GAME_RECOMMENDATIONS[slug] ?? [[], DEFAULT_GAMES];
+  return pickRecommendations(recommended, REC_GAMES, DEFAULT_GAMES, langOfPost(post), 5,
+    [slug, ...similar.map(i => REC_GAMES[i])]);
+}
+
+// "Aanbevolen drankspellen" (10) under a blog, by Dutch slug (also 'adt-timer').
+export function getRecommendedGamesForSlug(nlSlug: string, lang: Lang): BlogPost[] {
+  const [games] = BLOG_RECOMMENDATIONS[nlSlug] ?? [DEFAULT_GAMES, DEFAULT_BLOGS];
+  return pickRecommendations(games, REC_GAMES, DEFAULT_GAMES, lang, 10);
+}
+
+// "Aanbevolen blogs" (10) under a blog, by Dutch slug (also 'adt-timer').
+export function getRecommendedPostsForSlug(nlSlug: string, lang: Lang): BlogPost[] {
+  const [, blogs] = BLOG_RECOMMENDATIONS[nlSlug] ?? [DEFAULT_GAMES, DEFAULT_BLOGS];
+  return pickRecommendations(blogs, REC_BLOGS, DEFAULT_BLOGS, lang, 10, [nlSlug]);
+}
+
+export function getRecommendedGamesForPost(post: BlogPost): BlogPost[] {
+  return getRecommendedGamesForSlug(dutchSlugOf(post), langOfPost(post));
+}
+
+export function getRecommendedPosts(post: BlogPost): BlogPost[] {
+  return getRecommendedPostsForSlug(dutchSlugOf(post), langOfPost(post));
 }
 
 // Single source of truth for the A-Z letter used to group/filter a Begrippen

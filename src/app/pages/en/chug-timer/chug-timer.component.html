@@ -63,6 +63,11 @@
       </div>
 
       <div class="legal-section">
+        <h2>A chug timer without a gadget</h2>
+        <p>A beer timer gadget or a beer bong with a built-in timer costs money and you have to bring it. This online chug timer is free and already in your pocket. Open the page on your phone, put it on the table and chug. On a laptop the space bar works too.</p>
+      </div>
+
+      <div class="legal-section">
         <picture style="display: contents">
           <source srcset="assets/blogs/beste timer/Any-timer in de club.webp" type="image/webp">
           <img src="assets/blogs/beste timer/Any-timer in de club.png" alt="The Any timer in the AnyTimerApp, used to time a chug in the club" class="game-image" loading="lazy">
@@ -74,6 +79,28 @@
         <app-download-cta></app-download-cta>
       </div>
 
+
+      <div class="legal-section">
+        <h2>Recommended drinking games</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+          <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended blogs</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (post of recommendedPosts; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+      </div>
     </div>
   </div>
 </div>

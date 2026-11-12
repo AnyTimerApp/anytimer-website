@@ -50,6 +50,11 @@
       </div>
 
       <div class="legal-section">
+        <h2>Adt timer zonder apparaat</h2>
+        <p>Een fysieke bier timer zoals een AdtMeister of een biersnorkel met timer kost geld en moet je meenemen. Deze online adt timer is gratis en zit al in je broekzak. Open de pagina op je telefoon, leg hem op tafel en adten maar. Op een laptop werkt het ook met de spatiebalk.</p>
+      </div>
+
+      <div class="legal-section">
         <picture style="display: contents">
           <source srcset="assets/blogs/beste timer/Any-timer in de club.webp" type="image/webp">
           <img src="assets/blogs/beste timer/Any-timer in de club.png" alt="De Any-timer in de AnyTimerApp, gebruikt om een adtje te timen in de club" class="game-image" loading="lazy">
@@ -61,6 +66,28 @@
         <app-download-cta></app-download-cta>
       </div>
 
+
+      <div class="legal-section">
+        <h2>Aanbevolen drankspellen</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+          <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+      </div>
+
+      <div class="legal-section">
+        <h2>Aanbevolen blogs</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (post of recommendedPosts; track post.slug) {
+          <app-blog-card [post]="post"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+      </div>
     </div>
   </div>
 </div>

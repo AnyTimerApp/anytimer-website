@@ -1,0 +1,45 @@
+/* "Aanbevolen drankspellen" and "Aanbevolen blogs" under a term page: the same
+   heading with arrow as the home page blog section
+   (pages/home/blog-section/blog-section.component.scss). The slider itself is
+   .related-slider in blogs/blog-article-shared.scss. */
+
+.term-subsection {
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+}
+
+/* Two classes, so it wins from the blue link color of the page (legal-page links),
+   like the dark headings on the home page. */
+.term-subsection .term-subheader {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text-main);
+  margin-bottom: 20px;
+
+  &:hover {
+    color: var(--primary);
+
+    .term-subheader__arrow {
+      transform: translateX(4px);
+    }
+  }
+}
+
+/* Two classes, so it wins from `.legal-section h2` in juridisch.component.scss. */
+.term-subheader .term-subtitle {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: inherit;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.term-subheader__arrow {
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}

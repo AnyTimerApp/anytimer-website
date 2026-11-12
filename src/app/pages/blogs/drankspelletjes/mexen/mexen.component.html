@@ -4,9 +4,9 @@
     <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
 
     <div class="legal-header">
-      <h1 class="legal-title">Mexen</h1>
+      <h1 class="legal-title">Mexen regels</h1>
       <p class="legal-intro">
-        Mexen is een dobbelspel met twee stenen. Je probeert niet de laagste worp van de ronde te hebben en iedereen hoopt natuurlijk op de Mex.
+        Mexen (ook wel mexxen) is een dobbelspel met twee stenen. Je probeert niet de laagste worp van de ronde te hebben en iedereen hoopt natuurlijk op de Mex.
       </p>
     </div>
 
@@ -117,22 +117,36 @@
         <p>Op zoek naar meer drankspellen? Bekijk ook onze <a routerLink="/drankspellen">top 10 leukste drankspellen</a>.</p>
       </div>
 
+      <div class="legal-section">
+        <h2>Veelgestelde vragen over mexen</h2>
+        <h3>Wat is een Mex?</h3>
+        <p>Een Mex is een worp van een 2 en een 1. Je leest hem als 21. Dat is de hoogste worp in het spel en de straf wordt dan verdubbeld.</p>
+        <h3>Wat is de volgorde van de worpen?</h3>
+        <p>Eerst de Mex (21). Dan de dubbelen van 66 tot 11. Daarna de gewone worpen van 65 tot 31.</p>
+        <h3>Kun je mexen online spelen?</h3>
+        <p>Ja. Mexen zit in de gratis AnyTimerApp. Je hebt dan geen dobbelstenen nodig.</p>
+      </div>
+
       <div class="legal-section legal-section--no-divider">
         <h2>Vergelijkbare drankspellen</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of similarGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
       </div>
 
       <div class="legal-section">
         <h2>Aanbevolen drankspellen</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of recommendedGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
 
         <app-download-cta></app-download-cta>
       </div>

@@ -9,13 +9,14 @@ import { BreadcrumbItem } from '../../../../../shared/breadcrumb-schema';
 import { applyArticleSeo } from '../../../../../shared/article-seo';
 import { UI } from '../../../../../i18n/ui';
 import { BLOG_POSTS_EN } from '../../../../blog/blog-posts.en.data';
-import { getPostsBySlug, getRecommendedGames } from '../../../../blog/blog-posts.data';
+import { getRecommendedGames, getSimilarGames } from '../../../../blog/blog-posts.data';
+import { SliderNavComponent } from '../../../../../components/slider-nav/slider-nav.component';
 
 // English version of blogs/drankspelletjes/finger-roulette. Styles are shared with the Dutch page.
 @Component({
   selector: 'app-finger-roulette-en',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'finger-roulette.component.html',
   styleUrls: ['../../../../juridisch/juridisch.component.scss', '../../../../blogs/blog-article-shared.scss', '../../../../blogs/drankspelletjes/finger-roulette/finger-roulette.component.scss']
 })
@@ -24,7 +25,7 @@ export class FingerRouletteEnComponent {
   private readonly ui = UI.en;
   readonly subCategory = this.ui.subCategoryLabels[this.post.subCategory!];
 
-  readonly similarGames = getPostsBySlug(['bakplaten', 'angry-mug', 'crocodile-dentist'], 'en');
+  readonly similarGames = getSimilarGames(this.post);
   readonly recommendedGames = getRecommendedGames(this.post);
 
   breadcrumbs: BreadcrumbItem[] = [

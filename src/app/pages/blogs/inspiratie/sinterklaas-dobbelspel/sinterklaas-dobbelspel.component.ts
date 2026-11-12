@@ -6,18 +6,20 @@ import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcr
 import { DownloadCtaComponent } from '../../../../components/download-cta/download-cta.component';
 import { BreadcrumbItem } from '../../../../shared/breadcrumb-schema';
 import { applyArticleSeo } from '../../../../shared/article-seo';
-import { BLOG_POSTS, CATEGORY_SLUGS, DrankspelSubCategory, getRecommendedPosts } from '../../../blog/blog-posts.data';
+import { BLOG_POSTS, CATEGORY_SLUGS, DrankspelSubCategory, getRecommendedGamesForPost, getRecommendedPosts } from '../../../blog/blog-posts.data';
 import { BlogCardComponent } from '../../../../components/blog-card/blog-card.component';
+import { SliderNavComponent } from '../../../../components/slider-nav/slider-nav.component';
 
 @Component({
   selector: 'app-sinterklaas-dobbelspel',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'sinterklaas-dobbelspel.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', '../drankspellen/drankspellen.component.scss', '../../drankspelletjes/beerpong/beerpong.component.scss']
 })
 export class SinterklaasDobbelspelComponent {
   readonly recommendedPosts = getRecommendedPosts(BLOG_POSTS.find(p => p.slug === 'sinterklaas-dobbelspel')!);
+  readonly recommendedGames = getRecommendedGamesForPost(BLOG_POSTS.find(p => p.slug === 'sinterklaas-dobbelspel')!);
   readonly category = BLOG_POSTS.find(p => p.slug === 'sinterklaas-dobbelspel')!.category;
   // Game type for the info card. Not stored in BLOG_POSTS: a subCategory there would
   // replace the Inspiratie label on the blog cards.

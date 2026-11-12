@@ -1,0 +1,11 @@
+<ng-content></ng-content>
+@if (canPrev()) {
+<button type="button" class="slider-nav__button slider-nav__button--prev" [style.top.px]="top()" [style.left.px]="prevLeft()" [attr.aria-label]="labels().prev" (click)="scroll(-1)">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+</button>
+}
+@if (canNext()) {
+<button type="button" class="slider-nav__button slider-nav__button--next" [style.top.px]="top()" [style.left.px]="nextLeft()" [attr.aria-label]="labels().next" (click)="scroll(1)">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+</button>
+}

@@ -2,8 +2,11 @@ import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
+import { BlogCardComponent } from '../../components/blog-card/blog-card.component';
+import { getRecommendedGamesForSlug, getRecommendedPostsForSlug } from '../blog/blog-posts.data';
 import { AdtTimerComponent } from '../../components/adt-timer/adt-timer.component';
 import { DownloadCtaComponent } from '../../components/download-cta/download-cta.component';
+import { SliderNavComponent } from '../../components/slider-nav/slider-nav.component';
 
 // Content for both the Dutch /adt-timer/ and the English /en/chug-timer/ tool page.
 export const ADT_TIMER_SEO = {
@@ -70,11 +73,14 @@ export function applyAdtTimerSeo(meta: Meta, document: Document, lang: 'nl' | 'e
 @Component({
   selector: 'app-adt-timer-page',
   standalone: true,
-  imports: [RouterLink, AdtTimerComponent, DownloadCtaComponent],
+  imports: [SliderNavComponent, RouterLink, AdtTimerComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'adt-timer-page.component.html',
   styleUrls: ['../juridisch/juridisch.component.scss', '../blogs/blog-article-shared.scss', './adt-timer-page.component.scss']
 })
 export class AdtTimerPageComponent {
+  readonly recommendedGames = getRecommendedGamesForSlug('adt-timer', 'nl');
+  readonly recommendedPosts = getRecommendedPostsForSlug('adt-timer', 'nl');
+
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
     applyAdtTimerSeo(meta, document, 'nl');
   }

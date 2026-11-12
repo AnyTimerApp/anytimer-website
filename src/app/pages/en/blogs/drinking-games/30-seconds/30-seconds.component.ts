@@ -10,12 +10,13 @@ import { applyArticleSeo } from '../../../../../shared/article-seo';
 import { UI } from '../../../../../i18n/ui';
 import { BLOG_POSTS_EN } from '../../../../blog/blog-posts.en.data';
 import { getSimilarGames, getRecommendedGames } from '../../../../blog/blog-posts.data';
+import { SliderNavComponent } from '../../../../../components/slider-nav/slider-nav.component';
 
 // English version of blogs/drankspelletjes/30-seconds. Styles are shared with the Dutch page.
 @Component({
   selector: 'app-30-seconds-en',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: '30-seconds.component.html',
   styleUrls: ['../../../../juridisch/juridisch.component.scss', '../../../../blogs/blog-article-shared.scss', '../../../../blogs/drankspelletjes/30-seconds/30-seconds.component.scss']
 })

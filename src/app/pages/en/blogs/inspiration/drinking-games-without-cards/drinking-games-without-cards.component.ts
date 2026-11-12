@@ -7,19 +7,21 @@ import { DownloadCtaComponent } from '../../../../../components/download-cta/dow
 import { BreadcrumbItem } from '../../../../../shared/breadcrumb-schema';
 import { applyArticleSeo } from '../../../../../shared/article-seo';
 import { UI } from '../../../../../i18n/ui';
-import { getRecommendedPosts, getPostsBySlug } from '../../../../../pages/blog/blog-posts.data';
+import { getRecommendedGamesForPost, getRecommendedPosts, getPostsBySlug } from '../../../../../pages/blog/blog-posts.data';
 import { BlogCardComponent } from '../../../../../components/blog-card/blog-card.component';
+import { SliderNavComponent } from '../../../../../components/slider-nav/slider-nav.component';
 
 // English version of blogs/inspiratie/drankspellen-zonder-kaarten.
 @Component({
   selector: 'app-drinking-games-without-cards',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'drinking-games-without-cards.component.html',
   styleUrls: ['../../../../juridisch/juridisch.component.scss', '../../../../blogs/blog-article-shared.scss', '../../../../blogs/inspiratie/drankspellen/drankspellen.component.scss']
 })
 export class DrinkingGamesWithoutCardsComponent {
   readonly recommendedPosts = getRecommendedPosts(getPostsBySlug(['drinking-games-without-cards'], 'en')[0]);
+  readonly recommendedGames = getRecommendedGamesForPost(getPostsBySlug(['drinking-games-without-cards'], 'en')[0]);
   private readonly ui = UI.en;
   readonly category = this.ui.categoryLabels.Inspiratie;
 

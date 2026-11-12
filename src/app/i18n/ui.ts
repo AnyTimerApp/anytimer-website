@@ -16,6 +16,7 @@ export interface UiStrings {
     removeAccount: string;
     whatIsAnytimer: string;
     topDrinkingGames: string;
+    timer: string;
   };
   categoryLabels: Record<BlogCategory, string>;
   categorySlugs: Record<BlogCategory, string>;
@@ -23,7 +24,7 @@ export interface UiStrings {
   subCategoryLabels: Record<DrankspelSubCategory, string>;
   nav: {
     features: string;
-    team: string;
+    timer: string;
     whatIsAnytimer: string;
     blog: string;
     showCategories: string;
@@ -90,7 +91,8 @@ const NL: UiStrings = {
     terms: '/terms',
     removeAccount: '/remove-account',
     whatIsAnytimer: '/wat-is-een-anytimer',
-    topDrinkingGames: '/drankspellen'
+    topDrinkingGames: '/drankspellen',
+    timer: '/adt-timer'
   },
   categoryLabels: {
     Begrippen: 'Begrippen',
@@ -118,7 +120,7 @@ const NL: UiStrings = {
   },
   nav: {
     features: 'Features',
-    team: 'Team',
+    timer: 'Adt timer',
     whatIsAnytimer: 'Wat is een anytimer?',
     blog: 'Blog',
     showCategories: 'Categorieën tonen',
@@ -185,7 +187,8 @@ const EN: UiStrings = {
     terms: '/en/terms',
     removeAccount: '/en/remove-account',
     whatIsAnytimer: '/en/blog/dictionary/what-is-an-anytimer',
-    topDrinkingGames: '/en/blog/inspiration/best-drinking-games'
+    topDrinkingGames: '/en/blog/inspiration/best-drinking-games',
+    timer: '/en/chug-timer'
   },
   categoryLabels: {
     Begrippen: 'Dictionary',
@@ -213,7 +216,7 @@ const EN: UiStrings = {
   },
   nav: {
     features: 'Features',
-    team: 'Team',
+    timer: 'Chug timer',
     whatIsAnytimer: 'What is an anytimer?',
     blog: 'Blog',
     showCategories: 'Show categories',

@@ -6,7 +6,7 @@
     <div class="legal-header">
       <h1 class="legal-title">Ride the Bus (Bussen)</h1>
       <p class="legal-intro">
-        Ride the Bus is a card game with a few rounds. First you collect cards. Then the pyramid decides who has to ride the bus.
+        Ride the Bus is a drinking card game with four rounds. First you collect cards. Then the pyramid decides who has to ride the bus.
       </p>
       <p class="legal-intro">
         In the Netherlands the game is called Bussen. Below are the Dutch rules. They are almost the same as the international version. Only round 4 asks for the same or a different colour instead of the suit. And the bus is a row of 8 cards.
@@ -118,22 +118,36 @@
         <p>Looking for more drinking games? Check out our <a routerLink="/en/blog/inspiration/best-drinking-games">top 10 best drinking games</a>.</p>
       </div>
 
+      <div class="legal-section">
+        <h2>Ride the Bus FAQ</h2>
+        <h3>How does Ride the Bus work?</h3>
+        <p>You play four rounds where you guess: red or black, higher or lower, inside or outside, and the same colour or not. Then the dealer lays out a pyramid of 15 cards. Whoever has the most cards left at the end has to ride the bus.</p>
+        <h3>What is the bus?</h3>
+        <p>The bus is the last round. Eight face-up cards lie in a row. The player in the bus keeps guessing higher or lower and starts over after every mistake.</p>
+        <h3>How many people can play?</h3>
+        <p>You play Ride the Bus with 2 to 8 players. With more people you need a second deck, or the pile runs out too fast.</p>
+      </div>
+
       <div class="legal-section legal-section--no-divider">
         <h2>Similar drinking games</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of similarGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
       </div>
 
       <div class="legal-section">
         <h2>Recommended drinking games</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of recommendedGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
 
         <app-download-cta></app-download-cta>
       </div>

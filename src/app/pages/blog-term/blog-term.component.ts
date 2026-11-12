@@ -2,7 +2,8 @@ import { Component, Inject } from '@angular/core';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
-import { BlogPost, firstLetterOf, getRecommendedPostsForTerm, postsFor } from '../blog/blog-posts.data';
+import { BlogPost, firstLetterOf, postsFor } from '../blog/blog-posts.data';
+import { getTermRecommendations } from './term-recommendations';
 import { BlogCardComponent } from '../../components/blog-card/blog-card.component';
 import { BEGRIPPEN_CONTENT, BegripContent } from './begrippen-content.data';
 import { BEGRIPPEN_CONTENT_EN } from './begrippen-content.en.data';
@@ -12,6 +13,7 @@ import { BreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.c
 import { DownloadCtaComponent } from '../../components/download-cta/download-cta.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../shared/breadcrumb-schema';
 import { termSeoTitle } from '../../shared/term-seo-title';
+import { SliderNavComponent } from '../../components/slider-nav/slider-nav.component';
 
 // Label + note for English dictionary entries that stay Dutch (or Flemish).
 const ORIGIN_TEXT = {
@@ -38,9 +40,9 @@ const OG_IMAGE = 'https://anytimer.app/assets/blogs/wat%20is%20een%20anytimer/Wa
 @Component({
   selector: 'app-blog-term',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: './blog-term.component.html',
-  styleUrls: ['../juridisch/juridisch.component.scss', '../blog/blog-shared.component.scss', '../blogs/blog-article-shared.scss']
+  styleUrls: ['../juridisch/juridisch.component.scss', '../blog/blog-shared.component.scss', '../blogs/blog-article-shared.scss', './blog-term.component.scss']
 })
 export class BlogTermComponent {
   post: BlogPost;
@@ -52,8 +54,10 @@ export class BlogTermComponent {
   // Path of the dictionary hub, used by the letter bar.
   hubPath: string;
   heading: string;
-  recommendedPosts: BlogPost[];
-  recommendedHeading: string;
+  recommendedGames: BlogPost[];
+  recommendedBlogs: BlogPost[];
+  gamesHeading: string;
+  blogsHeading: string;
   origin: { label: string; note: string } | null;
 
   constructor(meta: Meta, route: ActivatedRoute, @Inject(DOCUMENT) document: Document) {
@@ -65,8 +69,11 @@ export class BlogTermComponent {
 
     this.post = terms.find(p => p.slug === slug)!;
     this.content = (en ? BEGRIPPEN_CONTENT_EN : BEGRIPPEN_CONTENT)[slug];
-    this.recommendedPosts = getRecommendedPostsForTerm(this.post, this.content.paragraphs);
-    this.recommendedHeading = en ? 'Recommended blogs' : 'Aanbevolen blogs';
+    const recommended = getTermRecommendations(this.post, this.lang);
+    this.recommendedGames = recommended.games;
+    this.recommendedBlogs = recommended.blogs;
+    this.gamesHeading = en ? 'Recommended drinking games' : 'Aanbevolen drankspellen';
+    this.blogsHeading = en ? 'Recommended blogs' : 'Aanbevolen blogs';
     this.letters = [...new Set(terms.map(firstLetterOf))].sort((a, b) => a.localeCompare(b, this.lang));
     this.hubPath = `${this.ui.paths.blog}/${this.ui.categorySlugs.Begrippen}`;
     this.heading = en ? `What does ${this.post.title} mean?` : `Wat betekent: ${this.post.title}?`;

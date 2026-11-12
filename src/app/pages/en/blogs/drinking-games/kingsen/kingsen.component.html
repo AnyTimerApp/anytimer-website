@@ -4,9 +4,9 @@
     <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
 
     <div class="legal-header">
-      <h1 class="legal-title">Kingsen</h1>
+      <h1 class="legal-title">Kingsen rules</h1>
       <p class="legal-intro">
-        Kingsen is a Dutch card game where every card comes with a task. You take turns drawing a card from the circle. And you try not to be the one who draws the last king.
+        Kingsen (also known as Kings Cup) is a Dutch drinking card game where every card comes with a task. You take turns drawing a card from the circle. And you try not to be the one who draws the last king.
       </p>
       <p class="legal-intro">
         Kingsen is the Dutch version of <a routerLink="/en/blog/drinking-games/ring-of-fire">Ring of Fire</a>, also known as Kings Cup. The idea is the same, but most cards have their own Dutch rules.
@@ -128,22 +128,36 @@
         <p>Looking for more drinking games? Check out our <a routerLink="/en/blog/inspiration/best-drinking-games">top 10 best drinking games</a>.</p>
       </div>
 
+      <div class="legal-section">
+        <h2>Kingsen FAQ</h2>
+        <h3>What do you need for Kingsen?</h3>
+        <p>A normal deck of 52 cards, a big glass for the middle and drinks for everyone. That is all.</p>
+        <h3>What happens with the fourth king?</h3>
+        <p>Whoever draws the fourth king drinks the glass in the middle. Then the game is over.</p>
+        <h3>What is the difference between Kingsen and Ring of Fire?</h3>
+        <p>It is the same idea. Kingsen is the Dutch version, with its own rule for almost every card.</p>
+      </div>
+
       <div class="legal-section legal-section--no-divider">
         <h2>Similar drinking games</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of similarGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
       </div>
 
       <div class="legal-section">
         <h2>Recommended drinking games</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of recommendedGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
 
         <app-download-cta></app-download-cta>
       </div>

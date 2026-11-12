@@ -9,13 +9,14 @@ import { BreadcrumbItem } from '../../../../../shared/breadcrumb-schema';
 import { applyArticleSeo } from '../../../../../shared/article-seo';
 import { UI } from '../../../../../i18n/ui';
 import { BLOG_POSTS_EN } from '../../../../blog/blog-posts.en.data';
-import { getPostsBySlug, getRecommendedGames } from '../../../../blog/blog-posts.data';
+import { getRecommendedGames, getSimilarGames } from '../../../../blog/blog-posts.data';
+import { SliderNavComponent } from '../../../../../components/slider-nav/slider-nav.component';
 
 // English version of blogs/drankspelletjes/boze-bak. Styles are shared with the Dutch page.
 @Component({
   selector: 'app-angry-mug-en',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'angry-mug.component.html',
   styleUrls: ['../../../../juridisch/juridisch.component.scss', '../../../../blogs/blog-article-shared.scss', '../../../../blogs/drankspelletjes/boze-bak/boze-bak.component.scss']
 })
@@ -24,7 +25,7 @@ export class AngryMugEnComponent {
   private readonly ui = UI.en;
   readonly subCategory = this.ui.subCategoryLabels[this.post.subCategory!];
 
-  readonly similarGames = getPostsBySlug(['bakplaten', 'finger-roulette', 'crocodile-dentist'], 'en');
+  readonly similarGames = getSimilarGames(this.post);
   readonly recommendedGames = getRecommendedGames(this.post);
 
   breadcrumbs: BreadcrumbItem[] = [

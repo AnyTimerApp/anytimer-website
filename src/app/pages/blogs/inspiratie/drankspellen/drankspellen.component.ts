@@ -5,18 +5,20 @@ import { DOCUMENT } from '@angular/common';
 import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcrumbs.component';
 import { DownloadCtaComponent } from '../../../../components/download-cta/download-cta.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
-import { BLOG_POSTS, CATEGORY_SLUGS, getRecommendedPosts } from '../../../blog/blog-posts.data';
+import { BLOG_POSTS, CATEGORY_SLUGS, getRecommendedGamesForPost, getRecommendedPosts } from '../../../blog/blog-posts.data';
 import { BlogCardComponent } from '../../../../components/blog-card/blog-card.component';
+import { SliderNavComponent } from '../../../../components/slider-nav/slider-nav.component';
 
 @Component({
   selector: 'app-drankspellen',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'drankspellen.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './drankspellen.component.scss']
 })
 export class DrankspellenComponent {
   readonly recommendedPosts = getRecommendedPosts(BLOG_POSTS.find(p => p.slug === 'drankspellen')!);
+  readonly recommendedGames = getRecommendedGamesForPost(BLOG_POSTS.find(p => p.slug === 'drankspellen')!);
   readonly category = BLOG_POSTS.find(p => p.slug === 'drankspellen')!.category;
 
   breadcrumbs: BreadcrumbItem[] = [

@@ -4,9 +4,9 @@
     <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
 
     <div class="legal-header">
-      <h1 class="legal-title">Bussen</h1>
+      <h1 class="legal-title">Bussen drankspel</h1>
       <p class="legal-intro">
-        Bussen is een kaartspel met meerdere rondes. Eerst verzamel je kaarten, daarna beslist de piramide wie de bus in moet.
+        Bussen is een drankspel met kaarten en vier rondes. Eerst verzamel je kaarten, daarna beslist de piramide wie de bus in moet.
       </p>
     </div>
 
@@ -115,22 +115,36 @@
         <p>Op zoek naar meer drankspellen? Bekijk ook onze <a routerLink="/drankspellen">top 10 leukste drankspellen</a>.</p>
       </div>
 
+      <div class="legal-section">
+        <h2>Veelgestelde vragen over bussen</h2>
+        <h3>Hoe gaat het drankspel bussen?</h3>
+        <p>Je speelt vier rondes waarin je raadt: rood of zwart, hoger of lager, binnen of buiten en dezelfde kleur of niet. Daarna legt de deler een piramide van 15 kaarten. Wie aan het einde de meeste kaarten over heeft, gaat de bus in.</p>
+        <h3>Wat is de bus bij bussen?</h3>
+        <p>De bus is de laatste ronde. Er liggen 8 open kaarten op een rij. De speler in de bus raadt steeds hoger of lager en begint opnieuw bij elke fout.</p>
+        <h3>Met hoeveel mensen speel je bussen?</h3>
+        <p>Bussen speel je met 2 tot 8 spelers. Met meer mensen heb je een tweede kaartspel nodig, anders is de stapel te snel op.</p>
+      </div>
+
       <div class="legal-section legal-section--no-divider">
         <h2>Vergelijkbare drankspellen</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of similarGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
       </div>
 
       <div class="legal-section">
         <h2>Aanbevolen drankspellen</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of recommendedGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
 
         <app-download-cta></app-download-cta>
       </div>

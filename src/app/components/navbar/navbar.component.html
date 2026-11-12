@@ -44,7 +44,7 @@
 
       <div class="nav-links" [class.open]="menuOpen">
         <a [routerLink]="ui().paths.home" fragment="features" (click)="closeMenu()">{{ ui().nav.features }}</a>
-        <a [routerLink]="ui().paths.home" fragment="team" (click)="closeMenu()">{{ ui().nav.team }}</a>
+        <a [routerLink]="ui().paths.timer" (click)="closeMenu()">{{ ui().nav.timer }}</a>
         <a [routerLink]="ui().paths.whatIsAnytimer" (click)="closeMenu()">{{ ui().nav.whatIsAnytimer }}</a>
         <div class="nav-item nav-item--dropdown" [class.open]="blogMenuOpen">
           <a [routerLink]="ui().paths.blog" (click)="closeMenu()">{{ ui().nav.blog }}</a>

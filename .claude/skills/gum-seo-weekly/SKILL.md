@@ -3,7 +3,8 @@ name: gum-seo-weekly
 description: >
   Weekly SEO analysis for anytimer.app. Pulls Google Search Console data (search analytics,
   URL inspection, sitemaps) and Google Ads Keyword Planner search volumes through the gum CLI,
-  compares the last 28 days against the
+  plus competitor data through DataForSEO (live SERPs, what competitors rank for, keyword
+  overlap), compares the last 28 days against the
   28 days before, and writes a concrete action report to seo-reports/<date>.md. Use when the
   user asks for the weekly SEO analysis, an SEO report, "gum-seo-weekly", or when it runs as
   a scheduled task. Read-only: no git commands, no gum writes, no site changes.
@@ -67,6 +68,28 @@ Notes:
 - gum 2.3.1 eist nog een developer token voor Google Ads. Google gebruikt die sinds 2026-09-09 niet meer, dus er is een placeholder opgeslagen. Meldt gum `missing developer token`, zet dan opnieuw een placeholder met `gum auth use-ads-developer-token --stdin`.
 - Te kleine of grove zoekwoorden (bijvoorbeeld "fuck de dealer") krijgen geen zoekvolume. Gebruik daar alleen de Search Console-cijfers en zeg dat erbij.
 
+## 1b. Concurrentie met DataForSEO
+
+Search Console laat zien waar wij staan. DataForSEO laat zien **wie er boven ons staat, en waar de concurrentie op rankt en wij niet**. Google-data blijft via gum lopen. DataForSEO is een aparte bron en mag hier wel.
+
+**Toegang.** Gebruik de DataForSEO MCP-tools (`mcp__dataforseo__*`). SERP-responses zijn groot. Bij meer dan 3 calls is een klein script beter: dat leest de inloggegevens uit `mcpServers.dataforseo.env` in `~/.claude.json`, roept `https://api.dataforseo.com/v3/<endpoint>` aan met Basic Auth en schrijft de response naar `seo-reports/data/<datum>/dfs/`. Print of log de inloggegevens nooit. Werkt geen van beide (`40100`, `40101`, geen tegoed)? Sla deze stap over, markeer de concurrentiepunten als "niet onderzocht" en verzin niets.
+
+**Budget:** maximaal 10 requests per week. Tel de `cost` uit elke response op en zet het totaal in het rapport. Bij een fout: één keer opnieuw, daarna overslaan.
+
+**Calls, in deze volgorde:**
+
+1. **Live SERP** (`serp/google/organic/live/advanced`, `location_code` 2528, `language_code` nl, `device` mobile, `depth` 20) voor de 5 kansen met het hoogste potentieel uit punt b. Leg vast: onze positie en URL, de top 3 (domein en titel), de SERP-features (AI Overview met bronnen, People also ask met vragen, video, apps), en het soort pagina dat wint (uitleg, lijst, online spel, winkel, woordenboek). Let op: de URL's in de response zijn vaak Google-redirects. Het echte domein staat in `breadcrumb`, echte URL's vaak in de AI Overview-referenties.
+2. **Hoofdconcurrenten bepalen:** de 3 domeinen die het vaakst in die top 3 staan. Sla Facebook, Instagram, TikTok, Reddit, YouTube, Wikipedia, bol.com en Amazon over.
+3. **Waar de concurrent op rankt** (`dataforseo_labs/google/ranked_keywords/live`, `location_code` 2528, `language_code` nl, `limit` 200, filter op `rank_group <= 10`), voor die 3 domeinen. Dit voedt punt e (content gaps) met echte data. Wat haalt hun verkeer binnen waar wij geen pagina voor hebben?
+4. **Overlap** (`dataforseo_labs/google/domain_intersection/live`, `target1` anytimer.app, `target2` de sterkste concurrent): zoekwoorden waarop we allebei ranken, met beide posities. Zo zie je waar zij net boven ons staan.
+
+Eens per 4 weken mag een van de calls naar `backlinks/bulk_ranks/live` gaan: de domeinrank van de hoofdconcurrenten naast die van anytimer.app. Gebruik dat alleen om de haalbaarheid te beoordelen, nooit als actie "koop links".
+
+**Notes:**
+- `bulk_keyword_difficulty` geeft voor Nederlandse long-tail bijna altijd KD 0 tot 5. Kies daar niet op. Beoordeel de moeilijkheid aan de echte SERP en de domeinrank.
+- Bekende patronen (november 2026): online speelbare spellen winnen de grote drankspelwoorden (kingscup.app, drankspel.com, bussen.app, onlinemexen.nl). Bij begrippen staan woordenboeken bovenaan en beantwoordt de AI Overview de vraag. Check elke week of dat nog klopt.
+- Een SERP is een momentopname, Search Console een gemiddelde over 28 dagen. Verschil is normaal.
+
 ## 2. Context van de site
 
 - Pagina's en titels: `src/app/app.routes.ts`. Meta descriptions staan in de component-constructors en voor begrippen in `src/app/pages/blog/blog-posts.data.ts`. Teksten van begrippen staan in `src/app/pages/blog-term/begrippen-content.data.ts`.
@@ -84,7 +107,9 @@ c. **CTR-probleem:** pagina's met veel vertoningen waarvan de CTR duidelijk onde
 
 d. **Kannibalisatie:** zoekwoorden waarbij twee of meer van onze pagina's vertoningen krijgen. Zeg welke pagina de hoofdpagina moet zijn.
 
-e. **Content gaps:** zoekwoordideeën met zoekvolume ≥ 50 waarvoor nog geen pagina bestaat. Check dit tegen de begrippen- en drankspellenlijst. Vooral nieuwe begrippen en drankspellen.
+e. **Content gaps:** zoekwoordideeën met zoekvolume ≥ 50 waarvoor nog geen pagina bestaat. Check dit tegen de begrippen- en drankspellenlijst. Vooral nieuwe begrippen en drankspellen. Neem ook de zoekwoorden mee waarop de hoofdconcurrenten in de top 10 staan en wij geen pagina hebben (stap 1b, call 3). Markeer die met "concurrent: <domein>".
+
+j. **Concurrentie (stap 1b):** per kans uit de SERP-calls: wie staat er boven ons, wat voor pagina is dat, en wat hebben zij dat wij niet hebben. Denk aan een ontbrekende tussenkop, een vraag uit People also ask, een online versie of een spelling. Uit de overlap: de 5 zoekwoorden waarop de concurrent net boven ons staat (verschil 1 tot 5 posities) met zoekvolume ≥ 100. Die zijn het snelst te pakken.
 
 f. **Interne links:** belangrijke pagina's uit punt b die weinig interne links krijgen. Stel 3 tot 5 concrete links voor (van welke pagina naar welke, met welke ankertekst). Link elk onderwerp maar één keer per pagina.
 
@@ -116,9 +141,11 @@ Volgorde:
    - de pagina en het bestand
    - wat er precies verandert (exacte nieuwe title of description, of de tekst van de interne link)
    - de onderbouwing met cijfers: zoekvolume, positie, CTR
-3. **Tabellen** voor de analyse uit punt a tot en met i.
-4. **Opvolging vorige week:** wat is gedaan en wat het effect is.
-5. **Nieuwe pagina-ideeën:** maximaal 5, met zoekvolume.
+3. **Concurrentie:** tabel met per kans onze positie, de top 3 en waarom zij winnen. Daaronder de hoofdconcurrenten en hun beste zoekwoorden waar wij geen pagina voor hebben.
+4. **Tabellen** voor de analyse uit punt a tot en met j.
+5. **Opvolging vorige week:** wat is gedaan en wat het effect is.
+6. **Nieuwe pagina-ideeën:** maximaal 5, met zoekvolume. Geef voorrang aan ideeën waarop een concurrent aantoonbaar verkeer haalt.
+7. **Data en beperkingen:** aantal DataForSEO-calls en de kosten, en wat niet onderzocht is.
 
 Maak de aanbevelingen concreet en uitvoerbaar, geen algemene SEO-tips. Is een conclusie gebaseerd op weinig data (minder dan 50 vertoningen)? Zeg dat er dan bij.
 

@@ -7,11 +7,12 @@ import { DownloadCtaComponent } from '../../../../components/download-cta/downlo
 import { BlogCardComponent } from '../../../../components/blog-card/blog-card.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
 import { BLOG_POSTS, CATEGORY_SLUGS, getSimilarGames, getRecommendedGames } from '../../../blog/blog-posts.data';
+import { SliderNavComponent } from '../../../../components/slider-nav/slider-nav.component';
 
 @Component({
   selector: 'app-kingsen',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'kingsen.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './kingsen.component.scss']
 })

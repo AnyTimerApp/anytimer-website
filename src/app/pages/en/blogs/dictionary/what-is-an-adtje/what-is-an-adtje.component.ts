@@ -7,19 +7,21 @@ import { DownloadCtaComponent } from '../../../../../components/download-cta/dow
 import { BreadcrumbItem } from '../../../../../shared/breadcrumb-schema';
 import { applyArticleSeo } from '../../../../../shared/article-seo';
 import { UI } from '../../../../../i18n/ui';
-import { getRecommendedPosts, getPostsBySlug } from '../../../../../pages/blog/blog-posts.data';
+import { getRecommendedGamesForPost, getRecommendedPosts, getPostsBySlug } from '../../../../../pages/blog/blog-posts.data';
 import { BlogCardComponent } from '../../../../../components/blog-card/blog-card.component';
+import { SliderNavComponent } from '../../../../../components/slider-nav/slider-nav.component';
 
 // English version of blogs/begrippen/wat-is-een-adtje.
 @Component({
   selector: 'app-what-is-an-adtje',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'what-is-an-adtje.component.html',
   styleUrls: ['../../../../juridisch/juridisch.component.scss', '../../../../blogs/blog-article-shared.scss', '../../../../blogs/begrippen/wat-is-een-adtje/wat-is-een-adtje.component.scss']
 })
 export class WhatIsAnAdtjeComponent {
   readonly recommendedPosts = getRecommendedPosts(getPostsBySlug(['what-is-an-adtje'], 'en')[0]);
+  readonly recommendedGames = getRecommendedGamesForPost(getPostsBySlug(['what-is-an-adtje'], 'en')[0]);
   private readonly ui = UI.en;
 
   breadcrumbs: BreadcrumbItem[] = [

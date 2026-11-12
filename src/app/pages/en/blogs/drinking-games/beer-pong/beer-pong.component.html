@@ -6,7 +6,7 @@
     <div class="legal-header">
       <h1 class="legal-title">Beer Pong</h1>
       <p class="legal-intro">
-        Beer Pong is the most famous drinking game in the world. Two teams, a table, some cups and one ping pong ball. Throw the ball into the other team's cups. Hit one? Then they have to drink. In the Netherlands it's simply called beerpong.
+        Beer Pong is the most famous drinking game in the world. Two teams, a table, some cups and one ping pong ball. Throw the ball into the other team's cups. Hit one? Then they have to drink. In the Netherlands it's called beerpong or bierpong.
       </p>
       <p class="legal-intro">
         You'll get the basics in a minute. But every house plays with different rules. Below you'll find the standard rules and the house rules you should agree on first.
@@ -156,20 +156,24 @@
 
       <div class="legal-section legal-section--no-divider">
         <h2>Similar drinking games</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of similarGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
       </div>
 
       <div class="legal-section">
         <h2>Recommended drinking games</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of recommendedGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
 
         <app-download-cta></app-download-cta>
       </div>

@@ -6,12 +6,13 @@ import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcr
 import { DownloadCtaComponent } from '../../../../components/download-cta/download-cta.component';
 import { BlogCardComponent } from '../../../../components/blog-card/blog-card.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
-import { BLOG_POSTS, CATEGORY_SLUGS, getPostsBySlug, getRecommendedGames } from '../../../blog/blog-posts.data';
+import { BLOG_POSTS, CATEGORY_SLUGS, getRecommendedGames, getSimilarGames } from '../../../blog/blog-posts.data';
+import { SliderNavComponent } from '../../../../components/slider-nav/slider-nav.component';
 
 @Component({
   selector: 'app-finger-roulette',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'finger-roulette.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './finger-roulette.component.scss']
 })
@@ -21,7 +22,7 @@ export class FingerRouletteComponent {
   readonly subCategory = this.post.subCategory!;
 
   // Hand-picked: the other app games plus Krokodillenspel.
-  readonly similarGames = getPostsBySlug(['bakplaten', 'boze-bak', 'krokodillenspel']);
+  readonly similarGames = getSimilarGames(this.post);
   readonly recommendedGames = getRecommendedGames(this.post);
 
   breadcrumbs: BreadcrumbItem[] = [

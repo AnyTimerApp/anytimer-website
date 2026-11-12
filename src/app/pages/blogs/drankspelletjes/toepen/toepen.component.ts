@@ -8,11 +8,12 @@ import { BlogCardComponent } from '../../../../components/blog-card/blog-card.co
 import { BreadcrumbItem } from '../../../../shared/breadcrumb-schema';
 import { applyArticleSeo } from '../../../../shared/article-seo';
 import { BLOG_POSTS, CATEGORY_SLUGS, getSimilarGames, getRecommendedGames } from '../../../blog/blog-posts.data';
+import { SliderNavComponent } from '../../../../components/slider-nav/slider-nav.component';
 
 @Component({
   selector: 'app-toepen',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'toepen.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './toepen.component.scss']
 })

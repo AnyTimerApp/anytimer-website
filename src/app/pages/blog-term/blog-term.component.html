@@ -35,11 +35,32 @@
       </div>
 
       <div class="legal-section">
-        <h2>{{ recommendedHeading }}</h2>
-        <div class="related-slider">
-          @for (post of recommendedPosts; track post.slug) {
-          <app-blog-card [post]="post"></app-blog-card>
-          }
+        <div class="term-subsection">
+          <a [routerLink]="ui.paths.blog + '/' + ui.categorySlugs.Drankspelletjes" class="term-subheader">
+            <h2 class="term-subtitle">{{ gamesHeading }}</h2>
+            <span class="term-subheader__arrow">→</span>
+          </a>
+          <app-slider-nav>
+          <div class="related-slider">
+            @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+            }
+          </div>
+          </app-slider-nav>
+        </div>
+
+        <div class="term-subsection">
+          <a [routerLink]="ui.paths.blog" class="term-subheader">
+            <h2 class="term-subtitle">{{ blogsHeading }}</h2>
+            <span class="term-subheader__arrow">→</span>
+          </a>
+          <app-slider-nav>
+          <div class="related-slider">
+            @for (post of recommendedBlogs; track post.slug) {
+            <app-blog-card [post]="post"></app-blog-card>
+            }
+          </div>
+          </app-slider-nav>
         </div>
 
         <app-download-cta></app-download-cta>

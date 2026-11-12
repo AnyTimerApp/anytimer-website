@@ -8,23 +8,29 @@ import { Lang } from '../../i18n/lang';
 
 const COOLDOWN_SECONDS = 3;
 
-// Same strings as screens.timer in the app's i18n/locales/<lang>/common.json.
+// Based on screens.timer in the app's i18n/locales/<lang>/common.json. The title
+// differs on purpose: on the web the timer is called after the page keyword
+// (adt timer / chug timer), and desktop gets click and space bar instructions.
 const TEXT = {
   nl: {
-    title: 'Any-timer',
+    title: 'Adt timer',
     touchScreen: 'Tik op het scherm om timer te stoppen',
     letGo: 'Loslaten om timer te starten',
     touchAndLetGo: 'Tik en laat los op het scherm om timer te starten',
+    desktopStop: 'Klik of druk op de spatiebalk om timer te stoppen',
+    desktopStart: 'Klik en laat los of druk op de spatiebalk om timer te starten',
     pleaseWait: (n: number) => `Even wachten ${n} ${n === 1 ? 'seconde' : 'seconden'}...`,
-    aria: 'Any-timer. Tik en laat los om te starten, tik opnieuw om te stoppen. De spatiebalk werkt ook.'
+    aria: 'Adt timer. Tik en laat los om te starten, tik opnieuw om te stoppen. De spatiebalk werkt ook.'
   },
   en: {
-    title: 'Any timer',
+    title: 'Chug timer',
     touchScreen: 'Tap the screen to stop the timer',
     letGo: 'Release to start the timer',
     touchAndLetGo: 'Tap and release the screen to start the timer',
+    desktopStop: 'Click or press the space bar to stop the timer',
+    desktopStart: 'Click and release or press the space bar to start the timer',
     pleaseWait: (n: number) => `Hang on ${n} ${n === 1 ? 'second' : 'seconds'}...`,
-    aria: 'Any timer. Tap and release to start, tap again to stop. The space bar works too.'
+    aria: 'Chug timer. Tap and release to start, tap again to stop. The space bar works too.'
   }
 };
 
@@ -62,9 +68,13 @@ export class AdtTimerComponent implements OnDestroy {
   private nextBubbleId = 0;
   private width = 0;
   private readonly isBrowser: boolean;
+  // Mouse or trackpad (PC/laptop). The prerendered HTML uses the touch texts;
+  // the browser switches to the desktop texts on load.
+  private readonly isDesktop: boolean;
 
   constructor(@Inject(PLATFORM_ID) platformId: object, private host: ElementRef<HTMLElement>) {
     this.isBrowser = isPlatformBrowser(platformId);
+    this.isDesktop = this.isBrowser && matchMedia('(hover: hover) and (pointer: fine)').matches;
   }
 
   get t() {
@@ -77,9 +87,9 @@ export class AdtTimerComponent implements OnDestroy {
 
   get instruction(): string {
     if (this.isLocked && this.cooldownTime > 0) return this.t.pleaseWait(this.cooldownTime);
-    if (this.isRunning) return this.t.touchScreen;
+    if (this.isRunning) return this.isDesktop ? this.t.desktopStop : this.t.touchScreen;
     if (this.isPressed && !this.isLocked) return this.t.letGo;
-    return this.t.touchAndLetGo;
+    return this.isDesktop ? this.t.desktopStart : this.t.touchAndLetGo;
   }
 
   // MM:SS:CC, same as formatTime() in the app.

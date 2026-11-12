@@ -1,0 +1,43 @@
+{
+ "games": {
+  "kingsen": 538,
+  "beerpong": 528,
+  "mexen": 378,
+  "bussen": 363,
+  "de-paardenrace": 332,
+  "kusje-geven": 109,
+  "jeu-de-bier": 99,
+  "hoger-lager": 121,
+  "trek-je-bak-mania": 95,
+  "finger-roulette": 58,
+  "mijnenveld": 146,
+  "30-seconds": 155,
+  "zeeslag": 139,
+  "bakplaten": 113,
+  "mario-barf": 96,
+  "boze-bak": 193,
+  "toepen": 482,
+  "ring-of-fire": 245,
+  "vikingen": 157,
+  "fuck-the-dealer": 238,
+  "jenga": 153,
+  "vingeren": 175,
+  "krokodillenspel": 130,
+  "stress-pong": 174,
+  "stef-stuntpiloot": 193
+ },
+ "blogs": {
+  "wat-is-een-adtje": 515,
+  "drankspellen-voor-2-personen": 399,
+  "drankspellen": 515,
+  "adt-timer": 496,
+  "sinterklaas-dobbelspel": 500,
+  "wat-is-een-anytimer": 503,
+  "drankspellen-met-kaarten": 466,
+  "drankspellen-zonder-kaarten": 372,
+  "mag-je-een-anytimer-weigeren": 359,
+  "anytimers-bijhouden-whatsapp-notities": 322,
+  "wat-is-de-beste-adt-timer": 447,
+  "huisavondideeen": 266
+ }
+}

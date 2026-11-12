@@ -1,0 +1,331 @@
+{
+ "games": {
+  "kingsen": {
+   "waarde": 9555,
+   "score": 1.0,
+   "detail": [
+    "kingsen:2400/0",
+    "kingsen regels:5400/0",
+    "kingsen spelregels:880/0",
+    "kingsen drankspel:320/0",
+    "kings cup:590/6"
+   ]
+  },
+  "beerpong": {
+   "waarde": 3340,
+   "score": 0.885,
+   "detail": [
+    "beerpong:1600/0",
+    "beer pong:1600/0",
+    "beerpong regels:140/0"
+   ]
+  },
+  "toepen": {
+   "waarde": 2410,
+   "score": 0.85,
+   "detail": [
+    "toepen:2400/0",
+    "toepen regels:1600/0",
+    "toepen drankspel:10/-"
+   ]
+  },
+  "mexen": {
+   "waarde": 1350,
+   "score": 0.787,
+   "detail": [
+    "mexen:1000/0",
+    "mexen regels:260/0",
+    "mexen drankspel:90/0"
+   ]
+  },
+  "bussen": {
+   "waarde": 1148,
+   "score": 0.769,
+   "detail": [
+    "bussen:2900/75",
+    "bussen drankspel:720/0",
+    "bussen regels:210/0"
+   ]
+  },
+  "de-paardenrace": {
+   "waarde": 950,
+   "score": 0.748,
+   "detail": [
+    "paardenrace:1300/0",
+    "paardenrace drankspel:390/0",
+    "kamelenrace drankspel:40/0"
+   ]
+  },
+  "stef-stuntpiloot": {
+   "waarde": 218,
+   "score": 0.707,
+   "detail": [
+    "stef stuntpiloot:5400/0",
+    "stef stuntpiloot drankspel:110/0"
+   ],
+   "bron": "naam vooral het lied: 2% van 5.400 + 110 \"drankspel\""
+  },
+  "ring-of-fire": {
+   "waarde": 440,
+   "score": 0.702,
+   "detail": [
+    "ring of fire:3600/0",
+    "ring of fire drankspel:170/0",
+    "ring of fire regels:90/0"
+   ],
+   "bron": "5% van 3.600 (lied) + 260 drankspel/regels"
+  },
+  "30-seconds": {
+   "waarde": 100,
+   "score": 0.674,
+   "detail": [
+    "30 seconds:9900/4",
+    "30 seconds drankspel:10/46"
+   ],
+   "bron": "naam vooral het bordspel: 1% van 9.900 + \"drankspel\""
+  },
+  "vingeren": {
+   "waarde": 151,
+   "score": 0.595,
+   "detail": [
+    "vingeren:8100/0",
+    "vingeren drankspel:70/-"
+   ],
+   "bron": "naam niet over drinken: 1% van 8.100 + 70 \"drankspel\""
+  },
+  "vikingen": {
+   "waarde": 112,
+   "score": 0.589,
+   "detail": [
+    "vikingen:3600/0",
+    "vikingen drankspel:40/0"
+   ],
+   "bron": "2% van 3.600 + 40 \"drankspel\""
+  },
+  "zeeslag": {
+   "waarde": 75,
+   "score": 0.556,
+   "detail": [
+    "zeeslag:2900/0",
+    "zeeslag drankspel:30/44"
+   ],
+   "bron": "2% van 2.900 + \"drankspel\""
+  },
+  "stress-pong": {
+   "waarde": 157,
+   "score": 0.552,
+   "detail": [
+    "stress pong:50/6",
+    "stresspong:110/0"
+   ]
+  },
+  "bakplaten": {
+   "waarde": 33,
+   "score": 0.534,
+   "detail": [
+    "bakplaten:6600/0",
+    "bakplaten drankspel:0/-"
+   ],
+   "bron": "naam gaat over bakvormen: 0,5% van 6.600"
+  },
+  "jenga": {
+   "waarde": 100,
+   "score": 0.504,
+   "detail": [
+    "drunk jenga:30/0",
+    "jenga drankspel:70/0"
+   ]
+  },
+  "mijnenveld": {
+   "waarde": 98,
+   "score": 0.501,
+   "detail": [
+    "mijnenveld:260/0",
+    "mijnenveld drankspel:20/-"
+   ]
+  },
+  "krokodillenspel": {
+   "waarde": 52,
+   "score": 0.433,
+   "detail": [
+    "krokodillenspel:260/0",
+    "krokodillenspel drankspel:0/-"
+   ]
+  },
+  "hoger-lager": {
+   "waarde": 45,
+   "score": 0.418,
+   "detail": [
+    "hoger lager:70/0",
+    "hoger lager drankspel:10/-"
+   ]
+  },
+  "kusje-geven": {
+   "waarde": 21,
+   "score": 0.337,
+   "detail": [
+    "kusje geven:70/0",
+    "kusje geven drankspel:0/-"
+   ]
+  },
+  "trek-je-bak-mania": {
+   "waarde": 10,
+   "score": 0.262,
+   "detail": [
+    "trek je bak mania:0/-",
+    "trek je bak:10/-"
+   ]
+  },
+  "mario-barf": {
+   "waarde": 10,
+   "score": 0.262,
+   "detail": [
+    "mario barf:10/-"
+   ]
+  },
+  "jeu-de-bier": {
+   "waarde": 10,
+   "score": 0.262,
+   "detail": [
+    "jeu de bier:10/-"
+   ]
+  },
+  "finger-roulette": {
+   "waarde": 10,
+   "score": 0.262,
+   "detail": [
+    "finger roulette:10/-"
+   ]
+  },
+  "fuck-the-dealer": {
+   "waarde": 413,
+   "score": 0.657,
+   "detail": [
+    "fuck the dealer:0/-",
+    "fuck de dealer:0/-",
+    "fuck the dealer drankspel:0/-"
+   ],
+   "bron": "Search Console vertoningen (Ads geeft geen volume)"
+  },
+  "boze-bak": {
+   "waarde": 0,
+   "score": 0.0,
+   "detail": [
+    "boze bak:0/-"
+   ],
+   "min_begrippen": 185,
+   "reden_minimum": "Gebruiker: boze bak is belangrijk (2026-11-12), streef rond 200 interne links"
+  }
+ },
+ "blogs": {
+  "wat-is-een-adtje": {
+   "waarde": 4190,
+   "score": 1.0,
+   "detail": [
+    "adtje:260/0",
+    "wat is een adtje:10/-",
+    "adten:320/0",
+    "atten:3600/0"
+   ]
+  },
+  "drankspellen": {
+   "waarde": 3474,
+   "score": 0.978,
+   "detail": [
+    "drankspellen:1000/0",
+    "drankspel:1300/0",
+    "drankspelletjes:880/3",
+    "leuke drankspellen:320/0"
+   ]
+  },
+  "sinterklaas-dobbelspel": {
+   "waarde": 2490,
+   "score": 0.938,
+   "detail": [
+    "sinterklaas dobbelspel:1900/0",
+    "sinterklaas dobbelspel regels:590/0"
+   ]
+  },
+  "drankspellen-met-kaarten": {
+   "waarde": 1130,
+   "score": 0.843,
+   "detail": [
+    "drankspel met kaarten:480/0",
+    "drankspellen met kaarten:480/0",
+    "kaartspel drank:170/0"
+   ]
+  },
+  "wat-is-de-beste-adt-timer": {
+   "waarde": 1020,
+   "score": 0.831,
+   "detail": [
+    "adtmeister:880/0",
+    "beste adt timer:0/-",
+    "adt meister:140/0"
+   ]
+  },
+  "drankspellen-voor-2-personen": {
+   "waarde": 470,
+   "score": 0.738,
+   "detail": [
+    "drankspel 2 personen:210/0",
+    "drankspellen voor 2:170/0",
+    "drankspel voor 2:90/0"
+   ]
+  },
+  "drankspellen-zonder-kaarten": {
+   "waarde": 340,
+   "score": 0.699,
+   "detail": [
+    "drankspellen zonder kaarten:170/0",
+    "drankspel zonder kaarten:170/0"
+   ]
+  },
+  "adt-timer": {
+   "waarde": 250,
+   "score": 0.662,
+   "detail": [
+    "adt timer:110/0",
+    "bier timer:110/0",
+    "biertimer:30/-"
+   ],
+   "kern": true
+  },
+  "wat-is-een-anytimer": {
+   "waarde": 210,
+   "score": 0.642,
+   "detail": [
+    "anytimer:170/0",
+    "wat is een anytimer:40/-",
+    "anytimer betekenis:0/-"
+   ],
+   "bron": "merkpagina, minimumwaarde",
+   "kern": true
+  },
+  "huisavondideeen": {
+   "waarde": 170,
+   "score": 0.616,
+   "detail": [
+    "huisavond ideeën:70/0",
+    "huisavond:30/-",
+    "huisavond ideeen:70/0"
+   ]
+  },
+  "mag-je-een-anytimer-weigeren": {
+   "waarde": 210,
+   "score": 0.642,
+   "detail": [
+    "anytimer weigeren:0/-"
+   ],
+   "bron": "merkpagina, minimumwaarde"
+  },
+  "anytimers-bijhouden-whatsapp-notities": {
+   "waarde": 210,
+   "score": 0.642,
+   "detail": [
+    "anytimers bijhouden:0/-"
+   ],
+   "bron": "merkpagina, minimumwaarde"
+  }
+ }
+}

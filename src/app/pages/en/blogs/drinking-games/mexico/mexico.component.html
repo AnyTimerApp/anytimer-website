@@ -4,9 +4,9 @@
     <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
 
     <div class="legal-header">
-      <h1 class="legal-title">Mexico (Mexen)</h1>
+      <h1 class="legal-title">Mexico (Mexen) rules</h1>
       <p class="legal-intro">
-        Mexico is a dice game with two dice. You try not to have the lowest roll of the round. And of course everyone hopes for a Mexico. In the Netherlands the game is called Mexen.
+        Mexico is a dice game with two dice. You try not to have the lowest roll of the round. And of course everyone hopes for a Mexico. In the Netherlands the game is called Mexen, sometimes spelled mexxen.
       </p>
     </div>
 
@@ -118,22 +118,36 @@
         <p>Looking for more drinking games? Check out our <a routerLink="/en/blog/inspiration/best-drinking-games">top 10 best drinking games</a>.</p>
       </div>
 
+      <div class="legal-section">
+        <h2>Mexico FAQ</h2>
+        <h3>What is a Mexico?</h3>
+        <p>A Mexico is a roll of a 2 and a 1. You read it as 21. It is the highest roll in the game and the penalty doubles.</p>
+        <h3>What is the order of the rolls?</h3>
+        <p>First the Mexico (21). Then the doubles from 66 down to 11. After that the normal rolls from 65 down to 31.</p>
+        <h3>Can you play Mexico online?</h3>
+        <p>Yes. Mexico is in the free AnyTimerApp. You don't need any dice.</p>
+      </div>
+
       <div class="legal-section legal-section--no-divider">
         <h2>Similar drinking games</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of similarGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
       </div>
 
       <div class="legal-section">
         <h2>Recommended drinking games</h2>
+        <app-slider-nav>
         <div class="related-slider">
           @for (game of recommendedGames; track game.slug) {
             <app-blog-card [post]="game"></app-blog-card>
           }
         </div>
+        </app-slider-nav>
 
         <app-download-cta></app-download-cta>
       </div>

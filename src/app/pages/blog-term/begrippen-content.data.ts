@@ -19,6 +19,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'adten': {
     paragraphs: [
       '"Je hebt de weddenschap verloren, dus nu moet je adten", riep zijn huisgenoot lachend door de kamer.',
+      'Je schrijft het als adten of atten. Allebei is goed, net als adtje en atje. Het woord komt van ad fundum: tot op de bodem. Bier atten gaat het snelst met je keel open. Je slikt dan niet bij elke slok, maar laat het bier in één keer doorlopen. Doe het alleen als je dat zelf wilt. Hoe snel je bent, zie je met de gratis <a href="/adt-timer/">adt timer</a>.',
       'Het werkwoord komt van <a href="/wat-is-een-adtje/">adtje</a>: wie een adtje krijgt opgelegd, moet het drankje in één keer wegwerken, zonder pauzes. Varianten als de <a href="/blog/begrippen/rietadt/">rietadt</a> maken het proces nog wat sneller, en het tegenovergestelde heet juist <a href="/blog/begrippen/droog-staan/">droog staan</a>. Lees ook de uitleg van <a href="/wat-is-een-anytimer/">anytimer</a>, <a href="/blog/begrippen/adtje-kratje/">adtje kratje</a>, <a href="/blog/begrippen/adtje-solidair/">adtje solidair</a> en <a href="/blog/begrippen/chug/">chug</a>.'
     ]
   },
@@ -61,7 +62,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'afko': {
     paragraphs: [
       '"Snap jij deze afko nog?", vroeg hij, wijzend naar een appje vol onbegrijpelijke lettercombinaties.',
-      'Studentenverenigingen en -huizen gebruiken zoveel afkortingen dat het woord afkorting zelf ook maar is afgekort tot afko. Zonder een goed woordenboek raak je al snel de weg kwijt. Lees ook de uitleg van <a href="/blog/begrippen/abbo/">abbo</a> en <a href="/blog/begrippen/afk/">AFK</a>.'
+      'Studentenverenigingen en -huizen gebruiken zoveel afkortingen dat het woord afkorting zelf ook maar is afgekort tot afko. Zonder een goed woordenboek raak je al snel de weg kwijt. Lees ook de uitleg van <a href="/blog/begrippen/abbo/">abbo</a>, <a href="/blog/begrippen/afk/">AFK</a> en de afkorting <a href="/blog/begrippen/idk/">IDK</a>.'
     ]
   },
   'afpilsen': {
@@ -499,7 +500,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'chug': {
     paragraphs: [
       '"Chug, chug, chug!", riep de hele tafel toen hij zijn bier begon weg te werken.',
-      'Chuggen kan met elk drankje, maar op feestjes gaat het meestal om alcohol. Het lijkt op het Nederlandse <a href="/blog/begrippen/adten/">adten</a>. Het verschil is dat chuggen niet per se in één keer hoeft. Drink altijd op je eigen tempo. Lees ook de uitleg van <a href="/blog/begrippen/shotgun-a-beer/">shotgun a beer</a>, <a href="/blog/begrippen/bottoms-up/">bottoms up</a> en <a href="/blog/begrippen/nekken/">nekken</a>.'
+      'Chuggen kan met elk drankje, maar op feestjes gaat het meestal om alcohol. Het lijkt op het Nederlandse <a href="/blog/begrippen/adten/">adten</a>. Het verschil is dat chuggen niet per se in één keer hoeft. Drink altijd op je eigen tempo. Benieuwd naar je tijd? Daar is de <a href="/adt-timer/">bier timer</a> voor. Lees ook de uitleg van <a href="/blog/begrippen/shotgun-a-beer/">shotgun a beer</a>, <a href="/blog/begrippen/bottoms-up/">bottoms up</a> en <a href="/blog/begrippen/nekken/">nekken</a>.'
     ]
   },
   'clickbait': {
@@ -1249,6 +1250,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'hard-launch': {
     paragraphs: [
       '"Ze postte een foto van hun gezichten, met zijn naam getagd. Dat is een hard launch."',
+      'De term komt uit marketing. Daar is een hard launch de volledige lancering van een product, na een kleine test: de soft launch. Op social media is het woord overgewaaid naar daten. Iemand hard launchen betekent dat je diegene openlijk post, met gezicht en naam. Denk aan een koppelfoto, een tag in je story of een post op jullie jubileum.',
       'Een hard launch is het tegenovergestelde van een <a href="/blog/begrippen/soft-launch/">soft launch</a>. Bij daten laat je je partner duidelijk zien of noem je zijn of haar naam. Er is geen twijfel meer. Vaak komt het na een paar weken soft launchen. Lees ook de uitleg van <a href="/blog/begrippen/rela/">rela</a> en <a href="/blog/begrippen/pocketing/">pocketing</a>.'
     ]
   },
@@ -1411,6 +1413,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'idk': {
     paragraphs: [
       '"Hoe laat begint het feest eigenlijk?" "IDK, vraag het in de groepsapp."',
+      'IDK is de Engelse afkorting van "I don\'t know". In het Nederlands betekent het "ik weet het niet". Je ziet de afkorting vooral op WhatsApp, Snapchat en TikTok. Op WhatsApp is het een snel antwoord als je iets niet weet of geen zin hebt om na te denken.',
       'IDK is een van de meest gebruikte afkortingen in appjes. Afhankelijk van de toon klinkt het luchtig, onzeker of ongeïnteresseerd. Soms schrijven mensen het helemaal kort als \'idk\'. Lees ook de uitleg van <a href="/blog/begrippen/idc/">IDC</a> en <a href="/blog/begrippen/lmk/">LMK</a>.'
     ]
   },
@@ -1723,7 +1726,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'lmk': {
     paragraphs: [
       '"We gaan om acht uur eten. LMK of je erbij bent."',
-      'Met LMK vraag je iemand om je later iets te laten weten. Een beslissing, een update of informatie. Het is kort, makkelijk en wordt veel gebruikt in groepsapps. Lees ook de uitleg van <a href="/blog/begrippen/asap/">ASAP</a>, <a href="/blog/begrippen/fyi/">FYI</a> en <a href="/blog/begrippen/dapri/">dapri</a>.'
+      'Met LMK vraag je iemand om je later iets te laten weten. Een beslissing, een update of informatie. Het is kort, makkelijk en wordt veel gebruikt in groepsapps. Lees ook de uitleg van <a href="/blog/begrippen/asap/">ASAP</a>, <a href="/blog/begrippen/fyi/">FYI</a>, <a href="/blog/begrippen/dapri/">dapri</a> en <a href="/blog/begrippen/idk/">IDK</a>.'
     ]
   },
   'loca': {
@@ -2275,7 +2278,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'rietadt': {
     paragraphs: [
       'Voor de wedstrijd koos hij bewust voor een rietadt in plaats van een gewone slok.',
-      'Voor gevorderden gaat een rietadt, ook wel <a href="/blog/begrippen/rietbak/">rietbak</a> genoemd, sneller dan een drankje op de normale manier <a href="/blog/begrippen/adten/">adten</a>. Lees ook de uitleg van <a href="/blog/begrippen/riet/">riet</a> en <a href="/blog/begrippen/chug/">chug</a>.'
+      'Voor gevorderden gaat een rietadt, ook wel <a href="/blog/begrippen/rietbak/">rietbak</a> genoemd, sneller dan een drankje op de normale manier <a href="/blog/begrippen/adten/">adten</a>. Hoe snel je rietadt is, meet je met de <a href="/adt-timer/">adt timer</a>. Lees ook de uitleg van <a href="/blog/begrippen/riet/">riet</a> en <a href="/blog/begrippen/chug/">chug</a>.'
     ]
   },
   'rietbak': {
@@ -2443,6 +2446,7 @@ export const BEGRIPPEN_CONTENT: Record<string, BegripContent> = {
   'side-quest': {
     paragraphs: [
       '"Ik ging alleen even brood halen. Drie uur later stond ik op een huisfeest in Utrecht. Flinke side quest."',
+      'Je schrijft het los als side quest of aan elkaar als sidequest. Allebei is goed. In het Nederlands heet het in games ook wel een nevenmissie. Op TikTok laten mensen hun side quests zien: een spontane roadtrip, een feestje bij vreemden of een uur kletsen met de buurman. Een leuke sidequest is dus vooral iets wat je niet had gepland.',
       'Side quest komt uit games, waar het een optionele missie naast het hoofdverhaal is. In het echt is het alles wat je onderweg doet terwijl je eigenlijk iets anders van plan was. Vaak zijn dat de beste verhalen van de avond. Lees ook de uitleg van <a href="/blog/begrippen/main-character/">main character</a>, <a href="/blog/begrippen/lore/">lore</a> en <a href="/blog/begrippen/yolo/">YOLO</a>.'
     ]
   },

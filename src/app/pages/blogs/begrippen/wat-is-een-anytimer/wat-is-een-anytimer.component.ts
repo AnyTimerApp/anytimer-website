@@ -6,19 +6,21 @@ import { BreadcrumbsComponent } from '../../../../components/breadcrumbs/breadcr
 import { DownloadCtaComponent } from '../../../../components/download-cta/download-cta.component';
 import { BlogCardComponent } from '../../../../components/blog-card/blog-card.component';
 import { BreadcrumbItem, injectBreadcrumbSchema } from '../../../../shared/breadcrumb-schema';
-import { BLOG_POSTS, CATEGORY_SLUGS, getRecommendedPosts } from '../../../blog/blog-posts.data';
+import { BLOG_POSTS, CATEGORY_SLUGS, getRecommendedGamesForPost, getRecommendedPosts } from '../../../blog/blog-posts.data';
+import { SliderNavComponent } from '../../../../components/slider-nav/slider-nav.component';
 
 
 @Component({
   selector: 'app-wat-is-een-anytimer',
   standalone: true,
-  imports: [RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'wat-is-een-anytimer.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './wat-is-een-anytimer.component.scss']
 })
 export class WatIsEenAnytimer {
   readonly category = BLOG_POSTS.find(p => p.slug === 'wat-is-een-anytimer')!.category;
   readonly recommendedPosts = getRecommendedPosts(BLOG_POSTS.find(p => p.slug === 'wat-is-een-anytimer')!);
+  readonly recommendedGames = getRecommendedGamesForPost(BLOG_POSTS.find(p => p.slug === 'wat-is-een-anytimer')!);
 
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Blog', url: '/blog' },

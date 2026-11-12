@@ -17,6 +17,7 @@ export const BEGRIPPEN_CONTENT_EN: Record<string, BegripContent> = {
   'adten': {
     paragraphs: [
       '"You lost the bet, so now you have to adten," his housemate shouted across the room.',
+      'You can write it as adten or atten. Both are fine, just like adtje and atje. The word comes from the Latin ad fundum: to the bottom. You chug a beer fastest with your throat open. You don\'t swallow every sip but let the beer run through in one go. Only do it if you want to. See how fast you are with the free <a href="/en/chug-timer/">chug timer</a>.',
       'The verb comes from <a href="/en/blog/dictionary/what-is-an-adtje/">adtje</a>. If someone gives you an adtje, you finish your drink in one go. No breaks. Using a straw makes it even faster, and that is called a <a href="/en/blog/dictionary/rietadt/">rietadt</a>. In English you would call it chugging. Also read about <a href="/en/blog/dictionary/what-is-an-anytimer/">anytimer</a> and <a href="/en/blog/dictionary/chug/">chug</a>.'
     ]
   },
@@ -59,7 +60,7 @@ export const BEGRIPPEN_CONTENT_EN: Record<string, BegripContent> = {
   'afko': {
     paragraphs: [
       '"Do you get this afko?" he asked, pointing at a group chat full of random letters.',
-      'Dutch student associations and student houses use so many abbreviations that even the word abbreviation got shortened. Without a good dictionary you get lost fast. Luckily you found one. Also read about <a href="/en/blog/dictionary/abbo/">abbo</a> and <a href="/en/blog/dictionary/afk/">AFK</a>.'
+      'Dutch student associations and student houses use so many abbreviations that even the word abbreviation got shortened. Without a good dictionary you get lost fast. Luckily you found one. Also read about <a href="/en/blog/dictionary/abbo/">abbo</a>, <a href="/en/blog/dictionary/afk/">AFK</a> and the abbreviation <a href="/en/blog/dictionary/idk/">IDK</a>.'
     ]
   },
   'afpilsen': {
@@ -491,7 +492,7 @@ export const BEGRIPPEN_CONTENT_EN: Record<string, BegripContent> = {
   'chug': {
     paragraphs: [
       '"Chug, chug, chug!" the whole table shouted when he started on his beer.',
-      'You can chug any drink, but at parties it is usually alcohol. The Dutch version is <a href="/en/blog/dictionary/adten/">adten</a>, or doing an <a href="/en/blog/dictionary/what-is-an-adtje/">adtje</a>. The difference: an adtje always means finishing it in one go. Always drink at your own pace. Also read about <a href="/en/blog/dictionary/shotgun-a-beer/">shotgun a beer</a> and <a href="/en/blog/dictionary/bottoms-up/">bottoms up</a>.'
+      'You can chug any drink, but at parties it is usually alcohol. The Dutch version is <a href="/en/blog/dictionary/adten/">adten</a>, or doing an <a href="/en/blog/dictionary/what-is-an-adtje/">adtje</a>. The difference: an adtje always means finishing it in one go. Always drink at your own pace. Curious about your time? Use the <a href="/en/chug-timer/">chug timer</a>. Also read about <a href="/en/blog/dictionary/shotgun-a-beer/">shotgun a beer</a> and <a href="/en/blog/dictionary/bottoms-up/">bottoms up</a>.'
     ]
   },
   'clickbait': {
@@ -1241,6 +1242,7 @@ export const BEGRIPPEN_CONTENT_EN: Record<string, BegripContent> = {
   'hard-launch': {
     paragraphs: [
       '"She posted a photo of both their faces, with his name tagged. That\'s a hard launch."',
+      'The term comes from marketing. There a hard launch is the full public release of a product, after a small test called a soft launch. On social media the word moved to dating. To hard launch someone means you post them openly, face and name included. People say "she hard launched him" or "they are hard launching their relationship". Typical hard launches are a couple photo, a tag in your story or a post on your anniversary.',
       'A hard launch is the opposite of a <a href="/en/blog/dictionary/soft-launch/">soft launch</a>. In dating you clearly show your partner or say their name. No more guessing. It often comes after a few weeks of soft launching. Also read about <a href="/en/blog/dictionary/rela/">rela</a> and <a href="/en/blog/dictionary/pocketing/">pocketing</a>.'
     ]
   },
@@ -1403,6 +1405,7 @@ export const BEGRIPPEN_CONTENT_EN: Record<string, BegripContent> = {
   'idk': {
     paragraphs: [
       '"What time does the party start anyway?" "IDK, ask in the group chat."',
+      'IDK is short for "I don\'t know". You see it mostly on WhatsApp, Snapchat and TikTok. In a text it is a quick reply when you don\'t know something or don\'t feel like thinking about it.',
       'IDK is one of the most used abbreviations in texts. Depending on the tone it sounds casual, unsure or uninterested. Often written in lowercase as idk. Also read about <a href="/en/blog/dictionary/idc/">IDC</a> and <a href="/en/blog/dictionary/lmk/">LMK</a>.'
     ]
   },
@@ -1715,7 +1718,7 @@ export const BEGRIPPEN_CONTENT_EN: Record<string, BegripContent> = {
   'lmk': {
     paragraphs: [
       '"We\'re having dinner at eight. LMK if you\'re coming."',
-      'With LMK you ask someone to get back to you later. A decision, an update or some info. It is short, easy and used a lot in group chats. Dutch students would just send a <a href="/en/blog/dictionary/dapri/">dapri</a>. Also read about <a href="/en/blog/dictionary/asap/">ASAP</a> and <a href="/en/blog/dictionary/fyi/">FYI</a>.'
+      'With LMK you ask someone to get back to you later. A decision, an update or some info. It is short, easy and used a lot in group chats. Dutch students would just send a <a href="/en/blog/dictionary/dapri/">dapri</a>. Also read about <a href="/en/blog/dictionary/asap/">ASAP</a>, <a href="/en/blog/dictionary/fyi/">FYI</a> and <a href="/en/blog/dictionary/idk/">IDK</a>.'
     ]
   },
   'loca': {
@@ -2261,7 +2264,7 @@ export const BEGRIPPEN_CONTENT_EN: Record<string, BegripContent> = {
   'rietadt': {
     paragraphs: [
       'For the contest he went for a rietadt instead of a normal <a href="/en/blog/dictionary/chug/">chug</a>.',
-      'For advanced drinkers, a rietadt (also called <a href="/en/blog/dictionary/rietbak/">rietbak</a>) goes faster than a normal <a href="/en/blog/dictionary/what-is-an-adtje/">adtje</a>. The straw lets air in and the drink flows fast. It is a lot like chugging, with a little help. Also read about <a href="/en/blog/dictionary/adten/">adten</a> and <a href="/en/blog/dictionary/riet/">riet</a>.'
+      'For advanced drinkers, a rietadt (also called <a href="/en/blog/dictionary/rietbak/">rietbak</a>) goes faster than a normal <a href="/en/blog/dictionary/what-is-an-adtje/">adtje</a>. The straw lets air in and the drink flows fast. It is a lot like chugging, with a little help. Time your rietadt with the <a href="/en/chug-timer/">chug timer</a>. Also read about <a href="/en/blog/dictionary/adten/">adten</a> and <a href="/en/blog/dictionary/riet/">riet</a>.'
     ]
   },
   'rietbak': {
@@ -2429,6 +2432,7 @@ export const BEGRIPPEN_CONTENT_EN: Record<string, BegripContent> = {
   'side-quest': {
     paragraphs: [
       '"I just went to get bread. Three hours later I was at a house party in Utrecht. Big side quest."',
+      'You write it as side quest or as one word, sidequest. On TikTok people show off their side quests: a spontaneous road trip, a party at a stranger\'s place or an hour chatting with the neighbour. A good side quest is mostly something you never planned.',
       'Side quest comes from games, where it is an optional mission next to the main story. In real life it is anything you end up doing while you planned something else. Often those are the best stories of the night. Also read about <a href="/en/blog/dictionary/main-character/">main character</a>, <a href="/en/blog/dictionary/lore/">lore</a> and <a href="/en/blog/dictionary/yolo/">YOLO</a>.'
     ]
   },
