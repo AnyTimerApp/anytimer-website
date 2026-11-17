@@ -70,7 +70,7 @@ const DRANKSPEL_FAQ: Record<Lang, { title: string; items: FaqItem[] }> = {
     items: [
       {
         question: 'Wat zijn de leukste drankspelletjes?',
-        answer: '[Kingsen](/blog/drankspelletjes/kingsen), [Bussen](/blog/drankspelletjes/bussen), [Mexen](/blog/drankspelletjes/mexen) en [De Paardenrace](/blog/drankspelletjes/de-paardenrace) zijn de klassiekers die bijna elke student kent. Je hebt er alleen kaarten of dobbelstenen voor nodig. Zin in iets anders? Probeer dan [Mario Barf](/blog/drankspelletjes/mario-barf) of [Stress Pong](/blog/drankspelletjes/stress-pong). Onze favorieten staan in de top 10 hierboven.'
+        answer: '[Kingsen](/blog/drankspelletjes/kingsen), [Bussen](/blog/drankspelletjes/bussen), [Mexen](/blog/drankspelletjes/mexen) en [De Paardenrace](/blog/drankspelletjes/de-paardenrace) zijn de klassiekers die bijna elke student kent. Je hebt er alleen kaarten of dobbelstenen voor nodig. Zin in iets anders? Probeer dan [Mario Barf](/blog/drankspelletjes/mario-barf) of [Stress Pong](/blog/drankspelletjes/stress-pong). Onze persoonlijke favorieten vind je in [de top 10 leukste drankspellen](/drankspellen).'
       },
       {
         question: 'Welke drankspelletjes speel je met kaarten?',
@@ -92,37 +92,37 @@ const DRANKSPEL_FAQ: Record<Lang, { title: string; items: FaqItem[] }> = {
       },
       {
         question: 'Wat zijn leuke drankspellen voor een grote groep?',
-        answer: 'Kies een spel waarbij iedereen tegelijk meedoet. [Kingsen](/blog/drankspelletjes/kingsen) en De Paardenrace speel je met maximaal 12 man. [Vikingen](/blog/drankspelletjes/vikingen) zelfs met 16, en dan moet de hele groep tegelijk opletten. En bij [Bussen](/blog/drankspelletjes/bussen) gaat aan het eind één iemand de bus in.',
+        answer: 'Kies een spel waarbij iedereen tegelijk meedoet. [Kingsen](/blog/drankspelletjes/kingsen) en [De Paardenrace](/blog/drankspelletjes/de-paardenrace) speel je met maximaal 12 man. [Vikingen](/blog/drankspelletjes/vikingen) zelfs met 16, en dan moet de hele groep tegelijk opletten. En bij [Bussen](/blog/drankspelletjes/bussen) gaat aan het eind één iemand de bus in.',
         link: '/blog/drankspelletjes/de-paardenrace',
         linkText: 'Bekijk de regels van De Paardenrace'
       },
       {
         question: 'Welke drankspelletjes speel je met dobbelstenen?',
-        answer: '[Mexen](/blog/drankspelletjes/mexen) is het bekendste dobbelspel. Je gooit met twee stenen onder een beker en probeert niet de laagste worp van de ronde te hebben. Rond Sinterklaas is het Sinterklaas dobbelspel populair. Daarbij hoort bij elk getal een opdracht.',
+        answer: '[Mexen](/blog/drankspelletjes/mexen) is het bekendste dobbelspel. Je gooit met twee stenen onder een beker en probeert niet de laagste worp van de ronde te hebben. Rond Sinterklaas is het [Sinterklaas dobbelspel](/blog/inspiratie/sinterklaas-dobbelspel) populair. Daarbij hoort bij elk getal een opdracht.',
         link: '/blog/inspiratie/sinterklaas-dobbelspel',
         linkText: 'Bekijk het Sinterklaas dobbelspel'
       },
       {
         question: 'Wat zijn makkelijke drankspelletjes?',
-        answer: 'Bakplaten is het simpelste kaartspel dat er is. Trek je een plaatje, dan drink je. [Hoger lager](/blog/drankspelletjes/hoger-lager) en [Jeu de bier](/blog/drankspelletjes/jeu-de-bier) leg je ook in één minuut uit. Fijn voor het begin van de avond, of als niet iedereen de regels kent.',
+        answer: '[Bakplaten](/blog/drankspelletjes/bakplaten) is het simpelste kaartspel dat er is. Trek je een plaatje, dan drink je. [Hoger lager](/blog/drankspelletjes/hoger-lager) en [Jeu de bier](/blog/drankspelletjes/jeu-de-bier) leg je ook in één minuut uit. Fijn voor het begin van de avond, of als niet iedereen de regels kent.',
         link: '/blog/drankspelletjes/bakplaten',
         linkText: 'Bekijk de regels van Bakplaten'
       },
       {
         question: 'Wat zijn leuke opdrachten voor een drankspel?',
-        answer: 'Bij Kingsen en [Ring of fire](/blog/drankspelletjes/ring-of-fire) hoort bij elke kaart een opdracht. Denk aan een regel verzinnen, een drinking buddy kiezen of om de beurt iets uit een categorie noemen. Bij [Jenga drankspel](/blog/drankspelletjes/jenga) schrijf je de opdrachten op de blokjes.',
+        answer: 'Bij [Kingsen](/blog/drankspelletjes/kingsen) en [Ring of fire](/blog/drankspelletjes/ring-of-fire) hoort bij elke kaart een opdracht. Denk aan een regel verzinnen, een drinking buddy kiezen of om de beurt iets uit een categorie noemen. Bij [Jenga drankspel](/blog/drankspelletjes/jenga) schrijf je de opdrachten op de blokjes.',
         link: '/blog/drankspelletjes/kingsen',
         linkText: 'Bekijk de opdrachten van Kingsen'
       },
       {
         question: 'Wat is een grappig drankspel?',
-        answer: 'Bij Kusje geven geef je een speelkaart door met je mond, en die mag niet vallen. Bij [Vikingen](/blog/drankspelletjes/vikingen) zit iedereen te roeien en golven te maken. En bij [Krokodillenspel](/blog/drankspelletjes/krokodillenspel) wacht je tot de bek dichtklapt. Gelach gegarandeerd.',
+        answer: 'Bij [Kusje geven](/blog/drankspelletjes/kusje-geven) geef je een speelkaart door met je mond, en die mag niet vallen. Bij [Vikingen](/blog/drankspelletjes/vikingen) zit iedereen te roeien en golven te maken. En bij [Krokodillenspel](/blog/drankspelletjes/krokodillenspel) wacht je tot de bek dichtklapt. Gelach gegarandeerd.',
         link: '/blog/drankspelletjes/kusje-geven',
         linkText: 'Bekijk de regels van Kusje geven'
       },
       {
         question: 'Zijn er drankspelletjes voor je telefoon?',
-        answer: 'Ja. Bij Boze bak druk je op blije bakken en hoop je dat de boze bak niet verschijnt. Bij [Finger roulette](/blog/drankspelletjes/finger-roulette) kiest de telefoon wie er drinkt. Die speel je allebei in de gratis [AnyTimerApp](/). En met de [adt timer](/adt-timer) op onze site meet je wie zijn bier het snelst op heeft.',
+        answer: 'Ja. [Boze bak](/blog/drankspelletjes/boze-bak) en [Finger roulette](/blog/drankspelletjes/finger-roulette) speel je op je telefoon. Bij Boze bak druk je op blije bakken en hoop je dat de boze bak niet verschijnt. Bij Finger roulette kiest de telefoon wie er drinkt. Ook [Mexen](/blog/drankspelletjes/mexen) en [Bakplaten](/blog/drankspelletjes/bakplaten) kun je op je telefoon spelen, zonder dobbelstenen of kaarten. En met een [adt timer](/adt-timer) meet je wie zijn bier het snelst op heeft.',
         link: '/blog/drankspelletjes/boze-bak',
         linkText: 'Bekijk de regels van Boze bak'
       }
@@ -133,7 +133,7 @@ const DRANKSPEL_FAQ: Record<Lang, { title: string; items: FaqItem[] }> = {
     items: [
       {
         question: 'What are the best drinking games?',
-        answer: '[Ring of Fire](/en/blog/drinking-games/ring-of-fire), [Ride the Bus](/en/blog/drinking-games/ride-the-bus), [Mexico](/en/blog/drinking-games/mexico) and [Horse Race](/en/blog/drinking-games/horse-race) are the classics most students know. All you need is a deck of cards or some dice. Fancy something different? Try [Beerio Kart](/en/blog/drinking-games/beerio-kart) or [Rage Cage](/en/blog/drinking-games/rage-cage). Our favourites are in the top 10 above.'
+        answer: '[Ring of Fire](/en/blog/drinking-games/ring-of-fire), [Ride the Bus](/en/blog/drinking-games/ride-the-bus), [Mexico](/en/blog/drinking-games/mexico) and [Horse Race](/en/blog/drinking-games/horse-race) are the classics most students know. All you need is a deck of cards or some dice. Fancy something different? Try [Beerio Kart](/en/blog/drinking-games/beerio-kart) or [Rage Cage](/en/blog/drinking-games/rage-cage). Our personal favourites are in [the top 10 best drinking games](/en/blog/inspiration/best-drinking-games).'
       },
       {
         question: 'Which drinking games can you play with cards?',
@@ -155,37 +155,37 @@ const DRANKSPEL_FAQ: Record<Lang, { title: string; items: FaqItem[] }> = {
       },
       {
         question: 'What are good drinking games for a big group?',
-        answer: 'Pick a game where everyone plays at the same time. [Kingsen](/en/blog/drinking-games/kingsen) and Horse Race work with up to 12 players. [Vikings](/en/blog/drinking-games/vikings) even with 16, and then the whole group has to pay attention at once. And in [Ride the Bus](/en/blog/drinking-games/ride-the-bus) one person ends up on the bus.',
+        answer: 'Pick a game where everyone plays at the same time. [Kingsen](/en/blog/drinking-games/kingsen) and [Horse Race](/en/blog/drinking-games/horse-race) work with up to 12 players. [Vikings](/en/blog/drinking-games/vikings) even with 16, and then the whole group has to pay attention at once. And in [Ride the Bus](/en/blog/drinking-games/ride-the-bus) one person ends up on the bus.',
         link: '/en/blog/drinking-games/horse-race',
         linkText: 'See the rules of Horse Race'
       },
       {
         question: 'Which drinking games can you play with dice?',
-        answer: '[Mexico](/en/blog/drinking-games/mexico) is the best known dice game. You roll two dice under a cup and try not to have the lowest roll of the round. Around Sinterklaas the Sinterklaas dice game is popular. Every number comes with a task.',
+        answer: '[Mexico](/en/blog/drinking-games/mexico) is the best known dice game. You roll two dice under a cup and try not to have the lowest roll of the round. Around Sinterklaas the [Sinterklaas dice game](/en/blog/inspiration/sinterklaas-dice-game) is popular. Every number comes with a task.',
         link: '/en/blog/inspiration/sinterklaas-dice-game',
         linkText: 'See the Sinterklaas dice game'
       },
       {
         question: 'What are easy drinking games?',
-        answer: 'Bakplaten is the simplest card game there is. Draw a face card and you drink. [Higher or Lower](/en/blog/drinking-games/higher-or-lower) and [Jeu de bier](/en/blog/drinking-games/jeu-de-bier) take a minute to explain too. Great for the start of the night, or when not everyone knows the rules.',
+        answer: '[Bakplaten](/en/blog/drinking-games/bakplaten) is the simplest card game there is. Draw a face card and you drink. [Higher or Lower](/en/blog/drinking-games/higher-or-lower) and [Jeu de bier](/en/blog/drinking-games/jeu-de-bier) take a minute to explain too. Great for the start of the night, or when not everyone knows the rules.',
         link: '/en/blog/drinking-games/bakplaten',
         linkText: 'See the rules of Bakplaten'
       },
       {
         question: 'What are good tasks for a drinking game?',
-        answer: 'In [Kingsen](/en/blog/drinking-games/kingsen) and Ring of Fire every card comes with a task. Think of making up a rule, picking a drinking buddy or taking turns naming something from a category. In [Drunk Jenga](/en/blog/drinking-games/drunk-jenga) you write the tasks on the blocks.',
+        answer: 'In [Kingsen](/en/blog/drinking-games/kingsen) and [Ring of Fire](/en/blog/drinking-games/ring-of-fire) every card comes with a task. Think of making up a rule, picking a drinking buddy or taking turns naming something from a category. In [Drunk Jenga](/en/blog/drinking-games/drunk-jenga) you write the tasks on the blocks.',
         link: '/en/blog/drinking-games/ring-of-fire',
         linkText: 'See the tasks of Ring of Fire'
       },
       {
         question: 'What is a funny drinking game?',
-        answer: 'In Suck and Blow you pass a playing card around with your mouth, and it must not fall. In [Vikings](/en/blog/drinking-games/vikings) everyone is rowing and making waves. And in [Crocodile Dentist](/en/blog/drinking-games/crocodile-dentist) you wait for the jaws to snap shut. Laughs guaranteed.',
+        answer: 'In [Suck and Blow](/en/blog/drinking-games/suck-and-blow) you pass a playing card around with your mouth, and it must not fall. In [Vikings](/en/blog/drinking-games/vikings) everyone is rowing and making waves. And in [Crocodile Dentist](/en/blog/drinking-games/crocodile-dentist) you wait for the jaws to snap shut. Laughs guaranteed.',
         link: '/en/blog/drinking-games/suck-and-blow',
         linkText: 'See the rules of Suck and Blow'
       },
       {
         question: 'Are there drinking games for your phone?',
-        answer: 'Yes. In Angry Mug you tap the happy mugs and hope the angry mug does not show up. In [Finger Roulette](/en/blog/drinking-games/finger-roulette) the phone picks who drinks. You play both in the free [AnyTimerApp](/en/). And with the [chug timer](/en/chug-timer) on our site you find out who finishes their beer the fastest.',
+        answer: 'Yes. [Angry Mug](/en/blog/drinking-games/angry-mug) and [Finger Roulette](/en/blog/drinking-games/finger-roulette) are played on your phone. In Angry Mug you tap the happy mugs and hope the angry mug does not show up. In Finger Roulette the phone picks who drinks. You can also play [Mexico](/en/blog/drinking-games/mexico) and [Bakplaten](/en/blog/drinking-games/bakplaten) on your phone, without dice or cards. And with a [chug timer](/en/chug-timer) you find out who finishes their beer the fastest.',
         link: '/en/blog/drinking-games/angry-mug',
         linkText: 'See the rules of Angry Mug'
       }
