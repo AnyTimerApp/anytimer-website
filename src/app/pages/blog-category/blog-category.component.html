@@ -151,4 +151,8 @@
     }
 
   </div>
+
+  @if (faqs) {
+  <app-about [items]="faqs" [title]="faqTitle"></app-about>
+  }
 </div>

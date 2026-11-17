@@ -32,7 +32,7 @@ export class KingsenComponent {
 
   constructor(meta: Meta, @Inject(DOCUMENT) document: Document) {
     const title = 'Kingsen regels: zo speel je het drankspel';
-    const description = 'Kingsen is een kaartspel waarbij elke kaart een opdracht geeft. Leg de kaarten in een cirkel. Wie de vierde koning pakt, drinkt het glas leeg.';
+    const description = 'Kingsen regels: wat elke kaart betekent, van aas tot koning. Leg de kaarten in een cirkel. Wie de vierde koning pakt, drinkt het glas in het midden leeg.';
     const image = 'https://anytimer.app/assets/blogs/drankspellen/kingsen.png';
     const url = 'https://anytimer.app/blog/drankspelletjes/kingsen/';
     const publishedTime = '2026-07-24';

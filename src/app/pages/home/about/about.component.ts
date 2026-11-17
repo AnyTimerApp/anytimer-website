@@ -1,11 +1,29 @@
-import { Component, Inject, PLATFORM_ID, inject } from '@angular/core';
+import { Component, Inject, Input, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { LanguageService } from '../../../i18n/language.service';
+
+// An answer may contain inline links written as [text](/path). They are split
+// into parts, so the template can render them with routerLink.
+export type FaqItem = { question: string; answer: string; link?: string; linkText?: string };
+type AnswerPart = { text: string; link?: string };
+
+function toParts(answer: string): AnswerPart[] {
+  const parts: AnswerPart[] = [];
+  const pattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let last = 0;
+  for (const match of answer.matchAll(pattern)) {
+    if (match.index! > last) parts.push({ text: answer.slice(last, match.index) });
+    parts.push({ text: match[1], link: match[2] });
+    last = match.index! + match[0].length;
+  }
+  if (last < answer.length) parts.push({ text: answer.slice(last) });
+  return parts;
+}
 
 // English FAQ. Also used for the FAQPage JSON-LD on the English home page,
 // so the structured data always matches what is on screen.
-export const FAQS_EN: { question: string; answer: string; link?: string; linkText?: string }[] = [
+export const FAQS_EN: FaqItem[] = [
   {
     question: 'What is an anytimer?',
     answer: 'An anytimer is basically a free pass you can get from your friends or give to someone. For example after a lost challenge, a silly move or a bet. And the fun part: it can be used at any moment. So yes, also when you are hungover or when it suits you the least.',
@@ -56,18 +74,24 @@ const TEXT = {
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
   private readonly language = inject(LanguageService);
-  readonly t = TEXT[this.language.lang()];
+  private readonly router = inject(Router);
+  readonly t = { ...TEXT[this.language.lang()] };
   readonly ui = this.language.ui();
+
+  // Optional, for reuse outside the home page (e.g. the Drankspelletjes hub).
+  // Without them the block shows the anytimer FAQ of the home page.
+  @Input() items?: FaqItem[];
+  @Input() title?: string;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     if (this.language.lang() === 'en') {
-      this.faqs = FAQS_EN.map((faq, i) => ({ ...faq, open: i === 0 }));
+      this.faqs = FAQS_EN.map((faq, i) => ({ ...faq, parts: toParts(faq.answer), open: i === 0 }));
     }
   }
 
-faqs: { question: string; answer: string; link?: string; linkText?: string; open: boolean }[] = [
+faqs: { question: string; answer: string; parts?: AnswerPart[]; link?: string; linkText?: string; open: boolean }[] = [
   {
     question: 'Wat is een anytimer?',
     answer: 'Een anytimer is eigenlijk gewoon een tegoed dat je van je vrienden kunt krijgen of aan iemand kunt geven. Bijvoorbeeld na een verloren challenge, domme actie of weddenschap. En het leuke is: die kan op elk moment ingezet worden. Dus ja, ook op een brak moment of precies wanneer het het minst uitkomt.',
@@ -97,11 +121,25 @@ faqs: { question: string; answer: string; link?: string; linkText?: string; open
   }
 ];
 
+  ngOnInit() {
+    if (this.items) {
+      this.faqs = this.items.map((faq, i) => ({ ...faq, parts: toParts(faq.answer), open: i === 0 }));
+    }
+    if (this.title) {
+      this.t.title = this.title;
+    }
+  }
+
   toggle(index: number) {
     this.faqs[index].open = !this.faqs[index].open;
   }
 
+  // On the home page the download hero is at the top. Elsewhere, go to the home page.
   scrollToTop() {
+    if (this.items) {
+      this.router.navigateByUrl(this.ui.paths.home);
+      return;
+    }
     if (isPlatformBrowser(this.platformId)) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }

@@ -27,8 +27,9 @@
       <!-- Right accordion -->
       <div class="faq-right">
         @for (faq of faqs; track faq.question; let i = $index) {
-          <div class="faq-item" [class.faq-item--open]="faq.open" (click)="toggle(i)">
-            <div class="faq-question">
+          <div class="faq-item" [class.faq-item--open]="faq.open">
+            <!-- Only the question row (incl. its padding) toggles, so a tap next to a link in the answer does not close it -->
+            <div class="faq-question" (click)="toggle(i)">
               <span>{{ faq.question }}</span>
               <div class="faq-icon">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -36,14 +37,14 @@
                 </svg>
               </div>
             </div>
-            @if (faq.open) {
-              <div class="faq-answer">
-                <p>{{ faq.answer }}</p>
-                @if (faq.link) {
-                  <a [routerLink]="faq.link" class="faq-read-more">{{ faq.linkText }}</a>
-                }
-              </div>
-            }
+            <!-- Always rendered (hidden when closed) so search engines can read every answer -->
+            <div class="faq-answer" [hidden]="!faq.open">
+              <!-- One line on purpose: line breaks here would add spaces around the links -->
+              <p>@if (faq.parts) {@for (part of faq.parts; track $index) {@if (part.link) {<a [routerLink]="part.link" class="faq-link">{{ part.text }}</a>} @else {{{ part.text }}}}} @else {{{ faq.answer }}}</p>
+              @if (faq.link) {
+                <a [routerLink]="faq.link" class="faq-read-more">{{ faq.linkText }}</a>
+              }
+            </div>
           </div>
         }
       </div>

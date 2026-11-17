@@ -53,7 +53,7 @@ export const routes: Routes = [
   { path: 'blog/begrippen', component: BlogCategoryComponent, title: 'Studentenbegrippen: alle studententaal van A tot Z uitgelegd', data: { category: 'Begrippen' } },
   { path: 'blog/inspiratie', component: BlogCategoryComponent, title: 'Inspiratie: ideeën voor een leuke avond', data: { category: 'Inspiratie' } },
   { path: 'blog/weetjes', component: BlogCategoryComponent, title: 'Weetjes: alles over anytimers en de regels', data: { category: 'Weetjes' } },
-  { path: 'blog/drankspelletjes', component: BlogCategoryComponent, title: 'Drankspelletjes: alle spelregels op een rij', data: { category: 'Drankspelletjes' } },
+  { path: 'blog/drankspelletjes', component: BlogCategoryComponent, title: 'Drankspelletjes: alle drankspellen met spelregels op een rij', data: { category: 'Drankspelletjes' } },
   { path: 'drankspellen', component: DrankspellenComponent, title: 'Top 10 leukste drankspellen voor een gezellige avond' },
   { path: 'blog/inspiratie/drankspellen-met-kaarten', loadComponent: () => import('./pages/blogs/inspiratie/drankspellen-met-kaarten/drankspellen-met-kaarten.component').then(m => m.DrankspellenMetKaartenComponent), title: 'Drankspellen met kaarten: de 8 leukste kaartspellen' },
   { path: 'blog/inspiratie/drankspellen-zonder-kaarten', loadComponent: () => import('./pages/blogs/inspiratie/drankspellen-zonder-kaarten/drankspellen-zonder-kaarten.component').then(m => m.DrankspellenZonderKaartenComponent), title: 'Drankspellen zonder kaarten: 10 spellen voor elke avond' },

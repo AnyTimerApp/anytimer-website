@@ -39,7 +39,7 @@ export class KingsenEnComponent {
       id: 'en-kingsen',
       lang: 'en',
       title: 'Kingsen rules: how to play the drinking game',
-      description: 'Kingsen is the Dutch version of Kings Cup. Every card has its own rule. Place the cards in a circle. Whoever draws the fourth king drinks the cup.',
+      description: 'Kingsen rules: what every card means, from ace to king. The Dutch version of Kings Cup. Whoever draws the fourth king drinks the glass in the middle.',
       url: 'https://anytimer.app/en/blog/drinking-games/kingsen/',
       image: 'https://anytimer.app/assets/blogs/drankspellen/kingsen.png',
       imageAlt: this.post.imageAlt,
