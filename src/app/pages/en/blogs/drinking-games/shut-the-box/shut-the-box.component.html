@@ -1,0 +1,199 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Shut the Box rules</h1>
+      <p class="legal-intro">
+        Shut the Box is a dice game with a wooden box and the numbers 1 to 9. You roll two dice and flip down numbers that add up to your roll. Manage to flip down every number? Then you have shut the box and you win straight away.
+      </p>
+      <p class="legal-intro">
+        You will get the rules in two minutes. Below you will learn step by step how it works. At the bottom you will find how to turn it into a drinking game.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>What is Shut the Box?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/shut the box.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/shut the box.png" alt="Shut the Box dice game with flipped down numbers and two dice" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Type</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Players</span>
+              </div>
+              <span class="game-stat__value">1 to 6</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Duration</span>
+              </div>
+              <span class="game-stat__value">10-30 minutes</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">What you need</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Shut the Box</span>
+              <span class="game-tag">2 dice</span>
+              <span class="game-tag">Drinks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Setting up</h2>
+        <p>A Shut the Box is a box with a row of flaps. Each flap shows a number from 1 to 9. You roll the dice inside the box.</p>
+        <ol>
+          <li>Open all the flaps, so you can see every number.</li>
+          <li>Get two dice ready.</li>
+          <li>Grab a pen and paper to keep score.</li>
+          <li>Agree on how many rounds you play. Usually you play until someone has 45 points.</li>
+        </ol>
+        <p><strong>No Shut the Box at home?</strong> Write the numbers 1 to 9 on a piece of paper. Cross out every number you flip down. Then all you need is two dice.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>How to play</h2>
+        <ol>
+          <li>The first player rolls two dice and adds up the total.</li>
+          <li>Flip down numbers that add up to that total. That can be one number or several.</li>
+          <li>Roll again and flip down more numbers. You can only use numbers that are still open.</li>
+          <li>Are the 7, 8 and 9 down? Then you may choose to roll just one die.</li>
+          <li>Can't flip down any numbers with your roll? Then your turn is over.</li>
+          <li>Add up the numbers that are still open. That is your score for this round.</li>
+          <li>Open all the flaps again. Now it is the next player's turn.</li>
+        </ol>
+
+        <h3>An example</h3>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/shut the box top view.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/shut the box top view.png" alt="Shut the Box seen from above with a roll of 5 and 3 and the number 8 flipped down" class="game-image" loading="lazy">
+        </picture>
+        <p>You roll a 5 and a 3. That makes 8. You can now flip down the 8. Or the 7 and the 1, the 6 and the 2, the 5 and the 3, or the 5, the 2 and the 1. Your choice.</p>
+
+        <div class="fun-fact-card">
+          <div class="fun-fact-card__icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18h6"/>
+              <path d="M10 22h4"/>
+              <path d="M12 2a6 6 0 00-4 10.47c.5.46.9 1.02 1.1 1.66L9.4 16h5.2l.3-1.87c.2-.64.6-1.2 1.1-1.66A6 6 0 0012 2z"/>
+            </svg>
+          </div>
+          <p>Tip: flip down the high numbers as early as you can. Low numbers are easy to combine at the end. A 9 only goes down with a high roll.</p>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Who wins?</h2>
+        <p>After each round you write down everyone's score. The lowest score wins the round.</p>
+        <p>Does someone flip down every number? Then they have shut the box. They score 0 and win the round straight away. Some groups even give them the whole game.</p>
+        <p>Playing several rounds? Then add up the scores. Reach 45 points or more and you are out. The last player left wins.</p>
+
+        <h3>House rules</h3>
+        <p>Shut the Box is played in lots of ways. These are the differences you will see most. Agree on them before you start.</p>
+        <ul>
+          <li><strong>Scoring:</strong> most groups add up the open numbers. Some read them as one number. Are the 1 and the 4 still open? Then you score 14 instead of 5.</li>
+          <li><strong>One die:</strong> some groups allow it once the 7, 8 and 9 are down. Others only when less than 7 is left open in total.</li>
+          <li><strong>One round or a full game:</strong> play one round for a quick winner, or up to 45 points for a longer game.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Shut the Box with 12 numbers</h2>
+        <p>Some boxes have the numbers 1 to 12. The rules stay the same. The game just takes longer and shutting the box is much harder. With 12 numbers you usually play up to 78 points instead of 45.</p>
+        <p>There are also boxes for 4 or 6 players. Each player has their own row of flaps. You then play at the same time instead of taking turns.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Shut the Box as a drinking game</h2>
+        <p>On its own Shut the Box is a calm game. Add drinks and every roll gets exciting. Pick one or more of these options. Agree on them before you start.</p>
+
+        <h3>Highest score drinks</h3>
+        <p>Whoever has the most points after a round takes a sip for every 10 points. Got 23 points? Then you take 2 sips.</p>
+
+        <h3>Lowest score hands out sips</h3>
+        <p>Whoever has the fewest points hands out sips. They can split them over the other players.</p>
+
+        <h3>Box shut</h3>
+        <p>Does someone shut the box? Then everyone else downs their drink in one go: an <a routerLink="/en/blog/dictionary/what-is-an-adtje">adtje</a>.</p>
+
+        <h3>With an anytimer at stake</h3>
+        <p>The winner of the game gets an <a routerLink="/en/blog/dictionary/what-is-an-anytimer">anytimer</a> from the player with the most points.</p>
+
+        <p>Looking for more dice games? Also try <a routerLink="/en/blog/drinking-games/mexico">Mexico</a> or the <a routerLink="/en/blog/inspiration/sinterklaas-dice-game">Sinterklaas dice game</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Same FAQ block as the home page and the Drankspelletjes hub (full width) -->
+  <app-about [items]="faqs" [title]="faqTitle" [promoTitle]="faqPromoTitle" [promoText]="faqPromoText" [promoLink]="faqPromoLink"></app-about>
+
+  <div class="container">
+    <div class="legal-body">
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Similar drinking games</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended drinking games</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

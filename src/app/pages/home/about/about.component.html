@@ -10,7 +10,7 @@
           {{ t.other }}
           <a [routerLink]="ui.paths.contact" class="faq-link">{{ t.form }}</a>.
         </p>
-        <div class="faq-app-promo" (click)="scrollToTop()" style="cursor:pointer;">
+        <ng-template #promoContent>
           <div class="faq-promo-icon">
             <picture style="display: contents">
               <source srcset="assets/logo.webp" type="image/webp">
@@ -18,10 +18,16 @@
             </picture>
           </div>
           <div>
-            <strong>{{ t.ready }}</strong>
-            <span>{{ t.download }}</span>
+            <strong>{{ promoTitle || t.ready }}</strong>
+            <span>{{ promoText || t.download }}</span>
           </div>
-        </div>
+        </ng-template>
+        <!-- With promoLink (e.g. a game that is not in the app) the card is a real link -->
+        @if (promoLink) {
+          <a class="faq-app-promo" [routerLink]="promoLink"><ng-container *ngTemplateOutlet="promoContent"></ng-container></a>
+        } @else {
+          <div class="faq-app-promo" (click)="scrollToTop()" style="cursor:pointer;"><ng-container *ngTemplateOutlet="promoContent"></ng-container></div>
+        }
       </div>
 
       <!-- Right accordion -->

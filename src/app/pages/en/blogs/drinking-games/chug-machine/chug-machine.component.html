@@ -1,0 +1,160 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Chug Machine rules</h1>
+      <p class="legal-intro">
+        Chug Machine is a slot machine for chugs. You spin three reels and each reel stops on a full or an empty mug. Three full mugs? Then you get to hand out a chug. Three empty mugs? Then you have to down your drink yourself.
+      </p>
+      <p class="legal-intro">
+        You play it in the AnyTimerApp. So all you need is your phone and drinks. In the Dutch version of the app the game is called Bakmachine. Below you will learn how it works.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>What is Chug Machine?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/bakmachine.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/bakmachine.png" alt="Two friends playing Chug Machine on a phone and tapping spin" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Type</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Players</span>
+              </div>
+              <span class="game-stat__value">2 or more</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Duration</span>
+              </div>
+              <span class="game-stat__value">5-15 minutes</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">What you need</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Phone</span>
+              <span class="game-tag">Drinks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>How to play</h2>
+        <ol>
+          <li>Open Chug Machine in the AnyTimerApp.</li>
+          <li>Sit in a circle. The phone goes round, one player at a time.</li>
+          <li>The player whose turn it is spins the three reels.</li>
+          <li>Each reel stops on a full or an empty mug. Both are equally likely on every reel.</li>
+          <li>Check the result and do what goes with it.</li>
+          <li>Pass the phone to the next player.</li>
+        </ol>
+
+        <div class="fun-fact-card">
+          <div class="fun-fact-card__icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18h6"/>
+              <path d="M10 22h4"/>
+              <path d="M12 2a6 6 0 00-4 10.47c.5.46.9 1.02 1.1 1.66L9.4 16h5.2l.3-1.87c.2-.64.6-1.2 1.1-1.66A6 6 0 0012 2z"/>
+            </svg>
+          </div>
+          <p>Did you know you can play Chug Machine in <a routerLink="/en/">our free app</a>?</p>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>When someone has to drink</h2>
+        <ul>
+          <li><strong>Three full mugs:</strong> you hand out a chug. Pick who has to down their drink.</li>
+          <li><strong>Three empty mugs:</strong> you have to down your drink yourself. In Dutch that is called <a routerLink="/en/blog/dictionary/bak-trekken">bak trekken</a>.</li>
+          <li><strong>Three full mugs twice in a row:</strong> you get to hand out even more. How much is up to you. Agree on it before you start.</li>
+          <li><strong>Any other result:</strong> nothing happens. Next player.</li>
+        </ul>
+
+        <h3>The odds</h3>
+        <p>Every reel has a 50% chance of a full mug. So the chance of three full mugs is 1 in 8. Same for three empty mugs. On average someone downs a drink every four turns.</p>
+
+        <h3>Extra rules</h3>
+        <ul>
+          <li>Agree beforehand what a chug is. A full glass, half a glass or a few sips.</li>
+          <li>Playing with a big group? Then three full mugs means you hand out a chug to two players.</li>
+          <li>Whoever has to down their drink doesn't spin first again. The next player goes.</li>
+        </ul>
+
+        <p>More games on your phone? Also try <a routerLink="/en/blog/drinking-games/angry-mug">Angry Mug</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Same FAQ block as the home page and the Drankspelletjes hub (full width) -->
+  <app-about [items]="faqs" [title]="faqTitle" [promoTitle]="faqPromoTitle" [promoText]="faqPromoText"></app-about>
+
+  <div class="container">
+    <div class="legal-body">
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Similar drinking games</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended drinking games</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

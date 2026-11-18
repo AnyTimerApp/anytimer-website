@@ -1,3 +1,4 @@
+import { AboutComponent, FaqItem } from '../../../../home/about/about.component';
 import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
@@ -16,11 +17,21 @@ import { SliderNavComponent } from '../../../../../components/slider-nav/slider-
 @Component({
   selector: 'app-ride-the-bus-en',
   standalone: true,
-  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [AboutComponent, SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'ride-the-bus.component.html',
   styleUrls: ['../../../../juridisch/juridisch.component.scss', '../../../../blogs/blog-article-shared.scss', '../../../../blogs/drankspelletjes/bussen/bussen.component.scss']
 })
 export class RideTheBusEnComponent {
+  readonly faqTitle = 'Everything about Ride the Bus';
+  readonly faqs: FaqItem[] = [
+    { question: 'How does Ride the Bus work?', answer: 'You play four rounds where you guess: red or black, higher or lower, inside or outside, and the same colour or not. Then the dealer lays out a pyramid of 15 cards. Whoever has the most cards left at the end has to ride the bus.' },
+    { question: 'What is the bus?', answer: 'The bus is the last round. Eight face-up cards lie in a row. The player in the bus keeps guessing higher or lower and starts over after every mistake.' },
+    { question: 'How many people can play?', answer: 'You play Ride the Bus with 2 to 8 players. With more people you need a second deck, or the pile runs out too fast.' }
+  ];
+  readonly faqPromoTitle = 'More drinking games?';
+  readonly faqPromoText = 'See all drinking games and their rules';
+  readonly faqPromoLink = '/en/blog/drinking-games';
+
   private readonly post = BLOG_POSTS_EN.find(p => p.slug === 'ride-the-bus')!;
   private readonly ui = UI.en;
   readonly subCategory = this.ui.subCategoryLabels[this.post.subCategory!];

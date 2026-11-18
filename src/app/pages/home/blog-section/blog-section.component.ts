@@ -9,23 +9,34 @@ import { Lang } from '../../../i18n/lang';
 import { UI } from '../../../i18n/ui';
 import { SliderNavComponent } from '../../../components/slider-nav/slider-nav.component';
 
-// "Populairste drankspellen" on the home page: the 12 single-game posts with the most
+// "Populairste drankspellen" on the home page: the single-game posts with the most
 // Google Search Console impressions over the last 28 days. Updated by the weekly SEO
-// analysis (.claude/skills/gum-seo-weekly). Last update: 2026-11-04 (data 5 Oct to 1 Nov 2026).
-const TOP_DRANKSPELLEN_SLUGS = [
+// analysis (.claude/skills/gum-seo-weekly). Last update: 2026-11-17 (data 18 Oct to 14 Nov 2026).
+const TOP_DRANKSPELLEN_BY_IMPRESSIONS = [
   'kingsen',
   'fuck-the-dealer',
   'de-paardenrace',
   'mexen',
-  'bussen',
-  'mario-barf',
   'stress-pong',
-  'zeeslag',
+  'bussen',
   'vikingen',
-  'hoger-lager',
+  'zeeslag',
   '30-seconds',
-  'trek-je-bak-mania'
+  'finger-roulette',
+  'mario-barf'
 ];
+
+// Games we want people to find from the home page, whatever their search volume.
+// Fixed position (0-based) in the row; it is kept out of the impressions list above.
+const FIXED_DRANKSPELLEN: { slug: string; position: number }[] = [
+  { slug: 'boze-bak', position: 4 }
+];
+
+const TOP_DRANKSPELLEN_SLUGS = (() => {
+  const slugs = TOP_DRANKSPELLEN_BY_IMPRESSIONS.filter(slug => !FIXED_DRANKSPELLEN.some(f => f.slug === slug));
+  for (const fixed of FIXED_DRANKSPELLEN) slugs.splice(fixed.position, 0, fixed.slug);
+  return slugs;
+})();
 
 // The English site shows the same games in the same order, through each post's `alternate`.
 // Only fill this in once the English pages have enough Search Console data of their own.

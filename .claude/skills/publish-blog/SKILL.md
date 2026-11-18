@@ -269,6 +269,31 @@ nothing to reimplement per post. The list is built by `scripts/build_recommendat
 (see "Recommendation sliders" below): similar = same `subCategory` first, recommended =
 by search volume and relevance, with a quota so every game is shown somewhere.
 
+## 3d-2. FAQ: always the shared accordion
+
+A FAQ ("Veelgestelde vragen") on any page is never loose `h3`/`p` pairs. Use the
+same accordion as the home page and the Drankspelletjes hub: `<app-about>` from
+`src/app/pages/home/about/about.component` (user's wish, 2026-11-18).
+
+- The questions go in the component, not in the HTML:
+  `readonly faqs: FaqItem[] = [{ question, answer }]`. Inline links in an answer are
+  written as `[text](/path)`.
+- Title: `readonly faqTitle = 'Alles over <naam>'` (EN `Everything about <name>`). The
+  label "Veelgestelde vragen" is already above it.
+- The block is full width, so close the `legal-body` and `container` around it. Copy
+  from `blogs/drankspelletjes/kingsen/kingsen.component.html`:
+  `</div></div> <app-about …></app-about> <div class="container"><div class="legal-body">`.
+  It goes after the last content section, before the sliders.
+- **The card on the left:**
+  - Game in the AnyTimerApp: `[promoTitle]="'Speel <naam> in de app'"` and
+    `[promoText]="'Download de gratis AnyTimerApp'"`. Clicking goes to home.
+  - Game not in the app: `promoTitle` "Meer drankspelletjes?", `promoText` "Bekijk
+    alle drankspellen met spelregels" and `promoLink` `/blog/drankspelletjes`. EN:
+    "More drinking games?", "See all drinking games and their rules",
+    `/en/blog/drinking-games`.
+  - Other pages: no promo inputs. That shows the default download card.
+- Add `AboutComponent` to `imports`.
+
 ## 3e. Every other post: Aanbevolen drankspellen and Aanbevolen blogs
 
 Every post that is not a single drinking game ends with two sliders, directly above
@@ -307,6 +332,45 @@ relevance to the page plus search volume and keyword difficulty
 
 Add internal links to other relevant blog posts/pages, but link each distinct topic
 only once per article — don't link the same target multiple times in one post.
+
+### 4b. Link the new post from the rest of the site, right away
+
+A new drinking game or blog is never published as an orphan. In the same run, add
+links **to** the new post from existing pages (the user's standing wish, 2026-11-18).
+Don't ask first, just do it and list every link in the summary.
+
+1. **Existing mentions.** Run `grep -rni "<name>" src/app` for the name and its
+   spellings, for example "flunkyball", "flunkybal" and "flunky ball". Where a page
+   already mentions it in running text without a link, turn the first mention into a
+   link.
+2. **The obvious places for the type of post:**
+   - **Drinking game:**
+     - **Hub FAQ.** In `DRANKSPEL_FAQ` in `src/app/pages/blog-category/blog-category.component.ts`,
+       add the game to every answer it fits, as `[Name](/path)`. For example the
+       dobbelstenen answer, grote groep, voor 2, zonder kaarten, makkelijk or telefoon.
+       Every game named in a FAQ answer is a link.
+     - **Matching list blogs** under `blogs/inspiratie/` (drankspellen-met-kaarten,
+       drankspellen-zonder-kaarten, drankspellen-voor-2-personen, the top 10
+       `drankspellen`). Add a short line with a link where it fits. Never rewrite the
+       existing text of those blogs.
+     - **1 or 2 related game pages** with the same `subCategory` or the same kind of
+       game. Add one sentence with the link, for example "Meer dobbelspellen? Speel
+       ook …" above the top-10 link, or a short H3 under "Varianten". Examples: Mexen
+       links to shut the box, Beerpong to flunkyball.
+     - **Begrippen** whose text is about the game. Only where it is really relevant.
+   - **Other blog:** the 2 to 4 pages that are most about the same topic (the same
+     words as its `BLOG_TOPICS` entry). Plus the hub FAQ or a list blog when that fits.
+3. **Rules.**
+   - Link each target only once per page.
+   - Use the main keyword as the anchor, naturally phrased. For a drinking game that is
+     the name, or "<naam> regels".
+   - Follow the house writing style.
+   - Links in running text get the standard link style (consistency rule 1).
+4. **EN.** Make the same links on the English twins, to the English page
+   ([[feedback_mirror_nl_to_en]]).
+5. **Sitemap.** Set `lastmod` to today for every page you added a link to.
+6. **Sliders.** These come on top of the links above, not instead of them: run
+   `scripts/build_recommendations.py` (see 3d).
 
 ## 5. Wire it into the app
 

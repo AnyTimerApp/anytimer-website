@@ -1,3 +1,4 @@
+import { AboutComponent, FaqItem } from '../../../../home/about/about.component';
 import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
@@ -16,11 +17,21 @@ import { SliderNavComponent } from '../../../../../components/slider-nav/slider-
 @Component({
   selector: 'app-kingsen-en',
   standalone: true,
-  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [AboutComponent, SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'kingsen.component.html',
   styleUrls: ['../../../../juridisch/juridisch.component.scss', '../../../../blogs/blog-article-shared.scss', '../../../../blogs/drankspelletjes/kingsen/kingsen.component.scss']
 })
 export class KingsenEnComponent {
+  readonly faqTitle = 'Everything about Kingsen';
+  readonly faqs: FaqItem[] = [
+    { question: 'What do you need for Kingsen?', answer: 'A normal deck of 52 cards, a big glass for the middle and drinks for everyone. That is all.' },
+    { question: 'What happens with the fourth king?', answer: 'Whoever draws the fourth king drinks the glass in the middle. Then the game is over.' },
+    { question: 'What is the difference between Kingsen and Ring of Fire?', answer: 'It is the same idea. Kingsen is the Dutch version, with its own rule for almost every card.' }
+  ];
+  readonly faqPromoTitle = 'More drinking games?';
+  readonly faqPromoText = 'See all drinking games and their rules';
+  readonly faqPromoLink = '/en/blog/drinking-games';
+
   private readonly post = BLOG_POSTS_EN.find(p => p.slug === 'kingsen')!;
   private readonly ui = UI.en;
   readonly subCategory = this.ui.subCategoryLabels[this.post.subCategory!];

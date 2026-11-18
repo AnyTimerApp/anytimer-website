@@ -1,0 +1,201 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Flunkyball rules</h1>
+      <p class="legal-intro">
+        Flunkyball is an outdoor drinking game. Two teams face each other with a bottle in the middle. Knock the bottle over with a ball? Then your team gets to drink until the other team has put the bottle back up. The first team to finish all their beers wins.
+      </p>
+      <p class="legal-intro">
+        You will see it written as flunkyball, flunky ball or flunkybal. It is the same game.
+      </p>
+      <p class="legal-intro">
+        The game is simple, but every park plays it with different rules. Below you will find the basic rules and the house rules to agree on first.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>What is Flunkyball?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/flunkybal.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/flunkybal.png" alt="Flunkyball drinking game with two teams on a field and a bottle in the middle" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Type</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Players</span>
+              </div>
+              <span class="game-stat__value">6 to 16</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Duration</span>
+              </div>
+              <span class="game-stat__value">10-20 minutes</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">What you need</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Plastic bottle</span>
+              <span class="game-tag">Ball</span>
+              <span class="game-tag">Beer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Setting up</h2>
+        <p>You play Flunkyball on a field, in the park or at a campsite. You need about 10 metres of space.</p>
+        <ol>
+          <li>Make two teams of 3 to 8 players. Both teams are the same size.</li>
+          <li>Mark two lines about 10 metres apart. Use a rope, flip-flops or bags.</li>
+          <li>Fill a 1.5 litre plastic bottle a quarter to half full with water. Put it right in the middle.</li>
+          <li>Every player puts a bottle or can of beer on the line in front of them. Everyone has the same beer and it stays closed for now.</li>
+          <li>Get a ball ready. A tennis ball or a small football works best.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>How to play</h2>
+        <ol>
+          <li>The team with the shortest player starts.</li>
+          <li>One player throws the ball at the bottle. Players on a team take turns throwing, without skipping anyone.</li>
+          <li>Miss? Then the ball goes to the other team. They throw from their own line.</li>
+          <li>Does the bottle fall over? Then the throwing team can open their beers and drink.</li>
+          <li>Meanwhile the other team runs to the middle. They put the bottle back up and bring the ball back behind their own line.</li>
+          <li>Is everyone back behind the line? Then they shout "stop". The throwing team puts their beers down right away.</li>
+          <li>Then the other team throws. This goes on until someone has finished their beer.</li>
+        </ol>
+        <p>Your beer stays closed until your team hits the bottle for the first time. Only then can you open it.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>When is your beer finished?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/flunkybal bier checken.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/flunkybal bier checken.png" alt="Flunkyball player holding an empty beer bottle upside down above her head to show it is finished" class="game-image" loading="lazy">
+        </picture>
+        <p>Think your beer is empty? Then hold it upside down above your head. More than a sip comes out? Then you get a penalty beer.</p>
+        <p>Is your beer really empty? Then you go and stand on the sideline. You can't throw or run anymore. You can cheer your team on.</p>
+        <p>The first team to finish all their beers wins.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Penalties</h2>
+        <p>For these mistakes you get a penalty beer, or the other team gets a sip. Agree beforehand which penalty you use.</p>
+        <ul>
+          <li>You drink before the bottle has fallen over.</li>
+          <li>You keep drinking after "stop".</li>
+          <li>You cross the line before the ball has been thrown.</li>
+          <li>Your beer falls over, for whatever reason.</li>
+          <li>You pick up your beer while you are not drinking, for example to protect it from the ball.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>House rules</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/flunkybal bovenaanzicht.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/flunkybal bovenaanzicht.png" alt="Flunkyball field seen from above with two teams behind their lines and a bottle in the middle" class="game-image" loading="lazy">
+        </picture>
+        <p>There are no official Flunkyball rules. These are the differences you will see most.</p>
+        <ul>
+          <li><strong>The throw:</strong> some groups let you throw any way you like. Others want an overarm throw.</li>
+          <li><strong>The distance:</strong> 10 metres is the most common. Too much space or too little? Adjust it.</li>
+          <li><strong>Helping out:</strong> some groups let teammates drink each other's beer. Others call that cheating.</li>
+          <li><strong>Hitting an opponent's beer:</strong> hit someone else's beer with the ball? Then they have to open a new one.</li>
+          <li><strong>Without alcohol:</strong> the game works with soft drinks or alcohol-free beer too. As long as everyone has the same.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Tips to win</h2>
+        <ul>
+          <li>Don't let your best thrower go first. Spread your good throwers over the turn.</li>
+          <li>Put your fastest runners up front. The faster the bottle is back up, the less the others drink.</li>
+          <li>Drink in small, quick sips. You need to be able to stop at any moment.</li>
+          <li>Good at <a routerLink="/en/blog/dictionary/adten">adten</a>, downing a drink in one go? Then you have a big advantage here.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Where does Flunkyball come from?</h2>
+        <p>Flunkyball comes from Germany and Poland. It was already played at festivals and universities there in the early 2000s. In Poland it is called flanki. It is almost a national student game there. Germany even has a yearly championship.</p>
+        <p>In the Netherlands and Belgium you mostly see it at student associations, at festivals and in the park when the weather is nice.</p>
+        <p>More games with a ball? Check out the rules of <a routerLink="/en/blog/drinking-games/beer-pong">Beer Pong</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Same FAQ block as the home page and the Drankspelletjes hub (full width) -->
+  <app-about [items]="faqs" [title]="faqTitle" [promoTitle]="faqPromoTitle" [promoText]="faqPromoText" [promoLink]="faqPromoLink"></app-about>
+
+  <div class="container">
+    <div class="legal-body">
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Similar drinking games</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended drinking games</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

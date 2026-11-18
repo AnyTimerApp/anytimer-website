@@ -1,0 +1,195 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Imposter game rules</h1>
+      <p class="legal-intro">
+        Imposter is a game where everyone gets the same secret word. Except the imposter. They have no idea and have to fake it. Everyone takes turns giving a hint. Unmask the bluffer before they work out the word.
+      </p>
+      <p class="legal-intro">
+        You might know it as the imposter game or who is the imposter. You play it with one phone that you pass around. Below you will learn how it works and how to turn it into a drinking game.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>What is the imposter game?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/imposter.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/imposter.png" alt="Friends playing the imposter game and laughing as they point at the imposter next to a phone" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Type</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Players</span>
+              </div>
+              <span class="game-stat__value">3 to 16</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Duration</span>
+              </div>
+              <span class="game-stat__value">10-30 minutes</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">What you need</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Phone</span>
+              <span class="game-tag">Drinks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Setting up</h2>
+        <p>You play Imposter in the AnyTimerApp. One phone is enough.</p>
+        <ol>
+          <li>Pick the number of players. You can play with up to 16.</li>
+          <li>Pick the number of imposters. The more players, the more imposters you can have.</li>
+          <li>Choose whether the imposter gets a hint. A hint makes bluffing easier.</li>
+          <li>Pick one or more categories for the word.</li>
+          <li>Sit in a circle.</li>
+        </ol>
+        <p>With 3 to 7 players, 1 imposter is enough. From 8 players it gets more fun with 2.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>How to play</h2>
+        <ol>
+          <li>Pass the phone around. Everyone secretly checks their card and passes the phone on.</li>
+          <li>Your card shows the secret word. Are you the imposter? Then it says so, maybe with a hint.</li>
+          <li>Everyone takes turns giving one word as a hint. The hint fits the secret word, but doesn't name it.</li>
+          <li>The imposter gives a hint too. They have to guess what fits the word.</li>
+          <li>After one or two rounds you talk it over. Who gave a strange hint?</li>
+          <li>Count to three and everyone points at who they think the imposter is.</li>
+          <li>The player with the most votes shows their card.</li>
+        </ol>
+
+        <div class="fun-fact-card">
+          <div class="fun-fact-card__icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18h6"/>
+              <path d="M10 22h4"/>
+              <path d="M12 2a6 6 0 00-4 10.47c.5.46.9 1.02 1.1 1.66L9.4 16h5.2l.3-1.87c.2-.64.6-1.2 1.1-1.66A6 6 0 0012 2z"/>
+            </svg>
+          </div>
+          <p>Did you know you can play Imposter in <a routerLink="/en/">our free app</a>?</p>
+        </div>
+
+        <h3>An example</h3>
+        <p>The secret word is pizza. The first player says "oven". The second says "Italy". The imposter doesn't know the word and says "warm". That just about fits. The next player says "cheese". After the round the group thinks "warm" was pretty vague. They point at the imposter.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Who wins?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/imposter bovenaanzicht.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/imposter bovenaanzicht.png" alt="Friends around a table seen from above pointing at the imposter with a phone in the middle" class="game-image" loading="lazy">
+        </picture>
+        <ul>
+          <li><strong>The group finds the imposter:</strong> the imposter gets one guess at the word. Right? Then they still win. Wrong? Then the group wins.</li>
+          <li><strong>The group picks the wrong player:</strong> the imposter wins.</li>
+          <li><strong>More imposters:</strong> find them one by one. The group wins once every imposter is found.</li>
+        </ul>
+
+        <h3>Tips for good hints</h3>
+        <ul>
+          <li>Don't give a hint that is too obvious. Then the imposter knows the word straight away.</li>
+          <li>Don't give a hint that is too vague either. Then everyone thinks you are the imposter.</li>
+          <li>Are you the imposter? Listen closely to the hints before yours. They tell you a lot about the word.</li>
+          <li>Look at your card as long as everyone else. Passing the phone on too fast stands out.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Imposter as a drinking game</h2>
+        <p>Imposter is already a party game. Add drinks and bluffing gets even more exciting. Pick one or more of these options. Agree on them before you start.</p>
+
+        <h3>The imposter gets caught</h3>
+        <p>Is the imposter found? Then they drink. Do they still guess the word? Then everyone else drinks.</p>
+
+        <h3>The imposter wins</h3>
+        <p>Does the imposter stay hidden? Then everyone drinks except them. Whoever pointed at the wrong player takes an extra sip.</p>
+
+        <h3>A chug for the imposter</h3>
+        <p>Is the imposter caught in the very first round? Then they down their drink in one go: an <a routerLink="/en/blog/dictionary/what-is-an-adtje">adtje</a>.</p>
+
+        <h3>With an anytimer at stake</h3>
+        <p>An imposter who wins gets an <a routerLink="/en/blog/dictionary/what-is-an-anytimer">anytimer</a> from the player who was furthest off.</p>
+
+        <p>More games on your phone? Also try <a routerLink="/en/blog/drinking-games/angry-mug">Angry Mug</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Same FAQ block as the home page and the Drankspelletjes hub (full width) -->
+  <app-about [items]="faqs" [title]="faqTitle" [promoTitle]="faqPromoTitle" [promoText]="faqPromoText"></app-about>
+
+  <div class="container">
+    <div class="legal-body">
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Similar drinking games</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended drinking games</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

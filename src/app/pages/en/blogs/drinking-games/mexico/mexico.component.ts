@@ -1,3 +1,4 @@
+import { AboutComponent, FaqItem } from '../../../../home/about/about.component';
 import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
@@ -16,11 +17,20 @@ import { SliderNavComponent } from '../../../../../components/slider-nav/slider-
 @Component({
   selector: 'app-mexico-en',
   standalone: true,
-  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [AboutComponent, SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'mexico.component.html',
   styleUrls: ['../../../../juridisch/juridisch.component.scss', '../../../../blogs/blog-article-shared.scss', '../../../../blogs/drankspelletjes/mexen/mexen.component.scss']
 })
 export class MexicoEnComponent {
+  readonly faqTitle = 'Everything about Mexico';
+  readonly faqs: FaqItem[] = [
+    { question: 'What is a Mexico?', answer: 'A Mexico is a roll of a 2 and a 1. You read it as 21. It is the highest roll in the game and the penalty doubles.' },
+    { question: 'What is the order of the rolls?', answer: 'First the Mexico (21). Then the doubles from 66 down to 11. After that the normal rolls from 65 down to 31.' },
+    { question: 'Can you play Mexico online?', answer: 'Yes. Mexico is in the free AnyTimerApp. You don\'t need any dice.' }
+  ];
+  readonly faqPromoTitle = 'Play Mexico in the app';
+  readonly faqPromoText = 'Download the free AnyTimerApp';
+
   private readonly post = BLOG_POSTS_EN.find(p => p.slug === 'mexico')!;
   private readonly ui = UI.en;
   readonly subCategory = this.ui.subCategoryLabels[this.post.subCategory!];

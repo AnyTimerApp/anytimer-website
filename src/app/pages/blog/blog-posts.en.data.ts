@@ -155,6 +155,58 @@ export const BLOG_POSTS_EN: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'chug-machine',
+    path: 'en/blog/drinking-games/chug-machine',
+    alternate: 'blog/drankspelletjes/bakmachine',
+    category: 'Drankspelletjes',
+    subCategory: 'Overig',
+    title: 'Chug Machine',
+    excerpt: 'A slot machine for chugs in the app. Spin three reels. Three full mugs? Hand one out. Three empty ones? Then you chug yourself.',
+    date: '2026-11-18',
+    image: 'assets/blogs/drankspel/bakmachine.webp',
+    imageAlt: 'Two friends playing Chug Machine on a phone and tapping spin',
+    variant: 'light'
+  },
+  {
+    slug: 'imposter',
+    path: 'en/blog/drinking-games/imposter',
+    alternate: 'blog/drankspelletjes/imposter',
+    category: 'Drankspelletjes',
+    subCategory: 'Overig',
+    title: 'Imposter',
+    excerpt: 'Everyone gets the same secret word, except the imposter. Take turns giving a hint and unmask the bluffer.',
+    date: '2026-11-18',
+    image: 'assets/blogs/drankspel/imposter.webp',
+    imageAlt: 'Friends playing the imposter game and laughing as they point at the imposter next to a phone',
+    variant: 'light'
+  },
+  {
+    slug: 'shut-the-box',
+    path: 'en/blog/drinking-games/shut-the-box',
+    alternate: 'blog/drankspelletjes/shut-the-box',
+    category: 'Drankspelletjes',
+    subCategory: 'Dobbelspel',
+    title: 'Shut the Box',
+    excerpt: 'The dice game with the wooden box and the numbers 1 to 9. Roll two dice and flip down as many numbers as you can.',
+    date: '2026-11-18',
+    image: 'assets/blogs/drankspel/shut the box.webp',
+    imageAlt: 'Shut the Box dice game with flipped down numbers and two dice',
+    variant: 'light'
+  },
+  {
+    slug: 'flunkyball',
+    path: 'en/blog/drinking-games/flunkyball',
+    alternate: 'blog/drankspelletjes/flunkyball',
+    category: 'Drankspelletjes',
+    subCategory: 'Behendigheid',
+    title: 'Flunkyball',
+    excerpt: 'The outdoor drinking game with two teams and a bottle in the middle. Knock it over and finish your beer before the others are back.',
+    date: '2026-11-18',
+    image: 'assets/blogs/drankspel/flunkybal.webp',
+    imageAlt: 'Flunkyball drinking game with two teams on a field and a bottle in the middle',
+    variant: 'light'
+  },
+  {
     slug: 'toepen',
     path: 'en/blog/drinking-games/toepen',
     alternate: 'blog/drankspelletjes/toepen',

@@ -115,15 +115,14 @@
         <p>Op zoek naar meer drankspellen? Bekijk ook onze <a routerLink="/drankspellen">top 10 leukste drankspellen</a>.</p>
       </div>
 
-      <div class="legal-section">
-        <h2>Veelgestelde vragen over bussen</h2>
-        <h3>Hoe gaat het drankspel bussen?</h3>
-        <p>Je speelt vier rondes waarin je raadt: rood of zwart, hoger of lager, binnen of buiten en dezelfde kleur of niet. Daarna legt de deler een piramide van 15 kaarten. Wie aan het einde de meeste kaarten over heeft, gaat de bus in.</p>
-        <h3>Wat is de bus bij bussen?</h3>
-        <p>De bus is de laatste ronde. Er liggen 8 open kaarten op een rij. De speler in de bus raadt steeds hoger of lager en begint opnieuw bij elke fout.</p>
-        <h3>Met hoeveel mensen speel je bussen?</h3>
-        <p>Bussen speel je met 2 tot 8 spelers. Met meer mensen heb je een tweede kaartspel nodig, anders is de stapel te snel op.</p>
-      </div>
+    </div>
+  </div>
+
+  <!-- Same FAQ block as the home page and the Drankspelletjes hub (full width) -->
+  <app-about [items]="faqs" [title]="faqTitle" [promoTitle]="faqPromoTitle" [promoText]="faqPromoText" [promoLink]="faqPromoLink"></app-about>
+
+  <div class="container">
+    <div class="legal-body">
 
       <div class="legal-section legal-section--no-divider">
         <h2>Vergelijkbare drankspellen</h2>

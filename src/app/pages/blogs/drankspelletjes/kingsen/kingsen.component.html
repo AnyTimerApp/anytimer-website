@@ -128,15 +128,14 @@
         <p>Op zoek naar meer drankspellen? Bekijk ook onze <a routerLink="/drankspellen">top 10 leukste drankspellen</a>.</p>
       </div>
 
-      <div class="legal-section">
-        <h2>Veelgestelde vragen over kingsen</h2>
-        <h3>Wat heb je nodig voor kingsen?</h3>
-        <p>Een gewoon kaartspel van 52 kaarten, een groot glas voor in het midden en drank voor iedereen. Meer heb je niet nodig.</p>
-        <h3>Wat gebeurt er bij de vierde koning?</h3>
-        <p>Wie de vierde koning trekt, drinkt het glas in het midden leeg. Dan is het spel afgelopen.</p>
-        <h3>Wat is het verschil tussen kingsen en Ring of Fire?</h3>
-        <p>Het is hetzelfde idee. Kingsen is de Nederlandse versie, met eigen regels per kaart.</p>
-      </div>
+    </div>
+  </div>
+
+  <!-- Same FAQ block as the home page and the Drankspelletjes hub (full width) -->
+  <app-about [items]="faqs" [title]="faqTitle" [promoTitle]="faqPromoTitle" [promoText]="faqPromoText" [promoLink]="faqPromoLink"></app-about>
+
+  <div class="container">
+    <div class="legal-body">
 
       <div class="legal-section legal-section--no-divider">
         <h2>Vergelijkbare drankspellen</h2>

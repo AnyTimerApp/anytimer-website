@@ -1,0 +1,160 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Bakmachine regels</h1>
+      <p class="legal-intro">
+        Bakmachine is een gokkast voor bakken. Je draait drie wielen en elk wiel stopt op een volle of een lege bak. Drie volle bakken? Dan mag jij een bak uitdelen. Drie lege bakken? Dan moet je er zelf een trekken.
+      </p>
+      <p class="legal-intro">
+        Je speelt het in de AnyTimerApp. Je hebt dus alleen je telefoon en drank nodig. Hieronder lees je hoe het werkt.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>Wat is Bakmachine?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/bakmachine.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/bakmachine.png" alt="Twee vrienden spelen Bakmachine op een telefoon en drukken op draaien" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Categorie</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Spelers</span>
+              </div>
+              <span class="game-stat__value">2 of meer</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Speelduur</span>
+              </div>
+              <span class="game-stat__value">5-15 minuten</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">Benodigdheden</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Telefoon</span>
+              <span class="game-tag">Drank</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Speluitleg</h2>
+        <ol>
+          <li>Open de Bakmachine in de AnyTimerApp.</li>
+          <li>Ga in een kring zitten. De telefoon gaat om de beurt rond.</li>
+          <li>De speler die aan de beurt is, laat de drie wielen draaien.</li>
+          <li>Elk wiel stopt op een volle of een lege bak. De kans is bij elk wiel even groot.</li>
+          <li>Kijk naar de uitslag en voer uit wat erbij hoort.</li>
+          <li>Geef de telefoon door aan de volgende speler.</li>
+        </ol>
+
+        <div class="fun-fact-card">
+          <div class="fun-fact-card__icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18h6"/>
+              <path d="M10 22h4"/>
+              <path d="M12 2a6 6 0 00-4 10.47c.5.46.9 1.02 1.1 1.66L9.4 16h5.2l.3-1.87c.2-.64.6-1.2 1.1-1.66A6 6 0 0012 2z"/>
+            </svg>
+          </div>
+          <p>Wist je dat je Bakmachine kan spelen in <a routerLink="/">onze gratis app</a>?</p>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Wanneer iemand moet drinken</h2>
+        <ul>
+          <li><strong>Drie volle bakken:</strong> je mag een bak uitdelen. Kies wie hem moet trekken.</li>
+          <li><strong>Drie lege bakken:</strong> je moet zelf een <a routerLink="/blog/begrippen/bak-trekken">bak trekken</a>.</li>
+          <li><strong>Twee keer achter elkaar drie volle bakken:</strong> je mag nog meer uitdelen. Hoeveel, bepalen jullie zelf. Spreek het af voordat je begint.</li>
+          <li><strong>Alle andere uitslagen:</strong> er gebeurt niets. De volgende speler is aan de beurt.</li>
+        </ul>
+
+        <h3>De kansen</h3>
+        <p>Elk wiel heeft 50% kans op een volle bak. De kans op drie volle bakken is dus 1 op 8. De kans op drie lege bakken ook. Gemiddeld valt er dus om de vier beurten een bak.</p>
+
+        <h3>Extra regels</h3>
+        <ul>
+          <li>Spreek vooraf af wat een bak is. Een heel glas, een half glas of een paar slokken.</li>
+          <li>Speel je met een grote groep? Laat dan bij drie volle bakken de bak uitdelen aan twee spelers.</li>
+          <li>Wie een bak moet trekken, mag niet als eerste opnieuw draaien. De volgende speler is aan de beurt.</li>
+        </ul>
+
+        <p>Meer spellen op je telefoon? Speel ook <a routerLink="/blog/drankspelletjes/boze-bak">Boze bak</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Same FAQ block as the home page and the Drankspelletjes hub (full width) -->
+  <app-about [items]="faqs" [title]="faqTitle" [promoTitle]="faqPromoTitle" [promoText]="faqPromoText"></app-about>
+
+  <div class="container">
+    <div class="legal-body">
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Vergelijkbare drankspellen</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+      </div>
+
+      <div class="legal-section">
+        <h2>Aanbevolen drankspellen</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

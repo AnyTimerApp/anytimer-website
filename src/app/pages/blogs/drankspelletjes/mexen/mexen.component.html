@@ -114,18 +114,19 @@
           <li>Maak vooraf duidelijk hoeveel slokken de straf is.</li>
         </ul>
 
+        <p>Meer dobbelspellen? Speel ook <a routerLink="/blog/drankspelletjes/shut-the-box">shut the box</a>.</p>
+
         <p>Op zoek naar meer drankspellen? Bekijk ook onze <a routerLink="/drankspellen">top 10 leukste drankspellen</a>.</p>
       </div>
 
-      <div class="legal-section">
-        <h2>Veelgestelde vragen over mexen</h2>
-        <h3>Wat is een Mex?</h3>
-        <p>Een Mex is een worp van een 2 en een 1. Je leest hem als 21. Dat is de hoogste worp in het spel en de straf wordt dan verdubbeld.</p>
-        <h3>Wat is de volgorde van de worpen?</h3>
-        <p>Eerst de Mex (21). Dan de dubbelen van 66 tot 11. Daarna de gewone worpen van 65 tot 31.</p>
-        <h3>Kun je mexen online spelen?</h3>
-        <p>Ja. Mexen zit in de gratis AnyTimerApp. Je hebt dan geen dobbelstenen nodig.</p>
-      </div>
+    </div>
+  </div>
+
+  <!-- Same FAQ block as the home page and the Drankspelletjes hub (full width) -->
+  <app-about [items]="faqs" [title]="faqTitle" [promoTitle]="faqPromoTitle" [promoText]="faqPromoText"></app-about>
+
+  <div class="container">
+    <div class="legal-body">
 
       <div class="legal-section legal-section--no-divider">
         <h2>Vergelijkbare drankspellen</h2>

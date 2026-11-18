@@ -1,3 +1,4 @@
+import { AboutComponent, FaqItem } from '../../../home/about/about.component';
 import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
@@ -12,11 +13,20 @@ import { SliderNavComponent } from '../../../../components/slider-nav/slider-nav
 @Component({
   selector: 'app-mexen',
   standalone: true,
-  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [AboutComponent, SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'mexen.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './mexen.component.scss']
 })
 export class MexenComponent {
+  readonly faqTitle = 'Alles over mexen';
+  readonly faqs: FaqItem[] = [
+    { question: 'Wat is een Mex?', answer: 'Een Mex is een worp van een 2 en een 1. Je leest hem als 21. Dat is de hoogste worp in het spel en de straf wordt dan verdubbeld.' },
+    { question: 'Wat is de volgorde van de worpen?', answer: 'Eerst de Mex (21). Dan de dubbelen van 66 tot 11. Daarna de gewone worpen van 65 tot 31.' },
+    { question: 'Kun je mexen online spelen?', answer: 'Ja. Mexen zit in de gratis AnyTimerApp. Je hebt dan geen dobbelstenen nodig.' }
+  ];
+  readonly faqPromoTitle = 'Speel Mexen in de app';
+  readonly faqPromoText = 'Download de gratis AnyTimerApp';
+
   private readonly post = BLOG_POSTS.find(p => p.slug === 'mexen')!;
   readonly category = this.post.category;
   readonly subCategory = this.post.subCategory!;

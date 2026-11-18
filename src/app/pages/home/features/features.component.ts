@@ -2,15 +2,22 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../../i18n/language.service';
 
-const REVIEW_PEOPLE = [
-  { name: 'Sander K.', city: 'Utrecht', color: '#C4B5FD' },
-  { name: 'Lisa V.', city: 'Amsterdam', color: '#FCA5A5' },
-  { name: 'Tom B.', city: 'Rotterdam', color: '#6EE7B7' },
-  { name: 'Emma R.', city: 'Den Haag', color: '#FDE68A' },
-  { name: 'Joris M.', city: 'Eindhoven', color: '#93C5FD' },
-  { name: 'Rosa P.', city: 'Groningen', color: '#F9A8D4' },
-  { name: 'Tim H.', city: 'Breda', color: '#A7F3D0' },
-  { name: 'Sarah W.', city: 'Tilburg', color: '#DDD6FE' }
+// Real reviews from the App Store and Google Play (copied 2026-11-18). Text is
+// exactly as written; the store replaces the city line. `lang` is the language
+// the review was written in, so the other site can mark it as translated.
+// `stars` is left out when the rating is unknown; no stars are shown then.
+type ReviewPerson = { name: string; store: 'App Store' | 'Play Store'; stars?: number; lang: 'nl' | 'en'; color: string };
+
+const REVIEW_PEOPLE: ReviewPerson[] = [
+  { name: 'jsiwebejkdowjsj', store: 'App Store', stars: 5, lang: 'nl', color: '#C4B5FD' },
+  { name: 'Isabel169', store: 'App Store', stars: 5, lang: 'nl', color: '#FCA5A5' },
+  { name: 'Susan', store: 'Play Store', stars: 5, lang: 'en', color: '#6EE7B7' },
+  { name: 'LilSandy99', store: 'App Store', stars: 5, lang: 'nl', color: '#FDE68A' },
+  { name: 'Stefnip', store: 'App Store', stars: 5, lang: 'nl', color: '#93C5FD' },
+  { name: 'Berend', store: 'App Store', stars: 5, lang: 'nl', color: '#F9A8D4' },
+  { name: 'Jil', store: 'App Store', stars: 5, lang: 'nl', color: '#A7F3D0' },
+  { name: 'MaxTB010', store: 'App Store', stars: 5, lang: 'nl', color: '#DDD6FE' },
+  { name: 'Felipe', store: 'App Store', stars: 5, lang: 'nl', color: '#FDBA74' }
 ];
 
 const TEXT = {
@@ -28,18 +35,18 @@ const TEXT = {
     ],
     reviewsLabel: 'Echte verhalen',
     reviewsTitle: 'Wat vrienden zeggen',
-    translatedNote: '',
+    translatedNote: 'Vertaald uit het Engels',
     reviews: [
-      'Eindelijk geen discussies meer over wie wat schuldig is! Super handig app.',
-      'Mijn vrienden en ik gebruiken dit al maanden. Nooit meer vergeten wie wat heeft.',
-      'Perfecte app voor onze vriendengroep. Altijd bijgehouden wie wat heeft. Aanrader!',
-      'Geweldig concept! Nu weet ik altijd wie ik nog een anytimer mag geven. Love it.',
-      'Eenvoudig, snel en precies wat we nodig hadden. Beste app voor challenges met vrienden.',
-      'Zo handig! Ik weet altijd wie er nog op mijn anytimer heeft. We hadden dit al jaren nodig.',
-      'Onze hele vriendengroep gebruikt het. Leuke manier om challenges bij te houden!',
-      'Nooit meer discussie over anytimers. De app houdt alles eerlijk bij. Top!'
-    ]
-  },
+      'Maakt een einde aan alle discussies. Zelfs na een paar biertjes snapt iedereen de stand nog. Houdt het ook allemaal een beetje spannend! Heel leuk :)',
+      'Echt een leuke app om samen met je vrienden te hebben! Ik heb vrienden die ik weinig zie, maar op deze manier toch nog goed contact mee hou en ze een beetje scherp kan houden ;)',
+      'Grappige app en superhandig',
+      'Lang gewacht op een degelijke app die mijn goudvissenbrein helpt mijn hardverdiende anytimers bij te houden',
+      'Soort Strava voor bier drinken. Lachen app!! gebruiken hem met onze vriendengroep!!!',
+      'Goede app, hield het eerst bij in m’n notities maar dit is beter!',
+      'Werkt allemaal echt Nice! Veel fijner bijhouden zo',
+      '1 woord: WAUW',
+      'Handige app'
+    ]  },
   en: {
     label: 'Why AnyTimerApp?',
     title: "Track your any's. Never forget one.",
@@ -54,17 +61,18 @@ const TEXT = {
     ],
     reviewsLabel: 'Real stories',
     reviewsTitle: 'What friends say',
-    // The reviews were written in Dutch; say so on the English site.
+    // Shown on reviews written in another language than the site.
     translatedNote: 'Translated from Dutch',
     reviews: [
-      'Finally no more arguing about who owes what! Super handy app.',
-      'My friends and I have used this for months. Never forget who has what again.',
-      'Perfect app for our group of friends. Always clear who has what. Recommended!',
-      'Great idea! Now I always know who I can still give an anytimer. Love it.',
-      'Simple, fast and exactly what we needed. Best app for challenges with friends.',
-      'So handy! I always know who still owes me an anytimer. We needed this for years.',
-      'Our whole group uses it. Fun way to keep track of challenges!',
-      'No more arguing about anytimers. The app keeps everything fair. Top!'
+      'Ends all the arguments. Even after a few beers everyone still gets the score. Keeps it all a bit exciting too! Really fun :)',
+      'Really fun app to have with your friends! I have friends I don\'t see much, but this way I still keep in touch and can keep them on their toes ;)',
+      'Funny app and super handy',
+      'Waited a long time for a decent app that helps my goldfish brain keep track of my hard-earned anytimers',
+      'Like Strava for drinking beer. Hilarious app!! we use it with our group of friends!!!',
+      'Good app, I used to keep track in my notes but this is better!',
+      'Everything works really nice! Much easier to keep track this way',
+      '1 word: WOW',
+      'Handy app'
     ]
   }
 };
@@ -77,10 +85,16 @@ const TEXT = {
   styleUrl: './features.component.scss'
 })
 export class FeaturesComponent {
-  private readonly text = TEXT[inject(LanguageService).lang()];
+  private readonly lang = inject(LanguageService).lang();
+  private readonly text = TEXT[this.lang];
 
   readonly t = {
     ...this.text,
-    reviews: this.text.reviews.map((text, i) => ({ text, ...REVIEW_PEOPLE[i] }))
+    reviews: this.text.reviews.map((text, i) => ({
+      text,
+      ...REVIEW_PEOPLE[i],
+      starsText: '★'.repeat(REVIEW_PEOPLE[i].stars ?? 0),
+      translated: REVIEW_PEOPLE[i].lang !== this.lang
+    }))
   };
 }

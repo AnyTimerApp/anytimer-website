@@ -241,6 +241,54 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'bakmachine',
+    path: 'blog/drankspelletjes/bakmachine',
+    category: 'Drankspelletjes',
+    subCategory: 'Overig',
+    title: 'Bakmachine',
+    excerpt: 'Een gokkast voor bakken in de app. Draai drie wielen. Drie volle bakken? Deel er een uit. Drie lege? Dan trek je er zelf een.',
+    date: '2026-11-18',
+    image: 'assets/blogs/drankspel/bakmachine.webp',
+    imageAlt: 'Twee vrienden spelen Bakmachine op een telefoon en drukken op draaien',
+    variant: 'light'
+  },
+  {
+    slug: 'imposter',
+    path: 'blog/drankspelletjes/imposter',
+    category: 'Drankspelletjes',
+    subCategory: 'Overig',
+    title: 'Imposter',
+    excerpt: 'Iedereen krijgt hetzelfde geheime woord, behalve de imposter. Geef om de beurt een hint en ontmasker de bluffer.',
+    date: '2026-11-18',
+    image: 'assets/blogs/drankspel/imposter.webp',
+    imageAlt: 'Vrienden spelen het imposter spel en wijzen lachend naar de imposter naast een telefoon',
+    variant: 'light'
+  },
+  {
+    slug: 'shut-the-box',
+    path: 'blog/drankspelletjes/shut-the-box',
+    category: 'Drankspelletjes',
+    subCategory: 'Dobbelspel',
+    title: 'Shut the box',
+    excerpt: 'Het dobbelspel met de houten bak en de cijfers 1 tot en met 9. Gooi twee dobbelstenen en klap zoveel mogelijk cijfers dicht.',
+    date: '2026-11-18',
+    image: 'assets/blogs/drankspel/shut the box.webp',
+    imageAlt: 'Shut the box dobbelspel met dichtgeklapte cijfers en twee dobbelstenen',
+    variant: 'light'
+  },
+  {
+    slug: 'flunkyball',
+    path: 'blog/drankspelletjes/flunkyball',
+    category: 'Drankspelletjes',
+    subCategory: 'Behendigheid',
+    title: 'Flunkyball',
+    excerpt: 'Het buitendrankspel met twee teams en een fles in het midden. Gooi de fles om en drink je bier leeg voordat de ander terug is.',
+    date: '2026-11-18',
+    image: 'assets/blogs/drankspel/flunkybal.webp',
+    imageAlt: 'Flunkyball drankspel met twee teams op een grasveld en een fles in het midden',
+    variant: 'light'
+  },
+  {
     slug: 'toepen',
     path: 'blog/drankspelletjes/toepen',
     category: 'Drankspelletjes',

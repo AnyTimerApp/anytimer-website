@@ -84,6 +84,11 @@ export class AboutComponent implements OnInit {
   // Without them the block shows the anytimer FAQ of the home page.
   @Input() items?: FaqItem[];
   @Input() title?: string;
+  // Optional card under the heading. Without promoLink it is the app download card.
+  // Game pages that are not in the app link to the Drankspelletjes hub instead.
+  @Input() promoTitle?: string;
+  @Input() promoText?: string;
+  @Input() promoLink?: string;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     if (this.language.lang() === 'en') {

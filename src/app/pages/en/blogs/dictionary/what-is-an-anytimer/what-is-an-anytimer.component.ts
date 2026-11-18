@@ -1,3 +1,4 @@
+import { AboutComponent, FaqItem } from '../../../../home/about/about.component';
 import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
@@ -15,11 +16,21 @@ import { SliderNavComponent } from '../../../../../components/slider-nav/slider-
 @Component({
   selector: 'app-what-is-an-anytimer',
   standalone: true,
-  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [AboutComponent, SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'what-is-an-anytimer.component.html',
   styleUrls: ['../../../../juridisch/juridisch.component.scss', '../../../../blogs/blog-article-shared.scss', '../../../../blogs/begrippen/wat-is-een-anytimer/wat-is-een-anytimer.component.scss']
 })
 export class WhatIsAnAnytimerComponent {
+  readonly faqTitle = 'Everything about anytimers';
+  readonly faqs: FaqItem[] = [
+    { question: 'Can I transfer an anytimer to someone else?', answer: 'No. An anytimer only works between the two people who agreed on it. You can\'t pass it on or sell it to someone else.' },
+    { question: 'How many anytimers can I have at the same time?', answer: 'There is no hard limit. In practice it works best if you don\'t stack too many anys on one person at once, because that leads to fights.' },
+    { question: 'Is an anytimer the same as an adtje?', answer: 'No. An [adtje](/en/blog/dictionary/what-is-an-adtje) is the action: downing a drink in one go. An anytimer is the credit you earn and can use at any moment. Often it ends in an adtje.' },
+    { question: 'Is there a difference between an anytimer and an "any"?', answer: 'No. "Any" is just the short, spoken version of anytimer. Students use both words all the time.' },
+    { question: 'Can an anytimer expire?', answer: 'Officially not. You could agree on it though. Just make sure you use the any before the friendship ends. Agree on rules like this together beforehand.' },
+    { question: 'Can I track anytimers in WhatsApp or a notes app?', answer: 'You can, but in practice it quickly leads to arguments because you have no version control. Read why in our article about [tracking anytimers](/en/blog/good-to-know/tracking-anytimers-in-whatsapp).' }
+  ];
+
   private readonly ui = UI.en;
   readonly recommendedPosts = getRecommendedPosts(getPostsBySlug(['what-is-an-anytimer'], 'en')[0]);
   readonly recommendedGames = getRecommendedGamesForPost(getPostsBySlug(['what-is-an-anytimer'], 'en')[0]);

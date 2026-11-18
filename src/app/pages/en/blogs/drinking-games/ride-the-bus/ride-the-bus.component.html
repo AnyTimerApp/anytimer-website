@@ -118,15 +118,14 @@
         <p>Looking for more drinking games? Check out our <a routerLink="/en/blog/inspiration/best-drinking-games">top 10 best drinking games</a>.</p>
       </div>
 
-      <div class="legal-section">
-        <h2>Ride the Bus FAQ</h2>
-        <h3>How does Ride the Bus work?</h3>
-        <p>You play four rounds where you guess: red or black, higher or lower, inside or outside, and the same colour or not. Then the dealer lays out a pyramid of 15 cards. Whoever has the most cards left at the end has to ride the bus.</p>
-        <h3>What is the bus?</h3>
-        <p>The bus is the last round. Eight face-up cards lie in a row. The player in the bus keeps guessing higher or lower and starts over after every mistake.</p>
-        <h3>How many people can play?</h3>
-        <p>You play Ride the Bus with 2 to 8 players. With more people you need a second deck, or the pile runs out too fast.</p>
-      </div>
+    </div>
+  </div>
+
+  <!-- Same FAQ block as the home page and the Drankspelletjes hub (full width) -->
+  <app-about [items]="faqs" [title]="faqTitle" [promoTitle]="faqPromoTitle" [promoText]="faqPromoText" [promoLink]="faqPromoLink"></app-about>
+
+  <div class="container">
+    <div class="legal-body">
 
       <div class="legal-section legal-section--no-divider">
         <h2>Similar drinking games</h2>

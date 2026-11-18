@@ -1,0 +1,199 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Shut the box spelregels</h1>
+      <p class="legal-intro">
+        Shut the box is een dobbelspel met een houten bak en de cijfers 1 tot en met 9. Je gooit met twee dobbelstenen en klapt cijfers dicht die samen je worp vormen. Lukt het om alle cijfers dicht te klappen? Dan heb je de box gesloten en win je meteen.
+      </p>
+      <p class="legal-intro">
+        De spelregels snap je in twee minuten. Hieronder lees je stap voor stap hoe het werkt. Onderaan vind je hoe je er een drankspel van maakt.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>Wat is shut the box?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/shut the box.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/shut the box.png" alt="Shut the box dobbelspel met dichtgeklapte cijfers en twee dobbelstenen" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Categorie</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Spelers</span>
+              </div>
+              <span class="game-stat__value">1 tot 6</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Speelduur</span>
+              </div>
+              <span class="game-stat__value">10-30 minuten</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">Benodigdheden</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Shut the box</span>
+              <span class="game-tag">2 dobbelstenen</span>
+              <span class="game-tag">Drank</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Voorbereiding</h2>
+        <p>Een shut the box is een bak met een rij klepjes. Op elk klepje staat een cijfer van 1 tot en met 9. In de bak gooi je de dobbelstenen.</p>
+        <ol>
+          <li>Zet alle klepjes open, zodat je alle cijfers ziet.</li>
+          <li>Leg twee dobbelstenen klaar.</li>
+          <li>Pak pen en papier om de punten bij te houden.</li>
+          <li>Spreek af hoeveel rondes je speelt. Meestal speel je tot iemand 45 punten heeft.</li>
+        </ol>
+        <p><strong>Geen shut the box in huis?</strong> Schrijf de cijfers 1 tot en met 9 op een papiertje. Zet een streep door elk cijfer dat je dichtklapt. Je hebt dan alleen twee dobbelstenen nodig.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Speluitleg</h2>
+        <ol>
+          <li>De eerste speler gooit met twee dobbelstenen en telt de ogen op.</li>
+          <li>Klap cijfers dicht die samen dat totaal vormen. Dat mag één cijfer zijn of meerdere.</li>
+          <li>Gooi opnieuw en klap weer cijfers dicht. Je mag alleen cijfers gebruiken die nog open staan.</li>
+          <li>Staan de 7, 8 en 9 dicht? Dan mag je kiezen om met één dobbelsteen te gooien.</li>
+          <li>Kun je met je worp geen cijfers meer dichtklappen? Dan is je beurt voorbij.</li>
+          <li>Tel de cijfers op die nog open staan. Dat zijn je punten voor deze ronde.</li>
+          <li>Zet alle klepjes weer open. De volgende speler is aan de beurt.</li>
+        </ol>
+
+        <h3>Een voorbeeld</h3>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/shut the box top view.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/shut the box top view.png" alt="Bovenaanzicht van shut the box met een worp van 5 en 3 en het cijfer 8 dichtgeklapt" class="game-image" loading="lazy">
+        </picture>
+        <p>Je gooit een 5 en een 3. Dat is 8. Je kunt nu de 8 dichtklappen. Of de 7 en de 1, de 6 en de 2, de 5 en de 3, of de 5, de 2 en de 1. Je kiest zelf.</p>
+
+        <div class="fun-fact-card">
+          <div class="fun-fact-card__icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18h6"/>
+              <path d="M10 22h4"/>
+              <path d="M12 2a6 6 0 00-4 10.47c.5.46.9 1.02 1.1 1.66L9.4 16h5.2l.3-1.87c.2-.64.6-1.2 1.1-1.66A6 6 0 0012 2z"/>
+            </svg>
+          </div>
+          <p>Tip: klap de hoge cijfers zo vroeg mogelijk dicht. Lage cijfers kun je aan het eind nog makkelijk combineren. Een 9 krijg je alleen nog weg met een hoge worp.</p>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Wie wint er?</h2>
+        <p>Na elke ronde noteer je de punten van iedere speler. Wie de minste punten heeft, wint de ronde.</p>
+        <p>Klapt iemand alle cijfers dicht? Dan heeft hij de box gesloten. Hij heeft 0 punten en wint de ronde meteen. In sommige groepen wint hij dan zelfs het hele spel.</p>
+        <p>Speel je meerdere rondes? Dan tel je de punten bij elkaar op. Heb je 45 punten of meer? Dan lig je eruit. Wie als laatste overblijft, wint.</p>
+
+        <h3>Huisregels</h3>
+        <p>Shut the box wordt op veel manieren gespeeld. Deze verschillen kom je het vaakst tegen. Spreek ze af voordat je begint.</p>
+        <ul>
+          <li><strong>Punten tellen:</strong> de meeste groepen tellen de open cijfers op. Sommige lezen ze als één getal. Staan de 1 en de 4 nog open? Dan heb je 14 punten in plaats van 5.</li>
+          <li><strong>Eén dobbelsteen:</strong> bij de ene groep mag dit als de 7, 8 en 9 dicht staan. Bij de andere pas als er samen minder dan 7 open staat.</li>
+          <li><strong>Een ronde of een heel spel:</strong> speel één ronde voor een snelle winnaar, of tot 45 punten voor een langer spel.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Shut the box met 12 cijfers</h2>
+        <p>Er zijn ook bakken met de cijfers 1 tot en met 12. De regels blijven hetzelfde. Het spel duurt alleen langer en de box sluiten is veel moeilijker. Met 12 cijfers speel je meestal tot 78 punten in plaats van 45.</p>
+        <p>Er zijn ook bakken voor 4 of 6 spelers. Daarbij heeft iedere speler een eigen rij klepjes. Je speelt dan tegelijk in plaats van om de beurt.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Shut the box als drankspel</h2>
+        <p>Shut the box is van zichzelf een rustig spel. Met drank erbij wordt elke worp spannend. Kies een of meer van deze opties. Spreek ze af voordat je begint.</p>
+
+        <h3>De hoogste score drinkt</h3>
+        <p>Wie na een ronde de meeste punten heeft, neemt een slok per 10 punten. Heb je 23 punten? Dan neem je 2 slokken.</p>
+
+        <h3>De laagste score deelt uit</h3>
+        <p>Wie de minste punten heeft, deelt slokken uit. Hij mag ze over de andere spelers verdelen.</p>
+
+        <h3>Box gesloten</h3>
+        <p>Sluit iemand de box? Dan trekt de rest een <a routerLink="/wat-is-een-adtje">adtje</a>.</p>
+
+        <h3>Met een anytimer als inzet</h3>
+        <p>De winnaar van het spel krijgt een <a routerLink="/wat-is-een-anytimer">anytimer</a> van de speler met de meeste punten.</p>
+
+        <p>Op zoek naar meer spellen met dobbelstenen? Speel ook <a routerLink="/blog/drankspelletjes/mexen">Mexen</a> of het <a routerLink="/blog/inspiratie/sinterklaas-dobbelspel">Sinterklaas dobbelspel</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Same FAQ block as the home page and the Drankspelletjes hub (full width) -->
+  <app-about [items]="faqs" [title]="faqTitle" [promoTitle]="faqPromoTitle" [promoText]="faqPromoText" [promoLink]="faqPromoLink"></app-about>
+
+  <div class="container">
+    <div class="legal-body">
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Vergelijkbare drankspellen</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+      </div>
+
+      <div class="legal-section">
+        <h2>Aanbevolen drankspellen</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

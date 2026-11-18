@@ -1,0 +1,201 @@
+<div class="legal-page">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Flunkyball regels</h1>
+      <p class="legal-intro">
+        Flunkyball is een drankspel voor buiten. Twee teams staan tegenover elkaar met een fles in het midden. Gooi je de fles om met een bal? Dan mag jouw team drinken tot de tegenstander de fles weer heeft rechtgezet. Wie als eerste al zijn bier op heeft, wint.
+      </p>
+      <p class="legal-intro">
+        Je schrijft het als flunkyball, flunkybal of flunky ball. Het is hetzelfde spel.
+      </p>
+      <p class="legal-intro">
+        Het spel is simpel, maar elk park speelt met andere regels. Hieronder vind je de basisregels en de huisregels die je vooraf afspreekt.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>Wat is flunkyball?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/flunkybal.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/flunkybal.png" alt="Flunkyball drankspel met twee teams op een grasveld en een fles in het midden" class="game-image" loading="eager" fetchpriority="high">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Categorie</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Spelers</span>
+              </div>
+              <span class="game-stat__value">6 tot 16</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Speelduur</span>
+              </div>
+              <span class="game-stat__value">10-20 minuten</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">Benodigdheden</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Plastic fles</span>
+              <span class="game-tag">Bal</span>
+              <span class="game-tag">Bier</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Voorbereiding</h2>
+        <p>Flunkyball speel je op een grasveld, in het park of op de camping. Je hebt ongeveer 10 meter ruimte nodig.</p>
+        <ol>
+          <li>Maak twee teams van 3 tot 8 spelers. Beide teams zijn even groot.</li>
+          <li>Trek twee lijnen op ongeveer 10 meter van elkaar. Gebruik een touw, slippers of tassen.</li>
+          <li>Vul een plastic fles van 1,5 liter voor een kwart tot de helft met water. Zet hem precies in het midden.</li>
+          <li>Iedere speler zet een flesje of blikje bier voor zich op de lijn. Iedereen heeft hetzelfde bier en het blijft nog dicht.</li>
+          <li>Leg een bal klaar. Een tennisbal of een kleine voetbal werkt het best.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>Speluitleg</h2>
+        <ol>
+          <li>Het team met de kleinste speler begint.</li>
+          <li>Eén speler gooit de bal naar de fles. De spelers van een team gooien om de beurt, zonder iemand over te slaan.</li>
+          <li>Mis je? Dan gaat de bal naar het andere team. Zij gooien vanaf hun eigen lijn.</li>
+          <li>Valt de fles om? Dan mag het gooiende team zijn bier openmaken en drinken.</li>
+          <li>Ondertussen rent het andere team naar het midden. Ze zetten de fles rechtop en brengen de bal terug achter hun eigen lijn.</li>
+          <li>Zijn ze allemaal terug achter de lijn? Dan roepen ze "stop". Het gooiende team zet het bier meteen weer neer.</li>
+          <li>Daarna gooit het andere team. Zo gaat het door tot iemand zijn bier op heeft.</li>
+        </ol>
+        <p>Het bier blijft dicht tot jouw team voor het eerst raak gooit. Pas dan mag je het openmaken.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Wanneer is je bier op?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/flunkybal bier checken.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/flunkybal bier checken.png" alt="Flunkyball speler houdt een leeg bierflesje ondersteboven boven haar hoofd om te laten zien dat het op is" class="game-image" loading="lazy">
+        </picture>
+        <p>Denk je dat je bier op is? Houd het flesje dan ondersteboven boven je hoofd. Komt er nog meer dan een slok uit? Dan krijg je een strafbier.</p>
+        <p>Is je bier echt op? Dan ga je aan de zijlijn staan. Je mag niet meer gooien en niet meer rennen. Je mag wel je team aanmoedigen.</p>
+        <p>Het team dat als eerste al zijn bier op heeft, wint.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Straffen</h2>
+        <p>Bij deze fouten krijg je een strafbier, of een slok voor het andere team. Spreek vooraf af welke straf jullie gebruiken.</p>
+        <ul>
+          <li>Je drinkt voordat de fles is omgevallen.</li>
+          <li>Je drinkt door na "stop".</li>
+          <li>Je steekt de lijn over voordat de bal is gegooid.</li>
+          <li>Je flesje valt om, om welke reden ook.</li>
+          <li>Je pakt je flesje op terwijl je niet drinkt, bijvoorbeeld om het te beschermen tegen de bal.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Huisregels</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/flunkybal bovenaanzicht.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/flunkybal bovenaanzicht.png" alt="Bovenaanzicht van een flunkyball veld met twee teams achter hun lijn en een fles in het midden" class="game-image" loading="lazy">
+        </picture>
+        <p>Er bestaan geen officiële regels voor flunkyball. Deze verschillen kom je het vaakst tegen.</p>
+        <ul>
+          <li><strong>De worp:</strong> bij de ene groep mag je gooien zoals je wilt. Bij de andere moet je bovenhands gooien.</li>
+          <li><strong>De afstand:</strong> 10 meter is het meest gespeeld. Ruim of krap? Pas het aan.</li>
+          <li><strong>Helpen drinken:</strong> sommige groepen laten teamleden elkaars bier opdrinken. Andere vinden dat vals.</li>
+          <li><strong>Omgooien bij de tegenstander:</strong> raak je met de bal het flesje van iemand anders? Dan moet die een nieuw bier openen.</li>
+          <li><strong>Zonder alcohol:</strong> het spel werkt ook met fris of alcoholvrij bier. Zolang iedereen hetzelfde heeft.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Tips om te winnen</h2>
+        <ul>
+          <li>Laat je beste gooier niet als eerste gooien, maar spreid je goede gooiers over de beurt.</li>
+          <li>Zet je snelste renners vooraan. Hoe sneller de fles staat, hoe minder de ander drinkt.</li>
+          <li>Drink met kleine, snelle slokken. Je moet op elk moment kunnen stoppen.</li>
+          <li>Kun je goed <a routerLink="/blog/begrippen/adten">adten</a>? Dan heb je hier een groot voordeel.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Waar komt flunkyball vandaan?</h2>
+        <p>Flunkyball komt uit Duitsland en Polen. Begin jaren 2000 werd het daar al gespeeld op festivals en universiteiten. In Polen heet het flanki. Daar is het bijna een nationaal studentenspel. In Duitsland is zelfs een jaarlijks kampioenschap.</p>
+        <p>In Nederland en België zie je het vooral bij studentenverenigingen, op festivals en in het park als het mooi weer is.</p>
+        <p>Meer spellen met een bal? Bekijk de regels van <a routerLink="/blog/drankspelletjes/beerpong">Beerpong</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Same FAQ block as the home page and the Drankspelletjes hub (full width) -->
+  <app-about [items]="faqs" [title]="faqTitle" [promoTitle]="faqPromoTitle" [promoText]="faqPromoText" [promoLink]="faqPromoLink"></app-about>
+
+  <div class="container">
+    <div class="legal-body">
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Vergelijkbare drankspellen</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+      </div>
+
+      <div class="legal-section">
+        <h2>Aanbevolen drankspellen</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

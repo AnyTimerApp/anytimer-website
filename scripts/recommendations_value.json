@@ -215,6 +215,43 @@
    ],
    "min_begrippen": 185,
    "reden_minimum": "Gebruiker: boze bak is belangrijk (2026-11-12), streef rond 200 interne links"
+  },
+  "shut-the-box": {
+   "waarde": 2220,
+   "score": 0,
+   "detail": [
+    "shut the box:2400/0 (veel koopintentie, voor de helft geteld)",
+    "shut the box spelregels:590/0",
+    "shut the box spel:260/0",
+    "spelregels shut the box:140/0",
+    "shut the box regels:30/0"
+   ]
+  },
+  "flunkyball": {
+   "waarde": 1520,
+   "score": 0,
+   "detail": [
+    "flunkyball:1300/0",
+    "flunkybal:170/0",
+    "flunkyball regels:50/0"
+   ]
+  },
+  "bakmachine": {
+   "waarde": 0,
+   "score": 0,
+   "detail": [
+    "bakmachine:170/0 (vooral broodbakmachines, niet geteld)"
+   ]
+  },
+  "imposter": {
+   "waarde": 2000,
+   "score": 0,
+   "detail": [
+    "imposter spel:1900/0",
+    "spel imposter:140/0",
+    "wie is de imposter:110/0",
+    "imposter game:8100/0 (vooral online games, niet geteld)"
+   ]
   }
  },
  "blogs": {

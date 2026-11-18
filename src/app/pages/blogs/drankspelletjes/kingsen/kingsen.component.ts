@@ -1,3 +1,4 @@
+import { AboutComponent, FaqItem } from '../../../home/about/about.component';
 import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
@@ -12,11 +13,21 @@ import { SliderNavComponent } from '../../../../components/slider-nav/slider-nav
 @Component({
   selector: 'app-kingsen',
   standalone: true,
-  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [AboutComponent, SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'kingsen.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './kingsen.component.scss']
 })
 export class KingsenComponent {
+  readonly faqTitle = 'Alles over kingsen';
+  readonly faqs: FaqItem[] = [
+    { question: 'Wat heb je nodig voor kingsen?', answer: 'Een gewoon kaartspel van 52 kaarten, een groot glas voor in het midden en drank voor iedereen. Meer heb je niet nodig.' },
+    { question: 'Wat gebeurt er bij de vierde koning?', answer: 'Wie de vierde koning trekt, drinkt het glas in het midden leeg. Dan is het spel afgelopen.' },
+    { question: 'Wat is het verschil tussen kingsen en Ring of Fire?', answer: 'Het is hetzelfde idee. Kingsen is de Nederlandse versie, met eigen regels per kaart.' }
+  ];
+  readonly faqPromoTitle = 'Meer drankspelletjes?';
+  readonly faqPromoText = 'Bekijk alle drankspellen met spelregels';
+  readonly faqPromoLink = '/blog/drankspelletjes';
+
   private readonly post = BLOG_POSTS.find(p => p.slug === 'kingsen')!;
   readonly category = this.post.category;
   readonly subCategory = this.post.subCategory!;

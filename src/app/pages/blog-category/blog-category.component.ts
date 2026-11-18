@@ -80,25 +80,25 @@ const DRANKSPEL_FAQ: Record<Lang, { title: string; items: FaqItem[] }> = {
       },
       {
         question: 'Welke drankspelletjes speel je zonder kaarten of materiaal?',
-        answer: 'Voor [Vikingen](/blog/drankspelletjes/vikingen) heb je helemaal niks nodig, alleen een groep die oplet. [Vingeren](/blog/drankspelletjes/vingeren) speel je met één glas. En met een telefoon speel je [Finger roulette](/blog/drankspelletjes/finger-roulette) of [Boze bak](/blog/drankspelletjes/boze-bak).',
+        answer: 'Voor [Vikingen](/blog/drankspelletjes/vikingen) heb je helemaal niks nodig, alleen een groep die oplet. [Vingeren](/blog/drankspelletjes/vingeren) speel je met één glas. En met een telefoon speel je [Finger roulette](/blog/drankspelletjes/finger-roulette), [Boze bak](/blog/drankspelletjes/boze-bak) of [Imposter](/blog/drankspelletjes/imposter).',
         link: '/blog/inspiratie/drankspellen-zonder-kaarten',
         linkText: 'Bekijk alle drankspellen zonder kaarten'
       },
       {
         question: 'Wat zijn leuke drankspelletjes voor 2 personen?',
-        answer: 'Ook met z\'n tweeën speel je prima een drankspel. [Hoger lager](/blog/drankspelletjes/hoger-lager), [Zeeslag](/blog/drankspelletjes/zeeslag) en [Jeu de bier](/blog/drankspelletjes/jeu-de-bier) werken goed met twee spelers. Ook [Mexen](/blog/drankspelletjes/mexen) en [De Paardenrace](/blog/drankspelletjes/de-paardenrace) speel je prima met twee spelers.',
+        answer: 'Ook met z\'n tweeën speel je prima een drankspel. [Hoger lager](/blog/drankspelletjes/hoger-lager), [Zeeslag](/blog/drankspelletjes/zeeslag) en [Jeu de bier](/blog/drankspelletjes/jeu-de-bier) werken goed met twee spelers. Ook [Mexen](/blog/drankspelletjes/mexen) en [De Paardenrace](/blog/drankspelletjes/de-paardenrace) speel je prima met twee spelers. En [Shut the box](/blog/drankspelletjes/shut-the-box) kun je zelfs alleen spelen.',
         link: '/blog/inspiratie/drankspellen-voor-2-personen',
         linkText: 'Bekijk alle drankspellen voor 2 personen'
       },
       {
         question: 'Wat zijn leuke drankspellen voor een grote groep?',
-        answer: 'Kies een spel waarbij iedereen tegelijk meedoet. [Kingsen](/blog/drankspelletjes/kingsen) en [De Paardenrace](/blog/drankspelletjes/de-paardenrace) speel je met maximaal 12 man. [Vikingen](/blog/drankspelletjes/vikingen) zelfs met 16, en dan moet de hele groep tegelijk opletten. En bij [Bussen](/blog/drankspelletjes/bussen) gaat aan het eind één iemand de bus in.',
+        answer: 'Kies een spel waarbij iedereen tegelijk meedoet. [Kingsen](/blog/drankspelletjes/kingsen) en [De Paardenrace](/blog/drankspelletjes/de-paardenrace) speel je met maximaal 12 man. [Vikingen](/blog/drankspelletjes/vikingen) zelfs met 16, en dan moet de hele groep tegelijk opletten. En bij [Bussen](/blog/drankspelletjes/bussen) gaat aan het eind één iemand de bus in. Is het mooi weer? Speel dan [Flunkyball](/blog/drankspelletjes/flunkyball) buiten, met twee teams van maximaal 8. Binnen werkt [Imposter](/blog/drankspelletjes/imposter) met maximaal 16 spelers.',
         link: '/blog/drankspelletjes/de-paardenrace',
         linkText: 'Bekijk de regels van De Paardenrace'
       },
       {
         question: 'Welke drankspelletjes speel je met dobbelstenen?',
-        answer: '[Mexen](/blog/drankspelletjes/mexen) is het bekendste dobbelspel. Je gooit met twee stenen onder een beker en probeert niet de laagste worp van de ronde te hebben. Rond Sinterklaas is het [Sinterklaas dobbelspel](/blog/inspiratie/sinterklaas-dobbelspel) populair. Daarbij hoort bij elk getal een opdracht.',
+        answer: '[Mexen](/blog/drankspelletjes/mexen) is het bekendste dobbelspel. Je gooit met twee stenen onder een beker en probeert niet de laagste worp van de ronde te hebben. Bij [Shut the box](/blog/drankspelletjes/shut-the-box) klap je cijfers dicht die samen je worp vormen. Rond Sinterklaas is het [Sinterklaas dobbelspel](/blog/inspiratie/sinterklaas-dobbelspel) populair. Daarbij hoort bij elk getal een opdracht.',
         link: '/blog/inspiratie/sinterklaas-dobbelspel',
         linkText: 'Bekijk het Sinterklaas dobbelspel'
       },
@@ -122,7 +122,7 @@ const DRANKSPEL_FAQ: Record<Lang, { title: string; items: FaqItem[] }> = {
       },
       {
         question: 'Zijn er drankspelletjes voor je telefoon?',
-        answer: 'Ja. [Boze bak](/blog/drankspelletjes/boze-bak) en [Finger roulette](/blog/drankspelletjes/finger-roulette) speel je op je telefoon. Bij Boze bak druk je op blije bakken en hoop je dat de boze bak niet verschijnt. Bij Finger roulette kiest de telefoon wie er drinkt. Ook [Mexen](/blog/drankspelletjes/mexen) en [Bakplaten](/blog/drankspelletjes/bakplaten) kun je op je telefoon spelen, zonder dobbelstenen of kaarten. En met een [adt timer](/adt-timer) meet je wie zijn bier het snelst op heeft.',
+        answer: 'Ja. [Boze bak](/blog/drankspelletjes/boze-bak) en [Finger roulette](/blog/drankspelletjes/finger-roulette) speel je op je telefoon. Bij Boze bak druk je op blije bakken en hoop je dat de boze bak niet verschijnt. Bij Finger roulette kiest de telefoon wie er drinkt. Bij [Bakmachine](/blog/drankspelletjes/bakmachine) draai je aan een gokkast voor bakken. Bij [Imposter](/blog/drankspelletjes/imposter) krijgt iedereen een geheim woord, behalve de bluffer. Ook [Zeeslag](/blog/drankspelletjes/zeeslag), het [Krokodillenspel](/blog/drankspelletjes/krokodillenspel), [Mexen](/blog/drankspelletjes/mexen) en [Bakplaten](/blog/drankspelletjes/bakplaten) kun je op je telefoon spelen, zonder dobbelstenen of kaarten. En met een [adt timer](/adt-timer) meet je wie zijn bier het snelst op heeft.',
         link: '/blog/drankspelletjes/boze-bak',
         linkText: 'Bekijk de regels van Boze bak'
       }
@@ -143,25 +143,25 @@ const DRANKSPEL_FAQ: Record<Lang, { title: string; items: FaqItem[] }> = {
       },
       {
         question: 'Which drinking games can you play without cards or anything else?',
-        answer: 'For [Vikings](/en/blog/drinking-games/vikings) you need nothing at all, just a group that pays attention. [Fingers](/en/blog/drinking-games/fingers) only needs one glass. And with a phone you can play [Finger Roulette](/en/blog/drinking-games/finger-roulette) or [Angry Mug](/en/blog/drinking-games/angry-mug).',
+        answer: 'For [Vikings](/en/blog/drinking-games/vikings) you need nothing at all, just a group that pays attention. [Fingers](/en/blog/drinking-games/fingers) only needs one glass. And with a phone you can play [Finger Roulette](/en/blog/drinking-games/finger-roulette), [Angry Mug](/en/blog/drinking-games/angry-mug) or [Imposter](/en/blog/drinking-games/imposter).',
         link: '/en/blog/inspiration/drinking-games-without-cards',
         linkText: 'See all drinking games without cards'
       },
       {
         question: 'What are good drinking games for two people?',
-        answer: 'You can easily play a drinking game with just the two of you. [Higher or Lower](/en/blog/drinking-games/higher-or-lower), [Battleship](/en/blog/drinking-games/battleship) and [Jeu de bier](/en/blog/drinking-games/jeu-de-bier) work well with two players. [Mexico](/en/blog/drinking-games/mexico) and [Horse Race](/en/blog/drinking-games/horse-race) are fine with two as well.',
+        answer: 'You can easily play a drinking game with just the two of you. [Higher or Lower](/en/blog/drinking-games/higher-or-lower), [Battleship](/en/blog/drinking-games/battleship) and [Jeu de bier](/en/blog/drinking-games/jeu-de-bier) work well with two players. [Mexico](/en/blog/drinking-games/mexico) and [Horse Race](/en/blog/drinking-games/horse-race) are fine with two as well. And you can even play [Shut the Box](/en/blog/drinking-games/shut-the-box) on your own.',
         link: '/en/blog/inspiration/drinking-games-for-two',
         linkText: 'See all drinking games for two'
       },
       {
         question: 'What are good drinking games for a big group?',
-        answer: 'Pick a game where everyone plays at the same time. [Kingsen](/en/blog/drinking-games/kingsen) and [Horse Race](/en/blog/drinking-games/horse-race) work with up to 12 players. [Vikings](/en/blog/drinking-games/vikings) even with 16, and then the whole group has to pay attention at once. And in [Ride the Bus](/en/blog/drinking-games/ride-the-bus) one person ends up on the bus.',
+        answer: 'Pick a game where everyone plays at the same time. [Kingsen](/en/blog/drinking-games/kingsen) and [Horse Race](/en/blog/drinking-games/horse-race) work with up to 12 players. [Vikings](/en/blog/drinking-games/vikings) even with 16, and then the whole group has to pay attention at once. And in [Ride the Bus](/en/blog/drinking-games/ride-the-bus) one person ends up on the bus. Nice weather? Then play [Flunkyball](/en/blog/drinking-games/flunkyball) outside, with two teams of up to 8. Indoors [Imposter](/en/blog/drinking-games/imposter) works with up to 16 players.',
         link: '/en/blog/drinking-games/horse-race',
         linkText: 'See the rules of Horse Race'
       },
       {
         question: 'Which drinking games can you play with dice?',
-        answer: '[Mexico](/en/blog/drinking-games/mexico) is the best known dice game. You roll two dice under a cup and try not to have the lowest roll of the round. Around Sinterklaas the [Sinterklaas dice game](/en/blog/inspiration/sinterklaas-dice-game) is popular. Every number comes with a task.',
+        answer: '[Mexico](/en/blog/drinking-games/mexico) is the best known dice game. You roll two dice under a cup and try not to have the lowest roll of the round. In [Shut the Box](/en/blog/drinking-games/shut-the-box) you flip down numbers that add up to your roll. Around Sinterklaas the [Sinterklaas dice game](/en/blog/inspiration/sinterklaas-dice-game) is popular. Every number comes with a task.',
         link: '/en/blog/inspiration/sinterklaas-dice-game',
         linkText: 'See the Sinterklaas dice game'
       },
@@ -185,7 +185,7 @@ const DRANKSPEL_FAQ: Record<Lang, { title: string; items: FaqItem[] }> = {
       },
       {
         question: 'Are there drinking games for your phone?',
-        answer: 'Yes. [Angry Mug](/en/blog/drinking-games/angry-mug) and [Finger Roulette](/en/blog/drinking-games/finger-roulette) are played on your phone. In Angry Mug you tap the happy mugs and hope the angry mug does not show up. In Finger Roulette the phone picks who drinks. You can also play [Mexico](/en/blog/drinking-games/mexico) and [Bakplaten](/en/blog/drinking-games/bakplaten) on your phone, without dice or cards. And with a [chug timer](/en/chug-timer) you find out who finishes their beer the fastest.',
+        answer: 'Yes. [Angry Mug](/en/blog/drinking-games/angry-mug) and [Finger Roulette](/en/blog/drinking-games/finger-roulette) are played on your phone. In Angry Mug you tap the happy mugs and hope the angry mug does not show up. In Finger Roulette the phone picks who drinks. In [Chug Machine](/en/blog/drinking-games/chug-machine) you spin a slot machine for chugs. In [Imposter](/en/blog/drinking-games/imposter) everyone gets a secret word, except the bluffer. You can also play [Battleship](/en/blog/drinking-games/battleship), [Crocodile Dentist](/en/blog/drinking-games/crocodile-dentist), [Mexico](/en/blog/drinking-games/mexico) and [Bakplaten](/en/blog/drinking-games/bakplaten) on your phone, without dice or cards. And with a [chug timer](/en/chug-timer) you find out who finishes their beer the fastest.',
         link: '/en/blog/drinking-games/angry-mug',
         linkText: 'See the rules of Angry Mug'
       }

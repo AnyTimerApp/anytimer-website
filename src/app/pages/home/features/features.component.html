@@ -98,8 +98,8 @@
         @for (review of t.reviews; track review.name) {
         <div class="review-card">
           <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            @if (t.translatedNote) {
+            <div class="review-stars">{{ review.starsText }}</div>
+            @if (review.translated) {
             <span class="review-translated">{{ t.translatedNote }}</span>
             }
           </div>
@@ -108,7 +108,7 @@
             <div class="review-avatar" [style.background]="review.color">{{ review.name.charAt(0) }}</div>
             <div>
               <strong>{{ review.name }}</strong>
-              <span>{{ review.city }}</span>
+              <span>{{ review.store }}</span>
             </div>
           </div>
         </div>

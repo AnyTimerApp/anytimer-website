@@ -51,6 +51,13 @@
   border-radius: var(--radius-md);
   padding: 18px 20px;
   box-shadow: var(--shadow-xs);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--primary);
+  }
 
   div:last-child {
     display: flex;

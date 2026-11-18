@@ -64,6 +64,38 @@ const GAMES: Record<Lang, AppGame[]> = {
       linkText: 'Bekijk de spelregels van Bakplaten',
       image: 'assets/blogs/drankspellen/bakplaten.webp',
       imageAlt: 'Bakplaten kaartspel als simpel drankspel'
+    },
+    {
+      name: 'Bakmachine',
+      description: 'Een gokkast voor bakken. Draai drie wielen. Drie volle bakken? Deel er een uit. Drie lege? Dan trek je er zelf een.',
+      link: '/blog/drankspelletjes/bakmachine',
+      linkText: 'Bekijk de spelregels van Bakmachine',
+      image: 'assets/blogs/drankspel/bakmachine.webp',
+      imageAlt: 'Twee vrienden spelen Bakmachine op een telefoon en drukken op draaien'
+    },
+    {
+      name: 'Imposter',
+      description: 'Iedereen krijgt hetzelfde geheime woord, behalve de imposter. Geef om de beurt een hint en ontmasker de bluffer.',
+      link: '/blog/drankspelletjes/imposter',
+      linkText: 'Bekijk de spelregels van Imposter',
+      image: 'assets/blogs/drankspel/imposter.webp',
+      imageAlt: 'Vrienden spelen het imposter spel en wijzen lachend naar de imposter naast een telefoon'
+    },
+    {
+      name: 'Zeeslag',
+      description: 'Verstop je schepen en raad waar die van de ander liggen. Wordt jouw schip geraakt? Dan moet je drinken.',
+      link: '/blog/drankspelletjes/zeeslag',
+      linkText: 'Bekijk de spelregels van Zeeslag',
+      image: 'assets/blogs/drankspel/zeeslag.webp',
+      imageAlt: 'Zeeslag drankspel met het Zeeslag bord en pionnen'
+    },
+    {
+      name: 'Krokodillenspel',
+      description: 'Druk om de beurt een tand in. Klapt de bek van de krokodil dicht? Dan heb je verloren.',
+      link: '/blog/drankspelletjes/krokodillenspel',
+      linkText: 'Bekijk de spelregels van Krokodillenspel',
+      image: 'assets/blogs/drankspel/krokodil.webp',
+      imageAlt: 'Krokodillenspel met het spel Krokodil met Kiespijn en shotglazen'
     }
   ],
   // Game names match the English version of the app.
@@ -115,6 +147,38 @@ const GAMES: Record<Lang, AppGame[]> = {
       linkText: 'See the rules of Bakplaten',
       image: 'assets/blogs/drankspellen/bakplaten.webp',
       imageAlt: 'Bakplaten, a simple Dutch card drinking game'
+    },
+    {
+      name: 'Chug Machine',
+      description: 'A slot machine for chugs. Spin three reels. Three full mugs? Hand one out. Three empty ones? Then you chug yourself.',
+      link: '/en/blog/drinking-games/chug-machine',
+      linkText: 'See the rules of Chug Machine',
+      image: 'assets/blogs/drankspel/bakmachine.webp',
+      imageAlt: 'Two friends playing Chug Machine on a phone and tapping spin'
+    },
+    {
+      name: 'Imposter',
+      description: 'Everyone gets the same secret word, except the imposter. Take turns giving a hint and unmask the bluffer.',
+      link: '/en/blog/drinking-games/imposter',
+      linkText: 'See the rules of Imposter',
+      image: 'assets/blogs/drankspel/imposter.webp',
+      imageAlt: 'Friends playing the imposter game and laughing as they point at the imposter next to a phone'
+    },
+    {
+      name: 'Battleship',
+      description: 'Hide your ships and guess where the other player\'s ships are. Is your ship hit? Then you drink.',
+      link: '/en/blog/drinking-games/battleship',
+      linkText: 'See the rules of Battleship',
+      image: 'assets/blogs/drankspel/zeeslag.webp',
+      imageAlt: 'Battleship drinking game with the board and pegs'
+    },
+    {
+      name: 'Crocodile Dentist',
+      description: 'Take turns pressing a tooth. Does the crocodile snap its jaws shut? Then you lose.',
+      link: '/en/blog/drinking-games/crocodile-dentist',
+      linkText: 'See the rules of Crocodile Dentist',
+      image: 'assets/blogs/drankspel/krokodil.webp',
+      imageAlt: 'Crocodile Dentist game with shot glasses'
     }
   ]
 };

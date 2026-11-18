@@ -1,3 +1,4 @@
+import { AboutComponent, FaqItem } from '../../../home/about/about.component';
 import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
@@ -12,11 +13,21 @@ import { SliderNavComponent } from '../../../../components/slider-nav/slider-nav
 @Component({
   selector: 'app-bussen',
   standalone: true,
-  imports: [SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
+  imports: [AboutComponent, SliderNavComponent, RouterLink, BreadcrumbsComponent, DownloadCtaComponent, BlogCardComponent],
   templateUrl: 'bussen.component.html',
   styleUrls: ['../../../juridisch/juridisch.component.scss', '../../blog-article-shared.scss', './bussen.component.scss']
 })
 export class BussenComponent {
+  readonly faqTitle = 'Alles over bussen';
+  readonly faqs: FaqItem[] = [
+    { question: 'Hoe gaat het drankspel bussen?', answer: 'Je speelt vier rondes waarin je raadt: rood of zwart, hoger of lager, binnen of buiten en dezelfde kleur of niet. Daarna legt de deler een piramide van 15 kaarten. Wie aan het einde de meeste kaarten over heeft, gaat de bus in.' },
+    { question: 'Wat is de bus bij bussen?', answer: 'De bus is de laatste ronde. Er liggen 8 open kaarten op een rij. De speler in de bus raadt steeds hoger of lager en begint opnieuw bij elke fout.' },
+    { question: 'Met hoeveel mensen speel je bussen?', answer: 'Bussen speel je met 2 tot 8 spelers. Met meer mensen heb je een tweede kaartspel nodig, anders is de stapel te snel op.' }
+  ];
+  readonly faqPromoTitle = 'Meer drankspelletjes?';
+  readonly faqPromoText = 'Bekijk alle drankspellen met spelregels';
+  readonly faqPromoLink = '/blog/drankspelletjes';
+
   private readonly post = BLOG_POSTS.find(p => p.slug === 'bussen')!;
   readonly category = this.post.category;
   readonly subCategory = this.post.subCategory!;
