@@ -345,9 +345,10 @@ h1 {
     height: 500px;
   }
 
+  /* The image has ~27% of its width as empty space below the phone. Trim it. */
   .phone-stage {
     width: 100%;
-    margin: 0;
+    margin: 0 0 -48%;
   }
 }
 

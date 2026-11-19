@@ -124,3 +124,16 @@
   align-self: flex-start;
   transition: transform 0.2s ease;
 }
+
+@media (max-width: 640px) {
+  .games-section {
+    padding: 60px 0;
+  }
+}
+
+/* From 600px down the grid is a slider with 32px below the cards */
+@media (max-width: 600px) {
+  .games-section {
+    padding-bottom: 28px;
+  }
+}

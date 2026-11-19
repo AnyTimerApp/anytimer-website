@@ -88,3 +88,8 @@
     color: var(--text-secondary);
   }
 }
+@media (max-width: 640px) {
+  .team-section {
+    padding: 60px 0;
+  }
+}

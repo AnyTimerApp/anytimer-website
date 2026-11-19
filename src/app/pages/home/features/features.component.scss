@@ -280,3 +280,10 @@
   color: rgba(0, 0, 0, 0.55);
   flex-shrink: 0;
 }
+
+@media (max-width: 640px) {
+  .features-section,
+  .reviews-section {
+    padding: 60px 0;
+  }
+}

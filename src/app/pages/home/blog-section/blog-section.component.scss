@@ -88,3 +88,10 @@
     flex: 0 0 min(85%, 340px);
   }
 }
+
+@media (max-width: 640px) {
+  /* The last slider already adds 32px below the cards */
+  .blog-home-section {
+    padding: 60px 0 28px;
+  }
+}
