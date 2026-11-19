@@ -289,6 +289,18 @@ export const BLOG_POSTS: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'never-have-i-ever',
+    path: 'blog/drankspelletjes/never-have-i-ever',
+    category: 'Drankspelletjes',
+    subCategory: 'Overig',
+    title: 'Never have I ever',
+    excerpt: '150 vragen voor het drankspel Ik heb nog nooit. Heb je het wel gedaan? Dan drink je. Trek online een kaart of kies je eigen categorie.',
+    date: '2026-11-19',
+    image: 'assets/blogs/drankspel/Never Have I Ever Party.webp',
+    imageAlt: 'Vrienden spelen never have I ever, oftewel Ik heb nog nooit, rond een tafel met tien vingers omhoog',
+    variant: 'light'
+  },
+  {
     slug: 'toepen',
     path: 'blog/drankspelletjes/toepen',
     category: 'Drankspelletjes',

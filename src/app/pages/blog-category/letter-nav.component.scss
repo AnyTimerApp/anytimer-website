@@ -1,0 +1,43 @@
+// Begrippen hub: the letter bar sticks under the navbar while you scroll
+// through the list. Same look and behaviour as the category bar on the never
+// have I ever page: loose pills at first, a white pill bar with border and
+// shadow once it sticks. The 6px padding keeps the letters off the edge.
+.letter-nav {
+  position: sticky;
+  top: calc(var(--header-height) + 8px);
+  z-index: 5;
+  // The negative side margin keeps the first letter in line with the text.
+  margin: 0 -7px 32px;
+  padding: 6px;
+  border-radius: 26px;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &.letter-nav--stuck {
+    background: rgba(255, 255, 255, 0.94);
+    border-color: var(--border-light);
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .letter-filter-bar {
+    margin: 0;
+  }
+
+  // Phone: one row that scrolls sideways inside the bar.
+  @media (max-width: 768px) {
+    border-radius: var(--radius-pill);
+
+    .letter-filter-bar {
+      margin: 0;
+      padding: 0;
+      border-radius: var(--radius-pill);
+    }
+  }
+}
+
+// Letter headings stay clear of the stuck bar.
+.letter-list .letter-heading {
+  scroll-margin-top: calc(var(--header-height) + 72px);
+}

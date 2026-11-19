@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, ElementRef, HostListener, Inject, ViewChild } from '@angular/core';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
@@ -80,7 +80,7 @@ const DRANKSPEL_FAQ: Record<Lang, { title: string; items: FaqItem[] }> = {
       },
       {
         question: 'Welke drankspelletjes speel je zonder kaarten of materiaal?',
-        answer: 'Voor [Vikingen](/blog/drankspelletjes/vikingen) heb je helemaal niks nodig, alleen een groep die oplet. [Vingeren](/blog/drankspelletjes/vingeren) speel je met één glas. En met een telefoon speel je [Finger roulette](/blog/drankspelletjes/finger-roulette), [Boze bak](/blog/drankspelletjes/boze-bak) of [Imposter](/blog/drankspelletjes/imposter).',
+        answer: 'Voor [Vikingen](/blog/drankspelletjes/vikingen) heb je helemaal niks nodig, alleen een groep die oplet. [Vingeren](/blog/drankspelletjes/vingeren) speel je met één glas. En met een telefoon speel je [Finger roulette](/blog/drankspelletjes/finger-roulette), [Boze bak](/blog/drankspelletjes/boze-bak) of [Imposter](/blog/drankspelletjes/imposter). Voor [Never have I ever](/blog/drankspelletjes/never-have-i-ever) heb je alleen een drankje en een goede vraag nodig.',
         link: '/blog/inspiratie/drankspellen-zonder-kaarten',
         linkText: 'Bekijk alle drankspellen zonder kaarten'
       },
@@ -143,7 +143,7 @@ const DRANKSPEL_FAQ: Record<Lang, { title: string; items: FaqItem[] }> = {
       },
       {
         question: 'Which drinking games can you play without cards or anything else?',
-        answer: 'For [Vikings](/en/blog/drinking-games/vikings) you need nothing at all, just a group that pays attention. [Fingers](/en/blog/drinking-games/fingers) only needs one glass. And with a phone you can play [Finger Roulette](/en/blog/drinking-games/finger-roulette), [Angry Mug](/en/blog/drinking-games/angry-mug) or [Imposter](/en/blog/drinking-games/imposter).',
+        answer: 'For [Vikings](/en/blog/drinking-games/vikings) you need nothing at all, just a group that pays attention. [Fingers](/en/blog/drinking-games/fingers) only needs one glass. And with a phone you can play [Finger Roulette](/en/blog/drinking-games/finger-roulette), [Angry Mug](/en/blog/drinking-games/angry-mug) or [Imposter](/en/blog/drinking-games/imposter). For [Never have I ever](/en/blog/drinking-games/never-have-i-ever) you only need a drink and a good question.',
         link: '/en/blog/inspiration/drinking-games-without-cards',
         linkText: 'See all drinking games without cards'
       },
@@ -198,7 +198,7 @@ const DRANKSPEL_FAQ: Record<Lang, { title: string; items: FaqItem[] }> = {
   standalone: true,
   imports: [RouterLink, CommonModule, BreadcrumbsComponent, AboutComponent],
   templateUrl: './blog-category.component.html',
-  styleUrls: ['../juridisch/juridisch.component.scss', '../blog/blog-shared.component.scss']
+  styleUrls: ['../juridisch/juridisch.component.scss', '../blog/blog-shared.component.scss', './letter-nav.component.scss']
 })
 export class BlogCategoryComponent {
   category: BlogCategory;
@@ -267,6 +267,31 @@ export class BlogCategoryComponent {
 
   toggleLetter(letter: string) {
     this.activeLetter = this.activeLetter === letter ? null : letter;
+    // Picked from the stuck bar: jump back to the top of the list, otherwise
+    // the shorter list leaves you scrolled past it.
+    const nav = this.letterNav?.nativeElement;
+    const list = nav?.parentElement;
+    if (this.letterNavStuck && nav && list) {
+      const top = list.getBoundingClientRect().top + window.scrollY - parseFloat(getComputedStyle(nav).top);
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }
+
+  // True once the letter bar sticks under the navbar. Only then does it get
+  // its white background, border and shadow (same as on never have I ever).
+  letterNavStuck = false;
+  @ViewChild('letterNav') private letterNav?: ElementRef<HTMLElement>;
+  private stuckFrame = 0;
+
+  @HostListener('window:scroll')
+  onScroll() {
+    if (this.stuckFrame) return;
+    this.stuckFrame = requestAnimationFrame(() => {
+      this.stuckFrame = 0;
+      const nav = this.letterNav?.nativeElement;
+      if (!nav) return;
+      this.letterNavStuck = nav.getBoundingClientRect().top <= parseFloat(getComputedStyle(nav).top) + 1;
+    });
   }
 
   constructor(meta: Meta, route: ActivatedRoute, @Inject(DOCUMENT) document: Document) {

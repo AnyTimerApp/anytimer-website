@@ -1,0 +1,31 @@
+<section class="banner">
+  <p class="title">{{ t.title }}</p>
+
+  <div class="stack">
+    @for (k of [drawKey]; track k) {
+      <button type="button" class="card" [class.card--new]="k > 0" [attr.aria-label]="t.aria" (click)="draw()">
+        <span class="card__category">{{ card.category }}</span>
+        <span class="card__question" aria-live="polite">{{ card.question }}</span>
+        <span class="card__brand">AnyTimerApp</span>
+      </button>
+    }
+  </div>
+
+  <button type="button" class="new-card" (click)="draw()">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/>
+    </svg>
+    {{ t.newCard }}
+  </button>
+
+  <div class="choose">
+    <p class="choose__label">{{ t.choose }}</p>
+    <div class="chips">
+      @for (c of categories; track c.id) {
+        <button type="button" class="chip" [class.chip--active]="isActive(c.id)" [attr.aria-pressed]="isActive(c.id)" (click)="toggle(c.id)">
+          {{ c.label }}
+        </button>
+      }
+    </div>
+  </div>
+</section>

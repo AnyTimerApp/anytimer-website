@@ -1,0 +1,172 @@
+<app-never-cards lang="en" [categories]="categories"></app-never-cards>
+
+<div class="legal-page legal-page--after-timer">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Never have I ever questions</h1>
+      <p class="legal-intro">
+        Never have I ever is a game where you take turns naming something you have never done. Anyone who has done it puts a finger down. You play it with fingers or as a drinking game. In the Netherlands it's called Ik heb nog nooit. Below you'll find {{ questionCount }} never have I ever questions, from warm-ups to juicy 18+.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>What is Never have I ever?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/Never Have I Ever Party.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/Never Have I Ever Party.png" alt="Friends playing the never have I ever game around a table with ten fingers up" class="game-image" loading="lazy">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Type</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Players</span>
+              </div>
+              <span class="game-stat__value">2 or more</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Duration</span>
+              </div>
+              <span class="game-stat__value">15-45 minutes</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">What you need</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">A drink</span>
+              <span class="game-tag">This page</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>How to play</h2>
+        <p>The rules of never have I ever are simple. All you need are your hands.</p>
+        <ol>
+          <li>Sit in a circle. Everyone holds up ten fingers.</li>
+          <li>The youngest player starts. They say a sentence that starts with "Never have I ever". For example: "Never have I ever passed an exam without opening the book."</li>
+          <li>Have you done it? Then put a finger down.</li>
+          <li>Then it's the next player's turn on the left. Keep going round.</li>
+          <li>The first person with no fingers left is out. The last one with fingers up wins.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>All {{ questionCount }} questions in one list</h2>
+        <p>Start with the warm-ups and the funny questions. The 18+ questions are spicy and sometimes dirty, so adults only. If someone doesn't want to answer, move on to the next one.</p>
+        <nav #questionNav class="question-nav game-tags" [class.question-nav--stuck]="navStuck" aria-label="Categories">
+          <div class="question-nav__track">
+            @for (c of categories; track c.id) {
+              <a class="game-tag" [class.game-tag--active]="activeCategory === c.id" [attr.data-category]="c.id" [href]="'#' + c.id" (click)="scrollToCategory($event, c.id)">{{ c.label }}</a>
+            }
+          </div>
+        </nav>
+
+        <div class="question-lists">
+          @for (c of categories; track c.id) {
+            <h3 class="question-list-title" [id]="c.id">
+              <span>{{ c.label }}</span>
+              <span class="question-list-count">{{ c.questions.length }}</span>
+            </h3>
+            <ol class="question-list">
+              @for (q of c.questions; track q) {
+                <li>{{ q }}</li>
+              }
+            </ol>
+          }
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Other ways to play</h2>
+        <ul>
+          <li>As a drinking game you take a sip instead of putting a finger down. Nobody is out, so you play as long as you like. If you keep the fingers too, the first person with none left downs their drink.</li>
+          <li>In the I have version you flip it round. You name something you have done, and anyone who never has puts a finger down.</li>
+          <li>For the pot version everyone writes three questions on slips of paper first. They go in a cup and you take turns drawing one, without knowing who wrote it.</li>
+          <li>With two teams you add up the fingers per team. The team with the most fingers left wins.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Writing your own question? Keep this in mind</h2>
+        <ul>
+          <li>Pick one specific moment. After "Never have I ever lost my phone on a night out" someone has to tell how it happened. After "Never have I ever done something stupid" not much happens.</li>
+          <li>Aim for something about half the group has done. If everyone or nobody puts a finger down, there is nothing to tell.</li>
+          <li>Save the 18+ questions for later in the night.</li>
+          <li>If you're not sure a question is OK, skip it.</li>
+        </ul>
+        <p>More games without cards or props? Play <a routerLink="/en/blog/drinking-games/imposter">Imposter</a> too, a game where you have to lie.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <app-about [items]="faqs" [title]="faqTitle" [promoTitle]="faqPromoTitle" [promoText]="faqPromoText" [promoLink]="faqPromoLink"></app-about>
+
+  <div class="container">
+    <div class="legal-body">
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Similar drinking games</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+      </div>
+
+      <div class="legal-section">
+        <h2>Recommended drinking games</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

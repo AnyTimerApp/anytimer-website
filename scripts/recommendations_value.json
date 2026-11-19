@@ -252,6 +252,19 @@
     "wie is de imposter:110/0",
     "imposter game:8100/0 (vooral online games, niet geteld)"
    ]
+  },
+  "never-have-i-ever": {
+   "waarde": 5050,
+   "score": 0,
+   "detail": [
+    "never have i ever:6600/64 (deels de Netflix-serie, voor de helft geteld)",
+    "never have i ever questions:1300/0 (Engelstalig, voor de helft geteld)",
+    "never have i ever vragen:880/0",
+    "ik heb nog nooit:70/0",
+    "ik heb nog nooit vragen:70/0",
+    "never have i ever spel:50/0",
+    "never have i ever nederlands:30/7"
+   ]
   }
  },
  "blogs": {

@@ -79,6 +79,7 @@ GAME_TOPICS = {
     'jeu-de-bier': ['jeu de bier', 'jeu de boules'] + PONG,
     'jenga': ['jenga', 'toren', 'blokje'],
     'flunkyball': ['flunkyball', 'flunkybal', 'flunky ball', 'grasveld', 'buiten'],
+    'never-have-i-ever': ['never have i ever', 'ik heb nog nooit', 'nooit heb ik ooit', 'geheim', 'verhalen', 'kring'],
     'trek-je-bak-mania': ['trek je bak'] + ADT,
     'boze-bak': ['boze bak'] + ADT,
     'bakmachine': ['bakmachine', 'gokkast', 'slot machine', 'volle bak'] + ADT,

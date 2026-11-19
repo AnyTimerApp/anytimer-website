@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://anytimer.app/blog/drankspelletjes/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/drankspelletjes/"/>
@@ -83,7 +83,7 @@
   </url>
   <url>
     <loc>https://anytimer.app/blog/inspiratie/drankspellen-zonder-kaarten/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/inspiratie/drankspellen-zonder-kaarten/"/>
@@ -146,7 +146,7 @@
   </url>
   <url>
     <loc>https://anytimer.app/huisavondideeen/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/huisavondideeen/"/>
@@ -155,7 +155,7 @@
   </url>
   <url>
     <loc>https://anytimer.app/blog/drankspelletjes/jenga/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/drankspelletjes/jenga/"/>
@@ -191,7 +191,7 @@
   </url>
   <url>
     <loc>https://anytimer.app/blog/drankspelletjes/imposter/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/drankspelletjes/imposter/"/>
@@ -215,6 +215,15 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/drankspelletjes/flunkyball/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/drinking-games/flunkyball/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/drankspelletjes/flunkyball/"/>
+  </url>
+  <url>
+    <loc>https://anytimer.app/blog/drankspelletjes/never-have-i-ever/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/drankspelletjes/never-have-i-ever/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/drinking-games/never-have-i-ever/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/drankspelletjes/never-have-i-ever/"/>
   </url>
   <url>
     <loc>https://anytimer.app/blog/drankspelletjes/toepen/</loc>
@@ -5054,7 +5063,7 @@
   </url>
   <url>
     <loc>https://anytimer.app/en/blog/drinking-games/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/drankspelletjes/"/>
@@ -5117,7 +5126,7 @@
   </url>
   <url>
     <loc>https://anytimer.app/en/blog/inspiration/night-in-ideas-for-housemates/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/huisavondideeen/"/>
@@ -9851,7 +9860,7 @@
   </url>
   <url>
     <loc>https://anytimer.app/en/blog/inspiration/drinking-games-without-cards/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/inspiratie/drankspellen-zonder-kaarten/"/>
@@ -9869,7 +9878,7 @@
   </url>
   <url>
     <loc>https://anytimer.app/en/blog/drinking-games/drunk-jenga/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/drankspelletjes/jenga/"/>
@@ -9941,11 +9950,20 @@
   </url>
   <url>
     <loc>https://anytimer.app/en/blog/drinking-games/imposter/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/drankspelletjes/imposter/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/drinking-games/imposter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/drankspelletjes/imposter/"/>
+  </url>
+  <url>
+    <loc>https://anytimer.app/en/blog/drinking-games/never-have-i-ever/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://anytimer.app/blog/drankspelletjes/never-have-i-ever/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anytimer.app/en/blog/drinking-games/never-have-i-ever/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anytimer.app/blog/drankspelletjes/never-have-i-ever/"/>
   </url>
 </urlset>

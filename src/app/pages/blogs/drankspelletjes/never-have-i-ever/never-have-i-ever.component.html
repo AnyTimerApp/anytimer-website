@@ -1,0 +1,173 @@
+<app-never-cards lang="nl" [categories]="categories"></app-never-cards>
+
+<div class="legal-page legal-page--after-timer">
+  <div class="container">
+
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="legal-header">
+      <h1 class="legal-title">Never have I ever vragen</h1>
+      <p class="legal-intro">
+        Never have I ever is een spel waarin je om de beurt iets noemt wat je nog nooit hebt gedaan. Wie het wel heeft gedaan, doet een vinger omlaag. Je speelt het met vingers of als drankspel. In het Nederlands heet het Ik heb nog nooit. Hieronder staan {{ questionCount }} never have I ever vragen, van opwarmers tot juicy 18+.
+      </p>
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2>Wat is never have I ever?</h2>
+        <picture style="display: contents">
+          <source srcset="assets/blogs/drankspel/Never Have I Ever Party.webp" type="image/webp">
+          <img src="assets/blogs/drankspel/Never Have I Ever Party.png" alt="Vrienden spelen never have I ever, oftewel Ik heb nog nooit, rond een tafel met tien vingers omhoog" class="game-image" loading="lazy">
+        </picture>
+
+        <div class="game-info-card">
+          <div class="game-info-card__stats">
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.59 13.41L13.42 20.59a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="game-stat__label">Categorie</span>
+              </div>
+              <span class="game-stat__value">{{ subCategory }}</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span class="game-stat__label">Spelers</span>
+              </div>
+              <span class="game-stat__value">2 of meer</span>
+            </div>
+            <div class="game-stat">
+              <div class="game-stat__label-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="game-stat__label">Speelduur</span>
+              </div>
+              <span class="game-stat__value">15-45 minuten</span>
+            </div>
+          </div>
+
+          <div class="game-info-card__divider"></div>
+
+          <div class="game-info-card__requirements">
+            <div class="game-stat__label-row">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              <span class="game-stat__label">Benodigdheden</span>
+            </div>
+            <div class="game-tags">
+              <span class="game-tag">Drankje</span>
+              <span class="game-tag">Deze pagina</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Speluitleg</h2>
+        <p>De regels van never have I ever zijn simpel. Je hebt alleen je handen nodig.</p>
+        <ol>
+          <li>Ga in een kring zitten. Iedereen steekt tien vingers op.</li>
+          <li>De jongste speler begint. Die zegt een zin die begint met "Ik heb nog nooit". Bijvoorbeeld: "Ik heb nog nooit een tentamen gehaald zonder het boek open te slaan."</li>
+          <li>Heb jij het wel gedaan? Dan doe je een vinger omlaag.</li>
+          <li>Daarna is de speler links aan de beurt. Zo gaat het rond.</li>
+          <li>Wie als eerste geen vingers meer heeft, is af. De laatste met vingers omhoog wint.</li>
+        </ol>
+      </div>
+
+      <div class="legal-section">
+        <h2>Alle {{ questionCount }} vragen op een rij</h2>
+        <p>Begin met de opwarmers en de grappige vragen. De 18+ vragen zijn spicy en soms dirty, dus alleen voor volwassenen. Wil iemand niet antwoorden, dan pak je de volgende vraag.</p>
+        <nav #questionNav class="question-nav game-tags" [class.question-nav--stuck]="navStuck" aria-label="Categorieën">
+          <div class="question-nav__track">
+            @for (c of categories; track c.id) {
+              <a class="game-tag" [class.game-tag--active]="activeCategory === c.id" [attr.data-category]="c.id" [href]="'#' + c.id" (click)="scrollToCategory($event, c.id)">{{ c.label }}</a>
+            }
+          </div>
+        </nav>
+
+        <div class="question-lists">
+          @for (c of categories; track c.id) {
+            <h3 class="question-list-title" [id]="c.id">
+              <span>{{ c.label }}</span>
+              <span class="question-list-count">{{ c.questions.length }}</span>
+            </h3>
+            <ol class="question-list">
+              @for (q of c.questions; track q) {
+                <li>{{ q }}</li>
+              }
+            </ol>
+          }
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Andere manieren om te spelen</h2>
+        <ul>
+          <li>Als drankspel neem je een slok in plaats van een vinger omlaag te doen. Er valt niemand af, dus je speelt zo lang als je wilt. Houd je de vingers erbij, dan trekt wie als eerste geen vingers meer heeft een bak.</li>
+          <li>Bij Ik heb wel eens draai je het om. Je noemt iets wat je wel hebt gedaan, en wie dat nooit heeft gedaan doet een vinger omlaag.</li>
+          <li>Voor de pot-variant schrijft iedereen vooraf drie vragen op briefjes. Die gaan in een beker en je trekt er om de beurt één uit, zonder te weten van wie hij is.</li>
+          <li>Met twee teams tel je de vingers per team bij elkaar op. Het team met de meeste vingers over wint.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Zelf een vraag verzinnen? Let hierop</h2>
+        <ul>
+          <li>Kies een concreet moment. Na "Ik heb nog nooit mijn telefoon verloren tijdens het uitgaan" moet iemand vertellen hoe het ging. Na "Ik heb nog nooit iets doms gedaan" gebeurt er weinig.</li>
+          <li>Mik op iets wat ongeveer de helft van de groep heeft gedaan. Als iedereen of niemand een vinger omlaag doet, valt er niks te vertellen.</li>
+          <li>Bewaar de 18+ vragen voor later op de avond.</li>
+          <li>Twijfel je of een vraag te ver gaat, sla hem dan over.</li>
+        </ul>
+        <p>Meer spellen zonder kaarten of materiaal? Speel ook <a routerLink="/blog/drankspelletjes/imposter">Imposter</a>, een spel waarin je moet liegen.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Same FAQ block as the home page and the Drankspelletjes hub (full width) -->
+  <app-about [items]="faqs" [title]="faqTitle" [promoTitle]="faqPromoTitle" [promoText]="faqPromoText" [promoLink]="faqPromoLink"></app-about>
+
+  <div class="container">
+    <div class="legal-body">
+
+      <div class="legal-section legal-section--no-divider">
+        <h2>Vergelijkbare drankspellen</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of similarGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+      </div>
+
+      <div class="legal-section">
+        <h2>Aanbevolen drankspellen</h2>
+        <app-slider-nav>
+        <div class="related-slider">
+          @for (game of recommendedGames; track game.slug) {
+            <app-blog-card [post]="game"></app-blog-card>
+          }
+        </div>
+        </app-slider-nav>
+
+        <app-download-cta></app-download-cta>
+      </div>
+
+    </div>
+  </div>
+</div>

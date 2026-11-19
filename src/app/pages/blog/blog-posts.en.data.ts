@@ -207,6 +207,19 @@ export const BLOG_POSTS_EN: BlogPost[] = [
     variant: 'light'
   },
   {
+    slug: 'never-have-i-ever',
+    path: 'en/blog/drinking-games/never-have-i-ever',
+    alternate: 'blog/drankspelletjes/never-have-i-ever',
+    category: 'Drankspelletjes',
+    subCategory: 'Overig',
+    title: 'Never have I ever',
+    excerpt: '150 questions for the drinking game everyone knows. Done it? Then you drink. Draw a card online or pick your own categories.',
+    date: '2026-11-19',
+    image: 'assets/blogs/drankspel/Never Have I Ever Party.webp',
+    imageAlt: 'Friends playing the never have I ever game around a table with ten fingers up',
+    variant: 'light'
+  },
+  {
     slug: 'toepen',
     path: 'en/blog/drinking-games/toepen',
     alternate: 'blog/drankspelletjes/toepen',

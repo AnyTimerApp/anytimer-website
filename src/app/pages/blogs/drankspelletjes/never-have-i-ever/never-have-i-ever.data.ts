@@ -1,0 +1,205 @@
+import { NeverCategory } from '../../../../components/never-cards/never-cards.component';
+
+// All questions on /blog/drankspelletjes/never-have-i-ever/. The card banner
+// and the numbered lists both read from here. Keep the ids the same as in the
+// English file (the 18+ category is 'pittig' in both, it starts switched off).
+export const NEVER_CATEGORIES_NL: NeverCategory[] = [
+  {
+    id: 'klassiek',
+    label: 'Opwarmers',
+    questions: [
+      'Ik heb nog nooit iemand in deze groep gegoogeld voordat ik die echt kende.',
+      'Ik heb nog nooit gelogen om onder een verjaardag uit te komen.',
+      'Ik heb nog nooit een appje van iemand hier expres op gelezen laten staan.',
+      'Ik heb nog nooit iemand in deze kamer achter zijn rug om afgekraakt.',
+      'Ik heb nog nooit een cadeau gekregen en het meteen doorverkocht.',
+      'Ik heb nog nooit een vriend afgezegd om met iemand anders af te spreken.',
+      'Ik heb nog nooit iets gestolen, hoe klein ook.',
+      'Ik heb nog nooit een geheim doorverteld dat ik had beloofd te bewaren.',
+      'Ik heb nog nooit stiekem de telefoon van iemand anders doorzocht.',
+      'Ik heb nog nooit een groepsapp gemute omdat ik de mensen erin irritant vond.',
+      'Ik heb nog nooit gehuild om iemand die het niet waard was.',
+      'Ik heb nog nooit een agent iets wijsgemaakt om onder een boete uit te komen.',
+      'Ik ben nog nooit jaloers geweest op iemand in deze groep.',
+      'Ik heb nog nooit iemand geblokkeerd die hier in de groep zit.',
+      'Ik heb nog nooit een tweede account gehad om mensen te stalken.',
+      'Ik heb nog nooit mijn cijfers of mijn salaris mooier gemaakt dan ze waren.',
+      'Ik heb nog nooit een selfie bewerkt voordat ik hem postte.',
+      'Ik heb nog nooit een ruzie expres laten escaleren.',
+      'Ik heb nog nooit iets gedaan waar mijn ouders nooit van mogen horen.',
+      'Ik ben nog nooit door de politie aangehouden.'
+    ]
+  },
+  {
+    id: 'grappig',
+    label: 'Gênant',
+    questions: [
+      'Ik heb nog nooit in mijn broek geplast als volwassene.',
+      'Ik heb nog nooit een scheet gelaten en de schuld aan een ander gegeven.',
+      'Ik heb nog nooit per ongeluk een videogesprek gestart.',
+      'Ik heb nog nooit mijn eigen spraakbericht teruggeluisterd en het meteen verwijderd.',
+      'Ik ben nog nooit gevallen waar heel veel mensen bij waren.',
+      'Ik heb nog nooit een screenshot gestuurd naar de persoon over wie het ging.',
+      'Ik ben nog nooit in slaap gevallen tijdens een date.',
+      'Ik heb nog nooit mijn eigen verjaardagsfeest verlaten omdat het tegenviel.',
+      'Ik ben nog nooit betrapt op een leugen die ik net had verteld.',
+      'Ik heb nog nooit overgegeven in de trein of de bus.',
+      'Ik heb nog nooit een cadeau weggegeven dat ik zelf had gekregen.',
+      'Ik heb me nog nooit verstopt op straat omdat ik mijn crush zag.',
+      'Ik heb nog nooit een appje voor een date per ongeluk in de familiegroep gezet.',
+      'Ik heb nog nooit een tikkie gestuurd van minder dan een euro.',
+      'Ik heb nog nooit gegoogeld hoe je een woord spelt dat ik al jaren gebruik.',
+      'Ik heb nog nooit twee verschillende schoenen aangehad zonder het te merken.',
+      'Ik heb nog nooit meer dan twintig selfies gemaakt voor één goede foto.',
+      'Ik heb nog nooit mijn eigen grap uitgelegd omdat niemand lachte.',
+      'Ik heb nog nooit een TikTok-dansje geoefend voor de spiegel.',
+      'Ik heb nog nooit een wc verstopt bij iemand thuis en ben gewoon weggelopen.'
+    ]
+  },
+  {
+    id: 'stappen',
+    label: 'Nachtleven',
+    questions: [
+      'Ik heb nog nooit een avond gehad waar een gat van een paar uur in zit.',
+      'Ik heb nog nooit overgegeven in een taxi of Uber.',
+      'Ik heb nog nooit iemand gezoend waar ik de volgende dag spijt van had.',
+      'Ik ben nog nooit met een nep-ID een club in gekomen.',
+      'Ik heb nog nooit stiekem het drankje van een vreemde opgedronken.',
+      'Ik heb nog nooit mijn vrienden laten zitten voor iemand die ik net had ontmoet.',
+      'Ik heb nog nooit op straat geplast.',
+      'Ik heb nog nooit gezoend met iemand in de rij voor de wc.',
+      'Ik heb nog nooit een drankje in iemands gezicht gegooid.',
+      'Ik heb nog nooit ruzie gemaakt met een portier.',
+      'Ik ben nog nooit weggegaan uit de kroeg zonder mijn vrienden iets te zeggen.',
+      'Ik ben nog nooit in de kroeg gebleven tot de lichten aangingen.',
+      'Ik heb nog nooit dronken een appje gestuurd waar ik me de volgende dag kapot voor schaamde.',
+      'Ik heb nog nooit expres met iemand gedanst omdat mijn ex keek.',
+      'Ik heb nog nooit meer dan 100 euro uitgegeven op één avond stappen.',
+      'Ik heb nog nooit de microfoon van de dj overgenomen.',
+      'Ik heb nog nooit een glas laten vallen en gedaan alsof het iemand anders was.',
+      'Ik heb nog nooit gelogen over hoe laat ik thuis was.',
+      'Ik heb nog nooit een kater gehad die twee dagen duurde.',
+      'Ik heb nog nooit een story geplaatst waar ik de volgende dag spijt van had.'
+    ]
+  },
+  {
+    id: 'studentenleven',
+    label: 'Studentenhuis',
+    questions: [
+      'Ik heb nog nooit brak een tentamen gemaakt.',
+      'Ik heb nog nooit iets gehad met een huisgenoot.',
+      'Ik heb nog nooit eten van een huisgenoot opgegeten en gedaan alsof ik van niks wist.',
+      'Ik heb nog nooit de shampoo van een huisgenoot gebruikt zonder het te vragen.',
+      'Ik heb nog nooit tegen mijn ouders gelogen over mijn studieresultaten.',
+      'Ik heb nog nooit mijn studiefinanciering uitgegeven aan een vakantie of een feest.',
+      'Ik heb nog nooit op een hospiteeravond op iemand gestemd omdat ik die leuk vond.',
+      'Ik heb nog nooit een groepsgenoot verraden bij de docent.',
+      'Ik heb nog nooit een opdracht ingeleverd die AI voor me had geschreven.',
+      'Ik heb nog nooit geflirt met een docent of student-assistent.',
+      'Ik heb nog nooit een college gevolgd terwijl ik nog dronken was van de avond ervoor.',
+      'Ik heb nog nooit de afwas laten staan tot er iets op begon te groeien.',
+      'Ik heb nog nooit een zieke opa of oma verzonnen om uitstel te krijgen.',
+      'Ik heb nog nooit iets kapotgemaakt in het studentenhuis en mijn mond gehouden.',
+      'Ik heb nog nooit een feest gegeven terwijl een huisgenoot moest leren.',
+      'Ik heb nog nooit een klacht van de buren gekregen over een feest.',
+      'Ik heb nog nooit gezoend met iemand van mijn studievereniging of dispuut.',
+      'Ik heb nog nooit een studiejaar vooral gefeest in plaats van gestudeerd.',
+      'Ik heb nog nooit een huisgenoot buiten laten staan omdat ik geen zin had om open te doen.',
+      'Ik heb nog nooit mijn was meegenomen naar mijn ouders.'
+    ]
+  },
+  {
+    id: 'vakantie',
+    label: 'Op reis',
+    questions: [
+      'Ik heb nog nooit gezoend met iemand van wie ik de taal niet sprak.',
+      'Ik heb nog nooit op vakantie iets gedaan wat thuis niemand mag weten.',
+      'Ik heb nog nooit een vakantie geboekt na een paar drankjes.',
+      'Ik heb nog nooit topless of naakt op het strand gelegen.',
+      'Ik ben nog nooit met vrienden op vakantie geweest en met ruzie teruggekomen.',
+      'Ik heb nog nooit iets door de douane gesmokkeld.',
+      'Ik ben nog nooit dronken in slaap gevallen op het strand.',
+      'Ik ben nog nooit zo verbrand dat ik niet kon slapen.',
+      'Ik heb nog nooit een valse naam opgegeven aan iemand op vakantie.',
+      'Ik heb nog nooit een hotelkamer gedeeld met iemand die ik net had ontmoet.',
+      'Ik heb nog nooit een hele vakantie zonder internet gezeten.',
+      'Ik ben na mijn 18e nog nooit met mijn ouders op vakantie geweest.',
+      'Ik ben nog nooit van een rots in zee gesprongen.',
+      'Ik heb nog nooit geld moeten lenen op vakantie omdat alles op was.',
+      'Ik heb nog nooit een feestvakantie gehad waar ik weinig meer van weet.'
+    ]
+  },
+  {
+    id: 'daten',
+    label: 'Liefde',
+    questions: [
+      'Ik heb nog nooit iemand laten zitten op een date zonder af te zeggen.',
+      'Ik heb nog nooit twee dates gehad op één dag.',
+      'Ik heb nog nooit iemand gezoend terwijl ik een relatie had.',
+      'Ik heb nog nooit een ex geblokkeerd en later weer gedeblokkeerd.',
+      'Ik ben nog nooit verliefd geworden op een huisgenoot.',
+      'Ik heb nog nooit iemand gezoend op wie een vriend(in) van mij ook viel.',
+      'Ik heb nog nooit gezoend met iemand uit deze groep.',
+      'Ik heb nog nooit iemand uit deze groep leuk gevonden.',
+      'Ik heb nog nooit de locatie van een partner gecheckt zonder dat die het wist.',
+      'Ik heb nog nooit een date laten betalen en daarna niks meer laten horen.',
+      'Ik heb nog nooit gelogen over mijn lengte, leeftijd of baan op een datingapp.',
+      'Ik heb nog nooit de ex van een vriend(in) gedate.',
+      'Ik heb het nog nooit uitgemaakt en een week later spijt gehad.',
+      'Ik heb nog nooit een vriend gevraagd me te bellen zodat ik weg kon van een date.',
+      'Ik ben nog nooit vreemdgegaan.',
+      'Ik heb nog nooit een sneaky link gehad.',
+      'Ik heb nog nooit een talking stage gehad die langer dan een maand duurde.',
+      'Ik heb nog nooit iemand gedate om een ander jaloers te maken.',
+      'Ik heb nog nooit "ik hou van jou" gezegd zonder het te menen.',
+      'Ik heb nog nooit een ex gestalkt op social media nadat het uit was.'
+    ]
+  },
+  {
+    id: 'drankspellen',
+    label: 'Drankspellen',
+    questions: [
+      'Ik heb nog nooit een adtje gedaan in minder dan 5 seconden.',
+      'Ik heb nog nooit een anytimer laten verlopen zonder hem in te zetten.',
+      'Ik heb nog nooit vals gespeeld bij een drankspel om niet te hoeven drinken.',
+      'Ik ben nog nooit de bus in gegaan bij Bussen.',
+      'Ik heb nog nooit stiekem water gedronken tijdens een drankspel.',
+      'Ik heb nog nooit overgegeven tijdens een drankspel.',
+      'Ik heb nog nooit zo veel gedronken dat iemand me naar huis moest brengen.',
+      'Ik heb nog nooit een anytimer ingezet op het slechtst mogelijke moment.',
+      'Ik heb nog nooit een weddenschap verloren waardoor ik een bak moest trekken.',
+      'Ik heb nog nooit iemand expres dronken gevoerd om een spel te winnen.',
+      'Ik ben nog nooit in slaap gevallen tijdens een drankspel.',
+      'Ik heb nog nooit iemand gezoend als opdracht bij een drankspel.',
+      'Ik heb nog nooit gelogen bij Mexen.',
+      'Ik ben nog nooit naar een cantus geweest.',
+      'Ik heb nog nooit doordeweeks \'s ochtends een drankspel gespeeld.'
+    ]
+  },
+  {
+    id: 'pittig',
+    label: '18+',
+    questions: [
+      'Ik heb nog nooit seks gehad op een plek waar iemand ons kon zien.',
+      'Ik heb nog nooit seks gehad terwijl mijn huisgenoten alles konden horen.',
+      'Ik heb nog nooit iemand mee naar huis genomen die ik dezelfde avond had ontmoet.',
+      'Ik heb nog nooit iemand uit deze groep naakt gezien.',
+      'Ik heb nog nooit seks gehad in een tent.',
+      'Ik heb nog nooit een walk of shame gemaakt.',
+      'Ik heb nog nooit friends with benefits gehad.',
+      'Ik heb nog nooit seks gehad in een auto.',
+      'Ik ben nog nooit stilletjes vertrokken voordat de ander wakker werd.',
+      'Ik heb nog nooit spijt gehad van een hook-up.',
+      'Ik ben nog nooit door mijn ouders betrapt.',
+      'Ik heb nog nooit een seksdroom gehad over een collega of docent.',
+      'Ik heb nog nooit een striptease gegeven.',
+      'Ik heb nog nooit seks gehad op een eerste date.',
+      'Ik heb nog nooit iets gehad met twee mensen uit dezelfde vriendengroep.',
+      'Ik heb nog nooit een spicy foto gemaakt die ik uiteindelijk nooit heb gestuurd.',
+      'Ik heb nog nooit seks gehad in het bed van iemand anders.',
+      'Ik heb nog nooit seks gehad op een festival.',
+      'Ik heb nog nooit handboeien of een blinddoek gebruikt in bed.',
+      'Ik heb nog nooit gesext met iemand die ik nog nooit in het echt had ontmoet.'
+    ]
+  }
+];

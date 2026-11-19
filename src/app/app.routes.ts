@@ -72,6 +72,7 @@ export const routes: Routes = [
   { path: 'blog/drankspelletjes/imposter', loadComponent: () => import('./pages/blogs/drankspelletjes/imposter/imposter.component').then(m => m.ImposterComponent), title: 'Imposter spel regels: zo speel je het drankspel' },
   { path: 'blog/drankspelletjes/shut-the-box', loadComponent: () => import('./pages/blogs/drankspelletjes/shut-the-box/shut-the-box.component').then(m => m.ShutTheBoxComponent), title: 'Shut the box spelregels: zo speel je het drankspel' },
   { path: 'blog/drankspelletjes/flunkyball', loadComponent: () => import('./pages/blogs/drankspelletjes/flunkyball/flunkyball.component').then(m => m.FlunkyballComponent), title: 'Flunkyball regels: zo speel je het drankspel' },
+  { path: 'blog/drankspelletjes/never-have-i-ever', loadComponent: () => import('./pages/blogs/drankspelletjes/never-have-i-ever/never-have-i-ever.component').then(m => m.NeverHaveIEverComponent), title: 'Never have I ever vragen: 150 juicy vragen en online spel' },
   { path: 'blog/drankspelletjes/toepen', loadComponent: () => import('./pages/blogs/drankspelletjes/toepen/toepen.component').then(m => m.ToepenComponent), title: 'Toepen regels: zo speel je het drankspel' },
   { path: 'blog/drankspelletjes/jenga', component: JengaComponent, title: 'Jenga drankspel regels: zo speel je het drankspel' },
   { path: 'blog/drankspelletjes/mario-barf', component: MarioBarfComponent, title: 'Mario Barf regels: zo speel je het drankspel' },
