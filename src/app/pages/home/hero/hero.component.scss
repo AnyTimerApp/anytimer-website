@@ -345,10 +345,10 @@ h1 {
     height: 500px;
   }
 
-  /* The image has ~27% of its width as empty space below the phone. Trim it. */
+  /* Trim the empty space below the phone in the image (plus some hero padding) */
   .phone-stage {
     width: 100%;
-    margin: 0 0 -48%;
+    margin: 0 0 -36%;
   }
 }
 
