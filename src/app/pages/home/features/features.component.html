@@ -85,33 +85,31 @@
   <div class="container reviews-header">
     <span class="section-label">{{ t.reviewsLabel }}</span>
     <h2 class="section-title">{{ t.reviewsTitle }}</h2>
+    <div class="reviews-score" role="img" [attr.aria-label]="t.reviewsStarsLabel">★★★★★</div>
   </div>
 
   <div class="marquee-outer">
     <div class="marquee-fade marquee-fade--left"></div>
     <div class="marquee-fade marquee-fade--right"></div>
 
-    <div class="marquee-track">
+    <div class="marquee-track" #reviewRow>
       <div class="marquee-inner">
         <!-- Rendered twice for a seamless loop -->
         @for (pass of [0, 1]; track pass) {
         @for (review of t.reviews; track review.name) {
-        <div class="review-card">
+        <article class="review-card" [attr.aria-hidden]="pass === 1 ? 'true' : null">
           <div class="review-top">
-            <div class="review-stars">{{ review.starsText }}</div>
+            <span class="review-stars" [attr.aria-label]="review.stars + ' / 5'">{{ review.starsText }}</span>
             @if (review.translated) {
             <span class="review-translated">{{ t.translatedNote }}</span>
             }
           </div>
-          <p>"{{ review.text }}"</p>
-          <div class="review-author">
-            <div class="review-avatar" [style.background]="review.color">{{ review.name.charAt(0) }}</div>
-            <div>
-              <strong>{{ review.name }}</strong>
-              <span>{{ review.store }}</span>
-            </div>
-          </div>
-        </div>
+          @if (review.title) {
+          <h3 class="review-title">{{ review.title }}</h3>
+          }
+          <p>{{ review.text }}</p>
+          <span class="review-author">{{ review.name }}, {{ review.store }}</span>
+        </article>
         }
         }
       </div>

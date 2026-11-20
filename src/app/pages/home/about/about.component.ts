@@ -55,7 +55,7 @@ const TEXT = {
     other: 'Heb je een andere vraag? Neem contact met ons op via',
     form: 'het contactformulier',
     ready: 'Klaar om te starten?',
-    download: 'Download de app en begin vandaag'
+    download: 'Download de gratis app'
   },
   en: {
     label: 'FAQ',
@@ -63,7 +63,7 @@ const TEXT = {
     other: 'Got another question? Get in touch through',
     form: 'the contact form',
     ready: 'Ready to start?',
-    download: 'Download the app and start today'
+    download: 'Download the free app'
   }
 };
 

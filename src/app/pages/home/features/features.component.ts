@@ -1,23 +1,26 @@
-import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AfterViewInit, Component, DestroyRef, ElementRef, NgZone, PLATFORM_ID, ViewChild, inject } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { startReviewMarquee } from './review-marquee';
 import { LanguageService } from '../../../i18n/language.service';
 
 // Real reviews from the App Store and Google Play (copied 2026-11-18). Text is
 // exactly as written; the store replaces the city line. `lang` is the language
 // the review was written in, so the other site can mark it as translated.
 // `stars` is left out when the rating is unknown; no stars are shown then.
-type ReviewPerson = { name: string; store: 'App Store' | 'Play Store'; stars?: number; lang: 'nl' | 'en'; color: string };
+// Each review is { title, text }. The title is the one from the store; an empty
+// title (Play Store reviews have none) shows no title at all.
+type ReviewPerson = { name: string; store: 'App Store' | 'Play Store'; stars?: number; lang: 'nl' | 'en' };
 
 const REVIEW_PEOPLE: ReviewPerson[] = [
-  { name: 'jsiwebejkdowjsj', store: 'App Store', stars: 5, lang: 'nl', color: '#C4B5FD' },
-  { name: 'Isabel169', store: 'App Store', stars: 5, lang: 'nl', color: '#FCA5A5' },
-  { name: 'Susan', store: 'Play Store', stars: 5, lang: 'en', color: '#6EE7B7' },
-  { name: 'LilSandy99', store: 'App Store', stars: 5, lang: 'nl', color: '#FDE68A' },
-  { name: 'Stefnip', store: 'App Store', stars: 5, lang: 'nl', color: '#93C5FD' },
-  { name: 'Berend', store: 'App Store', stars: 5, lang: 'nl', color: '#F9A8D4' },
-  { name: 'Jil', store: 'App Store', stars: 5, lang: 'nl', color: '#A7F3D0' },
-  { name: 'MaxTB010', store: 'App Store', stars: 5, lang: 'nl', color: '#DDD6FE' },
-  { name: 'Felipe', store: 'App Store', stars: 5, lang: 'nl', color: '#FDBA74' }
+  { name: 'jsiwebejkdowjsj', store: 'App Store', stars: 5, lang: 'nl' },
+  { name: 'Isabel169', store: 'App Store', stars: 5, lang: 'nl' },
+  { name: 'Susan', store: 'Play Store', stars: 5, lang: 'en' },
+  { name: 'LilSandy99', store: 'App Store', stars: 5, lang: 'nl' },
+  { name: 'Stefnip', store: 'App Store', stars: 5, lang: 'nl' },
+  { name: 'Berend', store: 'App Store', stars: 5, lang: 'nl' },
+  { name: 'Jil', store: 'App Store', stars: 5, lang: 'nl' },
+  { name: 'MaxTB010', store: 'App Store', stars: 5, lang: 'nl' },
+  { name: 'Felipe', store: 'App Store', stars: 5, lang: 'nl' }
 ];
 
 const TEXT = {
@@ -33,20 +36,22 @@ const TEXT = {
       { title: 'Vrienden', text: 'Voeg vrienden toe via gebruikersnaam en gebruik de app in je vriendenkring. Ideaal voor groepen, uitjes en weddenschappen.' },
       { title: 'Gratis te gebruiken', text: 'De app is volledig gratis maatje. In ruil voor dat jij volgend jaar naar ons festival komt. Je komt toch?' }
     ],
-    reviewsLabel: 'Echte verhalen',
-    reviewsTitle: 'Wat vrienden zeggen',
+    reviewsLabel: 'Beoordelingen',
+    reviewsTitle: 'Neem het niet van ons aan',
+    reviewsStarsLabel: '5 van de 5 sterren',
     translatedNote: 'Vertaald uit het Engels',
     reviews: [
-      'Maakt een einde aan alle discussies. Zelfs na een paar biertjes snapt iedereen de stand nog. Houdt het ook allemaal een beetje spannend! Heel leuk :)',
-      'Echt een leuke app om samen met je vrienden te hebben! Ik heb vrienden die ik weinig zie, maar op deze manier toch nog goed contact mee hou en ze een beetje scherp kan houden ;)',
-      'Grappige app en superhandig',
-      'Lang gewacht op een degelijke app die mijn goudvissenbrein helpt mijn hardverdiende anytimers bij te houden',
-      'Soort Strava voor bier drinken. Lachen app!! gebruiken hem met onze vriendengroep!!!',
-      'Goede app, hield het eerst bij in m’n notities maar dit is beter!',
-      'Werkt allemaal echt Nice! Veel fijner bijhouden zo',
-      '1 woord: WAUW',
-      'Handige app'
-    ]  },
+      { title: 'Anyone, anywhere, anytime!', text: 'Maakt een einde aan alle discussies. Zelfs na een paar biertjes snapt iedereen de stand nog. Houdt het ook allemaal een beetje spannend! Heel leuk :)' },
+      { title: 'Aanrader!', text: 'Echt een leuke app om samen met je vrienden te hebben! Ik heb vrienden die ik weinig zie, maar op deze manier toch nog goed contact mee hou en ze een beetje scherp kan houden ;)' },
+      { title: '', text: 'Grappige app en superhandig' },
+      { title: 'Eindelijk een oplossing', text: 'Lang gewacht op een degelijke app die mijn goudvissenbrein helpt mijn hardverdiende anytimers bij te houden' },
+      { title: 'Soort Strava voor bier drinken', text: 'Lachen app!! gebruiken hem met onze vriendengroep!!!' },
+      { title: '👍👍', text: 'Goede app, hield het eerst bij in m’n notities maar dit is beter!' },
+      { title: 'Nice', text: 'Werkt allemaal echt Nice! Veel fijner bijhouden zo' },
+      { title: 'Chille app!', text: '1 woord: WAUW' },
+      { title: 'Mooi', text: 'Handige app' }
+    ]
+  },
   en: {
     label: 'Why AnyTimerApp?',
     title: "Track your any's. Never forget one.",
@@ -59,20 +64,21 @@ const TEXT = {
       { title: 'Friends', text: 'Add friends by username and use the app with your friend group. Perfect for groups, nights out and bets.' },
       { title: 'Free to use', text: 'The app is completely free. In return you come to our festival next year. You are coming, right?' }
     ],
-    reviewsLabel: 'Real stories',
-    reviewsTitle: 'What friends say',
+    reviewsLabel: 'Reviews',
+    reviewsTitle: 'Don\'t just take our word for it',
+    reviewsStarsLabel: '5 out of 5 stars',
     // Shown on reviews written in another language than the site.
     translatedNote: 'Translated from Dutch',
     reviews: [
-      'Ends all the arguments. Even after a few beers everyone still gets the score. Keeps it all a bit exciting too! Really fun :)',
-      'Really fun app to have with your friends! I have friends I don\'t see much, but this way I still keep in touch and can keep them on their toes ;)',
-      'Funny app and super handy',
-      'Waited a long time for a decent app that helps my goldfish brain keep track of my hard-earned anytimers',
-      'Like Strava for drinking beer. Hilarious app!! we use it with our group of friends!!!',
-      'Good app, I used to keep track in my notes but this is better!',
-      'Everything works really nice! Much easier to keep track this way',
-      '1 word: WOW',
-      'Handy app'
+      { title: 'Anyone, anywhere, anytime!', text: 'Ends all the arguments. Even after a few beers everyone still gets the score. Keeps it all a bit exciting too! Really fun :)' },
+      { title: 'Recommended!', text: 'Really fun app to have with your friends! I have friends I don\'t see much, but this way I still keep in touch and can keep them on their toes ;)' },
+      { title: '', text: 'Funny app and super handy' },
+      { title: 'Finally a solution', text: 'Waited a long time for a decent app that helps my goldfish brain keep track of my hard-earned anytimers' },
+      { title: 'Like Strava for drinking beer', text: 'Hilarious app!! we use it with our group of friends!!!' },
+      { title: '👍👍', text: 'Good app, I used to keep track in my notes but this is better!' },
+      { title: 'Nice', text: 'Everything works really nice! Much easier to keep track this way' },
+      { title: 'Chill app!', text: '1 word: WOW' },
+      { title: 'Lovely', text: 'Handy app' }
     ]
   }
 };
@@ -84,17 +90,32 @@ const TEXT = {
   templateUrl: './features.component.html',
   styleUrl: './features.component.scss'
 })
-export class FeaturesComponent {
+export class FeaturesComponent implements AfterViewInit {
   private readonly lang = inject(LanguageService).lang();
   private readonly text = TEXT[this.lang];
+  private readonly platformId = inject(PLATFORM_ID);
+  private readonly zone = inject(NgZone);
+  private readonly destroyRef = inject(DestroyRef);
+
+  @ViewChild('reviewRow') private reviewRow?: ElementRef<HTMLElement>;
 
   readonly t = {
     ...this.text,
-    reviews: this.text.reviews.map((text, i) => ({
-      text,
+    reviews: this.text.reviews.map((review, i) => ({
+      ...review,
       ...REVIEW_PEOPLE[i],
       starsText: '★'.repeat(REVIEW_PEOPLE[i].stars ?? 0),
       translated: REVIEW_PEOPLE[i].lang !== this.lang
     }))
   };
+
+  // The slow drifting row runs outside Angular, so each frame does not trigger
+  // change detection. Only in the browser: the prerendered page shows the row
+  // standing still.
+  ngAfterViewInit() {
+    const row = this.reviewRow?.nativeElement;
+    if (!row || !isPlatformBrowser(this.platformId)) return;
+    const stop = this.zone.runOutsideAngular(() => startReviewMarquee(row));
+    this.destroyRef.onDestroy(stop);
+  }
 }

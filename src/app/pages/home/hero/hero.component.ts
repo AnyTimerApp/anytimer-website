@@ -10,6 +10,7 @@ const TEXT = {
     playAria: 'Download on Google Play',
     appleSmall: 'Download in de',
     appleAria: 'Download in de App Store',
+    free: 'Helemaal gratis. Voor iPhone en Android.',
     cardTopTitle: 'Anytimer ingezet',
     cardTopMeta: '1 min geleden',
     cardBottomTitle: 'Adtje in 2,4 sec'
@@ -22,6 +23,7 @@ const TEXT = {
     playAria: 'Get it on Google Play',
     appleSmall: 'Download on the',
     appleAria: 'Download on the App Store',
+    free: 'Completely free. For iPhone and Android.',
     cardTopTitle: 'Anytimer used',
     cardTopMeta: '1 min ago',
     cardBottomTitle: 'Chugged in 2.4 sec'
