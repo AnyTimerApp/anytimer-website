@@ -1,0 +1,24 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    # package-lock.json lives next to package.json in the root, so Dependabot updates both
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "Dependencies"
+      - "JavaScript"
+    groups:
+      angular-upgrade:
+        patterns:
+          - "@angular/*"
+          - "@angular-devkit/*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "Dependencies"
+      - "CI"

@@ -1,0 +1,30 @@
+name: CI
+
+# Builds every pull request (including Dependabot's) so a broken bump is caught before it reaches main and deploys.
+on:
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '23'
+          cache: 'npm'
+
+      # npm ci fails if package-lock.json is out of sync with package.json
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Project 🔧
+        run: npm run build
